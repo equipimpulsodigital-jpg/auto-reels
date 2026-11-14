@@ -19,12 +19,12 @@ class Word:
     end: float
 
 
-def _edge(text: str, mp3: Path, voice: str, rate: str) -> list[Word]:
+def _edge(text: str, mp3: Path, voice: str, rate: str, pitch: str = "+0Hz") -> list[Word]:
     import edge_tts
 
     async def go() -> list[Word]:
         words: list[Word] = []
-        comm = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary")
+        comm = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch, boundary="WordBoundary")
         with open(mp3, "wb") as f:
             async for chunk in comm.stream():
                 if chunk["type"] == "audio":
@@ -102,7 +102,7 @@ def synthesize_scenes(narrations: list[str], cfg: dict, workdir: Path) -> tuple[
         if vcfg["provider"] == "elevenlabs":
             words = _elevenlabs(text, mp3, vcfg["elevenlabs_voice_id"], vcfg["elevenlabs_model"])
         else:
-            words = _edge(text, mp3, vcfg["edge_voice"], vcfg.get("edge_rate", "+0%"))
+            words = _edge(text, mp3, vcfg["edge_voice"], vcfg.get("edge_rate", "+0%"), vcfg.get("edge_pitch", "+0Hz"))
         words = restore_punctuation(words, text)
         wav = workdir / f"voice_{i}.wav"
         run_ffmpeg(["-i", mp3, "-af", f"apad=pad_dur={gap}", "-ar", "44100", "-ac", "1", wav])

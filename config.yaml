@@ -1,62 +1,37 @@
-# Configuración de los reels diarios. Puedes editar este archivo sin tocar el código.
+# Configuración del canal. Puedes editar este archivo sin tocar el código.
+# Las reglas creativas del guionista están en prompts/guionista.md.
 
-brand:
-  name: AVORA
-  # Contexto que Claude usa para escribir los guiones. Cuanto más concreto, mejores vídeos.
-  description: >
-    AVORA es una app hiperlocal de pádel que nace en Olot (la Garrotxa) y se irá abriendo a
-    Girona y Cataluña. Sirve para encontrar partidos y compañeros de tu nivel cerca de ti:
-    cada jugador tiene un nivel del 1 al 7 que se calibra con los resultados, la app sugiere
-    partidos compatibles por horario y distancia, cada partido tiene su chat y los jugadores se
-    valoran entre sí (deportividad y puntualidad). Los clubes de la zona gestionan pistas y
-    reservas desde un panel web.
-  handle: "@avora"            # cámbialo por tu usuario real
-  cta: "Descarga AVORA y encuentra partido de tu nivel cerca de ti."
-  accent_color: "#C6F432"     # color de los subtítulos destacados
+series:
+  max_parts: 2                # cada historia se cuenta en 1 o 2 partes (una parte por día)
 
-language: "español de España (tono cercano, puedes usar alguna expresión catalana suelta)"
-
-# Mezcla de formatos. Cada día se elige uno según el peso, sin repetir el del día anterior.
-formats:
-  - id: consejo
-    weight: 3
-    brief: Un consejo práctico de técnica o táctica de pádel que se pueda aplicar en el próximo partido.
-  - id: error_comun
-    weight: 2
-    brief: Un error muy común de jugadores amateurs, por qué pasa y cómo corregirlo.
-  - id: regla_curiosidad
-    weight: 2
-    brief: Una regla poco conocida, una curiosidad o un dato sorprendente del pádel.
-  - id: busca_partido
-    weight: 2
-    brief: >
-      Situación con la que se identifique cualquier jugador de Olot y la Garrotxa (te falta el
-      cuarto, siempre juegas con los mismos, partidos descompensados...) y cómo AVORA lo resuelve.
-  - id: novedad_app
-    weight: 1
-    brief: Explica una función concreta de AVORA (niveles, sugerencias de partido, chat, valoraciones) con un caso real.
+style:
+  accent_color: "#E2A84B"     # ámbar: subtítulo activo, gancho y etiqueta de parte
 
 video:
-  target_seconds: 40          # duración aproximada de la locución
   width: 1080
   height: 1920
   fps: 30
-  music_volume: 0.12          # volumen de la música de fondo (0-1), si hay música en assets/music
+  music_volume: 0.15          # música de fondo (0-1), si hay pistas en assets/music
+
+images:
+  provider: pollinations      # pollinations (gratis, sin clave) | replicate (~0,003 $/imagen, más calidad y fiabilidad)
+  pollinations_model: flux
 
 voice:
-  provider: edge              # edge (gratis) | elevenlabs (mejor calidad, de pago)
+  provider: edge              # edge (gratis) | elevenlabs (más natural, de pago)
   edge_voice: es-ES-AlvaroNeural   # otras: es-ES-ElviraNeural, es-ES-XimenaNeural
-  edge_rate: "+8%"
-  elevenlabs_voice_id: ""     # ID de la voz en ElevenLabs (si usas elevenlabs)
+  edge_rate: "+4%"
+  edge_pitch: "-4Hz"          # un poco más grave, tono de narrador
+  elevenlabs_voice_id: ""
   elevenlabs_model: eleven_multilingual_v2
 
 claude:
   # auto: usa Claude Code con tu suscripción si existe CLAUDE_CODE_OAUTH_TOKEN; si no, la API.
-  backend: auto                # auto | claude-code | api
+  backend: auto               # auto | claude-code | api
   model: claude-opus-5-5
-  effort: medium
+  effort: high                # alto: prioriza la fidelidad histórica
 
 publish:
   platforms: [tiktok, instagram, youtube]
-  label_as_ai: true           # marca el vídeo como generado con IA (recomendado: la voz es sintética)
+  label_as_ai: true           # obligatorio en la práctica: las imágenes son generadas con IA
   youtube_privacy: public     # public | unlisted | private

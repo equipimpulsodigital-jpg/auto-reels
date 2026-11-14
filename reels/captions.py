@@ -56,28 +56,42 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
 
 
 class CaptionRenderer:
-    def __init__(self, width: int, height: int, accent: str, hook: str, hook_seconds: float = 2.8):
+    def __init__(self, width: int, height: int, accent: str, hook: str, hook_seconds: float = 2.8,
+                 badge: str = "", end_card: str = "", end_start: float | None = None):
         self.w, self.h = width, height
         self.accent = accent
         self.hook = hook.upper()
         self.hook_seconds = hook_seconds
+        self.badge = badge.upper()
+        self.end_card = end_card.upper()
+        self.end_start = end_start
 
-    def _frame(self, words: list[Word], group: list[int] | None, active: int | None, show_hook: bool) -> Image.Image:
+    def _box(self, d: ImageDraw.ImageDraw, text: str, size: int, top: int, fill: str, color: str) -> None:
+        font = _font(size)
+        lines = _wrap(d, text, font, int(self.w * 0.82))
+        lh = int(font.size * 1.2)
+        pad = int(size * 0.3)
+        box_h = lh * len(lines) + pad * 2
+        box_w = max(d.textlength(l, font=font) for l in lines) + pad * 3
+        x0 = (self.w - box_w) / 2
+        d.rounded_rectangle([x0, top, x0 + box_w, top + box_h], radius=int(size * 0.3), fill=fill)
+        for k, line in enumerate(lines):
+            tw = d.textlength(line, font=font)
+            d.text(((self.w - tw) / 2, top + pad + k * lh), line, font=font, fill=color)
+
+    def _frame(self, words: list[Word], group: list[int] | None, active: int | None, show_hook: bool,
+               show_end: bool = False) -> Image.Image:
         img = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
 
+        if self.badge:
+            self._box(d, self.badge, int(self.w * 0.045), int(self.h * 0.085), (0, 0, 0, 170), self.accent)
+        if show_end and self.end_card:
+            self._box(d, self.end_card, int(self.w * 0.08), int(self.h * 0.42), self.accent, "#111111")
+            return img
+
         if show_hook:
-            font = _font(int(self.w * 0.085))
-            lines = _wrap(d, self.hook, font, int(self.w * 0.82))
-            lh = int(font.size * 1.2)
-            top = int(self.h * 0.17)
-            box_h = lh * len(lines) + 50
-            box_w = max(d.textlength(l, font=font) for l in lines) + 70
-            x0 = (self.w - box_w) / 2
-            d.rounded_rectangle([x0, top, x0 + box_w, top + box_h], radius=28, fill=self.accent)
-            for k, line in enumerate(lines):
-                tw = d.textlength(line, font=font)
-                d.text(((self.w - tw) / 2, top + 22 + k * lh), line, font=font, fill="#111111")
+            self._box(d, self.hook, int(self.w * 0.085), int(self.h * 0.16), self.accent, "#111111")
 
         if group:
             size = int(self.w * 0.105)
@@ -110,7 +124,8 @@ class CaptionRenderer:
             end = nxt if same_group else min(nxt, w.end + 0.4)
             events.append((w.start, max(end, w.start + 0.05), i))
 
-        cuts = sorted({0.0, total, self.hook_seconds, *[t for s, e, _ in events for t in (s, e)]})
+        end_start = self.end_start if self.end_card and self.end_start is not None else total
+        cuts = sorted({0.0, total, self.hook_seconds, end_start, *[t for s, e, _ in events for t in (s, e)]})
         cuts = [c for c in cuts if 0 <= c <= total]
 
         cap_dir = workdir / "captions"
@@ -122,11 +137,12 @@ class CaptionRenderer:
                 continue
             mid = (a + b) / 2
             active = next((i for s, e, i in events if s <= mid < e), None)
-            key = (active, mid < self.hook_seconds)
+            show_end = mid >= end_start
+            key = (None if show_end else active, mid < self.hook_seconds, show_end)
             if key not in cache:
-                group = group_of[active] if active is not None else None
+                group = group_of[active] if active is not None and not show_end else None
                 path = cap_dir / f"c{len(cache):04d}.png"
-                self._frame(words, group, active, key[1]).save(path, optimize=True)
+                self._frame(words, group, key[0], key[1], show_end).save(path, optimize=True)
                 cache[key] = path
             if entries and entries[-1][0] == cache[key]:
                 entries[-1] = (cache[key], entries[-1][1] + (b - a))

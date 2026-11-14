@@ -8,17 +8,17 @@ from pathlib import Path
 import requests
 
 from .config import env
-from .script import Script
+from .script import Part
 
 API = "https://api.upload-post.com/api"
 
 
-def _caption(script: Script) -> str:
+def _caption(script: Part) -> str:
     tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in script.hashtags)
     return f"{script.caption}\n\n{tags}".strip()
 
 
-def publish(video: Path, script: Script, cfg: dict, idempotency_key: str) -> dict:
+def publish(video: Path, script: Part, cfg: dict, idempotency_key: str) -> dict:
     pcfg = cfg["publish"]
     platforms = pcfg["platforms"]
     ai = "true" if pcfg.get("label_as_ai", True) else "false"

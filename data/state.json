@@ -1,0 +1,357 @@
+{
+  "queue": [
+    {
+      "series": {
+        "series_title": "Palomares: las cuatro bombas H que cayeron sobre España",
+        "format": "punto_inflexion",
+        "year": "1966",
+        "place": "Palomares (Cuevas del Almanzora, Almería)",
+        "topic": "Accidente nuclear de Palomares (17/01/1966): choque de un B-52 y un avión cisterna KC-135, cuatro bombas termonucleares caen sobre Almería, una perdida en el mar 80 días, baño de Fraga y contaminación por plutonio que persiste.",
+        "master_style": "Cinematic 1960s historical photograph look, dark realistic film still with heavy analog grain, dramatic chiaroscuro lighting, muted cold teal and faded amber tones, dusty Mediterranean light, slight lens vignetting, Kodak Ektachrome period texture, vertical 9:16 composition, no text, no letters, no logos, no readable signs",
+        "historical_notes": "DOCUMENTADO: El 17 de enero de 1966, hacia las 10:20, un bombardero B-52G de la USAF (misión Chrome Dome) chocó con un avión cisterna KC-135 despegado de la base de Morón mientras repostaba a unos 9.400 m (31.000 pies) sobre Palomares. Murieron 7 tripulantes: los 4 del KC-135 y 3 de los 7 del B-52. Cayeron cuatro bombas termonucleares B28. Una cayó relativamente intacta cerca del cauce/desembocadura del río Almanzora; en otras dos el explosivo convencional detonó al impactar sin reacción nuclear y dispersó plutonio sobre terrenos agrícolas; la cuarta cayó al mar con paracaídas. El pescador Francisco Simó Orts, conocido después como 'Paco el de la bomba', vio caer el paracaídas al agua y su indicación fue clave para la búsqueda. La Marina de EE. UU. desplegó una gran flota con buzos y el sumergible Alvin, que localizó la bomba; en un primer intento de izado se soltó y cayó a mayor profundidad; fue recuperada el 7 de abril de 1966 (80 días después del accidente) a unos 869 m. El 8 de marzo de 1966, con la bomba aún en el fondo, el ministro de Información y Turismo Manuel Fraga se bañó en la playa de Quitapellejos con el embajador estadounidense Angier Biddle Duke para calmar el miedo al turismo. EE. UU. retiró en 1966 tierra contaminada (se suele citar en torno a 1.400 toneladas) a Savannah River (Carolina del Sur). Parte de los terrenos sigue vallada y con plutonio residual; el acuerdo de limpieza firmado en 2015 entre España y EE. UU. no se ha ejecutado. MATICES: la potencia de las B28 dependía de la versión (en torno a 1,1–1,45 megatones), por eso se dice 'decenas de veces Hiroshima' sin dar cifra exacta. Los efectos sobre la salud de los vecinos siguen siendo objeto de debate y no se afirman en el guion. Las edades y rasgos físicos de Simó Orts en las imágenes son aproximaciones visuales, no datos.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_title": "4 bombas H cayeron sobre Almería",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "narration": "El 17 de enero de 1966, cuatro bombas de hidrógeno cayeron sobre un pueblo de Almería.",
+                "camera": "push_in",
+                "visual_direction": "Cielo azul invernal sobre un pueblo blanco de Almería; arriba, una estela de humo negro rasga el cielo. Acercamiento lento hacia el pueblo. Micro-animación: humo de la estela que se expande, polvo flotando en el aire seco.",
+                "image_prompt": "Small whitewashed Andalusian village of flat-roofed houses on a dry hillside near the sea, winter morning 1966, high in the clear sky a thick black smoke trail and falling burning debris, low angle from a dirt road with prickly pear cactus in foreground, ominous calm, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "Un bombardero B-52 estadounidense repostaba en pleno vuelo sobre Palomares, a más de nueve mil metros.",
+                "camera": "pan_right",
+                "visual_direction": "Vista aérea a gran altura: el B-52 plateado y el avión cisterna unidos por la pértiga de repostaje, la costa almeriense abajo. Paneo lento siguiendo el vuelo. Micro-animación: brillo del sol sobre el fuselaje, finas nubes deslizándose.",
+                "image_prompt": "1960s American B-52 bomber flying at high altitude directly beneath a KC-135 tanker aircraft, connected by an aerial refueling boom, seen from slightly above, Mediterranean coastline and brown Almeria hills far below, cold high-altitude light, metallic silver fuselages, vertical framing"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "El avión cisterna, despegado de Morón, se acercó demasiado. Chocaron y estallaron en una bola de fuego.",
+                "camera": "pull_back",
+                "visual_direction": "La colisión: una enorme bola de fuego naranja en el cielo, fragmentos de fuselaje saliendo despedidos. Alejamiento que revela la magnitud. Micro-animación: llamas ondulando, humo negro hinchándose, chispas.",
+                "image_prompt": "Massive orange fireball exploding in a clear blue sky at high altitude, fragments of two large aircraft breaking apart, black smoke billowing, burning wing pieces spinning away, dramatic contrast between fire and cold sky, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Murieron siete tripulantes. Y de los restos en llamas se soltaron cuatro bombas termonucleares.",
+                "camera": "tilt_down",
+                "visual_direction": "Entre el humo, cilindros metálicos alargados caen girando, algunos con paracaídas blancos abriéndose. La cámara baja siguiendo su caída. Micro-animación: paracaídas ondeando, humo arrastrado por el viento.",
+                "image_prompt": "Several long cylindrical gray metal bombs falling through dark smoke, one trailing a white parachute just opening, burning aircraft debris around them, seen from below against a smoky sky, grim cinematic tension, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Cada una, decenas de veces más potente que la de Hiroshima.",
+                "camera": "push_in",
+                "visual_direction": "Plano detalle de la carcasa de una bomba termonuclear en el suelo, metal frío y polvoriento, sin rótulos. Acercamiento lento y opresivo. Micro-animación: polvo flotando, luz de sol parpadeando por nubes.",
+                "image_prompt": "Close-up of the smooth gray metal casing of a 1960s thermonuclear bomb lying in dusty dry earth, cold side light, scratches and dents on the metal, no markings, no text, ominous stillness, shallow depth of field, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "Una aterrizó casi intacta junto al río Almanzora. Pero en otras dos, los paracaídas no se abrieron.",
+                "camera": "pan_left",
+                "visual_direction": "Cauce seco del Almanzora con cañas y tierra arenosa; un paracaídas blanco desinflado sobre el suelo junto a la bomba. Paneo lento por el lecho del río. Micro-animación: la tela del paracaídas moviéndose con el viento, cañas meciéndose.",
+                "image_prompt": "Dry sandy riverbed with tall reeds in southern Spain, a deflated white parachute spread across the ground next to a partially buried gray metal cylinder, winter afternoon light, desolate silence, vertical composition"
+              },
+              {
+                "label": "GIRO",
+                "narration": "Al impactar, estalló su explosivo convencional. No hubo explosión nuclear, pero el plutonio se esparció por los campos.",
+                "camera": "tilt_up",
+                "visual_direction": "Un cráter humeante en un campo de tomates, polvo gris suspendido sobre los surcos. La cámara sube desde el cráter hacia la nube de polvo. Micro-animación: polvo fino a la deriva, humo saliendo del cráter.",
+                "image_prompt": "Smoking crater in an agricultural tomato field on the Almeria coast, torn metal fragments scattered, a cloud of fine gray dust drifting over the furrows and green plants, a lone farmhouse in the background, harsh winter light, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Los militares contaron las bombas una y otra vez. Faltaba una.",
+                "camera": "push_in",
+                "visual_direction": "Interior de una tienda militar improvisada: un oficial estadounidense de unos 40 años, uniforme caqui de la USAF y gorra, inclinado sobre un mapa sin texto, de espaldas o de perfil. Micro-animación: lámpara colgante balanceándose, humo de cigarrillo.",
+                "image_prompt": "Inside a makeshift military tent at night in 1966, an American Air Force officer around forty in khaki uniform and cap, seen in profile, leaning over a blank topographic map on a folding table, lit by a single hanging lamp, cigarette smoke, tense atmosphere, no readable text, vertical composition"
+              },
+              {
+                "label": "CLIFFHANGER",
+                "narration": "Y solo un pescador del pueblo había visto dónde cayó.",
+                "camera": "pull_back",
+                "visual_direction": "Silueta de un pescador de pie en su barca de madera, mirando hacia el mar gris. Alejamiento que deja la barca pequeña en el agua inmensa. Micro-animación: olas suaves, gaviotas lejanas, bruma sobre el agua.",
+                "image_prompt": "Silhouette of a weathered Spanish fisherman in his fifties wearing a dark wool sweater and flat cap, standing in a small wooden fishing boat, seen from behind, staring at the gray Mediterranean sea, overcast sky, mist on the water, lonely and mysterious, vertical composition"
+              }
+            ],
+            "cliffhanger": "La cuarta bomba termonuclear ha desaparecido en el mar y solo un pescador del pueblo sabe dónde cayó. ¿La encontrarán antes de que sea tarde?",
+            "caption": "Parte 1/2. En enero de 1966, un bombardero estadounidense estalló sobre Palomares y soltó cuatro bombas de hidrógeno sobre Almería. Tres aparecieron en tierra. La cuarta no. ¿Sabías que esto pasó en España?",
+            "hashtags": [
+              "historiadeespaña",
+              "palomares",
+              "almeria",
+              "guerrafria",
+              "historiaoculta",
+              "bombanuclear"
+            ],
+            "youtube_title": "Cuatro bombas de hidrógeno cayeron sobre España: Palomares 1966 (Parte 1)",
+            "youtube_description": "El 17 de enero de 1966, un B-52 estadounidense chocó con un avión cisterna sobre Palomares (Almería). Cuatro bombas termonucleares cayeron sobre el pueblo: dos liberaron plutonio en los campos y una desapareció en el mar. Parte 1 de 2 de la serie «El día que España estuvo a punto de...»."
+          },
+          {
+            "part_number": 2,
+            "hook_title": "80 días buscando una bomba H",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "narration": "Durante ochenta días, Estados Unidos buscó una bomba de hidrógeno perdida frente a Almería.",
+                "camera": "push_in",
+                "visual_direction": "Mar Mediterráneo gris al amanecer, un buque de guerra estadounidense en la distancia rodeado de bruma. Acercamiento lento. Micro-animación: oleaje suave, niebla deslizándose sobre el agua.",
+                "image_prompt": "Gray 1960s US Navy warship anchored off a barren Spanish coastline at dawn, mist drifting over a calm leaden sea, distant brown mountains, cold blue and faint amber light, sense of quiet search, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "En 1966, un B-52 estalló sobre Palomares y soltó cuatro bombas termonucleares. Una desapareció.",
+                "camera": "tilt_down",
+                "visual_direction": "Desde el cielo con restos humeantes hasta el mar: un paracaídas blanco descendiendo hacia el agua. La cámara baja siguiéndolo. Micro-animación: paracaídas ondeando, humo en lo alto.",
+                "image_prompt": "A single white parachute carrying a long gray metal cylinder descending toward the Mediterranean sea, black smoke trails high in the sky above, sunlight on the water, wide view from a cliff, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "Un pescador, Francisco Simó Orts, vio un paracaídas caer al agua y señaló el punto exacto.",
+                "camera": "pan_right",
+                "visual_direction": "Plano medio de perfil de un pescador de unos 50 años, jersey de lana oscuro, gorra y piel curtida, señalando el horizonte desde su barca. Paneo hacia donde señala. Micro-animación: redes moviéndose, agua chapoteando contra el casco.",
+                "image_prompt": "Medium profile shot of a weathered Spanish fisherman around fifty with sun-tanned wrinkled skin, dark wool sweater and flat cap, standing in a wooden fishing boat with nets, pointing firmly toward a spot on the open sea, overcast light, 1966, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Llegó una flota estadounidense, con buzos y un minisubmarino: el Alvin.",
+                "camera": "pull_back",
+                "visual_direction": "Pequeño sumergible blanco con forma redondeada colgando de una grúa sobre la cubierta de un buque, marineros de espaldas. Alejamiento que revela otros barcos en el horizonte. Micro-animación: cables balanceándose, salpicaduras, gaviotas.",
+                "image_prompt": "Small white rounded 1960s research submersible hanging from a crane over the deck of a navy support ship, sailors in work clothes seen from behind, several gray warships on the horizon, choppy gray sea, no markings or text, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Para frenar el pánico, el ministro Manuel Fraga se bañó en esa costa con el embajador estadounidense.",
+                "camera": "pan_left",
+                "visual_direction": "Dos hombres en bañador de época entrando al mar frío, vistos desde atrás: uno robusto y de pelo oscuro de unos 43 años, otro alto y delgado de unos 50. Fotógrafos borrosos en la orilla. Micro-animación: olas rompiendo, viento en la arena.",
+                "image_prompt": "Two men in 1960s swimming trunks wading into a cold gray winter sea, seen from behind, one stocky with dark hair in his early forties, the other tall and thin around fifty, blurred photographers with old cameras on the sandy beach, overcast March sky, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Era marzo. Y la bomba seguía en el fondo del mar.",
+                "camera": "tilt_down",
+                "visual_direction": "Descenso desde la superficie luminosa hacia la oscuridad del fondo marino, donde se intuye un cilindro metálico envuelto en un paracaídas. Micro-animación: partículas en suspensión, rayos de luz ondulando.",
+                "image_prompt": "Deep underwater scene, faint light rays fading from the surface into darkness, on a muddy steep seabed a long gray metal cylinder wrapped in a ghostly white parachute, suspended particles, cold blue-black tones, eerie silence, vertical composition"
+              },
+              {
+                "label": "GIRO",
+                "narration": "El Alvin la encontró en el fondo. Al intentar izarla, se soltó y cayó aún más hondo.",
+                "camera": "push_in",
+                "visual_direction": "Focos del sumergible iluminando la bomba en una pendiente submarina, nube de lodo levantándose mientras se desliza. Acercamiento tenso. Micro-animación: lodo en remolino, haces de luz temblando.",
+                "image_prompt": "Submersible floodlights piercing the dark deep sea, illuminating a gray metal bomb tangled in a parachute sliding down a steep muddy underwater slope, a cloud of silt rising, a broken cable drifting, tense and claustrophobic, vertical composition"
+              },
+              {
+                "label": "GIRO",
+                "narration": "El 7 de abril por fin la subieron, a casi novecientos metros de profundidad. Intacta.",
+                "camera": "tilt_up",
+                "visual_direction": "La bomba, chorreando agua y con restos de paracaídas, es izada sobre la cubierta de un buque; marineros con casco de espaldas. La cámara sube siguiendo el izado. Micro-animación: agua goteando, cables tensos, brisa marina.",
+                "image_prompt": "Dripping gray thermonuclear bomb casing with tattered parachute remnants being hoisted by cables onto the deck of a 1960s navy ship, sailors in helmets seen from behind, wet steel deck, spring overcast light, no markings or text, vertical composition"
+              },
+              {
+                "label": "CIERRE",
+                "narration": "Sesenta años después, parte de Palomares sigue vallada. Con plutonio bajo la tierra.",
+                "camera": "pull_back",
+                "visual_direction": "Valla metálica oxidada en un terreno baldío junto a invernaderos modernos, luz de atardecer. Alejamiento lento que revela el pueblo al fondo. Micro-animación: hierba seca meciéndose, polvo en el viento, luz dorada que se apaga.",
+                "image_prompt": "Rusty chain-link fence enclosing a barren patch of dry scrubland in present-day Almeria, white greenhouses and a small village in the background, golden dusk light fading, dust carried by the wind, melancholic and unsettling, no signs or text, vertical composition"
+              }
+            ],
+            "cliffhanger": "Cierre: la bomba se recupera intacta el 7 de abril de 1966, pero sesenta años después parte de Palomares sigue vallada con plutonio residual que nunca se retiró del todo.",
+            "caption": "Parte 2/2. Una bomba de hidrógeno pasó 80 días en el fondo del mar de Almería. Un pescador sabía dónde estaba y un ministro se bañó al lado para calmar el miedo. Sesenta años después, Palomares sigue vallado.",
+            "hashtags": [
+              "historiadeespaña",
+              "palomares",
+              "fraga",
+              "almeria",
+              "guerrafria",
+              "misteriosdeespaña"
+            ],
+            "youtube_title": "La bomba H perdida en el mar de Almería: 80 días de búsqueda (Parte 2)",
+            "youtube_description": "Tras el accidente de Palomares de 1966, una bomba termonuclear desapareció en el Mediterráneo. El pescador Francisco Simó Orts señaló dónde cayó, el sumergible Alvin la encontró y el 7 de abril fue recuperada a casi 900 metros. Mientras tanto, Manuel Fraga se bañó en la playa para calmar el miedo. Parte 2 de 2 de «El día que España estuvo a punto de...»."
+          }
+        ]
+      },
+      "part": 0
+    },
+    {
+      "series": {
+        "series_title": "Palomares: las cuatro bombas H que cayeron sobre España",
+        "format": "punto_inflexion",
+        "year": "1966",
+        "place": "Palomares (Cuevas del Almanzora, Almería)",
+        "topic": "Accidente nuclear de Palomares (17/01/1966): choque de un B-52 y un avión cisterna KC-135, cuatro bombas termonucleares caen sobre Almería, una perdida en el mar 80 días, baño de Fraga y contaminación por plutonio que persiste.",
+        "master_style": "Cinematic 1960s historical photograph look, dark realistic film still with heavy analog grain, dramatic chiaroscuro lighting, muted cold teal and faded amber tones, dusty Mediterranean light, slight lens vignetting, Kodak Ektachrome period texture, vertical 9:16 composition, no text, no letters, no logos, no readable signs",
+        "historical_notes": "DOCUMENTADO: El 17 de enero de 1966, hacia las 10:20, un bombardero B-52G de la USAF (misión Chrome Dome) chocó con un avión cisterna KC-135 despegado de la base de Morón mientras repostaba a unos 9.400 m (31.000 pies) sobre Palomares. Murieron 7 tripulantes: los 4 del KC-135 y 3 de los 7 del B-52. Cayeron cuatro bombas termonucleares B28. Una cayó relativamente intacta cerca del cauce/desembocadura del río Almanzora; en otras dos el explosivo convencional detonó al impactar sin reacción nuclear y dispersó plutonio sobre terrenos agrícolas; la cuarta cayó al mar con paracaídas. El pescador Francisco Simó Orts, conocido después como 'Paco el de la bomba', vio caer el paracaídas al agua y su indicación fue clave para la búsqueda. La Marina de EE. UU. desplegó una gran flota con buzos y el sumergible Alvin, que localizó la bomba; en un primer intento de izado se soltó y cayó a mayor profundidad; fue recuperada el 7 de abril de 1966 (80 días después del accidente) a unos 869 m. El 8 de marzo de 1966, con la bomba aún en el fondo, el ministro de Información y Turismo Manuel Fraga se bañó en la playa de Quitapellejos con el embajador estadounidense Angier Biddle Duke para calmar el miedo al turismo. EE. UU. retiró en 1966 tierra contaminada (se suele citar en torno a 1.400 toneladas) a Savannah River (Carolina del Sur). Parte de los terrenos sigue vallada y con plutonio residual; el acuerdo de limpieza firmado en 2015 entre España y EE. UU. no se ha ejecutado. MATICES: la potencia de las B28 dependía de la versión (en torno a 1,1–1,45 megatones), por eso se dice 'decenas de veces Hiroshima' sin dar cifra exacta. Los efectos sobre la salud de los vecinos siguen siendo objeto de debate y no se afirman en el guion. Las edades y rasgos físicos de Simó Orts en las imágenes son aproximaciones visuales, no datos.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_title": "4 bombas H cayeron sobre Almería",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "narration": "El 17 de enero de 1966, cuatro bombas de hidrógeno cayeron sobre un pueblo de Almería.",
+                "camera": "push_in",
+                "visual_direction": "Cielo azul invernal sobre un pueblo blanco de Almería; arriba, una estela de humo negro rasga el cielo. Acercamiento lento hacia el pueblo. Micro-animación: humo de la estela que se expande, polvo flotando en el aire seco.",
+                "image_prompt": "Small whitewashed Andalusian village of flat-roofed houses on a dry hillside near the sea, winter morning 1966, high in the clear sky a thick black smoke trail and falling burning debris, low angle from a dirt road with prickly pear cactus in foreground, ominous calm, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "Un bombardero B-52 estadounidense repostaba en pleno vuelo sobre Palomares, a más de nueve mil metros.",
+                "camera": "pan_right",
+                "visual_direction": "Vista aérea a gran altura: el B-52 plateado y el avión cisterna unidos por la pértiga de repostaje, la costa almeriense abajo. Paneo lento siguiendo el vuelo. Micro-animación: brillo del sol sobre el fuselaje, finas nubes deslizándose.",
+                "image_prompt": "1960s American B-52 bomber flying at high altitude directly beneath a KC-135 tanker aircraft, connected by an aerial refueling boom, seen from slightly above, Mediterranean coastline and brown Almeria hills far below, cold high-altitude light, metallic silver fuselages, vertical framing"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "El avión cisterna, despegado de Morón, se acercó demasiado. Chocaron y estallaron en una bola de fuego.",
+                "camera": "pull_back",
+                "visual_direction": "La colisión: una enorme bola de fuego naranja en el cielo, fragmentos de fuselaje saliendo despedidos. Alejamiento que revela la magnitud. Micro-animación: llamas ondulando, humo negro hinchándose, chispas.",
+                "image_prompt": "Massive orange fireball exploding in a clear blue sky at high altitude, fragments of two large aircraft breaking apart, black smoke billowing, burning wing pieces spinning away, dramatic contrast between fire and cold sky, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Murieron siete tripulantes. Y de los restos en llamas se soltaron cuatro bombas termonucleares.",
+                "camera": "tilt_down",
+                "visual_direction": "Entre el humo, cilindros metálicos alargados caen girando, algunos con paracaídas blancos abriéndose. La cámara baja siguiendo su caída. Micro-animación: paracaídas ondeando, humo arrastrado por el viento.",
+                "image_prompt": "Several long cylindrical gray metal bombs falling through dark smoke, one trailing a white parachute just opening, burning aircraft debris around them, seen from below against a smoky sky, grim cinematic tension, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Cada una, decenas de veces más potente que la de Hiroshima.",
+                "camera": "push_in",
+                "visual_direction": "Plano detalle de la carcasa de una bomba termonuclear en el suelo, metal frío y polvoriento, sin rótulos. Acercamiento lento y opresivo. Micro-animación: polvo flotando, luz de sol parpadeando por nubes.",
+                "image_prompt": "Close-up of the smooth gray metal casing of a 1960s thermonuclear bomb lying in dusty dry earth, cold side light, scratches and dents on the metal, no markings, no text, ominous stillness, shallow depth of field, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "Una aterrizó casi intacta junto al río Almanzora. Pero en otras dos, los paracaídas no se abrieron.",
+                "camera": "pan_left",
+                "visual_direction": "Cauce seco del Almanzora con cañas y tierra arenosa; un paracaídas blanco desinflado sobre el suelo junto a la bomba. Paneo lento por el lecho del río. Micro-animación: la tela del paracaídas moviéndose con el viento, cañas meciéndose.",
+                "image_prompt": "Dry sandy riverbed with tall reeds in southern Spain, a deflated white parachute spread across the ground next to a partially buried gray metal cylinder, winter afternoon light, desolate silence, vertical composition"
+              },
+              {
+                "label": "GIRO",
+                "narration": "Al impactar, estalló su explosivo convencional. No hubo explosión nuclear, pero el plutonio se esparció por los campos.",
+                "camera": "tilt_up",
+                "visual_direction": "Un cráter humeante en un campo de tomates, polvo gris suspendido sobre los surcos. La cámara sube desde el cráter hacia la nube de polvo. Micro-animación: polvo fino a la deriva, humo saliendo del cráter.",
+                "image_prompt": "Smoking crater in an agricultural tomato field on the Almeria coast, torn metal fragments scattered, a cloud of fine gray dust drifting over the furrows and green plants, a lone farmhouse in the background, harsh winter light, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Los militares contaron las bombas una y otra vez. Faltaba una.",
+                "camera": "push_in",
+                "visual_direction": "Interior de una tienda militar improvisada: un oficial estadounidense de unos 40 años, uniforme caqui de la USAF y gorra, inclinado sobre un mapa sin texto, de espaldas o de perfil. Micro-animación: lámpara colgante balanceándose, humo de cigarrillo.",
+                "image_prompt": "Inside a makeshift military tent at night in 1966, an American Air Force officer around forty in khaki uniform and cap, seen in profile, leaning over a blank topographic map on a folding table, lit by a single hanging lamp, cigarette smoke, tense atmosphere, no readable text, vertical composition"
+              },
+              {
+                "label": "CLIFFHANGER",
+                "narration": "Y solo un pescador del pueblo había visto dónde cayó.",
+                "camera": "pull_back",
+                "visual_direction": "Silueta de un pescador de pie en su barca de madera, mirando hacia el mar gris. Alejamiento que deja la barca pequeña en el agua inmensa. Micro-animación: olas suaves, gaviotas lejanas, bruma sobre el agua.",
+                "image_prompt": "Silhouette of a weathered Spanish fisherman in his fifties wearing a dark wool sweater and flat cap, standing in a small wooden fishing boat, seen from behind, staring at the gray Mediterranean sea, overcast sky, mist on the water, lonely and mysterious, vertical composition"
+              }
+            ],
+            "cliffhanger": "La cuarta bomba termonuclear ha desaparecido en el mar y solo un pescador del pueblo sabe dónde cayó. ¿La encontrarán antes de que sea tarde?",
+            "caption": "Parte 1/2. En enero de 1966, un bombardero estadounidense estalló sobre Palomares y soltó cuatro bombas de hidrógeno sobre Almería. Tres aparecieron en tierra. La cuarta no. ¿Sabías que esto pasó en España?",
+            "hashtags": [
+              "historiadeespaña",
+              "palomares",
+              "almeria",
+              "guerrafria",
+              "historiaoculta",
+              "bombanuclear"
+            ],
+            "youtube_title": "Cuatro bombas de hidrógeno cayeron sobre España: Palomares 1966 (Parte 1)",
+            "youtube_description": "El 17 de enero de 1966, un B-52 estadounidense chocó con un avión cisterna sobre Palomares (Almería). Cuatro bombas termonucleares cayeron sobre el pueblo: dos liberaron plutonio en los campos y una desapareció en el mar. Parte 1 de 2 de la serie «El día que España estuvo a punto de...»."
+          },
+          {
+            "part_number": 2,
+            "hook_title": "80 días buscando una bomba H",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "narration": "Durante ochenta días, Estados Unidos buscó una bomba de hidrógeno perdida frente a Almería.",
+                "camera": "push_in",
+                "visual_direction": "Mar Mediterráneo gris al amanecer, un buque de guerra estadounidense en la distancia rodeado de bruma. Acercamiento lento. Micro-animación: oleaje suave, niebla deslizándose sobre el agua.",
+                "image_prompt": "Gray 1960s US Navy warship anchored off a barren Spanish coastline at dawn, mist drifting over a calm leaden sea, distant brown mountains, cold blue and faint amber light, sense of quiet search, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "En 1966, un B-52 estalló sobre Palomares y soltó cuatro bombas termonucleares. Una desapareció.",
+                "camera": "tilt_down",
+                "visual_direction": "Desde el cielo con restos humeantes hasta el mar: un paracaídas blanco descendiendo hacia el agua. La cámara baja siguiéndolo. Micro-animación: paracaídas ondeando, humo en lo alto.",
+                "image_prompt": "A single white parachute carrying a long gray metal cylinder descending toward the Mediterranean sea, black smoke trails high in the sky above, sunlight on the water, wide view from a cliff, vertical composition"
+              },
+              {
+                "label": "CONTEXTO",
+                "narration": "Un pescador, Francisco Simó Orts, vio un paracaídas caer al agua y señaló el punto exacto.",
+                "camera": "pan_right",
+                "visual_direction": "Plano medio de perfil de un pescador de unos 50 años, jersey de lana oscuro, gorra y piel curtida, señalando el horizonte desde su barca. Paneo hacia donde señala. Micro-animación: redes moviéndose, agua chapoteando contra el casco.",
+                "image_prompt": "Medium profile shot of a weathered Spanish fisherman around fifty with sun-tanned wrinkled skin, dark wool sweater and flat cap, standing in a wooden fishing boat with nets, pointing firmly toward a spot on the open sea, overcast light, 1966, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Llegó una flota estadounidense, con buzos y un minisubmarino: el Alvin.",
+                "camera": "pull_back",
+                "visual_direction": "Pequeño sumergible blanco con forma redondeada colgando de una grúa sobre la cubierta de un buque, marineros de espaldas. Alejamiento que revela otros barcos en el horizonte. Micro-animación: cables balanceándose, salpicaduras, gaviotas.",
+                "image_prompt": "Small white rounded 1960s research submersible hanging from a crane over the deck of a navy support ship, sailors in work clothes seen from behind, several gray warships on the horizon, choppy gray sea, no markings or text, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Para frenar el pánico, el ministro Manuel Fraga se bañó en esa costa con el embajador estadounidense.",
+                "camera": "pan_left",
+                "visual_direction": "Dos hombres en bañador de época entrando al mar frío, vistos desde atrás: uno robusto y de pelo oscuro de unos 43 años, otro alto y delgado de unos 50. Fotógrafos borrosos en la orilla. Micro-animación: olas rompiendo, viento en la arena.",
+                "image_prompt": "Two men in 1960s swimming trunks wading into a cold gray winter sea, seen from behind, one stocky with dark hair in his early forties, the other tall and thin around fifty, blurred photographers with old cameras on the sandy beach, overcast March sky, vertical composition"
+              },
+              {
+                "label": "TENSIÓN",
+                "narration": "Era marzo. Y la bomba seguía en el fondo del mar.",
+                "camera": "tilt_down",
+                "visual_direction": "Descenso desde la superficie luminosa hacia la oscuridad del fondo marino, donde se intuye un cilindro metálico envuelto en un paracaídas. Micro-animación: partículas en suspensión, rayos de luz ondulando.",
+                "image_prompt": "Deep underwater scene, faint light rays fading from the surface into darkness, on a muddy steep seabed a long gray metal cylinder wrapped in a ghostly white parachute, suspended particles, cold blue-black tones, eerie silence, vertical composition"
+              },
+              {
+                "label": "GIRO",
+                "narration": "El Alvin la encontró en el fondo. Al intentar izarla, se soltó y cayó aún más hondo.",
+                "camera": "push_in",
+                "visual_direction": "Focos del sumergible iluminando la bomba en una pendiente submarina, nube de lodo levantándose mientras se desliza. Acercamiento tenso. Micro-animación: lodo en remolino, haces de luz temblando.",
+                "image_prompt": "Submersible floodlights piercing the dark deep sea, illuminating a gray metal bomb tangled in a parachute sliding down a steep muddy underwater slope, a cloud of silt rising, a broken cable drifting, tense and claustrophobic, vertical composition"
+              },
+              {
+                "label": "GIRO",
+                "narration": "El 7 de abril por fin la subieron, a casi novecientos metros de profundidad. Intacta.",
+                "camera": "tilt_up",
+                "visual_direction": "La bomba, chorreando agua y con restos de paracaídas, es izada sobre la cubierta de un buque; marineros con casco de espaldas. La cámara sube siguiendo el izado. Micro-animación: agua goteando, cables tensos, brisa marina.",
+                "image_prompt": "Dripping gray thermonuclear bomb casing with tattered parachute remnants being hoisted by cables onto the deck of a 1960s navy ship, sailors in helmets seen from behind, wet steel deck, spring overcast light, no markings or text, vertical composition"
+              },
+              {
+                "label": "CIERRE",
+                "narration": "Sesenta años después, parte de Palomares sigue vallada. Con plutonio bajo la tierra.",
+                "camera": "pull_back",
+                "visual_direction": "Valla metálica oxidada en un terreno baldío junto a invernaderos modernos, luz de atardecer. Alejamiento lento que revela el pueblo al fondo. Micro-animación: hierba seca meciéndose, polvo en el viento, luz dorada que se apaga.",
+                "image_prompt": "Rusty chain-link fence enclosing a barren patch of dry scrubland in present-day Almeria, white greenhouses and a small village in the background, golden dusk light fading, dust carried by the wind, melancholic and unsettling, no signs or text, vertical composition"
+              }
+            ],
+            "cliffhanger": "Cierre: la bomba se recupera intacta el 7 de abril de 1966, pero sesenta años después parte de Palomares sigue vallada con plutonio residual que nunca se retiró del todo.",
+            "caption": "Parte 2/2. Una bomba de hidrógeno pasó 80 días en el fondo del mar de Almería. Un pescador sabía dónde estaba y un ministro se bañó al lado para calmar el miedo. Sesenta años después, Palomares sigue vallado.",
+            "hashtags": [
+              "historiadeespaña",
+              "palomares",
+              "fraga",
+              "almeria",
+              "guerrafria",
+              "misteriosdeespaña"
+            ],
+            "youtube_title": "La bomba H perdida en el mar de Almería: 80 días de búsqueda (Parte 2)",
+            "youtube_description": "Tras el accidente de Palomares de 1966, una bomba termonuclear desapareció en el Mediterráneo. El pescador Francisco Simó Orts señaló dónde cayó, el sumergible Alvin la encontró y el 7 de abril fue recuperada a casi 900 metros. Mientras tanto, Manuel Fraga se bañó en la playa para calmar el miedo. Parte 2 de 2 de «El día que España estuvo a punto de...»."
+          }
+        ]
+      },
+      "part": 1
+    }
+  ],
+  "last_published": null
+}

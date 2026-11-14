@@ -1,4 +1,4 @@
-name: Reel diario
+name: Episodio diario
 
 on:
   schedule:
@@ -11,10 +11,18 @@ on:
         description: "Solo generar el vídeo (no publicar)"
         type: boolean
         default: true
+      new_story:
+        description: "Empezar historia nueva (aunque quede una parte pendiente)"
+        type: boolean
+        default: false
+      topic:
+        description: "Tema de la historia nueva (vacío = lo propone Claude)"
+        type: string
+        default: ""
       format:
-        description: "Formato (auto = elegir al azar)"
+        description: "Formato de la historia nueva"
         type: choice
-        options: [auto, consejo, error_comun, regla_curiosidad, busca_partido, novedad_app]
+        options: [auto, punto_inflexion, crimen_historico]
         default: auto
       force:
         description: "Publicar aunque ya se haya publicado hoy"
@@ -54,17 +62,28 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
           UPLOAD_POST_USER: ${{ vars.UPLOAD_POST_USER }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          TOPIC: ${{ inputs.topic }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           TZ: Europe/Madrid
         run: |
-          ARGS=""
+          ARGS=()
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
-            [ "${{ inputs.force }}" = "true" ] && ARGS="$ARGS --force"
-            [ "${{ inputs.format }}" != "auto" ] && ARGS="$ARGS --format ${{ inputs.format }}"
+            if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS+=(--dry-run); fi
+            if [ "${{ inputs.force }}" = "true" ]; then ARGS+=(--force); fi
+            if [ "${{ inputs.new_story }}" = "true" ]; then ARGS+=(--new); fi
+            if [ "${{ inputs.format }}" != "auto" ]; then ARGS+=(--format "${{ inputs.format }}"); fi
+            if [ -n "$TOPIC" ]; then ARGS+=(--topic "$TOPIC"); fi
           fi
-          python -m reels $ARGS
+          python -m reels "${ARGS[@]}"
+
+      - name: Vista previa (fotogramas)
+        if: always()
+        run: |
+          for f in out/*/reel.mp4; do
+            [ -f "$f" ] || continue
+            ffmpeg -loglevel error -y -i "$f" -vf "fps=1/5,scale=270:-1,tile=5x2" -frames:v 1 "$(dirname "$f")/preview.jpg" || true
+          done
 
       - name: Guardar vídeo y guion
         if: always()
@@ -73,14 +92,25 @@ jobs:
           name: reel-${{ github.run_id }}
           path: |
             out/*/reel.mp4
-            out/*/script.json
+            out/*/guion.md
+            out/*/series.json
           retention-days: 14
           if-no-files-found: ignore
 
-      - name: Guardar historial (evita repetir temas)
+      - name: Guardar vista previa
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-${{ github.run_id }}
+          path: |
+            out/*/preview.jpg
+            out/*/guion.md
+          if-no-files-found: ignore
+
+      - name: Guardar historial y partes pendientes
         if: always()
         run: |
           git config user.name "reels-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/history.json || true
-          git diff --cached --quiet || (git commit -m "Historial: reel $(date +%F)" && git push)
+          git add data/ || true
+          git diff --cached --quiet || (git commit -m "Estado: episodio $(date +%F)" && git push)

@@ -1,106 +1,82 @@
-"""Genera el guion del reel con Claude (salida estructurada y validada con Pydantic)."""
+"""Genera con Claude una historia completa (1 o 2 partes) con guion, dirección visual y prompts."""
 from __future__ import annotations
 
 import json
 import os
-import random
 import shutil
 import subprocess
 from datetime import date
-from typing import List
+from typing import List, Literal
 
 import anthropic
 from pydantic import BaseModel, Field
 
+from .config import ROOT
 
-class Scene(BaseModel):
-    narration: str = Field(description="Frase(s) que dice la voz en off en esta escena.")
-    footage_query: str = Field(
-        description="Búsqueda en inglés (1-3 palabras) para un clip vertical de stock en Pexels."
-    )
+Camera = Literal["push_in", "pull_back", "pan_left", "pan_right", "tilt_up", "tilt_down"]
 
 
-class Script(BaseModel):
-    topic: str = Field(description="Tema del vídeo en pocas palabras (para no repetirlo).")
-    hook_title: str = Field(description="Texto grande en pantalla los primeros segundos, máx. 6 palabras.")
-    scenes: List[Scene]
-    caption: str = Field(description="Texto del post para TikTok e Instagram, sin hashtags.")
-    hashtags: List[str] = Field(description="Entre 3 y 6 hashtags, sin el símbolo #.")
-    youtube_title: str = Field(description="Título para YouTube Shorts, máx. 90 caracteres.")
+class Block(BaseModel):
+    label: str = Field(description="Nombre del tramo: GANCHO, CONTEXTO, TENSIÓN, GIRO, CLIFFHANGER...")
+    narration: str = Field(description="Voz en off de este plano (10-18 palabras).")
+    camera: Camera
+    visual_direction: str = Field(description="Dirección visual y micro-animación ambiental, en español.")
+    image_prompt: str = Field(description="Prompt en inglés para el generador de imagen, sin el estilo maestro.")
+
+
+class Part(BaseModel):
+    part_number: int
+    hook_title: str = Field(description="Texto grande en pantalla al inicio, máx. 7 palabras.")
+    blocks: List[Block]
+    cliffhanger: str = Field(description="Cómo termina esta parte y qué deja abierto (o el cierre final).")
+    caption: str = Field(description="Texto del post para TikTok/Instagram, sin hashtags. Incluye 'Parte X/Y' si hay 2 partes.")
+    hashtags: List[str] = Field(description="Entre 4 y 7 hashtags sin '#'.")
+    youtube_title: str = Field(description="Título para YouTube Shorts, máx. 90 caracteres, con 'Parte X' si aplica.")
     youtube_description: str
 
 
-SYSTEM = """Eres guionista de vídeos verticales cortos (TikTok, Reels, Shorts) para {brand}.
-
-Sobre la marca:
-{description}
-
-Escribe en {language}. Reglas:
-- La primera frase es el gancho: tiene que hacer que alguien deje de hacer scroll (pregunta, \
-dato sorprendente o situación muy reconocible). Nada de "Hola, hoy os traigo...".
-- Locución total de unos {words} palabras ({seconds} s), dividida en 4-7 escenas cortas.
-- Frases cortas, para decir en voz alta. Escribe los números con letras si se leen mejor así.
-- Aporta valor real y concreto: un vídeo que se podría haber escrito sobre cualquier deporte no vale.
-- No te inventes datos, estadísticas, nombres de clubes ni funciones de la app que no aparezcan arriba.
-- La última escena cierra con una llamada a la acción breve y natural relacionada con: "{cta}". \
-En formatos que no van de la app, la mención a {brand} es breve y al final.
-- footage_query: busca imágenes que existan en bancos de vídeo (p. ej. "padel", "padel court", \
-"tennis racket", "friends sport", "smartphone app", "sports celebration"). Varía entre escenas.
-"""
+class Series(BaseModel):
+    series_title: str
+    format: Literal["punto_inflexion", "crimen_historico"]
+    year: str
+    place: str
+    topic: str = Field(description="Resumen del tema en una línea (para no repetirlo en el futuro).")
+    master_style: str = Field(description="Estilo Visual Maestro en inglés, se añade a todos los prompts de imagen.")
+    historical_notes: str = Field(description="Fuentes o matices: qué está documentado y qué es incierto.")
+    parts: List[Part] = Field(description="1 o 2 partes.")
 
 
-def pick_format(cfg: dict, history: list[dict], forced: str | None = None) -> dict:
-    formats = cfg["formats"]
+def _system_prompt() -> str:
+    return (ROOT / "prompts" / "guionista.md").read_text(encoding="utf-8")
+
+
+def next_format(history: list[dict], forced: str | None) -> str:
     if forced:
-        for f in formats:
-            if f["id"] == forced:
-                return f
-        raise SystemExit(f"Formato desconocido: {forced}. Opciones: {[f['id'] for f in formats]}")
-    last = history[-1]["format"] if history else None
-    candidates = [f for f in formats if f["id"] != last] or formats
-    return random.choices(candidates, weights=[f.get("weight", 1) for f in candidates])[0]
+        return forced
+    last = history[-1]["format"] if history else "crimen_historico"
+    return "punto_inflexion" if last == "crimen_historico" else "crimen_historico"
 
 
-def generate_script(cfg: dict, fmt: dict, history: list[dict]) -> Script:
-    brand = cfg["brand"]
-    seconds = cfg["video"]["target_seconds"]
-    system = SYSTEM.format(
-        brand=brand["name"],
-        description=brand["description"].strip(),
-        language=cfg["language"],
-        words=int(seconds * 2.7),
-        seconds=seconds,
-        cta=brand["cta"],
-    )
-    recent = [h["topic"] for h in history[-40:]]
+def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None = None) -> Series:
+    fmt_name = {"punto_inflexion": "Punto de inflexión («El día que España estuvo a punto de...»)",
+                "crimen_historico": "Crimen, conspiración o suceso oscuro real"}[fmt]
+    done = [h["topic"] for h in history[-80:]]
     user = (
         f"Fecha: {date.today().isoformat()}\n"
-        f"Formato de hoy ({fmt['id']}): {fmt['brief'].strip()}\n\n"
-        "Temas ya publicados (no repitas ninguno ni un enfoque casi igual):\n"
-        + ("\n".join(f"- {t}" for t in recent) if recent else "- (ninguno todavía)")
+        f"Formato: {fmt_name}\n"
+        f"Tema a desarrollar: {topic or 'propón tú uno potente, poco trillado y bien documentado'}\n"
+        f"Partes: máximo {cfg['series'].get('max_parts', 2)}.\n\n"
+        "Historias ya publicadas (no repitas ninguna):\n"
+        + ("\n".join(f"- {t}" for t in done) if done else "- (ninguna todavía)")
     )
-
     if _use_claude_code(cfg):
-        return _generate_with_claude_code(cfg, system, user)
-
-    client = anthropic.Anthropic()
-    response = client.beta.messages.parse(
-        model=cfg["claude"]["model"],
-        max_tokens=16000,
-        thinking={"type": "adaptive"},
-        output_config={"effort": cfg["claude"].get("effort", "medium")},
-        # Si el modelo rechaza la petición, la API la reintenta con el modelo de respaldo.
-        betas=["server-side-fallback-2026-07-01"],
-        fallbacks="default",
-        system=system,
-        messages=[{"role": "user", "content": user}],
-        output_format=Script,
-    )
-    if response.stop_reason == "refusal":
-        raise RuntimeError(f"Claude rechazó generar el guion: {response.stop_details}")
-    if response.stop_reason == "max_tokens" or response.parsed_output is None:
-        raise RuntimeError(f"Guion incompleto (stop_reason={response.stop_reason}).")
-    return response.parsed_output
+        series = _claude_code(cfg, _system_prompt(), user)
+    else:
+        series = _api(cfg, _system_prompt(), user)
+    series.parts = series.parts[: cfg["series"].get("max_parts", 2)]
+    for i, p in enumerate(series.parts, 1):
+        p.part_number = i
+    return series
 
 
 def _use_claude_code(cfg: dict) -> bool:
@@ -110,24 +86,24 @@ def _use_claude_code(cfg: dict) -> bool:
     return backend == "claude-code"
 
 
-def _generate_with_claude_code(cfg: dict, system: str, user: str) -> Script:
-    """Usa Claude Code en modo no interactivo, con la suscripción (token de `claude setup-token`)."""
+def _claude_code(cfg: dict, system: str, user: str) -> Series:
+    """Claude Code en modo no interactivo, con la suscripción (token de `claude setup-token`)."""
     if not shutil.which("claude"):
         raise SystemExit("No se encuentra Claude Code (`npm install -g @anthropic-ai/claude-code`).")
     cmd = [
         "claude", "-p", user,
         "--model", cfg["claude"]["model"],
-        "--effort", cfg["claude"].get("effort", "medium"),
+        "--effort", cfg["claude"].get("effort", "high"),
         "--system-prompt", system,
-        "--json-schema", json.dumps(Script.model_json_schema()),
+        "--json-schema", json.dumps(Series.model_json_schema()),
         "--output-format", "json",
-        "--tools", "",                 # sin herramientas: solo escribe el guion
+        "--tools", "",
         "--strict-mcp-config", "--setting-sources", "", "--disable-slash-commands",
         "--no-session-persistence",
     ]
     last_error = ""
     for _ in range(2):
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
         try:
             data = json.loads(proc.stdout)
         except ValueError:
@@ -136,24 +112,25 @@ def _generate_with_claude_code(cfg: dict, system: str, user: str) -> Script:
         if data.get("is_error") or not data.get("structured_output"):
             last_error = str(data.get("result") or data)[:2000]
             continue
-        return Script.model_validate(data["structured_output"])
+        return Series.model_validate(data["structured_output"])
     raise RuntimeError(f"Claude Code no devolvió un guion válido: {last_error}")
 
 
-def sample_script() -> Script:
-    """Guion fijo para probar el montaje sin gastar API (--sample)."""
-    return Script.model_validate(json.loads("""{
-      "topic": "salir de la pared con el globo",
-      "hook_title": "Deja de regalar el punto",
-      "scenes": [
-        {"narration": "¿Te pasa que la bola sale de la pared y no sabes qué hacer con ella?", "footage_query": "padel"},
-        {"narration": "La mayoría la pega fuerte y plana. Y el rival, en la red, solo tiene que bloquear.", "footage_query": "padel court"},
-        {"narration": "Prueba esto: deja que baje, flexiona las piernas y tira un globo alto y profundo.", "footage_query": "tennis racket"},
-        {"narration": "Así recuperas la red y el que sufre ahora es el otro.", "footage_query": "sports celebration"},
-        {"narration": "¿Te falta gente para practicarlo? En AVORA encuentras partido de tu nivel cerca de ti.", "footage_query": "smartphone app"}
-      ],
-      "caption": "El golpe que más puntos regala en pádel amateur (y cómo arreglarlo).",
-      "hashtags": ["padel", "padelolot", "consejospadel", "garrotxa"],
-      "youtube_title": "Cómo salir de la pared en pádel sin regalar el punto",
-      "youtube_description": "Un consejo rápido de pádel para tu próximo partido."
-    }"""))
+def _api(cfg: dict, system: str, user: str) -> Series:
+    client = anthropic.Anthropic()
+    response = client.beta.messages.parse(
+        model=cfg["claude"]["model"],
+        max_tokens=32000,
+        thinking={"type": "adaptive"},
+        output_config={"effort": cfg["claude"].get("effort", "high")},
+        betas=["server-side-fallback-2026-07-01"],
+        fallbacks="default",
+        system=system,
+        messages=[{"role": "user", "content": user}],
+        output_format=Series,
+    )
+    if response.stop_reason == "refusal":
+        raise RuntimeError(f"Claude rechazó generar el guion: {response.stop_details}")
+    if response.stop_reason == "max_tokens" or response.parsed_output is None:
+        raise RuntimeError(f"Guion incompleto (stop_reason={response.stop_reason}).")
+    return response.parsed_output
