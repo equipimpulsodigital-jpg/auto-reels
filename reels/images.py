@@ -45,7 +45,7 @@ def _replicate(prompt: str, seed: int) -> Image.Image:
 
 
 def generate_image(prompt: str, style: str, out: Path, seed: int, cfg: dict) -> Optional[Path]:
-    full = f"{prompt}. {style}. Vertical 9:16 composition. {NEGATIVE}"
+    full = f"{prompt}. {style}. {NEGATIVE}"
     provider = cfg["images"].get("provider", "pollinations")
     if provider == "replicate" and not os.environ.get("REPLICATE_API_TOKEN"):
         print("  (sin REPLICATE_API_TOKEN: uso Pollinations)")
@@ -59,7 +59,7 @@ def generate_image(prompt: str, style: str, out: Path, seed: int, cfg: dict) -> 
             img.save(out, quality=95)
             return out
         except Exception as e:  # red, límites de uso, etc.
-            wait = 10 * (attempt + 1)
+            wait = 20 * (attempt + 1)
             print(f"  imagen: error ({e}); reintento en {wait}s")
             time.sleep(wait)
     return None

@@ -119,6 +119,9 @@ def main() -> int:
     for i, (b, dur) in enumerate(zip(part.blocks, durations)):
         img = generate_image(b.image_prompt, series.master_style, workdir / f"img_{i}.jpg",
                              seed_base + i, cfg)
+        if img is None:  # si el generador falla, reutiliza la imagen anterior con otro movimiento
+            img = next((workdir / f"img_{k}.jpg" for k in range(i - 1, -1, -1)
+                        if (workdir / f"img_{k}.jpg").exists()), None)
         print(f"  plano {i + 1}/{len(part.blocks)} · {b.camera}" + ("" if img else " · SIN IMAGEN"))
         shots.append(shot_clip(img, b.camera, dur, workdir / f"shot_{i}.mp4", v["width"], v["height"], v["fps"]))
 

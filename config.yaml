@@ -20,7 +20,7 @@ images:
 voice:
   provider: edge              # edge (gratis) | elevenlabs (más natural, de pago)
   edge_voice: es-ES-AlvaroNeural   # otras: es-ES-ElviraNeural, es-ES-XimenaNeural
-  edge_rate: "+4%"
+  edge_rate: "+14%"
   edge_pitch: "-4Hz"          # un poco más grave, tono de narrador
   elevenlabs_voice_id: ""
   elevenlabs_model: eleven_multilingual_v2
