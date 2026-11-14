@@ -2,7 +2,10 @@
 from __future__ import annotations
 
 import json
+import os
 import random
+import shutil
+import subprocess
 from datetime import date
 from typing import List
 
@@ -77,6 +80,9 @@ def generate_script(cfg: dict, fmt: dict, history: list[dict]) -> Script:
         + ("\n".join(f"- {t}" for t in recent) if recent else "- (ninguno todavía)")
     )
 
+    if _use_claude_code(cfg):
+        return _generate_with_claude_code(cfg, system, user)
+
     client = anthropic.Anthropic()
     response = client.beta.messages.parse(
         model=cfg["claude"]["model"],
@@ -95,6 +101,43 @@ def generate_script(cfg: dict, fmt: dict, history: list[dict]) -> Script:
     if response.stop_reason == "max_tokens" or response.parsed_output is None:
         raise RuntimeError(f"Guion incompleto (stop_reason={response.stop_reason}).")
     return response.parsed_output
+
+
+def _use_claude_code(cfg: dict) -> bool:
+    backend = cfg["claude"].get("backend", "auto")
+    if backend == "auto":
+        return bool(os.environ.get("CLAUDE_CODE_OAUTH_TOKEN")) or not os.environ.get("ANTHROPIC_API_KEY")
+    return backend == "claude-code"
+
+
+def _generate_with_claude_code(cfg: dict, system: str, user: str) -> Script:
+    """Usa Claude Code en modo no interactivo, con la suscripción (token de `claude setup-token`)."""
+    if not shutil.which("claude"):
+        raise SystemExit("No se encuentra Claude Code (`npm install -g @anthropic-ai/claude-code`).")
+    cmd = [
+        "claude", "-p", user,
+        "--model", cfg["claude"]["model"],
+        "--effort", cfg["claude"].get("effort", "medium"),
+        "--system-prompt", system,
+        "--json-schema", json.dumps(Script.model_json_schema()),
+        "--output-format", "json",
+        "--tools", "",                 # sin herramientas: solo escribe el guion
+        "--strict-mcp-config", "--setting-sources", "", "--disable-slash-commands",
+        "--no-session-persistence",
+    ]
+    last_error = ""
+    for _ in range(2):
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+        try:
+            data = json.loads(proc.stdout)
+        except ValueError:
+            last_error = (proc.stderr or proc.stdout)[-2000:]
+            continue
+        if data.get("is_error") or not data.get("structured_output"):
+            last_error = str(data.get("result") or data)[:2000]
+            continue
+        return Script.model_validate(data["structured_output"])
+    raise RuntimeError(f"Claude Code no devolvió un guion válido: {last_error}")
 
 
 def sample_script() -> Script:
