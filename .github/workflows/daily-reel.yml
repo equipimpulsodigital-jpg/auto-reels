@@ -1,0 +1,83 @@
+name: Reel diario
+
+on:
+  schedule:
+    # 17:00 UTC = 18:00 en invierno / 19:00 en verano (hora de España).
+    # GitHub puede retrasar unos minutos las ejecuciones programadas.
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Solo generar el vídeo (no publicar)"
+        type: boolean
+        default: true
+      format:
+        description: "Formato (auto = elegir al azar)"
+        type: choice
+        options: [auto, consejo, error_comun, regla_curiosidad, busca_partido, novedad_app]
+        default: auto
+      force:
+        description: "Publicar aunque ya se haya publicado hoy"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-reel
+  cancel-in-progress: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Generar y publicar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+          UPLOAD_POST_USER: ${{ vars.UPLOAD_POST_USER }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          TZ: Europe/Madrid
+        run: |
+          ARGS=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+            [ "${{ inputs.force }}" = "true" ] && ARGS="$ARGS --force"
+            [ "${{ inputs.format }}" != "auto" ] && ARGS="$ARGS --format ${{ inputs.format }}"
+          fi
+          python -m reels $ARGS
+
+      - name: Guardar vídeo y guion
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reel-${{ github.run_id }}
+          path: |
+            out/*/reel.mp4
+            out/*/script.json
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Guardar historial (evita repetir temas)
+        if: always()
+        run: |
+          git config user.name "reels-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/history.json || true
+          git diff --cached --quiet || (git commit -m "Historial: reel $(date +%F)" && git push)

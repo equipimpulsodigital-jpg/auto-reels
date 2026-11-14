@@ -1,0 +1,60 @@
+# Configuración de los reels diarios. Puedes editar este archivo sin tocar el código.
+
+brand:
+  name: AVORA
+  # Contexto que Claude usa para escribir los guiones. Cuanto más concreto, mejores vídeos.
+  description: >
+    AVORA es una app hiperlocal de pádel que nace en Olot (la Garrotxa) y se irá abriendo a
+    Girona y Cataluña. Sirve para encontrar partidos y compañeros de tu nivel cerca de ti:
+    cada jugador tiene un nivel del 1 al 7 que se calibra con los resultados, la app sugiere
+    partidos compatibles por horario y distancia, cada partido tiene su chat y los jugadores se
+    valoran entre sí (deportividad y puntualidad). Los clubes de la zona gestionan pistas y
+    reservas desde un panel web.
+  handle: "@avora"            # cámbialo por tu usuario real
+  cta: "Descarga AVORA y encuentra partido de tu nivel cerca de ti."
+  accent_color: "#C6F432"     # color de los subtítulos destacados
+
+language: "español de España (tono cercano, puedes usar alguna expresión catalana suelta)"
+
+# Mezcla de formatos. Cada día se elige uno según el peso, sin repetir el del día anterior.
+formats:
+  - id: consejo
+    weight: 3
+    brief: Un consejo práctico de técnica o táctica de pádel que se pueda aplicar en el próximo partido.
+  - id: error_comun
+    weight: 2
+    brief: Un error muy común de jugadores amateurs, por qué pasa y cómo corregirlo.
+  - id: regla_curiosidad
+    weight: 2
+    brief: Una regla poco conocida, una curiosidad o un dato sorprendente del pádel.
+  - id: busca_partido
+    weight: 2
+    brief: >
+      Situación con la que se identifique cualquier jugador de Olot y la Garrotxa (te falta el
+      cuarto, siempre juegas con los mismos, partidos descompensados...) y cómo AVORA lo resuelve.
+  - id: novedad_app
+    weight: 1
+    brief: Explica una función concreta de AVORA (niveles, sugerencias de partido, chat, valoraciones) con un caso real.
+
+video:
+  target_seconds: 40          # duración aproximada de la locución
+  width: 1080
+  height: 1920
+  fps: 30
+  music_volume: 0.12          # volumen de la música de fondo (0-1), si hay música en assets/music
+
+voice:
+  provider: edge              # edge (gratis) | elevenlabs (mejor calidad, de pago)
+  edge_voice: es-ES-AlvaroNeural   # otras: es-ES-ElviraNeural, es-ES-XimenaNeural
+  edge_rate: "+8%"
+  elevenlabs_voice_id: ""     # ID de la voz en ElevenLabs (si usas elevenlabs)
+  elevenlabs_model: eleven_multilingual_v2
+
+claude:
+  model: claude-opus-5-5
+  effort: medium
+
+publish:
+  platforms: [tiktok, instagram, youtube]
+  label_as_ai: true           # marca el vídeo como generado con IA (recomendado: la voz es sintética)
+  youtube_privacy: public     # public | unlisted | private
