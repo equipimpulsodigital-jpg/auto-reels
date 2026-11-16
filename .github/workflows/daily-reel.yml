@@ -2,9 +2,10 @@ name: Episodio diario
 
 on:
   schedule:
-    # 17:00 UTC = 18:00 en invierno / 19:00 en verano (hora de España).
+    # Publica a las 10:00, 13:00, 16:00, 19:00 y 22:00 (hora de España). GitHub solo entiende UTC,
+    # así que se programan las horas de invierno y de verano y el primer paso descarta la que no toca.
     # GitHub puede retrasar unos minutos las ejecuciones programadas.
-    - cron: "0 17 * * *"
+    - cron: "0 8,9,11,12,14,15,17,18,20,21 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -41,22 +42,37 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
+      - name: Comprobar franja horaria
+        id: slot
+        run: |
+          h=$(TZ=Europe/Madrid date +%-H)
+          if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          case "$h" in
+            10|13|16|19|22) echo "go=true" >> "$GITHUB_OUTPUT" ;;
+            *) echo "go=false" >> "$GITHUB_OUTPUT"; echo "Son las $h h en España: no toca publicar." ;;
+          esac
+
       - uses: actions/checkout@v4
+        if: steps.slot.outputs.go == 'true'
 
       - uses: actions/setup-python@v5
+        if: steps.slot.outputs.go == 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Instalar FFmpeg y librerías gráficas
+        if: steps.slot.outputs.go == 'true'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libegl1 libgl1 fontconfig
 
       - name: Instalar dependencias
+        if: steps.slot.outputs.go == 'true'
         run: |
           pip install -r requirements.txt
           npm install -g @anthropic-ai/claude-code
 
       - name: Generar y publicar
+        if: steps.slot.outputs.go == 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -78,7 +94,7 @@ jobs:
           python -m reels "${ARGS[@]}"
 
       - name: Vista previa (fotogramas)
-        if: always()
+        if: always() && steps.slot.outputs.go == 'true'
         run: |
           for f in out/*/reel.mp4; do
             [ -f "$f" ] || continue
@@ -86,7 +102,7 @@ jobs:
           done
 
       - name: Guardar vídeo y guion
-        if: always()
+        if: always() && steps.slot.outputs.go == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: reel-${{ github.run_id }}
@@ -98,7 +114,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Guardar vista previa
-        if: always()
+        if: always() && steps.slot.outputs.go == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: preview-${{ github.run_id }}
@@ -108,7 +124,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Guardar historial y partes pendientes
-        if: always()
+        if: always() && steps.slot.outputs.go == 'true'
         run: |
           git config user.name "reels-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"

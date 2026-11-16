@@ -13,16 +13,17 @@ from .script import Part
 API = "https://api.upload-post.com/api"
 
 
-def _caption(script: Part) -> str:
+def _caption(script: Part, total_parts: int = 1) -> str:
     tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in script.hashtags)
-    return f"{script.caption}\n\n{tags}".strip()
+    follow = f"\n\nSígueme para la parte {script.part_number + 1}" if script.part_number < total_parts else ""
+    return f"{script.caption}{follow}\n\n{tags}".strip()
 
 
-def publish(video: Path, script: Part, cfg: dict, idempotency_key: str) -> dict:
+def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_parts: int = 1) -> dict:
     pcfg = cfg["publish"]
     platforms = pcfg["platforms"]
     ai = "true" if pcfg.get("label_as_ai", True) else "false"
-    caption = _caption(script)
+    caption = _caption(script, total_parts)
 
     fields: list[tuple[str, str]] = [("user", env("UPLOAD_POST_USER")), ("title", script.youtube_title[:100])]
     fields += [("platform[]", p) for p in platforms]
@@ -52,8 +53,9 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str) -> dict:
     print("  Upload-Post:", json.dumps(result, ensure_ascii=False)[:1500])
 
     request_id = result.get("request_id")
-    if request_id and not sync:
-        result["final_status"] = wait_for_status(request_id, headers)
+    # Si Upload-Post pasa la subida a segundo plano (tarda demasiado), se espera a la confirmación final.
+    if request_id and (not sync or not result.get("results")):
+        result["final_status"] = wait_for_status(request_id, headers, interval=45)
     else:
         result["final_status"] = _sync_status(result)
     return result
@@ -75,12 +77,12 @@ def _sync_status(result: dict) -> dict:
     return {"status": "completed", "results": rows}
 
 
-def wait_for_status(request_id: str, headers: dict, timeout_s: int = 900) -> dict:
+def wait_for_status(request_id: str, headers: dict, timeout_s: int = 900, interval: int = 20) -> dict:
     """Consulta el estado hasta que termina (TikTok e Instagram procesan el vídeo en segundo plano)."""
     deadline = time.time() + timeout_s
     status: dict = {}
     while time.time() < deadline:
-        time.sleep(20)
+        time.sleep(interval)
         try:
             r = requests.get(f"{API}/uploadposts/status", headers=headers,
                              params={"request_id": request_id}, timeout=60)

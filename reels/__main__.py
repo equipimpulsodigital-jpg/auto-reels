@@ -27,6 +27,19 @@ def _save(name: str, value) -> None:
     (DATA / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def _hours_since(stamp) -> float:
+    """Horas desde la última publicación (acepta el formato antiguo, solo fecha)."""
+    if not stamp:
+        return float("inf")
+    try:
+        when = datetime.fromisoformat(stamp)
+    except ValueError:
+        return float("inf")
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=timezone.utc)
+    return (datetime.now(timezone.utc) - when).total_seconds() / 3600
+
+
 def _fmt_time(t: float) -> str:
     return f"{int(t // 60):02d}:{int(t % 60):02d}"
 
@@ -81,8 +94,9 @@ def main() -> int:
     history: list[dict] = _load("history.json", [])
     state: dict = _load("state.json", {"queue": [], "last_published": None})
     today = date.today().isoformat()
-    if not args.dry_run and not args.force and state.get("last_published") == today:
-        print(f"Ya se publicó un episodio hoy ({today}). Usa --force para publicar otro.")
+    gap_h = float(cfg["publish"].get("min_hours_between", 2))
+    if not args.dry_run and not args.force and _hours_since(state.get("last_published")) < gap_h:
+        print(f"Se publicó hace menos de {gap_h:g} h ({state.get('last_published')}). Usa --force para publicar otro.")
         return 0
 
     # Historia pendiente en un formato antiguo (p. ej. de antes de la animación): se reescribe el mismo tema.
@@ -154,14 +168,15 @@ def main() -> int:
         print("5/5 Publicación omitida (modo prueba). Esta parte sigue pendiente para la próxima ejecución.")
         return 0
     print("5/5 Publicando en", ", ".join(cfg["publish"]["platforms"]))
-    result = publish(video, part, cfg, idempotency_key=f"ep-{today}-{zlib.crc32(series.series_title.encode())}-{part.part_number}")
+    result = publish(video, part, cfg, idempotency_key=f"ep-{today}-{zlib.crc32(series.series_title.encode())}-{part.part_number}",
+                     total_parts=n)
     failed = failed_platforms(result)
     platforms = cfg["publish"]["platforms"]
     if len(failed) >= len(platforms) or failed == ["failed"]:
         print(f"No se publicó en ninguna plataforma: {failed}. La parte queda pendiente.", file=sys.stderr)
         return 1
     state["queue"].pop(0)
-    state["last_published"] = today
+    state["last_published"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for h in reversed(history):
         if h["series_title"] == series.series_title:
             h["published_parts"].append({"part": part.part_number, "date": today,
