@@ -1,4 +1,4 @@
-"""Genera con Claude una historia completa (1 o 2 partes) con guion, dirección visual y prompts."""
+"""Genera con Claude una historia completa (1 o 2 partes): guion, reparto y planificación de la animación."""
 from __future__ import annotations
 
 import json
@@ -6,22 +6,68 @@ import os
 import shutil
 import subprocess
 from datetime import date
-from typing import List, Literal
+from typing import List, Literal, Optional
 
 import anthropic
 from pydantic import BaseModel, Field
 
 from .config import ROOT
 
-Camera = Literal["push_in", "pull_back", "pan_left", "pan_right", "tilt_up", "tilt_down"]
+from .toon import catalog as K
+from .toon.locations import LOCATIONS
+from .toon.props import EVENTS, PROPS
+
+VoiceKey = Literal["hombre_mayor", "hombre_joven", "mujer", "mujer_joven", "americano", "americana",
+                   "frances", "italiano", "ingles", "latino"]
+Color = Literal[tuple(K.COLORS)]
+HairColor = Literal[tuple(K.HAIR)]
+
+
+class LookSpec(BaseModel):
+    """Vestuario y rasgos del personaje (opciones cerradas del catálogo)."""
+    female: bool = False
+    age: Literal[K.AGES] = "adulto"
+    skin: Literal[K.SKINS] = "media"
+    hair_color: HairColor = "castaño"
+    hair_style: Literal[K.HAIR_STYLES] = "corto"
+    hat: Literal[K.HATS] = "ninguno"
+    hat_color: Color = "negro"
+    beard: Literal[K.BEARDS] = "ninguna"
+    beard_color: Optional[HairColor] = None
+    outfit: Literal[K.OUTFITS] = "camisa"
+    outfit_color: Color = "azul_marino"
+    accent_color: Color = "dorado"
+    pants_color: Color = "gris"
+    nose: Literal[K.NOSES] = "patata"
+    jaw: Literal[K.JAWS] = "redonda"
+    eyes: Literal[tuple(K.EYES)] = "marrones"
+    glasses: bool = False
+
+
+class Character(BaseModel):
+    id: str = Field(description="Identificador corto en minúsculas, p. ej. 'paco' u 'oficial'.")
+    name: str = Field(description="Nombre que se muestra en pantalla cuando habla (máx. 18 caracteres).")
+    voice: VoiceKey
+    look: LookSpec = Field(description="Caricatura del personaje: rasgos muy marcados y vestuario fiel a la época.")
 
 
 class Block(BaseModel):
     label: str = Field(description="Nombre del tramo: GANCHO, CONTEXTO, TENSIÓN, GIRO, CLIFFHANGER...")
-    narration: str = Field(description="Voz en off de este plano (10-18 palabras).")
-    camera: Camera
-    visual_direction: str = Field(description="Dirección visual y micro-animación ambiental, en español.")
-    image_prompt: str = Field(description="Prompt en inglés para el generador de imagen, sin el estilo maestro.")
+    speaker: str = Field(description="'narrador' o el id de un personaje que dice esta frase en pantalla.")
+    narration: str = Field(description="Frase que se oye en este plano (6-12 palabras): voz en off del narrador o diálogo del personaje.")
+    location: Literal[tuple(LOCATIONS)]
+    framing: Literal[tuple(K.FRAMINGS)]
+    cast: List[str] = Field(default_factory=list, description="Ids de los personajes que salen en el plano (el que habla primero).")
+    gesture: Literal[tuple(K.GESTURES)] = "explain"
+    emotion: Literal[tuple(K.EMOTIONS)] = "neutral"
+    listener_emotion: Literal[tuple(K.EMOTIONS)] = "neutral"
+    mood: Literal[tuple(K.MOODS)] = "dia"
+    event: Optional[Literal[tuple(EVENTS)]] = None
+    prop: Optional[Literal[tuple(PROPS)]] = None
+    walk: bool = False
+    camera: Literal[tuple(K.CAMERAS)] = "push_in"
+    sfx: List[Literal[tuple(K.SFX)]] = Field(default_factory=list, description="Efectos extra al empezar el plano.")
+    visual_direction: str = Field(description="Qué se ve y qué pasa en el plano, en español (para la ficha del guion).")
 
 
 class Part(BaseModel):
@@ -41,13 +87,15 @@ class Series(BaseModel):
     year: str
     place: str
     topic: str = Field(description="Resumen del tema en una línea (para no repetirlo en el futuro).")
-    master_style: str = Field(description="Estilo Visual Maestro en inglés, se añade a todos los prompts de imagen.")
+    era: Literal[K.ERAS] = Field(description="Época de la historia (cambia detalles de los escenarios).")
+    characters: List[Character] = Field(description="Personajes (2-5): los que hablan y los que salen en plano.")
     historical_notes: str = Field(description="Fuentes o matices: qué está documentado y qué es incierto.")
     parts: List[Part] = Field(description="1 o 2 partes.")
 
 
 def _system_prompt() -> str:
-    return (ROOT / "prompts" / "guionista.md").read_text(encoding="utf-8")
+    voices = list(VoiceKey.__args__)
+    return (ROOT / "prompts" / "guionista.md").read_text(encoding="utf-8") + "\n" + K.catalog_text(voices)
 
 
 def next_format(history: list[dict], forced: str | None) -> str:

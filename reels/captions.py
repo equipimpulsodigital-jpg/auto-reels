@@ -57,8 +57,9 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
 
 class CaptionRenderer:
     def __init__(self, width: int, height: int, accent: str, hook: str, hook_seconds: float = 2.8,
-                 badge: str = "", end_card: str = "", end_start: float | None = None):
+                 badge: str = "", end_card: str = "", end_start: float | None = None, caption_y: float = 0.64):
         self.w, self.h = width, height
+        self.caption_y = caption_y
         self.accent = accent
         self.hook = hook.upper()
         self.hook_seconds = hook_seconds
@@ -103,7 +104,10 @@ class CaptionRenderer:
             space = d.textlength(" ", font=font)
             total = sum(d.textlength(t, font=font) for t in texts) + space * (len(texts) - 1)
             x = (self.w - total) / 2
-            y = int(self.h * 0.64)
+            y = int(self.h * self.caption_y)
+            speaker = words[active].speaker if active is not None else ""
+            if speaker:  # diálogo: etiqueta con el nombre de quien habla
+                self._box(d, speaker.upper(), int(self.w * 0.05), y - int(self.w * 0.11), self.accent, "#111111")
             for j, t in zip(group, texts):
                 fill = self.accent if j == active else "white"
                 d.text((x, y), t, font=font, fill=fill, stroke_width=max(6, size // 14), stroke_fill="black")

@@ -11,8 +11,8 @@ todas las partes de golpe, así que la Parte 2 encaja con el cliffhanger de la P
 estilo visual.
 
 ```
-Claude (guion + dirección visual + prompts) → voz IA → imágenes IA con movimiento de cámara y grano
-→ subtítulos animados → FFmpeg → Upload-Post
+Claude (guion + dirección visual + prompts) → voz IA → dibujos animados 2D (12–16 planos cortos con
+movimiento de cámara y fundidos) → música de fondo → subtítulos animados → FFmpeg → Upload-Post
 ```
 
 ## Costes
@@ -21,7 +21,7 @@ Claude (guion + dirección visual + prompts) → voz IA → imágenes IA con mov
 |---|---|
 | Upload-Post Basic (necesario para TikTok) | ~16–24 $/mes |
 | Claude | incluido en tu suscripción (token de Claude Code) |
-| Imágenes (Pollinations) | gratis · opcional Replicate: ~0,03 $/vídeo |
+| Imágenes (Pollinations) | gratis (1 imagen/45 s, calidad básica) · opcional Replicate: ~0,05 $/vídeo |
 | Voz (Edge TTS) | gratis · opcional ElevenLabs desde ~5 $/mes |
 | GitHub Actions | gratis (~15 min por ejecución) |
 
@@ -52,7 +52,9 @@ data/state.json        partes pendientes de publicar
 data/history.json      historias ya hechas (Claude no las repite)
 reels/script.py        guion con Claude (salida estructurada)
 reels/images.py        imágenes 9:16 (Pollinations o Replicate)
-reels/render.py        movimiento de cámara, grano de película y montaje
+reels/render.py        movimiento de cámara, fundidos, música (baja sola bajo la voz) y montaje
+assets/music/          pistas de fondo; se elige una al azar en cada vídeo
+tools/make_music.py    compone las pistas propias de assets/music (sin derechos de terceros)
 reels/captions.py      subtítulos, etiqueta «Parte X/2» y cartel final
 reels/publish.py       publicación vía Upload-Post
 ```

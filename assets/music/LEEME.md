@@ -1,3 +1,5 @@
-Pon aquí pistas de música (.mp3, .m4a, .wav u .ogg) que tengas derecho a usar.
-Cada día se elige una al azar y se mezcla bajo la voz. Si la carpeta está vacía, el vídeo va solo con voz.
-Fuentes sin derechos: YouTube Audio Library, Pixabay Music.
+Pistas de música de fondo (.mp3, .m4a, .wav u .ogg). Cada vídeo elige una al azar y la mezcla bajo la voz;
+la música baja sola mientras habla el narrador.
+
+Las pistas `misterio`, `intriga` y `epica` las compone `tools/make_music.py`: son propias, sin derechos de terceros.
+Puedes añadir otras que tengas derecho a usar (YouTube Audio Library, Pixabay Music) o borrar las que no te gusten.

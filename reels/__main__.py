@@ -41,15 +41,19 @@ def write_guion(path, series, part, durations) -> None:
         f"- **Serie:** {series.series_title}", f"- **Parte:** {part.part_number}/{n}",
         f"- **Formato:** {fmt}", f"- **Año y lugar:** {series.year} · {series.place}",
         f"- **Notas históricas:** {series.historical_notes}", "",
-        "## 2. Estilo Visual Maestro (fijo)", series.master_style, "",
+        f"## 2. Reparto (época: {series.era})",
+        *[f"- **{c.name}** ({c.voice}): " + ", ".join(f"{k}={v}" for k, v in c.look.model_dump().items() if v not in (None, False, "ninguno", "ninguna"))
+          for c in series.characters], "",
         "## 3. Guion + Dirección Visual",
     ]
     t = 0.0
     for b, d in zip(part.blocks, durations):
+        who = next((c.name for c in series.characters if c.id == b.speaker), "Narrador")
         out += [f"**[{_fmt_time(t)} - {_fmt_time(t + d)}] {b.label.upper()}**",
-                f"- *Voz en off:* \"{b.narration}\"",
-                f"- *Cámara y animación:* {b.camera} · {b.visual_direction}",
-                f"- *Prompt visual (9:16):* {b.image_prompt}", ""]
+                f"- *{who}:* \"{b.narration}\"",
+                f"- *Plano:* {b.location} · {b.framing} · {b.mood}" + (f" · suceso: {b.event}" if b.event else "")
+                + (f" · objeto: {b.prop}" if b.framing == "objeto" else "") + f" · cámara: {b.camera}",
+                f"- *Animación:* {b.visual_direction} (gesto: {b.gesture}, emoción: {b.emotion})", ""]
         t += d
     out += ["## 4. Cierre / Gancho para la siguiente parte", part.cliffhanger, ""]
     path.write_text("\n".join(out), encoding="utf-8")
@@ -65,9 +69,11 @@ def main() -> int:
     args = ap.parse_args()
 
     from .captions import CaptionRenderer
-    from .images import generate_image
     from .publish import failed_platforms, publish
-    from .render import assemble, shot_clip
+    from .render import assemble
+    from .toon.episode import render_episode
+    from pydantic import ValidationError
+
     from .script import Series, generate_series, next_format
     from .tts import synthesize_scenes
 
@@ -78,6 +84,19 @@ def main() -> int:
     if not args.dry_run and not args.force and state.get("last_published") == today:
         print(f"Ya se publicó un episodio hoy ({today}). Usa --force para publicar otro.")
         return 0
+
+    # Historia pendiente en un formato antiguo (p. ej. de antes de la animación): se reescribe el mismo tema.
+    if state["queue"] and not args.new:
+        try:
+            Series.model_validate(state["queue"][0]["series"])
+        except ValidationError:
+            old = state["queue"][0]["series"]
+            print(f"  «{old.get('series_title')}» está en un formato antiguo: se vuelve a escribir para animación.")
+            history = [h for h in history
+                       if not (h.get("series_title") == old.get("series_title") and not h.get("published_parts"))]
+            state["queue"] = []
+            args.topic = args.topic or old.get("topic")
+            args.format = args.format or old.get("format")
 
     # 1. Guion: siguiente parte pendiente o historia nueva (con todas sus partes de una vez)
     if args.new or args.topic or args.format or not state["queue"]:
@@ -104,35 +123,30 @@ def main() -> int:
 
     # 2. Voz en off (un audio por plano: así cada imagen dura lo que su frase)
     print("2/5 Voz en off")
-    voice, durations, words = synthesize_scenes([b.narration for b in part.blocks], cfg, workdir)
+    chars = {c.id: c for c in series.characters}
+    speakers = [(chars[b.speaker].voice, chars[b.speaker].name) if b.speaker in chars else ("", "")
+                for b in part.blocks]
+    voice, durations, words = synthesize_scenes([b.narration for b in part.blocks], cfg, workdir, speakers)
     tail = 1.6 if n > 1 and part.part_number < n else 0.8
     durations[-1] += tail
     total = sum(durations)
     print(f"  {len(words)} palabras · {total:.1f} s · {len(part.blocks)} planos")
     write_guion(workdir / "guion.md", series, part, durations)
 
-    # 3. Imágenes + movimiento de cámara
-    print("3/5 Imágenes")
+    # 3. Animación: caricaturas, escenarios, sucesos y efectos de sonido
+    print("3/5 Animación")
     v = cfg["video"]
-    seed_base = zlib.crc32(series.series_title.encode()) % 100000
-    shots = []
-    for i, (b, dur) in enumerate(zip(part.blocks, durations)):
-        img = generate_image(b.image_prompt, series.master_style, workdir / f"img_{i}.jpg",
-                             seed_base + i, cfg)
-        if img is None:  # si el generador falla, reutiliza la imagen anterior con otro movimiento
-            img = next((workdir / f"img_{k}.jpg" for k in range(i - 1, -1, -1)
-                        if (workdir / f"img_{k}.jpg").exists()), None)
-        print(f"  plano {i + 1}/{len(part.blocks)} · {b.camera}" + ("" if img else " · SIN IMAGEN"))
-        shots.append(shot_clip(img, b.camera, dur, workdir / f"shot_{i}.mp4", v["width"], v["height"], v["fps"]))
+    shots, sfx = render_episode(series, part, durations, workdir, cfg)
 
     # 4. Subtítulos + montaje
     print("4/5 Subtítulos y montaje")
     badge = f"Parte {part.part_number}/{n}" if n > 1 else ""
     end_card = "Sigue en la parte 2" if badge and part.part_number < n else ""
     captions = CaptionRenderer(v["width"], v["height"], cfg["style"]["accent_color"], part.hook_title,
-                               badge=badge, end_card=end_card, end_start=total - tail + 0.2)
+                               badge=badge, end_card=end_card, end_start=total - tail + 0.2, caption_y=cfg.get("animation", {}).get("caption_y", 0.86))
     cap_list = captions.render(words, total, workdir)
-    video = assemble(shots, voice, cap_list, total, workdir / "reel.mp4", workdir, v.get("music_volume", 0.15))
+    video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
+                     v.get("music_volume", 0.35), 0.0, sfx=sfx)
     print(f"  vídeo: {video}")
 
     # 5. Publicación

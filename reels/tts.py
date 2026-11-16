@@ -17,6 +17,7 @@ class Word:
     text: str
     start: float
     end: float
+    speaker: str = ""  # nombre del personaje que habla ("" = narrador)
 
 
 def _edge(text: str, mp3: Path, voice: str, rate: str, pitch: str = "+0Hz") -> list[Word]:
@@ -89,25 +90,41 @@ def restore_punctuation(words: list[Word], text: str) -> list[Word]:
     return words
 
 
-def synthesize_scenes(narrations: list[str], cfg: dict, workdir: Path) -> tuple[Path, list[float], list[Word]]:
-    """Genera la voz escena a escena. Devuelve (voz.wav, duración de cada escena, palabras con tiempos)."""
+def synthesize_scenes(narrations: list[str], cfg: dict, workdir: Path,
+                      speakers: list[tuple[str, str]] | None = None) -> tuple[Path, list[float], list[Word]]:
+    """Genera la voz escena a escena. `speakers` da, por escena, (clave de voz del reparto, nombre en
+    pantalla); ("", "") = narrador. Devuelve (voz.wav, duración de cada escena, palabras con tiempos)."""
     vcfg = cfg["voice"]
+    cast = vcfg.get("cast", {})
+    speakers = speakers or [("", "")] * len(narrations)
     durations: list[float] = []
     all_words: list[Word] = []
     wavs: list[Path] = []
     offset = 0.0
-    gap = 0.12  # pequeña pausa entre escenas
-    for i, text in enumerate(narrations):
+    gap = 0.18  # pausa entre escenas (natural, sin huecos muertos)
+    for i, (text, (voice_key, name)) in enumerate(zip(narrations, speakers)):
         mp3 = workdir / f"voice_{i}.mp3"
-        if vcfg["provider"] == "elevenlabs":
+        role = cast.get(voice_key) if voice_key else None
+        if role:  # los personajes siempre con Edge: tiene acentos y voces variadas gratis
+            words = _edge(text, mp3, role["voice"], role.get("rate", "+0%"), role.get("pitch", "+0Hz"))
+        elif vcfg["provider"] == "elevenlabs":
             words = _elevenlabs(text, mp3, vcfg["elevenlabs_voice_id"], vcfg["elevenlabs_model"])
         else:
             words = _edge(text, mp3, vcfg["edge_voice"], vcfg.get("edge_rate", "+0%"), vcfg.get("edge_pitch", "+0Hz"))
         words = restore_punctuation(words, text)
         wav = workdir / f"voice_{i}.wav"
-        run_ffmpeg(["-i", mp3, "-af", f"apad=pad_dur={gap}", "-ar", "44100", "-ac", "1", wav])
+        # Los TTS dejan ~0,1 s de silencio al inicio y ~0,8 s al final de cada frase: lo recortamos
+        # para que el ritmo no se arrastre (en 15 escenas son más de 10 s de silencio).
+        af = f"apad=pad_dur={gap}"
+        shift = 0.0
+        if words:
+            shift = max(0.0, words[0].start - 0.04)
+            end = words[-1].end + 0.1
+            af = f"atrim=start={shift:.3f}:end={end:.3f},asetpts=PTS-STARTPTS,{af}"
+        run_ffmpeg(["-i", mp3, "-af", af, "-ar", "44100", "-ac", "1", wav])
         dur = probe_duration(wav)
-        all_words += [Word(w.text, w.start + offset, w.end + offset) for w in words]
+        all_words += [Word(w.text, w.start - shift + offset, w.end - shift + offset, name if role else "")
+                      for w in words]
         durations.append(dur)
         wavs.append(wav)
         offset += dur
