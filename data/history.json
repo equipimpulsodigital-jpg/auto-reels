@@ -5,6 +5,14 @@
     "topic": "Accidente nuclear de Palomares: choque B-52/KC-135, cuatro bombas H sobre Almería, la bomba perdida en el mar 80 días, el baño de Fraga y el plutonio que sigue allí.",
     "series_title": "El día que España estuvo a punto de... recibir una bomba H",
     "parts": 2,
-    "published_parts": []
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-16",
+        "request_id": "5194e40f2cfa4b99ba50bdf537f73839",
+        "failed": [],
+        "at": "2026-11-16T23:03:06+00:00"
+      }
+    ]
   }
 ]
