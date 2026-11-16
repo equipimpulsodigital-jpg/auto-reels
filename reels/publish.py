@@ -26,7 +26,10 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str) -> dict:
 
     fields: list[tuple[str, str]] = [("user", env("UPLOAD_POST_USER")), ("title", script.youtube_title[:100])]
     fields += [("platform[]", p) for p in platforms]
-    fields += [("async_upload", "true"), ("external_id", idempotency_key)]
+    # Modo síncrono: la propia subida espera al resultado, así cada publicación gasta 1 sola llamada
+    # (el plan gratuito de Upload-Post solo permite 10 llamadas al mes).
+    sync = not pcfg.get("check_status", False)
+    fields += [("async_upload", "false" if sync else "true"), ("external_id", idempotency_key)]
     if "tiktok" in platforms:
         fields += [("tiktok_title", caption[:2200]), ("is_aigc", ai)]
     if "instagram" in platforms:
@@ -42,16 +45,34 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str) -> dict:
     headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}", "Idempotency-Key": idempotency_key}
     with open(video, "rb") as f:
         r = requests.post(f"{API}/upload", headers=headers, data=fields,
-                          files={"video": (video.name, f, "video/mp4")}, timeout=600)
+                          files={"video": (video.name, f, "video/mp4")}, timeout=1200)
     if r.status_code >= 400:
         raise RuntimeError(f"Upload-Post respondió {r.status_code}: {r.text[:2000]}")
     result = r.json()
     print("  Upload-Post:", json.dumps(result, ensure_ascii=False)[:1500])
 
     request_id = result.get("request_id")
-    if request_id:
+    if request_id and not sync:
         result["final_status"] = wait_for_status(request_id, headers)
+    else:
+        result["final_status"] = _sync_status(result)
     return result
+
+
+def _sync_status(result: dict) -> dict:
+    """Traduce la respuesta síncrona al mismo formato que la consulta de estado."""
+    res = result.get("results") or {}
+    items = res.items() if isinstance(res, dict) else [(r.get("platform"), r) for r in res]
+    rows = []
+    for platform, r in items:
+        r = r if isinstance(r, dict) else {}
+        ok = bool(r.get("success", result.get("success")))
+        rows.append({"platform": platform, "success": ok,
+                     "post_url": r.get("url") or r.get("post_url"), "message": r.get("error") or r.get("message")})
+        print(f"  [{'OK ' if ok else 'ERROR'}] {platform}: {rows[-1]['post_url'] or rows[-1]['message'] or ''}")
+    if not rows:
+        return {"status": "completed" if result.get("success") else "failed", "results": []}
+    return {"status": "completed", "results": rows}
 
 
 def wait_for_status(request_id: str, headers: dict, timeout_s: int = 900) -> dict:

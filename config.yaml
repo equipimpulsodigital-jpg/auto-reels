@@ -46,6 +46,7 @@ claude:
   effort: high                # alto: prioriza la fidelidad histórica
 
 publish:
-  platforms: [tiktok, instagram, youtube]
+  platforms: [instagram]      # añade tiktok y youtube cuando estén conectados en Upload-Post
+  check_status: false         # false = 1 llamada por publicación (plan gratuito: 10 llamadas/mes)
   label_as_ai: true           # obligatorio en la práctica: las imágenes son generadas con IA
   youtube_privacy: public     # public | unlisted | private
