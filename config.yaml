@@ -67,7 +67,7 @@ channels:
     name: Historias de misterio
     enabled: false            # EN PAUSA: se está preparando el perfil (nombre, imagen, descripciones)
     profile: elanecdotario
-    platforms: [youtube]      # añade instagram cuando esté conectado en Upload-Post
+    platforms: [instagram, youtube]
     prompt: prompts/elanecdotario.md
     accent_color: "#7FD1C7"
     formats:
