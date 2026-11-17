@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import json
 import time
+from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 import requests
 
@@ -19,18 +21,23 @@ def _caption(script: Part, total_parts: int = 1) -> str:
     return f"{script.caption}{follow}\n\n{tags}".strip()
 
 
-def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_parts: int = 1) -> dict:
-    pcfg = cfg["publish"]
-    platforms = pcfg["platforms"]
+def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_parts: int = 1,
+            scheduled_at: Optional[datetime] = None) -> dict:
+    """Publica ya o, con scheduled_at, deja la publicación programada en Upload-Post a esa hora exacta."""
+    pcfg, ch = cfg["publish"], cfg["channel"]
+    platforms = ch["platforms"]
     ai = "true" if pcfg.get("label_as_ai", True) else "false"
     caption = _caption(script, total_parts)
 
-    fields: list[tuple[str, str]] = [("user", env("UPLOAD_POST_USER")), ("title", script.youtube_title[:100])]
+    fields: list[tuple[str, str]] = [("user", ch["profile"]), ("title", script.youtube_title[:100])]
     fields += [("platform[]", p) for p in platforms]
-    # Modo síncrono: la propia subida espera al resultado, así cada publicación gasta 1 sola llamada
-    # (el plan gratuito de Upload-Post solo permite 10 llamadas al mes).
-    sync = not pcfg.get("check_status", False)
-    fields += [("async_upload", "false" if sync else "true"), ("external_id", idempotency_key)]
+    fields.append(("external_id", idempotency_key))
+    if scheduled_at is not None:
+        fields += [("scheduled_date", scheduled_at.strftime("%Y-%m-%dT%H:%M:%S")),
+                   ("timezone", pcfg.get("timezone", "Europe/Madrid"))]
+    else:
+        # Modo síncrono: la propia subida espera al resultado (1 sola llamada por publicación).
+        fields.append(("async_upload", "false"))
     if "tiktok" in platforms:
         fields += [("tiktok_title", caption[:2200]), ("is_aigc", ai)]
     if "instagram" in platforms:
@@ -52,9 +59,14 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_pa
     result = r.json()
     print("  Upload-Post:", json.dumps(result, ensure_ascii=False)[:1500])
 
+    if scheduled_at is not None:
+        ok = bool(result.get("success", True)) and bool(result.get("job_id") or result.get("request_id"))
+        result["final_status"] = {"status": "scheduled" if ok else "failed", "results": []}
+        return result
+
     request_id = result.get("request_id")
     # Si Upload-Post pasa la subida a segundo plano (tarda demasiado), se espera a la confirmación final.
-    if request_id and (not sync or not result.get("results")):
+    if request_id and not result.get("results"):
         result["final_status"] = wait_for_status(request_id, headers, interval=45)
     else:
         result["final_status"] = _sync_status(result)
@@ -102,6 +114,6 @@ def wait_for_status(request_id: str, headers: dict, timeout_s: int = 900, interv
 
 def failed_platforms(result: dict) -> list[str]:
     status = result.get("final_status") or {}
-    if status and str(status.get("status")).lower() != "completed":
+    if status and str(status.get("status")).lower() not in {"completed", "scheduled"}:
         return [str(status.get("status"))]
     return [r.get("platform", "?") for r in status.get("results") or [] if not r.get("success")]

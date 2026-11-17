@@ -2,16 +2,25 @@ name: Episodio diario
 
 on:
   schedule:
-    # Publica a las 10:00, 13:00, 16:00, 19:00 y 22:00 (hora de España). GitHub solo entiende UTC,
-    # así que se programan las horas de invierno y de verano y el primer paso descarta la que no toca.
-    # GitHub puede retrasar unos minutos las ejecuciones programadas.
-    - cron: "0 8,9,11,12,14,15,17,18,20,21 * * *"
+    # Una ejecución por la noche prepara los vídeos de las próximas 24 h y los deja PROGRAMADOS en
+    # Upload-Post a las horas exactas de config.yaml (publish.slots). Las demás son de reserva, por si
+    # GitHub se salta o retrasa alguna (pasa a menudo): si ya está todo programado, acaban en segundos.
+    - cron: "40 22 * * *"   # 23:40 / 00:40 en España
+    - cron: "40 2 * * *"
+    - cron: "40 5 * * *"
+    - cron: "40 12 * * *"
   workflow_dispatch:
     inputs:
-      dry_run:
-        description: "Solo generar el vídeo (no publicar)"
-        type: boolean
-        default: true
+      channel:
+        description: "Canal"
+        type: choice
+        options: [todos, bien_contadas, elanecdotario]
+        default: todos
+      mode:
+        description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya"
+        type: choice
+        options: [prueba, programar, ahora]
+        default: prueba
       new_story:
         description: "Empezar historia nueva (aunque quede una parte pendiente)"
         type: boolean
@@ -21,12 +30,11 @@ on:
         type: string
         default: ""
       format:
-        description: "Formato de la historia nueva"
-        type: choice
-        options: [auto, punto_inflexion, crimen_historico]
-        default: auto
+        description: "Formato de la historia nueva (vacío = alterna; ver formats en config.yaml)"
+        type: string
+        default: ""
       force:
-        description: "Publicar aunque ya se haya publicado hoy"
+        description: "Publicar aunque el canal esté en pausa"
         type: boolean
         default: false
 
@@ -40,61 +48,67 @@ concurrency:
 jobs:
   reel:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 170
     steps:
-      - name: Comprobar franja horaria
-        id: slot
-        run: |
-          h=$(TZ=Europe/Madrid date +%-H)
-          if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
-          case "$h" in
-            10|13|16|19|22) echo "go=true" >> "$GITHUB_OUTPUT" ;;
-            *) echo "go=false" >> "$GITHUB_OUTPUT"; echo "Son las $h h en España: no toca publicar." ;;
-          esac
-
       - uses: actions/checkout@v4
-        if: steps.slot.outputs.go == 'true'
 
       - uses: actions/setup-python@v5
-        if: steps.slot.outputs.go == 'true'
         with:
           python-version: "3.12"
           cache: pip
 
+      - name: ¿Hay algo que preparar?
+        id: todo
+        run: |
+          pip install -q pyyaml
+          if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          python -m reels --check | tee pending.txt
+          if awk '$2 > 0 {found=1} END {exit !found}' pending.txt; then echo "go=true" >> "$GITHUB_OUTPUT"
+          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "Todo programado: nada que hacer."; fi
+
       - name: Instalar FFmpeg y librerías gráficas
-        if: steps.slot.outputs.go == 'true'
+        if: steps.todo.outputs.go == 'true'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libegl1 libgl1 fontconfig
 
       - name: Instalar dependencias
-        if: steps.slot.outputs.go == 'true'
+        if: steps.todo.outputs.go == 'true'
         run: |
           pip install -r requirements.txt
           npm install -g @anthropic-ai/claude-code
 
       - name: Generar y publicar
-        if: steps.slot.outputs.go == 'true'
+        if: steps.todo.outputs.go == 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
-          UPLOAD_POST_USER: ${{ vars.UPLOAD_POST_USER }}
-          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
           TOPIC: ${{ inputs.topic }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           TZ: Europe/Madrid
+          FORMAT: ${{ inputs.format }}
         run: |
           ARGS=()
+          CHANNELS=$(python -m reels --check | awk '$2 > 0 {print $1}')
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS+=(--dry-run); fi
+            CHANNELS="${{ inputs.channel }}"
+            [ "$CHANNELS" = "todos" ] && CHANNELS=$(python -m reels --check | awk '{print $1}')
+            case "${{ inputs.mode }}" in
+              prueba) ARGS+=(--dry-run) ;;
+              ahora) ARGS+=(--now) ;;
+            esac
             if [ "${{ inputs.force }}" = "true" ]; then ARGS+=(--force); fi
             if [ "${{ inputs.new_story }}" = "true" ]; then ARGS+=(--new); fi
-            if [ "${{ inputs.format }}" != "auto" ]; then ARGS+=(--format "${{ inputs.format }}"); fi
+            if [ -n "$FORMAT" ]; then ARGS+=(--format "$FORMAT"); fi
             if [ -n "$TOPIC" ]; then ARGS+=(--topic "$TOPIC"); fi
           fi
-          python -m reels "${ARGS[@]}"
+          status=0
+          for c in $CHANNELS; do
+            python -m reels --channel "$c" "${ARGS[@]}" || status=1
+          done
+          exit $status
 
       - name: Vista previa (fotogramas)
-        if: always() && steps.slot.outputs.go == 'true'
+        if: always() && steps.todo.outputs.go == 'true'
         run: |
           for f in out/*/reel.mp4; do
             [ -f "$f" ] || continue
@@ -102,7 +116,7 @@ jobs:
           done
 
       - name: Guardar vídeo y guion
-        if: always() && steps.slot.outputs.go == 'true'
+        if: always() && steps.todo.outputs.go == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: reel-${{ github.run_id }}
@@ -114,7 +128,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Guardar vista previa
-        if: always() && steps.slot.outputs.go == 'true'
+        if: always() && steps.todo.outputs.go == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: preview-${{ github.run_id }}
@@ -124,9 +138,9 @@ jobs:
           if-no-files-found: ignore
 
       - name: Guardar historial y partes pendientes
-        if: always() && steps.slot.outputs.go == 'true'
+        if: always() && steps.todo.outputs.go == 'true'
         run: |
           git config user.name "reels-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ || true
-          git diff --cached --quiet || (git commit -m "Estado: episodio $(date +%F)" && git push)
+          git diff --cached --quiet || (git commit -m "Estado: episodios $(date +%F)" && git pull --rebase && git push)

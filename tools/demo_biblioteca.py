@@ -94,7 +94,7 @@ for w in words:
     w.end += starts[i] - orig[i]
 
 total = sum(durations)
-cap = CaptionRenderer(W, H, cfg["style"]["accent_color"], "La biblioteca de escenarios", end_card="", caption_y=0.86)
+cap = CaptionRenderer(W, H, cfg["channel"]["accent_color"], "La biblioteca de escenarios", end_card="", caption_y=0.86)
 cap_list = cap.render(words, total, OUT)
 fx = build_track([s for _, _, s in script], durations, total, OUT / "sfx.wav")
 video = assemble(files, durations, OUT / "voice_full.wav", cap_list, total, OUT / "reel.mp4", OUT, 0.35, 0.0, sfx=fx)

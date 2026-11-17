@@ -64,7 +64,7 @@ for i, ((spk, _, shot), dur) in enumerate(zip(script, durations)):
     files.append(render_shot(ctx, shot, OUT / f"shot_{i}.mp4"))
 
 total = sum(durations)
-cap = CaptionRenderer(W, H, cfg["style"]["accent_color"], "Vio caer una bomba H al mar", badge="Parte 1/2",
+cap = CaptionRenderer(W, H, cfg["channel"]["accent_color"], "Vio caer una bomba H al mar", badge="Parte 1/2",
                       end_card="Sigue en la parte 2", end_start=total - 1.4, caption_y=0.86)
 cap_list = cap.render(words, total, OUT)
 fx = build_track([s for _, _, s in script], durations, total, OUT / "sfx.wav")

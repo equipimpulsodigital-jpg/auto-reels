@@ -83,7 +83,7 @@ class Part(BaseModel):
 
 class Series(BaseModel):
     series_title: str
-    format: Literal["punto_inflexion", "crimen_historico"]
+    format: str = Field(description="Clave del formato indicado en la petición.")
     year: str
     place: str
     topic: str = Field(description="Resumen del tema en una línea (para no repetirlo en el futuro).")
@@ -93,34 +93,41 @@ class Series(BaseModel):
     parts: List[Part] = Field(description="1 o 2 partes.")
 
 
-def _system_prompt() -> str:
+def _system_prompt(cfg: dict) -> str:
+    """Guionista del canal (temática y reglas del guion) + reglas comunes de la animación + catálogo."""
     voices = list(VoiceKey.__args__)
-    return (ROOT / "prompts" / "guionista.md").read_text(encoding="utf-8") + "\n" + K.catalog_text(voices)
+    channel = (ROOT / cfg["channel"]["prompt"]).read_text(encoding="utf-8")
+    animation = (ROOT / "prompts" / "animacion.md").read_text(encoding="utf-8")
+    return channel.rstrip() + "\n\n" + animation + "\n" + K.catalog_text(voices)
 
 
-def next_format(history: list[dict], forced: str | None) -> str:
+def next_format(cfg: dict, history: list[dict], forced: str | None) -> str:
+    """Alterna los formatos del canal."""
+    formats = list(cfg["channel"]["formats"])
     if forced:
+        if forced not in formats:
+            raise SystemExit(f"Formato desconocido para este canal: {forced}. Opciones: {', '.join(formats)}")
         return forced
-    last = history[-1]["format"] if history else "crimen_historico"
-    return "punto_inflexion" if last == "crimen_historico" else "crimen_historico"
+    last = history[-1]["format"] if history else None
+    return formats[(formats.index(last) + 1) % len(formats)] if last in formats else formats[0]
 
 
 def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None = None) -> Series:
-    fmt_name = {"punto_inflexion": "Punto de inflexión («El día que España estuvo a punto de...»)",
-                "crimen_historico": "Crimen, conspiración o suceso oscuro real"}[fmt]
+    fmt_name = cfg["channel"]["formats"][fmt]
     done = [h["topic"] for h in history[-80:]]
     user = (
         f"Fecha: {date.today().isoformat()}\n"
-        f"Formato: {fmt_name}\n"
+        f"Formato: {fmt_name} (en el campo `format` pon exactamente: {fmt})\n"
         f"Tema a desarrollar: {topic or 'propón tú uno potente, poco trillado y bien documentado'}\n"
         f"Partes: máximo {cfg['series'].get('max_parts', 2)}.\n\n"
         "Historias ya publicadas (no repitas ninguna):\n"
         + ("\n".join(f"- {t}" for t in done) if done else "- (ninguna todavía)")
     )
     if _use_claude_code(cfg):
-        series = _claude_code(cfg, _system_prompt(), user)
+        series = _claude_code(cfg, _system_prompt(cfg), user)
     else:
-        series = _api(cfg, _system_prompt(), user)
+        series = _api(cfg, _system_prompt(cfg), user)
+    series.format = fmt
     series.parts = series.parts[: cfg["series"].get("max_parts", 2)]
     for i, p in enumerate(series.parts, 1):
         p.part_number = i

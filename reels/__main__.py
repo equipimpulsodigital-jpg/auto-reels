@@ -1,10 +1,10 @@
-"""Genera y publica el episodio del día (historia real de España, series de 1-2 partes).
+"""Genera los episodios de un canal y los deja programados en Upload-Post.
 
 Uso:
-  python -m reels                       # siguiente parte pendiente, o una historia nueva
-  python -m reels --dry-run             # genera el vídeo pero no lo publica
-  python -m reels --topic "El motín de Esquilache" --new
-  python -m reels --format crimen_historico --new
+  python -m reels --channel bien_contadas            # programa todas las franjas de las próximas 24 h
+  python -m reels --channel bien_contadas --dry-run  # genera un vídeo de prueba, no publica nada
+  python -m reels --channel bien_contadas --now      # genera uno y lo publica al momento
+  python -m reels --channel elanecdotario --dry-run --topic "El paso Diatlov" --new
 """
 from __future__ import annotations
 
@@ -12,41 +12,47 @@ import argparse
 import json
 import sys
 import zlib
-from datetime import date, datetime, timezone
+from datetime import date, datetime, time, timedelta, timezone
+from zoneinfo import ZoneInfo
 
-from .config import DATA, OUT, load_config
+from .config import OUT, channel_data, load_config
 
 
-def _load(name: str, default):
-    path = DATA / name
+def _load(cfg: dict, name: str, default):
+    path = channel_data(cfg) / name
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
 
 
-def _save(name: str, value) -> None:
-    DATA.mkdir(exist_ok=True)
-    (DATA / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+def _save(cfg: dict, name: str, value) -> None:
+    folder = channel_data(cfg)
+    folder.mkdir(parents=True, exist_ok=True)
+    (folder / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def _hours_since(stamp) -> float:
-    """Horas desde la última publicación (acepta el formato antiguo, solo fecha)."""
-    if not stamp:
-        return float("inf")
-    try:
-        when = datetime.fromisoformat(stamp)
-    except ValueError:
-        return float("inf")
-    if when.tzinfo is None:
-        when = when.replace(tzinfo=timezone.utc)
-    return (datetime.now(timezone.utc) - when).total_seconds() / 3600
+def pending_slots(cfg: dict, state: dict, now: datetime | None = None) -> list[datetime]:
+    """Franjas de las próximas 24 h que aún no tienen vídeo programado."""
+    pcfg = cfg["publish"]
+    tz = ZoneInfo(pcfg.get("timezone", "Europe/Madrid"))
+    now = (now or datetime.now(timezone.utc)).astimezone(tz)
+    start = now + timedelta(minutes=int(pcfg.get("min_lead_minutes", 20)))
+    done = set(state.get("scheduled", []))
+    out = []
+    for day in (now.date(), now.date() + timedelta(days=1)):
+        for hhmm in pcfg["slots"]:
+            h, m = map(int, hhmm.split(":"))
+            slot = datetime.combine(day, time(h, m), tz)
+            if start <= slot <= now + timedelta(hours=24) and slot.isoformat() not in done:
+                out.append(slot)
+    return out
 
 
 def _fmt_time(t: float) -> str:
     return f"{int(t // 60):02d}:{int(t % 60):02d}"
 
 
-def write_guion(path, series, part, durations) -> None:
+def write_guion(cfg, path, series, part, durations) -> None:
     """Guion legible con la estructura de la serie (ficha, estilo, bloques con tiempos, cierre)."""
-    fmt = {"punto_inflexion": "Punto de inflexión", "crimen_historico": "Crimen histórico"}[series.format]
+    fmt = cfg["channel"]["formats"].get(series.format, series.format)
     n = len(series.parts)
     out = [
         f"# {series.series_title} · Parte {part.part_number}/{n}", "",
@@ -72,33 +78,17 @@ def write_guion(path, series, part, durations) -> None:
     path.write_text("\n".join(out), encoding="utf-8")
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description="Episodio diario automático")
-    ap.add_argument("--dry-run", action="store_true", help="no publica, solo genera el vídeo")
-    ap.add_argument("--new", action="store_true", help="empieza una historia nueva aunque haya partes pendientes")
-    ap.add_argument("--topic", help="tema concreto para la historia nueva")
-    ap.add_argument("--format", choices=["punto_inflexion", "crimen_historico"])
-    ap.add_argument("--force", action="store_true", help="publica aunque ya se haya publicado hoy")
-    args = ap.parse_args()
-
-    from .captions import CaptionRenderer
-    from .publish import failed_platforms, publish
-    from .render import assemble
-    from .toon.episode import render_episode
+def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
+    """Escribe (si hace falta) la historia, y genera el vídeo de la siguiente parte pendiente."""
     from pydantic import ValidationError
 
+    from .captions import CaptionRenderer
+    from .render import assemble
     from .script import Series, generate_series, next_format
+    from .toon.episode import render_episode
     from .tts import synthesize_scenes
 
-    cfg = load_config()
-    history: list[dict] = _load("history.json", [])
-    state: dict = _load("state.json", {"queue": [], "last_published": None})
     today = date.today().isoformat()
-    gap_h = float(cfg["publish"].get("min_hours_between", 2))
-    if not args.dry_run and not args.force and _hours_since(state.get("last_published")) < gap_h:
-        print(f"Se publicó hace menos de {gap_h:g} h ({state.get('last_published')}). Usa --force para publicar otro.")
-        return 0
-
     # Historia pendiente en un formato antiguo (p. ej. de antes de la animación): se reescribe el mismo tema.
     if state["queue"] and not args.new:
         try:
@@ -106,22 +96,23 @@ def main() -> int:
         except ValidationError:
             old = state["queue"][0]["series"]
             print(f"  «{old.get('series_title')}» está en un formato antiguo: se vuelve a escribir para animación.")
-            history = [h for h in history
-                       if not (h.get("series_title") == old.get("series_title") and not h.get("published_parts"))]
+            history[:] = [h for h in history
+                          if not (h.get("series_title") == old.get("series_title") and not h.get("published_parts"))]
             state["queue"] = []
             args.topic = args.topic or old.get("topic")
             args.format = args.format or old.get("format")
 
     # 1. Guion: siguiente parte pendiente o historia nueva (con todas sus partes de una vez)
-    if args.new or args.topic or args.format or not state["queue"]:
-        fmt = next_format(history, args.format)
+    if args.new or not state["queue"]:
+        fmt = next_format(cfg, history, args.format)
         print(f"1/5 Historia nueva · {fmt}" + (f" · tema: {args.topic}" if args.topic else ""))
         series = generate_series(cfg, fmt, history, args.topic)
         history.append({"date": today, "format": series.format, "topic": series.topic,
                         "series_title": series.series_title, "parts": len(series.parts), "published_parts": []})
         state["queue"] = [{"series": series.model_dump(), "part": i} for i in range(len(series.parts))]
-        _save("history.json", history)
-        _save("state.json", state)
+        _save(cfg, "history.json", history)
+        _save(cfg, "state.json", state)
+        args.new, args.topic, args.format = False, None, None  # solo para la primera historia
     else:
         print("1/5 Siguiente parte pendiente")
     item = state["queue"][0]
@@ -131,7 +122,7 @@ def main() -> int:
     print(f"  «{series.series_title}» · Parte {part.part_number}/{n} · {series.year}, {series.place}")
     print(f"  gancho: {part.hook_title}")
 
-    workdir = OUT / f"{today}_p{part.part_number}"
+    workdir = OUT / f"{cfg['channel']['id']}_{label}"
     workdir.mkdir(parents=True, exist_ok=True)
     (workdir / "series.json").write_text(series.model_dump_json(indent=2), encoding="utf-8")
 
@@ -145,7 +136,7 @@ def main() -> int:
     durations[-1] += tail
     total = sum(durations)
     print(f"  {len(words)} palabras · {total:.1f} s · {len(part.blocks)} planos")
-    write_guion(workdir / "guion.md", series, part, durations)
+    write_guion(cfg, workdir / "guion.md", series, part, durations)
 
     # 3. Animación: caricaturas, escenarios, sucesos y efectos de sonido
     print("3/5 Animación")
@@ -156,40 +147,114 @@ def main() -> int:
     print("4/5 Subtítulos y montaje")
     badge = f"Parte {part.part_number}/{n}" if n > 1 else ""
     end_card = "Sigue en la parte 2" if badge and part.part_number < n else ""
-    captions = CaptionRenderer(v["width"], v["height"], cfg["style"]["accent_color"], part.hook_title,
-                               badge=badge, end_card=end_card, end_start=total - tail + 0.2, caption_y=cfg.get("animation", {}).get("caption_y", 0.86))
+    captions = CaptionRenderer(v["width"], v["height"], cfg["channel"].get("accent_color", "#E2A84B"), part.hook_title,
+                               badge=badge, end_card=end_card, end_start=total - tail + 0.2,
+                               caption_y=cfg.get("animation", {}).get("caption_y", 0.86))
     cap_list = captions.render(words, total, workdir)
     video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
                      v.get("music_volume", 0.35), 0.0, sfx=sfx)
     print(f"  vídeo: {video}")
+    return video, series, part
 
-    # 5. Publicación
-    if args.dry_run:
-        print("5/5 Publicación omitida (modo prueba). Esta parte sigue pendiente para la próxima ejecución.")
-        return 0
-    print("5/5 Publicando en", ", ".join(cfg["publish"]["platforms"]))
-    result = publish(video, part, cfg, idempotency_key=f"ep-{today}-{zlib.crc32(series.series_title.encode())}-{part.part_number}",
-                     total_parts=n)
+
+def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, part, slot) -> bool:
+    from .publish import failed_platforms, publish
+
+    ch = cfg["channel"]
+    n = len(series.parts)
+    when = f"programado para {slot:%d/%m %H:%M}" if slot else "ahora"
+    print(f"5/5 Publicando en {ch['profile']} ({', '.join(ch['platforms'])}) · {when}")
+    key = f"{ch['id']}-{zlib.crc32(series.series_title.encode())}-{part.part_number}"
+    result = publish(video, part, cfg, idempotency_key=key, total_parts=n, scheduled_at=slot)
     failed = failed_platforms(result)
-    platforms = cfg["publish"]["platforms"]
-    if len(failed) >= len(platforms) or failed == ["failed"]:
+    if len(failed) >= len(ch["platforms"]) or failed in (["failed"], ["not_found"]):
         print(f"No se publicó en ninguna plataforma: {failed}. La parte queda pendiente.", file=sys.stderr)
-        return 1
+        return False
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     state["queue"].pop(0)
-    state["last_published"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    state["last_published"] = now
+    if slot:
+        state.setdefault("scheduled", []).append(slot.isoformat())
     for h in reversed(history):
         if h["series_title"] == series.series_title:
-            h["published_parts"].append({"part": part.part_number, "date": today,
-                                         "request_id": result.get("request_id"), "failed": failed,
-                                         "at": datetime.now(timezone.utc).isoformat(timespec="seconds")})
+            h["published_parts"].append({"part": part.part_number, "date": (slot or datetime.now()).date().isoformat(),
+                                         "slot": slot.isoformat() if slot else None,
+                                         "request_id": result.get("request_id") or result.get("job_id"),
+                                         "failed": failed, "at": now})
             break
-    _save("history.json", history)
-    _save("state.json", state)
+    _save(cfg, "history.json", history)
+    _save(cfg, "state.json", state)
     if failed:
         print(f"Publicado, pero falló en: {failed}", file=sys.stderr)
-        return 1
-    print("Publicado.")
-    return 0
+    return True
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Episodios automáticos por canal")
+    ap.add_argument("--channel", help="canal de config.yaml (por defecto, el primero)")
+    ap.add_argument("--dry-run", action="store_true", help="genera un vídeo de prueba y no publica")
+    ap.add_argument("--now", action="store_true", help="genera uno y lo publica al momento (sin programar)")
+    ap.add_argument("--max", type=int, default=0, help="máximo de franjas a programar en esta ejecución")
+    ap.add_argument("--new", action="store_true", help="empieza una historia nueva aunque haya partes pendientes")
+    ap.add_argument("--topic", help="tema concreto para la historia nueva")
+    ap.add_argument("--format", help="formato de la historia nueva (ver formats del canal en config.yaml)")
+    ap.add_argument("--force", action="store_true", help="publica aunque el canal esté en pausa (enabled: false)")
+    ap.add_argument("--check", action="store_true", help="lista los canales activos y sus franjas pendientes")
+    args = ap.parse_args()
+    if args.check:
+        for cid in load_config().get("channels", {}):
+            c = load_config(cid)
+            if c["channel"].get("enabled", True):
+                st = _load(c, "state.json", {})
+                print(cid, len(pending_slots(c, {"scheduled": st.get("scheduled", [])})))
+        return 0
+    if args.topic or args.format:
+        args.new = True
+
+    cfg = load_config(args.channel)
+    ch = cfg["channel"]
+    print(f"== Canal {ch['id']} · {ch['name']} · perfil {ch['profile']} ==")
+    history: list[dict] = _load(cfg, "history.json", [])
+    state: dict = _load(cfg, "state.json", {"queue": [], "last_published": None, "scheduled": []})
+    state.setdefault("scheduled", [])
+
+    if args.dry_run:
+        make_episode(cfg, state, history, args, f"prueba_{datetime.now():%Y%m%d_%H%M}")
+        print("Modo prueba: no se publica. La parte sigue pendiente.")
+        return 0
+    if not ch.get("enabled", True) and not args.force:
+        print("Canal en pausa (enabled: false en config.yaml): no se publica nada.")
+        return 0
+    if args.now:
+        video, series, part = make_episode(cfg, state, history, args, f"{datetime.now():%Y%m%d_%H%M}")
+        return 0 if publish_episode(cfg, state, history, video, series, part, None) else 1
+
+    # Olvida las franjas ya pasadas hace más de 2 días
+    cutoff = datetime.now(timezone.utc) - timedelta(days=2)
+    state["scheduled"] = [s for s in state["scheduled"] if datetime.fromisoformat(s) > cutoff]
+    slots = pending_slots(cfg, state)
+    if args.max:
+        slots = slots[: args.max]
+    if not slots:
+        print("Todas las franjas de las próximas 24 h ya tienen vídeo programado.")
+        _save(cfg, "state.json", state)
+        return 0
+    print("Franjas por programar:", ", ".join(f"{s:%d/%m %H:%M}" for s in slots))
+    errors = 0
+    for slot in slots:
+        print(f"\n--- Franja {slot:%d/%m %H:%M} ---")
+        try:
+            video, series, part = make_episode(cfg, state, history, args, f"{slot:%Y%m%d_%H%M}")
+            ok = publish_episode(cfg, state, history, video, series, part, slot)
+        except Exception as e:  # una franja fallida no impide preparar las siguientes
+            print(f"Error en la franja {slot:%H:%M}: {e}", file=sys.stderr)
+            ok = False
+        errors += not ok
+        if errors >= 2:
+            print("Dos franjas fallidas: se detiene esta ejecución.", file=sys.stderr)
+            break
+    _save(cfg, "state.json", state)
+    return 1 if errors else 0
 
 
 if __name__ == "__main__":

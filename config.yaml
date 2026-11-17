@@ -4,9 +4,6 @@
 series:
   max_parts: 2                # cada historia se cuenta en 1 o 2 partes (una parte por día)
 
-style:
-  accent_color: "#E2A84B"     # ámbar: subtítulo activo, gancho y etiqueta de parte
-
 video:
   width: 1080
   height: 1920
@@ -46,8 +43,33 @@ claude:
   effort: high                # alto: prioriza la fidelidad histórica
 
 publish:
-  platforms: [instagram, youtube]   # añade tiktok cuando esté conectado en Upload-Post
-  min_hours_between: 2        # evita publicar dos veces en la misma franja (las franjas van cada 3 h)
-  check_status: false         # false = 1 llamada por publicación (plan gratuito: 10 llamadas/mes)
-  label_as_ai: true           # obligatorio en la práctica: las imágenes son generadas con IA
+  # Horas de publicación (hora de España). Una ejecución diaria de GitHub prepara los vídeos
+  # y los deja PROGRAMADOS en Upload-Post a estas horas exactas (aunque GitHub llegue tarde).
+  timezone: Europe/Madrid
+  slots: ["10:00", "13:00", "16:00", "19:00", "22:00"]
+  min_lead_minutes: 20        # no programa una franja que empiece antes de este margen
+  label_as_ai: true           # obligatorio en la práctica: la animación está hecha por ordenador
   youtube_privacy: public     # public | unlisted | private
+
+# Canales: cada uno es un perfil de Upload-Post con su temática, su guionista y su historial.
+channels:
+  bien_contadas:
+    name: Historia oscura de España
+    enabled: true             # false = no genera ni publica nada
+    profile: bien_contadas    # nombre exacto del perfil en Upload-Post
+    platforms: [instagram, youtube]   # añade tiktok cuando esté conectado en Upload-Post
+    prompt: prompts/bien_contadas.md
+    accent_color: "#E2A84B"
+    formats:
+      punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
+      crimen_historico: "Crimen, conspiración o suceso oscuro real de la historia de España"
+  elanecdotario:
+    name: Historias de misterio
+    enabled: false            # EN PAUSA: se está preparando el perfil (nombre, imagen, descripciones)
+    profile: elanecdotario
+    platforms: [youtube]      # añade instagram cuando esté conectado en Upload-Post
+    prompt: prompts/elanecdotario.md
+    accent_color: "#7FD1C7"
+    formats:
+      caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
+      enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"

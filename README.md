@@ -1,65 +1,65 @@
-# auto-reels · Historia oscura de España
+# auto-reels · canales automáticos de historias animadas
 
-Publica cada día un episodio vertical (9:16, 35–50 s) en **TikTok, Instagram Reels y YouTube Shorts**
-sobre historia real de España, en dos formatos:
+Genera vídeos verticales (9:16, 35–50 s) de **caricaturas 2D animadas por código** y los publica en
+Instagram Reels, YouTube Shorts y TikTok mediante Upload-Post. Hay un canal por perfil de Upload-Post:
 
-1. **«El día que España estuvo a punto de...»**: puntos de inflexión, errores críticos y decisiones límite.
-2. **Crímenes, conspiraciones y sucesos oscuros reales.**
+| Canal (`config.yaml`) | Perfil Upload-Post | Temática | Estado |
+|---|---|---|---|
+| `bien_contadas` | bien_contadas | Historia oscura de España (puntos de inflexión, crímenes históricos) | activo |
+| `elanecdotario` | elanecdotario | Historias de misterio reales (casos sin resolver, enigmas) | en pausa |
 
-Cada historia se cuenta en **1 o 2 partes** (como máximo), con una parte publicada cada día. Claude escribe
-todas las partes de golpe, así que la Parte 2 encaja con el cliffhanger de la Parte 1 y mantiene el mismo
-estilo visual.
+Cada historia se cuenta en **1 o 2 partes**. Claude escribe todas las partes de golpe, con reparto de
+personajes, vestuario y planificación de cada plano.
 
 ```
-Claude (guion + dirección visual + prompts) → voz IA → dibujos animados 2D (12–16 planos cortos con
-movimiento de cámara y fundidos) → música de fondo → subtítulos animados → FFmpeg → Upload-Post
+Claude (guion + reparto + planos) → voces Edge TTS → caricaturas animadas (Skia) → música y efectos
+propios → subtítulos → FFmpeg → Upload-Post (programado a la hora exacta)
 ```
 
-## Costes
+## Cómo se publica
 
-| Servicio | Coste |
-|---|---|
-| Upload-Post Basic (necesario para TikTok) | ~16–24 $/mes |
-| Claude | incluido en tu suscripción (token de Claude Code) |
-| Imágenes (Pollinations) | gratis (1 imagen/45 s, calidad básica) · opcional Replicate: ~0,05 $/vídeo |
-| Voz (Edge TTS) | gratis · opcional ElevenLabs desde ~5 $/mes |
-| GitHub Actions | gratis (~15 min por ejecución) |
+- Las horas están en `config.yaml` → `publish.slots` (10, 13, 16, 19 y 22 h, hora de España).
+- GitHub se ejecuta **de noche**: genera los vídeos de las próximas 24 h de cada canal activo y los deja
+  **programados en Upload-Post** a esas horas. Así da igual que GitHub se retrase (le pasa a menudo).
+- Hay ejecuciones de reserva (madrugada y mediodía): si ya está todo programado, terminan en segundos.
 
-## Puesta en marcha
+## Añadir o activar un canal
 
-1. **Upload-Post**: contrata el plan Basic, crea un *perfil* y conecta TikTok, Instagram (cuenta
-   Business/Creator) y YouTube. Copia la API key.
-2. **GitHub → Settings → Secrets and variables → Actions**:
-   - Secrets: `CLAUDE_CODE_OAUTH_TOKEN` (de `claude setup-token`), `UPLOAD_POST_API_KEY`
-     y, opcionalmente, `REPLICATE_API_TOKEN` o `ELEVENLABS_API_KEY`
-   - Variables: `UPLOAD_POST_USER` = nombre del perfil de Upload-Post
-3. **Prueba**: *Actions → Episodio diario → Run workflow* con «Solo generar el vídeo» marcado. En el
-   resumen de la ejecución tienes dos descargas: `preview-…` (fotogramas + guion, pesa poco) y
-   `reel-…` (vídeo completo).
+1. En Upload-Post, crea el perfil y conecta sus redes.
+2. En `config.yaml` → `channels`, pon el nombre exacto del perfil (`profile`), sus redes
+   (`platforms`), su guionista (`prompt`) y sus formatos, y `enabled: true`.
+3. Escribe su guionista en `prompts/<canal>.md` (temática y reglas del guion). Las reglas de la
+   animación son comunes a todos los canales: `prompts/animacion.md`.
 
-## Uso desde GitHub (Run workflow)
+## Uso desde GitHub (Actions → Episodio diario → Run workflow)
 
-- **Solo generar el vídeo**: prueba sin publicar. La parte sigue pendiente y será la que se publique después.
-- **Empezar historia nueva** + **Tema**: por ejemplo «El motín de Esquilache» o «El crimen del Expreso de Andalucía».
-- **Formato**: fuerza punto de inflexión o crimen histórico (por defecto se alternan).
+- **Canal**: uno o todos los activos.
+- **Modo**: `prueba` (solo genera el vídeo; descárgalo en el resumen de la ejecución), `programar`
+  (prepara las franjas de las próximas 24 h) o `ahora` (publica uno al momento).
+- **Empezar historia nueva**, **Tema** y **Formato** (clave de `formats` del canal; vacío = alterna).
+- **Publicar aunque el canal esté en pausa**: para publicar en un canal con `enabled: false`.
+
+Desde el ordenador: `python -m reels --channel elanecdotario --dry-run` (ver `python -m reels -h`).
+
+## Secrets de GitHub
+
+`CLAUDE_CODE_OAUTH_TOKEN` (de `claude setup-token`) y `UPLOAD_POST_API_KEY`; opcional `ELEVENLABS_API_KEY`.
+El perfil de cada canal está en `config.yaml`.
 
 ## Archivos importantes
 
 ```
-prompts/guionista.md   reglas creativas del guionista (edítalas a tu gusto)
-config.yaml            partes por historia, voz, imágenes, colores, plataformas
-data/state.json        partes pendientes de publicar
-data/history.json      historias ya hechas (Claude no las repite)
-reels/script.py        guion con Claude (salida estructurada)
-reels/images.py        imágenes 9:16 (Pollinations o Replicate)
-reels/render.py        movimiento de cámara, fundidos, música (baja sola bajo la voz) y montaje
-assets/music/          pistas de fondo; se elige una al azar en cada vídeo
-tools/make_music.py    compone las pistas propias de assets/music (sin derechos de terceros)
-reels/captions.py      subtítulos, etiqueta «Parte X/2» y cartel final
-reels/publish.py       publicación vía Upload-Post
+config.yaml               canales, horas de publicación, vídeo, voces del reparto
+prompts/<canal>.md        guionista de cada canal
+prompts/animacion.md      reglas comunes de personajes, vestuario y planos
+data/<canal>/state.json   partes pendientes y franjas ya programadas
+data/<canal>/history.json historias ya hechas (Claude no las repite)
+reels/script.py           guion con Claude (salida estructurada)
+reels/toon/               animación: personajes, escenarios, objetos, sucesos, efectos de sonido
+reels/captions.py         subtítulos, etiqueta «Parte X/2» y cartel final
+reels/render.py           montaje, música (baja sola bajo la voz) y efectos
+reels/publish.py          publicación y programación vía Upload-Post
+tools/make_music.py       compone las pistas propias de assets/music (sin derechos de terceros)
 ```
 
-Cada ejecución guarda también `guion.md` con la ficha del episodio, el Estilo Visual Maestro y el guion
-bloque a bloque con tiempos, cámara y prompt de imagen.
-
-Para añadir música, pon pistas libres de derechos (ambiente oscuro o tensión) en `assets/music/`.
+Cada vídeo guarda también `guion.md` con la ficha del episodio, el reparto y el guion plano a plano.

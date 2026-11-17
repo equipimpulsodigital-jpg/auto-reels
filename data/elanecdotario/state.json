@@ -1,0 +1,1360 @@
+{
+  "queue": [
+    {
+      "series": {
+        "series_title": "El faro vacío de las islas Flannan",
+        "format": "caso_sin_resolver",
+        "year": "1900",
+        "place": "Eilean Mòr, islas Flannan (Hébridas Exteriores, Escocia)",
+        "topic": "Desaparición de los tres fareros de Eilean Mòr (islas Flannan, Escocia) en diciembre de 1900",
+        "era": "1900",
+        "characters": [
+          {
+            "id": "moore",
+            "name": "Joseph Moore",
+            "voice": "ingles",
+            "look": {
+              "female": false,
+              "age": "joven",
+              "skin": "clara",
+              "hair_color": "castaño",
+              "hair_style": "corto",
+              "hat": "gorra_militar",
+              "hat_color": "azul_marino",
+              "beard": "bigote",
+              "beard_color": "castaño",
+              "outfit": "uniforme",
+              "outfit_color": "azul_marino",
+              "accent_color": "dorado",
+              "pants_color": "azul_marino",
+              "nose": "pequeña",
+              "jaw": "fina",
+              "eyes": "azules",
+              "glasses": false
+            }
+          },
+          {
+            "id": "capitan",
+            "name": "Capitán Hesperus",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "media",
+              "hair_color": "canoso",
+              "hair_style": "corto",
+              "hat": "gorra_plana",
+              "hat_color": "negro",
+              "beard": "bigotazo",
+              "beard_color": "canoso",
+              "outfit": "jersey",
+              "outfit_color": "gris",
+              "accent_color": "negro",
+              "pants_color": "negro",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "muirhead",
+            "name": "Robert Muirhead",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "clara",
+              "hair_color": "canoso",
+              "hair_style": "calvo",
+              "hat": "bombin",
+              "hat_color": "negro",
+              "beard": "barba",
+              "beard_color": "canoso",
+              "outfit": "levita",
+              "outfit_color": "negro",
+              "accent_color": "granate",
+              "pants_color": "gris",
+              "nose": "aguileña",
+              "jaw": "cuadrada",
+              "eyes": "verdes",
+              "glasses": true
+            }
+          },
+          {
+            "id": "ducat",
+            "name": "James Ducat",
+            "voice": "ingles",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "castaño",
+              "hair_style": "corto",
+              "hat": "gorra_militar",
+              "hat_color": "azul_marino",
+              "beard": "barba",
+              "beard_color": "castaño",
+              "outfit": "uniforme",
+              "outfit_color": "azul_marino",
+              "accent_color": "plateado",
+              "pants_color": "azul_marino",
+              "nose": "gancho",
+              "jaw": "cuadrada",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "macarthur",
+            "name": "Donald MacArthur",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "pelirrojo",
+              "hair_style": "corto",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "bigotazo",
+              "beard_color": "pelirrojo",
+              "outfit": "camisa",
+              "outfit_color": "blanco",
+              "accent_color": "marron",
+              "pants_color": "marron",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "azules",
+              "glasses": false
+            }
+          }
+        ],
+        "historical_notes": "Documentado (informe del superintendente Robert Muirhead, enero de 1901, y declaración de Joseph Moore): el faro de Eilean Mòr se encendió por primera vez en diciembre de 1899. Los fareros eran James Ducat (principal), Thomas Marshall (segundo ayudante) y Donald MacArthur (farero ocasional que sustituía a William Ross, de baja). El vapor Archtor informó de que el faro estaba apagado la noche del 15 de diciembre de 1900. El barco de relevo Hesperus, previsto hacia el 20 de diciembre, se retrasó por el mal tiempo y llegó el 26. Moore encontró la puerta y la verja cerradas, las camas vacías y el fuego apagado desde hacía días. Faltaban dos impermeables (los de Ducat y Marshall); el de MacArthur seguía en su sitio. Muirhead constató que las anotaciones de la pizarra llegaban hasta la mañana del 15 y que la lámpara estaba limpia y preparada. En el embarcadero oeste encontró daños: una caja de cuerdas guardada en una grieta a unos 110 pies (≈33 m) sobre el mar, destrozada, y barandillas dobladas. Su conclusión oficial: una ola enorme se llevó a los hombres mientras aseguraban el material. Nunca se encontraron los cuerpos. NO documentado / mito: el supuesto diario con anotaciones dramáticas (tormentas, llantos, rezos), la comida sin tocar en la mesa y la silla volcada; proceden del poema 'Flannan Isle' de Wilfrid Wilson Gibson (1912) y de artículos sensacionalistas posteriores. Los diálogos son una recreación; el nombre del capitán del Hesperus no se usa para evitar errores. No se afirma que hubiera tormenta el día 15 porque las fuentes meteorológicas son contradictorias.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_title": "Tres fareros. Una isla. Ningún rastro.",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Tres fareros desaparecieron de una isla. Nunca aparecieron.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Un faro solitario sobre un acantilado azotado por la lluvia, sin ninguna luz encendida."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Escocia, diciembre de 1900. Faro de la isla Eilean Mòr.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "La cámara se aleja y revela la pequeña isla rocosa en medio del Atlántico al atardecer."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Allí servían James Ducat, Thomas Marshall y Donald MacArthur.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "ducat",
+                  "macarthur"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Ducat, de uniforme, y MacArthur, en camisa, caminan por el sendero hacia el faro."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "El 15 de diciembre, un vapor vio el faro apagado.",
+                "location": "barca",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "barco",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Un barco cruza de noche junto a la isla; en lo alto, el faro está a oscuras."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "El barco de relevo, el Hesperus, se retrasó por temporal.",
+                "location": "barca",
+                "framing": "general",
+                "cast": [
+                  "capitan"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "visual_direction": "El Hesperus se sacude entre olas enormes mientras el capitán se agarra al timón."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Llegó el día 26. En el embarcadero, nadie.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "El muelle de la isla aparece vacío, sin nadie esperando al barco."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "capitan",
+                "narration": "Ni bandera, ni señales... Siempre salen a recibirnos.",
+                "location": "barca",
+                "framing": "personaje",
+                "cast": [
+                  "capitan",
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "desconfiado",
+                "listener_emotion": "serio",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "El capitán señala el muelle vacío desde la cubierta, con Moore de espaldas."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "moore",
+                "narration": "Subiré yo. Algo no va bien ahí arriba.",
+                "location": "barca",
+                "framing": "personaje",
+                "cast": [
+                  "moore",
+                  "capitan"
+                ],
+                "gesture": "chest",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore, farero de relevo, se ajusta la gorra y mira hacia el faro."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Joseph Moore, farero de relevo, subió solo.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Moore sube por la escalera del acantilado, pequeño y solo frente al faro."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "moore",
+                "narration": "¿Ducat? ¿Marshall? ¡Contestad, soy Moore!",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "wave",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Moore entra en la vivienda del faro, en penumbra, llamando a sus compañeros."
+              },
+              {
+                "label": "DESCUBRIMIENTO",
+                "speaker": "moore",
+                "narration": "La puerta cerrada, las camas vacías... y el fuego frío.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "explain",
+                "emotion": "sorprendido",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore recorre la cocina vacía; la chimenea está apagada y sin brasas."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "moore",
+                "narration": "Faltan dos impermeables... pero el tercero sigue colgado aquí.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "Moore señala la percha: un solo impermeable colgado junto a dos ganchos vacíos."
+              },
+              {
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Uno salió sin abrigo, en pleno diciembre. ¿Por qué?",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "macarthur"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "La silueta de MacArthur en camisa, de espaldas, frente al mar embravecido."
+              }
+            ],
+            "cliffhanger": "Moore descubre que uno de los fareros, MacArthur, salió sin su impermeable en pleno invierno. ¿Qué le hizo salir con tanta prisa?",
+            "caption": "Parte 1/2 · Diciembre de 1900. El faro de una isla escocesa se apaga y, cuando llega el barco de relevo, los tres fareros han desaparecido. Recreación animada basada en hechos reales.",
+            "hashtags": [
+              "misterio",
+              "casossinresolver",
+              "historia",
+              "escocia",
+              "faro",
+              "flannan"
+            ],
+            "youtube_title": "Tres fareros desaparecen de una isla en 1900 | El misterio de Flannan · Parte 1",
+            "youtube_description": "Diciembre de 1900, islas Flannan (Escocia): el faro de Eilean Mòr se apaga y sus tres fareros desaparecen sin dejar rastro. Parte 1 de 2. Recreación animada basada en hechos reales."
+          },
+          {
+            "part_number": 2,
+            "hook_title": "El mar no devolvió a nadie",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Tres hombres se esfumaron de un faro. Escocia, 1900.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "El faro apagado sobre la isla, golpeado por las olas en plena tormenta."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Investigó Robert Muirhead, superintendente. Los había visitado ese mismo mes.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Muirhead, con levita y bombín, desembarca y camina hacia el faro junto a Moore."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "muirhead",
+                "narration": "La pizarra llega hasta el día 15, a las nueve.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "serio",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Muirhead examina la pizarra de registro junto a la ventana mientras Moore escucha."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "moore",
+                "narration": "Y la lámpara estaba limpia, lista para encenderse.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "moore",
+                  "muirhead"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "pensativo",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore explica con las manos que todo estaba preparado para la noche."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "muirhead",
+                "narration": "En el embarcadero oeste hay destrozos. Venga a verlo.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "serio",
+                "listener_emotion": "sorprendido",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Muirhead señala hacia la ventana, en dirección al lado oeste de la isla."
+              },
+              {
+                "label": "PISTA",
+                "speaker": "narrador",
+                "narration": "Una caja reventada a 33 metros sobre el mar.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [
+                  "boom"
+                ],
+                "visual_direction": "En lo alto del acantilado, restos de una caja de madera y cuerdas esparcidas, barandillas dobladas."
+              },
+              {
+                "label": "TEORÍA",
+                "speaker": "muirhead",
+                "narration": "Solo una ola enorme pudo llegar hasta ahí arriba.",
+                "location": "costa",
+                "framing": "personaje",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Muirhead mira hacia el acantilado con el mar rugiendo abajo."
+              },
+              {
+                "label": "TEORÍA",
+                "speaker": "moore",
+                "narration": "¿Y si uno corrió a avisar a los otros?",
+                "location": "costa",
+                "framing": "personaje",
+                "cast": [
+                  "moore",
+                  "muirhead"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "desconfiado",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore, con la mano en la barbilla, plantea su duda bajo el viento."
+              },
+              {
+                "label": "VERSIÓN OFICIAL",
+                "speaker": "narrador",
+                "narration": "La versión oficial: el mar los arrastró. Nunca aparecieron los cuerpos.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Olas gigantes rompen contra el embarcadero vacío mientras la cámara se aleja."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Luego nació la leyenda: comida servida y una silla volcada.",
+                "location": "salon",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "periodico",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "Un periódico sensacionalista sobre la mesa con titulares sobre el faro maldito."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Salió de un poema de 1912. Los informes no dicen nada.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "El informe oficial de Muirhead sobre el escritorio, frío y sin adornos."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "¿Qué hizo salir a MacArthur sin abrigo, en pleno invierno?",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "macarthur"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "MacArthur en camisa camina hacia el borde del acantilado y se funde con la oscuridad."
+              }
+            ],
+            "cliffhanger": "La teoría oficial apunta a una ola gigante, pero sigue sin explicarse por qué MacArthur salió sin su impermeable ni por qué los tres dejaron el faro a la vez. Los cuerpos nunca aparecieron.",
+            "caption": "Parte 2/2 · El superintendente Muirhead encontró destrozos a 33 metros sobre el mar. ¿Una ola gigante? ¿Y por qué uno de ellos salió sin abrigo? Recreación animada basada en hechos reales.",
+            "hashtags": [
+              "misterio",
+              "casossinresolver",
+              "historia",
+              "escocia",
+              "faro",
+              "leyendas"
+            ],
+            "youtube_title": "¿Qué pasó con los fareros de Flannan? La ola, el mito y la pregunta · Parte 2",
+            "youtube_description": "La investigación oficial de la desaparición de los fareros de Eilean Mòr (Escocia, 1900): la pizarra, los destrozos del embarcadero oeste y los mitos que se inventaron después. Parte 2 de 2. Recreación animada basada en hechos reales."
+          }
+        ]
+      },
+      "part": 0
+    },
+    {
+      "series": {
+        "series_title": "El faro vacío de las islas Flannan",
+        "format": "caso_sin_resolver",
+        "year": "1900",
+        "place": "Eilean Mòr, islas Flannan (Hébridas Exteriores, Escocia)",
+        "topic": "Desaparición de los tres fareros de Eilean Mòr (islas Flannan, Escocia) en diciembre de 1900",
+        "era": "1900",
+        "characters": [
+          {
+            "id": "moore",
+            "name": "Joseph Moore",
+            "voice": "ingles",
+            "look": {
+              "female": false,
+              "age": "joven",
+              "skin": "clara",
+              "hair_color": "castaño",
+              "hair_style": "corto",
+              "hat": "gorra_militar",
+              "hat_color": "azul_marino",
+              "beard": "bigote",
+              "beard_color": "castaño",
+              "outfit": "uniforme",
+              "outfit_color": "azul_marino",
+              "accent_color": "dorado",
+              "pants_color": "azul_marino",
+              "nose": "pequeña",
+              "jaw": "fina",
+              "eyes": "azules",
+              "glasses": false
+            }
+          },
+          {
+            "id": "capitan",
+            "name": "Capitán Hesperus",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "media",
+              "hair_color": "canoso",
+              "hair_style": "corto",
+              "hat": "gorra_plana",
+              "hat_color": "negro",
+              "beard": "bigotazo",
+              "beard_color": "canoso",
+              "outfit": "jersey",
+              "outfit_color": "gris",
+              "accent_color": "negro",
+              "pants_color": "negro",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "muirhead",
+            "name": "Robert Muirhead",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "clara",
+              "hair_color": "canoso",
+              "hair_style": "calvo",
+              "hat": "bombin",
+              "hat_color": "negro",
+              "beard": "barba",
+              "beard_color": "canoso",
+              "outfit": "levita",
+              "outfit_color": "negro",
+              "accent_color": "granate",
+              "pants_color": "gris",
+              "nose": "aguileña",
+              "jaw": "cuadrada",
+              "eyes": "verdes",
+              "glasses": true
+            }
+          },
+          {
+            "id": "ducat",
+            "name": "James Ducat",
+            "voice": "ingles",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "castaño",
+              "hair_style": "corto",
+              "hat": "gorra_militar",
+              "hat_color": "azul_marino",
+              "beard": "barba",
+              "beard_color": "castaño",
+              "outfit": "uniforme",
+              "outfit_color": "azul_marino",
+              "accent_color": "plateado",
+              "pants_color": "azul_marino",
+              "nose": "gancho",
+              "jaw": "cuadrada",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "macarthur",
+            "name": "Donald MacArthur",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "pelirrojo",
+              "hair_style": "corto",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "bigotazo",
+              "beard_color": "pelirrojo",
+              "outfit": "camisa",
+              "outfit_color": "blanco",
+              "accent_color": "marron",
+              "pants_color": "marron",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "azules",
+              "glasses": false
+            }
+          }
+        ],
+        "historical_notes": "Documentado (informe del superintendente Robert Muirhead, enero de 1901, y declaración de Joseph Moore): el faro de Eilean Mòr se encendió por primera vez en diciembre de 1899. Los fareros eran James Ducat (principal), Thomas Marshall (segundo ayudante) y Donald MacArthur (farero ocasional que sustituía a William Ross, de baja). El vapor Archtor informó de que el faro estaba apagado la noche del 15 de diciembre de 1900. El barco de relevo Hesperus, previsto hacia el 20 de diciembre, se retrasó por el mal tiempo y llegó el 26. Moore encontró la puerta y la verja cerradas, las camas vacías y el fuego apagado desde hacía días. Faltaban dos impermeables (los de Ducat y Marshall); el de MacArthur seguía en su sitio. Muirhead constató que las anotaciones de la pizarra llegaban hasta la mañana del 15 y que la lámpara estaba limpia y preparada. En el embarcadero oeste encontró daños: una caja de cuerdas guardada en una grieta a unos 110 pies (≈33 m) sobre el mar, destrozada, y barandillas dobladas. Su conclusión oficial: una ola enorme se llevó a los hombres mientras aseguraban el material. Nunca se encontraron los cuerpos. NO documentado / mito: el supuesto diario con anotaciones dramáticas (tormentas, llantos, rezos), la comida sin tocar en la mesa y la silla volcada; proceden del poema 'Flannan Isle' de Wilfrid Wilson Gibson (1912) y de artículos sensacionalistas posteriores. Los diálogos son una recreación; el nombre del capitán del Hesperus no se usa para evitar errores. No se afirma que hubiera tormenta el día 15 porque las fuentes meteorológicas son contradictorias.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_title": "Tres fareros. Una isla. Ningún rastro.",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Tres fareros desaparecieron de una isla. Nunca aparecieron.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Un faro solitario sobre un acantilado azotado por la lluvia, sin ninguna luz encendida."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Escocia, diciembre de 1900. Faro de la isla Eilean Mòr.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "La cámara se aleja y revela la pequeña isla rocosa en medio del Atlántico al atardecer."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Allí servían James Ducat, Thomas Marshall y Donald MacArthur.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "ducat",
+                  "macarthur"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Ducat, de uniforme, y MacArthur, en camisa, caminan por el sendero hacia el faro."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "El 15 de diciembre, un vapor vio el faro apagado.",
+                "location": "barca",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "barco",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Un barco cruza de noche junto a la isla; en lo alto, el faro está a oscuras."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "El barco de relevo, el Hesperus, se retrasó por temporal.",
+                "location": "barca",
+                "framing": "general",
+                "cast": [
+                  "capitan"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "visual_direction": "El Hesperus se sacude entre olas enormes mientras el capitán se agarra al timón."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Llegó el día 26. En el embarcadero, nadie.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "El muelle de la isla aparece vacío, sin nadie esperando al barco."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "capitan",
+                "narration": "Ni bandera, ni señales... Siempre salen a recibirnos.",
+                "location": "barca",
+                "framing": "personaje",
+                "cast": [
+                  "capitan",
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "desconfiado",
+                "listener_emotion": "serio",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "El capitán señala el muelle vacío desde la cubierta, con Moore de espaldas."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "moore",
+                "narration": "Subiré yo. Algo no va bien ahí arriba.",
+                "location": "barca",
+                "framing": "personaje",
+                "cast": [
+                  "moore",
+                  "capitan"
+                ],
+                "gesture": "chest",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore, farero de relevo, se ajusta la gorra y mira hacia el faro."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Joseph Moore, farero de relevo, subió solo.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Moore sube por la escalera del acantilado, pequeño y solo frente al faro."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "moore",
+                "narration": "¿Ducat? ¿Marshall? ¡Contestad, soy Moore!",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "wave",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Moore entra en la vivienda del faro, en penumbra, llamando a sus compañeros."
+              },
+              {
+                "label": "DESCUBRIMIENTO",
+                "speaker": "moore",
+                "narration": "La puerta cerrada, las camas vacías... y el fuego frío.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "explain",
+                "emotion": "sorprendido",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore recorre la cocina vacía; la chimenea está apagada y sin brasas."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "moore",
+                "narration": "Faltan dos impermeables... pero el tercero sigue colgado aquí.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "Moore señala la percha: un solo impermeable colgado junto a dos ganchos vacíos."
+              },
+              {
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Uno salió sin abrigo, en pleno diciembre. ¿Por qué?",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "macarthur"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "La silueta de MacArthur en camisa, de espaldas, frente al mar embravecido."
+              }
+            ],
+            "cliffhanger": "Moore descubre que uno de los fareros, MacArthur, salió sin su impermeable en pleno invierno. ¿Qué le hizo salir con tanta prisa?",
+            "caption": "Parte 1/2 · Diciembre de 1900. El faro de una isla escocesa se apaga y, cuando llega el barco de relevo, los tres fareros han desaparecido. Recreación animada basada en hechos reales.",
+            "hashtags": [
+              "misterio",
+              "casossinresolver",
+              "historia",
+              "escocia",
+              "faro",
+              "flannan"
+            ],
+            "youtube_title": "Tres fareros desaparecen de una isla en 1900 | El misterio de Flannan · Parte 1",
+            "youtube_description": "Diciembre de 1900, islas Flannan (Escocia): el faro de Eilean Mòr se apaga y sus tres fareros desaparecen sin dejar rastro. Parte 1 de 2. Recreación animada basada en hechos reales."
+          },
+          {
+            "part_number": 2,
+            "hook_title": "El mar no devolvió a nadie",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Tres hombres se esfumaron de un faro. Escocia, 1900.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "El faro apagado sobre la isla, golpeado por las olas en plena tormenta."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Investigó Robert Muirhead, superintendente. Los había visitado ese mismo mes.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Muirhead, con levita y bombín, desembarca y camina hacia el faro junto a Moore."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "muirhead",
+                "narration": "La pizarra llega hasta el día 15, a las nueve.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "serio",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Muirhead examina la pizarra de registro junto a la ventana mientras Moore escucha."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "moore",
+                "narration": "Y la lámpara estaba limpia, lista para encenderse.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "moore",
+                  "muirhead"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "pensativo",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore explica con las manos que todo estaba preparado para la noche."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "muirhead",
+                "narration": "En el embarcadero oeste hay destrozos. Venga a verlo.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "serio",
+                "listener_emotion": "sorprendido",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Muirhead señala hacia la ventana, en dirección al lado oeste de la isla."
+              },
+              {
+                "label": "PISTA",
+                "speaker": "narrador",
+                "narration": "Una caja reventada a 33 metros sobre el mar.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [
+                  "boom"
+                ],
+                "visual_direction": "En lo alto del acantilado, restos de una caja de madera y cuerdas esparcidas, barandillas dobladas."
+              },
+              {
+                "label": "TEORÍA",
+                "speaker": "muirhead",
+                "narration": "Solo una ola enorme pudo llegar hasta ahí arriba.",
+                "location": "costa",
+                "framing": "personaje",
+                "cast": [
+                  "muirhead",
+                  "moore"
+                ],
+                "gesture": "point",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Muirhead mira hacia el acantilado con el mar rugiendo abajo."
+              },
+              {
+                "label": "TEORÍA",
+                "speaker": "moore",
+                "narration": "¿Y si uno corrió a avisar a los otros?",
+                "location": "costa",
+                "framing": "personaje",
+                "cast": [
+                  "moore",
+                  "muirhead"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "desconfiado",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Moore, con la mano en la barbilla, plantea su duda bajo el viento."
+              },
+              {
+                "label": "VERSIÓN OFICIAL",
+                "speaker": "narrador",
+                "narration": "La versión oficial: el mar los arrastró. Nunca aparecieron los cuerpos.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Olas gigantes rompen contra el embarcadero vacío mientras la cámara se aleja."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Luego nació la leyenda: comida servida y una silla volcada.",
+                "location": "salon",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "periodico",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "Un periódico sensacionalista sobre la mesa con titulares sobre el faro maldito."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Salió de un poema de 1912. Los informes no dicen nada.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "El informe oficial de Muirhead sobre el escritorio, frío y sin adornos."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "¿Qué hizo salir a MacArthur sin abrigo, en pleno invierno?",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "macarthur"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "MacArthur en camisa camina hacia el borde del acantilado y se funde con la oscuridad."
+              }
+            ],
+            "cliffhanger": "La teoría oficial apunta a una ola gigante, pero sigue sin explicarse por qué MacArthur salió sin su impermeable ni por qué los tres dejaron el faro a la vez. Los cuerpos nunca aparecieron.",
+            "caption": "Parte 2/2 · El superintendente Muirhead encontró destrozos a 33 metros sobre el mar. ¿Una ola gigante? ¿Y por qué uno de ellos salió sin abrigo? Recreación animada basada en hechos reales.",
+            "hashtags": [
+              "misterio",
+              "casossinresolver",
+              "historia",
+              "escocia",
+              "faro",
+              "leyendas"
+            ],
+            "youtube_title": "¿Qué pasó con los fareros de Flannan? La ola, el mito y la pregunta · Parte 2",
+            "youtube_description": "La investigación oficial de la desaparición de los fareros de Eilean Mòr (Escocia, 1900): la pizarra, los destrozos del embarcadero oeste y los mitos que se inventaron después. Parte 2 de 2. Recreación animada basada en hechos reales."
+          }
+        ]
+      },
+      "part": 1
+    }
+  ],
+  "last_published": null,
+  "scheduled": []
+}

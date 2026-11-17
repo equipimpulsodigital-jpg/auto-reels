@@ -12,9 +12,22 @@ OUT = ROOT / "out"
 CACHE = ROOT / ".cache"
 
 
-def load_config(path: Path | None = None) -> dict:
+def load_config(channel: str | None = None, path: Path | None = None) -> dict:
+    """Configuración general + la del canal elegido en cfg["channel"] (por defecto, el primero)."""
     with open(path or ROOT / "config.yaml", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    channels = cfg.get("channels") or {}
+    if channels:
+        cid = channel or next(iter(channels))
+        if cid not in channels:
+            raise SystemExit(f"Canal desconocido: {cid}. Canales: {', '.join(channels)}")
+        cfg["channel"] = {"id": cid, **channels[cid]}
+    return cfg
+
+
+def channel_data(cfg: dict) -> Path:
+    """Carpeta con el historial y las partes pendientes del canal."""
+    return DATA / cfg["channel"]["id"]
 
 
 def env(name: str, required: bool = True) -> str:
