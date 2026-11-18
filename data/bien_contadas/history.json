@@ -12,6 +12,56 @@
         "request_id": "5194e40f2cfa4b99ba50bdf537f73839",
         "failed": [],
         "at": "2026-11-16T23:03:06+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-18",
+        "slot": "2026-11-18T10:00:00+01:00",
+        "request_id": "b7d47a092028492fa8f522d641448532",
+        "failed": [],
+        "at": "2026-11-18T03:58:20+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "format": "crimen_historico",
+    "topic": "Asesinato de la viuda Luciana Borcino (Madrid, 1888): la criada Higinia Balaguer acusa al hijo preso y al director de la Cárcel Modelo, Millán Astray; primer gran juicio mediático y garrote en 1890.",
+    "series_title": "El crimen de la calle Fuencarral",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-18",
+        "slot": "2026-11-18T13:00:00+01:00",
+        "request_id": "2c72bb43e09b4ad2b6d42c1abe5f5a89",
+        "failed": [],
+        "at": "2026-11-18T04:07:07+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-18",
+        "slot": "2026-11-18T16:00:00+01:00",
+        "request_id": "e935bac722bc4927ba937f0cf42efaec",
+        "failed": [],
+        "at": "2026-11-18T04:13:42+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "format": "punto_inflexion",
+    "topic": "Atentado de Mateu Morral contra Alfonso XIII y Victoria Eugenia el día de su boda (31-V-1906), la huida con ayuda de José Nakens, su muerte en Torrejón y el juicio que absolvió a Ferrer Guardia.",
+    "series_title": "La bomba en la boda del rey",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-18",
+        "slot": "2026-11-18T19:00:00+01:00",
+        "request_id": "d3bcc9943611483787e8caeef2160942",
+        "failed": [],
+        "at": "2026-11-18T04:21:20+00:00"
       }
     ]
   }
