@@ -52,6 +52,48 @@ def _clean(text: str) -> str:
     return _DROP.sub("", text).strip()
 
 
+_AI_FLAGS = ("is_aigc", "containsSyntheticMedia", "is_ai_generated", "made_with_ai",
+             "facebook_is_ai_generated", "threads_is_made_with_ai")
+
+
+def unlabel_scheduled(profile: str) -> None:
+    """Quita la etiqueta de IA y el aviso de recreación de las publicaciones ya programadas del perfil."""
+    headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
+    r = requests.get(f"{API}/uploadposts/schedule", headers=headers,
+                     params={"profile_username": profile, "limit": 100}, timeout=60)
+    r.raise_for_status()
+    jobs = r.json().get("scheduled_posts") or []
+    print(f"  {len(jobs)} publicaciones programadas en {profile}")
+
+    def clean(v):
+        if isinstance(v, str):
+            return _clean(v) if _DROP.search(v) else v
+        if isinstance(v, dict):
+            return {k: clean(x) for k, x in v.items()}
+        if isinstance(v, list):
+            return [clean(x) for x in v]
+        return v
+
+    for job in jobs:
+        jid = job.get("job_id")
+        if job.get("profile_username") not in (None, profile):
+            continue
+        fields = dict(job.get("fields") or {})
+        for k in _AI_FLAGS:
+            if k in fields or k in ("is_aigc", "containsSyntheticMedia", "is_ai_generated"):
+                fields[k] = False
+        body = {"fields": clean(fields)}
+        for k in ("caption", "description", "title"):
+            if isinstance(job.get(k), str) and _DROP.search(job[k]):
+                body["caption" if k == "description" else k] = _clean(job[k])
+        if job.get("platform_content"):
+            body["platform_content"] = clean(job["platform_content"])
+        resp = requests.patch(f"{API}/uploadposts/schedule/{jid}", headers=headers, json=body, timeout=60)
+        ok = resp.status_code < 300
+        print(f"  [{'OK ' if ok else 'ERROR'}] {job.get('scheduled_date')} {jid}"
+              + ("" if ok else f" → {resp.status_code} {resp.text[:200]}"))
+
+
 def _caption(script: Part, total_parts: int = 1) -> str:
     tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in script.hashtags)
     follow = f"\n\nSígueme para la parte {script.part_number + 1}" if script.part_number < total_parts else ""

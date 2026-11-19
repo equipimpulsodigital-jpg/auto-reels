@@ -207,7 +207,12 @@ def main() -> int:
     ap.add_argument("--force", action="store_true", help="publica aunque el canal esté en pausa (enabled: false)")
     ap.add_argument("--check", action="store_true", help="lista los canales activos y sus franjas pendientes")
     ap.add_argument("--status", action="store_true", help="consulta en Upload-Post cómo acabaron las últimas publicaciones")
+    ap.add_argument("--unlabel", action="store_true", help="quita la etiqueta de IA de las publicaciones ya programadas")
     args = ap.parse_args()
+    if args.unlabel:
+        from .publish import unlabel_scheduled
+        unlabel_scheduled(load_config(args.channel)["channel"]["profile"])
+        return 0
     if args.status:
         from .publish import report
         cfg = load_config(args.channel)
