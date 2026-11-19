@@ -1,3 +1,21 @@
+### EL GANCHO (LO MÁS IMPORTANTE DEL VÍDEO)
+En redes la gente decide en 1–2 segundos si sigue mirando. La primera frase (primer bloque, siempre del **narrador** o de un personaje en plena tensión) tiene que frenar el dedo.
+- **Corta y potente:** 6–12 palabras, que se diga en menos de 4 segundos. La palabra más fuerte (bomba, cadáver, nadie, desaparecieron, traición…) en las primeras palabras.
+- **Abre una pregunta, no la respondas:** el espectador tiene que NECESITAR saber qué pasó. Nunca adelantes el desenlace (mal: "casi mata al rey" → ya sabemos que vivió; bien: "…y el ramo caía directo hacia el rey").
+- **Empieza en mitad de la acción o en el detalle más inquietante**, nunca con la fecha, el lugar ni un nombre que nadie conoce. Prohibido "Hoy os voy a hablar de...", "En este vídeo...", "¿Sabías que...?" y "Esta es la historia de...".
+- **Imagen concreta, no idea abstracta:** algo que se pueda ver (un ramo de flores, una puerta cerrada por dentro, tres platos sin tocar), no "un suceso terrible".
+- **Técnicas** (usa una distinta en cada uno de los 5 `hook_candidates`):
+  1. *Contradicción:* "Lo encontraron todo en orden. Ese era el problema."
+  2. *Dato imposible:* una cifra o un hecho que no debería ser verdad… y lo es.
+  3. *Tú estabas allí:* segunda persona ("Si hubieras estado en esa boda, estarías muerto.").
+  4. *En mitad de la acción:* el segundo exacto antes del desastre ("La mecha ya estaba encendida cuando el rey se asomó.").
+  5. *Secreto o prohibición:* algo que se ocultó, se borró o nadie se atrevió a contar.
+  Elige el mejor (el que más ganas da de ver el segundo 3) y úsalo en el primer bloque. Nunca inventes datos para que el gancho suene mejor: tiene que ser verdad.
+- **La segunda frase sube la apuesta**, no da contexto: añade otro detalle inquietante o lo que estaba en juego. La fecha y el lugar van a partir del tercer bloque, o dentro de una frase con tensión ("Era 1906 y Madrid entero miraba a ese balcón.").
+- **Parte 2:** empieza con el dato nuevo más fuerte de esta parte (no con un resumen) y recuerda lo anterior en media frase más adelante.
+- **Plano del gancho:** el primer bloque debe ser muy visual: un `objeto` clave, un `event` o un personaje con `emotion` intensa. El montaje ya le añade un zoom de impacto y un golpe de sonido.
+- **`hook_title`** (texto grande en pantalla): 2–6 palabras que **complementan** la frase, nunca la repiten. Ej.: voz "La puerta estaba cerrada por dentro…" → pantalla "¿DÓNDE ESTÁN?".
+
 ### 2. NARRADOR + PERSONAJES QUE HABLAN
 El canal es una **serie de dibujos animados**: caricaturas 2D que se mueven, hablan con sincronía labial y gesticulan. Cada parte mezcla **voz en off del narrador** (fechas, lugares, contexto, cifras) con **escenas dramatizadas** en las que los protagonistas hablan entre ellos.
 - Define 2–5 **personajes** (`characters`): nombre, voz del reparto y `look` (su caricatura). Los extranjeros hablan español con su acento: usa `americano`, `frances`, `italiano`, `ingles`... para personajes de ese país.

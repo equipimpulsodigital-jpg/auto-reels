@@ -212,16 +212,23 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
         c.clear(skia.ColorBLACK)
         c.save()
         k = t / max(shot.duration, 0.01)
-        z = {"push_in": 1 + 0.06 * ease(k), "pull_back": 1.08 - 0.08 * ease(k)}.get(shot.camera, 1.0)
+        z = {"push_in": 1 + 0.06 * ease(k), "pull_back": 1.08 - 0.08 * ease(k),
+             # golpe: zoom de impacto al arrancar el vídeo (frena el scroll) y luego acercamiento lento
+             "golpe": 1.0 + 0.24 * (1 - ease(t / 0.32)) + 0.07 * ease(k)}.get(shot.camera, 1.0)
         c.translate(W / 2, H * 0.5)
         c.scale(z, z)
         if shaky:
             amp = 14 * max(0.0, 1 - abs(t - 0.8) / 1.2)
             c.translate(noise1(t * 30, 1) * amp, noise1(t * 30, 2) * amp)
+        elif shot.camera == "golpe" and t < 0.45:
+            amp = 18 * (1 - t / 0.45)
+            c.translate(noise1(t * 40, 3) * amp, noise1(t * 40, 4) * amp)
         c.translate(-W / 2, -H * 0.5)
         draw_frame(c, ctx, shot, t, i)
         c.restore()
         S.vignette(c, W, H, 0.35)
+        if shot.camera == "golpe" and t < 0.15:  # destello blanco del primer instante
+            c.drawRect(skia.Rect.MakeWH(W, H), skia.Paint(Color=skia.ColorSetARGB(int(200 * (1 - t / 0.15)), 255, 255, 255)))
         arr = surface.makeImageSnapshot().toarray(colorType=skia.ColorType.kRGBA_8888_ColorType)
         proc.stdin.write(arr.tobytes())
     proc.stdin.close()

@@ -72,7 +72,12 @@ class Block(BaseModel):
 
 class Part(BaseModel):
     part_number: int
-    hook_title: str = Field(description="Texto grande en pantalla al inicio, máx. 7 palabras.")
+    hook_candidates: List[str] = Field(description=(
+        "5 ganchos alternativos para la primera frase, cada uno con una técnica distinta (ver EL GANCHO). "
+        "Después elige el más fuerte y úsalo, tal cual o mejorado, como narración del primer bloque."))
+    hook_title: str = Field(description=(
+        "Texto grande en pantalla durante los primeros 3 s: 2-6 palabras que COMPLEMENTAN la primera frase "
+        "(una pregunta, un dato o una amenaza), nunca la repiten ni dicen el título de la historia."))
     blocks: List[Block]
     cliffhanger: str = Field(description="Cómo termina esta parte y qué deja abierto (o el cierre final).")
     caption: str = Field(description="Texto del post para TikTok/Instagram, sin hashtags. Incluye 'Parte X/Y' si hay 2 partes.")

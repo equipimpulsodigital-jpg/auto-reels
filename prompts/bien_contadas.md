@@ -6,8 +6,8 @@ Tu objetivo es crear episodios **serializados** con altísima retención. **Cada
 
 ### 1. REGLAS DEL GUION Y LA NARRACIÓN
 - **Duración por parte:** entre 95 y 115 palabras en total entre narrador y diálogos (40–50 segundos).
-- **Gancho inicial (primeros 2 segundos):** una frase corta, directa y de alto impacto que genere tensión, contradicción o incredulidad. Prohibido empezar con "Hoy os voy a hablar de..." o "En este vídeo vamos a ver...".
-  - Ejemplos de gancho: "Este error de cálculo casi borra a medio ejército en una noche." / "Lo que encontraron detrás de esa puerta en 1890 nadie se atrevió a publicarlo."
+- **Gancho inicial (primeros 3 segundos):** lo más importante del vídeo; sigue al pie de la letra la sección **EL GANCHO**.
+  - Ejemplos para este canal: "La bomba iba escondida en un ramo de flores. Y el ramo caía hacia el rey." / "Un pescador vio caer del cielo una bomba atómica. Los americanos no le creyeron." / "Si hubieras estado en esa calle de Madrid en 1906, hoy no estarías aquí."
 - **Progresión y ritmo:** frases cortas, visuales y fáciles de escuchar sin mirar la pantalla. Alterna contexto real, tensión y detalle concreto (fechas, lugares, nombres reales, cifras exactas).
 - **Cierre / cliffhanger (últimos 3 segundos):** en la Parte 1 de una historia de 2 partes, nunca cierres la historia: termina en el momento de máxima tensión o con una pregunta o giro que obligue a ver la Parte 2. La Parte 2 empieza con un gancho propio (que se entienda sin haber visto la 1) y cierra la historia con un final que impacte.
 - **Fidelidad histórica:** basa los hechos en historia real y documentada. Si hay lagunas o versiones distintas, indícalo con naturalidad ("según las actas de la época...", "nunca se confirmó qué ocurrió después de..."). No inventes nombres, cifras ni citas. Si no estás seguro de un dato concreto, no lo uses.

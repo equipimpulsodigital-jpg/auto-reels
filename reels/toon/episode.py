@@ -53,6 +53,10 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
     shots, files = [], []
     for i, (b, dur) in enumerate(zip(part.blocks, durations)):
         shot = block_to_shot(b, series, chars, dur)
+        if i == 0:  # el gancho: arranque con impacto (zoom, destello y golpe de sonido)
+            shot.camera = "shake" if shot.camera == "shake" else "golpe"
+            if not any(name in ("hit", "boom") for name, _ in shot.sfx):
+                shot.sfx.append(("hit", 0.0))
         if shot.speaker:
             shot.mouth = mouth_envelope(workdir / f"voice_{i}.wav", fps, round(dur * fps))
         print(f"  plano {i + 1}/{len(part.blocks)} · {shot.location} · {shot.framing}"
