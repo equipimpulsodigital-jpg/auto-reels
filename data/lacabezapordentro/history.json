@@ -73,5 +73,55 @@
       "looked_up": true,
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     }
+  },
+  {
+    "date": "2026-11-19",
+    "format": "como_salir",
+    "topic": "Las tareas pendientes nos asaltan al acostarnos; escribir 5 minutos una lista concreta de lo que haremos mañana ayuda a callarlas y a dormirse antes (Masicampo y Baumeister, 2011; Scullin et al., 2018)",
+    "series_title": "La lista que apaga la cabeza antes de dormir",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T10:00:00+01:00",
+        "request_id": "e4df6b79ccb941afb01d6609ecbf606d",
+        "job_id": "6e5cd12bb01a481e88ed95374c6f64e5",
+        "failed": [],
+        "at": "2026-11-19T21:04:25+00:00"
+      }
+    ],
+    "book": {
+      "title": "Por qué dormimos",
+      "author": "Matthew Walker",
+      "pitch": "Un neurocientífico del sueño explica qué pasa en tu cabeza cada noche y por qué importa tanto.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-19",
+    "format": "por_que",
+    "topic": "Efecto nuevo comienzo (fresh start effect): esperamos al lunes, a enero o al cumpleaños para cambiar porque esas fechas separan al «yo de antes» de sus fallos (Dai, Milkman y Riis, 2014)",
+    "series_title": "Por qué todo empieza «el lunes»",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T16:00:00+01:00",
+        "request_id": "c83a5cdfa95345b08f10630194e2e611",
+        "job_id": "984e992845c7436ca838ed8f32aced58",
+        "failed": [],
+        "at": "2026-11-19T21:11:05+00:00"
+      }
+    ],
+    "book": {
+      "title": "Hábitos atómicos",
+      "author": "James Clear",
+      "pitch": "Cómo cambios diminutos, empezados cualquier día, acaban transformando tus rutinas para siempre.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/15262775-M.jpg",
+      "isbn": "9788411193016"
+    }
   }
 ]
