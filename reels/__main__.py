@@ -36,13 +36,17 @@ def pending_slots(cfg: dict, state: dict, now: datetime | None = None) -> list[d
     now = (now or datetime.now(timezone.utc)).astimezone(tz)
     start = now + timedelta(minutes=int(pcfg.get("min_lead_minutes", 20)))
     done = set(state.get("scheduled", []))
+    taken = [datetime.fromisoformat(d) for d in done]
+    gap = timedelta(minutes=int(pcfg.get("min_gap_minutes", 100)))
     out = []
     for day in (now.date(), now.date() + timedelta(days=1)):
         for hhmm in cfg["channel"].get("slots") or pcfg["slots"]:
             h, m = map(int, hhmm.split(":"))
             slot = datetime.combine(day, time(h, m), tz)
-            if start <= slot <= now + timedelta(hours=24) and slot.isoformat() not in done:
+            if start <= slot <= now + timedelta(hours=24) and slot.isoformat() not in done \
+                    and all(abs(slot - t) >= gap for t in taken):  # al cambiar las horas, no amontona vídeos
                 out.append(slot)
+                taken.append(slot)
     return out
 
 

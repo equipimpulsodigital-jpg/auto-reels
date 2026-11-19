@@ -40,7 +40,7 @@ claude:
   # auto: usa Claude Code con tu suscripción si existe CLAUDE_CODE_OAUTH_TOKEN; si no, la API.
   backend: auto               # auto | claude-code | api
   model: claude-opus-5-5
-  effort: high                # alto: prioriza la fidelidad histórica
+  effort: medium              # medio: buen equilibrio entre calidad y uso de la suscripción (high = más rigor, más uso)
 
 publish:
   # Horas de publicación (hora de España). Una ejecución diaria de GitHub prepara los vídeos
@@ -48,6 +48,7 @@ publish:
   timezone: Europe/Madrid
   slots: ["10:00", "13:00", "16:00", "19:00", "22:00"]
   min_lead_minutes: 20        # no programa una franja que empiece antes de este margen
+  min_gap_minutes: 100        # ni una franja a menos de este tiempo de otra ya programada
   label_as_ai: true           # obligatorio en la práctica: la animación está hecha por ordenador
   youtube_privacy: public     # public | unlisted | private
 
@@ -73,7 +74,7 @@ channels:
     formats:
       caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
       enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"
-  # Marcas nuevas: empiezan con 3 vídeos al día (cambia `slots` para subir o bajar).
+  # Cada canal puede tener sus propias horas con `slots` (si no, usa publish.slots).
   conexionconchispa:
     name: Conexión con Chispa
     enabled: true
@@ -81,7 +82,6 @@ channels:
     platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
     prompt: prompts/conexionconchispa.md
     accent_color: "#FF6B8A"
-    slots: ["12:00", "18:00", "21:00"]
     max_parts: 2
     formats:
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
@@ -93,7 +93,6 @@ channels:
     platforms: [instagram, youtube]   # TikTok: añadir cuando esté conectado
     prompt: prompts/lacabezapordentro.md
     accent_color: "#A08CFF"
-    slots: ["12:00", "18:00", "21:00"]
     max_parts: 2
     formats:
       por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
@@ -105,7 +104,6 @@ channels:
     platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
     prompt: prompts/ysiciencia.md
     accent_color: "#4FC3F7"
-    slots: ["12:00", "18:00", "21:00"]
     formats:
       y_si_planeta: "¿Y si... el planeta? La Tierra, el espacio o la naturaleza en un escenario imposible"
       y_si_nosotros: "¿Y si... nosotros? El cuerpo humano, la tecnología o la sociedad en un escenario imposible"
