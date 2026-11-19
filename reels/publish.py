@@ -34,7 +34,11 @@ def report(ids: list[str]) -> None:
                 break
             if r.status_code == 404 or str(st.get("status", "")).lower() == "not_found":
                 continue
+            state = str(st.get("status", "")).lower()
             print(f"  {rid} ({key}): estado={st.get('status')} {st.get('message') or st.get('error') or ''}")
+            if state not in ("completed", "failed", "error", "partial", "partially_completed"):
+                print("    (pendiente: aún no es su hora de publicación)")
+                break
             for res in st.get("results") or []:
                 ok = "OK " if res.get("success") else "ERROR"
                 print(f"    [{ok}] {res.get('platform')}: {res.get('post_url') or res.get('url') or ''} "

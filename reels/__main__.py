@@ -284,7 +284,7 @@ def main() -> int:
         recent = [p for h in _load(cfg, "history.json", []) for p in h.get("published_parts", [])][-8:]
         for p in recent:
             print(f"Parte {p['part']} · {p.get('slot') or p.get('date')}")
-            report([i for i in (p.get("request_id"), p.get("job_id")) if i])
+            report([p.get("job_id") or p.get("request_id")] if (p.get("job_id") or p.get("request_id")) else [])
         return 0
     if args.check:
         for cid in load_config().get("channels", {}):
