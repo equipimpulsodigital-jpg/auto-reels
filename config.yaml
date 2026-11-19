@@ -83,6 +83,7 @@ channels:
       - "Historia oscura de España: {n} casos reales, de principio a fin"
     compilation_thumb: "{n} historias que no te contaron"
     compilation_tags: [historiadeespaña, historia, españa, crimenesreales, recopilacion]
+    hashtag: "#biencontadas"           # hashtag propio de la marca, en todos sus vídeos
     tagline: "Historias reales de España, contadas en dibujos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@historiasbiencontadas-o4l
@@ -104,6 +105,7 @@ channels:
       - "Archivo del Misterio: {n} enigmas reales, de principio a fin"
     compilation_thumb: "{n} misterios sin resolver"
     compilation_tags: [misterio, casossinresolver, enigmas, misterios, recopilacion]
+    hashtag: "#archivodelmisterio"           # hashtag propio de la marca, en todos sus vídeos
     tagline: "Misterios reales que nadie ha sabido explicar."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@elanecdotarioes
@@ -127,6 +129,7 @@ channels:
       - "{n} errores que matan una cita (y qué hacer en su lugar)"
     compilation_thumb: "{n} trucos que funcionan"
     compilation_tags: [ligar, citas, romperelhielo, habilidadessociales, recopilacion]
+    hashtag: "#conexionconchispa"           # hashtag propio de la marca, en todos sus vídeos
     tagline: "Trucos para romper el hielo y conectar con la gente."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@conexionconchispa
@@ -149,6 +152,7 @@ channels:
       - "{n} razones por las que haces lo que haces"
     compilation_thumb: "Tu cerebro te engaña"
     compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
+    hashtag: "#lacabezapordentro"           # hashtag propio de la marca, en todos sus vídeos
     tagline: "Psicología cotidiana: por qué hacemos lo que hacemos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@lacabezapordentro
@@ -169,6 +173,7 @@ channels:
       - "Qué pasaría si...: {n} escenarios que te volarán la cabeza"
     compilation_thumb: "¿Qué pasaría si...?"
     compilation_tags: [ciencia, quepasariasi, espacio, curiosidades, recopilacion]
+    hashtag: "#ysiciencia"           # hashtag propio de la marca, en todos sus vídeos
     tagline: "Escenarios imposibles explicados con ciencia."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@ysiciencia2

@@ -49,7 +49,7 @@ def report(ids: list[str]) -> None:
 
 
 # Avisos que ya no se publican (los guiones antiguos en cola aún los llevan)
-_DROP = re.compile(r"\s*Recreaci[oó]n animada basada en hechos reales\.?", re.I)
+_DROP = re.compile(r"\s*\(?(Recreaci[oó]n animada basada en hechos reales|Di[aá]logos recreados[^.)\n]*)\.?\)?", re.I)
 
 
 def _clean(text: str) -> str:
@@ -153,8 +153,15 @@ def unlabel_scheduled(profile: str) -> None:
               + ("" if ok else f" → {resp.status_code} {resp.text[:200]}"))
 
 
-def _caption(script: Part, total_parts: int = 1, book: bool = False) -> str:
-    tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in script.hashtags)
+def _hashtags(script: Part, brand: str = "") -> str:
+    tags = ["#" + t.lstrip("#").replace(" ", "") for t in script.hashtags][:6]
+    if brand and brand.lower() not in (t.lower() for t in tags):
+        tags.append(brand)
+    return " ".join(tags)
+
+
+def _caption(script: Part, total_parts: int = 1, book: bool = False, brand: str = "") -> str:
+    tags = _hashtags(script, brand)
     follow = f"\n\nSígueme para la parte {script.part_number + 1}" if script.part_number < total_parts else ""
     books = "\n\n📚 El libro de esta historia, en el enlace de mi perfil." if book else ""
     return f"{_clean(script.caption)}{follow}{books}\n\n{tags}".strip()
@@ -166,7 +173,8 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_pa
     pcfg, ch = cfg["publish"], cfg["channel"]
     platforms = ch["platforms"]
     ai = "true" if pcfg.get("label_as_ai", True) else "false"
-    caption = _caption(script, total_parts, book and bool(cfg["channel"].get("links_page", True)))
+    brand = cfg["channel"].get("hashtag", "")
+    caption = _caption(script, total_parts, book and bool(cfg["channel"].get("links_page", True)), brand)
 
     fields: list[tuple[str, str]] = [("user", ch["profile"]), ("title", script.youtube_title[:100])]
     fields += [("platform[]", p) for p in platforms]
@@ -183,7 +191,9 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_pa
         fields += [("instagram_title", caption[:2200]), ("media_type", "REELS"),
                    ("share_to_feed", "true"), ("is_ai_generated", ai)]
     if "youtube" in platforms:
-        desc = f"{_clean(script.youtube_description)}\n\n{caption}"
+        # YouTube lleva su propia descripción (pensada para el buscador), no la de Instagram repetida
+        follow = (f"\n\n▶ Sígueme para la parte {script.part_number + 1}." if script.part_number < total_parts else "")
+        desc = f"{_clean(script.youtube_description)}{follow}\n\n{_hashtags(script, brand)}"
         fields += [("youtube_title", script.youtube_title[:100]), ("youtube_description", desc[:5000]),
                    ("privacyStatus", pcfg.get("youtube_privacy", "public")),
                    ("selfDeclaredMadeForKids", "false"), ("containsSyntheticMedia", ai)]

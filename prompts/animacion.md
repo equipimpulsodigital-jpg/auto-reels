@@ -16,6 +16,34 @@ En redes la gente decide en 1–2 segundos si sigue mirando. La primera frase (p
 - **Plano del gancho:** el primer bloque debe ser muy visual: un `objeto` clave, un `event` o un personaje con `emotion` intensa. El montaje ya le añade un zoom de impacto y un golpe de sonido.
 - **`hook_title`** (texto grande en pantalla): 2–6 palabras que **complementan** la frase, nunca la repiten. Ej.: voz "La puerta estaba cerrada por dentro…" → pantalla "¿DÓNDE ESTÁN?".
 
+### RETENCIÓN: QUE NADIE DESLICE HASTA EL FINAL
+Cada segundo el espectador decide si sigue. Escribe para que nunca tenga un motivo para irse.
+- **Mapa de la parte (≈40 s):**
+  - 0–3 s: el gancho (ver EL GANCHO).
+  - 3–8 s: sube la apuesta: qué está en juego, quién puede morir, perder o descubrir algo.
+  - Cada 8–10 s, un **re-gancho**: una frase que abre una pregunta nueva justo cuando la anterior se resuelve ("Pero eso no era lo más raro.", "Y entonces apareció la carta.", "Nadie se fijó en un detalle."). Mínimo 3 por parte.
+  - Últimos 5 s: el giro final. En una Parte 1, cliffhanger; en una parte única o la última, la revelación más fuerte y, si encaja, una frase que conecte con el principio para que el vídeo se vuelva a ver en bucle.
+- **Cero relleno:** cada bloque aporta un dato nuevo, una imagen nueva o un giro. Si una frase se puede quitar sin perder nada, quítala.
+- **Frases de 6–12 palabras**, en presente cuando se narra la acción ("Abre la puerta. La habitación está vacía."), verbos fuertes y concretos, nada de "hubo", "se produjo", "cabe destacar".
+- **Detalles que se ven y se oyen:** cifras exactas, objetos, horas, sonidos. Lo concreto engancha; lo abstracto aburre.
+- **Contraste y emoción:** alterna calma y golpe. Los personajes reaccionan con emoción real (miedo, rabia, incredulidad), no explican.
+- **Habla al espectador** de vez en cuando ("Fíjate en esto.", "Tú también lo habrías hecho."), sin abusar.
+- **Palabras clave (`emphasis`):** en 4–6 bloques marca la palabra más impactante de la frase (un número, un nombre, "muerto", "nadie", "nunca"...). Saldrá enorme con un golpe de zoom y de sonido.
+- **Comentarios:** termina `caption` con una pregunta corta que invite a comentar ("¿Tú qué crees que pasó?", "¿Lo habrías notado?"). Los comentarios hacen que el vídeo llegue a más gente.
+
+### TEXTOS DE PUBLICACIÓN (TÍTULO, DESCRIPCIONES Y HASHTAGS)
+La gente decide si pulsa o sigue leyendo por estos textos: trátalos como parte del gancho.
+- **`youtube_title`** (40–65 caracteres, para que no se corte en el móvil): intriga + la palabra clave por la que alguien lo buscaría (el nombre del caso, del lugar o del concepto). Nada de MAYÚSCULAS enteras, ni de prometer algo que el vídeo no cuenta. Bien: «El faro donde desaparecieron tres hombres | Parte 1». Mal: «¡¡INCREÍBLE HISTORIA QUE TE SORPRENDERÁ!!».
+- **`caption`** (Instagram y TikTok, 150–350 caracteres):
+  - 1.ª línea: un gancho distinto al del vídeo (es lo único que se ve antes de «más»).
+  - 2–3 líneas cortas con un dato que sume, sin destripar el final. Un emoji como mucho, si aporta.
+  - «Parte 1/2» si hay dos partes.
+  - Última línea: una pregunta que invite a comentar.
+  - Escribe con las palabras que la gente teclea en el buscador de TikTok e Instagram (el caso, el lugar, el tema).
+- **`youtube_description`**: dos primeras líneas con el gancho y las palabras clave (es lo que sale en el buscador); después 2–3 frases de resumen sin destripar el final; si es una historia real, una línea «Fuentes:» con 1–3 fuentes reales (libros, archivos, estudios). Sin hashtags (se añaden solos).
+- **Sin avisos ni notas** del tipo «recreación», «diálogos recreados» o «hecho con IA» en ningún texto (salvo el aviso que pida expresamente el canal).
+- **`hashtags`** (4–6, en español, sin «#»): 2 generales del nicho (p. ej. historia, misterio, psicologia, ciencia) y 2–3 del tema concreto (el caso, el lugar, el concepto). Nada de etiquetas genéricas de relleno como «viral» o «fyp».
+
 ### 2. NARRADOR + PERSONAJES QUE HABLAN
 El canal es una **serie de dibujos animados**: caricaturas 2D que se mueven, hablan con sincronía labial y gesticulan. Cada parte mezcla **voz en off del narrador** (fechas, lugares, contexto, cifras) con **escenas dramatizadas** en las que los protagonistas hablan entre ellos.
 - Define 2–5 **personajes** (`characters`): nombre, voz del reparto y `look` (su caricatura). Los extranjeros hablan español con su acento: usa `americano`, `frances`, `italiano`, `ingles`... para personajes de ese país.

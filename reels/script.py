@@ -83,10 +83,16 @@ class Part(BaseModel):
         "(una pregunta, un dato o una amenaza), nunca la repiten ni dicen el título de la historia."))
     blocks: List[Block]
     cliffhanger: str = Field(description="Cómo termina esta parte y qué deja abierto (o el cierre final).")
-    caption: str = Field(description="Texto del post para TikTok/Instagram, sin hashtags. Incluye 'Parte X/Y' si hay 2 partes.")
-    hashtags: List[str] = Field(description="Entre 4 y 7 hashtags sin '#'.")
-    youtube_title: str = Field(description="Título para YouTube Shorts, máx. 90 caracteres, con 'Parte X' si aplica.")
-    youtube_description: str
+    caption: str = Field(description=(
+        "Texto del post para Instagram y TikTok, sin hashtags (ver TEXTOS DE PUBLICACIÓN): 1.ª línea = gancho "
+        "distinto del vídeo; 2-3 líneas cortas; 'Parte X/Y' si hay 2 partes; termina con una pregunta. 150-350 caracteres."))
+    hashtags: List[str] = Field(description="4-6 hashtags sin '#': 2 generales del nicho y 2-3 del tema concreto, en español.")
+    youtube_title: str = Field(description=(
+        "Título de YouTube: 40-65 caracteres, intriga + palabra clave que la gente buscaría, sin mayúsculas enteras "
+        "ni engaños; termina en ' | Parte X' si hay 2 partes."))
+    youtube_description: str = Field(description=(
+        "Descripción de YouTube (ver TEXTOS DE PUBLICACIÓN): 2 primeras líneas con gancho y palabras clave, resumen "
+        "breve sin destripar el final y, si es una historia real, 'Fuentes:' con 1-3 fuentes reales. Sin hashtags."))
 
 
 class Book(BaseModel):
