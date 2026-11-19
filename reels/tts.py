@@ -18,6 +18,8 @@ class Word:
     start: float
     end: float
     speaker: str = ""  # nombre del personaje que habla ("" = narrador)
+    scene: int = -1    # plano al que pertenece
+    emph: bool = False  # palabra clave del plano: se resalta en grande con golpe de zoom y sonido
 
 
 def _edge(text: str, mp3: Path, voice: str, rate: str, pitch: str = "+0Hz") -> list[Word]:
@@ -123,7 +125,7 @@ def synthesize_scenes(narrations: list[str], cfg: dict, workdir: Path,
             af = f"atrim=start={shift:.3f}:end={end:.3f},asetpts=PTS-STARTPTS,{af}"
         run_ffmpeg(["-i", mp3, "-af", af, "-ar", "44100", "-ac", "1", wav])
         dur = probe_duration(wav)
-        all_words += [Word(w.text, w.start - shift + offset, w.end - shift + offset, name if role else "")
+        all_words += [Word(w.text, w.start - shift + offset, w.end - shift + offset, name if role else "", i)
                       for w in words]
         durations.append(dur)
         wavs.append(wav)

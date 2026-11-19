@@ -82,6 +82,24 @@ def write_guion(cfg, path, series, part, durations) -> None:
     path.write_text("\n".join(out), encoding="utf-8")
 
 
+def _norm(t: str) -> str:
+    import unicodedata
+    t = unicodedata.normalize("NFD", t.lower())
+    return "".join(ch for ch in t if ch.isalnum())
+
+
+def _mark_emphasis(words, blocks) -> None:
+    """Marca la palabra clave de cada plano (la que eligió el guionista) para resaltarla."""
+    for i, b in enumerate(blocks):
+        target = _norm(getattr(b, "emphasis", None) or "")
+        if not target:
+            continue
+        for w in words:
+            if w.scene == i and _norm(w.text) == target:
+                w.emph = True
+                break
+
+
 def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     """Escribe (si hace falta) la historia, y genera el vídeo de la siguiente parte pendiente."""
     from pydantic import ValidationError
@@ -137,6 +155,7 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     speakers = [(chars[b.speaker].voice, chars[b.speaker].name) if b.speaker in chars else ("", "")
                 for b in part.blocks]
     voice, durations, words = synthesize_scenes([b.narration for b in part.blocks], cfg, workdir, speakers)
+    _mark_emphasis(words, part.blocks)
     tail = 1.6 if n > 1 and part.part_number < n else 0.8
     durations[-1] += tail
     total = sum(durations)
@@ -146,7 +165,7 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     # 3. Animación: caricaturas, escenarios, sucesos y efectos de sonido
     print("3/5 Animación")
     v = cfg["video"]
-    shots, sfx = render_episode(series, part, durations, workdir, cfg)
+    shots, sfx = render_episode(series, part, durations, workdir, cfg, words)
 
     # 4. Subtítulos + montaje
     print("4/5 Subtítulos y montaje")
@@ -157,7 +176,8 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
                                caption_y=cfg.get("animation", {}).get("caption_y", 0.86))
     cap_list = captions.render(words, total, workdir)
     video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
-                     v.get("music_volume", 0.35), 0.0, sfx=sfx)
+                     v.get("music_volume", 0.35), 0.0, sfx=sfx,
+                     progress_color=cfg["channel"].get("accent_color") if v.get("progress_bar", True) else None)
     print(f"  vídeo: {video}")
     return video, series, part
 
@@ -172,8 +192,11 @@ def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, 
     key = f"{ch['id']}-{zlib.crc32((series.series_title + series.topic).encode())}-{part.part_number}"
     if slot:
         key += f"-{slot:%Y%m%d%H%M}"
-    result = publish(video, part, cfg, idempotency_key=key, total_parts=n, scheduled_at=slot,
-                     book=bool(series.book and cfg.get("affiliate", {}).get("tag")))
+    # Solo algunas historias mencionan el libro (no todo vídeo debe vender), y solo en su última parte.
+    every = int(cfg.get("affiliate", {}).get("mention_every", 3) or 0)
+    mention = bool(series.book and cfg.get("affiliate", {}).get("tag") and every and part.part_number == n
+                   and zlib.crc32(series.series_title.encode()) % every == 0)
+    result = publish(video, part, cfg, idempotency_key=key, total_parts=n, scheduled_at=slot, book=mention)
     failed = failed_platforms(result)
     if len(failed) >= len(ch["platforms"]) or failed in (["failed"], ["not_found"]):
         print(f"No se publicó en ninguna plataforma: {failed}. La parte queda pendiente.", file=sys.stderr)

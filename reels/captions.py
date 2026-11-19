@@ -109,7 +109,13 @@ class CaptionRenderer:
             if speaker:  # diálogo: etiqueta con el nombre de quien habla
                 self._box(d, speaker.upper(), int(self.w * 0.05), y - int(self.w * 0.11), self.accent, "#111111")
             for j, t in zip(group, texts):
-                fill = self.accent if j == active else "white"
+                if words[j].emph and j == active:  # palabra clave: más grande, en color y un poco más arriba
+                    big = _font(int(size * 1.35))
+                    d.text((x, y - size * 0.22), t, font=big, fill=self.accent, stroke_width=max(8, size // 10),
+                           stroke_fill="black")
+                    x += d.textlength(t, font=big) + space
+                    continue
+                fill = self.accent if j == active or words[j].emph else "white"
                 d.text((x, y), t, font=font, fill=fill, stroke_width=max(6, size // 14), stroke_fill="black")
                 x += d.textlength(t, font=font) + space
         return img

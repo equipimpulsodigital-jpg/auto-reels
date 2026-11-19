@@ -67,6 +67,9 @@ class Block(BaseModel):
     walk: bool = False
     camera: Literal[tuple(K.CAMERAS)] = "push_in"
     sfx: List[Literal[tuple(K.SFX)]] = Field(default_factory=list, description="Efectos extra al empezar el plano.")
+    emphasis: Optional[str] = Field(default=None, description=(
+        "UNA palabra de `narration` (copiada tal cual) que es el golpe de la frase: sale enorme en pantalla con un "
+        "golpe de zoom y de sonido. Úsala en 4-6 bloques por parte, en las palabras más impactantes; null en el resto."))
     visual_direction: str = Field(description="Qué se ve y qué pasa en el plano, en español (para la ficha del guion).")
 
 
@@ -89,6 +92,9 @@ class Part(BaseModel):
 class Book(BaseModel):
     title: str = Field(description="Título exacto del libro.")
     author: str = Field(description="Autor o autora.")
+    pitch: Optional[str] = Field(default=None, description=(
+        "Una frase (máx. 18 palabras) que dé ganas de leerlo, sin spoilers, p. ej. «La investigación que reabrió el caso "
+        "con documentos inéditos.»"))
 
 
 class Series(BaseModel):

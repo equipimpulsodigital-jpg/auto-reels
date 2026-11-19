@@ -37,12 +37,18 @@ def pick_music() -> Optional[Path]:
 
 def assemble(shot_files: list[Path], durations: list[float], voice: Path, captions_list: Path, total: float,
              out: Path, workdir: Path, music_volume: float, fade: float = 0.0,
-             sfx: Optional[Path] = None) -> Path:
+             sfx: Optional[Path] = None, progress_color: Optional[str] = None) -> Path:
     bg = join_shots(shot_files, durations, fade, workdir / "background.mp4", workdir)
 
     music = pick_music()
     inputs = ["-i", bg, "-f", "concat", "-safe", "0", "-i", captions_list, "-i", voice]
-    fc = "[1:v]format=rgba[cap];[0:v][cap]overlay=0:0:eof_action=pass,format=yuv420p[v];"
+    # Barra de progreso fina abajo: ver que «ya casi acaba» hace que más gente llegue al final.
+    if progress_color:  # una franja del color de la marca que entra desde la izquierda al ritmo del vídeo
+        fc = (f"color=c=0x{progress_color.lstrip('#')}:s=1080x14:r=30[bar];"
+              "[1:v]format=rgba[cap];[0:v][cap]overlay=0:0:eof_action=pass[base];"
+              f"[base][bar]overlay=x='-w+w*t/{total:.3f}':y=H-14:eof_action=pass:shortest=1,format=yuv420p[v];")
+    else:
+        fc = "[1:v]format=rgba[cap];[0:v][cap]overlay=0:0:eof_action=pass,format=yuv420p[v];"
     mix = ["[vo]"]
     idx = 3
     if music:

@@ -20,7 +20,8 @@
       "title": "Cómo ganar amigos e influir sobre las personas",
       "author": "Dale Carnegie",
       "looked_up": true,
-      "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
+      "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg",
+      "pitch": "El clásico de siempre sobre caer bien, y sigue funcionando sorprendentemente bien hoy."
     }
   },
   {
@@ -45,7 +46,8 @@
       "author": "Ethan Kross",
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/13663242-M.jpg",
-      "isbn": "9788449338717"
+      "isbn": "9788449338717",
+      "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
     }
   },
   {
@@ -68,7 +70,8 @@
     "book": {
       "title": "Por qué recordamos",
       "author": "Charan Ranganath",
-      "looked_up": true
+      "looked_up": true,
+      "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     }
   }
 ]

@@ -28,7 +28,8 @@
       "author": "Rafael Moreno Izquierdo",
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/7427954-M.jpg",
-      "isbn": "9788498929065"
+      "isbn": "9788498929065",
+      "pitch": "Lo que pasó de verdad en Palomares en 1966, contado con un detalle que pocos conocen."
     }
   },
   {
@@ -62,7 +63,8 @@
       "author": "Benito Pérez Galdós",
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/10495801-M.jpg",
-      "isbn": "9788496080010"
+      "isbn": "9788496080010",
+      "pitch": "Galdós sigue de cerca el crimen que tuvo en vilo a todo Madrid. Imprescindible."
     }
   },
   {
@@ -94,7 +96,8 @@
     "book": {
       "title": "Un héroe trágico del anarquismo español: Mateo Morral, 1879-1906",
       "author": "Eduard Masjuan",
-      "looked_up": true
+      "looked_up": true,
+      "pitch": "Quién era de verdad Mateo Morral, el hombre detrás de la bomba de la calle Mayor."
     }
   },
   {
@@ -128,7 +131,8 @@
       "author": "Francisco Pérez Abellán",
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/7315364-M.jpg",
-      "isbn": "9788408124542"
+      "isbn": "9788408124542",
+      "pitch": "Una investigación a fondo sobre uno de los grandes misterios sin resolver de nuestra historia."
     }
   },
   {
@@ -178,7 +182,8 @@
     "book": {
       "title": "El crimen de Cuenca",
       "author": "Lola Salvador Maldonado",
-      "looked_up": true
+      "looked_up": true,
+      "pitch": "Un error judicial tan estremecedor que todavía hoy cuesta creer que ocurriera de verdad."
     }
   }
 ]

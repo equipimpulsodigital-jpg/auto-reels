@@ -80,6 +80,7 @@ class Shot:
     prop: Optional[str] = None              # objeto en primer plano (PROPS), para framing="objeto"
     walk: bool = False                      # en plano general, los personajes caminan
     camera: str = "push_in"                 # push_in | pull_back | shake | static
+    punches: list = field(default_factory=list)  # segundos (dentro del plano) con golpe de zoom
     mouth: list[float] = field(default_factory=list)
     sfx: list[tuple[str, float]] = field(default_factory=list)  # efectos (nombre, segundo dentro del plano)
     ambience: str = ""                      # sonido de fondo: mar | viento | avion | "" (por defecto, el del lugar)
@@ -215,6 +216,10 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
         z = {"push_in": 1 + 0.06 * ease(k), "pull_back": 1.08 - 0.08 * ease(k),
              # golpe: zoom de impacto al arrancar el vídeo (frena el scroll) y luego acercamiento lento
              "golpe": 1.0 + 0.24 * (1 - ease(t / 0.32)) + 0.07 * ease(k)}.get(shot.camera, 1.0)
+        for pt in shot.punches:  # golpe de zoom en la palabra clave
+            d = t - pt
+            if -0.05 < d < 0.5:
+                z *= 1 + 0.09 * math.exp(-max(d, 0) * 9)
         c.translate(W / 2, H * 0.5)
         c.scale(z, z)
         if shaky:

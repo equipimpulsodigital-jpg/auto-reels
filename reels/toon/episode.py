@@ -45,7 +45,8 @@ def block_to_shot(b, series, chars: dict, duration: float) -> Shot:
     )
 
 
-def render_episode(series, part, durations: list[float], workdir: Path, cfg: dict) -> tuple[list[Path], Path]:
+def render_episode(series, part, durations: list[float], workdir: Path, cfg: dict,
+                   words: list | None = None) -> tuple[list[Path], Path]:
     v = cfg["video"]
     W, H, fps = v["width"], v["height"], v["fps"]
     chars, sides = build_cast(series)
@@ -57,6 +58,11 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
             shot.camera = "shake" if shot.camera == "shake" else "golpe"
             if not any(name in ("hit", "boom") for name, _ in shot.sfx):
                 shot.sfx.append(("hit", 0.0))
+        start = sum(durations[:i])
+        for w in words or []:  # palabra clave: golpe de zoom y de sonido justo cuando se dice
+            if w.scene == i and w.emph:
+                shot.punches.append(max(0.0, w.start - start))
+                shot.sfx.append(("hit", max(0.0, w.start - start - 0.03)))
         if shot.speaker:
             shot.mouth = mouth_envelope(workdir / f"voice_{i}.wav", fps, round(dur * fps))
         print(f"  plano {i + 1}/{len(part.blocks)} · {shot.location} · {shot.framing}"

@@ -9,6 +9,7 @@ video:
   height: 1920
   fps: 30
   music_volume: 0.35          # música de fondo (0-1); baja sola cuando habla el narrador
+  progress_bar: true          # barra fina de progreso abajo, del color de la marca
 
 animation:
   # Caricaturas animadas por código (reels/toon): escenarios, vestuario, objetos y sucesos.
@@ -18,7 +19,7 @@ animation:
 voice:
   provider: edge              # edge (gratis) | elevenlabs (más natural, de pago)
   edge_voice: es-ES-AlvaroNeural   # narrador
-  edge_rate: "+14%"
+  edge_rate: "+18%"
   edge_pitch: "-4Hz"          # un poco más grave, tono de narrador
   # Reparto: voces de los personajes que hablan (Claude elige una para cada personaje).
   # Las «Multilingual» hablan español con el acento de su país.
@@ -64,6 +65,7 @@ compilation:
 # `affiliate_tag`). La frase es obligatoria donde haya enlaces de afiliado.
 affiliate:
   tag: historiasbien-21
+  mention_every: 3            # «el libro, en el enlace de mi perfil» solo en 1 de cada 3 historias (0 = nunca)
   disclosure: "Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables."
 
 # Canales: cada uno es un perfil de Upload-Post con su temática, su guionista y su historial.
