@@ -53,6 +53,8 @@ PROP_DESC = {
     "bomba": "bomba", "corona": "corona real", "pistola": "pistola", "espada": "espada", "monedas": "monedas de oro",
     "reloj": "reloj de bolsillo en marcha", "llave": "llave antigua", "veneno": "frasco de veneno",
     "periodico": "periódico", "cuchillo": "cuchillo ensangrentado", "anillo": "anillo con piedra preciosa",
+    "movil": "móvil con un chat cuyos mensajes van apareciendo", "cerebro": "cerebro con chispas de actividad",
+    "tierra": "la Tierra girando", "corazon": "corazón que late", "cafe": "taza de café humeante",
 }
 EVENT_DESC = {
     "aviones": "dos aviones repostando en vuelo (lugar: cielo)", "explosion": "gran explosión con bola de fuego",
@@ -61,6 +63,9 @@ EVENT_DESC = {
     "disparos": "fogonazos de disparos y humo de pólvora", "lluvia": "lluvia con relámpagos", "nieve": "nevada",
     "multitud": "muchedumbre en silueta agitando los brazos (motín, protesta, celebración)",
     "barco": "velero que cruza (lugares con mar)", "cañonazos": "cañonazos con fogonazo y humo",
+    "meteorito": "meteorito que cruza el cielo y se estrella con una gran explosión",
+    "corazones": "corazones que suben flotando (flechazo, amor)",
+    "pensamientos": "nubes de pensamientos girando sobre la escena (darle vueltas a algo, dudas, ansiedad)",
 }
 
 

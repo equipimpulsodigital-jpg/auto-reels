@@ -20,13 +20,13 @@ En redes la gente decide en 1–2 segundos si sigue mirando. La primera frase (p
 El canal es una **serie de dibujos animados**: caricaturas 2D que se mueven, hablan con sincronía labial y gesticulan. Cada parte mezcla **voz en off del narrador** (fechas, lugares, contexto, cifras) con **escenas dramatizadas** en las que los protagonistas hablan entre ellos.
 - Define 2–5 **personajes** (`characters`): nombre, voz del reparto y `look` (su caricatura). Los extranjeros hablan español con su acento: usa `americano`, `frances`, `italiano`, `ingles`... para personajes de ese país.
 - `speaker` de cada bloque: `narrador` o el `id` del personaje que dice esa frase. Aproximadamente **la mitad de los bloques son diálogo**, en intercambios de 2–4 réplicas (plano / contraplano).
-- **Los diálogos son una recreación**: coherentes con hechos documentados (lo que alguien hizo, vio o decidió), sin citas textuales inventadas presentadas como reales ni datos no documentados. Réplicas cortas, naturales y con emoción.
-- Las cifras, fechas y datos duros los dice **el narrador**.
-- En `caption` y `youtube_description` incluye siempre «Recreación animada basada en hechos reales.».
+- Réplicas cortas, naturales y con emoción. Las cifras, fechas y datos duros los dice **el narrador**.
+- Qué pueden decir los personajes y qué aviso va en `caption` y `youtube_description` lo marcan las reglas del canal (arriba).
 
 ### 3. CARICATURAS Y VESTUARIO
 - Cada personaje es una **caricatura reconocible al instante**: combina nariz, mandíbula, barba/bigote, sombrero y colores para que dos personajes nunca se parezcan (p. ej. un pescador mayor con `gorra_plana`, `bigotazo` canoso y `jersey` azul marino frente a un oficial con `gorra_militar`, `uniforme` caqui y mandíbula `cuadrada`).
 - **Vestuario fiel a la época** (`era` de la serie): `noble` con gorguera y `sombrero` para los siglos XVI-XVII; `levita` con `chistera` o `bombin` en el XIX; `tricornio` + `uniforme` verde oliva para la Guardia Civil; `toca` + `sotana` para monjas; `capa` + `corona` para reyes; `casco` + `uniforme` para soldados; `pañuelo` + `vestido` para campesinas...
+- **Época actual** (`era: moderno`): `jersey`, `camisa`, `traje` o `vestido`, normalmente sin sombrero (`ninguno`), colores variados y alegres.
 - Las mujeres llevan `female: true`.
 
 ### 4. PLANIFICACIÓN DE LA ANIMACIÓN

@@ -12,4 +12,5 @@ Tu objetivo es crear episodios **serializados** con altísima retención. **Cada
 - **Cierre / cliffhanger (últimos 3 segundos):** en la Parte 1 de una historia de 2 partes, nunca cierres la historia: termina en el momento de máxima tensión o con una pregunta o giro que obligue a ver la Parte 2. La Parte 2 empieza con un gancho propio (que se entienda sin haber visto la 1) y cierra la historia con un final que impacte.
 - **Fidelidad histórica:** basa los hechos en historia real y documentada. Si hay lagunas o versiones distintas, indícalo con naturalidad ("según las actas de la época...", "nunca se confirmó qué ocurrió después de..."). No inventes nombres, cifras ni citas. Si no estás seguro de un dato concreto, no lo uses.
 - Escribe los números como se leen en voz alta cuando ayude a la locución (p. ej. "mil ochocientos ocho" solo si suena mejor; las fechas en cifras están bien).
-
+- **Personajes reales:** los diálogos son una recreación coherente con hechos documentados (lo que alguien hizo, vio o decidió), sin citas textuales inventadas presentadas como reales ni datos no documentados.
+- En `caption` y `youtube_description` incluye siempre «Recreación animada basada en hechos reales.».

@@ -38,7 +38,7 @@ def pending_slots(cfg: dict, state: dict, now: datetime | None = None) -> list[d
     done = set(state.get("scheduled", []))
     out = []
     for day in (now.date(), now.date() + timedelta(days=1)):
-        for hhmm in pcfg["slots"]:
+        for hhmm in cfg["channel"].get("slots") or pcfg["slots"]:
             h, m = map(int, hhmm.split(":"))
             slot = datetime.combine(day, time(h, m), tz)
             if start <= slot <= now + timedelta(hours=24) and slot.isoformat() not in done:
@@ -164,7 +164,9 @@ def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, 
     n = len(series.parts)
     when = f"programado para {slot:%d/%m %H:%M}" if slot else "ahora"
     print(f"5/5 Publicando en {ch['profile']} ({', '.join(ch['platforms'])}) · {when}")
-    key = f"{ch['id']}-{zlib.crc32(series.series_title.encode())}-{part.part_number}"
+    key = f"{ch['id']}-{zlib.crc32((series.series_title + series.topic).encode())}-{part.part_number}"
+    if slot:
+        key += f"-{slot:%Y%m%d%H%M}"
     result = publish(video, part, cfg, idempotency_key=key, total_parts=n, scheduled_at=slot)
     failed = failed_platforms(result)
     if len(failed) >= len(ch["platforms"]) or failed in (["failed"], ["not_found"]):

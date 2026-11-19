@@ -641,6 +641,270 @@ class Bosque(Loc):
             c.drawCircle(x, H * 0.84 + (k % 3) * 30, 120, fill("#d9e2ea", 0.08))
 
 
+# ---------------- escenarios modernos y de ciencia ----------------
+
+def skyline(c, x0, x1, base, night, seed=0, s=1.0):
+    """Edificios de ciudad moderna (vista por una ventana), con ventanas encendidas de noche."""
+    rnd = random.Random(seed)
+    x = x0
+    while x < x1:
+        w = rnd.uniform(70, 150) * s
+        h = rnd.uniform(160, 460) * s
+        col = "#2a3550" if night else rnd.choice(["#8fa3b8", "#a7b6c6", "#7d90a6"])
+        c.drawRect(skia.Rect.MakeLTRB(x, base - h, x + w, base), fill(col))
+        for yy in range(int(base - h + 16), int(base - 10), int(34 * s)):
+            for xx in range(int(x + 10), int(x + w - 14), int(28 * s)):
+                if rnd.random() < (0.45 if night else 0.8):
+                    c.drawRect(skia.Rect.MakeXYWH(xx, yy, 12 * s, 16 * s),
+                               fill("#ffd77a" if night else "#d9e6f2", 0.9 if night else 0.7))
+        x += w + rnd.uniform(4, 20) * s
+
+
+def big_window(c, x, y, w, h, night, t, seed=0):
+    """Ventanal moderno con la ciudad detrás."""
+    top, bot = ("#0f1733", "#2a3a6b") if night else ("#8ec5ea", "#dcefff")
+    c.drawRect(skia.Rect.MakeXYWH(x, y, w, h), linear(fill(top), (0, y), (0, y + h), [top, bot]))
+    c.save()
+    c.clipRect(skia.Rect.MakeXYWH(x, y, w, h))
+    if night:
+        c.drawCircle(x + w * 0.8, y + h * 0.2, 34, fill("#eef2ff"))
+    skyline(c, x - 20, x + w + 20, y + h, night, seed, 0.8)
+    c.restore()
+    for k in (1, 2):
+        c.drawLine(x + w * k / 3, y, x + w * k / 3, y + h, stroke("#3a3f47", 10))
+    c.drawRect(skia.Rect.MakeXYWH(x, y, w, h), stroke("#3a3f47", 14))
+    c.drawRect(skia.Rect.MakeXYWH(x - 7, y - 7, w + 14, h + 14), stroke(INK, 5))
+
+
+def plant(c, x, base, s, t, seed=0):
+    toon(c, poly([(x - 50 * s, base - 110 * s), (x + 50 * s, base - 110 * s), (x + 38 * s, base), (x - 38 * s, base)]), "#d9d2c4")
+    for k in range(7):
+        a = -math.pi / 2 + (k - 3) * 0.38 + math.sin(t * 1.1 + k + seed) * 0.05
+        L = (150 + (k % 3) * 40) * s
+        tip = (x + math.cos(a) * L, base - 110 * s + math.sin(a) * L)
+        toon(c, poly([(x, base - 110 * s), (tip[0] - 26 * s, (base - 110 * s + tip[1]) / 2), tip,
+                      (tip[0] + 26 * s, (base - 110 * s + tip[1]) / 2)], smooth=True), "#3f8a4f", outline=4)
+
+
+def night_tint(c, g, a=0.28):
+    if g.mood == "noche":
+        c.drawRect(skia.Rect.MakeWH(g.W, g.H), fill("#0b1230", a))
+
+
+class Casa(Loc):
+    key, desc, ambience = "casa", "salón de un piso moderno: sofá, tele, planta y ventanal con la ciudad (vida cotidiana actual)", ""
+    interior = True
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        night = g.mood == "noche"
+        wall(c, W, H, fy, "#e6dccb")
+        big_window(c, W * 0.5, H * 0.12, W * 0.42, H * 0.3, night, g.t, seed=4)
+        painting(c, W * 0.1, H * 0.16, 260, 180, ["#e07a5f", "#f2cc8f"], frame="#2b2b2b")
+        # mueble y tele
+        toon(c, rrect(W * 0.05, fy - 120, 380, 120, 10), "#8a6a4a")
+        toon(c, rrect(W * 0.08, fy - 330, 320, 190, 8), "#1d1f24")
+        c.drawRect(skia.Rect.MakeXYWH(W * 0.08 + 14, fy - 316, 292, 162),
+                   fill("#5aa0d0" if not night else "#3a6aa0", 0.6 + 0.2 * math.sin(g.t * 3)))
+        plant(c, W * 0.93, fy, 1.0, g.t)
+        floor(c, W, H, fy, "#c9a77c", "madera")
+        lamp_glow(c, W * 0.5, H * 0.05, 520, "#fff1c9", 0.25 if not night else 0.4)
+        c.drawPath(oval(W * 0.5, H * 0.82, 440, 110), fill("#b7c4c9"))
+        night_tint(c, g, 0.18)
+    def front(self, c, g, close):
+        if close:
+            return
+        W, H = g.W, g.H
+        y = H * 0.9
+        toon(c, rrect(W * 0.62, y - 60, 380, 120, 40), "#4a6b8a")
+        toon(c, rrect(W * 0.6, y - 150, 90, 200, 40), "#3f5d78")
+
+
+class Dormitorio(Loc):
+    key, desc, ambience = "dormitorio", "dormitorio moderno: cama, mesilla con lámpara y móvil, ventana (insomnio, pensar de noche)", ""
+    interior = True
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        night = g.mood != "dia"
+        wall(c, W, H, fy, "#5d6f94" if night else "#c9d4e6")
+        big_window(c, W * 0.58, H * 0.1, W * 0.34, H * 0.24, night, g.t, seed=9)
+        # cabecero y cama
+        toon(c, rrect(W * 0.12, fy - 300, 560, 300, 30), "#6b4f3a")
+        toon(c, rrect(W * 0.08, fy - 150, 640, 230, 26), "#f0ece4")
+        toon(c, rrect(W * 0.08, fy - 70, 640, 160, 26), "#7a8fc9")
+        toon(c, rrect(W * 0.16, fy - 200, 180, 80, 30), "#ffffff")
+        toon(c, rrect(W * 0.38, fy - 200, 180, 80, 30), "#ffffff")
+        # mesilla, lámpara y móvil encendido
+        mx = W * 0.82
+        toon(c, rrect(mx - 90, fy - 160, 180, 160, 10), "#8a6a4a")
+        toon(c, poly([(mx - 60, fy - 300), (mx + 60, fy - 300), (mx + 40, fy - 220), (mx - 40, fy - 220)]), "#f2d7a0")
+        c.drawLine(mx, fy - 220, mx, fy - 160, stroke(INK, 8))
+        if night:
+            lamp_glow(c, mx, fy - 260, 380, "#ffcf7a", 0.45)
+        toon(c, rrect(mx - 70, fy - 178, 70, 18, 4), "#1d1f24", outline=3)
+        c.drawRect(skia.Rect.MakeXYWH(mx - 66, fy - 175, 62, 12), fill("#8fd0ff", 0.5 + 0.5 * abs(math.sin(g.t * 2))))
+        floor(c, W, H, fy, "#9c7a58", "madera")
+        night_tint(c, g, 0.25)
+
+
+class Oficina(Loc):
+    key, desc, ambience = "oficina", "oficina moderna: mesas con ordenadores, ventanales con rascacielos y plantas (trabajo, reuniones)", ""
+    interior = True
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        night = g.mood == "noche"
+        wall(c, W, H, fy, "#e9eef2")
+        big_window(c, W * 0.04, H * 0.08, W * 0.92, H * 0.3, night, g.t, seed=2)
+        for k in range(3):
+            x = W * (0.08 + k * 0.32)
+            toon(c, rrect(x, fy - 110, 280, 26, 6), "#d8d2c6")
+            c.drawLine(x + 30, fy - 84, x + 30, fy, stroke(INK, 8))
+            c.drawLine(x + 250, fy - 84, x + 250, fy, stroke(INK, 8))
+            toon(c, rrect(x + 70, fy - 260, 150, 110, 8), "#1d1f24")
+            c.drawRect(skia.Rect.MakeXYWH(x + 80, fy - 250, 130, 90), fill("#7fc4e8", 0.85))
+            c.drawLine(x + 145, fy - 150, x + 145, fy - 110, stroke(INK, 10))
+        plant(c, W * 0.95, fy, 0.9, g.t, 2)
+        floor(c, W, H, fy, "#9aa3ab", "liso")
+        night_tint(c, g, 0.15)
+    def front(self, c, g, close):
+        W, H = g.W, g.H
+        y = H * (0.88 if close else 0.82)
+        table_front(c, W, H, y, "#e2dccf")
+        toon(c, poly([(W * 0.6, y - 4), (W * 0.82, y - 4), (W * 0.85, y + 16), (W * 0.57, y + 16)]), "#c3c8cf")
+        toon(c, rrect(W * 0.13, y - 50, 70, 54, 10), "#ffffff")
+
+
+class Cafeteria(Loc):
+    key, desc, ambience = "cafeteria", "cafetería o bar moderno: barra, cafetera, lámparas colgantes y pizarra (citas, quedar con amigos)", ""
+    interior = True
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        wall(c, W, H, fy, "#b9654a")
+        for r in range(0, int(fy), 46):  # ladrillo visto
+            off = (r // 46 % 2) * 60
+            c.drawLine(0, r, W, r, stroke("#8f4a35", 3))
+            for k in range(-1, W // 120 + 2):
+                c.drawLine(k * 120 + off, r, k * 120 + off, r + 46, stroke("#8f4a35", 3))
+        toon(c, rrect(W * 0.08, H * 0.1, 330, 240, 10), "#22282b")  # pizarra
+        for k in range(5):
+            c.drawLine(W * 0.08 + 40, H * 0.1 + 50 + k * 40, W * 0.08 + 40 + (180 + (k * 37) % 90), H * 0.1 + 50 + k * 40, stroke("#e9e4d8", 5))
+        # barra con cafetera
+        toon(c, rrect(W * 0.45, fy - 200, W * 0.55, 200, 6), "#5a3b2a")
+        toon(c, rrect(W * 0.43, fy - 220, W * 0.57, 26, 6), "#2f2f33")
+        toon(c, rrect(W * 0.62, fy - 380, 200, 160, 14), "#c3c8cf")
+        c.drawRect(skia.Rect.MakeXYWH(W * 0.62 + 30, fy - 340, 140, 40), fill("#2f2f33"))
+        for k in range(3):  # vapor
+            yy = fy - 400 - ((g.t * 60 + k * 50) % 150)
+            c.drawCircle(W * 0.62 + 100 + math.sin(g.t * 2 + k) * 12, yy, 18, fill("#ffffff", 0.25))
+        for k in range(3):  # lámparas colgantes
+            x = W * (0.2 + k * 0.3)
+            c.drawLine(x, 0, x, H * 0.08, stroke(INK, 4))
+            toon(c, poly([(x - 60, H * 0.12), (x + 60, H * 0.12), (x + 26, H * 0.08), (x - 26, H * 0.08)]), "#2f2f33", outline=4)
+            lamp_glow(c, x, H * 0.14, 300, "#ffcf7a", 0.45)
+        floor(c, W, H, fy, "#6e4a30", "madera")
+    def front(self, c, g, close):
+        if close:  # en primer plano la mesa taparía al personaje
+            return
+        W, H = g.W, g.H
+        y = H * 0.83
+        toon(c, oval(W * 0.5, y, 300, 50), "#3a3f45")
+        for x in (W * 0.42, W * 0.58):
+            toon(c, rrect(x - 30, y - 70, 60, 64, 10), "#ffffff")
+            c.drawPath(oval(x, y - 66, 26, 8), fill("#6b3e22"))
+
+
+class Luna(Loc):
+    key, desc, ambience = "espacio", "superficie de la Luna con la Tierra girando en el cielo negro y estrellas (espacio, planetas, ciencia)", "viento"
+    floor_y = 0.9
+    def back(self, c, g):
+        W, H = g.W, g.H
+        c.drawRect(skia.Rect.MakeWH(W, H), linear(fill("#03040a"), (0, 0), (0, H), ["#03040a", "#0d1330"]))
+        rnd = random.Random(5)
+        for k in range(160):
+            x, y = rnd.uniform(0, W), rnd.uniform(0, H * 0.78)
+            tw = 0.5 + 0.5 * math.sin(g.t * rnd.uniform(1, 4) + k)
+            c.drawCircle(x, y, rnd.uniform(1.5, 4), fill("#ffffff", 0.35 + 0.6 * tw))
+        draw_earth(c, W * 0.66, H * 0.3, 230, g.t)
+        c.drawCircle(W * 0.12, H * 0.1, 220, radial(fill("#fff4c9"), (W * 0.12, H * 0.1), 220, ["#fff4c9", "#fff4c9"], [0.6, 0.0]))
+        c.drawCircle(W * 0.12, H * 0.1, 50, fill("#fffbe8"))
+        gy = H * 0.78
+        ground = poly([(0, gy + 30), (W * 0.3, gy - 10), (W * 0.6, gy + 20), (W, gy - 20), (W, H), (0, H)], smooth=False)
+        c.drawPath(ground, linear(fill("#9a9aa3"), (0, gy), (0, H), ["#b3b3bb", "#5c5c66"]))
+        for x, y, r in ((0.2, 0.86, 70), (0.7, 0.9, 110), (0.45, 0.95, 50), (0.9, 0.84, 40)):
+            c.drawPath(oval(W * x, H * y, r, r * 0.3), fill("#6e6e78"))
+            c.drawPath(oval(W * x, H * y - r * 0.06, r * 0.8, r * 0.2), fill("#85858f"))
+
+
+def draw_earth(c, x, y, r, t):
+    """La Tierra girando: océanos, continentes que se desplazan, nubes y halo azul."""
+    c.drawCircle(x, y, r * 1.25, radial(fill("#5fb3ff"), (x, y), r * 1.25, ["#5fb3ff", "#5fb3ff"], [0.35, 0.0]))
+    c.drawCircle(x, y, r, linear(fill("#2f7fd8"), (x - r, y - r), (x + r, y + r), ["#4aa3f0", "#1d4f9a"]))
+    c.save()
+    clip = skia.Path()
+    clip.addCircle(x, y, r)
+    c.clipPath(clip, doAntiAlias=True)
+    shift = (t * 40) % (r * 4)
+    blobs = [(-0.5, -0.3, 0.45, 0.35), (0.3, -0.5, 0.3, 0.25), (0.6, 0.3, 0.35, 0.45), (-0.2, 0.5, 0.3, 0.2),
+             (1.3, -0.2, 0.4, 0.4), (1.6, 0.4, 0.3, 0.3)]
+    for bx, by, rx, ry in blobs:  # los continentes recorren el globo y vuelven a entrar por el otro lado
+        cx = x + ((bx * r - shift) % (r * 4)) - r * 2
+        c.drawPath(oval(cx, y + by * r, rx * r, ry * r), fill("#4caf50"))
+    for k in range(5):  # nubes
+        cx = x + ((k * 0.9 * r - t * 60) % (r * 3)) - r * 1.5
+        c.drawPath(oval(cx, y + (k - 2) * r * 0.35, r * 0.35, r * 0.08), fill("#ffffff", 0.75))
+    c.drawCircle(x + r * 0.45, y + r * 0.2, r * 1.05, fill("#000000", 0.35))  # lado de noche
+    c.restore()
+    c.drawCircle(x, y, r, stroke(INK, 6))
+
+
+class Laboratorio(Loc):
+    key, desc, ambience = "laboratorio", "laboratorio de ciencia: pizarra con fórmulas, estanterías con frascos de colores y mesa de experimentos", ""
+    interior = True
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        wall(c, W, H, fy, "#d3e3e6")
+        for yy in range(0, int(fy), 80):
+            c.drawLine(0, yy, W, yy, stroke("#b9cfd3", 3))
+        for xx in range(0, W, 80):
+            c.drawLine(xx, 0, xx, fy, stroke("#b9cfd3", 3))
+        toon(c, rrect(W * 0.06, H * 0.08, 520, 330, 8), "#f8f8f4")  # pizarra blanca
+        rnd = random.Random(3)
+        for k in range(6):
+            x0 = W * 0.06 + 40
+            yy = H * 0.08 + 50 + k * 48
+            p = skia.Path()
+            p.moveTo(x0, yy)
+            for j in range(int(rnd.uniform(10, 20))):
+                p.quadTo(x0 + j * 22 + 11, yy + (-12 if j % 2 else 12), x0 + (j + 1) * 22, yy)
+            c.drawPath(p, stroke(rnd.choice(["#2b5aa8", "#c0392b", "#1b1411"]), 5))
+        c.drawCircle(W * 0.06 + 440, H * 0.08 + 250, 50, stroke("#c0392b", 6))
+        for row in range(3):  # estantería con frascos
+            y = H * 0.14 + row * 140
+            c.drawRect(skia.Rect.MakeXYWH(W * 0.62, y + 100, W * 0.33, 14), fill("#8a6a4a"))
+            for k in range(5):
+                x = W * 0.64 + k * 66
+                colr = ["#e74c3c", "#2ecc71", "#3498db", "#f1c40f", "#9b59b6"][(k + row) % 5]
+                toon(c, rrect(x, y + 30, 44, 70, 10), "#e8f4f8", outline=4)
+                c.drawRect(skia.Rect.MakeXYWH(x + 4, y + 60, 36, 36), fill(colr, 0.85))
+        floor(c, W, H, fy, "#b4bec4", "ajedrez")
+    def front(self, c, g, close):
+        W, H = g.W, g.H
+        y = H * (0.88 if close else 0.82)
+        table_front(c, W, H, y, "#3a4a52")
+        for k, colr in enumerate(("#2ecc71", "#e74c3c", "#3498db")):
+            x = W * (0.15 + k * 0.1)
+            toon(c, poly([(x - 20, y - 130), (x + 20, y - 130), (x + 20, y - 80), (x + 55, y), (x - 55, y), (x - 20, y - 80)]), "#e8f4f8", outline=4)
+            c.drawPath(poly([(x - 34, y - 40), (x + 34, y - 40), (x + 50, y - 4), (x - 50, y - 4)]), fill(colr, 0.85))
+            for b in range(3):
+                by = y - 50 - ((g.t * 80 + b * 40 + k * 20) % 110)
+                c.drawCircle(x + math.sin(g.t * 3 + b) * 8, by, 7, fill(colr, 0.6))
+
+
 LOCATIONS: dict[str, Loc] = {cls.key: cls() for cls in (
     Costa, Barca, Cielo, Pueblo, Ciudad, Campo, Castillo, Batalla, Estacion,
-    Palacio, Despacho, Iglesia, Taberna, Carcel, Salon, Tienda, Bosque)}
+    Palacio, Despacho, Iglesia, Taberna, Carcel, Salon, Tienda, Bosque,
+    Casa, Dormitorio, Oficina, Cafeteria, Luna, Laboratorio)}

@@ -8,8 +8,8 @@ import random
 import skia
 
 from . import scenes as S
-from .draw import INK, fill, oval, poly, rrect, shade, stroke, toon
-from .locations import flame, lamp_glow
+from .draw import INK, fill, oval, poly, radial, rrect, shade, stroke, toon
+from .locations import draw_earth, flame, lamp_glow
 
 # ---------------- objetos (centrados en (0,0), tamaño ~600 px) ----------------
 
@@ -172,9 +172,81 @@ def anillo(c, t):
         c.drawPath(poly([(30 - r, -160), (30, -160 - r * 0.3), (30 + r, -160), (30, -160 + r * 0.3)]), fill("#ffffff"))
 
 
+def _heart(cx, cy, s):
+    p = skia.Path()
+    p.moveTo(cx, cy + 90 * s)
+    p.cubicTo(cx - 170 * s, cy - 10 * s, cx - 90 * s, cy - 150 * s, cx, cy - 60 * s)
+    p.cubicTo(cx + 90 * s, cy - 150 * s, cx + 170 * s, cy - 10 * s, cx, cy + 90 * s)
+    p.close()
+    return p
+
+
+def movil(c, t):
+    """Móvil con un chat: los mensajes van apareciendo (citas, redes, ansiedad)."""
+    toon(c, rrect(-170, -330, 340, 660, 50), "#1d1f24")
+    c.drawRect(skia.Rect.MakeXYWH(-145, -280, 290, 540), fill("#f2f4f7"))
+    for k in range(5):
+        if t < 0.35 + k * 0.45:
+            break
+        left = k % 2 == 0
+        y = -250 + k * 100
+        w = 150 + (k * 47) % 70
+        x = -130 if left else 130 - w
+        toon(c, rrect(x, y, w, 70, 26), "#e2e6ec" if left else "#4fa3f7", outline=3)
+        _scribble(c, x + 18, y + 35, w - 40, 1, "#5a6270" if left else "#ffffff", 0)
+    c.drawCircle(0, 300, 18, stroke("#3a3f47", 4))
+
+
+def cerebro(c, t):
+    """Cerebro que late suavemente (psicología, pensamientos)."""
+    s = 1 + 0.03 * math.sin(t * 4)
+    c.save()
+    c.scale(s, s)
+    toon(c, poly([(-250, 40), (-230, -150), (-90, -250), (90, -250), (240, -160), (260, 40), (150, 170), (-160, 170)], smooth=True),
+         "#f3a6b5", light=(-1, -1))
+    for k in range(6):
+        p = skia.Path()
+        x0 = -200 + k * 75
+        p.moveTo(x0, -190)
+        p.cubicTo(x0 + 50, -120, x0 - 40, -40, x0 + 20, 40 + (k % 2) * 60)
+        c.drawPath(p, stroke(shade("#f3a6b5", -0.35), 8))
+    c.drawLine(0, -240, 0, 160, stroke(shade("#f3a6b5", -0.4), 9))
+    toon(c, poly([(-40, 150), (40, 150), (30, 300), (-30, 300)], smooth=True), "#e98fa1")
+    c.restore()
+    for k in range(4):  # chispas de actividad
+        a = t * 2 + k * 1.6
+        c.drawCircle(math.cos(a) * 300, math.sin(a) * 220 - 40, 10 + 6 * abs(math.sin(t * 5 + k)), fill("#ffe27a"))
+
+
+def tierra(c, t):
+    draw_earth(c, 0, 0, 280, t * 2)
+
+
+def corazon(c, t):
+    beat = 1 + 0.12 * max(0.0, math.sin(t * 7)) ** 8
+    c.save()
+    c.scale(beat * 1.8, beat * 1.8)
+    toon(c, _heart(0, -10, 1.0), "#e63946", light=(-1, -1))
+    c.drawPath(oval(-55, -60, 22, 14), fill("#ffffff", 0.6))
+    c.restore()
+
+
+def cafe(c, t):
+    toon(c, poly([(-170, -120), (170, -120), (140, 200), (-140, 200)], smooth=False), "#ffffff", light=(-1, 0))
+    c.drawPath(oval(0, -120, 170, 34), fill("#6b3e22"))
+    c.drawPath(oval(0, -120, 170, 34), stroke(INK, 7))
+    c.drawPath(oval(220, 20, 70, 90), stroke(INK, 30))
+    c.drawPath(oval(220, 20, 70, 90), stroke("#ffffff", 16))
+    toon(c, oval(0, 220, 260, 40), "#e9e4d8")
+    for k in range(3):
+        yy = -180 - ((t * 70 + k * 60) % 180)
+        c.drawCircle(-60 + k * 60 + math.sin(t * 2 + k) * 14, yy, 26, fill("#ffffff", 0.35))
+
+
 PROPS = {"carta": carta, "documento": documento, "mapa": mapa, "bomba": bomba, "corona": corona, "pistola": pistola,
          "espada": espada, "monedas": monedas, "reloj": reloj, "llave": llave, "veneno": veneno,
-         "periodico": periodico, "cuchillo": cuchillo, "anillo": anillo}
+         "periodico": periodico, "cuchillo": cuchillo, "anillo": anillo,
+         "movil": movil, "cerebro": cerebro, "tierra": tierra, "corazon": corazon, "cafe": cafe}
 
 
 def draw_prop(c, W, H, name, t, table_color="#6b4a2f"):
@@ -303,12 +375,52 @@ def ev_canon(c, W, H, t, dur):
                 c.drawCircle(x + j * 30 * a * 3, H * 0.7 - j * 20 * a * 2, 60 + 90 * a, fill("#d9d4cc", max(0, 0.6 - a * 0.5)))
 
 
+def ev_meteorito(c, W, H, t, dur):
+    """Meteorito que cruza el cielo con estela y se estrella."""
+    k = min(1.0, t / 1.3)
+    x, y = W * (1.05 - 0.6 * k), H * (0.05 + 0.5 * k)
+    if t < 1.3:
+        for j in range(12):
+            tx, ty = x + j * 34, y - j * 30
+            c.drawCircle(tx, ty, 44 - j * 3, fill("#ffb347", max(0.0, 0.8 - j * 0.07)))
+        toon(c, oval(x, y, 50, 46), "#5a4636")
+        c.drawCircle(x, y, 90, radial(fill("#ffd27a"), (x, y), 90, ["#ffd27a", "#ffd27a"], [0.7, 0.0]))
+    S.fireball(c, W * 0.45, H * 0.56, (t - 1.3) * 0.9, size=1.4)
+
+
+def ev_corazones(c, W, H, t, dur):
+    """Corazones que suben flotando (amor, flechazo, cita que va bien)."""
+    rnd = random.Random(4)
+    for k in range(12):
+        x = rnd.uniform(0.1, 0.9) * W + math.sin(t * 2 + k) * 30
+        y = H * 1.05 - ((t * rnd.uniform(160, 260) + k * 140) % (H * 0.9))
+        s = rnd.uniform(0.25, 0.5)
+        toon(c, _heart(x, y, s), rnd.choice(["#e63946", "#ff6b8a", "#ff8fab"]), outline=4)
+
+
+def ev_pensamientos(c, W, H, t, dur):
+    """Nubes de pensamientos que dan vueltas (darle vueltas a todo, ansiedad, dudas)."""
+    for k in range(6):
+        a = t * 0.9 + k * math.tau / 6
+        x, y = W * 0.5 + math.cos(a) * W * 0.36, H * 0.24 + math.sin(a) * H * 0.07
+        toon(c, poly([(x - 90, y), (x - 60, y - 60), (x, y - 75), (x + 60, y - 60), (x + 90, y), (x + 40, y + 45), (x - 40, y + 45)], smooth=True),
+             "#ffffff", outline=5)
+        p = skia.Path()  # garabato dentro de la nube
+        p.moveTo(x - 40, y)
+        for j in range(6):
+            ang = j * 1.3 + t * 3
+            p.lineTo(x + math.cos(ang) * (12 + j * 6), y - 10 + math.sin(ang) * (8 + j * 4))
+        c.drawPath(p, stroke("#5a6270", 5))
+
+
 EVENTS = {"aviones": ev_aviones, "explosion": ev_explosion, "bombardeo": ev_bombardeo,
           "paracaidas": ev_paracaidas, "hundimiento": ev_hundimiento, "fuego": ev_fuego, "disparos": ev_disparos,
-          "lluvia": ev_lluvia, "nieve": ev_nieve, "multitud": ev_multitud, "barco": ev_barco, "cañonazos": ev_canon}
+          "lluvia": ev_lluvia, "nieve": ev_nieve, "multitud": ev_multitud, "barco": ev_barco, "cañonazos": ev_canon,
+          "meteorito": ev_meteorito, "corazones": ev_corazones, "pensamientos": ev_pensamientos}
 
 # efectos de sonido que acompañan a cada suceso: (nombre, segundo)
 EVENT_SFX = {"explosion": [("boom", 0.5)], "bombardeo": [("boom", 0.3), ("boom", 1.1), ("boom", 1.9)],
              "paracaidas": [("whoosh", 0.2)], "hundimiento": [("whoosh", 1.0), ("splash", 1.6)],
-             "disparos": [("hit", 0.2), ("hit", 0.9), ("hit", 1.5)], "cañonazos": [("boom", 0.4), ("boom", 1.4), ("boom", 2.4)]}
+             "disparos": [("hit", 0.2), ("hit", 0.9), ("hit", 1.5)], "cañonazos": [("boom", 0.4), ("boom", 1.4), ("boom", 2.4)],
+             "meteorito": [("whoosh", 0.1), ("boom", 1.3)]}
 EVENT_AMBIENCE = {"aviones": "avion", "fuego": "viento", "lluvia": "viento", "barco": "mar"}

@@ -14,4 +14,5 @@ Tu objetivo es crear episodios **serializados** con altísima retención. **Cada
 - **Respeto:** si hay víctimas reales, nada de morbo gráfico ni burla; el misterio está en los hechos, no en la sangre. Evita casos recientes con familias o investigaciones abiertas que puedan sentirse expuestas.
 - Escribe los números como se leen en voz alta cuando ayude a la locución (las fechas en cifras están bien).
 - Elige escenarios, épocas (`era`) y vestuario de la biblioteca que más se acerquen al lugar real aunque la historia ocurra fuera de España (`bosque`, `costa`, `barca`, `ciudad`, `despacho`, `carcel`...); usa `mood: noche` o `tormenta` para crear atmósfera.
-
+- **Personajes reales:** los diálogos son una recreación coherente con hechos documentados (lo que alguien hizo, vio o decidió), sin citas textuales inventadas presentadas como reales ni datos no documentados.
+- En `caption` y `youtube_description` incluye siempre «Recreación animada basada en hechos reales.».

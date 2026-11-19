@@ -14,7 +14,7 @@ on:
       channel:
         description: "Canal"
         type: choice
-        options: [todos, bien_contadas, elanecdotario]
+        options: [todos, bien_contadas, elanecdotario, conexionconchispa, lacabezapordentro, ysiciencia]
         default: todos
       mode:
         description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya · estado = cómo acabaron las últimas publicaciones"
@@ -41,14 +41,20 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: daily-reel
-  cancel-in-progress: false
-
 jobs:
   reel:
+    # Un trabajo por canal, en paralelo. Cada canal solo toca sus archivos de data/<canal>/.
+    strategy:
+      fail-fast: false
+      matrix:
+        channel: [bien_contadas, elanecdotario, conexionconchispa, lacabezapordentro, ysiciencia]
+    concurrency:
+      group: reel-${{ matrix.channel }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
-    timeout-minutes: 170
+    timeout-minutes: 120
+    env:
+      CH: ${{ matrix.channel }}
     steps:
       - uses: actions/checkout@v4
 
@@ -61,20 +67,29 @@ jobs:
         id: todo
         run: |
           pip install -q pyyaml
-          if [ "${{ inputs.mode }}" = "estado" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
-          if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
-          python -m reels --check | tee pending.txt
-          if awk '$2 > 0 {found=1} END {exit !found}' pending.txt; then echo "go=true" >> "$GITHUB_OUTPUT"
-          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "Todo programado: nada que hacer."; fi
+          want="${{ inputs.channel }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$want" != "todos" ] && [ "$want" != "$CH" ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "Este canal no se ha elegido."; exit 0
+          fi
+          if [ "${{ inputs.mode }}" = "estado" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "status=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          line=$(python -m reels --check | awk -v c="$CH" '$1 == c')
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # «prueba» funciona aunque el canal esté en pausa; el resto necesita el canal activo (o «force»)
+            if [ -n "$line" ] || [ "${{ inputs.mode }}" = "prueba" ] || [ "${{ inputs.force }}" = "true" ]; then echo "go=true" >> "$GITHUB_OUTPUT"
+            else echo "go=false" >> "$GITHUB_OUTPUT"; echo "Canal en pausa."; fi
+            exit 0
+          fi
+          echo "${line:-$CH en pausa}"
+          if [ -n "$line" ] && [ "$(echo "$line" | awk '{print $2}')" -gt 0 ]; then echo "go=true" >> "$GITHUB_OUTPUT"
+          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "Nada que preparar."; fi
 
       - name: Estado de las últimas publicaciones
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'estado'
+        if: steps.todo.outputs.status == 'true'
         env:
           UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
         run: |
-          pip install -q requests pydantic anthropic
-          C="${{ inputs.channel }}"; [ "$C" = "todos" ] && C=bien_contadas
-          python -m reels --status --channel "$C"
+          pip install -q requests
+          python -m reels --status --channel "$CH"
 
       - name: Instalar FFmpeg y librerías gráficas
         if: steps.todo.outputs.go == 'true'
@@ -92,16 +107,13 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
-          TOPIC: ${{ inputs.topic }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          TZ: Europe/Madrid
+          TOPIC: ${{ inputs.topic }}
           FORMAT: ${{ inputs.format }}
+          TZ: Europe/Madrid
         run: |
           ARGS=()
-          CHANNELS=$(python -m reels --check | awk '$2 > 0 {print $1}')
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            CHANNELS="${{ inputs.channel }}"
-            [ "$CHANNELS" = "todos" ] && CHANNELS=$(python -m reels --check | awk '{print $1}')
             case "${{ inputs.mode }}" in
               prueba) ARGS+=(--dry-run) ;;
               ahora) ARGS+=(--now) ;;
@@ -111,11 +123,7 @@ jobs:
             if [ -n "$FORMAT" ]; then ARGS+=(--format "$FORMAT"); fi
             if [ -n "$TOPIC" ]; then ARGS+=(--topic "$TOPIC"); fi
           fi
-          status=0
-          for c in $CHANNELS; do
-            python -m reels --channel "$c" "${ARGS[@]}" || status=1
-          done
-          exit $status
+          python -m reels --channel "$CH" "${ARGS[@]}"
 
       - name: Vista previa (fotogramas)
         if: always() && steps.todo.outputs.go == 'true'
@@ -129,7 +137,7 @@ jobs:
         if: always() && steps.todo.outputs.go == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: reel-${{ github.run_id }}
+          name: reel-${{ matrix.channel }}-${{ github.run_id }}
           path: |
             out/*/reel.mp4
             out/*/guion.md
@@ -141,7 +149,7 @@ jobs:
         if: always() && steps.todo.outputs.go == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: preview-${{ github.run_id }}
+          name: preview-${{ matrix.channel }}-${{ github.run_id }}
           path: |
             out/*/preview.jpg
             out/*/guion.md
@@ -152,5 +160,12 @@ jobs:
         run: |
           git config user.name "reels-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ || true
-          git diff --cached --quiet || (git commit -m "Estado: episodios $(date +%F)" && git pull --rebase && git push)
+          git add "data/$CH" || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Estado $CH: $(date +%F)"
+          # Otros canales pueden haber guardado a la vez: reintenta integrando sus cambios
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase -q && git push -q && exit 0
+            sleep $((i * 7))
+          done
+          exit 1

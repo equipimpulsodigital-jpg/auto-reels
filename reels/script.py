@@ -87,7 +87,7 @@ class Part(BaseModel):
 
 
 class Series(BaseModel):
-    series_title: str
+    series_title: str = Field(description="Título concreto de esta historia o tema (nunca el nombre del canal).")
     format: str = Field(description="Clave del formato indicado en la petición.")
     year: str
     place: str
@@ -117,6 +117,10 @@ def next_format(cfg: dict, history: list[dict], forced: str | None) -> str:
     return formats[(formats.index(last) + 1) % len(formats)] if last in formats else formats[0]
 
 
+def _max_parts(cfg: dict) -> int:
+    return int(cfg["channel"].get("max_parts") or cfg["series"].get("max_parts", 2))
+
+
 def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None = None) -> Series:
     fmt_name = cfg["channel"]["formats"][fmt]
     done = [h["topic"] for h in history[-80:]]
@@ -124,7 +128,7 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
         f"Fecha: {date.today().isoformat()}\n"
         f"Formato: {fmt_name} (en el campo `format` pon exactamente: {fmt})\n"
         f"Tema a desarrollar: {topic or 'propón tú uno potente, poco trillado y bien documentado'}\n"
-        f"Partes: máximo {cfg['series'].get('max_parts', 2)}.\n\n"
+        f"Partes: máximo {_max_parts(cfg)}.\n\n"
         "Historias ya publicadas (no repitas ninguna):\n"
         + ("\n".join(f"- {t}" for t in done) if done else "- (ninguna todavía)")
     )
@@ -133,7 +137,7 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
     else:
         series = _api(cfg, _system_prompt(cfg), user)
     series.format = fmt
-    series.parts = series.parts[: cfg["series"].get("max_parts", 2)]
+    series.parts = series.parts[: _max_parts(cfg)]
     for i, p in enumerate(series.parts, 1):
         p.part_number = i
     return series

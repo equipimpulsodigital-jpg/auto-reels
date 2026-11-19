@@ -64,7 +64,7 @@ channels:
       punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
       crimen_historico: "Crimen, conspiración o suceso oscuro real de la historia de España"
   elanecdotario:
-    name: Historias de misterio
+    name: Archivo del Misterio
     enabled: true
     profile: elanecdotario
     platforms: [instagram, youtube]
@@ -73,3 +73,39 @@ channels:
     formats:
       caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
       enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"
+  # Marcas nuevas: empiezan con 3 vídeos al día (cambia `slots` para subir o bajar).
+  conexionconchispa:
+    name: Conexión con Chispa
+    enabled: false            # EN PAUSA hasta que se aprueben los vídeos de prueba
+    profile: conexionconchispa
+    platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
+    prompt: prompts/conexionconchispa.md
+    accent_color: "#FF6B8A"
+    slots: ["12:00", "18:00", "21:00"]
+    max_parts: 2
+    formats:
+      antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
+      psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
+  lacabezapordentro:
+    name: La Cabeza por Dentro
+    enabled: false            # EN PAUSA hasta que se aprueben los vídeos de prueba
+    profile: lacabezapordentro
+    platforms: [instagram, youtube]   # TikTok: añadir cuando esté conectado
+    prompt: prompts/lacabezapordentro.md
+    accent_color: "#A08CFF"
+    slots: ["12:00", "18:00", "21:00"]
+    max_parts: 2
+    formats:
+      por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
+      como_salir: "Cómo salir de ahí: un problema cotidiano y una herramienta práctica con respaldo"
+  ysiciencia:
+    name: ¿Y si…?
+    enabled: false            # EN PAUSA hasta que se aprueben los vídeos de prueba
+    profile: ysiciencia               # perfil de Upload-Post (las cuentas son @ysiciencia2)
+    platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
+    prompt: prompts/ysiciencia.md
+    accent_color: "#4FC3F7"
+    slots: ["12:00", "18:00", "21:00"]
+    formats:
+      y_si_planeta: "¿Y si... el planeta? La Tierra, el espacio o la naturaleza en un escenario imposible"
+      y_si_nosotros: "¿Y si... nosotros? El cuerpo humano, la tecnología o la sociedad en un escenario imposible"

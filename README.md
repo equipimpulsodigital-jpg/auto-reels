@@ -3,10 +3,15 @@
 Genera vídeos verticales (9:16, 35–50 s) de **caricaturas 2D animadas por código** y los publica en
 Instagram Reels, YouTube Shorts y TikTok mediante Upload-Post. Hay un canal por perfil de Upload-Post:
 
-| Canal (`config.yaml`) | Perfil Upload-Post | Temática | Estado |
+| Canal (`config.yaml`) | Marca | Temática | Vídeos/día |
 |---|---|---|---|
-| `bien_contadas` | bien_contadas | Historia oscura de España (puntos de inflexión, crímenes históricos) | activo |
-| `elanecdotario` | elanecdotario | Historias de misterio reales (casos sin resolver, enigmas) | en pausa |
+| `bien_contadas` | Bien Contadas | Historia oscura de España (puntos de inflexión, crímenes históricos) | 5 |
+| `elanecdotario` | Archivo del Misterio | Misterios reales (casos sin resolver, enigmas) | 5 |
+| `conexionconchispa` | Conexión con Chispa | Ligar, romper el hielo y conectar | 3 |
+| `lacabezapordentro` | La Cabeza por Dentro | Psicología cotidiana | 3 |
+| `ysiciencia` | ¿Y si…? | Escenarios imposibles explicados con ciencia | 3 |
+
+Todas publican en Instagram y YouTube; TikTok se añade en `platforms` cuando cada perfil esté listo.
 
 Cada historia se cuenta en **1 o 2 partes**. Claude escribe todas las partes de golpe, con reparto de
 personajes, vestuario y planificación de cada plano.
@@ -18,8 +23,8 @@ propios → subtítulos → FFmpeg → Upload-Post (programado a la hora exacta)
 
 ## Cómo se publica
 
-- Las horas están en `config.yaml` → `publish.slots` (10, 13, 16, 19 y 22 h, hora de España).
-- GitHub se ejecuta **de noche**: genera los vídeos de las próximas 24 h de cada canal activo y los deja
+- Las horas están en `config.yaml` → `publish.slots` (10, 13, 16, 19 y 22 h) o en `slots` de cada canal.
+- GitHub se ejecuta **de noche**, un trabajo por canal en paralelo: genera los vídeos de las próximas 24 h y los deja
   **programados en Upload-Post** a esas horas. Así da igual que GitHub se retrase (le pasa a menudo).
 - Hay ejecuciones de reserva (madrugada y mediodía): si ya está todo programado, terminan en segundos.
 
