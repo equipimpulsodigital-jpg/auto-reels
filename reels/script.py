@@ -72,7 +72,7 @@ class Block(BaseModel):
 
 class Part(BaseModel):
     part_number: int
-    hook_candidates: List[str] = Field(description=(
+    hook_candidates: List[str] = Field(default_factory=list, description=(
         "5 ganchos alternativos para la primera frase, cada uno con una técnica distinta (ver EL GANCHO). "
         "Después elige el más fuerte y úsalo, tal cual o mejorado, como narración del primer bloque."))
     hook_title: str = Field(description=(
