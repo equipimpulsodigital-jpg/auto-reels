@@ -5,6 +5,52 @@
     "topic": "«Yo también» frente a la pregunta de seguimiento: no robar el foco en una cita (respuesta de cambio de Derber + estudio de Harvard sobre preguntas)",
     "series_title": "No le robes la conversación",
     "parts": 1,
-    "published_parts": []
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T18:00:00+01:00",
+        "request_id": "8fb4abace46a4c738759fa9b3c46e27d",
+        "job_id": "1da9a576ed00451e81a711610be572f7",
+        "failed": [],
+        "at": "2026-11-19T15:03:28+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "format": "psicologia_atraccion",
+    "topic": "Liking gap (Boothby et al., 2018): después de charlar subestimamos cuánto le gustamos al otro; consejo: escribir tú primero tras una buena conversación",
+    "series_title": "La brecha de simpatía: caíste mejor de lo que crees",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T21:00:00+01:00",
+        "request_id": "b972ce51b1404280b623039e3a9f8e1e",
+        "job_id": "f364248e644a4a638edc9cffc08b2720",
+        "failed": [],
+        "at": "2026-11-19T15:11:18+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "format": "antes_despues",
+    "topic": "Respuesta activa-constructiva (Shelly Gable): cuando alguien te cuenta una buena noticia, reacciona con ganas y pregunta cómo fue el momento, en vez de un tibio «guay»",
+    "series_title": "El «guay» que enfría una cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T12:00:00+01:00",
+        "request_id": "00a2783253ba46759b92343386a48188",
+        "job_id": "27394907712c42c8bbe2c8a8518cad01",
+        "failed": [],
+        "at": "2026-11-19T15:19:44+00:00"
+      }
+    ]
   }
 ]
