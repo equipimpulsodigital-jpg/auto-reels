@@ -139,6 +139,15 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
     return series
 
 
+def _schema() -> dict:
+    """Esquema para Claude: en las historias nuevas los 5 ganchos alternativos son obligatorios."""
+    schema = Series.model_json_schema()
+    part = schema["$defs"]["Part"]
+    part["required"] = sorted(set(part.get("required", [])) | {"hook_candidates"})
+    part["properties"]["hook_candidates"].update(minItems=5, maxItems=5)
+    return schema
+
+
 def _use_claude_code(cfg: dict) -> bool:
     backend = cfg["claude"].get("backend", "auto")
     if backend == "auto":
@@ -155,7 +164,7 @@ def _claude_code(cfg: dict, system: str, user: str) -> Series:
         "--model", cfg["claude"]["model"],
         "--effort", cfg["claude"].get("effort", "high"),
         "--system-prompt", system,
-        "--json-schema", json.dumps(Series.model_json_schema()),
+        "--json-schema", json.dumps(_schema()),
         "--output-format", "json",
         "--tools", "",
         "--strict-mcp-config", "--setting-sources", "", "--disable-slash-commands",
