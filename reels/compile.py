@@ -75,8 +75,36 @@ def _book_from_queue(folder: Path, title: str):
 
 
 def amazon_link(book: dict, tag: str) -> str:
-    """Búsqueda del libro en Amazon.es con el ID de afiliado (siempre lleva a la edición disponible)."""
-    return f"https://www.amazon.es/s?k={quote_plus(book['title'] + ' ' + book['author'])}&i=stripbooks&tag={tag}"
+    """Búsqueda del libro en Amazon.es con el ID de afiliado: por ISBN (ese libro exacto) o por título y autor."""
+    q = book.get("isbn") or f"{book['title']} {book['author']}"
+    return f"https://www.amazon.es/s?k={quote_plus(q)}&i=stripbooks&tag={tag}"
+
+
+def enrich_book(book: dict) -> dict:
+    """Añade portada e ISBN desde Open Library (gratis, sin clave). Se guarda para no repetir la consulta."""
+    if not book or "looked_up" in book:
+        return book
+    import requests
+    book["looked_up"] = True
+    try:
+        r = requests.get("https://openlibrary.org/search.json", timeout=20,
+                         params={"title": book["title"], "author": book["author"], "limit": 5,
+                                 "fields": "title,cover_i,isbn,language"},
+                         headers={"User-Agent": "auto-reels (book covers)"})
+        docs = r.json().get("docs", []) if r.ok else []
+    except Exception:
+        return book
+    docs.sort(key=lambda d: ("spa" not in (d.get("language") or []), not d.get("cover_i")))
+    for d in docs:
+        if d.get("cover_i") and not book.get("cover"):
+            book["cover"] = f"https://covers.openlibrary.org/b/id/{d['cover_i']}-M.jpg"
+        # solo ediciones españolas: una extranjera podría no venderse en Amazon.es
+        isbns = [i for i in d.get("isbn", []) if len(i) == 13 and i.startswith(("97884", "97984"))]
+        if isbns and not book.get("isbn"):
+            book["isbn"] = isbns[0]
+        if book.get("cover") and book.get("isbn"):
+            break
+    return book
 
 
 def _horizontal(src: Path, out: Path) -> None:

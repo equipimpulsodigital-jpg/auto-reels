@@ -18,7 +18,9 @@
     ],
     "book": {
       "title": "Cómo ganar amigos e influir sobre las personas",
-      "author": "Dale Carnegie"
+      "author": "Dale Carnegie",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
     }
   },
   {
@@ -40,7 +42,10 @@
     ],
     "book": {
       "title": "Cháchara",
-      "author": "Ethan Kross"
+      "author": "Ethan Kross",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/13663242-M.jpg",
+      "isbn": "9788449338717"
     }
   },
   {
@@ -62,7 +67,8 @@
     ],
     "book": {
       "title": "Por qué recordamos",
-      "author": "Charan Ranganath"
+      "author": "Charan Ranganath",
+      "looked_up": true
     }
   }
 ]

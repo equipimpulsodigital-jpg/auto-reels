@@ -45,7 +45,10 @@
     ],
     "book": {
       "title": "Longitud",
-      "author": "Dava Sobel"
+      "author": "Dava Sobel",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/13654-M.jpg",
+      "isbn": "9788483060520"
     }
   }
 ]

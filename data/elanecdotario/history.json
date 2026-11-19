@@ -81,7 +81,10 @@
     ],
     "book": {
       "title": "Historia del cine",
-      "author": "Román Gubern"
+      "author": "Román Gubern",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/2269878-M.jpg",
+      "isbn": "9788426411792"
     }
   }
 ]

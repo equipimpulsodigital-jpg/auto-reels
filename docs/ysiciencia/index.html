@@ -6,6 +6,10 @@
 <title>¿Y si…? · enlaces</title>
 <meta name="description" content="Escenarios imposibles explicados con ciencia.">
 <meta name="robots" content="noindex">
+<meta property="og:title" content="¿Y si…? · los libros de nuestras historias">
+<meta property="og:description" content="Escenarios imposibles explicados con ciencia.">
+<meta property="og:image" content="https://covers.openlibrary.org/b/id/13654-M.jpg">
+<meta name="theme-color" content="#4FC3F7">
 <style>
   :root { --accent: #4FC3F7; --bg: #111317; --card: #1c1f26; --text: #f2f2f2; --muted: #a3a8b3; }
   * { box-sizing: border-box; }
@@ -21,8 +25,14 @@
   .social a { color: var(--text); text-decoration: none; border: 1px solid #333844; border-radius: 999px;
                padding: 6px 14px; font-size: 14px; }
   h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin: 0 0 12px; }
-  .book { display: block; background: var(--card); border-radius: 14px; padding: 14px 16px; margin-bottom: 10px;
-           color: inherit; text-decoration: none; border-left: 4px solid var(--accent); }
+  .book { display: flex; gap: 14px; align-items: center; background: var(--card); border-radius: 14px;
+           padding: 12px; margin-bottom: 10px; color: inherit; text-decoration: none; position: relative; }
+  .cover { width: 64px; height: 96px; flex: none; border-radius: 6px; object-fit: cover; background: #2a2e38;
+            box-shadow: 0 4px 12px rgba(0,0,0,.4); }
+  .nocover { display: grid; place-items: center; font-size: 28px; }
+  .info { min-width: 0; }
+  .new { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #111; font-size: 11px;
+          font-weight: 800; padding: 2px 8px; border-radius: 999px; }
   .book:hover { filter: brightness(1.15); }
   .story { color: var(--muted); font-size: 13px; margin: 0 0 4px; }
   .title { font-weight: 700; margin: 0; }
@@ -40,7 +50,7 @@
   </header>
   <nav class="social"><a href="https://www.youtube.com/@ysiciencia2" rel="noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/ysiciencia2/" rel="noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@user5758110653335" rel="noopener" target="_blank">TikTok</a></nav>
   <h2>📚 Los libros de nuestras historias</h2>
-  <a class="book" href="https://www.amazon.es/s?k=Longitud+Dava+Sobel&amp;i=stripbooks&amp;tag=historiasbien-21" rel="sponsored noopener" target="_blank"><p class="story">¿Y si se apagaran todos los satélites GPS?</p><p class="title">Longitud</p><p class="author">Dava Sobel</p><span class="cta">Ver en Amazon →</span></a>
+  <a class="book" href="https://www.amazon.es/s?k=9788483060520&amp;i=stripbooks&amp;tag=historiasbien-21" rel="sponsored noopener" target="_blank"><span class="new">NUEVO</span><img class="cover" src="https://covers.openlibrary.org/b/id/13654-M.jpg" alt="" loading="lazy"><div class="info"><p class="story">¿Y si se apagaran todos los satélites GPS?</p><p class="title">Longitud</p><p class="author">Dava Sobel</p><span class="cta">Ver en Amazon →</span></div></a>
   <footer>Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.</footer>
 </main>
 </body>

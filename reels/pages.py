@@ -9,7 +9,7 @@ import html
 import json
 from pathlib import Path
 
-from .compile import amazon_link
+from .compile import amazon_link, enrich_book
 from .config import ROOT, channel_data
 
 DOCS = ROOT / "docs"
@@ -23,6 +23,9 @@ PAGE = """<!doctype html>
 <title>{name} · enlaces</title>
 <meta name="description" content="{tagline}">
 <meta name="robots" content="noindex">
+<meta property="og:title" content="{name} · los libros de nuestras historias">
+<meta property="og:description" content="{tagline}">
+{og_image}<meta name="theme-color" content="{accent}">
 <style>
   :root {{ --accent: {accent}; --bg: #111317; --card: #1c1f26; --text: #f2f2f2; --muted: #a3a8b3; }}
   * {{ box-sizing: border-box; }}
@@ -38,8 +41,14 @@ PAGE = """<!doctype html>
   .social a {{ color: var(--text); text-decoration: none; border: 1px solid #333844; border-radius: 999px;
                padding: 6px 14px; font-size: 14px; }}
   h2 {{ font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin: 0 0 12px; }}
-  .book {{ display: block; background: var(--card); border-radius: 14px; padding: 14px 16px; margin-bottom: 10px;
-           color: inherit; text-decoration: none; border-left: 4px solid var(--accent); }}
+  .book {{ display: flex; gap: 14px; align-items: center; background: var(--card); border-radius: 14px;
+           padding: 12px; margin-bottom: 10px; color: inherit; text-decoration: none; position: relative; }}
+  .cover {{ width: 64px; height: 96px; flex: none; border-radius: 6px; object-fit: cover; background: #2a2e38;
+            box-shadow: 0 4px 12px rgba(0,0,0,.4); }}
+  .nocover {{ display: grid; place-items: center; font-size: 28px; }}
+  .info {{ min-width: 0; }}
+  .new {{ position: absolute; top: 10px; right: 10px; background: var(--accent); color: #111; font-size: 11px;
+          font-weight: 800; padding: 2px 8px; border-radius: 999px; }}
   .book:hover {{ filter: brightness(1.15); }}
   .story {{ color: var(--muted); font-size: 13px; margin: 0 0 4px; }}
   .title {{ font-weight: 700; margin: 0; }}
@@ -72,7 +81,7 @@ def build(cfg: dict) -> Path:
     tag = ch.get("affiliate_tag") or cfg.get("affiliate", {}).get("tag")
     history = json.loads((channel_data(cfg) / "history.json").read_text(encoding="utf-8")) \
         if (channel_data(cfg) / "history.json").exists() else []
-    seen, cards = set(), []
+    seen, cards, first_cover = set(), [], ""
     for h in reversed(history):
         b = h.get("book")
         if not b or not tag or not h.get("published_parts"):
@@ -81,18 +90,28 @@ def build(cfg: dict) -> Path:
         if key in seen:
             continue
         seen.add(key)
+        enrich_book(b)  # portada e ISBN (se guardan en el historial)
+        first_cover = first_cover or b.get("cover", "")
+        img = (f'<img class="cover" src="{html.escape(b["cover"])}" alt="" loading="lazy">' if b.get("cover")
+               else '<div class="cover nocover" aria-hidden="true">📖</div>')
+        badge = '<span class="new">NUEVO</span>' if not cards else ""
         cards.append(
             f'<a class="book" href="{html.escape(amazon_link(b, tag))}" rel="sponsored noopener" target="_blank">'
+            f'{badge}{img}<div class="info">'
             f'<p class="story">{html.escape(h["series_title"])}</p>'
             f'<p class="title">{html.escape(b["title"])}</p>'
             f'<p class="author">{html.escape(b["author"])}</p>'
-            f'<span class="cta">Ver en Amazon →</span></a>')
+            f'<span class="cta">Ver en Amazon →</span></div></a>')
         if len(cards) >= MAX_BOOKS:
             break
+    hist_path = channel_data(cfg) / "history.json"
+    if history:
+        hist_path.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     links = ch.get("links") or {}
     social = "".join(f'<a href="{html.escape(u)}" rel="noopener" target="_blank">{SOCIAL.get(k, k)}</a>'
                      for k, u in links.items())
     page = PAGE.format(
+        og_image=f'<meta property="og:image" content="{html.escape(first_cover)}">\n' if first_cover else "",
         name=html.escape(ch["name"]), tagline=html.escape(ch.get("tagline", "")), accent=ch.get("accent_color", "#E2A84B"),
         initial=html.escape(ch["name"].lstrip("¿")[:1].upper()), social=social,
         books="\n  ".join(cards) or '<p class="tagline">Pronto, los libros de nuestras historias.</p>',

@@ -18,7 +18,10 @@
     ],
     "book": {
       "title": "No me estás escuchando",
-      "author": "Kate Murphy"
+      "author": "Kate Murphy",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/12411688-M.jpg",
+      "isbn": "9788403519428"
     }
   },
   {
@@ -40,7 +43,8 @@
     ],
     "book": {
       "title": "Supercomunicadores",
-      "author": "Charles Duhigg"
+      "author": "Charles Duhigg",
+      "looked_up": true
     }
   },
   {
@@ -62,7 +66,10 @@
     ],
     "book": {
       "title": "La vida que florece",
-      "author": "Martin E. P. Seligman"
+      "author": "Martin E. P. Seligman",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/13535864-M.jpg",
+      "isbn": "9788466649537"
     }
   }
 ]

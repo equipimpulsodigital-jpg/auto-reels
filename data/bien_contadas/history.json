@@ -25,7 +25,10 @@
     ],
     "book": {
       "title": "La historia secreta de las bombas de Palomares",
-      "author": "Rafael Moreno Izquierdo"
+      "author": "Rafael Moreno Izquierdo",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/7427954-M.jpg",
+      "isbn": "9788498929065"
     }
   },
   {
@@ -56,7 +59,10 @@
     ],
     "book": {
       "title": "El crimen de la calle de Fuencarral",
-      "author": "Benito Pérez Galdós"
+      "author": "Benito Pérez Galdós",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/10495801-M.jpg",
+      "isbn": "9788496080010"
     }
   },
   {
@@ -87,7 +93,8 @@
     ],
     "book": {
       "title": "Un héroe trágico del anarquismo español: Mateo Morral, 1879-1906",
-      "author": "Eduard Masjuan"
+      "author": "Eduard Masjuan",
+      "looked_up": true
     }
   },
   {
@@ -118,7 +125,10 @@
     ],
     "book": {
       "title": "Matar a Prim",
-      "author": "Francisco Pérez Abellán"
+      "author": "Francisco Pérez Abellán",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/7315364-M.jpg",
+      "isbn": "9788408124542"
     }
   },
   {
@@ -167,7 +177,8 @@
     ],
     "book": {
       "title": "El crimen de Cuenca",
-      "author": "Lola Salvador Maldonado"
+      "author": "Lola Salvador Maldonado",
+      "looked_up": true
     }
   }
 ]
