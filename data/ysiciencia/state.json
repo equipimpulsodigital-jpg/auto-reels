@@ -2,22 +2,22 @@
   "queue": [
     {
       "series": {
-        "series_title": "¿Y si la tormenta solar de 1859 golpeara hoy?",
-        "format": "y_si_planeta",
+        "series_title": "¿Y si se apagaran todos los satélites GPS?",
+        "format": "y_si_nosotros",
         "year": "hipotético",
-        "place": "La Tierra (España, con referencias a Quebec y Estados Unidos)",
-        "topic": "Qué pasaría si hoy nos golpeara una tormenta solar como el Evento Carrington de 1859: auroras en España, apagones, transformadores quemados y el casi impacto de 2012.",
+        "place": "Una ciudad española, el cielo europeo y la órbita a 20.000 km de altura",
+        "topic": "Qué pasaría si se apagaran a la vez todos los satélites de navegación (GPS, Galileo, GLONASS, BeiDou): mapas, aviones y, sobre todo, la hora de la que dependen antenas, bolsa y red eléctrica.",
         "era": "moderno",
         "characters": [
           {
-            "id": "elena",
-            "name": "Elena",
+            "id": "lucia",
+            "name": "Lucía",
             "voice": "mujer",
             "look": {
               "female": true,
               "age": "adulto",
               "skin": "clara",
-              "hair_color": "castaño",
+              "hair_color": "pelirrojo",
               "hair_style": "moño",
               "hat": "ninguno",
               "hat_color": "negro",
@@ -34,13 +34,13 @@
             }
           },
           {
-            "id": "javi",
-            "name": "Javi",
+            "id": "dani",
+            "name": "Dani",
             "voice": "hombre_joven",
             "look": {
               "female": false,
               "age": "joven",
-              "skin": "media",
+              "skin": "morena",
               "hair_color": "negro",
               "hair_style": "corto",
               "hat": "ninguno",
@@ -49,7 +49,7 @@
               "beard_color": "negro",
               "outfit": "jersey",
               "outfit_color": "mostaza",
-              "accent_color": "rojo",
+              "accent_color": "verde_oscuro",
               "pants_color": "azul",
               "nose": "patata",
               "jaw": "redonda",
@@ -58,43 +58,43 @@
             }
           }
         ],
-        "historical_notes": "BASE CIENTÍFICA Y FUENTES:\n- Evento Carrington (1-2 sept. 1859): Richard Carrington y Richard Hodgson observaron una llamarada de luz blanca. La eyección de masa coronal (CME) llegó en unas 17,6 horas (lo normal son 2-3 días), lo que equivale a una velocidad media de unos 2.300 km/s (Tsurutani et al., 2003; Cliver y Svalgaard, 2004). Las CME grandes mueven del orden de miles de millones de toneladas de plasma (10^12-10^13 kg, NASA).\n- Telégrafos en 1859: hay muchos testimonios de chispas, calambres a los operadores y papel quemado; algunas líneas funcionaron con las baterías desconectadas (Loomis, American Journal of Science, 1860). Hubo auroras a latitudes muy bajas (Caribe, Hawái, Colombia) y también en la península ibérica (Vaquero et al., estudios sobre observaciones ibéricas de 1859). En mayo de 2024 una tormenta mucho más débil (G5) dejó auroras visibles en España, incluida Canarias.\n- Los rayos X de la llamarada llegan en unos 8 minutos y provocan apagones de radio de onda corta (HF) en la cara diurna de la Tierra (NOAA SWPC, escala R).\n- Las corrientes inducidas geomagnéticamente (GIC) recorren líneas largas y pueden sobrecalentar y dañar transformadores de alta tensión.\n- Quebec, 13 de marzo de 1989: la red de Hydro-Québec cayó en unos 90 segundos y dejó a unos 6 millones de personas sin luz durante unas 9 horas, con una tormenta más débil que la de Carrington.\n- Lloyd's y AER (2013): una tormenta como la de Carrington en EE. UU. podría dejar a entre 20 y 40 millones de personas sin luz durante un periodo de 16 días a 1-2 años, con un coste de 0,6 a 2,6 billones de dólares. NRC/Academias Nacionales (2008, «Severe Space Weather Events»): recuperación estimada en varios años. Los grandes transformadores se fabrican por encargo y tardan en entregarse más de un año, a menudo entre 1 y 2 (Departamento de Energía de EE. UU.).\n- 23 de julio de 2012: la sonda STEREO-A detectó una CME comparable a la de Carrington que cruzó la órbita terrestre por donde la Tierra había pasado más o menos una semana antes. Según la NASA, si hubiera salido una semana antes nos habría alcanzado (Baker et al., 2013).\n- Probabilidad: Riley (2012) estimó un 12 % por década; estudios posteriores dan cifras más bajas, por ejemplo Moriña et al. (2019): entre el 0,46 % y el 1,88 % por década. No hay consenso.\n- Dato extra que no sale en el vídeo: en febrero de 2022 una tormenta geomagnética menor aumentó el rozamiento atmosférico, y unos 38 satélites Starlink recién lanzados reentraron en la atmósfera.\nINCERTIDUMBRES: el daño real depende de la orientación del campo magnético de la CME (componente Bz), de la latitud y de cómo estén preparadas las redes. Las redes europeas, más malladas y con líneas más cortas, podrían sufrir menos que las norteamericanas. Los cortes de agua, combustible y frío solo se darían si el apagón regional se alarga. No es una predicción de un apagón mundial.",
+        "historical_notes": "Escenario hipotético: nunca se ha producido un apagón total de los sistemas de navegación por satélite (GNSS). Base científica: los satélites GPS orbitan a unos 20.200 km y llevan relojes atómicos (cesio/rubidio); la posición se calcula midiendo tiempos, y un error de 1 microsegundo equivale a unos 300 m. Sin GNSS, los móviles siguen ubicándose de forma aproximada con antenas y redes wifi, pero con errores de decenas a cientos de metros (depende de la zona). Aviación: los aviones comerciales tienen navegación inercial y radioayudas en tierra (VOR/DME, ILS), por lo que no \"se caen\", pero muchas aproximaciones RNAV/RNP dependen del GNSS; los retrasos en cadena son una estimación razonable (véanse las interferencias GNSS en el Báltico desde 2022, documentadas por EASA). Incidente real: el 26 de enero de 2016, al retirar el satélite SVN-23, un error de software cargó un desfase horario de unos 13 microsegundos en parte de la constelación durante unas 12-13 horas; provocó fallos en emisoras de radio digital DAB del Reino Unido y alarmas en redes de telecomunicaciones (documentado por la US Air Force y el NPL británico). Telecomunicaciones: las estaciones base usan GNSS para sincronizar tiempo/fase; con osciladores de respaldo (\"holdover\") aguantan desde horas (cuarzo OCXO) hasta días (rubidio), según equipo y operador: el plazo exacto es incierto. Finanzas: la normativa europea MiFID II (RTS 25) exige trazabilidad a UTC y, para negociación de alta frecuencia, granularidad de 1 microsegundo y desviación máxima de 100 microsegundos. En España, la hora legal la mantiene el Real Instituto y Observatorio de la Armada (ROA) en San Fernando (Cádiz), con relojes atómicos en tierra que pueden distribuir la hora por red. Redes eléctricas: usan GNSS en sincrofasores (PMU) y localización de averías; perderlo reduce la supervisión, pero no apaga la red de forma inmediata. Coste: estudio de RTI International para el NIST (2019): aproximadamente 1.000 millones de dólares al día en EE. UU. (hasta unos 1.500 millones en temporada de siembra). Reino Unido: London Economics (2017) estimó unos 5.200 millones de libras por 5 días. Las cifras de aviones en vuelo (más de 10.000 en horas punta) proceden de datos de seguimiento tipo Flightradar24 e incluyen aviación general.",
         "parts": [
           {
             "part_number": 1,
             "hook_candidates": [
-              "Esta noche verías auroras desde Sevilla. Y sería una pésima noticia.",
-              "En 1859 los telegrafistas desenchufaron las baterías… y los aparatos siguieron funcionando.",
-              "Si esto pasara hoy, verías el cielo rojo desde tu balcón.",
-              "La llamarada ya ha salido del Sol. Tienes diecisiete horas.",
-              "En 2012 el Sol nos disparó una así. Casi nadie se enteró."
+              "El GPS no se inventó para guiarte. Es el reloj del planeta.",
+              "Una millonésima de segundo de error y estarías trescientos metros más allá.",
+              "Si el GPS se apagara ahora, perderte sería lo de menos.",
+              "El avión ya descendía cuando la pantalla avisó: sin señal GPS.",
+              "Tu banco depende de un reloj en el espacio que nunca has visto."
             ],
-            "hook_title": "¿QUÉ SE APAGA PRIMERO?",
+            "hook_title": "¿ENTONCES QUÉ FALLA?",
             "blocks": [
               {
                 "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "La llamarada ya ha salido del Sol. Tienes diecisiete horas.",
-                "location": "espacio",
-                "framing": "general",
+                "narration": "Si el GPS se apagara ahora, perderte sería lo de menos.",
+                "location": "ciudad",
+                "framing": "objeto",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": "explosion",
-                "prop": null,
+                "mood": "dia",
+                "event": null,
+                "prop": "movil",
                 "walk": false,
-                "camera": "shake",
+                "camera": "push_in",
                 "sfx": [
                   "hit"
                 ],
-                "visual_direction": "Desde la Luna, un destello cegador estalla en el cielo negro mientras la Tierra gira, ajena a lo que viene."
+                "visual_direction": "Primer plano de un móvil con el mapa abierto: el punto azul parpadea y salta el aviso «Sin señal GPS»."
               },
               {
-                "label": "SUBE LA APUESTA",
+                "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "Detrás viene una nube de plasma de miles de millones de toneladas.",
+                "narration": "Esos satélites no solo dicen dónde estás. Dicen la hora.",
                 "location": "espacio",
                 "framing": "objeto",
                 "cast": [],
@@ -103,78 +103,119 @@
                 "listener_emotion": "neutral",
                 "mood": "noche",
                 "event": null,
-                "prop": "tierra",
+                "prop": "reloj",
                 "walk": false,
                 "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "La Tierra gira en primer plano, pequeña y frágil, ante lo que se le acerca."
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "Un reloj de bolsillo en marcha flota con la Tierra girando al fondo, en el negro del espacio."
               },
               {
                 "label": "CONTEXTO",
-                "speaker": "elena",
-                "narration": "Javi, esto es una tormenta como la de 1859.",
-                "location": "laboratorio",
-                "framing": "personaje",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "point",
-                "emotion": "serio",
-                "listener_emotion": "sorprendido",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena, en el laboratorio, señala la pantalla con cara de preocupación mientras Javi mira de espaldas."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "javi",
-                "narration": "¿1859? ¿Y qué pasó aquella vez?",
-                "location": "laboratorio",
-                "framing": "personaje",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "think",
-                "emotion": "desconfiado",
-                "listener_emotion": "serio",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Javi, con jersey mostaza, se rasca la barbilla sin saber si preocuparse."
-              },
-              {
-                "label": "FLASHBACK",
                 "speaker": "narrador",
-                "narration": "Los telégrafos echaron chispas y prendieron fuego al papel.",
-                "location": "estacion",
+                "narration": "Imagina que se apagan todos: GPS, Galileo, GLONASS, BeiDou.",
+                "location": "espacio",
                 "framing": "general",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "atardecer",
-                "event": "fuego",
+                "mood": "noche",
+                "event": null,
                 "prop": null,
                 "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "whoosh"
-                ],
-                "visual_direction": "Estación de tren del siglo XIX: el puesto de telégrafo suelta chispas y el papel arde."
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Plano general desde la Luna: la Tierra gira en silencio mientras las luces de los satélites se apagan una a una."
               },
               {
-                "label": "MINUTO 8",
+                "label": "PRIMER SEGUNDO",
                 "speaker": "narrador",
-                "narration": "Hoy, a los ocho minutos, la onda corta de medio planeta enmudece.",
+                "narration": "Primer segundo: millones de mapas pierden el punto azul.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Dani, repartidor, camina por la calle mirando el móvil y se para en seco, confundido."
+              },
+              {
+                "label": "PRIMER SEGUNDO",
+                "speaker": "dani",
+                "narration": "¡Eh! ¡La app de reparto me ha dejado tirado!",
+                "location": "ciudad",
+                "framing": "personaje",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "shrug",
+                "emotion": "sorprendido",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Dani se queja con el móvil en la mano ante Lucía, su vecina científica, que pasaba por allí."
+              },
+              {
+                "label": "PRIMER SEGUNDO",
+                "speaker": "lucia",
+                "narration": "Tranquilo, el móvil tira de antenas y wifi.",
+                "location": "ciudad",
+                "framing": "personaje",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "desconfiado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Lucía, con gafas y bata blanca, le explica con calma; Dani no se fía."
+              },
+              {
+                "label": "PRIMER MINUTO",
+                "speaker": "narrador",
+                "narration": "Pero con errores de decenas o cientos de metros.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": "pensamientos",
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Los dos en la calle; sobre Dani giran nubes de pensamiento mientras busca hacia dónde ir."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "En hora punta vuelan más de diez mil aviones.",
                 "location": "cielo",
                 "framing": "general",
                 "cast": [],
@@ -185,636 +226,94 @@
                 "event": null,
                 "prop": null,
                 "walk": false,
-                "camera": "static",
+                "camera": "pull_back",
                 "sfx": [],
-                "visual_direction": "Cielo a gran altura, muy luminoso: la luz de la llamarada llega y las comunicaciones por radio de la cara diurna se quedan en silencio."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "elena",
-                "narration": "Eso es lo fácil. Lo gordo viene con la nube.",
-                "location": "laboratorio",
-                "framing": "dos",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "serio",
-                "listener_emotion": "asustado",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena explica con las manos y Javi traga saliva a su lado."
+                "visual_direction": "El cielo con nubes y la tierra muy abajo; la cámara se aleja y revela un cielo lleno de rutas."
               },
               {
                 "label": "TENSIÓN",
                 "speaker": "narrador",
-                "narration": "Viaja a más de dos mil kilómetros por segundo.",
-                "location": "laboratorio",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": "reloj",
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "whoosh"
-                ],
-                "visual_direction": "El reloj avanza sin parar: es la cuenta atrás hasta que llegue la nube."
-              },
-              {
-                "label": "HORA 17",
-                "speaker": "narrador",
-                "narration": "Esa noche verías auroras rojas desde Madrid, Sevilla o Canarias.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Javi sale a una calle de Madrid de noche y el cielo, sobre los balcones, se tiñe de rojo."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "javi",
-                "narration": "¡Elena, el cielo está rojo! ¡Es precioso!",
-                "location": "ciudad",
-                "framing": "dos",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "point",
-                "emotion": "contento",
-                "listener_emotion": "serio",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Javi señala el cielo encantado; Elena, a su lado, no sonríe."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "elena",
-                "narration": "No mires al cielo, Javi. Mira los cables.",
-                "location": "ciudad",
-                "framing": "personaje",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "point",
-                "emotion": "asustado",
-                "listener_emotion": "sorprendido",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "Primer plano de Elena señalando hacia abajo, a los tendidos y las farolas."
-              },
-              {
-                "label": "CLIFFHANGER",
-                "speaker": "narrador",
-                "narration": "Por ellos ya corre una corriente fantasma. Y es solo el principio.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "Las farolas parpadean bajo el cielo rojo mientras Javi y Elena se quedan quietos, mirando cómo la ciudad empieza a fallar."
-              }
-            ],
-            "cliffhanger": "La nube de plasma ya ha llegado: auroras en toda España y corrientes que nadie ha generado corriendo por los cables. ¿Qué pasa cuando llegan a los transformadores?",
-            "caption": "Parte 1/2. Una tormenta solar como la de 1859 te daría solo 17 horas de margen… y las auroras más bonitas de tu vida serían la peor señal. Escenario hipotético explicado con ciencia.",
-            "hashtags": [
-              "tormentasolar",
-              "eventocarrington",
-              "ciencia",
-              "espacio",
-              "auroraboreal",
-              "ysi"
-            ],
-            "youtube_title": "¿Y si la tormenta solar de 1859 golpeara hoy? Parte 1",
-            "youtube_description": "Parte 1/2. En 1859, una tormenta solar hizo arder los telégrafos y llevó las auroras hasta España. ¿Qué pasaría si llegara hoy una igual? Los primeros minutos y la primera noche, contados paso a paso. Escenario hipotético explicado con ciencia. Fuentes: NASA, NOAA, Tsurutani et al. (2003)."
-          },
-          {
-            "part_number": 2,
-            "hook_candidates": [
-              "La aurora más bonita de tu vida podría dejarte sin agua.",
-              "Noventa segundos tardó en apagarse Quebec, con una tormenta más débil.",
-              "Si vivieras bajo esos cables, pronto tu grifo dejaría de echar agua.",
-              "Un transformador revienta en plena noche. Cambiarlo puede llevar dos años.",
-              "En 2012 el Sol disparó una igual. Casi nadie se enteró."
-            ],
-            "hook_title": "IMAGINA UNA DE VERDAD",
-            "blocks": [
-              {
-                "label": "GANCHO",
-                "speaker": "narrador",
-                "narration": "Noventa segundos tardó en apagarse Quebec, con una tormenta más débil.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "boom"
-                ],
-                "visual_direction": "Las farolas y las ventanas se apagan una tras otra en cadena (el apagón de Quebec de 1989) y Javi se queda a oscuras."
-              },
-              {
-                "label": "SUBE LA APUESTA",
-                "speaker": "narrador",
-                "narration": "La de 1859 era peor: los transformadores no saltan, se queman.",
-                "location": "campo",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": "fuego",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "En mitad del campo, una subestación eléctrica arde en plena noche."
-              },
-              {
-                "label": "DÍA 1",
-                "speaker": "javi",
-                "narration": "¿Y no se cambian y ya está?",
-                "location": "casa",
-                "framing": "personaje",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "shrug",
-                "emotion": "desconfiado",
-                "listener_emotion": "serio",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "En su piso, a oscuras y alumbrado con velas, Javi se encoge de hombros."
-              },
-              {
-                "label": "DÍA 1",
-                "speaker": "elena",
-                "narration": "Son gigantes y se fabrican por encargo.",
-                "location": "casa",
-                "framing": "personaje",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "serio",
-                "listener_emotion": "pensativo",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena explica a la luz de las velas, muy seria."
-              },
-              {
-                "label": "DATO",
-                "speaker": "narrador",
-                "narration": "Fabricar uno nuevo puede llevar uno o dos años.",
-                "location": "oficina",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": "documento",
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "Un pedido oficial de transformador con un plazo de entrega muy largo sobre la mesa de una oficina."
-              },
-              {
-                "label": "DÍAS DESPUÉS",
-                "speaker": "narrador",
-                "narration": "Sin luz, en días fallan el agua, la gasolina y las neveras.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "atardecer",
-                "event": "multitud",
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Una multitud hace cola en la calle esperando agua y combustible mientras cae la tarde."
-              },
-              {
-                "label": "REACCIÓN",
-                "speaker": "javi",
-                "narration": "¿Sin agua? Vale, pero eso no va a pasar, ¿no?",
-                "location": "casa",
-                "framing": "personaje",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "explain",
-                "emotion": "asustado",
-                "listener_emotion": "pensativo",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Javi, nervioso, intenta quitarle importancia con una media sonrisa."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "narrador",
-                "narration": "En 2012, el Sol disparó una igual.",
-                "location": "espacio",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": "explosion",
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "whoosh"
-                ],
-                "visual_direction": "Desde la Luna, otra erupción enorme sale del Sol en julio de 2012."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "narrador",
-                "narration": "Una semana antes, y nos habría dado de lleno.",
-                "location": "espacio",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": "tierra",
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "La Tierra gira tranquila mientras la nube de plasma cruza el punto de la órbita por donde había pasado días antes."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "elena",
-                "narration": "Y nadie sabe cuándo llegará la siguiente.",
-                "location": "laboratorio",
-                "framing": "dos",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "shrug",
-                "emotion": "pensativo",
-                "listener_emotion": "asustado",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena y Javi, de vuelta en el laboratorio; ella se encoge de hombros con honestidad."
-              },
-              {
-                "label": "DATO FINAL",
-                "speaker": "narrador",
-                "narration": "Los cálculos: de menos del uno al doce por ciento por década.",
-                "location": "laboratorio",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": "reloj",
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "El reloj sigue en marcha sobre la mesa del laboratorio, junto a la pizarra llena de fórmulas."
-              },
-              {
-                "label": "CIERRE",
-                "speaker": "elena",
-                "narration": "Si algún día ves auroras en España, disfrútalas… y mira los cables.",
-                "location": "costa",
-                "framing": "dos",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "point",
-                "emotion": "burlon",
-                "listener_emotion": "pensativo",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Elena y Javi, en el muelle de un pueblo costero de noche, miran el cielo; ella señala con media sonrisa y la cámara se aleja."
-              }
-            ],
-            "cliffhanger": "Cierre: una tormenta como la de Carrington podría dejar a regiones enteras sin luz durante meses, y en 2012 nos libramos por una semana. La probabilidad es incierta, pero no es cero.",
-            "caption": "Parte 2/2. Con una tormenta más débil, Quebec se quedó a oscuras en 90 segundos. En 2012, una como la de 1859 nos esquivó por una semana. Escenario hipotético explicado con ciencia.",
-            "hashtags": [
-              "tormentasolar",
-              "eventocarrington",
-              "apagon",
-              "ciencia",
-              "espacio",
-              "ysi"
-            ],
-            "youtube_title": "¿Y si la tormenta solar de 1859 golpeara hoy? Parte 2",
-            "youtube_description": "Parte 2/2. Transformadores quemados, meses sin luz y la tormenta solar de 2012 que estuvo a punto de alcanzarnos. Escenario hipotético explicado con ciencia. Fuentes: NASA, Lloyd's y AER (2013), Academias Nacionales de EE. UU. (2008), Baker et al. (2013), Riley (2012) y Moriña et al. (2019)."
-          }
-        ]
-      },
-      "part": 0
-    },
-    {
-      "series": {
-        "series_title": "¿Y si la tormenta solar de 1859 golpeara hoy?",
-        "format": "y_si_planeta",
-        "year": "hipotético",
-        "place": "La Tierra (España, con referencias a Quebec y Estados Unidos)",
-        "topic": "Qué pasaría si hoy nos golpeara una tormenta solar como el Evento Carrington de 1859: auroras en España, apagones, transformadores quemados y el casi impacto de 2012.",
-        "era": "moderno",
-        "characters": [
-          {
-            "id": "elena",
-            "name": "Elena",
-            "voice": "mujer",
-            "look": {
-              "female": true,
-              "age": "adulto",
-              "skin": "clara",
-              "hair_color": "castaño",
-              "hair_style": "moño",
-              "hat": "ninguno",
-              "hat_color": "negro",
-              "beard": "ninguna",
-              "beard_color": null,
-              "outfit": "camisa",
-              "outfit_color": "blanco",
-              "accent_color": "azul",
-              "pants_color": "azul_marino",
-              "nose": "pequeña",
-              "jaw": "fina",
-              "eyes": "verdes",
-              "glasses": true
-            }
-          },
-          {
-            "id": "javi",
-            "name": "Javi",
-            "voice": "hombre_joven",
-            "look": {
-              "female": false,
-              "age": "joven",
-              "skin": "media",
-              "hair_color": "negro",
-              "hair_style": "corto",
-              "hat": "ninguno",
-              "hat_color": "negro",
-              "beard": "barba_corta",
-              "beard_color": "negro",
-              "outfit": "jersey",
-              "outfit_color": "mostaza",
-              "accent_color": "rojo",
-              "pants_color": "azul",
-              "nose": "patata",
-              "jaw": "redonda",
-              "eyes": "marrones",
-              "glasses": false
-            }
-          }
-        ],
-        "historical_notes": "BASE CIENTÍFICA Y FUENTES:\n- Evento Carrington (1-2 sept. 1859): Richard Carrington y Richard Hodgson observaron una llamarada de luz blanca. La eyección de masa coronal (CME) llegó en unas 17,6 horas (lo normal son 2-3 días), lo que equivale a una velocidad media de unos 2.300 km/s (Tsurutani et al., 2003; Cliver y Svalgaard, 2004). Las CME grandes mueven del orden de miles de millones de toneladas de plasma (10^12-10^13 kg, NASA).\n- Telégrafos en 1859: hay muchos testimonios de chispas, calambres a los operadores y papel quemado; algunas líneas funcionaron con las baterías desconectadas (Loomis, American Journal of Science, 1860). Hubo auroras a latitudes muy bajas (Caribe, Hawái, Colombia) y también en la península ibérica (Vaquero et al., estudios sobre observaciones ibéricas de 1859). En mayo de 2024 una tormenta mucho más débil (G5) dejó auroras visibles en España, incluida Canarias.\n- Los rayos X de la llamarada llegan en unos 8 minutos y provocan apagones de radio de onda corta (HF) en la cara diurna de la Tierra (NOAA SWPC, escala R).\n- Las corrientes inducidas geomagnéticamente (GIC) recorren líneas largas y pueden sobrecalentar y dañar transformadores de alta tensión.\n- Quebec, 13 de marzo de 1989: la red de Hydro-Québec cayó en unos 90 segundos y dejó a unos 6 millones de personas sin luz durante unas 9 horas, con una tormenta más débil que la de Carrington.\n- Lloyd's y AER (2013): una tormenta como la de Carrington en EE. UU. podría dejar a entre 20 y 40 millones de personas sin luz durante un periodo de 16 días a 1-2 años, con un coste de 0,6 a 2,6 billones de dólares. NRC/Academias Nacionales (2008, «Severe Space Weather Events»): recuperación estimada en varios años. Los grandes transformadores se fabrican por encargo y tardan en entregarse más de un año, a menudo entre 1 y 2 (Departamento de Energía de EE. UU.).\n- 23 de julio de 2012: la sonda STEREO-A detectó una CME comparable a la de Carrington que cruzó la órbita terrestre por donde la Tierra había pasado más o menos una semana antes. Según la NASA, si hubiera salido una semana antes nos habría alcanzado (Baker et al., 2013).\n- Probabilidad: Riley (2012) estimó un 12 % por década; estudios posteriores dan cifras más bajas, por ejemplo Moriña et al. (2019): entre el 0,46 % y el 1,88 % por década. No hay consenso.\n- Dato extra que no sale en el vídeo: en febrero de 2022 una tormenta geomagnética menor aumentó el rozamiento atmosférico, y unos 38 satélites Starlink recién lanzados reentraron en la atmósfera.\nINCERTIDUMBRES: el daño real depende de la orientación del campo magnético de la CME (componente Bz), de la latitud y de cómo estén preparadas las redes. Las redes europeas, más malladas y con líneas más cortas, podrían sufrir menos que las norteamericanas. Los cortes de agua, combustible y frío solo se darían si el apagón regional se alarga. No es una predicción de un apagón mundial.",
-        "parts": [
-          {
-            "part_number": 1,
-            "hook_candidates": [
-              "Esta noche verías auroras desde Sevilla. Y sería una pésima noticia.",
-              "En 1859 los telegrafistas desenchufaron las baterías… y los aparatos siguieron funcionando.",
-              "Si esto pasara hoy, verías el cielo rojo desde tu balcón.",
-              "La llamarada ya ha salido del Sol. Tienes diecisiete horas.",
-              "En 2012 el Sol nos disparó una así. Casi nadie se enteró."
-            ],
-            "hook_title": "¿QUÉ SE APAGA PRIMERO?",
-            "blocks": [
-              {
-                "label": "GANCHO",
-                "speaker": "narrador",
-                "narration": "La llamarada ya ha salido del Sol. Tienes diecisiete horas.",
-                "location": "espacio",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": "explosion",
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "Desde la Luna, un destello cegador estalla en el cielo negro mientras la Tierra gira, ajena a lo que viene."
-              },
-              {
-                "label": "SUBE LA APUESTA",
-                "speaker": "narrador",
-                "narration": "Detrás viene una nube de plasma de miles de millones de toneladas.",
-                "location": "espacio",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": "tierra",
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "La Tierra gira en primer plano, pequeña y frágil, ante lo que se le acerca."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "elena",
-                "narration": "Javi, esto es una tormenta como la de 1859.",
-                "location": "laboratorio",
-                "framing": "personaje",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "point",
-                "emotion": "serio",
-                "listener_emotion": "sorprendido",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena, en el laboratorio, señala la pantalla con cara de preocupación mientras Javi mira de espaldas."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "javi",
-                "narration": "¿1859? ¿Y qué pasó aquella vez?",
-                "location": "laboratorio",
-                "framing": "personaje",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "think",
-                "emotion": "desconfiado",
-                "listener_emotion": "serio",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Javi, con jersey mostaza, se rasca la barbilla sin saber si preocuparse."
-              },
-              {
-                "label": "FLASHBACK",
-                "speaker": "narrador",
-                "narration": "Los telégrafos echaron chispas y prendieron fuego al papel.",
-                "location": "estacion",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "atardecer",
-                "event": "fuego",
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "whoosh"
-                ],
-                "visual_direction": "Estación de tren del siglo XIX: el puesto de telégrafo suelta chispas y el papel arde."
-              },
-              {
-                "label": "MINUTO 8",
-                "speaker": "narrador",
-                "narration": "Hoy, a los ocho minutos, la onda corta de medio planeta enmudece.",
+                "narration": "No caen: tienen navegación inercial y radiobalizas.",
                 "location": "cielo",
                 "framing": "general",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "dia",
+                "mood": "atardecer",
                 "event": null,
                 "prop": null,
                 "walk": false,
                 "camera": "static",
                 "sfx": [],
-                "visual_direction": "Cielo a gran altura, muy luminoso: la luz de la llamarada llega y las comunicaciones por radio de la cara diurna se quedan en silencio."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "elena",
-                "narration": "Eso es lo fácil. Lo gordo viene con la nube.",
-                "location": "laboratorio",
-                "framing": "dos",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "serio",
-                "listener_emotion": "asustado",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena explica con las manos y Javi traga saliva a su lado."
+                "visual_direction": "El cielo al atardecer, tranquilo: los aviones siguen su rumbo sin satélites."
               },
               {
                 "label": "TENSIÓN",
                 "speaker": "narrador",
-                "narration": "Viaja a más de dos mil kilómetros por segundo.",
+                "narration": "Muchos aterrizajes usan GPS: retrasos en cadena.",
+                "location": "cielo",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": "mapa",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Un mapa de rutas aéreas con la trayectoria marcada hacia un aeropuerto que de pronto se tacha."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "dani",
+                "narration": "Vale. ¿Y eso de que dan la hora?",
+                "location": "ciudad",
+                "framing": "personaje",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "serio",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "De vuelta en la calle al atardecer, Dani se rasca la barbilla, intrigado."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "lucia",
+                "narration": "Llevan relojes atómicos. Bancos, antenas y redes eléctricas se sincronizan con ellos.",
+                "location": "ciudad",
+                "framing": "personaje",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "point",
+                "emotion": "serio",
+                "listener_emotion": "sorprendido",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Lucía señala al cielo, muy seria; Dani abre los ojos de golpe."
+              },
+              {
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Y los relojes de reserva empiezan una cuenta atrás.",
                 "location": "laboratorio",
                 "framing": "objeto",
                 "cast": [],
@@ -827,267 +326,59 @@
                 "walk": false,
                 "camera": "push_in",
                 "sfx": [
-                  "whoosh"
-                ],
-                "visual_direction": "El reloj avanza sin parar: es la cuenta atrás hasta que llegue la nube."
-              },
-              {
-                "label": "HORA 17",
-                "speaker": "narrador",
-                "narration": "Esa noche verías auroras rojas desde Madrid, Sevilla o Canarias.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Javi sale a una calle de Madrid de noche y el cielo, sobre los balcones, se tiñe de rojo."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "javi",
-                "narration": "¡Elena, el cielo está rojo! ¡Es precioso!",
-                "location": "ciudad",
-                "framing": "dos",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "point",
-                "emotion": "contento",
-                "listener_emotion": "serio",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Javi señala el cielo encantado; Elena, a su lado, no sonríe."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "elena",
-                "narration": "No mires al cielo, Javi. Mira los cables.",
-                "location": "ciudad",
-                "framing": "personaje",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "point",
-                "emotion": "asustado",
-                "listener_emotion": "sorprendido",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
                   "hit"
                 ],
-                "visual_direction": "Primer plano de Elena señalando hacia abajo, a los tendidos y las farolas."
-              },
-              {
-                "label": "CLIFFHANGER",
-                "speaker": "narrador",
-                "narration": "Por ellos ya corre una corriente fantasma. Y es solo el principio.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "Las farolas parpadean bajo el cielo rojo mientras Javi y Elena se quedan quietos, mirando cómo la ciudad empieza a fallar."
+                "visual_direction": "Un reloj de bolsillo en marcha sobre la mesa del laboratorio a oscuras; el tictac se hace cada vez más fuerte."
               }
             ],
-            "cliffhanger": "La nube de plasma ya ha llegado: auroras en toda España y corrientes que nadie ha generado corriendo por los cables. ¿Qué pasa cuando llegan a los transformadores?",
-            "caption": "Parte 1/2. Una tormenta solar como la de 1859 te daría solo 17 horas de margen… y las auroras más bonitas de tu vida serían la peor señal. Escenario hipotético explicado con ciencia.",
+            "cliffhanger": "Los mapas y los aviones resisten como pueden, pero se descubre que el GPS es sobre todo un reloj: antenas, bancos y redes eléctricas pasan a depender de relojes de reserva que no duran para siempre.",
+            "caption": "Parte 1/2. Si mañana se apagaran todos los satélites de navegación, el mapa sería lo de menos: el GPS es, en realidad, el reloj del que depende medio mundo. Escenario hipotético explicado con ciencia.",
             "hashtags": [
-              "tormentasolar",
-              "eventocarrington",
+              "YSi",
+              "GPS",
               "ciencia",
-              "espacio",
-              "auroraboreal",
-              "ysi"
+              "tecnologia",
+              "divulgacion",
+              "curiosidades"
             ],
-            "youtube_title": "¿Y si la tormenta solar de 1859 golpeara hoy? Parte 1",
-            "youtube_description": "Parte 1/2. En 1859, una tormenta solar hizo arder los telégrafos y llevó las auroras hasta España. ¿Qué pasaría si llegara hoy una igual? Los primeros minutos y la primera noche, contados paso a paso. Escenario hipotético explicado con ciencia. Fuentes: NASA, NOAA, Tsurutani et al. (2003)."
+            "youtube_title": "¿Y si se apagaran TODOS los GPS? Parte 1",
+            "youtube_description": "Parte 1/2. Qué pasaría en los primeros segundos y horas si se apagaran a la vez GPS, Galileo, GLONASS y BeiDou: móviles, aviones y el reloj atómico que sincroniza bancos y antenas. Escenario hipotético explicado con ciencia."
           },
           {
             "part_number": 2,
             "hook_candidates": [
-              "La aurora más bonita de tu vida podría dejarte sin agua.",
-              "Noventa segundos tardó en apagarse Quebec, con una tormenta más débil.",
-              "Si vivieras bajo esos cables, pronto tu grifo dejaría de echar agua.",
-              "Un transformador revienta en plena noche. Cambiarlo puede llevar dos años.",
-              "En 2012 el Sol disparó una igual. Casi nadie se enteró."
+              "En 2016, trece millonésimas de segundo apagaron emisoras de radio.",
+              "Tu cobertura depende de un reloj que nadie ha visto nunca.",
+              "Si estuvieras pagando con tarjeta, no sabrías qué hora es de verdad.",
+              "La antena ya llevaba horas sin satélite cuando se desincronizó.",
+              "Nadie ha probado nunca una semana entera sin GPS."
             ],
-            "hook_title": "IMAGINA UNA DE VERDAD",
+            "hook_title": "¿CUÁNTO AGUANTAMOS?",
             "blocks": [
               {
                 "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "Noventa segundos tardó en apagarse Quebec, con una tormenta más débil.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "boom"
-                ],
-                "visual_direction": "Las farolas y las ventanas se apagan una tras otra en cadena (el apagón de Quebec de 1989) y Javi se queda a oscuras."
-              },
-              {
-                "label": "SUBE LA APUESTA",
-                "speaker": "narrador",
-                "narration": "La de 1859 era peor: los transformadores no saltan, se queman.",
-                "location": "campo",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": "fuego",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "En mitad del campo, una subestación eléctrica arde en plena noche."
-              },
-              {
-                "label": "DÍA 1",
-                "speaker": "javi",
-                "narration": "¿Y no se cambian y ya está?",
-                "location": "casa",
-                "framing": "personaje",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "shrug",
-                "emotion": "desconfiado",
-                "listener_emotion": "serio",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "En su piso, a oscuras y alumbrado con velas, Javi se encoge de hombros."
-              },
-              {
-                "label": "DÍA 1",
-                "speaker": "elena",
-                "narration": "Son gigantes y se fabrican por encargo.",
-                "location": "casa",
-                "framing": "personaje",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "explain",
-                "emotion": "serio",
-                "listener_emotion": "pensativo",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena explica a la luz de las velas, muy seria."
-              },
-              {
-                "label": "DATO",
-                "speaker": "narrador",
-                "narration": "Fabricar uno nuevo puede llevar uno o dos años.",
+                "narration": "En 2016, trece millonésimas de segundo apagaron emisoras de radio.",
                 "location": "oficina",
                 "framing": "objeto",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "dia",
+                "mood": "noche",
                 "event": null,
-                "prop": "documento",
+                "prop": "periodico",
                 "walk": false,
                 "camera": "push_in",
                 "sfx": [
                   "hit"
                 ],
-                "visual_direction": "Un pedido oficial de transformador con un plazo de entrega muy largo sobre la mesa de una oficina."
+                "visual_direction": "Un periódico sobre una mesa de oficina con la noticia del fallo horario del GPS en 2016."
               },
               {
-                "label": "DÍAS DESPUÉS",
+                "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "Sin luz, en días fallan el agua, la gasolina y las neveras.",
-                "location": "ciudad",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "atardecer",
-                "event": "multitud",
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Una multitud hace cola en la calle esperando agua y combustible mientras cae la tarde."
-              },
-              {
-                "label": "REACCIÓN",
-                "speaker": "javi",
-                "narration": "¿Sin agua? Vale, pero eso no va a pasar, ¿no?",
-                "location": "casa",
-                "framing": "personaje",
-                "cast": [
-                  "javi",
-                  "elena"
-                ],
-                "gesture": "explain",
-                "emotion": "asustado",
-                "listener_emotion": "pensativo",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Javi, nervioso, intenta quitarle importancia con una media sonrisa."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "narrador",
-                "narration": "En 2012, el Sol disparó una igual.",
+                "narration": "Aquello duró horas. Esto sería un apagón total.",
                 "location": "espacio",
                 "framing": "general",
                 "cast": [],
@@ -1095,19 +386,218 @@
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
                 "mood": "noche",
-                "event": "explosion",
+                "event": null,
                 "prop": null,
                 "walk": false,
-                "camera": "shake",
+                "camera": "pull_back",
                 "sfx": [
                   "whoosh"
                 ],
-                "visual_direction": "Desde la Luna, otra erupción enorme sale del Sol en julio de 2012."
+                "visual_direction": "La Tierra girando en el cielo negro, sin una sola luz de satélite a su alrededor."
+              },
+              {
+                "label": "HORAS DESPUÉS",
+                "speaker": "narrador",
+                "narration": "Horas después, las antenas viven de su reloj de reserva.",
+                "location": "casa",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Dani, en el sofá de su piso de noche, mira el móvil con la ciudad iluminada tras el ventanal."
+              },
+              {
+                "label": "HORAS DESPUÉS",
+                "speaker": "narrador",
+                "narration": "Aguantan horas o días. Después, se desincronizan.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "movil",
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "visual_direction": "Primer plano del móvil: los mensajes del chat tardan en salir y aparece el aviso de error."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "dani",
+                "narration": "Espera, ¿me quedo sin cobertura en casa?",
+                "location": "casa",
+                "framing": "personaje",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "point",
+                "emotion": "asustado",
+                "listener_emotion": "serio",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Dani señala el móvil, agobiado; Lucía ha bajado a su piso a ver cómo está."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "lucia",
+                "narration": "Llamadas cortadas, datos lentos... Depende de cada operador.",
+                "location": "casa",
+                "framing": "personaje",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "shrug",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Lucía se encoge de hombros: nadie puede asegurar cuánto aguantará cada red."
+              },
+              {
+                "label": "DÍAS DESPUÉS",
+                "speaker": "narrador",
+                "narration": "La bolsa fecha cada operación al microsegundo.",
+                "location": "oficina",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Una oficina de rascacielos de noche, con las pantallas encendidas y los ordenadores en marcha."
+              },
+              {
+                "label": "DÍAS DESPUÉS",
+                "speaker": "narrador",
+                "narration": "Salvavidas: relojes atómicos en tierra, como los de la Armada en Cádiz.",
+                "location": "laboratorio",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Un laboratorio con fórmulas en la pizarra y equipos encendidos: la hora llega por cable, sin satélites."
               },
               {
                 "label": "GIRO",
+                "speaker": "dani",
+                "narration": "¿Y la luz? ¿Se va la luz?",
+                "location": "casa",
+                "framing": "personaje",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "explain",
+                "emotion": "asustado",
+                "listener_emotion": "pensativo",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "visual_direction": "Dani mira la lámpara del salón, temiendo que se apague de un momento a otro."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "lucia",
+                "narration": "No de golpe, pero la red pierde vigilancia.",
+                "location": "casa",
+                "framing": "personaje",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "desconfiado",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Lucía, con la mano en la barbilla, matiza; Dani no se queda tranquilo."
+              },
+              {
+                "label": "EL PRECIO",
                 "speaker": "narrador",
-                "narration": "Una semana antes, y nos habría dado de lleno.",
+                "narration": "Solo en Estados Unidos, unos mil millones de dólares al día.",
+                "location": "oficina",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "monedas",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Un montón de monedas de oro sobre una mesa de oficina que empieza a desmoronarse."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "lucia",
+                "narration": "Lo peor: nadie ha probado nunca una semana así.",
+                "location": "casa",
+                "framing": "dos",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "idle",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Lucía y Dani, juntos en el sofá en penumbra, miran por el ventanal la ciudad aún encendida."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "Cada día, sin saberlo, miras la hora a veinte mil kilómetros.",
                 "location": "espacio",
                 "framing": "objeto",
                 "cast": [],
@@ -1120,89 +610,33 @@
                 "walk": false,
                 "camera": "pull_back",
                 "sfx": [
-                  "hit"
+                  "whoosh"
                 ],
-                "visual_direction": "La Tierra gira tranquila mientras la nube de plasma cruza el punto de la órbita por donde había pasado días antes."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "elena",
-                "narration": "Y nadie sabe cuándo llegará la siguiente.",
-                "location": "laboratorio",
-                "framing": "dos",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "shrug",
-                "emotion": "pensativo",
-                "listener_emotion": "asustado",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Elena y Javi, de vuelta en el laboratorio; ella se encoge de hombros con honestidad."
-              },
-              {
-                "label": "DATO FINAL",
-                "speaker": "narrador",
-                "narration": "Los cálculos: de menos del uno al doce por ciento por década.",
-                "location": "laboratorio",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": "reloj",
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "El reloj sigue en marcha sobre la mesa del laboratorio, junto a la pizarra llena de fórmulas."
-              },
-              {
-                "label": "CIERRE",
-                "speaker": "elena",
-                "narration": "Si algún día ves auroras en España, disfrútalas… y mira los cables.",
-                "location": "costa",
-                "framing": "dos",
-                "cast": [
-                  "elena",
-                  "javi"
-                ],
-                "gesture": "point",
-                "emotion": "burlon",
-                "listener_emotion": "pensativo",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Elena y Javi, en el muelle de un pueblo costero de noche, miran el cielo; ella señala con media sonrisa y la cámara se aleja."
+                "visual_direction": "La Tierra girando sola en el espacio mientras la cámara se aleja hasta la altura de los satélites."
               }
             ],
-            "cliffhanger": "Cierre: una tormenta como la de Carrington podría dejar a regiones enteras sin luz durante meses, y en 2012 nos libramos por una semana. La probabilidad es incierta, pero no es cero.",
-            "caption": "Parte 2/2. Con una tormenta más débil, Quebec se quedó a oscuras en 90 segundos. En 2012, una como la de 1859 nos esquivó por una semana. Escenario hipotético explicado con ciencia.",
+            "cliffhanger": "Cierre: sin satélites, las antenas, la bolsa y la red eléctrica sobreviven solo un tiempo con relojes de reserva y relojes atómicos en tierra. El coste rondaría los mil millones de dólares diarios en EE. UU., y nadie sabe cómo sería una semana entera sin GNSS. Dato final: tu hora diaria viene de relojes situados a unos 20.000 km.",
+            "caption": "Parte 2/2. En 2016 bastó un error de 13 millonésimas de segundo en el GPS para tumbar emisoras de radio. ¿Qué pasaría con un apagón total de satélites durante días? Escenario hipotético explicado con ciencia.",
             "hashtags": [
-              "tormentasolar",
-              "eventocarrington",
-              "apagon",
+              "YSi",
+              "GPS",
               "ciencia",
-              "espacio",
-              "ysi"
+              "relojatomico",
+              "tecnologia",
+              "divulgacion"
             ],
-            "youtube_title": "¿Y si la tormenta solar de 1859 golpeara hoy? Parte 2",
-            "youtube_description": "Parte 2/2. Transformadores quemados, meses sin luz y la tormenta solar de 2012 que estuvo a punto de alcanzarnos. Escenario hipotético explicado con ciencia. Fuentes: NASA, Lloyd's y AER (2013), Academias Nacionales de EE. UU. (2008), Baker et al. (2013), Riley (2012) y Moriña et al. (2019)."
+            "youtube_title": "¿Y si se apagaran TODOS los GPS? Lo que pasa después | Parte 2",
+            "youtube_description": "Parte 2/2. Días sin GPS ni Galileo: antenas de móvil que se desincronizan, una bolsa que mide en microsegundos, una red eléctrica con menos vigilancia y un coste estimado de 1.000 millones de dólares al día en EE. UU. (RTI/NIST, 2019). Escenario hipotético explicado con ciencia."
           }
         ]
       },
       "part": 1
     }
   ],
-  "last_published": null,
-  "scheduled": []
+  "last_published": "2026-11-19T15:19:48+00:00",
+  "scheduled": [
+    "2026-11-19T18:00:00+01:00",
+    "2026-11-19T21:00:00+01:00",
+    "2026-11-20T12:00:00+01:00"
+  ]
 }
