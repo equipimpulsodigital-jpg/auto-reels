@@ -76,7 +76,7 @@ channels:
   # Marcas nuevas: empiezan con 3 vídeos al día (cambia `slots` para subir o bajar).
   conexionconchispa:
     name: Conexión con Chispa
-    enabled: false            # EN PAUSA hasta que se aprueben los vídeos de prueba
+    enabled: true
     profile: conexionconchispa
     platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
     prompt: prompts/conexionconchispa.md
@@ -88,7 +88,7 @@ channels:
       psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
   lacabezapordentro:
     name: La Cabeza por Dentro
-    enabled: false            # EN PAUSA hasta que se aprueben los vídeos de prueba
+    enabled: true
     profile: lacabezapordentro
     platforms: [instagram, youtube]   # TikTok: añadir cuando esté conectado
     prompt: prompts/lacabezapordentro.md
@@ -100,7 +100,7 @@ channels:
       como_salir: "Cómo salir de ahí: un problema cotidiano y una herramienta práctica con respaldo"
   ysiciencia:
     name: ¿Y si…?
-    enabled: false            # EN PAUSA hasta que se aprueben los vídeos de prueba
+    enabled: true
     profile: ysiciencia               # perfil de Upload-Post (las cuentas son @ysiciencia2)
     platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
     prompt: prompts/ysiciencia.md
