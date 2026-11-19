@@ -58,7 +58,7 @@ channels:
     name: Historia oscura de España
     enabled: true             # false = no genera ni publica nada
     profile: bien_contadas    # nombre exacto del perfil en Upload-Post
-    platforms: [instagram, youtube]   # añade tiktok cuando esté conectado en Upload-Post
+    platforms: [instagram, youtube, tiktok]
     prompt: prompts/bien_contadas.md
     accent_color: "#E2A84B"
     formats:
@@ -68,7 +68,7 @@ channels:
     name: Archivo del Misterio
     enabled: true
     profile: elanecdotario
-    platforms: [instagram, youtube]
+    platforms: [instagram, youtube, tiktok]
     prompt: prompts/elanecdotario.md
     accent_color: "#7FD1C7"
     formats:
@@ -79,7 +79,7 @@ channels:
     name: Conexión con Chispa
     enabled: true
     profile: conexionconchispa
-    platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
+    platforms: [instagram, youtube, tiktok]
     prompt: prompts/conexionconchispa.md
     accent_color: "#FF6B8A"
     max_parts: 2
@@ -101,7 +101,7 @@ channels:
     name: ¿Y si…?
     enabled: true
     profile: ysiciencia               # perfil de Upload-Post (las cuentas son @ysiciencia2)
-    platforms: [instagram, youtube]   # TikTok: añadir cuando el perfil esté terminado
+    platforms: [instagram, youtube, tiktok]
     prompt: prompts/ysiciencia.md
     accent_color: "#4FC3F7"
     formats:
