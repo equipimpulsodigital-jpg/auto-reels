@@ -5,6 +5,52 @@
     "topic": "La brecha de agrado (liking gap): tras charlar con alguien creemos que le caímos peor de lo que en realidad le caímos (Boothby et al., 2018)",
     "series_title": "Le caíste mejor de lo que crees",
     "parts": 1,
-    "published_parts": []
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T18:00:00+01:00",
+        "request_id": "e083dac80184403887c7c31f98f9bb6c",
+        "job_id": "33aab971d9634b6fbc05e9dbad37dd41",
+        "failed": [],
+        "at": "2026-11-19T15:07:52+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "format": "como_salir",
+    "topic": "Paradoja de Salomón (aconsejamos mejor a otros que a nosotros) y la herramienta del autodistanciamiento: hablarse en tercera persona con el propio nombre (Kross et al., 2014)",
+    "series_title": "La paradoja de Salomón: háblate por tu nombre",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T21:00:00+01:00",
+        "request_id": "c57e79f262eb40d7b4326bbb086a04fd",
+        "job_id": "34f1d385fee24f56af7aabc3e66e9aa2",
+        "failed": [],
+        "at": "2026-11-19T15:14:37+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "format": "por_que",
+    "topic": "Efecto puerta (doorway effect): cruzar un umbral hace olvidar a qué ibas porque el cerebro organiza la memoria por escenas (Radvansky et al., 2011)",
+    "series_title": "Por qué olvidas a qué venías al cruzar una puerta",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T12:00:00+01:00",
+        "request_id": "a1436c84915c4731b0ec499b0898e279",
+        "job_id": "acad659874ca46f1b0f9265e06ec030e",
+        "failed": [],
+        "at": "2026-11-19T15:20:58+00:00"
+      }
+    ]
   }
 ]
