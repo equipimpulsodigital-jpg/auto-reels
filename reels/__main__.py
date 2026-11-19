@@ -255,7 +255,14 @@ def main() -> int:
     ap.add_argument("--unlabel", action="store_true", help="quita la etiqueta de IA de las publicaciones ya programadas")
     ap.add_argument("--compile", action="store_true", help="recopilación semanal para YouTube (con --clips)")
     ap.add_argument("--clips", action="append", default=[], help="carpeta con vídeos ya publicados (se puede repetir)")
+    ap.add_argument("--accounts", action="store_true", help="enlaces de las cuentas conectadas en Upload-Post")
     args = ap.parse_args()
+    if args.accounts:
+        from .publish import list_accounts
+        cfg = load_config(args.channel)
+        print(f"== {cfg['channel']['name']} (perfil {cfg['channel']['profile']}) ==")
+        list_accounts(cfg["channel"]["profile"])
+        return 0
     if args.compile:
         return compile_week(load_config(args.channel), args)
     if args.unlabel:

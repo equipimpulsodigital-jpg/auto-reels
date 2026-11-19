@@ -84,6 +84,29 @@ def publish_youtube(video: Path, title: str, description: str, tags: list[str], 
     return result
 
 
+def list_accounts(profile: str) -> None:
+    """Cuentas conectadas a un perfil de Upload-Post, con su enlace público."""
+    headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
+    r = requests.get(f"{API}/uploadposts/users/{profile}", headers=headers, timeout=60)
+    if r.status_code >= 400:
+        print(f"  {profile}: error {r.status_code} {r.text[:200]}")
+        return
+    data = r.json()
+    prof = data.get("profile") or data.get("user") or data
+    accounts = prof.get("social_accounts") or {}
+    for platform, acc in sorted(accounts.items()):
+        if not isinstance(acc, dict) or not acc:
+            continue
+        handle = (acc.get("handle") or "").lstrip("@")
+        uid = acc.get("username") or ""
+        url = {"instagram": f"https://www.instagram.com/{handle}/" if handle else "",
+               "tiktok": f"https://www.tiktok.com/@{handle}" if handle else "",
+               "youtube": f"https://www.youtube.com/@{handle}" if handle else f"https://www.youtube.com/channel/{uid}",
+               "facebook": f"https://www.facebook.com/{uid}" if uid else ""}.get(platform, "")
+        warn = "  ⚠ hay que reconectarla" if acc.get("reauth_required") else ""
+        print(f"  {platform:10} {acc.get('display_name') or ''} (@{handle}) {url}{warn}")
+
+
 _AI_FLAGS = ("is_aigc", "containsSyntheticMedia", "is_ai_generated", "made_with_ai",
              "facebook_is_ai_generated", "threads_is_made_with_ai")
 

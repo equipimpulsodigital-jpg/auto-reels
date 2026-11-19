@@ -19,7 +19,7 @@ on:
       mode:
         description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya · estado = cómo acabaron las últimas publicaciones"
         type: choice
-        options: [prueba, programar, ahora, estado, quitar_etiqueta]
+        options: [prueba, programar, ahora, estado, quitar_etiqueta, cuentas]
         default: prueba
       new_story:
         description: "Empezar historia nueva (aunque quede una parte pendiente)"
@@ -72,6 +72,7 @@ jobs:
             echo "go=false" >> "$GITHUB_OUTPUT"; echo "Este canal no se ha elegido."; exit 0
           fi
           if [ "${{ inputs.mode }}" = "estado" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "status=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "${{ inputs.mode }}" = "cuentas" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "accounts=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ inputs.mode }}" = "quitar_etiqueta" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "unlabel=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           line=$(python -m reels --check | awk -v c="$CH" '$1 == c')
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -99,6 +100,14 @@ jobs:
         run: |
           pip install -q requests
           python -m reels --unlabel --channel "$CH"
+
+      - name: Cuentas conectadas
+        if: steps.todo.outputs.accounts == 'true'
+        env:
+          UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+        run: |
+          pip install -q requests
+          python -m reels --accounts --channel "$CH"
 
       - name: Instalar FFmpeg y librerías gráficas
         if: steps.todo.outputs.go == 'true'
