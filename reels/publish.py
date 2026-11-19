@@ -15,6 +15,33 @@ from .script import Part
 API = "https://api.upload-post.com/api"
 
 
+class LimitReached(RuntimeError):
+    """No quedan publicaciones en el plan de Upload-Post: no tiene sentido seguir generando vídeos."""
+
+
+def report(ids: list[str]) -> None:
+    """Muestra cómo acabó cada publicación (sin publicar nada). Solo plataforma, resultado, enlace y error."""
+    headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
+    for rid in ids:
+        for key in ("request_id", "job_id"):
+            try:
+                r = requests.get(f"{API}/uploadposts/status", headers=headers, params={key: rid}, timeout=60)
+                st = r.json()
+            except (requests.RequestException, ValueError) as e:
+                print(f"  {rid}: error consultando ({e})")
+                break
+            if r.status_code == 404 or str(st.get("status", "")).lower() == "not_found":
+                continue
+            print(f"  {rid} ({key}): estado={st.get('status')} {st.get('message') or st.get('error') or ''}")
+            for res in st.get("results") or []:
+                ok = "OK " if res.get("success") else "ERROR"
+                print(f"    [{ok}] {res.get('platform')}: {res.get('post_url') or res.get('url') or ''} "
+                      f"{res.get('error_message') or res.get('message') or res.get('error') or ''}"[:600])
+            break
+        else:
+            print(f"  {rid}: Upload-Post no lo encuentra")
+
+
 def _caption(script: Part, total_parts: int = 1) -> str:
     tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in script.hashtags)
     follow = f"\n\nSígueme para la parte {script.part_number + 1}" if script.part_number < total_parts else ""
@@ -54,6 +81,8 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_pa
     with open(video, "rb") as f:
         r = requests.post(f"{API}/upload", headers=headers, data=fields,
                           files={"video": (video.name, f, "video/mp4")}, timeout=1200)
+    if r.status_code == 429 and "limit" in r.text:
+        raise LimitReached(f"Upload-Post: límite del plan alcanzado ({r.text[:300]})")
     if r.status_code >= 400:
         raise RuntimeError(f"Upload-Post respondió {r.status_code}: {r.text[:2000]}")
     result = r.json()

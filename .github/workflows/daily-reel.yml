@@ -17,9 +17,9 @@ on:
         options: [todos, bien_contadas, elanecdotario]
         default: todos
       mode:
-        description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya"
+        description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya · estado = cómo acabaron las últimas publicaciones"
         type: choice
-        options: [prueba, programar, ahora]
+        options: [prueba, programar, ahora, estado]
         default: prueba
       new_story:
         description: "Empezar historia nueva (aunque quede una parte pendiente)"
@@ -61,10 +61,20 @@ jobs:
         id: todo
         run: |
           pip install -q pyyaml
+          if [ "${{ inputs.mode }}" = "estado" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           python -m reels --check | tee pending.txt
           if awk '$2 > 0 {found=1} END {exit !found}' pending.txt; then echo "go=true" >> "$GITHUB_OUTPUT"
           else echo "go=false" >> "$GITHUB_OUTPUT"; echo "Todo programado: nada que hacer."; fi
+
+      - name: Estado de las últimas publicaciones
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'estado'
+        env:
+          UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+        run: |
+          pip install -q requests pydantic anthropic
+          C="${{ inputs.channel }}"; [ "$C" = "todos" ] && C=bien_contadas
+          python -m reels --status --channel "$C"
 
       - name: Instalar FFmpeg y librerías gráficas
         if: steps.todo.outputs.go == 'true'

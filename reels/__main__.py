@@ -179,7 +179,7 @@ def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, 
         if h["series_title"] == series.series_title:
             h["published_parts"].append({"part": part.part_number, "date": (slot or datetime.now()).date().isoformat(),
                                          "slot": slot.isoformat() if slot else None,
-                                         "request_id": result.get("request_id") or result.get("job_id"),
+                                         "request_id": result.get("request_id"), "job_id": result.get("job_id"),
                                          "failed": failed, "at": now})
             break
     _save(cfg, "history.json", history)
@@ -200,7 +200,16 @@ def main() -> int:
     ap.add_argument("--format", help="formato de la historia nueva (ver formats del canal en config.yaml)")
     ap.add_argument("--force", action="store_true", help="publica aunque el canal esté en pausa (enabled: false)")
     ap.add_argument("--check", action="store_true", help="lista los canales activos y sus franjas pendientes")
+    ap.add_argument("--status", action="store_true", help="consulta en Upload-Post cómo acabaron las últimas publicaciones")
     args = ap.parse_args()
+    if args.status:
+        from .publish import report
+        cfg = load_config(args.channel)
+        recent = [p for h in _load(cfg, "history.json", []) for p in h.get("published_parts", [])][-8:]
+        for p in recent:
+            print(f"Parte {p['part']} · {p.get('slot') or p.get('date')}")
+            report([i for i in (p.get("request_id"), p.get("job_id")) if i])
+        return 0
     if args.check:
         for cid in load_config().get("channels", {}):
             c = load_config(cid)
@@ -239,6 +248,7 @@ def main() -> int:
         print("Todas las franjas de las próximas 24 h ya tienen vídeo programado.")
         _save(cfg, "state.json", state)
         return 0
+    from .publish import LimitReached
     print("Franjas por programar:", ", ".join(f"{s:%d/%m %H:%M}" for s in slots))
     errors = 0
     for slot in slots:
@@ -246,6 +256,10 @@ def main() -> int:
         try:
             video, series, part = make_episode(cfg, state, history, args, f"{slot:%Y%m%d_%H%M}")
             ok = publish_episode(cfg, state, history, video, series, part, slot)
+        except LimitReached as e:
+            print(f"{e}\nSe para aquí: contrata un plan con más publicaciones o espera al reinicio mensual.", file=sys.stderr)
+            errors += 1
+            break
         except Exception as e:  # una franja fallida no impide preparar las siguientes
             print(f"Error en la franja {slot:%H:%M}: {e}", file=sys.stderr)
             ok = False
