@@ -65,7 +65,7 @@ channels:
       crimen_historico: "Crimen, conspiración o suceso oscuro real de la historia de España"
   elanecdotario:
     name: Historias de misterio
-    enabled: false            # EN PAUSA: se está preparando el perfil (nombre, imagen, descripciones)
+    enabled: true
     profile: elanecdotario
     platforms: [instagram, youtube]
     prompt: prompts/elanecdotario.md
