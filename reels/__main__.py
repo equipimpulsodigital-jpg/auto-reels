@@ -195,6 +195,51 @@ def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, 
     return True
 
 
+def compile_week(cfg: dict, args) -> int:
+    from pathlib import Path
+
+    from . import compile as C
+
+    ch, cc = cfg["channel"], cfg.get("compilation", {})
+    print(f"== Recopilación · {ch['name']} ==")
+    if not cc.get("enabled", True) or not ch.get("enabled", True):
+        print("Recopilaciones o canal desactivados.")
+        return 0
+    slot = C.next_slot(cfg)
+    week = f"{slot.isocalendar()[0]}-W{slot.isocalendar()[1]:02d}"
+    done = _load(cfg, "compilations.json", [])
+    if any(c.get("week") == week for c in done) and not args.dry_run:
+        print(f"La recopilación de la semana {week} ya está hecha.")
+        return 0
+    roots = [Path(p) for p in (args.clips or [str(OUT)])]
+    clips = C.find_clips(ch["id"], roots)
+    stories = C.pick_stories(cfg, clips, float(cc.get("max_minutes", 20)))
+    print(f"  {len(clips)} vídeos disponibles · {len(stories)} historias completas: "
+          + "; ".join(s["title"] for s in stories))
+    if len(stories) < int(cc.get("min_stories", 3)):
+        print(f"  Hacen falta al menos {cc.get('min_stories', 3)} historias completas: esta semana no hay recopilación.")
+        return 0
+    workdir = OUT / f"{ch['id']}_recopilacion_{week}"
+    video, chapters = C.build_video(stories, workdir)
+    texts = C.make_texts(cfg, stories, chapters, slot)
+    thumb = C.thumbnail(texts["thumb_text"], stories[0]["dirs"][0] / "reel.mp4", ch.get("accent_color", "#E2A84B"),
+                        workdir / "miniatura.jpg")
+    (workdir / "textos.json").write_text(json.dumps(texts, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  vídeo: {video} ({C._ts(sum(s['seconds'] for s in stories))}) · título: {texts['title']}")
+    if args.dry_run:
+        print("Modo prueba: no se publica.")
+        return 0
+    from .publish import publish_youtube
+    result = publish_youtube(video, texts["title"], texts["description"], texts["tags"], cfg,
+                             key=f"{ch['id']}-recopilacion-{week}", scheduled_at=slot, thumb=thumb)
+    done.append({"week": week, "slot": slot.isoformat(), "title": texts["title"],
+                 "stories": [s["title"] for s in stories],
+                 "request_id": result.get("request_id"), "job_id": result.get("job_id")})
+    _save(cfg, "compilations.json", done)
+    print(f"Recopilación programada para {slot:%d/%m %H:%M}.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Episodios automáticos por canal")
     ap.add_argument("--channel", help="canal de config.yaml (por defecto, el primero)")
@@ -208,7 +253,11 @@ def main() -> int:
     ap.add_argument("--check", action="store_true", help="lista los canales activos y sus franjas pendientes")
     ap.add_argument("--status", action="store_true", help="consulta en Upload-Post cómo acabaron las últimas publicaciones")
     ap.add_argument("--unlabel", action="store_true", help="quita la etiqueta de IA de las publicaciones ya programadas")
+    ap.add_argument("--compile", action="store_true", help="recopilación semanal para YouTube (con --clips)")
+    ap.add_argument("--clips", action="append", default=[], help="carpeta con vídeos ya publicados (se puede repetir)")
     args = ap.parse_args()
+    if args.compile:
+        return compile_week(load_config(args.channel), args)
     if args.unlabel:
         from .publish import unlabel_scheduled
         unlabel_scheduled(load_config(args.channel)["channel"]["profile"])

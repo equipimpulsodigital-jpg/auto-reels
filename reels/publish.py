@@ -52,6 +52,38 @@ def _clean(text: str) -> str:
     return _DROP.sub("", text).strip()
 
 
+def publish_youtube(video: Path, title: str, description: str, tags: list[str], cfg: dict, key: str,
+                    scheduled_at: Optional[datetime] = None, thumb: Optional[Path] = None) -> dict:
+    """Vídeo largo solo en YouTube (recopilaciones), programado a la hora indicada."""
+    pcfg = cfg["publish"]
+    ai = "true" if pcfg.get("label_as_ai", False) else "false"
+    fields = [("user", cfg["channel"]["profile"]), ("platform[]", "youtube"), ("title", title[:100]),
+              ("youtube_title", title[:100]), ("youtube_description", description[:5000]),
+              ("privacyStatus", pcfg.get("youtube_privacy", "public")), ("selfDeclaredMadeForKids", "false"),
+              ("containsSyntheticMedia", ai), ("defaultLanguage", "es"), ("defaultAudioLanguage", "es"),
+              ("external_id", key)]
+    fields += [("tags[]", t) for t in tags]
+    if scheduled_at is not None:
+        fields += [("scheduled_date", scheduled_at.strftime("%Y-%m-%dT%H:%M:%S")),
+                   ("timezone", pcfg.get("timezone", "Europe/Madrid"))]
+    else:
+        fields.append(("async_upload", "true"))
+    headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}", "Idempotency-Key": key}
+    files = {"video": (video.name, open(video, "rb"), "video/mp4")}
+    if thumb and thumb.exists():
+        files["thumbnail"] = (thumb.name, open(thumb, "rb"), "image/jpeg")
+    try:
+        r = requests.post(f"{API}/upload", headers=headers, data=fields, files=files, timeout=3600)
+    finally:
+        for f in files.values():
+            f[1].close()
+    if r.status_code >= 400:
+        raise RuntimeError(f"Upload-Post respondió {r.status_code}: {r.text[:1000]}")
+    result = r.json()
+    print("  Upload-Post:", json.dumps(result, ensure_ascii=False)[:800])
+    return result
+
+
 _AI_FLAGS = ("is_aigc", "containsSyntheticMedia", "is_ai_generated", "made_with_ai",
              "facebook_is_ai_generated", "threads_is_made_with_ai")
 

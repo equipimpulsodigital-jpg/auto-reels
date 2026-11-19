@@ -52,6 +52,14 @@ publish:
   label_as_ai: false          # etiqueta «hecho con IA» de cada red (no hace falta para animación)
   youtube_privacy: public     # public | unlisted | private
 
+# Recopilación semanal para YouTube: un vídeo largo con las historias completas de la semana.
+compilation:
+  enabled: true
+  weekday: 6                  # 0 = lunes ... 6 = domingo
+  time: "11:00"
+  min_stories: 3              # si hay menos historias completas, esa semana no se hace
+  max_minutes: 20
+
 # Canales: cada uno es un perfil de Upload-Post con su temática, su guionista y su historial.
 channels:
   bien_contadas:
@@ -61,6 +69,12 @@ channels:
     platforms: [instagram, youtube, tiktok]
     prompt: prompts/bien_contadas.md
     accent_color: "#E2A84B"
+    compilation_titles:
+      - "{n} historias oscuras de España que no te contaron en el colegio"
+      - "{n} momentos en que España estuvo a punto de cambiar para siempre"
+      - "Historia oscura de España: {n} casos reales, de principio a fin"
+    compilation_thumb: "{n} historias que no te contaron"
+    compilation_tags: [historiadeespaña, historia, españa, crimenesreales, recopilacion]
     formats:
       punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
       crimen_historico: "Crimen, conspiración o suceso oscuro real de la historia de España"
@@ -71,6 +85,12 @@ channels:
     platforms: [instagram, youtube, tiktok]
     prompt: prompts/elanecdotario.md
     accent_color: "#7FD1C7"
+    compilation_titles:
+      - "{n} misterios reales que nadie ha sabido explicar"
+      - "{n} casos sin resolver para escuchar con la luz encendida"
+      - "Archivo del Misterio: {n} enigmas reales, de principio a fin"
+    compilation_thumb: "{n} misterios sin resolver"
+    compilation_tags: [misterio, casossinresolver, enigmas, misterios, recopilacion]
     formats:
       caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
       enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"
@@ -83,6 +103,12 @@ channels:
     prompt: prompts/conexionconchispa.md
     accent_color: "#FF6B8A"
     max_parts: 2
+    compilation_titles:
+      - "{n} trucos para ligar y conectar con cualquiera (sin parecer raro)"
+      - "Cómo romper el hielo: {n} trucos que funcionan de verdad"
+      - "{n} errores que matan una cita (y qué hacer en su lugar)"
+    compilation_thumb: "{n} trucos que funcionan"
+    compilation_tags: [ligar, citas, romperelhielo, habilidadessociales, recopilacion]
     formats:
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
       psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
@@ -94,6 +120,12 @@ channels:
     prompt: prompts/lacabezapordentro.md
     accent_color: "#A08CFF"
     max_parts: 2
+    compilation_titles:
+      - "{n} cosas que hace tu cerebro y no sabías por qué"
+      - "Psicología cotidiana: {n} explicaciones que te van a cambiar el día"
+      - "{n} razones por las que haces lo que haces"
+    compilation_thumb: "Tu cerebro te engaña"
+    compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
     formats:
       por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
       como_salir: "Cómo salir de ahí: un problema cotidiano y una herramienta práctica con respaldo"
@@ -104,6 +136,12 @@ channels:
     platforms: [instagram, youtube, tiktok]
     prompt: prompts/ysiciencia.md
     accent_color: "#4FC3F7"
+    compilation_titles:
+      - "¿Y si...? {n} escenarios imposibles explicados con ciencia"
+      - "{n} preguntas imposibles que la ciencia sí puede responder"
+      - "Qué pasaría si...: {n} escenarios que te volarán la cabeza"
+    compilation_thumb: "¿Qué pasaría si...?"
+    compilation_tags: [ciencia, quepasariasi, espacio, curiosidades, recopilacion]
     formats:
       y_si_planeta: "¿Y si... el planeta? La Tierra, el espacio o la naturaleza en un escenario imposible"
       y_si_nosotros: "¿Y si... nosotros? El cuerpo humano, la tecnología o la sociedad en un escenario imposible"

@@ -28,6 +28,13 @@ propios → subtítulos → FFmpeg → Upload-Post (programado a la hora exacta)
   **programados en Upload-Post** a esas horas. Así da igual que GitHub se retrase (le pasa a menudo).
 - Hay ejecuciones de reserva (madrugada y mediodía): si ya está todo programado, terminan en segundos.
 
+## Recopilación semanal (YouTube)
+
+Cada sábado por la noche, `weekly-compilation.yml` junta las historias completas de la semana de cada marca
+en un vídeo largo horizontal (con capítulos y miniatura) y lo programa en YouTube para el domingo a las
+11:00 (`config.yaml` → `compilation`; títulos en `compilation_titles` de cada canal). Usa los vídeos que
+GitHub guarda 14 días, así que no gasta Claude. Para probar: *Actions → Recopilación semanal → Run workflow*.
+
 ## Añadir o activar un canal
 
 1. En Upload-Post, crea el perfil y conecta sus redes.

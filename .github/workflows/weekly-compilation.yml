@@ -1,0 +1,111 @@
+name: Recopilación semanal (YouTube)
+
+on:
+  schedule:
+    # Sábado por la noche: prepara la recopilación y la deja programada para el domingo a las 11:00
+    # (config.yaml → compilation). La segunda es de reserva por si GitHub se salta la primera.
+    - cron: "20 20 * * 6"
+    - cron: "20 4 * * 0"
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Canal"
+        type: choice
+        options: [todos, bien_contadas, elanecdotario, conexionconchispa, lacabezapordentro, ysiciencia]
+        default: todos
+      dry_run:
+        description: "Solo generar el vídeo y la miniatura (no publicar)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  compilation:
+    strategy:
+      fail-fast: false
+      matrix:
+        channel: [bien_contadas, elanecdotario, conexionconchispa, lacabezapordentro, ysiciencia]
+    concurrency:
+      group: compilation-${{ matrix.channel }}
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      CH: ${{ matrix.channel }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: ¿Toca este canal?
+        id: go
+        run: |
+          want="${{ inputs.channel }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$want" != "todos" ] && [ "$want" != "$CH" ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "Este canal no se ha elegido."
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.go.outputs.go == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.go.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        if: steps.go.outputs.go == 'true'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q pyyaml requests pillow
+
+      - name: Descargar los vídeos publicados (últimos 13 días)
+        if: steps.go.outputs.go == 'true'
+        run: |
+          since=$(date -u -d '13 days ago' +%Y-%m-%dT%H:%M:%SZ)
+          ids=$(gh run list -R "$GITHUB_REPOSITORY" -w daily-reel.yml -L 300 --json databaseId,createdAt \
+                --jq ".[] | select(.createdAt > \"$since\") | .databaseId")
+          for id in $ids; do
+            gh run download "$id" -R "$GITHUB_REPOSITORY" -p "reel-$CH-*" -D "clips/$id" 2>/dev/null || true
+            gh run download "$id" -R "$GITHUB_REPOSITORY" -p "reel-[0-9]*" -D "clips/$id" 2>/dev/null || true
+          done
+          find clips -name reel.mp4 -path "*${CH}_*" | wc -l
+
+      - name: Montar y programar la recopilación
+        if: steps.go.outputs.go == 'true'
+        env:
+          UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+          TZ: Europe/Madrid
+        run: |
+          ARGS=()
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then ARGS+=(--dry-run); fi
+          python -m reels --compile --channel "$CH" --clips clips "${ARGS[@]}"
+
+      - name: Guardar vídeo y miniatura
+        if: always() && steps.go.outputs.go == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: recopilacion-${{ matrix.channel }}-${{ github.run_id }}
+          path: |
+            out/*recopilacion*/recopilacion.mp4
+            out/*recopilacion*/miniatura.jpg
+            out/*recopilacion*/textos.json
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Guardar registro de recopilaciones
+        if: always() && steps.go.outputs.go == 'true'
+        run: |
+          git config user.name "reels-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "data/$CH" || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Recopilación $CH: $(date +%F)"
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase -q && git push -q && exit 0
+            sleep $((i * 7))
+          done
+          exit 1
