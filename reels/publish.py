@@ -5,12 +5,13 @@ import json
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import TYPE_CHECKING, Optional
 
 import requests
 
 from .config import env
-from .script import Part
+if TYPE_CHECKING:  # solo para anotaciones: así «--status» no necesita la animación
+    from .script import Part
 
 API = "https://api.upload-post.com/api"
 
