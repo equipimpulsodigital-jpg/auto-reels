@@ -81,7 +81,41 @@
     "topic": "Kardas, Kumar y Epley (2022): creemos que las conversaciones profundas con desconocidos serán incómodas, pero conectan más; consejo: cambiar una pregunta de trámite por una de verdad",
     "series_title": "La pregunta profunda que da miedo hacer (y conecta más)",
     "parts": 1,
-    "published_parts": [],
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T10:00:00+01:00",
+        "request_id": "1b483dc89b3b489daa9af34026abc8a3",
+        "job_id": "0f373df7632640dc9c7d2034ec93b7b8",
+        "failed": [],
+        "at": "2026-11-19T21:05:13+00:00"
+      }
+    ],
     "book": null
+  },
+  {
+    "date": "2026-11-19",
+    "format": "antes_despues",
+    "topic": "Subestimamos cuánto alegra un cumplido (Zhao y Epley, 2021): en una cita, dilo en voz alta y sobre lo que la otra persona hace, no sobre su físico",
+    "series_title": "El cumplido que te tragas",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T16:00:00+01:00",
+        "request_id": "687fd6dd9bc04afbba979b35260f7077",
+        "job_id": "c1cedefcaa91400fb09ec19d9b774212",
+        "failed": [],
+        "at": "2026-11-19T21:14:35+00:00"
+      }
+    ],
+    "book": {
+      "title": "Supercomunicadores",
+      "author": "Charles Duhigg",
+      "pitch": "Por qué con algunas personas conectamos al momento y cómo aprender a hacerlo con cualquiera.",
+      "looked_up": true
+    }
   }
 ]
