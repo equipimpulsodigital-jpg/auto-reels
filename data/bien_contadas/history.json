@@ -66,6 +66,69 @@
         "failed": [],
         "at": "2026-11-18T04:21:20+00:00",
         "job_id": "1e12abbe1fc3424dab40746bda8e110e"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T13:00:00+01:00",
+        "request_id": "6132c54cdfb646608ef5bb4c14c98fca",
+        "job_id": "24ad782ec2754dab9dfc8aecf8ac444e",
+        "failed": [],
+        "at": "2026-11-19T10:53:40+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "format": "crimen_historico",
+    "topic": "Atentado contra el general Juan Prim en la calle del Turco (27-XII-1870), su muerte el día que Amadeo de Saboya llegó a España y un sumario de más de 18.000 folios que nunca encontró culpable (Paúl y Angulo, Montpensier, la momia de 2012).",
+    "series_title": "Trabucos en la nieve: el asesinato de Prim",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T16:00:00+01:00",
+        "request_id": "3aa6aa9fb4b64d51a5a9aa1ff3758839",
+        "job_id": "1829452c0735470e86c8cbcc153fc792",
+        "failed": [],
+        "at": "2026-11-19T11:02:55+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T19:00:00+01:00",
+        "request_id": "af546cf40280491db763552bc1435b0f",
+        "job_id": "9573224cfc3f4660a525e987dbfd14cc",
+        "failed": [],
+        "at": "2026-11-19T11:07:42+00:00"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "format": "punto_inflexion",
+    "topic": "Explosión del polvorín de minas de la Armada en Cádiz (18-VIII-1947): San Severiano, astilleros y Casa Cuna arrasados; el capitán de corbeta Pery Junquera impide que estalle otro almacén; cifra oficial de unos 150 muertos y causa nunca aclarada.",
+    "series_title": "La noche que Cádiz casi desaparece",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-19",
+        "slot": "2026-11-19T22:00:00+01:00",
+        "request_id": "74eadf6ef6584f9381f50accfd8db6c0",
+        "job_id": "6f5c62633c68438fa54a504c559c5ef3",
+        "failed": [],
+        "at": "2026-11-19T11:16:38+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T10:00:00+01:00",
+        "request_id": "a3e345cd815f4ef3af9ed1dd849ac304",
+        "job_id": "64ebfc9c66ea4b048ea50bd13d428a46",
+        "failed": [],
+        "at": "2026-11-19T11:23:35+00:00"
       }
     ]
   }

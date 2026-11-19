@@ -2,305 +2,260 @@
   "queue": [
     {
       "series": {
-        "series_title": "El faro vacío de las islas Flannan",
+        "series_title": "El hombre que filmó la primera película… y se esfumó de un tren",
         "format": "caso_sin_resolver",
-        "year": "1900",
-        "place": "Eilean Mòr, islas Flannan (Hébridas Exteriores, Escocia)",
-        "topic": "Desaparición de los tres fareros de Eilean Mòr (islas Flannan, Escocia) en diciembre de 1900",
-        "era": "1900",
+        "year": "1890",
+        "place": "Tren Dijon–París (Francia), con Leeds (Inglaterra) y Nueva York como escenarios",
+        "topic": "Desaparición de Louis Le Prince, pionero del cine, en el tren Dijon–París el 16 de septiembre de 1890; nunca se encontró ni su cuerpo ni su equipaje",
+        "era": "1800",
         "characters": [
           {
-            "id": "moore",
-            "name": "Joseph Moore",
-            "voice": "ingles",
+            "id": "louis",
+            "name": "Louis Le Prince",
+            "voice": "frances",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "castaño",
+              "hair_style": "corto",
+              "hat": "chistera",
+              "hat_color": "negro",
+              "beard": "barba",
+              "beard_color": "castaño",
+              "outfit": "levita",
+              "outfit_color": "negro",
+              "accent_color": "dorado",
+              "pants_color": "gris",
+              "nose": "aguileña",
+              "jaw": "cuadrada",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "albert",
+            "name": "Albert Le Prince",
+            "voice": "frances",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "negro",
+              "hair_style": "corto",
+              "hat": "bombin",
+              "hat_color": "marron",
+              "beard": "bigotazo",
+              "beard_color": "negro",
+              "outfit": "traje",
+              "outfit_color": "gris",
+              "accent_color": "granate",
+              "pants_color": "marron",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "negros",
+              "glasses": true
+            }
+          },
+          {
+            "id": "lizzie",
+            "name": "Lizzie Le Prince",
+            "voice": "mujer",
+            "look": {
+              "female": true,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "castaño",
+              "hair_style": "moño",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "ninguna",
+              "beard_color": null,
+              "outfit": "vestido",
+              "outfit_color": "granate",
+              "accent_color": "crema",
+              "pants_color": "granate",
+              "nose": "pequeña",
+              "jaw": "fina",
+              "eyes": "verdes",
+              "glasses": false
+            }
+          },
+          {
+            "id": "adolphe",
+            "name": "Adolphe Le Prince",
+            "voice": "hombre_joven",
             "look": {
               "female": false,
               "age": "joven",
               "skin": "clara",
-              "hair_color": "castaño",
+              "hair_color": "rubio",
               "hair_style": "corto",
-              "hat": "gorra_militar",
-              "hat_color": "azul_marino",
+              "hat": "sombrero",
+              "hat_color": "gris",
               "beard": "bigote",
-              "beard_color": "castaño",
-              "outfit": "uniforme",
+              "beard_color": "rubio",
+              "outfit": "traje",
               "outfit_color": "azul_marino",
-              "accent_color": "dorado",
+              "accent_color": "blanco",
               "pants_color": "azul_marino",
               "nose": "pequeña",
               "jaw": "fina",
               "eyes": "azules",
               "glasses": false
             }
-          },
-          {
-            "id": "capitan",
-            "name": "Capitán Hesperus",
-            "voice": "hombre_mayor",
-            "look": {
-              "female": false,
-              "age": "mayor",
-              "skin": "media",
-              "hair_color": "canoso",
-              "hair_style": "corto",
-              "hat": "gorra_plana",
-              "hat_color": "negro",
-              "beard": "bigotazo",
-              "beard_color": "canoso",
-              "outfit": "jersey",
-              "outfit_color": "gris",
-              "accent_color": "negro",
-              "pants_color": "negro",
-              "nose": "patata",
-              "jaw": "redonda",
-              "eyes": "marrones",
-              "glasses": false
-            }
-          },
-          {
-            "id": "muirhead",
-            "name": "Robert Muirhead",
-            "voice": "hombre_mayor",
-            "look": {
-              "female": false,
-              "age": "mayor",
-              "skin": "clara",
-              "hair_color": "canoso",
-              "hair_style": "calvo",
-              "hat": "bombin",
-              "hat_color": "negro",
-              "beard": "barba",
-              "beard_color": "canoso",
-              "outfit": "levita",
-              "outfit_color": "negro",
-              "accent_color": "granate",
-              "pants_color": "gris",
-              "nose": "aguileña",
-              "jaw": "cuadrada",
-              "eyes": "verdes",
-              "glasses": true
-            }
-          },
-          {
-            "id": "ducat",
-            "name": "James Ducat",
-            "voice": "ingles",
-            "look": {
-              "female": false,
-              "age": "adulto",
-              "skin": "clara",
-              "hair_color": "castaño",
-              "hair_style": "corto",
-              "hat": "gorra_militar",
-              "hat_color": "azul_marino",
-              "beard": "barba",
-              "beard_color": "castaño",
-              "outfit": "uniforme",
-              "outfit_color": "azul_marino",
-              "accent_color": "plateado",
-              "pants_color": "azul_marino",
-              "nose": "gancho",
-              "jaw": "cuadrada",
-              "eyes": "marrones",
-              "glasses": false
-            }
-          },
-          {
-            "id": "macarthur",
-            "name": "Donald MacArthur",
-            "voice": "hombre_joven",
-            "look": {
-              "female": false,
-              "age": "adulto",
-              "skin": "clara",
-              "hair_color": "pelirrojo",
-              "hair_style": "corto",
-              "hat": "ninguno",
-              "hat_color": "negro",
-              "beard": "bigotazo",
-              "beard_color": "pelirrojo",
-              "outfit": "camisa",
-              "outfit_color": "blanco",
-              "accent_color": "marron",
-              "pants_color": "marron",
-              "nose": "patata",
-              "jaw": "redonda",
-              "eyes": "azules",
-              "glasses": false
-            }
           }
         ],
-        "historical_notes": "Documentado (informe del superintendente Robert Muirhead, enero de 1901, y declaración de Joseph Moore): el faro de Eilean Mòr se encendió por primera vez en diciembre de 1899. Los fareros eran James Ducat (principal), Thomas Marshall (segundo ayudante) y Donald MacArthur (farero ocasional que sustituía a William Ross, de baja). El vapor Archtor informó de que el faro estaba apagado la noche del 15 de diciembre de 1900. El barco de relevo Hesperus, previsto hacia el 20 de diciembre, se retrasó por el mal tiempo y llegó el 26. Moore encontró la puerta y la verja cerradas, las camas vacías y el fuego apagado desde hacía días. Faltaban dos impermeables (los de Ducat y Marshall); el de MacArthur seguía en su sitio. Muirhead constató que las anotaciones de la pizarra llegaban hasta la mañana del 15 y que la lámpara estaba limpia y preparada. En el embarcadero oeste encontró daños: una caja de cuerdas guardada en una grieta a unos 110 pies (≈33 m) sobre el mar, destrozada, y barandillas dobladas. Su conclusión oficial: una ola enorme se llevó a los hombres mientras aseguraban el material. Nunca se encontraron los cuerpos. NO documentado / mito: el supuesto diario con anotaciones dramáticas (tormentas, llantos, rezos), la comida sin tocar en la mesa y la silla volcada; proceden del poema 'Flannan Isle' de Wilfrid Wilson Gibson (1912) y de artículos sensacionalistas posteriores. Los diálogos son una recreación; el nombre del capitán del Hesperus no se usa para evitar errores. No se afirma que hubiera tormenta el día 15 porque las fuentes meteorológicas son contradictorias.",
+        "historical_notes": "DOCUMENTADO: Louis Aimé Augustin Le Prince (Metz, 1841) rodó en octubre de 1888 en Leeds la 'Roundhay Garden Scene', considerada la película más antigua que se conserva. En septiembre de 1890 visitó a su hermano Albert en Dijon; el 16 de septiembre de 1890 Albert lo despidió en la estación para tomar el tren a París. Nunca llegó: ni él ni su equipaje aparecieron jamás. Investigaron la policía francesa y Scotland Yard sin resultado. Su familia (su mujer Elizabeth 'Lizzie' Whitley y sus hijos) lo esperaba en Nueva York, donde iba a presentar su invento. Fue declarado legalmente muerto en 1897. En 1898 su hijo Adolphe declaró como testigo en el pleito de patentes de Edison contra la American Mutoscope Company y no se le permitió presentar las cámaras de su padre como prueba. En 1901 Adolphe apareció muerto de un disparo mientras cazaba en Fire Island (Nueva York). En 2003 se halló en los archivos de la policía de París la fotografía de un ahogado de 1890 que se parece a Le Prince; nunca se ha confirmado que sea él. TEORÍAS (sin probar): suicidio por problemas económicos (propuesta, entre otros, en el libro 'The Missing Reel' de Christopher Rawlence); implicación de Edison, que sospechó la familia pero que ninguna prueba sostiene; sospechas sobre el hermano Albert, último que lo vio; desaparición voluntaria. Los diálogos son recreaciones coherentes con lo documentado (la familia esperaba su llegada y Lizzie sospechó un crimen), no citas reales. No se atribuye a la muerte de Adolphe ninguna causa más allá de lo documentado.",
         "parts": [
           {
             "part_number": 1,
-            "hook_title": "Tres fareros. Una isla. Ningún rastro.",
+            "hook_candidates": [
+              "Lo vieron subir al tren. En París, nadie lo vio bajar.",
+              "Filmó la película más antigua del mundo… y desapareció de un tren.",
+              "Si lo hubieras esperado en el andén de París, aún estarías esperando.",
+              "El tren ya arrancaba cuando su hermano le dijo adiós por última vez.",
+              "Iba a enseñar al mundo el cine. Alguien se aseguró de que no llegara."
+            ],
+            "hook_title": "EL PADRE OLVIDADO DEL CINE",
             "blocks": [
               {
                 "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "Tres fareros desaparecieron de una isla. Nunca aparecieron.",
-                "location": "costa",
+                "narration": "Subió al tren. El tren llegó a París… él no.",
+                "location": "estacion",
                 "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
+                "cast": [
+                  "louis"
                 ],
-                "visual_direction": "Un faro solitario sobre un acantilado azotado por la lluvia, sin ninguna luz encendida."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "narrador",
-                "narration": "Escocia, diciembre de 1900. Faro de la isla Eilean Mòr.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
                 "mood": "atardecer",
                 "event": null,
                 "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "La cámara se aleja y revela la pequeña isla rocosa en medio del Atlántico al atardecer."
+                "walk": true,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Louis, con chistera y levita, camina por el andén humeante y sube al vagón; la locomotora silba."
               },
               {
-                "label": "CONTEXTO",
+                "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "Allí servían James Ducat, Thomas Marshall y Donald MacArthur.",
-                "location": "costa",
+                "narration": "Acababa de filmar la película más antigua que se conserva.",
+                "location": "despacho",
                 "framing": "general",
                 "cast": [
-                  "ducat",
-                  "macarthur"
+                  "louis"
                 ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Ducat, de uniforme, y MacArthur, en camisa, caminan por el sendero hacia el faro."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "El 15 de diciembre, un vapor vio el faro apagado.",
-                "location": "barca",
-                "framing": "general",
-                "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
                 "mood": "noche",
-                "event": "barco",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Un barco cruza de noche junto a la isla; en lo alto, el faro está a oscuras."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "El barco de relevo, el Hesperus, se retrasó por temporal.",
-                "location": "barca",
-                "framing": "general",
-                "cast": [
-                  "capitan"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [],
-                "visual_direction": "El Hesperus se sacude entre olas enormes mientras el capitán se agarra al timón."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "Llegó el día 26. En el embarcadero, nadie.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
                 "event": null,
                 "prop": null,
                 "walk": false,
                 "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "El muelle de la isla aparece vacío, sin nadie esperando al barco."
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "Louis en su taller, entre papeles y planos, a la luz de una lámpara; la cámara se aleja revelando el lugar."
               },
               {
-                "label": "DIÁLOGO",
-                "speaker": "capitan",
-                "narration": "Ni bandera, ni señales... Siempre salen a recibirnos.",
-                "location": "barca",
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Era Louis Le Prince. Leeds, octubre de 1888.",
+                "location": "campo",
+                "framing": "general",
+                "cast": [
+                  "louis",
+                  "lizzie"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Un jardín inglés soleado; Louis y Lizzie de pie junto a un aparato de rodaje imaginado fuera de plano."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "lizzie",
+                "narration": "¿Esa gente… se mueve de verdad, Louis?",
+                "location": "campo",
                 "framing": "personaje",
                 "cast": [
-                  "capitan",
-                  "moore"
+                  "lizzie",
+                  "louis"
                 ],
                 "gesture": "point",
-                "emotion": "desconfiado",
-                "listener_emotion": "serio",
+                "emotion": "sorprendido",
+                "listener_emotion": "contento",
                 "mood": "dia",
                 "event": null,
                 "prop": null,
                 "walk": false,
                 "camera": "push_in",
                 "sfx": [],
-                "visual_direction": "El capitán señala el muelle vacío desde la cubierta, con Moore de espaldas."
+                "visual_direction": "Lizzie, asombrada, señala hacia el jardín mientras Louis sonríe de espaldas."
               },
               {
-                "label": "DIÁLOGO",
-                "speaker": "moore",
-                "narration": "Subiré yo. Algo no va bien ahí arriba.",
-                "location": "barca",
+                "label": "CONTEXTO",
+                "speaker": "louis",
+                "narration": "Y pronto lo verá el mundo entero.",
+                "location": "campo",
                 "framing": "personaje",
                 "cast": [
-                  "moore",
-                  "capitan"
+                  "louis",
+                  "lizzie"
                 ],
                 "gesture": "chest",
-                "emotion": "serio",
-                "listener_emotion": "asustado",
+                "emotion": "contento",
+                "listener_emotion": "sorprendido",
                 "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Louis, orgulloso, se lleva la mano al pecho; Lizzie lo mira de espaldas."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "En 1890, su familia lo esperaba en Nueva York.",
+                "location": "salon",
+                "framing": "general",
+                "cast": [
+                  "lizzie",
+                  "adolphe"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
                 "event": null,
                 "prop": null,
                 "walk": false,
                 "camera": "static",
                 "sfx": [],
-                "visual_direction": "Moore, farero de relevo, se ajusta la gorra y mira hacia el faro."
+                "visual_direction": "Lizzie y Adolphe en un salón con chimenea, junto a la ventana, esperando."
               },
               {
                 "label": "TENSIÓN",
                 "speaker": "narrador",
-                "narration": "Joseph Moore, farero de relevo, subió solo.",
-                "location": "costa",
+                "narration": "Antes, visitó a su hermano en Dijon.",
+                "location": "ciudad",
                 "framing": "general",
                 "cast": [
-                  "moore"
+                  "louis",
+                  "albert"
                 ],
                 "gesture": "explain",
                 "emotion": "neutral",
@@ -309,320 +264,96 @@
                 "event": null,
                 "prop": null,
                 "walk": true,
-                "camera": "push_in",
+                "camera": "pull_back",
                 "sfx": [],
-                "visual_direction": "Moore sube por la escalera del acantilado, pequeño y solo frente al faro."
+                "visual_direction": "Louis y su hermano Albert caminan juntos por una calle adoquinada francesa con farolas."
               },
               {
-                "label": "DIÁLOGO",
-                "speaker": "moore",
-                "narration": "¿Ducat? ¿Marshall? ¡Contestad, soy Moore!",
-                "location": "salon",
+                "label": "TENSIÓN",
+                "speaker": "albert",
+                "narration": "Escríbeme en cuanto llegues a París.",
+                "location": "estacion",
                 "framing": "personaje",
                 "cast": [
-                  "moore"
+                  "albert",
+                  "louis"
                 ],
                 "gesture": "wave",
-                "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
+                "emotion": "serio",
+                "listener_emotion": "contento",
+                "mood": "atardecer",
                 "event": null,
                 "prop": null,
                 "walk": false,
                 "camera": "push_in",
                 "sfx": [],
-                "visual_direction": "Moore entra en la vivienda del faro, en penumbra, llamando a sus compañeros."
+                "visual_direction": "Albert, en el andén, se despide con la mano; Louis de espaldas ante el vagón."
               },
               {
-                "label": "DESCUBRIMIENTO",
-                "speaker": "moore",
-                "narration": "La puerta cerrada, las camas vacías... y el fuego frío.",
-                "location": "salon",
+                "label": "TENSIÓN",
+                "speaker": "louis",
+                "narration": "Te escribo. Luego, rumbo a casa.",
+                "location": "estacion",
                 "framing": "personaje",
                 "cast": [
-                  "moore"
+                  "louis",
+                  "albert"
                 ],
-                "gesture": "explain",
-                "emotion": "sorprendido",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Moore recorre la cocina vacía; la chimenea está apagada y sin brasas."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "moore",
-                "narration": "Faltan dos impermeables... pero el tercero sigue colgado aquí.",
-                "location": "salon",
-                "framing": "personaje",
-                "cast": [
-                  "moore"
-                ],
-                "gesture": "point",
-                "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "whoosh"
-                ],
-                "visual_direction": "Moore señala la percha: un solo impermeable colgado junto a dos ganchos vacíos."
-              },
-              {
-                "label": "CLIFFHANGER",
-                "speaker": "narrador",
-                "narration": "Uno salió sin abrigo, en pleno diciembre. ¿Por qué?",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "macarthur"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "La silueta de MacArthur en camisa, de espaldas, frente al mar embravecido."
-              }
-            ],
-            "cliffhanger": "Moore descubre que uno de los fareros, MacArthur, salió sin su impermeable en pleno invierno. ¿Qué le hizo salir con tanta prisa?",
-            "caption": "Parte 1/2 · Diciembre de 1900. El faro de una isla escocesa se apaga y, cuando llega el barco de relevo, los tres fareros han desaparecido. Recreación animada basada en hechos reales.",
-            "hashtags": [
-              "misterio",
-              "casossinresolver",
-              "historia",
-              "escocia",
-              "faro",
-              "flannan"
-            ],
-            "youtube_title": "Tres fareros desaparecen de una isla en 1900 | El misterio de Flannan · Parte 1",
-            "youtube_description": "Diciembre de 1900, islas Flannan (Escocia): el faro de Eilean Mòr se apaga y sus tres fareros desaparecen sin dejar rastro. Parte 1 de 2. Recreación animada basada en hechos reales."
-          },
-          {
-            "part_number": 2,
-            "hook_title": "El mar no devolvió a nadie",
-            "blocks": [
-              {
-                "label": "GANCHO",
-                "speaker": "narrador",
-                "narration": "Tres hombres se esfumaron de un faro. Escocia, 1900.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "El faro apagado sobre la isla, golpeado por las olas en plena tormenta."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "narrador",
-                "narration": "Investigó Robert Muirhead, superintendente. Los había visitado ese mismo mes.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "muirhead",
-                  "moore"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Muirhead, con levita y bombín, desembarca y camina hacia el faro junto a Moore."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "muirhead",
-                "narration": "La pizarra llega hasta el día 15, a las nueve.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "muirhead",
-                  "moore"
-                ],
-                "gesture": "think",
-                "emotion": "pensativo",
+                "gesture": "wave",
+                "emotion": "contento",
                 "listener_emotion": "serio",
                 "mood": "atardecer",
                 "event": null,
                 "prop": null,
                 "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Muirhead examina la pizarra de registro junto a la ventana mientras Moore escucha."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "moore",
-                "narration": "Y la lámpara estaba limpia, lista para encenderse.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "moore",
-                  "muirhead"
-                ],
-                "gesture": "explain",
-                "emotion": "serio",
-                "listener_emotion": "pensativo",
-                "mood": "atardecer",
-                "event": null,
-                "prop": null,
-                "walk": false,
                 "camera": "static",
                 "sfx": [],
-                "visual_direction": "Moore explica con las manos que todo estaba preparado para la noche."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "muirhead",
-                "narration": "En el embarcadero oeste hay destrozos. Venga a verlo.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "muirhead",
-                  "moore"
-                ],
-                "gesture": "point",
-                "emotion": "serio",
-                "listener_emotion": "sorprendido",
-                "mood": "atardecer",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Muirhead señala hacia la ventana, en dirección al lado oeste de la isla."
-              },
-              {
-                "label": "PISTA",
-                "speaker": "narrador",
-                "narration": "Una caja reventada a 33 metros sobre el mar.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "boom"
-                ],
-                "visual_direction": "En lo alto del acantilado, restos de una caja de madera y cuerdas esparcidas, barandillas dobladas."
-              },
-              {
-                "label": "TEORÍA",
-                "speaker": "muirhead",
-                "narration": "Solo una ola enorme pudo llegar hasta ahí arriba.",
-                "location": "costa",
-                "framing": "personaje",
-                "cast": [
-                  "muirhead",
-                  "moore"
-                ],
-                "gesture": "point",
-                "emotion": "serio",
-                "listener_emotion": "asustado",
-                "mood": "tormenta",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Muirhead mira hacia el acantilado con el mar rugiendo abajo."
-              },
-              {
-                "label": "TEORÍA",
-                "speaker": "moore",
-                "narration": "¿Y si uno corrió a avisar a los otros?",
-                "location": "costa",
-                "framing": "personaje",
-                "cast": [
-                  "moore",
-                  "muirhead"
-                ],
-                "gesture": "think",
-                "emotion": "pensativo",
-                "listener_emotion": "desconfiado",
-                "mood": "tormenta",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Moore, con la mano en la barbilla, plantea su duda bajo el viento."
-              },
-              {
-                "label": "VERSIÓN OFICIAL",
-                "speaker": "narrador",
-                "narration": "La versión oficial: el mar los arrastró. Nunca aparecieron los cuerpos.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Olas gigantes rompen contra el embarcadero vacío mientras la cámara se aleja."
+                "visual_direction": "Louis sonríe desde la puerta del vagón y devuelve el saludo."
               },
               {
                 "label": "GIRO",
                 "speaker": "narrador",
-                "narration": "Luego nació la leyenda: comida servida y una silla volcada.",
-                "location": "salon",
-                "framing": "objeto",
+                "narration": "Dieciséis de septiembre. Albert lo despidió en el andén.",
+                "location": "estacion",
+                "framing": "general",
+                "cast": [
+                  "albert"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "El tren se aleja entre vapor; Albert se queda solo en el andén."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "En París, nadie lo vio bajar. Ni su equipaje.",
+                "location": "estacion",
+                "framing": "general",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
                 "mood": "noche",
                 "event": null,
-                "prop": "periodico",
+                "prop": null,
                 "walk": false,
                 "camera": "push_in",
                 "sfx": [
-                  "whoosh"
+                  "hit"
                 ],
-                "visual_direction": "Un periódico sensacionalista sobre la mesa con titulares sobre el faro maldito."
+                "visual_direction": "Andén de París de noche: el tren detenido, puertas abiertas, nadie baja."
               },
               {
                 "label": "GIRO",
                 "speaker": "narrador",
-                "narration": "Salió de un poema de 1912. Los informes no dicen nada.",
+                "narration": "La policía buscó. Scotland Yard también. Ni rastro.",
                 "location": "despacho",
                 "framing": "objeto",
                 "cast": [],
@@ -633,673 +364,81 @@
                 "event": null,
                 "prop": "documento",
                 "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "El informe oficial de Muirhead sobre el escritorio, frío y sin adornos."
-              },
-              {
-                "label": "CIERRE",
-                "speaker": "narrador",
-                "narration": "¿Qué hizo salir a MacArthur sin abrigo, en pleno invierno?",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "macarthur"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
                 "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "MacArthur en camisa camina hacia el borde del acantilado y se funde con la oscuridad."
-              }
-            ],
-            "cliffhanger": "La teoría oficial apunta a una ola gigante, pero sigue sin explicarse por qué MacArthur salió sin su impermeable ni por qué los tres dejaron el faro a la vez. Los cuerpos nunca aparecieron.",
-            "caption": "Parte 2/2 · El superintendente Muirhead encontró destrozos a 33 metros sobre el mar. ¿Una ola gigante? ¿Y por qué uno de ellos salió sin abrigo? Recreación animada basada en hechos reales.",
-            "hashtags": [
-              "misterio",
-              "casossinresolver",
-              "historia",
-              "escocia",
-              "faro",
-              "leyendas"
-            ],
-            "youtube_title": "¿Qué pasó con los fareros de Flannan? La ola, el mito y la pregunta · Parte 2",
-            "youtube_description": "La investigación oficial de la desaparición de los fareros de Eilean Mòr (Escocia, 1900): la pizarra, los destrozos del embarcadero oeste y los mitos que se inventaron después. Parte 2 de 2. Recreación animada basada en hechos reales."
-          }
-        ]
-      },
-      "part": 0
-    },
-    {
-      "series": {
-        "series_title": "El faro vacío de las islas Flannan",
-        "format": "caso_sin_resolver",
-        "year": "1900",
-        "place": "Eilean Mòr, islas Flannan (Hébridas Exteriores, Escocia)",
-        "topic": "Desaparición de los tres fareros de Eilean Mòr (islas Flannan, Escocia) en diciembre de 1900",
-        "era": "1900",
-        "characters": [
-          {
-            "id": "moore",
-            "name": "Joseph Moore",
-            "voice": "ingles",
-            "look": {
-              "female": false,
-              "age": "joven",
-              "skin": "clara",
-              "hair_color": "castaño",
-              "hair_style": "corto",
-              "hat": "gorra_militar",
-              "hat_color": "azul_marino",
-              "beard": "bigote",
-              "beard_color": "castaño",
-              "outfit": "uniforme",
-              "outfit_color": "azul_marino",
-              "accent_color": "dorado",
-              "pants_color": "azul_marino",
-              "nose": "pequeña",
-              "jaw": "fina",
-              "eyes": "azules",
-              "glasses": false
-            }
-          },
-          {
-            "id": "capitan",
-            "name": "Capitán Hesperus",
-            "voice": "hombre_mayor",
-            "look": {
-              "female": false,
-              "age": "mayor",
-              "skin": "media",
-              "hair_color": "canoso",
-              "hair_style": "corto",
-              "hat": "gorra_plana",
-              "hat_color": "negro",
-              "beard": "bigotazo",
-              "beard_color": "canoso",
-              "outfit": "jersey",
-              "outfit_color": "gris",
-              "accent_color": "negro",
-              "pants_color": "negro",
-              "nose": "patata",
-              "jaw": "redonda",
-              "eyes": "marrones",
-              "glasses": false
-            }
-          },
-          {
-            "id": "muirhead",
-            "name": "Robert Muirhead",
-            "voice": "hombre_mayor",
-            "look": {
-              "female": false,
-              "age": "mayor",
-              "skin": "clara",
-              "hair_color": "canoso",
-              "hair_style": "calvo",
-              "hat": "bombin",
-              "hat_color": "negro",
-              "beard": "barba",
-              "beard_color": "canoso",
-              "outfit": "levita",
-              "outfit_color": "negro",
-              "accent_color": "granate",
-              "pants_color": "gris",
-              "nose": "aguileña",
-              "jaw": "cuadrada",
-              "eyes": "verdes",
-              "glasses": true
-            }
-          },
-          {
-            "id": "ducat",
-            "name": "James Ducat",
-            "voice": "ingles",
-            "look": {
-              "female": false,
-              "age": "adulto",
-              "skin": "clara",
-              "hair_color": "castaño",
-              "hair_style": "corto",
-              "hat": "gorra_militar",
-              "hat_color": "azul_marino",
-              "beard": "barba",
-              "beard_color": "castaño",
-              "outfit": "uniforme",
-              "outfit_color": "azul_marino",
-              "accent_color": "plateado",
-              "pants_color": "azul_marino",
-              "nose": "gancho",
-              "jaw": "cuadrada",
-              "eyes": "marrones",
-              "glasses": false
-            }
-          },
-          {
-            "id": "macarthur",
-            "name": "Donald MacArthur",
-            "voice": "hombre_joven",
-            "look": {
-              "female": false,
-              "age": "adulto",
-              "skin": "clara",
-              "hair_color": "pelirrojo",
-              "hair_style": "corto",
-              "hat": "ninguno",
-              "hat_color": "negro",
-              "beard": "bigotazo",
-              "beard_color": "pelirrojo",
-              "outfit": "camisa",
-              "outfit_color": "blanco",
-              "accent_color": "marron",
-              "pants_color": "marron",
-              "nose": "patata",
-              "jaw": "redonda",
-              "eyes": "azules",
-              "glasses": false
-            }
-          }
-        ],
-        "historical_notes": "Documentado (informe del superintendente Robert Muirhead, enero de 1901, y declaración de Joseph Moore): el faro de Eilean Mòr se encendió por primera vez en diciembre de 1899. Los fareros eran James Ducat (principal), Thomas Marshall (segundo ayudante) y Donald MacArthur (farero ocasional que sustituía a William Ross, de baja). El vapor Archtor informó de que el faro estaba apagado la noche del 15 de diciembre de 1900. El barco de relevo Hesperus, previsto hacia el 20 de diciembre, se retrasó por el mal tiempo y llegó el 26. Moore encontró la puerta y la verja cerradas, las camas vacías y el fuego apagado desde hacía días. Faltaban dos impermeables (los de Ducat y Marshall); el de MacArthur seguía en su sitio. Muirhead constató que las anotaciones de la pizarra llegaban hasta la mañana del 15 y que la lámpara estaba limpia y preparada. En el embarcadero oeste encontró daños: una caja de cuerdas guardada en una grieta a unos 110 pies (≈33 m) sobre el mar, destrozada, y barandillas dobladas. Su conclusión oficial: una ola enorme se llevó a los hombres mientras aseguraban el material. Nunca se encontraron los cuerpos. NO documentado / mito: el supuesto diario con anotaciones dramáticas (tormentas, llantos, rezos), la comida sin tocar en la mesa y la silla volcada; proceden del poema 'Flannan Isle' de Wilfrid Wilson Gibson (1912) y de artículos sensacionalistas posteriores. Los diálogos son una recreación; el nombre del capitán del Hesperus no se usa para evitar errores. No se afirma que hubiera tormenta el día 15 porque las fuentes meteorológicas son contradictorias.",
-        "parts": [
-          {
-            "part_number": 1,
-            "hook_title": "Tres fareros. Una isla. Ningún rastro.",
-            "blocks": [
-              {
-                "label": "GANCHO",
-                "speaker": "narrador",
-                "narration": "Tres fareros desaparecieron de una isla. Nunca aparecieron.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "Un faro solitario sobre un acantilado azotado por la lluvia, sin ninguna luz encendida."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "narrador",
-                "narration": "Escocia, diciembre de 1900. Faro de la isla Eilean Mòr.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "atardecer",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
                 "sfx": [],
-                "visual_direction": "La cámara se aleja y revela la pequeña isla rocosa en medio del Atlántico al atardecer."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "narrador",
-                "narration": "Allí servían James Ducat, Thomas Marshall y Donald MacArthur.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "ducat",
-                  "macarthur"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Ducat, de uniforme, y MacArthur, en camisa, caminan por el sendero hacia el faro."
+                "visual_direction": "Un expediente policial abierto sobre la mesa, con el nombre de Le Prince, bajo la lámpara."
               },
               {
                 "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "El 15 de diciembre, un vapor vio el faro apagado.",
-                "location": "barca",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": "barco",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Un barco cruza de noche junto a la isla; en lo alto, el faro está a oscuras."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "El barco de relevo, el Hesperus, se retrasó por temporal.",
-                "location": "barca",
-                "framing": "general",
-                "cast": [
-                  "capitan"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [],
-                "visual_direction": "El Hesperus se sacude entre olas enormes mientras el capitán se agarra al timón."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "Llegó el día 26. En el embarcadero, nadie.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "El muelle de la isla aparece vacío, sin nadie esperando al barco."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "capitan",
-                "narration": "Ni bandera, ni señales... Siempre salen a recibirnos.",
-                "location": "barca",
-                "framing": "personaje",
-                "cast": [
-                  "capitan",
-                  "moore"
-                ],
-                "gesture": "point",
-                "emotion": "desconfiado",
-                "listener_emotion": "serio",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "El capitán señala el muelle vacío desde la cubierta, con Moore de espaldas."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "moore",
-                "narration": "Subiré yo. Algo no va bien ahí arriba.",
-                "location": "barca",
-                "framing": "personaje",
-                "cast": [
-                  "moore",
-                  "capitan"
-                ],
-                "gesture": "chest",
-                "emotion": "serio",
-                "listener_emotion": "asustado",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Moore, farero de relevo, se ajusta la gorra y mira hacia el faro."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "Joseph Moore, farero de relevo, subió solo.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "moore"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "atardecer",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Moore sube por la escalera del acantilado, pequeño y solo frente al faro."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "moore",
-                "narration": "¿Ducat? ¿Marshall? ¡Contestad, soy Moore!",
+                "speaker": "lizzie",
+                "narration": "Adolphe… alguien no quería que tu padre llegara.",
                 "location": "salon",
                 "framing": "personaje",
                 "cast": [
-                  "moore"
-                ],
-                "gesture": "wave",
-                "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Moore entra en la vivienda del faro, en penumbra, llamando a sus compañeros."
-              },
-              {
-                "label": "DESCUBRIMIENTO",
-                "speaker": "moore",
-                "narration": "La puerta cerrada, las camas vacías... y el fuego frío.",
-                "location": "salon",
-                "framing": "personaje",
-                "cast": [
-                  "moore"
-                ],
-                "gesture": "explain",
-                "emotion": "sorprendido",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Moore recorre la cocina vacía; la chimenea está apagada y sin brasas."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "moore",
-                "narration": "Faltan dos impermeables... pero el tercero sigue colgado aquí.",
-                "location": "salon",
-                "framing": "personaje",
-                "cast": [
-                  "moore"
-                ],
-                "gesture": "point",
-                "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "whoosh"
-                ],
-                "visual_direction": "Moore señala la percha: un solo impermeable colgado junto a dos ganchos vacíos."
-              },
-              {
-                "label": "CLIFFHANGER",
-                "speaker": "narrador",
-                "narration": "Uno salió sin abrigo, en pleno diciembre. ¿Por qué?",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "macarthur"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "La silueta de MacArthur en camisa, de espaldas, frente al mar embravecido."
-              }
-            ],
-            "cliffhanger": "Moore descubre que uno de los fareros, MacArthur, salió sin su impermeable en pleno invierno. ¿Qué le hizo salir con tanta prisa?",
-            "caption": "Parte 1/2 · Diciembre de 1900. El faro de una isla escocesa se apaga y, cuando llega el barco de relevo, los tres fareros han desaparecido. Recreación animada basada en hechos reales.",
-            "hashtags": [
-              "misterio",
-              "casossinresolver",
-              "historia",
-              "escocia",
-              "faro",
-              "flannan"
-            ],
-            "youtube_title": "Tres fareros desaparecen de una isla en 1900 | El misterio de Flannan · Parte 1",
-            "youtube_description": "Diciembre de 1900, islas Flannan (Escocia): el faro de Eilean Mòr se apaga y sus tres fareros desaparecen sin dejar rastro. Parte 1 de 2. Recreación animada basada en hechos reales."
-          },
-          {
-            "part_number": 2,
-            "hook_title": "El mar no devolvió a nadie",
-            "blocks": [
-              {
-                "label": "GANCHO",
-                "speaker": "narrador",
-                "narration": "Tres hombres se esfumaron de un faro. Escocia, 1900.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [
-                  "hit"
-                ],
-                "visual_direction": "El faro apagado sobre la isla, golpeado por las olas en plena tormenta."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "narrador",
-                "narration": "Investigó Robert Muirhead, superintendente. Los había visitado ese mismo mes.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "muirhead",
-                  "moore"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Muirhead, con levita y bombín, desembarca y camina hacia el faro junto a Moore."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "muirhead",
-                "narration": "La pizarra llega hasta el día 15, a las nueve.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "muirhead",
-                  "moore"
+                  "lizzie",
+                  "adolphe"
                 ],
                 "gesture": "think",
-                "emotion": "pensativo",
-                "listener_emotion": "serio",
-                "mood": "atardecer",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Muirhead examina la pizarra de registro junto a la ventana mientras Moore escucha."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "moore",
-                "narration": "Y la lámpara estaba limpia, lista para encenderse.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "moore",
-                  "muirhead"
-                ],
-                "gesture": "explain",
-                "emotion": "serio",
-                "listener_emotion": "pensativo",
-                "mood": "atardecer",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "Moore explica con las manos que todo estaba preparado para la noche."
-              },
-              {
-                "label": "DIÁLOGO",
-                "speaker": "muirhead",
-                "narration": "En el embarcadero oeste hay destrozos. Venga a verlo.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "muirhead",
-                  "moore"
-                ],
-                "gesture": "point",
-                "emotion": "serio",
-                "listener_emotion": "sorprendido",
-                "mood": "atardecer",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Muirhead señala hacia la ventana, en dirección al lado oeste de la isla."
-              },
-              {
-                "label": "PISTA",
-                "speaker": "narrador",
-                "narration": "Una caja reventada a 33 metros sobre el mar.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "shake",
-                "sfx": [
-                  "boom"
-                ],
-                "visual_direction": "En lo alto del acantilado, restos de una caja de madera y cuerdas esparcidas, barandillas dobladas."
-              },
-              {
-                "label": "TEORÍA",
-                "speaker": "muirhead",
-                "narration": "Solo una ola enorme pudo llegar hasta ahí arriba.",
-                "location": "costa",
-                "framing": "personaje",
-                "cast": [
-                  "muirhead",
-                  "moore"
-                ],
-                "gesture": "point",
-                "emotion": "serio",
-                "listener_emotion": "asustado",
-                "mood": "tormenta",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "visual_direction": "Muirhead mira hacia el acantilado con el mar rugiendo abajo."
-              },
-              {
-                "label": "TEORÍA",
-                "speaker": "moore",
-                "narration": "¿Y si uno corrió a avisar a los otros?",
-                "location": "costa",
-                "framing": "personaje",
-                "cast": [
-                  "moore",
-                  "muirhead"
-                ],
-                "gesture": "think",
-                "emotion": "pensativo",
+                "emotion": "asustado",
                 "listener_emotion": "desconfiado",
                 "mood": "tormenta",
                 "event": null,
                 "prop": null,
                 "walk": false,
-                "camera": "static",
+                "camera": "push_in",
                 "sfx": [],
-                "visual_direction": "Moore, con la mano en la barbilla, plantea su duda bajo el viento."
+                "visual_direction": "Lizzie, pálida junto a la chimenea, habla a su hijo mientras llueve tras la ventana."
               },
               {
-                "label": "VERSIÓN OFICIAL",
+                "label": "CLIFFHANGER",
                 "speaker": "narrador",
-                "narration": "La versión oficial: el mar los arrastró. Nunca aparecieron los cuerpos.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "tormenta",
-                "event": "lluvia",
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [],
-                "visual_direction": "Olas gigantes rompen contra el embarcadero vacío mientras la cámara se aleja."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "narrador",
-                "narration": "Luego nació la leyenda: comida servida y una silla volcada.",
-                "location": "salon",
+                "narration": "En América, otro hombre quería ser el padre del cine: Edison.",
+                "location": "despacho",
                 "framing": "objeto",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "noche",
+                "mood": "tormenta",
                 "event": null,
                 "prop": "periodico",
                 "walk": false,
-                "camera": "push_in",
+                "camera": "shake",
                 "sfx": [
-                  "whoosh"
+                  "whoosh",
+                  "hit"
                 ],
-                "visual_direction": "Un periódico sensacionalista sobre la mesa con titulares sobre el faro maldito."
-              },
+                "visual_direction": "Un periódico americano de la época sobre el escritorio; un relámpago ilumina la portada."
+              }
+            ],
+            "cliffhanger": "Le Prince se esfuma del tren y su familia, en Nueva York, sospecha que alguien no quería que llegara. Se deja en el aire el nombre de Edison, el gran rival en la carrera por el cine.",
+            "caption": "Parte 1/2. Filmó la película más antigua que se conserva, subió a un tren de Dijon a París… y nunca llegó. Ni él ni su maleta aparecieron jamás. Recreación animada basada en hechos reales.",
+            "hashtags": [
+              "misterio",
+              "casosinresolver",
+              "historia",
+              "cine",
+              "desaparicion",
+              "truecrime"
+            ],
+            "youtube_title": "Inventó el cine y desapareció de un tren | Louis Le Prince Parte 1",
+            "youtube_description": "16 de septiembre de 1890: Louis Le Prince, autor de la película más antigua que se conserva, sube a un tren en Dijon rumbo a París. Nunca llega. Recreación animada basada en hechos reales."
+          },
+          {
+            "part_number": 2,
+            "hook_candidates": [
+              "Un ahogado sin nombre, fotografiado en 1890. Se parecía a él.",
+              "Su hijo quiso demostrar quién inventó el cine. Tres años después, murió de un disparo.",
+              "Si hoy abres los archivos de la policía de París, puedes ver su posible cara.",
+              "El juez estaba a punto de decidir quién inventó el cine… y no dejaron hablar a las cámaras.",
+              "Durante 113 años, una foto estuvo olvidada en un archivo policial."
+            ],
+            "hook_title": "¿ES ESTE EL INVENTOR?",
+            "blocks": [
               {
-                "label": "GIRO",
+                "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "Salió de un poema de 1912. Los informes no dicen nada.",
+                "narration": "Un ahogado sin nombre, fotografiado en 1890. Se parecía a él.",
                 "location": "despacho",
                 "framing": "objeto",
                 "cast": [],
@@ -1310,19 +449,39 @@
                 "event": null,
                 "prop": "documento",
                 "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "visual_direction": "El informe oficial de Muirhead sobre el escritorio, frío y sin adornos."
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Una vieja ficha policial con una fotografía amarillenta sobre la mesa, iluminada por la lámpara."
               },
               {
-                "label": "CIERRE",
+                "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "¿Qué hizo salir a MacArthur sin abrigo, en pleno invierno?",
-                "location": "costa",
+                "narration": "A Louis Le Prince, esfumado de un tren.",
+                "location": "estacion",
                 "framing": "general",
                 "cast": [
-                  "macarthur"
+                  "louis"
                 ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Louis, con chistera, camina hacia el vagón entre el vapor y desaparece en la niebla."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "La foto apareció en 2003. Nunca se confirmó que fuera él.",
+                "location": "despacho",
+                "framing": "general",
+                "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
@@ -1330,31 +489,234 @@
                 "event": null,
                 "prop": null,
                 "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Estanterías de un archivo policial polvoriento; una carpeta abierta sobre el escritorio."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "narrador",
+                "narration": "Unos hablan de suicidio: sus inventos lo habían endeudado.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "monedas",
+                "walk": false,
                 "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Unas pocas monedas sobre facturas y planos de inventos: la ruina económica."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "lizzie",
+                "narration": "¿Suicidarse justo antes de presentar su invento? No.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "lizzie",
+                  "adolphe"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "pensativo",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Lizzie, indignada junto a la chimenea, aprieta el puño; Adolphe de espaldas."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "adolphe",
+                "narration": "Mamá, tú piensas en Edison, ¿verdad?",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "adolphe",
+                  "lizzie"
+                ],
+                "gesture": "think",
+                "emotion": "desconfiado",
+                "listener_emotion": "serio",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Adolphe, con la mano en la barbilla, mira a su madre con recelo."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "lizzie",
+                "narration": "Pienso en a quién beneficiaba que desapareciera.",
+                "location": "salon",
+                "framing": "dos",
+                "cast": [
+                  "lizzie",
+                  "adolphe"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Madre e hijo juntos, el fuego de la chimenea temblando; un relámpago tras la ventana."
+              },
+              {
+                "label": "RIGOR",
+                "speaker": "narrador",
+                "narration": "Ninguna prueba ha relacionado jamás a Edison con el caso.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "periodico",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Un periódico de la época sobre la mesa, a la luz del día."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "narrador",
+                "narration": "Otros sospechan del hermano, el último en verlo.",
+                "location": "estacion",
+                "framing": "general",
+                "cast": [
+                  "albert"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Albert, solo en el andén vacío, con el tren ya lejos; la cámara se acerca a su rostro serio."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "1898: Adolphe declara en un juicio de patentes de Edison.",
+                "location": "despacho",
+                "framing": "general",
+                "cast": [
+                  "adolphe"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Adolphe entra en una sala de despachos judiciales llena de legajos."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "adolphe",
+                "narration": "Mi padre filmó antes. Aquí están sus cámaras.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "adolphe"
+                ],
+                "gesture": "point",
+                "emotion": "enfadado",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Adolphe, decidido, señala hacia algo fuera de plano ante el tribunal."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "No le dejaron. En 1901 murió de un disparo, cazando.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
                 "sfx": [
                   "hit"
                 ],
-                "visual_direction": "MacArthur en camisa camina hacia el borde del acantilado y se funde con la oscuridad."
+                "visual_direction": "Una costa solitaria al atardecer, con dunas y agua quieta; silencio."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "¿Y Louis? Ni cuerpo, ni maleta. Solo aquel tren.",
+                "location": "estacion",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "El andén vacío de noche; el tren se pierde en la oscuridad mientras la cámara se aleja."
               }
             ],
-            "cliffhanger": "La teoría oficial apunta a una ola gigante, pero sigue sin explicarse por qué MacArthur salió sin su impermeable ni por qué los tres dejaron el faro a la vez. Los cuerpos nunca aparecieron.",
-            "caption": "Parte 2/2 · El superintendente Muirhead encontró destrozos a 33 metros sobre el mar. ¿Una ola gigante? ¿Y por qué uno de ellos salió sin abrigo? Recreación animada basada en hechos reales.",
+            "cliffhanger": "Repasa la foto del ahogado hallada en 2003 (sin confirmar), el suicidio, Edison (sin pruebas) y el hermano. El hijo intenta demostrar en un juicio que su padre se adelantó, no se lo permiten y en 1901 muere de un disparo. Louis nunca apareció: ni cuerpo ni maleta.",
+            "caption": "Parte 2/2. Una foto olvidada en un archivo de la policía, un juicio por las patentes del cine y un hijo que murió de un disparo. ¿Qué le pasó a Louis Le Prince en aquel tren? Recreación animada basada en hechos reales.",
             "hashtags": [
               "misterio",
-              "casossinresolver",
+              "casosinresolver",
               "historia",
-              "escocia",
-              "faro",
-              "leyendas"
+              "cine",
+              "edison",
+              "truecrime"
             ],
-            "youtube_title": "¿Qué pasó con los fareros de Flannan? La ola, el mito y la pregunta · Parte 2",
-            "youtube_description": "La investigación oficial de la desaparición de los fareros de Eilean Mòr (Escocia, 1900): la pizarra, los destrozos del embarcadero oeste y los mitos que se inventaron después. Parte 2 de 2. Recreación animada basada en hechos reales."
+            "youtube_title": "El inventor que se esfumó de un tren | Louis Le Prince Parte 2",
+            "youtube_description": "Suicidio, Edison, su propio hermano… Las teorías sobre la desaparición de Louis Le Prince en 1890 y el destino de su hijo Adolphe. Recreación animada basada en hechos reales."
           }
         ]
       },
       "part": 1
     }
   ],
-  "last_published": null,
-  "scheduled": []
+  "last_published": "2026-11-19T12:01:02+00:00",
+  "scheduled": [
+    "2026-11-19T13:00:00+01:00",
+    "2026-11-19T16:00:00+01:00",
+    "2026-11-19T19:00:00+01:00",
+    "2026-11-19T22:00:00+01:00",
+    "2026-11-20T10:00:00+01:00"
+  ]
 }
