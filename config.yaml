@@ -49,7 +49,7 @@ publish:
   slots: ["10:00", "13:00", "16:00", "19:00", "22:00"]
   min_lead_minutes: 20        # no programa una franja que empiece antes de este margen
   min_gap_minutes: 100        # ni una franja a menos de este tiempo de otra ya programada
-  label_as_ai: true           # obligatorio en la práctica: la animación está hecha por ordenador
+  label_as_ai: false          # etiqueta «hecho con IA» de cada red (no hace falta para animación)
   youtube_privacy: public     # public | unlisted | private
 
 # Canales: cada uno es un perfil de Upload-Post con su temática, su guionista y su historial.

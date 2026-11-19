@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -43,10 +44,18 @@ def report(ids: list[str]) -> None:
             print(f"  {rid}: Upload-Post no lo encuentra")
 
 
+# Avisos que ya no se publican (los guiones antiguos en cola aún los llevan)
+_DROP = re.compile(r"\s*Recreaci[oó]n animada basada en hechos reales\.?", re.I)
+
+
+def _clean(text: str) -> str:
+    return _DROP.sub("", text).strip()
+
+
 def _caption(script: Part, total_parts: int = 1) -> str:
     tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in script.hashtags)
     follow = f"\n\nSígueme para la parte {script.part_number + 1}" if script.part_number < total_parts else ""
-    return f"{script.caption}{follow}\n\n{tags}".strip()
+    return f"{_clean(script.caption)}{follow}\n\n{tags}".strip()
 
 
 def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_parts: int = 1,
@@ -72,7 +81,7 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_pa
         fields += [("instagram_title", caption[:2200]), ("media_type", "REELS"),
                    ("share_to_feed", "true"), ("is_ai_generated", ai)]
     if "youtube" in platforms:
-        desc = f"{script.youtube_description}\n\n{caption}"
+        desc = f"{_clean(script.youtube_description)}\n\n{caption}"
         fields += [("youtube_title", script.youtube_title[:100]), ("youtube_description", desc[:5000]),
                    ("privacyStatus", pcfg.get("youtube_privacy", "public")),
                    ("selfDeclaredMadeForKids", "false"), ("containsSyntheticMedia", ai)]
