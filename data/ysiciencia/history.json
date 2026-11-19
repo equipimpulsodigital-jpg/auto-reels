@@ -41,6 +41,15 @@
         "job_id": "e1de81b2f6f64f869917f064f2f50ab9",
         "failed": [],
         "at": "2026-11-19T15:19:48+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T10:00:00+01:00",
+        "request_id": "03a2ecce9ce44b11889da0bdeaa4c06c",
+        "job_id": "a5cfac8c00cb448b86aace306637921a",
+        "failed": [],
+        "at": "2026-11-19T21:06:21+00:00"
       }
     ],
     "book": {
@@ -51,5 +60,33 @@
       "isbn": "9788483060520",
       "pitch": "La apasionante historia de cómo aprendimos a saber dónde estamos en mitad del mar."
     }
+  },
+  {
+    "date": "2026-11-19",
+    "format": "y_si_planeta",
+    "topic": "Qué pasaría si se sellara el Estrecho de Gibraltar: el Mediterráneo se evapora (Atlantropa, crisis salina del Messiniense) y cómo volvió a llenarse con la megainundación zancliense.",
+    "series_title": "¿Y si cerráramos el Estrecho de Gibraltar?",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T16:00:00+01:00",
+        "request_id": "3bb06885707e48779d6429674e0885cc",
+        "job_id": "5d3b5cc5d309465b84b51fc0ef1ad9ca",
+        "failed": [],
+        "at": "2026-11-19T21:16:29+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T19:00:00+01:00",
+        "request_id": "6ad07aebef314d09a12b916451da113d",
+        "job_id": "336fceb0a6f54f83885000d124dc3bc4",
+        "failed": [],
+        "at": "2026-11-19T21:22:26+00:00"
+      }
+    ],
+    "book": null
   }
 ]
