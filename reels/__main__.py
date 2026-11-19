@@ -178,6 +178,13 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
                      v.get("music_volume", 0.35), 0.0, sfx=sfx,
                      progress_color=cfg["channel"].get("accent_color") if v.get("progress_bar", True) else None)
+    try:  # portada diseñada (fotograma del personaje + gancho), para que el vídeo no se vea con un fotograma cualquiera
+        from .cover import make_cover, pick_frame
+        f, at = pick_frame(shots, [b.framing for b in part.blocks], durations)
+        make_cover(f, at, part.hook_title, cfg["channel"].get("accent_color", "#E2A84B"), badge,
+                   cfg["channel"]["name"], workdir / "portada.jpg")
+    except Exception as e:
+        print(f"  Aviso: no se pudo crear la portada: {e}", file=sys.stderr)
     print(f"  vídeo: {video}")
     return video, series, part
 

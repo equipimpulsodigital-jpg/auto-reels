@@ -232,8 +232,6 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
         draw_frame(c, ctx, shot, t, i)
         c.restore()
         S.vignette(c, W, H, 0.35)
-        if shot.camera == "golpe" and t < 0.15:  # destello blanco del primer instante
-            c.drawRect(skia.Rect.MakeWH(W, H), skia.Paint(Color=skia.ColorSetARGB(int(200 * (1 - t / 0.15)), 255, 255, 255)))
         arr = surface.makeImageSnapshot().toarray(colorType=skia.ColorType.kRGBA_8888_ColorType)
         proc.stdin.write(arr.tobytes())
     proc.stdin.close()

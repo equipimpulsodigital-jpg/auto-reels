@@ -54,7 +54,7 @@ class Character(BaseModel):
 class Block(BaseModel):
     label: str = Field(description="Nombre del tramo: GANCHO, CONTEXTO, TENSIÓN, GIRO, CLIFFHANGER...")
     speaker: str = Field(description="'narrador' o el id de un personaje que dice esta frase en pantalla.")
-    narration: str = Field(description="Frase que se oye en este plano (6-12 palabras): voz en off del narrador o diálogo del personaje.")
+    narration: str = Field(description="Frase que se oye en este plano (5-9 palabras): voz en off del narrador o diálogo del personaje.")
     location: Literal[tuple(LOCATIONS)]
     framing: Literal[tuple(K.FRAMINGS)]
     cast: List[str] = Field(default_factory=list, description="Ids de los personajes que salen en el plano (el que habla primero).")

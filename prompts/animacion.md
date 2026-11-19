@@ -58,7 +58,7 @@ El canal es una **serie de dibujos animados**: caricaturas 2D que se mueven, hab
 - Las mujeres llevan `female: true`.
 
 ### 4. PLANIFICACIÓN DE LA ANIMACIÓN
-- **Muchos planos cortos:** cada bloque es un plano de **2,5–4 segundos** (6–12 palabras), y cada parte tiene **entre 12 y 14 bloques**. Cada plano muestra la acción concreta de esa frase.
+- **Muchos planos cortos:** cada bloque es un plano de **2–3 segundos** (5–9 palabras), y cada parte tiene **entre 15 y 18 bloques**. Cada plano muestra la acción concreta de esa frase y es distinto del anterior: cambia de encuadre (general, personaje, dos, objeto), de lugar o de cámara en cada corte. Nunca dos planos seguidos iguales.
 - **Narrador:** alterna planos `general` del lugar (con personajes de cuerpo entero en `cast`, caminando con `walk` cuando se mueven), planos `objeto` (la carta, el arma, el mapa, el oro...) y `event` para la acción (explosiones, disparos, incendios, multitudes...). Usa el suceso o el objeto que mejor ilustre la frase.
 - **Diálogo:** `framing: personaje` con `cast: [quien_habla, quien_escucha]` para plano/contraplano (el primer plano del que habla con la nuca del otro), o `dos` para verlos juntos. Elige `gesture` y `emotion` acordes a la frase y `listener_emotion` para la reacción del otro.
 - Mantén el **mismo lugar** durante un intercambio de diálogo; cambia de lugar solo cuando la historia avanza. Usa `mood` (día, atardecer, noche, tormenta) para el ambiente y la tensión.

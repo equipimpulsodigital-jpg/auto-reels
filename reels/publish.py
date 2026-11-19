@@ -200,9 +200,20 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_pa
         fields += [("tags[]", t.lstrip("#")) for t in script.hashtags]
 
     headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}", "Idempotency-Key": idempotency_key}
-    with open(video, "rb") as f:
-        r = requests.post(f"{API}/upload", headers=headers, data=fields,
-                          files={"video": (video.name, f, "video/mp4")}, timeout=1200)
+    files = {"video": (video.name, open(video, "rb"), "video/mp4")}
+    cover = video.parent / "portada.jpg"
+    if cover.exists():  # portada diseñada: Instagram, TikTok y (si el canal está verificado) YouTube
+        if "instagram" in platforms:
+            files["cover_image"] = (cover.name, open(cover, "rb"), "image/jpeg")
+        if "tiktok" in platforms:
+            files["tiktok_cover_image"] = (cover.name, open(cover, "rb"), "image/jpeg")
+        if "youtube" in platforms and pcfg.get("youtube_thumbnail", False):
+            files["thumbnail"] = (cover.name, open(cover, "rb"), "image/jpeg")
+    try:
+        r = requests.post(f"{API}/upload", headers=headers, data=fields, files=files, timeout=1200)
+    finally:
+        for f in files.values():
+            f[1].close()
     if r.status_code == 429 and "limit" in r.text:
         raise LimitReached(f"Upload-Post: límite del plan alcanzado ({r.text[:300]})")
     if r.status_code >= 400:

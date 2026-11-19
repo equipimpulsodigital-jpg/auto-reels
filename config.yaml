@@ -52,6 +52,7 @@ publish:
   min_gap_minutes: 100        # ni una franja a menos de este tiempo de otra ya programada
   label_as_ai: false          # etiqueta «hecho con IA» de cada red (no hace falta para animación)
   youtube_privacy: public     # public | unlisted | private
+  youtube_thumbnail: false    # portada propia también en YouTube (true cuando los canales estén verificados)
 
 # Recopilación semanal para YouTube: un vídeo largo con las historias completas de la semana.
 compilation:
