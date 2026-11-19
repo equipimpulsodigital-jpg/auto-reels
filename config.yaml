@@ -81,6 +81,11 @@ channels:
       - "Historia oscura de España: {n} casos reales, de principio a fin"
     compilation_thumb: "{n} historias que no te contaron"
     compilation_tags: [historiadeespaña, historia, españa, crimenesreales, recopilacion]
+    tagline: "Historias reales de España, contadas en dibujos."
+    links:                    # para la página de enlaces (actualiza los @ si cambian)
+      youtube: https://www.youtube.com/@historiasbiencontadas-o4l
+      instagram: https://www.instagram.com/bien_contadas/
+      tiktok: https://www.tiktok.com/@historias.bien.co86
     formats:
       punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
       crimen_historico: "Crimen, conspiración o suceso oscuro real de la historia de España"
@@ -97,6 +102,11 @@ channels:
       - "Archivo del Misterio: {n} enigmas reales, de principio a fin"
     compilation_thumb: "{n} misterios sin resolver"
     compilation_tags: [misterio, casossinresolver, enigmas, misterios, recopilacion]
+    tagline: "Misterios reales que nadie ha sabido explicar."
+    links:                    # para la página de enlaces (actualiza los @ si cambian)
+      youtube: https://www.youtube.com/@elanecdotarioes
+      instagram: https://www.instagram.com/elanecdotarioes/
+      tiktok: https://www.tiktok.com/@elanecdotarioes
     formats:
       caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
       enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"
@@ -115,6 +125,11 @@ channels:
       - "{n} errores que matan una cita (y qué hacer en su lugar)"
     compilation_thumb: "{n} trucos que funcionan"
     compilation_tags: [ligar, citas, romperelhielo, habilidadessociales, recopilacion]
+    tagline: "Trucos para romper el hielo y conectar con la gente."
+    links:                    # para la página de enlaces (actualiza los @ si cambian)
+      youtube: https://www.youtube.com/@conexionconchispa
+      instagram: https://www.instagram.com/conexionconchispa/
+      tiktok: https://www.tiktok.com/@tintaibericaes
     formats:
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
       psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
@@ -132,6 +147,10 @@ channels:
       - "{n} razones por las que haces lo que haces"
     compilation_thumb: "Tu cerebro te engaña"
     compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
+    tagline: "Psicología cotidiana: por qué hacemos lo que hacemos."
+    links:                    # para la página de enlaces (actualiza los @ si cambian)
+      youtube: https://www.youtube.com/@lacabezapordentro
+      instagram: https://www.instagram.com/lacabezapordentro/
     formats:
       por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
       como_salir: "Cómo salir de ahí: un problema cotidiano y una herramienta práctica con respaldo"
@@ -148,6 +167,11 @@ channels:
       - "Qué pasaría si...: {n} escenarios que te volarán la cabeza"
     compilation_thumb: "¿Qué pasaría si...?"
     compilation_tags: [ciencia, quepasariasi, espacio, curiosidades, recopilacion]
+    tagline: "Escenarios imposibles explicados con ciencia."
+    links:                    # para la página de enlaces (actualiza los @ si cambian)
+      youtube: https://www.youtube.com/@ysiciencia2
+      instagram: https://www.instagram.com/ysiciencia2/
+      tiktok: https://www.tiktok.com/@user5758110653335
     formats:
       y_si_planeta: "¿Y si... el planeta? La Tierra, el espacio o la naturaleza en un escenario imposible"
       y_si_nosotros: "¿Y si... nosotros? El cuerpo humano, la tecnología o la sociedad en un escenario imposible"

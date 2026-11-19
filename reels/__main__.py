@@ -172,7 +172,8 @@ def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, 
     key = f"{ch['id']}-{zlib.crc32((series.series_title + series.topic).encode())}-{part.part_number}"
     if slot:
         key += f"-{slot:%Y%m%d%H%M}"
-    result = publish(video, part, cfg, idempotency_key=key, total_parts=n, scheduled_at=slot)
+    result = publish(video, part, cfg, idempotency_key=key, total_parts=n, scheduled_at=slot,
+                     book=bool(series.book and cfg.get("affiliate", {}).get("tag")))
     failed = failed_platforms(result)
     if len(failed) >= len(ch["platforms"]) or failed in (["failed"], ["not_found"]):
         print(f"No se publicó en ninguna plataforma: {failed}. La parte queda pendiente.", file=sys.stderr)
@@ -256,8 +257,15 @@ def main() -> int:
     ap.add_argument("--unlabel", action="store_true", help="quita la etiqueta de IA de las publicaciones ya programadas")
     ap.add_argument("--compile", action="store_true", help="recopilación semanal para YouTube (con --clips)")
     ap.add_argument("--clips", action="append", default=[], help="carpeta con vídeos ya publicados (se puede repetir)")
+    ap.add_argument("--pages", action="store_true", help="regenera la página de enlaces de la bio (docs/)")
     ap.add_argument("--accounts", action="store_true", help="enlaces de las cuentas conectadas en Upload-Post")
     args = ap.parse_args()
+    if args.pages:
+        from .pages import build
+        names = [args.channel] if args.channel else list(load_config().get("channels", {}))
+        for cid in names:
+            print("  página:", build(load_config(cid)))
+        return 0
     if args.accounts:
         from .publish import list_accounts
         cfg = load_config(args.channel)
@@ -336,6 +344,11 @@ def main() -> int:
             print("Dos franjas fallidas: se detiene esta ejecución.", file=sys.stderr)
             break
     _save(cfg, "state.json", state)
+    try:  # la página de enlaces de la bio incluye los libros de las historias recién programadas
+        from .pages import build
+        build(cfg)
+    except Exception as e:  # nunca debe impedir la publicación
+        print(f"Aviso: no se pudo actualizar la página de enlaces: {e}", file=sys.stderr)
     return 1 if errors else 0
 
 

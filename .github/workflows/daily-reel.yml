@@ -178,7 +178,7 @@ jobs:
         run: |
           git config user.name "reels-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "data/$CH" || true
+          git add "data/$CH" "docs/$CH" || true
           git diff --cached --quiet && exit 0
           git commit -m "Estado $CH: $(date +%F)"
           # Otros canales pueden haber guardado a la vez: reintenta integrando sus cambios

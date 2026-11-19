@@ -149,19 +149,20 @@ def unlabel_scheduled(profile: str) -> None:
               + ("" if ok else f" → {resp.status_code} {resp.text[:200]}"))
 
 
-def _caption(script: Part, total_parts: int = 1) -> str:
+def _caption(script: Part, total_parts: int = 1, book: bool = False) -> str:
     tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in script.hashtags)
     follow = f"\n\nSígueme para la parte {script.part_number + 1}" if script.part_number < total_parts else ""
-    return f"{_clean(script.caption)}{follow}\n\n{tags}".strip()
+    books = "\n\n📚 El libro de esta historia, en el enlace de mi perfil." if book else ""
+    return f"{_clean(script.caption)}{follow}{books}\n\n{tags}".strip()
 
 
 def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_parts: int = 1,
-            scheduled_at: Optional[datetime] = None) -> dict:
+            scheduled_at: Optional[datetime] = None, book: bool = False) -> dict:
     """Publica ya o, con scheduled_at, deja la publicación programada en Upload-Post a esa hora exacta."""
     pcfg, ch = cfg["publish"], cfg["channel"]
     platforms = ch["platforms"]
     ai = "true" if pcfg.get("label_as_ai", True) else "false"
-    caption = _caption(script, total_parts)
+    caption = _caption(script, total_parts, book and bool(cfg["channel"].get("links_page", True)))
 
     fields: list[tuple[str, str]] = [("user", ch["profile"]), ("title", script.youtube_title[:100])]
     fields += [("platform[]", p) for p in platforms]
