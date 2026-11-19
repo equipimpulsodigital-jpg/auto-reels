@@ -15,7 +15,11 @@
         "failed": [],
         "at": "2026-11-19T15:03:28+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "No me estás escuchando",
+      "author": "Kate Murphy"
+    }
   },
   {
     "date": "2026-11-19",
@@ -33,7 +37,11 @@
         "failed": [],
         "at": "2026-11-19T15:11:18+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "Supercomunicadores",
+      "author": "Charles Duhigg"
+    }
   },
   {
     "date": "2026-11-19",
@@ -51,6 +59,10 @@
         "failed": [],
         "at": "2026-11-19T15:19:44+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "La vida que florece",
+      "author": "Martin E. P. Seligman"
+    }
   }
 ]

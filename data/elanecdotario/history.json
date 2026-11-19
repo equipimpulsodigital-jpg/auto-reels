@@ -78,6 +78,10 @@
         "failed": [],
         "at": "2026-11-19T14:52:06+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "Historia del cine",
+      "author": "Román Gubern"
+    }
   }
 ]

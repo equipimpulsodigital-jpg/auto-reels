@@ -22,7 +22,11 @@
         "at": "2026-11-18T03:58:20+00:00",
         "job_id": "317486a8ddb24f6b853dd421b042cf9a"
       }
-    ]
+    ],
+    "book": {
+      "title": "La historia secreta de las bombas de Palomares",
+      "author": "Rafael Moreno Izquierdo"
+    }
   },
   {
     "date": "2026-11-18",
@@ -49,7 +53,11 @@
         "at": "2026-11-18T04:13:42+00:00",
         "job_id": "3a0385adeead4268b9a6084639d60492"
       }
-    ]
+    ],
+    "book": {
+      "title": "El crimen de la calle de Fuencarral",
+      "author": "Benito Pérez Galdós"
+    }
   },
   {
     "date": "2026-11-18",
@@ -76,7 +84,11 @@
         "failed": [],
         "at": "2026-11-19T10:53:40+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "Un héroe trágico del anarquismo español: Mateo Morral, 1879-1906",
+      "author": "Eduard Masjuan"
+    }
   },
   {
     "date": "2026-11-19",
@@ -103,7 +115,11 @@
         "failed": [],
         "at": "2026-11-19T11:07:42+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "Matar a Prim",
+      "author": "Francisco Pérez Abellán"
+    }
   },
   {
     "date": "2026-11-19",
@@ -148,6 +164,10 @@
         "failed": [],
         "at": "2026-11-19T14:48:02+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "El crimen de Cuenca",
+      "author": "Lola Salvador Maldonado"
+    }
   }
 ]

@@ -15,7 +15,11 @@
         "failed": [],
         "at": "2026-11-19T15:07:52+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "Cómo ganar amigos e influir sobre las personas",
+      "author": "Dale Carnegie"
+    }
   },
   {
     "date": "2026-11-19",
@@ -33,7 +37,11 @@
         "failed": [],
         "at": "2026-11-19T15:14:37+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "Cháchara",
+      "author": "Ethan Kross"
+    }
   },
   {
     "date": "2026-11-19",
@@ -51,6 +59,10 @@
         "failed": [],
         "at": "2026-11-19T15:20:58+00:00"
       }
-    ]
+    ],
+    "book": {
+      "title": "Por qué recordamos",
+      "author": "Charan Ranganath"
+    }
   }
 ]
