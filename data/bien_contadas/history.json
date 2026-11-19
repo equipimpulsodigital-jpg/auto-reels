@@ -131,5 +131,23 @@
         "at": "2026-11-19T11:23:35+00:00"
       }
     ]
+  },
+  {
+    "date": "2026-11-19",
+    "format": "crimen_historico",
+    "topic": "El crimen de Cuenca: dos vecinos de Tresjuncos, Gregorio Valero y León Sánchez, confiesan bajo tortura el asesinato del pastor 'el Cepa' (1910-1913), son condenados en 1918 y en 1926 la víctima aparece viva en Mira al pedir su partida de bautismo para casarse; revisión del Supremo y película secuestrada de Pilar Miró.",
+    "series_title": "El crimen de Cuenca: el muerto que volvió",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T13:00:00+01:00",
+        "request_id": "f27f97f2f7094011ad5782723b76e432",
+        "job_id": "7293e2f5fb454351afe72c726e23a82b",
+        "failed": [],
+        "at": "2026-11-19T14:48:02+00:00"
+      }
+    ]
   }
 ]

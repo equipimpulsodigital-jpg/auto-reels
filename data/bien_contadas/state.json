@@ -1,6 +1,700 @@
 {
-  "queue": [],
-  "last_published": "2026-11-19T11:23:35+00:00",
+  "queue": [
+    {
+      "series": {
+        "series_title": "El crimen de Cuenca: el muerto que volvió",
+        "format": "crimen_historico",
+        "year": "1910-1926",
+        "place": "Tresjuncos y Mira (Cuenca)",
+        "topic": "El crimen de Cuenca: dos vecinos de Tresjuncos, Gregorio Valero y León Sánchez, confiesan bajo tortura el asesinato del pastor 'el Cepa' (1910-1913), son condenados en 1918 y en 1926 la víctima aparece viva en Mira al pedir su partida de bautismo para casarse; revisión del Supremo y película secuestrada de Pilar Miró.",
+        "era": "1900",
+        "characters": [
+          {
+            "id": "grimaldos",
+            "name": "El Cepa",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "morena",
+              "hair_color": "castaño",
+              "hair_style": "corto",
+              "hat": "boina",
+              "hat_color": "negro",
+              "beard": "barba_corta",
+              "beard_color": "castaño",
+              "outfit": "campesino",
+              "outfit_color": "marron",
+              "accent_color": "beige",
+              "pants_color": "marron",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "gregorio",
+            "name": "Gregorio Valero",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "media",
+              "hair_color": "negro",
+              "hair_style": "corto",
+              "hat": "gorra_plana",
+              "hat_color": "gris",
+              "beard": "bigotazo",
+              "beard_color": "negro",
+              "outfit": "campesino",
+              "outfit_color": "beige",
+              "accent_color": "marron",
+              "pants_color": "gris",
+              "nose": "aguileña",
+              "jaw": "fina",
+              "eyes": "negros",
+              "glasses": false
+            }
+          },
+          {
+            "id": "leon",
+            "name": "León Sánchez",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "morena",
+              "hair_color": "canoso",
+              "hair_style": "calvo",
+              "hat": "sombrero",
+              "hat_color": "marron",
+              "beard": "barba",
+              "beard_color": "canoso",
+              "outfit": "camisa",
+              "outfit_color": "crema",
+              "accent_color": "negro",
+              "pants_color": "negro",
+              "nose": "gancho",
+              "jaw": "cuadrada",
+              "eyes": "verdes",
+              "glasses": false
+            }
+          },
+          {
+            "id": "guardia",
+            "name": "Guardia Civil",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "negro",
+              "hair_style": "rapado",
+              "hat": "tricornio",
+              "hat_color": "negro",
+              "beard": "bigote",
+              "beard_color": "negro",
+              "outfit": "uniforme",
+              "outfit_color": "azul_marino",
+              "accent_color": "rojo",
+              "pants_color": "azul_marino",
+              "nose": "pequeña",
+              "jaw": "cuadrada",
+              "eyes": "azules",
+              "glasses": false
+            }
+          }
+        ],
+        "historical_notes": "Documentado: José María Grimaldos López, 'el Cepa', pastor de Tresjuncos (Cuenca), desapareció en agosto de 1910. Los rumores señalaron a Gregorio Valero y León Sánchez. La primera causa se archivó (sobreseimiento) en 1911 por falta de pruebas. En 1913 un nuevo juez (Emilio Isasa) la reabrió; detenidos por la Guardia Civil, ambos confesaron tras torturas. El cadáver nunca apareció. En 1918 fueron condenados en Cuenca a 18 años de prisión y pasaron más de una década presos antes de salir indultados. En 1926 el párroco de Mira (Cuenca) solicitó a Tresjuncos la partida de bautismo de Grimaldos, que quería casarse: estaba vivo. Ese año el Tribunal Supremo anuló la condena por la vía de revisión. En 1979 Pilar Miró rodó 'El crimen de Cuenca'; la película fue secuestrada y ella procesada por la jurisdicción militar por supuestas injurias a la Guardia Civil; se estrenó en 1981. Inciertos/no usados: los detalles concretos de las torturas y de las confesiones (varían según las fuentes) y el motivo exacto por el que Grimaldos se marchó, que nunca quedó del todo claro. Los diálogos son recreaciones, no citas textuales. El uniforme de la Guardia Civil se representa en azul oscuro con tricornio, propio de la época (el verde llegó en los años 40).",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_candidates": [
+              "Lo confesaron todo. Lo único que faltaba era el muerto.",
+              "Dieciocho años de cárcel por un asesinato sin cadáver.",
+              "Si hubieras vivido en Tresjuncos, tú también los habrías señalado.",
+              "El guardia volvió a preguntar dónde estaba el cuerpo. Y ellos no lo sabían.",
+              "Dos hombres confesaron un asesinato. Pero el cadáver nunca apareció."
+            ],
+            "hook_title": "¿DÓNDE ESTÁ EL CUERPO?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Dos hombres confesaron un asesinato. Pero el cadáver nunca apareció.",
+                "location": "carcel",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Primer plano de una confesión firmada sobre la mesa de una celda, iluminada por un haz de luz."
+              },
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Aun así, los condenaron a dieciocho años de cárcel.",
+                "location": "carcel",
+                "framing": "general",
+                "cast": [
+                  "gregorio",
+                  "leon"
+                ],
+                "gesture": "explain",
+                "emotion": "triste",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Gregorio y León, abatidos, sentados en la celda; la cámara se aleja y revela los barrotes."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Tresjuncos, Cuenca, 1910. Un pastor, 'el Cepa', desaparece.",
+                "location": "campo",
+                "framing": "general",
+                "cast": [
+                  "grimaldos"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "El Cepa se aleja caminando por un camino de tierra entre olivos al atardecer hasta perderse."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Los rumores señalan a dos vecinos: Gregorio Valero y León Sánchez.",
+                "location": "pueblo",
+                "framing": "general",
+                "cast": [
+                  "gregorio",
+                  "leon"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": "multitud",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "En la plaza del pueblo, siluetas de vecinos murmuran y señalan a Gregorio y León."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "leon",
+                "narration": "¡No le hemos tocado un pelo al Cepa!",
+                "location": "pueblo",
+                "framing": "personaje",
+                "cast": [
+                  "leon",
+                  "gregorio"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "asustado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "León, indignado, alza el puño ante las miradas del pueblo."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "gregorio",
+                "narration": "Se habrá marchado. Ya volverá.",
+                "location": "pueblo",
+                "framing": "personaje",
+                "cast": [
+                  "gregorio",
+                  "leon"
+                ],
+                "gesture": "shrug",
+                "emotion": "pensativo",
+                "listener_emotion": "enfadado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Gregorio se encoge de hombros, intentando quitarle hierro al asunto."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "En 1911 el juez archiva el caso: no hay pruebas.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Un expediente judicial se cierra con un sello de archivo sobre el escritorio."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Pero en 1913, un juez nuevo lo reabre.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "El mismo expediente vuelve a abrirse bajo la lámpara del despacho, de noche."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "guardia",
+                "narration": "¿Dónde está el cuerpo? ¡Habla de una vez!",
+                "location": "carcel",
+                "framing": "personaje",
+                "cast": [
+                  "guardia",
+                  "gregorio"
+                ],
+                "gesture": "point",
+                "emotion": "enfadado",
+                "listener_emotion": "asustado",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "visual_direction": "El guardia civil, con tricornio, grita y señala a Gregorio en un calabozo oscuro."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "gregorio",
+                "narration": "Diré lo que quiera... pero pare, por favor.",
+                "location": "carcel",
+                "framing": "personaje",
+                "cast": [
+                  "gregorio",
+                  "guardia"
+                ],
+                "gesture": "chest",
+                "emotion": "asustado",
+                "listener_emotion": "serio",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "Gregorio, agotado y aterrado, se lleva la mano al pecho y se rinde."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Tras las torturas de la Guardia Civil, ambos confiesan.",
+                "location": "carcel",
+                "framing": "general",
+                "cast": [
+                  "gregorio",
+                  "leon"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Los dos presos hundidos en el suelo de la celda, bajo el haz de luz del ventanuco."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Pasan más de diez años entre rejas.",
+                "location": "carcel",
+                "framing": "general",
+                "cast": [
+                  "leon"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "lluvia",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "León, envejecido, mira por el ventanuco mientras llueve; el tiempo pasa."
+              },
+              {
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Hasta que en 1926, el cura de Tresjuncos recibe una carta.",
+                "location": "iglesia",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "carta",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Una carta lacrada sobre una mesa de la iglesia, entre velas; el sello está a punto de romperse."
+              }
+            ],
+            "cliffhanger": "Tras más de diez años presos, al cura de Tresjuncos le llega una carta en 1926... ¿qué decía?",
+            "caption": "Parte 1/2. Confesaron un asesinato, pero nadie encontró jamás el cadáver. Así empezó uno de los casos más oscuros de la justicia española. Recreación animada basada en hechos reales.",
+            "hashtags": [
+              "historiadeespaña",
+              "crimendecuenca",
+              "truecrime",
+              "historia",
+              "cuenca",
+              "errorjudicial"
+            ],
+            "youtube_title": "Confesaron un asesinato… pero no había cadáver | El crimen de Cuenca Parte 1",
+            "youtube_description": "Tresjuncos, Cuenca, 1910. Un pastor desaparece y dos vecinos acaban confesando su asesinato tras las torturas de la Guardia Civil. Parte 1 de 2. Recreación animada basada en hechos reales."
+          },
+          {
+            "part_number": 2,
+            "hook_candidates": [
+              "El hombre al que habían 'asesinado' pedía papeles para casarse.",
+              "Dieciséis años después de su asesinato, la víctima apareció viva.",
+              "Si hubieras estado en Mira en 1926, habrías visto pasear a un muerto.",
+              "El cura leyó el nombre dos veces. Era el del asesinado.",
+              "Una película contó este caso… y su directora acabó ante un tribunal militar."
+            ],
+            "hook_title": "¿UN MUERTO QUE SE CASA?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "El cura leyó el nombre dos veces. Era el del asesinado.",
+                "location": "iglesia",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "carta",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "La carta abierta sobre la mesa de la sacristía; el nombre de José María Grimaldos destaca a la luz de las velas."
+              },
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Pedían su partida de bautismo. Para casarse.",
+                "location": "iglesia",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "static",
+                "sfx": [
+                  "whoosh"
+                ],
+                "visual_direction": "Un libro parroquial y una partida de bautismo junto a la carta."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Mira, Cuenca, 1926. El Cepa estaba vivo.",
+                "location": "pueblo",
+                "framing": "general",
+                "cast": [
+                  "grimaldos"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "El Cepa pasea tranquilo por la plaza de Mira; la cámara se aleja y revela el pueblo."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "guardia",
+                "narration": "¿Usted es José María Grimaldos, de Tresjuncos?",
+                "location": "pueblo",
+                "framing": "personaje",
+                "cast": [
+                  "guardia",
+                  "grimaldos"
+                ],
+                "gesture": "point",
+                "emotion": "desconfiado",
+                "listener_emotion": "sorprendido",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "El guardia civil le corta el paso y le señala con gesto desconfiado."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "grimaldos",
+                "narration": "Sí, señor. ¿Qué pasa? Yo no he hecho nada.",
+                "location": "pueblo",
+                "framing": "personaje",
+                "cast": [
+                  "grimaldos",
+                  "guardia"
+                ],
+                "gesture": "shrug",
+                "emotion": "sorprendido",
+                "listener_emotion": "serio",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "El Cepa, desconcertado, se encoge de hombros sin entender nada."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "guardia",
+                "narration": "Por su muerte hay dos hombres condenados.",
+                "location": "pueblo",
+                "framing": "personaje",
+                "cast": [
+                  "guardia",
+                  "grimaldos"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "El guardia se lo dice muy serio; al fondo, la nuca del Cepa se queda helada."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Gregorio y León llevaban más de una década pagando un crimen inexistente.",
+                "location": "carcel",
+                "framing": "general",
+                "cast": [
+                  "gregorio",
+                  "leon"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "visual_direction": "Gregorio y León, envejecidos, en la celda donde pasaron años por un crimen que nunca ocurrió."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "leon",
+                "narration": "Nos quitaron la vida por un muerto que estaba vivo.",
+                "location": "pueblo",
+                "framing": "dos",
+                "cast": [
+                  "leon",
+                  "gregorio"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "triste",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "visual_direction": "León, furioso, junto a Gregorio en la plaza de Tresjuncos al atardecer."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "gregorio",
+                "narration": "Y lo confesamos a golpes, en el cuartel.",
+                "location": "pueblo",
+                "framing": "dos",
+                "cast": [
+                  "gregorio",
+                  "leon"
+                ],
+                "gesture": "chest",
+                "emotion": "triste",
+                "listener_emotion": "enfadado",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Gregorio, con la mano en el pecho, recuerda con la mirada perdida."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Ese mismo año, el Tribunal Supremo anuló la condena.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Una sentencia del Tribunal Supremo con el sello oficial sobre el escritorio."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "En 1979, Pilar Miró llevó el caso al cine.",
+                "location": "ciudad",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "periodico",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "visual_direction": "Un periódico anuncia la película 'El crimen de Cuenca' bajo una farola."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "La película fue secuestrada y ella, procesada por un tribunal militar.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "multitud",
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "visual_direction": "Calle de Madrid de noche; una multitud en silueta protesta frente a un cine cerrado."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "¿Su delito? Contar cómo se arrancó aquella confesión.",
+                "location": "carcel",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "visual_direction": "Vuelve la confesión firmada del principio, sola bajo el haz de luz de la celda; fundido a negro."
+              }
+            ],
+            "cliffhanger": "Final: el Supremo anula la condena, pero en 1979 la película de Pilar Miró sobre el caso fue secuestrada y ella procesada por la justicia militar por contar cómo se arrancó la confesión.",
+            "caption": "Parte 2/2. Dos hombres pagaron más de diez años por un asesinato... y en 1926 la víctima apareció viva. El error judicial más famoso de España. Recreación animada basada en hechos reales.",
+            "hashtags": [
+              "historiadeespaña",
+              "crimendecuenca",
+              "errorjudicial",
+              "pilarmiro",
+              "truecrime",
+              "historia"
+            ],
+            "youtube_title": "La víctima del asesinato apareció viva 16 años después | El crimen de Cuenca Parte 2",
+            "youtube_description": "1926: el pastor al que dos hombres confesaron haber matado aparece vivo en Mira (Cuenca). El Supremo anula la condena y, décadas después, la película de Pilar Miró es secuestrada. Parte 2 de 2. Recreación animada basada en hechos reales."
+          }
+        ]
+      },
+      "part": 1
+    }
+  ],
+  "last_published": "2026-11-19T14:48:02+00:00",
   "scheduled": [
     "2026-11-18T10:00:00+01:00",
     "2026-11-18T13:00:00+01:00",
@@ -10,6 +704,7 @@
     "2026-11-19T16:00:00+01:00",
     "2026-11-19T19:00:00+01:00",
     "2026-11-19T22:00:00+01:00",
-    "2026-11-20T10:00:00+01:00"
+    "2026-11-20T10:00:00+01:00",
+    "2026-11-20T13:00:00+01:00"
   ]
 }
