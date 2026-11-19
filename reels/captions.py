@@ -81,7 +81,7 @@ class CaptionRenderer:
             d.text(((self.w - tw) / 2, top + pad + k * lh), line, font=font, fill=color)
 
     def _frame(self, words: list[Word], group: list[int] | None, active: int | None, show_hook: bool,
-               show_end: bool = False) -> Image.Image:
+               show_end: bool = False, pop: bool = False) -> Image.Image:
         img = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
 
@@ -109,8 +109,14 @@ class CaptionRenderer:
             if speaker:  # diálogo: etiqueta con el nombre de quien habla
                 self._box(d, speaker.upper(), int(self.w * 0.05), y - int(self.w * 0.11), self.accent, "#111111")
             for j, t in zip(group, texts):
+                if j == active and pop and not words[j].emph:  # rebote: entra un 18 % más grande
+                    pf = _font(int(size * 1.18))
+                    d.text((x - size * 0.04, y - size * 0.1), t, font=pf, fill=self.accent,
+                           stroke_width=max(6, size // 13), stroke_fill="black")
+                    x += d.textlength(t, font=pf) + space - size * 0.08
+                    continue
                 if words[j].emph and j == active:  # palabra clave: más grande, en color y un poco más arriba
-                    big = _font(int(size * 1.35))
+                    big = _font(int(size * (1.5 if pop else 1.35)))
                     d.text((x, y - size * 0.22), t, font=big, fill=self.accent, stroke_width=max(8, size // 10),
                            stroke_fill="black")
                     x += d.textlength(t, font=big) + space
@@ -135,7 +141,9 @@ class CaptionRenderer:
             events.append((w.start, max(end, w.start + 0.05), i))
 
         end_start = self.end_start if self.end_card and self.end_start is not None else total
-        cuts = sorted({0.0, total, self.hook_seconds, end_start, *[t for s, e, _ in events for t in (s, e)]})
+        POP = 0.09  # cada palabra entra un poco más grande y "salta" a su tamaño
+        cuts = sorted({0.0, total, self.hook_seconds, end_start, *[t for s, e, _ in events for t in (s, e)],
+                       *[s + POP for s, e, _ in events if e - s > POP * 1.5]})
         cuts = [c for c in cuts if 0 <= c <= total]
 
         cap_dir = workdir / "captions"
@@ -146,13 +154,15 @@ class CaptionRenderer:
             if b - a < 1e-3:
                 continue
             mid = (a + b) / 2
-            active = next((i for s, e, i in events if s <= mid < e), None)
+            ev = next(((s, e, i) for s, e, i in events if s <= mid < e), None)
+            active = ev[2] if ev else None
             show_end = mid >= end_start
-            key = (None if show_end else active, mid < self.hook_seconds, show_end)
+            pop = bool(ev) and (mid - ev[0]) < POP and (ev[1] - ev[0]) > POP * 1.5
+            key = (None if show_end else active, mid < self.hook_seconds, show_end, pop and not show_end)
             if key not in cache:
                 group = group_of[active] if active is not None and not show_end else None
                 path = cap_dir / f"c{len(cache):04d}.png"
-                self._frame(words, group, key[0], key[1], show_end).save(path, optimize=True)
+                self._frame(words, group, key[0], key[1], show_end, pop=key[3]).save(path, optimize=True)
                 cache[key] = path
             if entries and entries[-1][0] == cache[key]:
                 entries[-1] = (cache[key], entries[-1][1] + (b - a))

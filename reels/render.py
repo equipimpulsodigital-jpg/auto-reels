@@ -30,17 +30,21 @@ def join_shots(shot_files: list[Path], durations: list[float], fade: float, out:
     return out
 
 
-def pick_music() -> Optional[Path]:
+def pick_music(names: Optional[list[str]] = None) -> Optional[Path]:
+    """Pista al azar entre las de la marca (o entre todas si no tiene lista)."""
     tracks = [p for p in (ASSETS / "music").glob("*") if p.suffix.lower() in {".mp3", ".m4a", ".wav", ".ogg"}]
+    if names:
+        tracks = [p for p in tracks if p.stem in names] or tracks
     return random.choice(tracks) if tracks else None
 
 
 def assemble(shot_files: list[Path], durations: list[float], voice: Path, captions_list: Path, total: float,
              out: Path, workdir: Path, music_volume: float, fade: float = 0.0,
-             sfx: Optional[Path] = None, progress_color: Optional[str] = None) -> Path:
+             sfx: Optional[Path] = None, progress_color: Optional[str] = None,
+             music_names: Optional[list[str]] = None) -> Path:
     bg = join_shots(shot_files, durations, fade, workdir / "background.mp4", workdir)
 
-    music = pick_music()
+    music = pick_music(music_names)
     inputs = ["-i", bg, "-f", "concat", "-safe", "0", "-i", captions_list, "-i", voice]
     # Barra de progreso fina abajo: ver que «ya casi acaba» hace que más gente llegue al final.
     if progress_color:  # una franja del color de la marca que entra desde la izquierda al ritmo del vídeo

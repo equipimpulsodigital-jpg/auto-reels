@@ -59,6 +59,8 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
             if not any(name in ("hit", "boom") for name, _ in shot.sfx):
                 shot.sfx.append(("hit", 0.0))
         start = sum(durations[:i])
+        if i > 0 and shots and shot.location != shots[-1].location:  # cambio de lugar: transición con «whoosh»
+            shot.sfx.append(("whoosh", 0.0))
         for w in words or []:  # palabra clave: golpe de zoom y de sonido justo cuando se dice
             if w.scene == i and w.emph:
                 shot.punches.append(max(0.0, w.start - start))

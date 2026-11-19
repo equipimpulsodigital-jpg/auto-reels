@@ -156,7 +156,7 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
                 for b in part.blocks]
     voice, durations, words = synthesize_scenes([b.narration for b in part.blocks], cfg, workdir, speakers)
     _mark_emphasis(words, part.blocks)
-    tail = 1.6 if n > 1 and part.part_number < n else 0.8
+    tail = 1.6 if n > 1 and part.part_number < n else 1.2
     durations[-1] += tail
     total = sum(durations)
     print(f"  {len(words)} palabras · {total:.1f} s · {len(part.blocks)} planos")
@@ -170,14 +170,15 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     # 4. Subtítulos + montaje
     print("4/5 Subtítulos y montaje")
     badge = f"Parte {part.part_number}/{n}" if n > 1 else ""
-    end_card = "Sigue en la parte 2" if badge and part.part_number < n else ""
+    end_card = "Sigue en la parte 2" if badge and part.part_number < n else cfg["channel"].get("end_card", "Sígueme para más")
     captions = CaptionRenderer(v["width"], v["height"], cfg["channel"].get("accent_color", "#E2A84B"), part.hook_title,
                                badge=badge, end_card=end_card, end_start=total - tail + 0.2,
                                caption_y=cfg.get("animation", {}).get("caption_y", 0.86))
     cap_list = captions.render(words, total, workdir)
     video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
                      v.get("music_volume", 0.35), 0.0, sfx=sfx,
-                     progress_color=cfg["channel"].get("accent_color") if v.get("progress_bar", True) else None)
+                     progress_color=cfg["channel"].get("accent_color") if v.get("progress_bar", True) else None,
+                     music_names=cfg["channel"].get("music"))
     try:  # portada diseñada (fotograma del personaje + gancho), para que el vídeo no se vea con un fotograma cualquiera
         from .cover import make_cover, pick_frame
         f, at = pick_frame(shots, [b.framing for b in part.blocks], durations)

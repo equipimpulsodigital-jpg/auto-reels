@@ -52,7 +52,7 @@ publish:
   min_gap_minutes: 100        # ni una franja a menos de este tiempo de otra ya programada
   label_as_ai: false          # etiqueta «hecho con IA» de cada red (no hace falta para animación)
   youtube_privacy: public     # public | unlisted | private
-  youtube_thumbnail: false    # portada propia también en YouTube (true cuando los canales estén verificados)
+  youtube_thumbnail: true     # portada propia también en YouTube (los 5 canales están verificados)
 
 # Recopilación semanal para YouTube: un vídeo largo con las historias completas de la semana.
 compilation:
@@ -85,6 +85,9 @@ channels:
     compilation_thumb: "{n} historias que no te contaron"
     compilation_tags: [historiadeespaña, historia, españa, crimenesreales, recopilacion]
     hashtag: "#biencontadas"           # hashtag propio de la marca, en todos sus vídeos
+    narrator: {voice: es-ES-AlvaroNeural, rate: "+18%", pitch: "-4Hz"}   # voz del narrador de la marca
+    music: [misterio, intriga, epica, suspense, niebla]
+    end_card: "Sígueme para más historias"
     tagline: "Historias reales de España, contadas en dibujos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@historiasbiencontadas-o4l
@@ -107,6 +110,9 @@ channels:
     compilation_thumb: "{n} misterios sin resolver"
     compilation_tags: [misterio, casossinresolver, enigmas, misterios, recopilacion]
     hashtag: "#archivodelmisterio"           # hashtag propio de la marca, en todos sus vídeos
+    narrator: {voice: es-ES-AlvaroNeural, rate: "+14%", pitch: "-10Hz"}   # voz del narrador de la marca
+    music: [misterio, niebla, suspense, intriga]
+    end_card: "Sígueme para más misterios"
     tagline: "Misterios reales que nadie ha sabido explicar."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@elanecdotarioes
@@ -131,6 +137,9 @@ channels:
     compilation_thumb: "{n} trucos que funcionan"
     compilation_tags: [ligar, citas, romperelhielo, habilidadessociales, recopilacion]
     hashtag: "#conexionconchispa"           # hashtag propio de la marca, en todos sus vídeos
+    narrator: {voice: es-ES-XimenaNeural, rate: "+18%", pitch: "+0Hz"}   # voz del narrador de la marca
+    music: [chispa, cita]
+    end_card: "Sígueme para más trucos"
     tagline: "Trucos para romper el hielo y conectar con la gente."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@conexionconchispa
@@ -154,6 +163,9 @@ channels:
     compilation_thumb: "Tu cerebro te engaña"
     compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
     hashtag: "#lacabezapordentro"           # hashtag propio de la marca, en todos sus vídeos
+    narrator: {voice: es-ES-ElviraNeural, rate: "+14%", pitch: "-2Hz"}   # voz del narrador de la marca
+    music: [calma, pensar]
+    end_card: "Sígueme para entenderte mejor"
     tagline: "Psicología cotidiana: por qué hacemos lo que hacemos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@lacabezapordentro
@@ -175,6 +187,9 @@ channels:
     compilation_thumb: "¿Qué pasaría si...?"
     compilation_tags: [ciencia, quepasariasi, espacio, curiosidades, recopilacion]
     hashtag: "#ysiciencia"           # hashtag propio de la marca, en todos sus vídeos
+    narrator: {voice: es-ES-AlvaroNeural, rate: "+20%", pitch: "+4Hz"}   # voz del narrador de la marca
+    music: [cosmos, experimento, epica]
+    end_card: "Sígueme para más «¿y si…?»"
     tagline: "Escenarios imposibles explicados con ciencia."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@ysiciencia2

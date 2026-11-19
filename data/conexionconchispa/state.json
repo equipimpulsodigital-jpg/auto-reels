@@ -1,5 +1,419 @@
 {
-  "queue": [],
+  "queue": [
+    {
+      "series": {
+        "series_title": "La pregunta profunda que da miedo hacer (y conecta más)",
+        "format": "psicologia_atraccion",
+        "year": "actualidad",
+        "place": "Una cafetería en una primera cita",
+        "topic": "Kardas, Kumar y Epley (2022): creemos que las conversaciones profundas con desconocidos serán incómodas, pero conectan más; consejo: cambiar una pregunta de trámite por una de verdad",
+        "era": "moderno",
+        "characters": [
+          {
+            "id": "dani",
+            "name": "Dani",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "joven",
+              "skin": "media",
+              "hair_color": "castaño",
+              "hair_style": "corto",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "barba_corta",
+              "beard_color": "castaño",
+              "outfit": "jersey",
+              "outfit_color": "mostaza",
+              "accent_color": "blanco",
+              "pants_color": "azul_marino",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "lucia",
+            "name": "Lucía",
+            "voice": "mujer_joven",
+            "look": {
+              "female": true,
+              "age": "joven",
+              "skin": "clara",
+              "hair_color": "pelirrojo",
+              "hair_style": "largo",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "ninguna",
+              "beard_color": null,
+              "outfit": "camisa",
+              "outfit_color": "verde_oscuro",
+              "accent_color": "dorado",
+              "pants_color": "negro",
+              "nose": "pequeña",
+              "jaw": "fina",
+              "eyes": "verdes",
+              "glasses": true
+            }
+          }
+        ],
+        "historical_notes": "Basado en Kardas, M., Kumar, A. y Epley, N. (2022). «Overly shallow?: Miscalibrated expectations create a barrier to deeper conversation». Journal of Personality and Social Psychology, 122(3), 367-398. En varios experimentos, parejas de desconocidos que hablaban de temas profundos (p. ej. por qué se sentían más agradecidos en la vida) esperaban más incomodidad y menos conexión de las que realmente sintieron, y subestimaban cuánto le interesaba al otro esa conversación. La autora principal es Michael Kardas; Epley es el investigador más conocido del equipo (Universidad de Chicago). La pregunta concreta del vídeo («¿lo mejor que te ha pasado este año?») es un ejemplo práctico, no una de las preguntas literales del estudio. La escena de la cita es ficticia.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_candidates": [
+              "La pregunta «segura» es justo la que hace que nadie quiera volver.",
+              "Creemos que una pregunta profunda incomodará. Los experimentos dicen lo contrario.",
+              "Si en una cita hablas del tiempo, ya te estás despidiendo.",
+              "Silencio. Él remueve el café por tercera vez.",
+              "Hay una pregunta que todos queremos que nos hagan. Casi nadie se atreve."
+            ],
+            "hook_title": "¿QUÉ LE PREGUNTO?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Silencio. Él remueve el café por tercera vez.",
+                "location": "cafeteria",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "cafe",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "Silencio",
+                "visual_direction": "Primer plano de la taza humeante mientras una cucharilla da vueltas nerviosa; ruido de cafetería de fondo."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "dani",
+                "narration": "Bueno... ¿qué tal el tiempo?",
+                "location": "cafeteria",
+                "framing": "personaje",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "shrug",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Dani, con sonrisa forzada, suelta la pregunta mientras Lucía le mira de espaldas."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "lucia",
+                "narration": "Bien. Algo nublado, ¿no?",
+                "location": "cafeteria",
+                "framing": "personaje",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "idle",
+                "emotion": "neutral",
+                "listener_emotion": "asustado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Contraplano: Lucía contesta por compromiso y mira de reojo la puerta."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Y la cita muere ahí mismo.",
+                "location": "cafeteria",
+                "framing": "general",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": "muere",
+                "visual_direction": "Plano general: los dos sentados, cada uno mirando a un lado, la cafetería alrededor sigue con su ruido."
+              },
+              {
+                "label": "EL MIEDO",
+                "speaker": "dani",
+                "narration": "Si pregunto algo personal, ¿pensará que soy raro?",
+                "location": "cafeteria",
+                "framing": "personaje",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": "pensamientos",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Dani se queda solo en plano con nubes de pensamientos girando sobre su cabeza."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "En 2022, Nicholas Epley lo puso a prueba.",
+                "location": "laboratorio",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "cerebro",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Un cerebro con chispas de actividad sobre la mesa del laboratorio, pizarra con fórmulas detrás."
+              },
+              {
+                "label": "EL ESTUDIO",
+                "speaker": "narrador",
+                "narration": "Su equipo juntó a desconocidos para hablar profundo.",
+                "location": "laboratorio",
+                "framing": "general",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Dos desconocidos entran en el laboratorio y se sientan frente a frente con una tarjeta de preguntas."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Esperaban silencios incómodos. Conectaron mucho más.",
+                "location": "laboratorio",
+                "framing": "dos",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "sorprendido",
+                "listener_emotion": "contento",
+                "mood": "dia",
+                "event": "corazones",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "Conectaron",
+                "visual_direction": "Los dos participantes se ríen juntos y empiezan a subir corazones flotando."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Subestimamos cuánto quiere el otro hablar en serio.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "Subestimamos",
+                "visual_direction": "Dani camina por la calle pensativo, de vuelta hacia la cafetería."
+              },
+              {
+                "label": "EL TRUCO",
+                "speaker": "narrador",
+                "narration": "Misma cita. Otra pregunta.",
+                "location": "cafeteria",
+                "framing": "general",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": null,
+                "visual_direction": "Rebobinado: la escena vuelve a la mesa de la cafetería, los dos sentados con sus cafés."
+              },
+              {
+                "label": "EL TRUCO",
+                "speaker": "dani",
+                "narration": "¿Lo mejor que te ha pasado este año?",
+                "location": "cafeteria",
+                "framing": "personaje",
+                "cast": [
+                  "dani",
+                  "lucia"
+                ],
+                "gesture": "explain",
+                "emotion": "contento",
+                "listener_emotion": "sorprendido",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Dani se inclina un poco hacia delante, tranquilo y con curiosidad sincera."
+              },
+              {
+                "label": "REACCIÓN",
+                "speaker": "lucia",
+                "narration": "Uf... nadie me pregunta eso nunca.",
+                "location": "cafeteria",
+                "framing": "personaje",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "chest",
+                "emotion": "sorprendido",
+                "listener_emotion": "contento",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": "nunca",
+                "visual_direction": "Lucía se lleva la mano al pecho, sorprendida, y se le escapa una sonrisa."
+              },
+              {
+                "label": "CONEXIÓN",
+                "speaker": "lucia",
+                "narration": "Vale, te lo cuento. Fue en marzo...",
+                "location": "cafeteria",
+                "framing": "dos",
+                "cast": [
+                  "lucia",
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "contento",
+                "listener_emotion": "contento",
+                "mood": "atardecer",
+                "event": "corazones",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Los dos juntos, Lucía cuenta con las manos y Dani escucha atento mientras suben corazones."
+              },
+              {
+                "label": "RESUMEN",
+                "speaker": "narrador",
+                "narration": "El truco: cambia un «¿qué tal?» por algo real.",
+                "location": "cafeteria",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": "corazon",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Un corazón late sobre la mesa entre las dos tazas de café."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "Pruébalo esta semana, antes de remover el café.",
+                "location": "cafeteria",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": "cafe",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Vuelve la taza del principio, ahora quieta y sin cucharilla, cerrando el bucle."
+              }
+            ],
+            "cliffhanger": "Cierre en bucle: la taza de café del principio vuelve a aparecer, pero ya sin nervios; el truco queda resumido en cambiar una pregunta de trámite por una de verdad.",
+            "caption": "Hablar del tiempo no te salva de la incomodidad: la provoca.\nUn estudio de 2022 con desconocidos vio que las conversaciones profundas eran mucho menos raras de lo que esperaban.\nY que el otro tenía más ganas de hablar en serio de lo que creían.\n¿Cuál es la mejor pregunta que te han hecho en una primera cita?",
+            "hashtags": [
+              "psicologia",
+              "ligar",
+              "primeracita",
+              "conversacion",
+              "conversacionesprofundas"
+            ],
+            "youtube_title": "La pregunta que da miedo hacer en una primera cita",
+            "youtube_description": "Qué preguntar en una primera cita: la psicología dice que tememos las conversaciones profundas sin motivo.\nUn experimento con desconocidos demostró que hablar en serio conecta más y es menos incómodo de lo que creemos.\nDani y Lucía viven la misma cita dos veces: una hablando del tiempo y otra con una sola pregunta distinta. Te contamos qué descubrieron los investigadores y cómo aplicarlo esta misma semana, con respeto y sin forzar a nadie.\nFuentes: Kardas, M., Kumar, A. y Epley, N. (2022). «Overly shallow?: Miscalibrated expectations create a barrier to deeper conversation». Journal of Personality and Social Psychology."
+          }
+        ],
+        "book": null
+      },
+      "part": 0
+    }
+  ],
   "last_published": "2026-11-19T15:19:44+00:00",
   "scheduled": [
     "2026-11-19T18:00:00+01:00",

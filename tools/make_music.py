@@ -114,6 +114,15 @@ def compose(name: str, bpm: int, chords: list[tuple[int, bool]], lead: str, beat
                 for p in range(8):
                     place(tr["perc"], tick(), t0 + p * spb / 2, 0.25 if p % 2 else 0.4)
                 place(tr["perc"], drum(0.6, 60, 0.25), t0, 0.7)
+            elif beat == "bounce":  # alegre: bombo suave en 1 y 3, chasquido en 2 y 4, hi-hat a contratiempo
+                for p in range(4):
+                    if p % 2 == 0:
+                        place(tr["perc"], drum(0.35, 65, 0.12), t0 + p * spb, 0.75)
+                    else:
+                        place(tr["perc"], tick(0.12), t0 + p * spb, 0.8)
+                    place(tr["perc"], tick(0.05), t0 + p * spb + spb / 2, 0.25)
+            elif beat == "none":
+                pass
             elif beat == "taiko":
                 for p, g in ((0, 1.0), (1.5, 0.6), (2, 0.85), (3.5, 0.5)):
                     place(tr["perc"], drum(0.9, 48, 0.35), t0 + p * spb, g)
@@ -144,3 +153,12 @@ if __name__ == "__main__":
     save("misterio", compose("misterio", 84, [(50, True), (46, False), (43, True), (45, False)], "pluck", "heart"))
     save("intriga", compose("intriga", 96, [(57, True), (53, False), (48, False), (52, False)], "bell", "tick"))
     save("epica", compose("epica", 90, [(52, True), (48, False), (43, False), (50, False)], "pluck", "taiko"))
+    # Más variedad (cada marca usa las suyas: config.yaml → channels.<canal>.music)
+    save("suspense", compose("suspense", 100, [(54, True), (50, False), (52, False), (49, False)], "bell", "tick"))
+    save("niebla", compose("niebla", 72, [(48, True), (44, False), (46, False), (43, False)], "pluck", "heart"))
+    save("chispa", compose("chispa", 112, [(60, False), (55, False), (57, True), (53, False)], "pluck", "bounce"))
+    save("cita", compose("cita", 104, [(55, False), (50, False), (52, True), (48, False)], "bell", "bounce"))
+    save("calma", compose("calma", 74, [(57, True), (53, False), (48, False), (55, False)], "bell", "none"))
+    save("pensar", compose("pensar", 82, [(50, False), (55, False), (47, True), (52, False)], "pluck", "tick"))
+    save("cosmos", compose("cosmos", 96, [(52, False), (54, False), (49, True), (47, False)], "bell", "tick"))
+    save("experimento", compose("experimento", 110, [(58, False), (53, False), (55, True), (51, False)], "pluck", "bounce"))

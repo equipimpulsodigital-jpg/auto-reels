@@ -22,6 +22,10 @@ def load_config(channel: str | None = None, path: Path | None = None) -> dict:
         if cid not in channels:
             raise SystemExit(f"Canal desconocido: {cid}. Canales: {', '.join(channels)}")
         cfg["channel"] = {"id": cid, **channels[cid]}
+        nar = channels[cid].get("narrator") or {}  # voz del narrador propia de la marca
+        for k_src, k_dst in (("voice", "edge_voice"), ("rate", "edge_rate"), ("pitch", "edge_pitch")):
+            if nar.get(k_src):
+                cfg["voice"][k_dst] = nar[k_src]
     return cfg
 
 
