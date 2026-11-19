@@ -112,7 +112,8 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
         print(f"1/5 Historia nueva · {fmt}" + (f" · tema: {args.topic}" if args.topic else ""))
         series = generate_series(cfg, fmt, history, args.topic)
         history.append({"date": today, "format": series.format, "topic": series.topic,
-                        "series_title": series.series_title, "parts": len(series.parts), "published_parts": []})
+                        "series_title": series.series_title, "parts": len(series.parts), "published_parts": [],
+                        "book": series.book.model_dump() if series.book else None})
         state["queue"] = [{"series": series.model_dump(), "part": i} for i in range(len(series.parts))]
         _save(cfg, "history.json", history)
         _save(cfg, "state.json", state)

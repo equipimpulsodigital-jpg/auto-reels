@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import re
+from urllib.parse import quote_plus
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -53,6 +54,7 @@ def pick_stories(cfg: dict, clips: dict[str, Path], max_minutes: float) -> list[
             continue
         dirs = [clips[k] for k in keys]
         stories.append({"title": h["series_title"], "topic": h.get("topic", ""), "first": keys[0], "dirs": dirs,
+                        "book": h.get("book") or _book_from_queue(folder, h["series_title"]),
                         "seconds": sum(probe_duration(d / "reel.mp4") for d in dirs)})
     stories.sort(key=lambda s: s["first"])
     chosen, total = [], 0.0
@@ -62,6 +64,19 @@ def pick_stories(cfg: dict, clips: dict[str, Path], max_minutes: float) -> list[
         chosen.append(s)
         total += s["seconds"]
     return chosen
+
+
+def _book_from_queue(folder: Path, title: str):
+    """Libro recomendado de historias escritas antes de guardarlo en el historial (si lo tienen)."""
+    for q in _load(folder / "state.json", {}).get("queue", []):
+        if q["series"].get("series_title") == title:
+            return q["series"].get("book")
+    return None
+
+
+def amazon_link(book: dict, tag: str) -> str:
+    """Búsqueda del libro en Amazon.es con el ID de afiliado (siempre lleva a la edición disponible)."""
+    return f"https://www.amazon.es/s?k={quote_plus(book['title'] + ' ' + book['author'])}&i=stripbooks&tag={tag}"
 
 
 def _horizontal(src: Path, out: Path) -> None:
@@ -158,6 +173,13 @@ def make_texts(cfg: dict, stories: list[dict], chapters: list[tuple[float, str]]
     lines = [ch.get("compilation_intro", f"Las mejores historias de la semana de {ch['name']}, seguidas."), "",
              "Capítulos:"]
     lines += [f"{_ts(t)} {name}" for t, name in chapters]
+    tag = ch.get("affiliate_tag") or cfg.get("affiliate", {}).get("tag")
+    books = [s for s in stories if s.get("book")]
+    if tag and books:
+        lines += ["", "📚 Libros de este vídeo:"]
+        lines += [f"• {s['book']['title']}, de {s['book']['author']} ({s['title']}): {amazon_link(s['book'], tag)}"
+                  for s in books]
+        lines += ["", cfg.get("affiliate", {}).get("disclosure", "")]
     tags = ch.get("compilation_tags", [])
     lines += ["", "Suscríbete para no perderte la próxima recopilación.", "", " ".join(f"#{t}" for t in tags[:5])]
     return {"title": title, "description": "\n".join(lines)[:5000], "tags": tags,

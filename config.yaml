@@ -60,6 +60,12 @@ compilation:
   min_stories: 3              # si hay menos historias completas, esa semana no se hace
   max_minutes: 20
 
+# Amazon Afiliados: enlaces a libros en las recopilaciones de YouTube (un canal puede usar su propio
+# `affiliate_tag`). La frase es obligatoria donde haya enlaces de afiliado.
+affiliate:
+  tag: historiasbien-21
+  disclosure: "Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables."
+
 # Canales: cada uno es un perfil de Upload-Post con su temática, su guionista y su historial.
 channels:
   bien_contadas:

@@ -86,6 +86,11 @@ class Part(BaseModel):
     youtube_description: str
 
 
+class Book(BaseModel):
+    title: str = Field(description="Título exacto del libro.")
+    author: str = Field(description="Autor o autora.")
+
+
 class Series(BaseModel):
     series_title: str = Field(description="Título concreto de esta historia o tema (nunca el nombre del canal).")
     format: str = Field(description="Clave del formato indicado en la petición.")
@@ -96,6 +101,9 @@ class Series(BaseModel):
     characters: List[Character] = Field(description="Personajes (2-5): los que hablan y los que salen en plano.")
     historical_notes: str = Field(description="Fuentes o matices: qué está documentado y qué es incierto.")
     parts: List[Part] = Field(description="1 o 2 partes.")
+    book: Optional[Book] = Field(default=None, description=(
+        "Un libro REAL, ya publicado y fácil de encontrar en español en Amazon.es, sobre esta historia o tema, "
+        "para recomendarlo al público. Solo si estás seguro de que existe (título y autor exactos); si no, null."))
 
 
 def _system_prompt(cfg: dict) -> str:
