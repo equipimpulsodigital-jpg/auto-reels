@@ -66,7 +66,7 @@ channels:
     name: Bien Contadas
     enabled: true             # false = no genera ni publica nada
     profile: bien_contadas    # nombre exacto del perfil en Upload-Post
-    platforms: [instagram, youtube, tiktok]
+    platforms: [instagram, youtube]   # TikTok: no está conectado en Upload-Post
     prompt: prompts/bien_contadas.md
     accent_color: "#E2A84B"
     compilation_titles:
