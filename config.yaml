@@ -63,7 +63,7 @@ compilation:
 # Canales: cada uno es un perfil de Upload-Post con su temática, su guionista y su historial.
 channels:
   bien_contadas:
-    name: Historia oscura de España
+    name: Bien Contadas
     enabled: true             # false = no genera ni publica nada
     profile: bien_contadas    # nombre exacto del perfil en Upload-Post
     platforms: [instagram, youtube, tiktok]
