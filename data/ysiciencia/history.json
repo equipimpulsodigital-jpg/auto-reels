@@ -88,5 +88,33 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-20",
+    "format": "y_si_nosotros",
+    "topic": "Qué pasaría si mañana dejaras de sentir dolor: quemaduras, huesos rotos y apendicitis silenciosas; la insensibilidad congénita al dolor (gen SCN9A), el niño paquistaní de los cuchillos y Jo Cameron.",
+    "series_title": "¿Y si dejaras de sentir dolor?",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T22:00:00+01:00",
+        "request_id": "1d931aceaf434b309f12d9fb9cffb8f3",
+        "job_id": "d34b7deaaebd47c9a6c7f8d45fa6fa1d",
+        "failed": [],
+        "at": "2026-11-20T11:07:38+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T10:00:00+01:00",
+        "request_id": "e344879b0914424c96d33b7d9527f070",
+        "job_id": "d017fd6ab7d44f0096d48af202952490",
+        "failed": [],
+        "at": "2026-11-20T11:13:44+00:00"
+      }
+    ],
+    "book": null
   }
 ]
