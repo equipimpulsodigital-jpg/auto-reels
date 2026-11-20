@@ -90,7 +90,7 @@ channels:
     end_card: "Sígueme para más historias"
     tagline: "Historias reales de España, contadas en dibujos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
-      youtube: https://www.youtube.com/@historiasbiencontadas-o4l
+      youtube: https://www.youtube.com/@historiasbiencontadass
       instagram: https://www.instagram.com/bien_contadas/
       tiktok: https://www.tiktok.com/@historias.bien.co86
     interest_queries: ["historia de España", "hallazgo arqueológico España", "crimen histórico", "serie basada en hechos reales"]   # noticias de la semana para inspirar temas
