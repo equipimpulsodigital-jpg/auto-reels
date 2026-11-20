@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from .character import Character, Look
 from .locations import LOCATIONS
-from .more_props import EXTRA_EVENT_DESC, EXTRA_PROP_DESC
+from .more_props import EXTRA_EVENT_DESC, EXTRA_PROP_DESC, EXTRA_PROP_DESC_2, VEHICLE_DESC
 from .props import EVENTS, PROPS
 
 COLORS = {
@@ -107,7 +107,9 @@ EVENT_DESC = {
 
 
 PROP_DESC.update(EXTRA_PROP_DESC)
+PROP_DESC.update(EXTRA_PROP_DESC_2)
 EVENT_DESC.update(EXTRA_EVENT_DESC)
+EVENT_DESC.update({k: v + " (vehículo: en plano general, cruza por detrás de los personajes)" for k, v in VEHICLE_DESC.items()})
 
 
 def make_character(name: str, look: dict, seed: int) -> Character:

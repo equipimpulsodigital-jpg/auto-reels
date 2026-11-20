@@ -13,6 +13,7 @@ import skia
 
 from . import scenes as S
 from .locations import LOCATIONS, G
+from .more_props import BEHIND_EVENTS
 from .props import EVENT_AMBIENCE, EVENT_SFX, EVENTS, draw_prop
 from .character import Character, Pose
 from .draw import ease, noise1
@@ -185,6 +186,9 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
         return
     if fr == "general":
         loc.back(c, g)
+        behind = ev is not None and shot.event in BEHIND_EVENTS
+        if behind:  # los vehículos pasan por detrás de los personajes
+            ev(c, W, H, t, shot.duration)
         feet = H * loc.floor_y
         n = len(shot.cast)
         actor = _actor(shot)
@@ -203,10 +207,12 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
                 x = W * (0.5 + (i - 0.5) * 2 * (0.18 + (gap - 0.18) * k))
             elif shot.walk:
                 x += (t - shot.duration / 2) * 70 * facing
+            if behind and n == 1 and shot.action != "correr":  # deja sitio al vehículo que pasa
+                x = W * 0.24
             p = _pose(ctx, shot, cid, t, frame, facing)
             p.full_body = True
             ctx.chars[cid].draw(c, x, feet - 440 * s, s, p)
-        if ev:
+        if ev and not behind:
             ev(c, W, H, t, shot.duration)
         return
     zoom, sigma = (1.45, 7) if fr == "personaje" else (1.15, 3)

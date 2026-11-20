@@ -349,3 +349,238 @@ EXTRA_EVENT_DESC = {
 EXTRA_EVENT_SFX = {"relampago": [("boom", 0.35), ("boom", 1.85)], "terremoto": [("boom", 0.1)],
                    "sombra": [("whoosh", 0.4)]}
 EXTRA_EVENT_AMBIENCE = {"niebla": "viento", "relampago": "viento", "globo": "viento"}
+
+
+# ---------------- vehículos (cruzan la escena por detrás de los personajes) ----------------
+
+def _wheel(c, x, y, r, t, spokes=True, color="#1d1f24", rim="#b0b5bd"):
+    toon(c, oval(x, y, r, r), color, outline=5)
+    c.drawCircle(x, y, r * 0.55, fill(rim))
+    if spokes:
+        for k in range(6):
+            a = t * 8 + k * math.pi / 3
+            c.drawLine(x, y, x + math.cos(a) * r * 0.85, y + math.sin(a) * r * 0.85, stroke(INK, 4))
+    c.drawCircle(x, y, r * 0.15, fill(INK))
+
+
+def _window(c, pts, night=False):
+    c.drawPath(poly(pts), fill("#bfe3f5"))
+    c.drawPath(poly(pts), stroke(INK, 5))
+
+
+def coche(c, x, y, s, t, f=1.0, color="#c0392b"):
+    """Coche moderno."""
+    c.save(); c.translate(x, y); c.scale(s * f, s)
+    toon(c, rrect(-230, -130, 460, 100, 40), color)
+    toon(c, poly([(-140, -130), (-90, -210), (95, -210), (160, -130)]), color)
+    _window(c, [(-115, -135), (-78, -195), (0, -195), (0, -135)])
+    _window(c, [(15, -135), (15, -195), (88, -195), (135, -135)])
+    c.drawCircle(215, -95, 16, fill("#fff3c4"))
+    c.drawRect(skia.Rect.MakeXYWH(-232, -80, 30, 14), fill("#ff4040"))
+    c.restore()
+    for wx in (-140, 140):
+        _wheel(c, x + wx * s * f, y - 30 * s, 48 * s, t * f)
+
+
+def coche_antiguo(c, x, y, s, t, f=1.0, color="#1d1f24"):
+    """Coche de los años 20-50: guardabarros curvos, faros redondos y estribo."""
+    c.save(); c.translate(x, y); c.scale(s * f, s)
+    toon(c, poly([(-240, -60), (-200, -120), (60, -120), (90, -170), (180, -170), (230, -110), (250, -60)], smooth=False), color)
+    toon(c, poly([(-70, -120), (-60, -250), (60, -250), (70, -120)]), color)
+    _window(c, [(-48, -130), (-40, -232), (48, -232), (56, -130)])
+    for gx in (-170, 160):  # guardabarros
+        toon(c, poly([(gx - 80, -40), (gx - 60, -100), (gx + 60, -100), (gx + 80, -40)], smooth=True), shade(color, 0.1))
+    c.drawRect(skia.Rect.MakeXYWH(-110, -55, 200, 14), fill(shade(color, 0.2)))  # estribo
+    toon(c, oval(235, -130, 20, 20), "#e8e2c8", outline=4)
+    for k in range(5):
+        c.drawLine(200 + k * 8, -165, 200 + k * 8, -115, stroke("#c9ced6", 3))
+    c.restore()
+    for wx in (-170, 160):
+        _wheel(c, x + wx * s * f, y - 38 * s, 46 * s, t * f, rim="#d9d2c4")
+
+
+def caballo(c, x, y, s, t, f=1.0, color="#6b4423", rider=True):
+    """Caballo al galope (con jinete opcional)."""
+    gal = t * 9
+    c.save(); c.translate(x, y - abs(math.sin(gal)) * 18 * s); c.scale(s * f, s)
+    for k, (lx, ph) in enumerate(((-120, 0), (-90, 1.5), (110, 3.0), (140, 4.5))):  # patas
+        a = math.sin(gal + ph) * 0.6
+        kx, ky = lx + math.sin(a) * 70, -140 + math.cos(a) * 70
+        c.drawLine(lx, -190, kx, ky, stroke(INK, 30))
+        c.drawLine(lx, -190, kx, ky, stroke(shade(color, -0.1 if k % 2 else 0), 18))
+        c.drawLine(kx, ky, kx + math.sin(a * 1.4) * 60, ky + 70, stroke(INK, 24))
+        c.drawLine(kx, ky, kx + math.sin(a * 1.4) * 60, ky + 70, stroke(color, 13))
+    toon(c, oval(0, -230, 190, 80), color, light=(-1, -0.6))
+    toon(c, poly([(130, -270), (200, -380), (260, -390), (300, -340), (240, -310), (190, -220)], smooth=True), color)
+    c.drawPath(poly([(140, -280), (195, -385), (170, -300)], smooth=True), fill("#2a1d16"))  # crin
+    c.drawCircle(262, -358, 7, fill(INK))
+    tail = skia.Path(); tail.moveTo(-185, -250); tail.quadTo(-260, -230 + math.sin(gal) * 20, -250, -150)
+    c.drawPath(tail, stroke("#2a1d16", 22))
+    if rider:  # jinete en silueta con sombrero
+        toon(c, poly([(-40, -300), (40, -300), (30, -420), (-30, -420)], smooth=True), "#3a2a20")
+        toon(c, oval(0, -460, 40, 44), "#dda177")
+        toon(c, poly([(-70, -480), (70, -480), (40, -500), (25, -540), (-25, -540), (-40, -500)]), "#1d1f24")
+        c.drawLine(20, -380, 150, -330, stroke(INK, 5))  # riendas
+    c.restore()
+
+
+def carruaje(c, x, y, s, t, f=1.0, color="#3a2618"):
+    """Carruaje tirado por un caballo (siglos XVIII-XIX)."""
+    caballo(c, x + 330 * s * f, y, s * 0.85, t, f, rider=False)
+    c.save(); c.translate(x, y); c.scale(s * f, s)
+    c.drawLine(120, -150, 260, -170, stroke(INK, 10))
+    toon(c, poly([(-200, -80), (130, -80), (150, -320), (-210, -320)], smooth=True), color, light=(-1, -0.4))
+    toon(c, rrect(-220, -350, 380, 40, 14), shade(color, -0.2))
+    _window(c, [(-140, -290), (-20, -290), (-20, -170), (-140, -170)])
+    c.drawPath(oval(70, -200, 30, 50), stroke("#d4af37", 6))
+    toon(c, oval(150, -360, 22, 22), "#ffcf6b", outline=4)
+    c.restore()
+    for wx, r in ((-150, 70), (90, 60)):
+        _wheel(c, x + wx * s * f, y - r * s, r * s, t * f, color="#5a3a24", rim="#8a6a4a")
+
+
+def tractor(c, x, y, s, t, f=1.0, color="#2e8b3e"):
+    c.save(); c.translate(x, y); c.scale(s * f, s)
+    toon(c, rrect(-60, -230, 280, 120, 16), color)
+    toon(c, poly([(-180, -110), (-180, -330), (-20, -330), (-20, -110)]), color)
+    _window(c, [(-160, -310), (-40, -310), (-40, -220), (-160, -220)])
+    c.drawLine(180, -230, 180, -330, stroke("#2b2b2f", 18))
+    c.drawCircle(180 - math.sin(t * 4) * 6, -350 - (t * 60) % 60, 18, fill("#8a8a8a", 0.5))
+    c.restore()
+    _wheel(c, x - 120 * s * f, y - 110 * s, 110 * s, t * f, color="#1d1f24", rim="#e2b93b")
+    _wheel(c, x + 160 * s * f, y - 60 * s, 60 * s, t * f, color="#1d1f24", rim="#e2b93b")
+
+
+def camion(c, x, y, s, t, f=1.0, color="#2e5aa8"):
+    c.save(); c.translate(x, y); c.scale(s * f, s)
+    toon(c, rrect(-320, -300, 420, 240, 10), "#d9d2c4")
+    toon(c, poly([(110, -60), (110, -250), (230, -250), (290, -160), (290, -60)]), color)
+    _window(c, [(130, -235), (215, -235), (262, -165), (130, -165)])
+    c.restore()
+    for wx in (-230, -120, 220):
+        _wheel(c, x + wx * s * f, y - 45 * s, 50 * s, t * f)
+
+
+def tren(c, x, y, s, t, f=1.0):
+    """Locomotora de vapor con dos vagones."""
+    c.save(); c.translate(x, y); c.scale(s * f, s)
+    for k, vx in enumerate((-900, -520)):  # vagones
+        toon(c, rrect(vx, -300, 340, 230, 12), "#7e1c28")
+        for w in range(3):
+            c.drawRect(skia.Rect.MakeXYWH(vx + 30 + w * 105, -260, 75, 70), fill("#ffe9b0"))
+            c.drawRect(skia.Rect.MakeXYWH(vx + 30 + w * 105, -260, 75, 70), stroke(INK, 4))
+    toon(c, rrect(-150, -260, 360, 190, 30), "#1d1f24")
+    toon(c, rrect(-170, -380, 150, 320, 10), "#2b2f36")
+    toon(c, poly([(150, -260), (190, -400), (230, -400), (230, -260)]), "#2b2f36")
+    c.drawLine(-150, -150, 210, -150, stroke("#c0262d", 10))
+    c.restore()
+    for k in range(5):  # humo
+        ph = (t * 0.8 + k * 0.2) % 1.0
+        c.drawCircle(x + (210 - ph * 300) * s * f, y + (-420 - ph * 260) * s, (40 + ph * 70) * s, fill("#e6e6e6", 0.6 * (1 - ph)))
+    for wx in (-850, -620, -470, -240, -60, 120):
+        _wheel(c, x + wx * s * f, y - 40 * s, 45 * s, t * f, color="#2b2b2f", rim="#c0262d")
+
+
+def bicicleta(c, x, y, s, t, f=1.0):
+    for wx in (-90, 90):
+        _wheel(c, x + wx * s * f, y - 70 * s, 70 * s, t * f * 1.4, color="#2b2b2f", rim="#e9eef2")
+    c.save(); c.translate(x, y); c.scale(s * f, s)
+    for a, b in (((-90, -70), (0, -70)), ((0, -70), (60, -190)), ((-90, -70), (-30, -190)), ((-30, -190), (60, -190)),
+                 ((60, -190), (90, -70)), ((60, -190), (50, -240))):
+        c.drawLine(a[0], a[1], b[0], b[1], stroke("#c0392b", 10))
+    toon(c, poly([(-60, -200), (0, -200), (-10, -185), (-50, -185)]), "#2b2b2f", outline=3)
+    c.restore()
+
+
+def helicoptero(c, x, y, s, t, f=1.0, color="#c9302c"):
+    c.save(); c.translate(x, y + math.sin(t * 2) * 10 * s); c.scale(s * f, s)
+    toon(c, oval(0, 0, 180, 100), color, light=(-1, -0.6))
+    toon(c, poly([(-160, -20), (-420, -10), (-420, 20), (-160, 40)]), color)
+    _window(c, [(40, -80), (170, -30), (150, 20), (40, 20)])
+    c.drawLine(-80, 110, 120, 110, stroke(INK, 10))
+    c.drawLine(0, -100, 0, -140, stroke(INK, 10))
+    w = 300 * abs(math.cos(t * 30))
+    c.drawLine(-w, -140, w, -140, stroke("#2b2b2f", 12))
+    c.drawCircle(-420, 0, 40 * abs(math.sin(t * 30)) + 6, stroke("#2b2b2f", 6))
+    c.restore()
+
+
+def _cross(draw, ground=0.84, scale=1.4, speed=420, f=1.0, **kw):
+    """Suceso: el vehículo cruza la pantalla por detrás de los personajes."""
+    def ev(c, W, H, t, dur):
+        x = W * 0.5 + (t - dur / 2) * speed * f  # pasa por el centro a mitad del plano
+        draw(c, x, H * ground, scale, t, f, **kw)
+    return ev
+
+
+VEHICLE_EVENTS = {
+    "coche": _cross(coche, scale=1.45), "coche_antiguo": _cross(coche_antiguo, scale=1.45),
+    "coche_policia": _cross(coche, scale=1.45, color="#2b4a8a"),
+    "caballo": _cross(caballo, speed=520, scale=1.25), "carruaje": _cross(carruaje, speed=300, scale=1.2),
+    "tractor": _cross(tractor, speed=160, scale=1.35), "camion": _cross(camion, speed=300, scale=1.3),
+    "tren": _cross(tren, speed=520, scale=1.05, ground=0.8), "bicicleta": _cross(bicicleta, speed=260, scale=1.3),
+    "helicoptero": _cross(helicoptero, speed=300, ground=0.28, scale=1.0),
+}
+VEHICLE_DESC = {
+    "coche": "coche moderno que pasa", "coche_antiguo": "coche antiguo (años 20-50) que pasa",
+    "coche_policia": "coche de policía que pasa (combínalo con sirenas si hace falta)", "caballo": "jinete a caballo al galope",
+    "carruaje": "carruaje tirado por un caballo (s. XVIII-XIX)", "tractor": "tractor que avanza por el campo",
+    "camion": "camión que pasa", "tren": "tren de vapor que cruza", "bicicleta": "bicicleta que pasa",
+    "helicoptero": "helicóptero que cruza el cielo",
+}
+BEHIND_EVENTS = set(VEHICLE_EVENTS) - {"helicoptero"}  # se dibujan detrás de los personajes
+
+
+# ---------------- más objetos ----------------
+
+def maleta(c, t):
+    toon(c, rrect(-260, -170, 520, 360, 30), "#8a5a2a", light=(-1, -1))
+    toon(c, rrect(-80, -250, 160, 90, 30), "#5a3a1a")
+    c.drawRect(skia.Rect.MakeXYWH(-50, -225, 100, 50), fill("#c9b38a"))
+    for x in (-150, 150):
+        c.drawRect(skia.Rect.MakeXYWH(x - 18, -170, 36, 360), fill("#5a3a1a"))
+        toon(c, rrect(x - 26, -20, 52, 40, 6), "#d4af37", outline=4)
+
+
+def rosa(c, t):
+    sway = math.sin(t * 1.5) * 3
+    c.save(); c.rotate(sway)
+    stem = skia.Path(); stem.moveTo(0, 300); stem.quadTo(30, 100, 0, -80)
+    c.drawPath(stem, stroke("#2e6b2e", 18))
+    toon(c, poly([(10, 120), (140, 60), (60, 160)], smooth=True), "#3f8a4f")
+    for k, (r, col) in enumerate(((150, "#c0392b"), (110, "#d9434f"), (70, "#e85a68"))):
+        petals = poly([(-r, -150), (-r * 0.6, -150 - r), (0, -150 - r * 1.2), (r * 0.6, -150 - r), (r, -150), (0, -150 + r * 0.6)], smooth=True)
+        toon(c, petals, col, outline=5)
+    c.restore()
+
+
+def regalo(c, t):
+    toon(c, rrect(-220, -120, 440, 330, 14), "#2e86de", light=(-1, -1))
+    toon(c, rrect(-240, -180, 480, 90, 14), "#3d97ef")
+    c.drawRect(skia.Rect.MakeXYWH(-30, -180, 60, 390), fill("#f1c40f"))
+    lift = abs(math.sin(t * 2)) * 10
+    for side in (-1, 1):
+        toon(c, poly([(0, -180 - lift), (side * 140, -300 - lift), (side * 160, -200 - lift)], smooth=True), "#f1c40f")
+
+
+def botella(c, t):
+    toon(c, poly([(-90, 280), (90, 280), (100, -20), (40, -120), (40, -280), (-40, -280), (-40, -120), (-100, -20)], smooth=True),
+         "#2e6b3a", light=(-1, -0.4))
+    c.drawRect(skia.Rect.MakeXYWH(-80, 40, 160, 140), fill("#f3ead2"))
+    c.drawRect(skia.Rect.MakeXYWH(-80, 40, 160, 140), stroke(INK, 5))
+    toon(c, rrect(-44, -320, 88, 50, 10), "#8a5a2a")
+    c.drawPath(oval(-50, -40, 16, 90), fill("#ffffff", 0.3))
+
+
+def dinero_maletin(c, t):
+    toon(c, rrect(-280, -100, 560, 300, 20), "#2b2b2f", light=(-1, -1))
+    toon(c, poly([(-280, -100), (280, -100), (250, -230), (-250, -230)]), "#3a3a40")
+    for k in range(6):
+        toon(c, rrect(-240 + k * 80, -150, 70, 120, 6), "#7fb069", outline=4)
+    toon(c, rrect(-50, -40, 100, 50, 10), "#d4af37", outline=4)
+
+
+EXTRA_PROPS_2 = {"maleta": maleta, "rosa": rosa, "regalo": regalo, "botella": botella, "maletin_dinero": dinero_maletin}
+EXTRA_PROP_DESC_2 = {"maleta": "maleta de viaje antigua", "rosa": "rosa roja (amor, cita, funeral)",
+                     "regalo": "caja de regalo con lazo", "botella": "botella de vino o licor",
+                     "maletin_dinero": "maletín abierto lleno de billetes (rescates, sobornos)"}

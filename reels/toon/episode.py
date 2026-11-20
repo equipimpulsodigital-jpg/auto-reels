@@ -33,6 +33,8 @@ def block_to_shot(b, series, chars: dict, duration: float) -> Shot:
         cast.remove(speaker)
         cast.insert(0, speaker)
     framing = b.framing
+    if framing == "general" and not cast and not b.event and b.prop:  # plano vacío: mejor el objeto de cerca
+        framing = "objeto"
     if framing in ("personaje", "dos") and not cast:
         framing = "general"
     if framing == "dos" and len(cast) < 2:

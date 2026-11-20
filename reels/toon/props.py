@@ -426,9 +426,15 @@ EVENT_SFX = {"explosion": [("boom", 0.5)], "bombardeo": [("boom", 0.3), ("boom",
 EVENT_AMBIENCE = {"aviones": "avion", "fuego": "viento", "lluvia": "viento", "barco": "mar"}
 
 # objetos y sucesos añadidos (more_props.py)
-from .more_props import EXTRA_EVENT_AMBIENCE, EXTRA_EVENT_SFX, EXTRA_EVENTS, EXTRA_PROPS  # noqa: E402
+from .more_props import (EXTRA_EVENT_AMBIENCE, EXTRA_EVENT_SFX, EXTRA_EVENTS, EXTRA_PROPS,  # noqa: E402
+                         EXTRA_PROPS_2, VEHICLE_EVENTS)
 
 PROPS.update(EXTRA_PROPS)
+PROPS.update(EXTRA_PROPS_2)
 EVENTS.update(EXTRA_EVENTS)
+EVENTS.update(VEHICLE_EVENTS)
+EVENT_SFX.update({"coche": [("whoosh", 0.8)], "coche_antiguo": [("whoosh", 0.8)], "coche_policia": [("whoosh", 0.8)],
+                  "tren": [("whoosh", 0.5)], "caballo": [("whoosh", 0.6)], "helicoptero": [("whoosh", 0.3)]})
+EVENT_AMBIENCE.update({"helicoptero": "avion", "tren": "viento", "camion": "viento", "tractor": "viento"})
 EVENT_SFX.update(EXTRA_EVENT_SFX)
 EVENT_AMBIENCE.update(EXTRA_EVENT_AMBIENCE)
