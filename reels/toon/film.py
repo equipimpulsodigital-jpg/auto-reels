@@ -130,9 +130,12 @@ def _pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: float) -
                     talking=True, nod=nod)
     # el que escucha reacciona: asiente de vez en cuando y sigue con la mirada
     nod = max(0.0, math.sin(t * 2.1 + seed)) ** 8
+    narrated = shot.speaker is None  # habla el narrador: los que salen ponen la cara de la escena (`emotion`)
     return Pose(t=t, facing=facing, look=0.5 + darts(t, seed + 7) * 0.3, blink=blink(t, seed),
-                brow=shot.listener_brow, smile=shot.listener_smile, worry=shot.listener_worry,
-                extra=shot.listener_extra, gesture="idle", gesture_amt=0.0, nod=nod * 0.6,
+                brow=shot.brow if narrated else shot.listener_brow,
+                smile=shot.smile if narrated else shot.listener_smile,
+                worry=shot.worry if narrated else shot.listener_worry,
+                extra=shot.extra if narrated else shot.listener_extra, gesture="idle", gesture_amt=0.0, nod=nod * 0.6,
                 walk=1.0 if shot.walk else 0.0)
 
 
