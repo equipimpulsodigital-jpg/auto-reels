@@ -229,15 +229,6 @@
     "parts": 2,
     "published_parts": [
       {
-        "part": 1,
-        "date": "2026-11-21",
-        "slot": "2026-11-21T10:00:00+01:00",
-        "request_id": "21d9bc711a6e4497957352a198aac7f0",
-        "job_id": "ab8da071659b4557b6aa03ecbd5a9e96",
-        "failed": [],
-        "at": "2026-11-20T11:22:25+00:00"
-      },
-      {
         "part": 2,
         "date": "2026-11-20",
         "slot": "2026-11-20T16:00:00+01:00",
@@ -264,6 +255,62 @@
         "job_id": "7225c7dde07f444faef1ad5e5663c6d7",
         "failed": [],
         "at": "2026-11-20T12:56:42+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T16:00:00+01:00",
+        "request_id": "d27bdfb7c9c54a759d7f97d53260b447",
+        "job_id": "8cfcd13d6d834c0e91248d1cfda09811",
+        "failed": [],
+        "at": "2026-11-20T21:50:34+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-20",
+    "format": "ultimo_rastro",
+    "topic": "Expedición en globo de S. A. Andrée al Polo Norte (1897): último mensaje por paloma y hallazgo de cuerpos y fotos en Kvitøya en 1930",
+    "series_title": "El globo que nunca volvió del Polo",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T10:00:00+01:00",
+        "request_id": "5bfc293a15684a9d9728069d6cafa2e3",
+        "job_id": "5ad4828ffd474bef856cd03abd7740f9",
+        "failed": [],
+        "at": "2026-11-20T21:43:59+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-20",
+    "format": "caso_con_giro",
+    "topic": "El Fantasma de Heilbronn (1993-2009): un ADN femenino en decenas de crímenes que resultó ser contaminación de los bastoncillos de una fábrica",
+    "series_title": "La mujer sin rostro de Heilbronn",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T19:00:00+01:00",
+        "request_id": "b40e86a4f3cb4da185962dd9ca767062",
+        "job_id": "c5f8e1520a05447ba244facc68b97d35",
+        "failed": [],
+        "at": "2026-11-20T21:58:57+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T22:00:00+01:00",
+        "request_id": "22178917c7bc4fd985eb0db469cc7793",
+        "job_id": "dd09ecc953454df2a995c6cee57e0883",
+        "failed": [],
+        "at": "2026-11-20T22:05:04+00:00"
       }
     ],
     "book": null
