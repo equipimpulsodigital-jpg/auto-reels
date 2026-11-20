@@ -173,6 +173,8 @@ def update_stats(cfg: dict) -> None:
             n += 1
             for m in total:
                 total[m] += sum(v.get(m, 0) for v in st.values())
+            yt = st.get("youtube", {}).get("views", 0)
+            total["youtube_views"] = total.get("youtube_views", 0) + yt
         if got:
             h["stats"] = {**total, "updated": now.strftime("%Y-%m-%d")}
             print(f"  {total['views']:>7} vis · {total['likes']:>5} me gusta · {total['comments']:>4} coment. · {h['series_title'][:60]}")

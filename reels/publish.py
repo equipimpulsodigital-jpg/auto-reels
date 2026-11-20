@@ -329,7 +329,17 @@ def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
     if isinstance(container, dict):
         for platform in ("instagram", "youtube", "tiktok", "facebook"):
             if platform in container:
-                out[platform] = _metrics(container[platform])
+                pdata = container[platform] or {}
+                # solo las cifras del vídeo: la respuesta también trae totales de la cuenta (profile_snapshot_*)
+                pm = pdata.get("post_metrics") if isinstance(pdata, dict) else None
+                if pm is None and isinstance(pdata, dict):
+                    pm = {k: v for k, v in pdata.items() if not str(k).startswith("profile_snapshot")}
+                m = {"views": int(pm.get("views") or pm.get("plays") or pm.get("video_views") or 0),
+                     "likes": int(pm.get("likes") or 0), "comments": int(pm.get("comments") or 0),
+                     "shares": int(pm.get("shares") or 0)} if isinstance(pm, dict) else _metrics(pm)
+                if isinstance(pm, dict) and pm.get("avg_watch_seconds"):
+                    m["avg_watch_s"] = round(float(pm["avg_watch_seconds"]), 1)
+                out[platform] = m
     elif isinstance(container, list):
         for item in container:
             if isinstance(item, dict) and item.get("platform"):
