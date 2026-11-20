@@ -29,8 +29,8 @@ def _save(cfg: dict, name: str, value) -> None:
     (folder / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def pending_slots(cfg: dict, state: dict, now: datetime | None = None) -> list[datetime]:
-    """Franjas de las próximas 24 h que aún no tienen vídeo programado."""
+def pending_slots(cfg: dict, state: dict, now: datetime | None = None, horizon: float = 24) -> list[datetime]:
+    """Franjas de las próximas `horizon` horas que aún no tienen vídeo programado."""
     pcfg = cfg["publish"]
     tz = ZoneInfo(pcfg.get("timezone", "Europe/Madrid"))
     now = (now or datetime.now(timezone.utc)).astimezone(tz)
@@ -39,11 +39,11 @@ def pending_slots(cfg: dict, state: dict, now: datetime | None = None) -> list[d
     taken = [datetime.fromisoformat(d) for d in done]
     gap = timedelta(minutes=int(pcfg.get("min_gap_minutes", 100)))
     out = []
-    for day in (now.date(), now.date() + timedelta(days=1)):
+    for day in (now.date() + timedelta(days=k) for k in range(int(horizon // 24) + 2)):
         for hhmm in cfg["channel"].get("slots") or pcfg["slots"]:
             h, m = map(int, hhmm.split(":"))
             slot = datetime.combine(day, time(h, m), tz)
-            if start <= slot <= now + timedelta(hours=24) and slot.isoformat() not in done \
+            if start <= slot <= now + timedelta(hours=horizon) and slot.isoformat() not in done \
                     and all(abs(slot - t) >= gap for t in taken):  # al cambiar las horas, no amontona vídeos
                 out.append(slot)
                 taken.append(slot)
@@ -279,6 +279,7 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true", help="genera un vídeo de prueba y no publica")
     ap.add_argument("--now", action="store_true", help="genera uno y lo publica al momento (sin programar)")
     ap.add_argument("--max", type=int, default=0, help="máximo de franjas a programar en esta ejecución")
+    ap.add_argument("--horizon", type=float, default=24, help="programa las franjas de las próximas N horas")
     ap.add_argument("--new", action="store_true", help="empieza una historia nueva aunque haya partes pendientes")
     ap.add_argument("--topic", help="tema concreto para la historia nueva")
     ap.add_argument("--format", help="formato de la historia nueva (ver formats del canal en config.yaml)")
@@ -322,7 +323,7 @@ def main() -> int:
             c = load_config(cid)
             if c["channel"].get("enabled", True):
                 st = _load(c, "state.json", {})
-                print(cid, len(pending_slots(c, {"scheduled": st.get("scheduled", [])})))
+                print(cid, len(pending_slots(c, {"scheduled": st.get("scheduled", [])}, horizon=args.horizon)))
         return 0
     if args.topic or args.format:
         args.new = True
@@ -348,11 +349,11 @@ def main() -> int:
     # Olvida las franjas ya pasadas hace más de 2 días
     cutoff = datetime.now(timezone.utc) - timedelta(days=2)
     state["scheduled"] = [s for s in state["scheduled"] if datetime.fromisoformat(s) > cutoff]
-    slots = pending_slots(cfg, state)
+    slots = pending_slots(cfg, state, horizon=args.horizon)
     if args.max:
         slots = slots[: args.max]
     if not slots:
-        print("Todas las franjas de las próximas 24 h ya tienen vídeo programado.")
+        print(f"Todas las franjas de las próximas {args.horizon:g} h ya tienen vídeo programado.")
         _save(cfg, "state.json", state)
         return 0
     from .publish import LimitReached

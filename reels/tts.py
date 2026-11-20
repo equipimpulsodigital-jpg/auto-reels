@@ -37,12 +37,17 @@ def _edge(text: str, mp3: Path, voice: str, rate: str, pitch: str = "+0Hz") -> l
                     words.append(Word(chunk["text"], start, start + chunk["duration"] / 1e7))
         return words
 
-    for attempt in range(3):
+    # El servicio gratuito de voces falla a veces de forma pasajera («No audio was received»): reintenta con esperas.
+    import time
+    for attempt in range(5):
         try:
             return asyncio.run(go())
-        except Exception:
-            if attempt == 2:
+        except Exception as e:
+            if attempt == 4:
                 raise
+            wait = (3, 8, 20, 45)[attempt]
+            print(f"  voz: fallo pasajero ({str(e)[:80]}); reintento en {wait} s", flush=True)
+            time.sleep(wait)
     return []
 
 
