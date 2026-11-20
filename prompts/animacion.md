@@ -1,3 +1,13 @@
+### ELEGIR EL TEMA: LO QUE LE IMPORTA A LA GENTE
+El tema decide el 70 % del éxito. No elijas lo que es interesante para un experto, sino lo que haría que alguien que no sabe nada del tema deje de deslizar. Propón 5 en `topic_candidates`, puntúalos con exigencia y desarrolla el mejor. Un buen tema cumple casi todo esto:
+- **Se cuenta en una frase y da ganas de saber más:** «Un hombre vivió 30 años en un aeropuerto», «Por qué siempre te acuerdas de lo que dijiste mal hace 10 años». Si necesita explicación previa, descártalo.
+- **Toca algo que todo el mundo siente:** miedo, rabia por una injusticia, amor, vergüenza, dinero, muerte, salud, traición, ternura. Lo personal gana a lo institucional (una persona engañada gana a «una reforma fiscal»).
+- **Cercanía:** lugares, marcas, situaciones o personajes que el público conoce (la Gran Vía, Mercadona, el instituto, WhatsApp, una primera cita, el Titanic) o algo que le puede pasar a él. «Esto pasó en la calle por la que pasas cada día» engancha más que un lugar remoto.
+- **Sorpresa verdadera:** un dato que contradice lo que la gente cree, algo prohibido u ocultado, una coincidencia increíble, un final que nadie espera.
+- **Se puede comentar:** invita a opinar, a etiquetar a alguien («esto es muy tú») o a contar una experiencia propia.
+- **Prueba de la cena:** si lo contaras en una cena, ¿se callaría la mesa para escucharte? Si no, busca otro.
+- Penaliza: temas que ya ha hecho todo el nicho (salvo con un ángulo nuevo de verdad), temas que solo entiende quien ya sabe del tema, nombres que nadie conoce sin una historia humana detrás.
+
 ### LA HISTORIA: PIÉNSALA ANTES DE ESCRIBIRLA
 Rellena primero el PLAN (`angle`, `open_question`, `payoff`, `beats`) y después escribe el guion siguiéndolo. El plan sirve para elegir lo mejor, no para meterlo todo: la parte sigue teniendo el límite de palabras del canal.
 - **Elige el tema por lo que provoca, no por lo que enseña:** algo que haga decir «¿en serio?», «eso me pasa a mí» o «no puede ser». Entre varios temas posibles, quédate con el que tenga el detalle más concreto y sorprendente; descarta lo que ya sale en todos los vídeos del nicho o tiene un ángulo genérico.

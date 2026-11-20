@@ -104,6 +104,40 @@ def _mark_emphasis(words, blocks) -> None:
                 break
 
 
+def update_stats(cfg: dict) -> None:
+    """Consulta en Upload-Post las visualizaciones de lo publicado en los últimos 30 días y las guarda
+    en el historial: así el guionista sabe qué historias han gustado más."""
+    from .publish import post_stats
+    history = _load(cfg, "history.json", [])
+    now = datetime.now(timezone.utc)
+    raw_shown = False
+    n = 0
+    for h in history:
+        total = {"views": 0, "likes": 0, "comments": 0, "shares": 0}
+        got = False
+        for p in h.get("published_parts", []):
+            rid, slot = p.get("request_id"), p.get("slot")
+            if not rid or not slot:
+                continue
+            age = now - datetime.fromisoformat(slot)
+            if age < timedelta(hours=6) or age > timedelta(days=30):
+                continue
+            st = post_stats(rid, show_raw=not raw_shown)
+            raw_shown = True
+            if st is None:
+                continue
+            p["stats"] = st
+            got = True
+            n += 1
+            for m in total:
+                total[m] += sum(v.get(m, 0) for v in st.values())
+        if got:
+            h["stats"] = {**total, "updated": now.strftime("%Y-%m-%d")}
+            print(f"  {total['views']:>7} vis · {total['likes']:>5} me gusta · {total['comments']:>4} coment. · {h['series_title'][:60]}")
+    _save(cfg, "history.json", history)
+    print(f"  {n} publicaciones consultadas")
+
+
 def _stamps(blocks, durations) -> list[tuple[float, float, str]]:
     """Rótulos de datos (fecha, lugar, cifra) que pidió el guionista, durante su plano."""
     out, t = [], 0.0
@@ -306,6 +340,7 @@ def main() -> int:
     ap.add_argument("--compile", action="store_true", help="recopilación semanal para YouTube (con --clips)")
     ap.add_argument("--clips", action="append", default=[], help="carpeta con vídeos ya publicados (se puede repetir)")
     ap.add_argument("--pages", action="store_true", help="regenera la página de enlaces de la bio (docs/)")
+    ap.add_argument("--stats", action="store_true", help="guarda las visualizaciones de cada vídeo publicado")
     ap.add_argument("--accounts", action="store_true", help="enlaces de las cuentas conectadas en Upload-Post")
     args = ap.parse_args()
     if args.pages:
@@ -326,6 +361,10 @@ def main() -> int:
         from .publish import unlabel_scheduled
         unlabel_scheduled(load_config(args.channel)["channel"]["profile"])
         return 0
+    if args.stats:
+        update_stats(load_config(args.channel))
+        return 0
+
     if args.status:
         from .publish import report
         cfg = load_config(args.channel)

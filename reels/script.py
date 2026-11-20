@@ -106,7 +106,17 @@ class Book(BaseModel):
         "con documentos inéditos.»"))
 
 
+class TopicIdea(BaseModel):
+    topic: str = Field(description="El tema en una frase, con el detalle que lo hace irresistible.")
+    hook: str = Field(description="Cómo empezaría el vídeo (la primera frase).")
+    why: str = Field(description="Por qué le importaría a alguien que no sabe nada del tema (emoción, cercanía, sorpresa).")
+    score: int = Field(description="Del 1 al 10: ganas de verlo entero y comentarlo, siendo exigente (un 8 es excepcional).")
+
+
 class Series(BaseModel):
+    topic_candidates: List[TopicIdea] = Field(default_factory=list, description=(
+        "PRIMERO: 5 temas posibles muy distintos entre sí (o 5 ángulos del tema pedido), puntuados con los criterios "
+        "de ELEGIR EL TEMA. Desarrolla el de mayor puntuación."))
     series_title: str = Field(description="Título concreto de esta historia o tema (nunca el nombre del canal).")
     format: str = Field(description="Clave del formato indicado en la petición.")
     year: str
@@ -163,6 +173,7 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
         f"Partes: máximo {_max_parts(cfg)}.\n\n"
         "Historias ya publicadas (no repitas ninguna):\n"
         + ("\n".join(f"- {t}" for t in done) if done else "- (ninguna todavía)")
+        + _performance(history)
     )
     write = _claude_code if _use_claude_code(cfg) else _api
     series = write(cfg, _system_prompt(cfg), user)
@@ -182,6 +193,25 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
     return series
 
 
+def _performance(history: list[dict]) -> str:
+    """Qué historias del canal han gustado más y menos (visualizaciones reales), para aprender de ellas."""
+    rated = [h for h in history if (h.get("stats") or {}).get("views") is not None and h.get("published_parts")]
+    if len(rated) < 4:
+        return ""
+    rated.sort(key=lambda h: h["stats"]["views"], reverse=True)
+    k = min(5, len(rated) // 2)
+
+    def line(h):
+        st = h["stats"]
+        return (f"- {st['views']} visualizaciones, {st.get('likes', 0)} me gusta, {st.get('comments', 0)} comentarios · "
+                f"[{h.get('format')}] «{h['series_title']}» — {h.get('topic', '')}")
+    return ("\n\nRESULTADOS REALES DEL CANAL (aprende de ellos al elegir el tema y el gancho):\n"
+            "Las que MÁS han gustado:\n" + "\n".join(line(h) for h in rated[:k]) +
+            "\nLas que MENOS:\n" + "\n".join(line(h) for h in rated[-k:]) +
+            "\nFíjate en qué tienen en común las que funcionan (tipo de tema, emoción, cercanía, gancho) y busca "
+            "un tema NUEVO con esas cualidades. Evita lo que tienen en común las que no funcionan.")
+
+
 def _schema() -> dict:
     """Esquema para Claude: en las historias nuevas los 5 ganchos alternativos son obligatorios."""
     schema = Series.model_json_schema()
@@ -189,7 +219,9 @@ def _schema() -> dict:
     part["required"] = sorted(set(part.get("required", [])) | {"hook_candidates"})
     part["properties"]["hook_candidates"].update(minItems=5, maxItems=5)
     # la planificación va antes que el guion y es obligatoria: obliga a pensar la historia antes de escribirla
-    schema["required"] = sorted(set(schema.get("required", [])) | {"angle", "open_question", "payoff", "beats"})
+    schema["required"] = sorted(set(schema.get("required", [])) | {"angle", "open_question", "payoff", "beats",
+                                                                    "topic_candidates"})
+    schema["properties"]["topic_candidates"].update(minItems=5, maxItems=5)
     schema["properties"]["beats"].update(minItems=6, maxItems=9)
     return schema
 

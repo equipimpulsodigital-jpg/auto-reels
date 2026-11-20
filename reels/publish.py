@@ -279,3 +279,52 @@ def failed_platforms(result: dict) -> list[str]:
     if status and str(status.get("status")).lower() not in {"completed", "scheduled"}:
         return [str(status.get("status"))]
     return [r.get("platform", "?") for r in status.get("results") or [] if not r.get("success")]
+
+
+_METRICS = {"views": ("views", "view_count", "video_views", "plays", "play_count", "impressions", "reach"),
+            "likes": ("likes", "like_count", "likes_count"),
+            "comments": ("comments", "comment_count", "comments_count"),
+            "shares": ("shares", "share_count", "shares_count")}
+
+
+def _metrics(obj) -> dict:
+    """Busca en la respuesta (sea cual sea su forma) visualizaciones, me gusta, comentarios y compartidos."""
+    found = {k: 0 for k in _METRICS}
+
+    def walk(o):
+        if isinstance(o, dict):
+            for key, val in o.items():
+                kl = str(key).lower()
+                for m, names in _METRICS.items():
+                    if kl in names and isinstance(val, (int, float)):
+                        found[m] = max(found[m], int(val))
+                walk(val)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x)
+    walk(obj)
+    return found
+
+
+def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
+    """Estadísticas de una publicación (todas sus redes): {"instagram": {"views": .., ...}, ...}."""
+    headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
+    r = requests.get(f"{API}/uploadposts/post-analytics/{request_id}", headers=headers, timeout=60)
+    if show_raw:
+        print("  respuesta de ejemplo:", r.status_code, r.text[:1500])
+    if r.status_code >= 400:
+        return None
+    data = r.json()
+    out = {}
+    container = data.get("platforms") or data.get("results") or data.get("analytics") or data
+    if isinstance(container, dict):
+        for platform in ("instagram", "youtube", "tiktok", "facebook"):
+            if platform in container:
+                out[platform] = _metrics(container[platform])
+    elif isinstance(container, list):
+        for item in container:
+            if isinstance(item, dict) and item.get("platform"):
+                out[str(item["platform"]).lower()] = _metrics(item)
+    if not out:
+        out["total"] = _metrics(data)
+    return out
