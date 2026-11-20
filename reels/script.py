@@ -42,6 +42,8 @@ class LookSpec(BaseModel):
     jaw: Literal[K.JAWS] = "redonda"
     eyes: Literal[tuple(K.EYES)] = "marrones"
     glasses: bool = False
+    build: Literal[K.BUILDS] = "normal"
+    height: Literal[K.HEIGHTS] = "normal"
 
 
 class Character(BaseModel):
@@ -65,6 +67,8 @@ class Block(BaseModel):
     event: Optional[Literal[tuple(EVENTS)]] = None
     prop: Optional[Literal[tuple(PROPS)]] = None
     walk: bool = False
+    action: Literal[tuple(K.ACTIONS)] = "ninguna"
+    held_prop: Optional[Literal[tuple(PROPS)]] = None
     camera: Literal[tuple(K.CAMERAS)] = "push_in"
     sfx: List[Literal[tuple(K.SFX)]] = Field(default_factory=list, description="Efectos extra al empezar el plano.")
     on_screen: Optional[str] = Field(default=None, description=(

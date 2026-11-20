@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 
 import skia
 
-from .draw import INK, fill, limb, mix, noise1, oval, poly, shade, stroke, toon
+from .draw import INK, OUTLINE, ease, fill, mix, noise1, oval, poly, rrect, shade, stroke, toon
 
 SKIN = {"clara": "#f1c7a3", "media": "#dda177", "morena": "#b9784f", "oscura": "#7b4b30"}
 
@@ -35,7 +35,23 @@ class Look:
     glasses: bool = False
     female: bool = False
     eyes: str = "#5b3a22"                 # color del iris
+    build: str = "normal"                 # delgado | normal | robusto
+    height: str = "normal"                # bajo | normal | alto
     seed: int = 1
+
+    @property
+    def wx(self) -> float:  # anchura del cuerpo según la complexión
+        return {"delgado": 0.84, "robusto": 1.22}.get(self.build, 1.0) * (0.92 if self.female else 1.0)
+
+    @property
+    def child(self) -> bool:
+        return self.age == "niño"
+
+    @property
+    def hs(self) -> float:  # escala de altura (de pie, en planos generales)
+        if self.child:
+            return 0.7
+        return {"bajo": 0.9, "alto": 1.08}.get(self.height, 1.0) * (0.96 if self.female else 1.0)
 
     @property
     def skin_color(self) -> str:
@@ -61,6 +77,9 @@ class Pose:
     nod: float = 0.0          # cabeceo (énfasis al hablar o al escuchar)
     full_body: bool = False   # dibuja piernas (planos generales)
     walk: float = 0.0         # 0 = quieto; >0 = caminando (velocidad del paso)
+    action: str = ""          # correr | caer | sentado | agachado | manos_cabeza | levantar_manos | brazos_cruzados |
+                              # al_telefono | sostener | abrazar | golpear | empujar | saltar
+    held: str = ""            # objeto en la mano (clave de PROPS)
 
 
 @dataclass
@@ -87,19 +106,41 @@ class Character:
         return poly(pts, smooth=True)
 
     def draw(self, canvas: skia.Canvas, x: float, y: float, scale: float, p: Pose) -> None:
-        """Dibuja el personaje con la cintura en (x, y)."""
+        """Dibuja el personaje con la cintura en (x, y). Los pies quedan en y + 440·scale."""
         L = self.look
         f = 1.0 if p.facing >= 0 else -1.0
+        act = p.action
         canvas.save()
         canvas.translate(x, y)
         canvas.scale(scale, scale)
+        if p.full_body:
+            self._ground_shadow(canvas, p, f)
+            hs = L.hs
+            canvas.translate(0, 440 * (1 - hs))
+            canvas.scale(hs, hs)
+            if act == "caer":  # cae de espaldas y se queda tendido
+                k = ease(min(1.0, p.t / 0.55))
+                canvas.translate(f * 420 * k, 60 * k)  # queda tendido en el centro del plano
+                canvas.rotate(-84 * f * k, 0, 440)
+            elif act == "sentado":
+                self._chair(canvas, f)
+                canvas.translate(0, 150)
+            elif act == "agachado":
+                canvas.translate(0, 112)
+            elif act == "saltar":
+                canvas.translate(0, -abs(math.sin(p.t * 4.2)) * 150)
         # respiración y balanceo
         breathe = math.sin(p.t * 2.2) * 4
         bob = -abs(math.sin(p.t * 7.5)) * 10 * p.mouth if p.talking else 0
         lean = noise1(p.t * 0.6, L.seed) * 2.0 + (3.0 * f if p.talking else 0)
-        canvas.rotate(lean * 0.4)
+        if act == "correr":
+            lean += 9 * f
+            canvas.translate(0, -abs(math.sin(p.t * 11)) * 22)
+        elif act in ("empujar", "golpear"):
+            lean += 6 * f
+        canvas.rotate(lean * 0.4, 0, 440 if p.full_body else 0)
 
-        if p.walk:
+        if p.walk and act != "correr":
             canvas.translate(0, -abs(math.sin(p.t * p.walk * 6)) * 12)
         if p.full_body:
             self._legs(canvas, p, f)
@@ -108,6 +149,10 @@ class Character:
         canvas.save()
         canvas.translate(0, bob + breathe * 0.5 + p.nod * 14)
         canvas.rotate(lean + p.nod * 5 * f + (noise1(p.t * 1.3, L.seed + 3) * 3 * p.mouth if p.talking else 0), 0, -300)
+        if L.child:  # cabeza proporcionalmente más grande
+            canvas.translate(0, -270)
+            canvas.scale(1.18, 1.18)
+            canvas.translate(0, 270)
         # squash & stretch: la cabeza se estira un poco al abrir mucho la boca
         st = 1 + 0.03 * p.mouth
         canvas.scale(1 / st ** 0.5, st)
@@ -115,6 +160,22 @@ class Character:
         canvas.restore()
         self._arms(canvas, p, f, back=False)
         canvas.restore()
+
+    def _ground_shadow(self, c: skia.Canvas, p: Pose, f: float) -> None:
+        w = 170 * self.look.wx * self.look.hs
+        if p.action == "caer":
+            k = ease(min(1.0, p.t / 0.55))
+            c.drawPath(oval(f * 160 * k, 452, w + 230 * k, 30), fill("#000000", 0.22))
+        else:
+            lift = abs(math.sin(p.t * 4.2)) if p.action == "saltar" else 0.0
+            c.drawPath(oval(0, 450, w * (1 - 0.35 * lift), 28 * (1 - 0.35 * lift)), fill("#000000", 0.24))
+
+    def _chair(self, c: skia.Canvas, f: float) -> None:
+        wood = "#6b4a2f"
+        toon(c, rrect(-f * 150 - 30, 40, 60, 260, 14), shade(wood, -0.15))  # respaldo
+        toon(c, rrect(-150, 250, 330, 44, 12), wood)  # asiento
+        for x in (-130, 150):
+            toon(c, rrect(x - 14, 290, 28, 150, 8), shade(wood, -0.2))
 
     def draw_back(self, canvas: skia.Canvas, x: float, y: float, scale: float, f: float, t: float) -> None:
         """Personaje de espaldas (nuca y hombro) para los planos por encima del hombro."""
@@ -136,20 +197,45 @@ class Character:
         canvas.restore()
 
     # ---------- cuerpo ----------
+    def _jacket_hem(self) -> float:
+        return {"traje": 185, "uniforme": 175, "levita": 300, "noble": 150, "armadura": 160}.get(self.look.outfit, 128)
+
     def _torso(self, c: skia.Canvas, f: float, breathe: float) -> None:
         L = self.look
         top = -250 - breathe
-        sh = 150 if not L.female else 130
-        body = poly([(-sh, top + 30), (-sh + 30, top), (sh - 30, top), (sh, top + 30),
-                     (sh + 25, 120), (-sh - 25, 120)], smooth=False)
-        # hombros redondeados
-        body = skia.Op(body, poly([(-sh - 10, top + 40), (-sh + 40, top - 6), (sh - 40, top - 6), (sh + 10, top + 40),
-                                   (sh + 10, top + 80), (-sh - 10, top + 80)], smooth=True), skia.PathOp.kUnion_PathOp) or body
+        wx = L.wx
+        sh = (150 if not L.female else 132) * wx
+        waist = sh * (1.02 if L.build == "robusto" else 0.8 if L.female else 0.86)
+        hip = sh * (0.98 if L.female else 0.9)
+        hem = self._jacket_hem()
+        pts = [(-sh + 26, top - 2), (-sh - 8, top + 34), (-sh * 0.97, top + 150), (-waist, 40),
+               (-hip, 120), (-hip * 1.02, hem), (hip * 1.02, hem), (hip, 120), (waist, 40),
+               (sh * 0.97, top + 150), (sh + 8, top + 34), (sh - 26, top - 2)]
+        body = poly(pts, smooth=True)
         color = L.outfit_color
         toon(c, body, color, light=(-f, -0.3), shade_amt=0.25)
-        # cuello
-        neck = poly([(-48 + f * 10, -300), (48 + f * 10, -300), (52 + f * 10, top + 10), (-52 + f * 10, top + 10)])
+        if L.build == "robusto":  # barriga
+            belly = oval(f * 18, 40, waist * 0.9, 120)
+            c.save()
+            c.clipPath(body, doAntiAlias=True)
+            c.drawPath(belly, fill(shade(color, 0.06)))
+            c.drawPath(belly, stroke(shade(color, -0.3), 4))
+            c.restore()
+        # pliegues en las axilas y la cintura
+        for side in (-1, 1):
+            pth = skia.Path()
+            pth.moveTo(side * sh * 0.86, top + 70)
+            pth.quadTo(side * sh * 0.72, top + 140, side * sh * 0.8, top + 190)
+            c.drawPath(pth, stroke(shade(color, -0.3), 4))
+        if hem <= 130 and L.outfit not in ("vestido", "sotana", "capa"):  # cinturón
+            c.drawPath(poly([(-waist * 1.02, 96), (waist * 1.02, 96), (hip, 126), (-hip, 126)], smooth=False), fill("#2a1d16"))
+            c.drawRect(skia.Rect.MakeXYWH(f * 10 - 18, 98, 36, 26), stroke("#c9a227", 5))
+        elif hem > 130 and L.outfit in ("traje", "levita", "uniforme"):  # abertura de la chaqueta
+            c.drawLine(f * 8, 60, f * 8, hem, stroke(shade(color, -0.4), 5))
+        # cuello (con sombra de la barbilla)
+        neck = poly([(-44 + f * 10, -300), (44 + f * 10, -300), (50 + f * 10, top + 10), (-50 + f * 10, top + 10)])
         toon(c, neck, L.skin_color, light=(-f, 0))
+        c.drawPath(oval(f * 10, -292, 48, 18), fill(shade(L.skin_color, -0.35), 0.7))
         o = L.outfit
         if o == "jersey":
             collar = poly([(-70 + f * 8, top - 18), (70 + f * 8, top - 18), (78 + f * 8, top + 26), (-78 + f * 8, top + 26)], smooth=True)
@@ -205,40 +291,159 @@ class Character:
             c.drawLine(-55 + f * 8, top - 10, f * 8, top + 40, stroke(INK, 5))
             c.drawLine(55 + f * 8, top - 10, f * 8, top + 40, stroke(INK, 5))
 
+
+    # ---------- piernas ----------
+    def _leg_angles(self, p: Pose, side: float) -> tuple[float, float]:
+        """(muslo, rodilla) en grados: muslo > 0 = hacia delante; rodilla > 0 = el pie va hacia atrás."""
+        a = p.action
+        if a == "correr":
+            sw = math.sin(p.t * 11) * side
+            return 42 * sw, 25 + 55 * max(0.0, -sw)
+        if a == "sentado":
+            return 88, 88
+        if a == "agachado":
+            return 62 + side * 8, 122
+        if a == "saltar":
+            k = abs(math.sin(p.t * 4.2))
+            return 20 * k + side * 6, 40 * k
+        if a == "caer":
+            return 12 + side * 10, 18
+        if p.walk:
+            sw = math.sin(p.t * p.walk * 6) * side
+            return 20 * sw, 12 * max(0.0, -sw)
+        return side * 1.5, 0.0
+
     def _legs(self, c: skia.Canvas, p: Pose, f: float) -> None:
         L = self.look
-        skirt = L.outfit in ("vestido", "sotana", "capa") or L.female and L.outfit != "uniforme"
-        sw = math.sin(p.t * p.walk * 6) if p.walk else 0.0
-        if skirt:
+        wx = L.wx
+        skirt = L.outfit in ("vestido", "sotana", "capa") or L.female and L.outfit not in ("uniforme", "traje", "camisa", "jersey")
+        if skirt and p.action not in ("sentado", "agachado", "correr", "caer"):
+            sw = math.sin(p.t * p.walk * 6) if p.walk else 0.0
             hem = 430
             for side in (-1, 1):
-                sx = side * 50 + sw * side * 25
-                toon(c, oval(sx + f * 20, hem + 8, 42, 20), L.shoes_color, outline=5)
+                sx = side * 50 * wx + sw * side * 25
+                self._shoe(c, sx, hem - 2, f)
             color = L.outfit_color if L.outfit != "capa" else shade(L.outfit_color, -0.1)
-            sk = poly([(-150, 60), (150, 60), (210 + sw * 15, hem), (-210 + sw * 15, hem)], smooth=False)
+            top_w = 135 * wx * (0.98 if L.female else 0.9)
+            sk = poly([(-top_w, 90), (top_w, 90), (top_w * 1.5 + sw * 15, hem), (-top_w * 1.5 + sw * 15, hem)], smooth=False)
             toon(c, sk, color, light=(-f, -0.2))
             for k in (-1, 0, 1):
-                c.drawLine(k * 60, 120, k * 85 + sw * 10, hem - 10, stroke(shade(color, -0.3), 4))
+                c.drawLine(k * 55 * wx, 120, k * 85 * wx + sw * 10, hem - 10, stroke(shade(color, -0.3), 4))
             return
-        for side in (-1, 1):
-            hip = (side * 62, 90)
-            swing = sw * side * 22
-            knee = (side * 66 + swing * 0.6, 260)
-            foot = (side * 64 + swing, 410 - max(0.0, sw * side) * 20)
-            limb(c, [hip, knee, foot], 88, L.pants_color)
-            toon(c, oval(foot[0] + f * 26, foot[1] + 20, 56, 26), L.shoes_color, outline=5)
+        pants = L.outfit_color if skirt else L.pants_color
+        L1, L2 = 165.0, 150.0
+        legs = []
+        for side in (-1.0, 1.0):
+            th, bend = self._leg_angles(p, side)
+            hip = (side * 52 * wx, 120.0)
+            a1, a2 = math.radians(th), math.radians(th - bend)
+            knee = (hip[0] + f * math.sin(a1) * L1, hip[1] + math.cos(a1) * L1)
+            foot = (knee[0] + f * math.sin(a2) * L2, knee[1] + math.cos(a2) * L2)
+            legs.append((side, hip, knee, foot))
+        thick = 96 * wx ** 0.7
+        # la pierna de atrás primero (la del lado contrario a donde mira)
+        legs.sort(key=lambda l: l[0] * f)
+        for side, hip, knee, foot in legs:
+            back = side * f < 0
+            col = shade(pants, -0.12) if back else pants
+            # la pernera acaba justo encima del zapato (el extremo redondo no asoma por debajo)
+            dx, dy = foot[0] - knee[0], foot[1] - knee[1]
+            dn = math.hypot(dx, dy) or 1
+            ankle = (foot[0] - dx / dn * thick * 0.5, foot[1] - dy / dn * thick * 0.5)
+            for seg, w in (((hip, knee), thick), ((knee, ankle), thick * 0.84)):
+                pth = skia.Path()
+                pth.moveTo(*seg[0])
+                pth.lineTo(*seg[1])
+                c.drawPath(pth, stroke(INK, w + OUTLINE * 2))
+            for seg, w in (((hip, knee), thick), ((knee, ankle), thick * 0.84)):
+                pth = skia.Path()
+                pth.moveTo(*seg[0])
+                pth.lineTo(*seg[1])
+                c.drawPath(pth, stroke(col, w))
+            # bajo del pantalón
+            c.drawLine(ankle[0] - thick * 0.42, ankle[1] + 8, ankle[0] + thick * 0.42, ankle[1] + 8, stroke(shade(col, -0.35), 5))
+            self._shoe(c, foot[0], foot[1], f, dark=back)
+        # entrepierna: une las dos perneras bajo la cadera
+        seat = poly([(-62 * wx, 100), (62 * wx, 100), (58 * wx, 170), (f * 6, 186), (-58 * wx, 170)], smooth=True)
+        toon(c, seat, pants, outline=0)
+
+    def _shoe(self, c: skia.Canvas, fx: float, fy: float, f: float, dark: bool = False) -> None:
+        col = shade(self.look.shoes_color, -0.15 if dark else 0.0)
+        shoe = poly([(fx - f * 38, fy - 6), (fx + f * 12, fy - 18), (fx + f * 56, fy - 2), (fx + f * 64, fy + 16),
+                     (fx - f * 40, fy + 18)], smooth=True)
+        toon(c, shoe, col, outline=5)
+        c.drawLine(fx - f * 40, fy + 16, fx + f * 62, fy + 16, stroke(shade(col, 0.25), 5))
+        c.drawPath(oval(fx + f * 20, fy - 4, 14, 5), fill("#ffffff", 0.25))
+
+    # ---------- brazos ----------
+    def _shoulder(self, side: float, top: float) -> tuple[float, float]:
+        return side * (132 * self.look.wx - (6 if self.look.female else 0)), top + 45
 
     def _arm_points(self, side: float, th: float, ph: float, top: float) -> list[tuple[float, float]]:
-        sx, sy = side * 132, top + 45
+        sx, sy = self._shoulder(side, top)
         a1, a2 = math.radians(th), math.radians(th + ph)
         ex, ey = sx + side * math.sin(a1) * 135, sy + math.cos(a1) * 135
         hx, hy = ex + side * math.sin(a2) * 125, ey + math.cos(a2) * 125
         return [(sx, sy), (ex, ey), (hx, hy)]
 
+    def _ik(self, side: float, target: tuple[float, float], top: float, elbow_out: float = 1.0) -> list[tuple[float, float]]:
+        """Brazo que lleva la mano a un punto (cinemática inversa de dos huesos)."""
+        L1, L2 = 135.0, 125.0
+        sx, sy = self._shoulder(side, top)
+        dx, dy = target[0] - sx, target[1] - sy
+        d = max(1.0, min(math.hypot(dx, dy), L1 + L2 - 1))
+        base = math.atan2(dy, dx)
+        cos_a = max(-1.0, min(1.0, (L1 * L1 + d * d - L2 * L2) / (2 * L1 * d)))
+        a = math.acos(cos_a)
+        best = None
+        for sgn in (1, -1):
+            ang = base + sgn * a
+            ex, ey = sx + math.cos(ang) * L1, sy + math.sin(ang) * L1
+            score = ey + elbow_out * side * ex * 0.6  # codo abajo y hacia fuera
+            if best is None or score > best[0]:
+                best = (score, (ex, ey))
+        ex, ey = best[1]
+        k = d / max(1.0, math.hypot(dx, dy))
+        hx, hy = sx + dx * k, sy + dy * k
+        return [(sx, sy), (ex, ey), (hx, hy)]
+
+    def _action_target(self, p: Pose, side: float, f: float, top: float):
+        """Dónde va la mano en cada acción (None = gesto normal)."""
+        a, t, near = p.action or ("sostener" if p.held else ""), p.t, side == f
+        if a == "manos_cabeza":
+            return (side * 150, -400 + math.sin(t * 3 + side) * 8)
+        if a == "levantar_manos":
+            return (side * 250, -560 + math.sin(t * 6 + side) * 14)
+        if a == "brazos_cruzados":
+            return (-side * 70, -70)
+        if a == "al_telefono" and near:
+            return (f * 152, -430)
+        if a == "sostener" and near:
+            return (f * 190, -70 + math.sin(t * 1.6) * 6)
+        if a == "abrazar":
+            return (f * 205 + side * 30, -140 + side * 20)
+        if a == "golpear" and near:
+            k = max(0.0, math.sin(t * 9))
+            return (f * (120 + 190 * k), -190)
+        if a == "empujar":
+            k = 0.5 + 0.5 * math.sin(t * 6)
+            return (f * (170 + 70 * k), -150 + side * 40)
+        if a == "agachado":
+            return (f * 120 + side * 40, 40)
+        if a == "sentado" and near:
+            return (f * 150, 60)
+        return None
+
     def _gesture(self, p: Pose, side: float, f: float) -> tuple[float, float]:
         """Ángulos (hombro, codo) en grados: 0 = brazo colgando; positivo = hacia fuera."""
         t, a = p.t, p.gesture_amt
         near = side == f  # brazo del lado hacia el que mira
+        if p.action == "correr":
+            sw = math.sin(p.t * 11) * side
+            return (10 + 40 * sw * f * side, -70)
+        if p.action == "caer":
+            k = ease(min(1.0, p.t / 0.55))
+            return (12 + 120 * k, -20 * k)
         idle = (12 + math.sin(t * 2.2 + side) * 3, 12)
         g = p.gesture
         if g == "point" and near:
@@ -264,34 +469,81 @@ class Character:
         L = self.look
         top = -250 - math.sin(p.t * 2.2) * 4
         sleeve = shade(L.outfit_color, -0.06)
+        front_actions = ("manos_cabeza", "levantar_manos", "brazos_cruzados", "al_telefono", "sostener", "abrazar",
+                         "golpear", "empujar")
         for side in (-1.0, 1.0):
-            th, ph = self._gesture(p, side, f)
-            raised = ph < -60 or th > 60
+            tgt = self._action_target(p, side, f, top)
+            if tgt is not None:
+                pts = self._ik(side, tgt, top, elbow_out=-1.0 if p.action == "brazos_cruzados" else 1.0)
+                raised = (p.action or "sostener") in front_actions
+                if p.action == "abrazar" and side != f:
+                    raised = False  # el brazo de atrás rodea por detrás
+            else:
+                th, ph = self._gesture(p, side, f)
+                pts = self._arm_points(side, th, ph, top)
+                raised = ph < -60 or th > 60
+                if p.action == "correr":
+                    raised = side == f
             # los brazos levantados por delante se dibujan delante del cuerpo
             if back == raised:
                 continue
-            pts = self._arm_points(side, th, ph, top)
-            limb(c, pts, 62, sleeve)
+            w1, w2 = 66 * L.wx ** 0.6, 56 * L.wx ** 0.6
+            for (a, b), w in (((pts[0], pts[1]), w1), ((pts[1], pts[2]), w2)):
+                c.drawLine(a[0], a[1], b[0], b[1], stroke(INK, w + OUTLINE * 2))
+            for (a, b), w in (((pts[0], pts[1]), w1), ((pts[1], pts[2]), w2)):
+                c.drawLine(a[0], a[1], b[0], b[1], stroke(sleeve, w))
+            c.drawCircle(pts[1][0], pts[1][1], w2 * 0.5, fill(shade(sleeve, -0.08)))  # codo
             hx, hy = pts[-1]
             ux, uy = hx - pts[1][0], hy - pts[1][1]
             un = math.hypot(ux, uy) or 1
             ux, uy = ux / un, uy / un
-            # pulgar hacia el centro del cuerpo
-            tx, ty = hx - side * 26 + ux * 6, hy - 8 + uy * 6
-            thumb = oval(tx, ty, 13, 20)
-            toon(c, thumb, L.skin_color, outline=5)
-            hand = poly([(hx - 30, hy - 24), (hx + 28, hy - 26), (hx + 34 + ux * 14, hy + 8 + uy * 14),
-                         (hx + ux * 26, hy + 30 + uy * 20), (hx - 32 + ux * 10, hy + 10 + uy * 14)], smooth=True)
-            toon(c, hand, L.skin_color, light=(-f, -0.5))
-            for k in (-1, 0, 1):  # dedos
-                c.drawLine(hx + k * 12 + ux * 12, hy + 4 + uy * 12, hx + k * 13 + ux * 26, hy + 8 + uy * 26,
+            # puño de la manga
+            cx, cy = hx - ux * 18, hy - uy * 18
+            c.drawLine(cx - uy * w2 * 0.52, cy + ux * w2 * 0.52, cx + uy * w2 * 0.52, cy - ux * w2 * 0.52,
+                       stroke(shade(sleeve, -0.35), 9))
+            held = p.held and side == f and (p.action in ("", "sostener", "al_telefono"))
+            if held:
+                self._held(c, p, hx, hy, f)
+            self._hand(c, hx, hy, ux, uy, side, f, fist=p.action in ("golpear",) and side == f, point=p.gesture == "point" and side == f and tgt is None)
+
+    def _hand(self, c, hx, hy, ux, uy, side, f, fist=False, point=False) -> None:
+        L = self.look
+        s = 1.22
+        tx, ty = hx - side * 26 * s + ux * 6, hy - 8 + uy * 6
+        toon(c, oval(tx, ty, 13 * s, 20 * s), L.skin_color, outline=5)  # pulgar hacia el centro del cuerpo
+        if fist:
+            toon(c, oval(hx + ux * 8, hy + uy * 8, 34 * s, 30 * s), L.skin_color, light=(-f, -0.5))
+            for k in (-1, 0, 1):
+                c.drawLine(hx + ux * 26 + k * 12, hy + uy * 26 - 8, hx + ux * 26 + k * 12, hy + uy * 26 + 8,
                            stroke(shade(L.skin_color, -0.4), 3.5))
-            if p.gesture == "point" and side == f:
-                dx, dy = hx - pts[1][0], hy - pts[1][1]
-                n = math.hypot(dx, dy) or 1
-                fx, fy = hx + dx / n * 46, hy + dy / n * 46
-                c.drawLine(hx, hy, fx, fy, stroke(INK, 24))
-                c.drawLine(hx, hy, fx, fy, stroke(L.skin_color, 12))
+            return
+        hand = poly([(hx - 30 * s, hy - 24 * s), (hx + 28 * s, hy - 26 * s), (hx + (34 + ux * 14) * s, hy + (8 + uy * 14) * s),
+                     (hx + ux * 26 * s, hy + (30 + uy * 20) * s), (hx + (-32 + ux * 10) * s, hy + (10 + uy * 14) * s)], smooth=True)
+        toon(c, hand, L.skin_color, light=(-f, -0.5))
+        for k in (-1, 0, 1):  # dedos
+            c.drawLine(hx + (k * 12 + ux * 12) * s, hy + (4 + uy * 12) * s, hx + (k * 13 + ux * 26) * s, hy + (8 + uy * 26) * s,
+                       stroke(shade(L.skin_color, -0.4), 3.5))
+        if point:
+            fx, fy = hx + ux * 50, hy + uy * 50
+            c.drawLine(hx, hy, fx, fy, stroke(INK, 26))
+            c.drawLine(hx, hy, fx, fy, stroke(L.skin_color, 14))
+
+    def _held(self, c, p: Pose, hx: float, hy: float, f: float) -> None:
+        """Objeto en la mano (carta, móvil, pistola, taza...), pequeño y a la altura del puño."""
+        from .props import PROPS
+        draw = PROPS.get(p.held)
+        if not draw:
+            return
+        c.save()
+        if p.action == "al_telefono":
+            c.translate(hx + f * 4, hy - 30)
+            c.rotate(-12 * f)
+            c.scale(0.2, 0.2)
+        else:
+            c.translate(hx + f * 30, hy - 70)
+            c.scale(0.24, 0.24)
+        draw(c, p.t)
+        c.restore()
 
     # ---------- cabeza ----------
     def _head(self, c: skia.Canvas, p: Pose, f: float) -> None:

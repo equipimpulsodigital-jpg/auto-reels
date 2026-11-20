@@ -84,6 +84,8 @@ class Shot:
     event: Optional[str] = None             # suceso animado (EVENTS)
     prop: Optional[str] = None              # objeto en primer plano (PROPS), para framing="objeto"
     walk: bool = False                      # en plano general, los personajes caminan
+    action: str = ""                        # acción del protagonista del plano (ver catalog.ACTIONS)
+    held: str = ""                          # objeto en la mano del protagonista
     camera: str = "push_in"                 # push_in | pull_back | shake | static
     punches: list = field(default_factory=list)  # segundos (dentro del plano) con golpe de zoom
     mouth: list[float] = field(default_factory=list)
@@ -111,7 +113,27 @@ class Ctx:
         return self.sides[cid]
 
 
+PAIR_ACTIONS = ("abrazar", "golpear", "empujar")
+
+
+def _actor(shot: Shot) -> Optional[str]:
+    """Protagonista del plano: el que habla o, si habla el narrador, el primero del reparto."""
+    if shot.speaker and shot.speaker in shot.cast:
+        return shot.speaker
+    return shot.cast[0] if shot.cast else None
+
+
 def _pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: float) -> Pose:
+    p = _base_pose(ctx, shot, cid, t, frame, facing)
+    actor = _actor(shot)
+    if cid == actor:
+        p.action, p.held = shot.action, shot.held
+    elif shot.action == "abrazar" and cid in shot.cast:
+        p.action = shot.action  # abrazo mutuo
+    return p
+
+
+def _base_pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: float) -> Pose:
     speaking = cid == shot.speaker
     seed = ctx.chars[cid].look.seed
     if speaking:
@@ -165,12 +187,21 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
         loc.back(c, g)
         feet = H * loc.floor_y
         n = len(shot.cast)
-        for i, cid in enumerate(shot.cast):
+        actor = _actor(shot)
+        order = sorted(shot.cast, key=lambda c_: ctx.side(c_)) if n > 1 else list(shot.cast)
+        for i, cid in enumerate(order):
             s = 0.6
             side = ctx.side(cid)
             x = W * (0.5 + (i - (n - 1) / 2) * 0.36) if n > 1 else W * 0.5
             facing = -side if n > 1 else 1.0
-            if shot.walk:
+            if shot.action == "correr" and cid == actor:  # cruza la pantalla corriendo
+                facing = 1.0 if n == 1 else side
+                x = W * 0.5 + (t - shot.duration / 2) * 300 * facing
+            elif shot.action in PAIR_ACTIONS and n > 1 and i < 2:  # se acercan el uno al otro
+                k = ease(min(1.0, t / 0.6))
+                gap = {"abrazar": 0.1, "golpear": 0.115, "empujar": 0.11}[shot.action]
+                x = W * (0.5 + (i - 0.5) * 2 * (0.18 + (gap - 0.18) * k))
+            elif shot.walk:
                 x += (t - shot.duration / 2) * 70 * facing
             p = _pose(ctx, shot, cid, t, frame, facing)
             p.full_body = True
@@ -216,7 +247,8 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{W}x{H}",
          "-r", str(fps), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "17",
          "-pix_fmt", "yuv420p", str(out)], stdin=subprocess.PIPE)
-    shaky = shot.camera == "shake" or shot.event in ("explosion", "bombardeo", "cañonazos", "terremoto")
+    shaky = shot.camera == "shake" or shot.event in ("explosion", "bombardeo", "cañonazos", "terremoto") \
+        or shot.action in ("golpear", "caer")
     for i in range(frames):
         t = i / fps
         c = surface.getCanvas()

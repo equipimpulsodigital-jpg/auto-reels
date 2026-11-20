@@ -19,6 +19,11 @@ def build_cast(series) -> tuple[dict, dict]:
     return chars, sides
 
 
+# sonidos que acompañan a cada acción: (efecto, segundo dentro del plano)
+ACTION_SFX = {"golpear": [("hit", 0.25), ("hit", 0.95), ("hit", 1.65)], "caer": [("hit", 0.5)],
+              "empujar": [("whoosh", 0.3)], "correr": [("whoosh", 0.1)], "saltar": [("whoosh", 0.2)]}
+
+
 def block_to_shot(b, series, chars: dict, duration: float) -> Shot:
     speaker = b.speaker if b.speaker in chars else None
     cast = [c for c in b.cast if c in chars]
@@ -42,7 +47,9 @@ def block_to_shot(b, series, chars: dict, duration: float) -> Shot:
         mood=b.mood, era=series.era, event=b.event,
         prop=b.prop or ("carta" if framing == "objeto" else None),
         walk=b.walk and framing == "general", camera=b.camera,
-        sfx=[(name, 0.0) for name in b.sfx],
+        action="" if getattr(b, "action", "ninguna") == "ninguna" else b.action,
+        held=getattr(b, "held_prop", None) or "",
+        sfx=[(name, 0.0) for name in b.sfx] + ACTION_SFX.get(getattr(b, "action", ""), []),
     )
 
 

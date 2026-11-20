@@ -26,7 +26,25 @@ BEARDS = ("ninguna", "barba_corta", "barba", "bigote", "bigotazo", "perilla")
 OUTFITS = ("jersey", "uniforme", "traje", "camisa", "vestido", "sotana", "armadura", "capa", "noble", "levita", "campesino")
 NOSES = ("patata", "aguileña", "pequeña", "gancho")
 JAWS = ("redonda", "cuadrada", "fina")
-AGES = ("joven", "adulto", "mayor")
+AGES = ("niño", "joven", "adulto", "mayor")
+BUILDS = ("delgado", "normal", "robusto")
+HEIGHTS = ("bajo", "normal", "alto")
+ACTIONS = {
+    "ninguna": "de pie, hablando o escuchando (con su `gesture`)",
+    "correr": "corre (en plano general cruza la pantalla; huidas, persecuciones, prisa)",
+    "caer": "cae de espaldas y queda tendido en el suelo (muerte, desmayo, golpe)",
+    "sentado": "sentado en una silla (cenas, interrogatorios, citas, consulta)",
+    "agachado": "agachado o escondido (esconderse, examinar algo en el suelo)",
+    "saltar": "salta de alegría",
+    "manos_cabeza": "se lleva las manos a la cabeza (desesperación, horror, «no puede ser»)",
+    "levantar_manos": "levanta las manos (rendirse, celebrar, «¡no dispare!»)",
+    "brazos_cruzados": "brazos cruzados (enfado, desconfianza, orgullo)",
+    "al_telefono": "habla por teléfono (usa `held_prop`: movil o telefono)",
+    "sostener": "sostiene en la mano el objeto de `held_prop` (carta, pistola, foto, taza...)",
+    "abrazar": "abraza al otro personaje del plano (en plano general se acercan y se abrazan)",
+    "golpear": "da puñetazos al otro personaje (peleas)",
+    "empujar": "empuja o forcejea con el otro personaje",
+}
 
 FRAMINGS = {
     "general": "plano general del lugar; los personajes de `cast` salen de cuerpo entero (quietos o caminando con `walk`)",
@@ -96,7 +114,7 @@ def make_character(name: str, look: dict, seed: int) -> Character:
     """Convierte la ficha elegida por el guionista en un personaje dibujable."""
     def col(key: str, default: str) -> str:
         return COLORS.get(look.get(key) or "", default)
-    beard = look.get("beard", "ninguna")
+    beard = look.get("beard", "ninguna") if look.get("age") != "niño" else "ninguna"
     hat = {"gorra_plato": "gorra_militar", "gorra_marino": "gorra_militar"}.get(look.get("hat", ""), look.get("hat", "ninguno"))
     return Character(name, Look(
         skin=look.get("skin", "media"),
@@ -113,6 +131,8 @@ def make_character(name: str, look: dict, seed: int) -> Character:
         nose=look.get("nose", "patata"),
         jaw=look.get("jaw", "redonda"),
         age=look.get("age", "adulto"),
+        build=look.get("build", "normal"),
+        height=look.get("height", "normal"),
         glasses=bool(look.get("glasses", False)),
         female=bool(look.get("female", False)),
         eyes=EYES.get(look.get("eyes") or "", EYES["marrones"]),
@@ -134,6 +154,10 @@ def catalog_text(voices: list[str]) -> str:
 {lst({k: PROP_DESC.get(k, k) for k in PROPS})}
 - **Sucesos (`event`, se superponen al plano)**:
 {lst({k: EVENT_DESC.get(k, k) for k in EVENTS})}
+- **Acciones (`action`, del protagonista del plano: el que habla o el primero de `cast`)**:
+{lst(ACTIONS)}
+  Úsalas siempre que la frase describa algo físico: si alguien huye, que corra; si muere, que caiga; si recibe una noticia terrible, manos a la cabeza. Un plano en el que «pasa» algo es mucho mejor que uno en el que solo se habla.
+- **Objeto en la mano (`held_prop`)**: cualquier clave de objetos; el protagonista del plano lo sostiene (con `sostener` o `al_telefono`).
 - **Gestos (`gesture`, del personaje que habla)**:
 {lst(GESTURES)}
 - **Emociones (`emotion` del que habla, `listener_emotion` del que escucha)**: {", ".join(f"`{k}`" + (f" ({EMOTION_DESC[k]})" if k in EMOTION_DESC else "") for k in EMOTIONS)}. Que la cara diga lo mismo que la frase: una mala noticia es `triste` o `llorando`, nunca `neutral`; quien escucha algo grave reacciona (`sorprendido`, `triste`, `horrorizado`).
@@ -147,6 +171,7 @@ def catalog_text(voices: list[str]) -> str:
   - `hat`: {", ".join(HATS)} (gorra_plana = gorra de paño de pescador/obrero; gorra_militar = gorra de plato con visera de oficial, policía o marino)
   - `outfit`: {", ".join(OUTFITS)} (noble = jubón con gorguera s. XVI-XVII; levita = s. XIX; capa = rey/noble; uniforme = militar/policía)
   - `beard`: {", ".join(BEARDS)} · `nose`: {", ".join(NOSES)} · `jaw`: {", ".join(JAWS)} · `age`: {", ".join(AGES)}
+  - `build` (complexión): {", ".join(BUILDS)} · `height` (estatura): {", ".join(HEIGHTS)}. Varíalos para que cada personaje tenga su silueta (el guardia robusto y alto, la anciana baja y delgada, el niño...).
   - colores (`outfit_color`, `hat_color`, `accent_color` para botones/galones/corbata, `pants_color`): {", ".join(COLORS)}
   - `eyes`: {", ".join(EYES)} · `glasses` y `female`: true/false
 """
