@@ -13,7 +13,21 @@
         "request_id": "db196ec93d1d446abe6d01c7ec638516",
         "job_id": "4907d9b9faf344358a032dc32d6f5006",
         "failed": [],
-        "at": "2026-11-19T11:30:19+00:00"
+        "at": "2026-11-19T11:30:19+00:00",
+        "stats": {
+          "instagram": {
+            "views": 136,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 978,
+            "likes": 28,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -22,9 +36,30 @@
         "request_id": "f983c026260746598809242b78874d5d",
         "job_id": "0b65bf502b144f179bedd4985d467610",
         "failed": [],
-        "at": "2026-11-19T11:37:19+00:00"
+        "at": "2026-11-19T11:37:19+00:00",
+        "stats": {
+          "instagram": {
+            "views": 114,
+            "likes": 2,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 103,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
-    ]
+    ],
+    "stats": {
+      "views": 1331,
+      "likes": 34,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
+    }
   },
   {
     "date": "2026-11-19",
@@ -40,7 +75,21 @@
         "request_id": "f62faaf91d604f9da65bdb59e182b572",
         "job_id": "1ddc5791dc60434fa2db53fe4668bedd",
         "failed": [],
-        "at": "2026-11-19T11:45:43+00:00"
+        "at": "2026-11-19T11:45:43+00:00",
+        "stats": {
+          "instagram": {
+            "views": 113,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1068,
+            "likes": 19,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -49,9 +98,30 @@
         "request_id": "fbbeb93775ed46c592ee60586f65bf80",
         "job_id": "fe349901766e49318ad4518be3eb024a",
         "failed": [],
-        "at": "2026-11-19T11:51:49+00:00"
+        "at": "2026-11-19T11:51:49+00:00",
+        "stats": {
+          "instagram": {
+            "views": 147,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 3,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
-    ]
+    ],
+    "stats": {
+      "views": 1331,
+      "likes": 21,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
+    }
   },
   {
     "date": "2026-11-19",
@@ -67,7 +137,21 @@
         "request_id": "383daa5b4fe24bb58927481c56195cf5",
         "job_id": "bc6b308621364e518c5e23fbea57a459",
         "failed": [],
-        "at": "2026-11-19T12:01:02+00:00"
+        "at": "2026-11-19T12:01:02+00:00",
+        "stats": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 179,
+            "likes": 7,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -76,7 +160,21 @@
         "request_id": "4cdc6bceb4b046bc9ab554edc7306f95",
         "job_id": "4784c81c51e5430db59e406b7c36ef17",
         "failed": [],
-        "at": "2026-11-19T14:52:06+00:00"
+        "at": "2026-11-19T14:52:06+00:00",
+        "stats": {
+          "instagram": {
+            "views": 129,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 29,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -86,6 +184,13 @@
       "cover": "https://covers.openlibrary.org/b/id/2269878-M.jpg",
       "isbn": "9788426411792",
       "pitch": "Un clásico para recorrer la historia del cine desde sus primeros fotogramas. Te engancha."
+    },
+    "stats": {
+      "views": 337,
+      "likes": 10,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
