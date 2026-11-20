@@ -310,8 +310,17 @@ def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
     """Estadísticas de una publicación (todas sus redes): {"instagram": {"views": .., ...}, ...}."""
     headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
     r = requests.get(f"{API}/uploadposts/post-analytics/{request_id}", headers=headers, timeout=60)
-    if show_raw:
-        print("  respuesta de ejemplo:", r.status_code, r.text[:1500])
+    if show_raw:  # estructura de la respuesta (sin los textos largos), para revisar de dónde sale cada cifra
+        try:
+            def slim(o):
+                if isinstance(o, dict):
+                    return {k: slim(v) for k, v in o.items() if not (isinstance(v, str) and len(v) > 60)}
+                if isinstance(o, list):
+                    return [slim(x) for x in o[:3]]
+                return o
+            print("  respuesta de ejemplo:", r.status_code, json.dumps(slim(r.json()), ensure_ascii=False)[:6000])
+        except ValueError:
+            print("  respuesta de ejemplo:", r.status_code, r.text[:1500])
     if r.status_code >= 400:
         return None
     data = r.json()

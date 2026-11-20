@@ -287,12 +287,25 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     return video, series, part
 
 
+def _platforms_for(cfg: dict, slot) -> list[str]:
+    """Redes de la marca para un vídeo; TikTok se salta si está en pausa (`tiktok_paused_until`) ese día."""
+    ch = cfg["channel"]
+    every = ch.setdefault("_all_platforms", list(ch["platforms"]))
+    until = ch.get("tiktok_paused_until")
+    tz = ZoneInfo(cfg["publish"].get("timezone", "Europe/Madrid"))
+    day = (slot or datetime.now(timezone.utc)).astimezone(tz).date()
+    if until and day <= date.fromisoformat(str(until)):
+        return [p for p in every if p != "tiktok"]
+    return every
+
+
 def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, part, slot) -> bool:
     from .publish import failed_platforms, publish
 
     ch = cfg["channel"]
     n = len(series.parts)
     when = f"programado para {slot:%d/%m %H:%M}" if slot else "ahora"
+    ch["platforms"] = _platforms_for(cfg, slot)
     print(f"5/5 Publicando en {ch['profile']} ({', '.join(ch['platforms'])}) · {when}")
     key = f"{ch['id']}-{zlib.crc32((series.series_title + series.topic).encode())}-{part.part_number}"
     if slot:
