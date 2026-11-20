@@ -214,7 +214,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 992,
+            "views": 1007,
             "likes": 15,
             "comments": 0,
             "shares": 0
@@ -254,7 +254,7 @@
       "pitch": "Una investigación a fondo sobre uno de los grandes misterios sin resolver de nuestra historia."
     },
     "stats": {
-      "views": 8267,
+      "views": 8282,
       "likes": 119,
       "comments": 2,
       "shares": 0,
@@ -284,8 +284,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 857,
-            "likes": 24,
+            "views": 1121,
+            "likes": 22,
             "comments": 1,
             "shares": 0
           }
@@ -307,7 +307,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 569,
+            "views": 573,
             "likes": 20,
             "comments": 0,
             "shares": 0
@@ -316,8 +316,8 @@
       }
     ],
     "stats": {
-      "views": 7700,
-      "likes": 134,
+      "views": 7968,
+      "likes": 132,
       "comments": 3,
       "shares": 0,
       "updated": "2026-11-20"
@@ -346,8 +346,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 224,
-            "likes": 8,
+            "views": 266,
+            "likes": 10,
             "comments": 0,
             "shares": 0
           }
@@ -360,7 +360,27 @@
         "request_id": "70ff2a1f1e954510acfb274789f67b1f",
         "job_id": "102d9d5090b74af0a9120614de6d4dae",
         "failed": [],
-        "at": "2026-11-19T21:19:01+00:00"
+        "at": "2026-11-19T21:19:01+00:00",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 440,
+            "likes": 14,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 746,
+            "likes": 6,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -370,9 +390,9 @@
       "pitch": "Un error judicial tan estremecedor que todavía hoy cuesta creer que ocurriera de verdad."
     },
     "stats": {
-      "views": 3361,
-      "likes": 53,
-      "comments": 1,
+      "views": 7726,
+      "likes": 120,
+      "comments": 2,
       "shares": 0,
       "updated": "2026-11-20"
     }
