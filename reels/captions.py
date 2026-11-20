@@ -57,8 +57,10 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
 
 class CaptionRenderer:
     def __init__(self, width: int, height: int, accent: str, hook: str, hook_seconds: float = 2.8,
-                 badge: str = "", end_card: str = "", end_start: float | None = None, caption_y: float = 0.64):
+                 badge: str = "", end_card: str = "", end_start: float | None = None, caption_y: float = 0.64,
+                 stamps: list[tuple[float, float, str]] | None = None):
         self.w, self.h = width, height
+        self.stamps = [(a, b, t.upper().strip()) for a, b, t in (stamps or []) if t and t.strip()]
         self.caption_y = caption_y
         self.accent = accent
         self.hook = hook.upper()
@@ -80,10 +82,30 @@ class CaptionRenderer:
             tw = d.textlength(line, font=font)
             d.text(((self.w - tw) / 2, top + pad + k * lh), line, font=font, fill=color)
 
+    def _stamp(self, d: ImageDraw.ImageDraw, text: str, slide: float) -> None:
+        """Rótulo de dato (fecha, lugar, cifra): caja oscura con una franja del color de la marca, arriba a la izquierda."""
+        size = int(self.w * 0.062)
+        font = _font(size)
+        while d.textlength(text, font=font) > self.w * 0.8 and size > 30:
+            size -= 3
+            font = _font(size)
+        tw = d.textlength(text, font=font)
+        pad = int(size * 0.32)
+        bar = int(size * 0.22)
+        x0 = int(self.w * 0.06 - slide * self.w * 0.12)
+        y0 = int(self.h * 0.215)
+        h = int(size * 1.25) + pad
+        d.rounded_rectangle([x0, y0, x0 + bar + pad * 2 + tw, y0 + h], radius=int(size * 0.18), fill=(10, 10, 14, 215))
+        d.rectangle([x0, y0, x0 + bar, y0 + h], fill=self.accent)
+        d.text((x0 + bar + pad, y0 + pad * 0.55), text, font=font, fill="white")
+
     def _frame(self, words: list[Word], group: list[int] | None, active: int | None, show_hook: bool,
-               show_end: bool = False, pop: bool = False) -> Image.Image:
+               show_end: bool = False, pop: bool = False, stamp: str | None = None,
+               stamp_slide: float = 0.0) -> Image.Image:
         img = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
+        if stamp and not show_hook and not show_end:
+            self._stamp(d, stamp, stamp_slide)
 
         if self.badge:
             self._box(d, self.badge, int(self.w * 0.045), int(self.h * 0.085), (0, 0, 0, 170), self.accent)
@@ -142,8 +164,10 @@ class CaptionRenderer:
 
         end_start = self.end_start if self.end_card and self.end_start is not None else total
         POP = 0.09  # cada palabra entra un poco más grande y "salta" a su tamaño
+        SLIDE = 0.12  # el rótulo entra deslizándose
         cuts = sorted({0.0, total, self.hook_seconds, end_start, *[t for s, e, _ in events for t in (s, e)],
-                       *[s + POP for s, e, _ in events if e - s > POP * 1.5]})
+                       *[s + POP for s, e, _ in events if e - s > POP * 1.5],
+                       *[t for a, b, _ in self.stamps for t in (a, a + SLIDE / 2, a + SLIDE, b)]})
         cuts = [c for c in cuts if 0 <= c <= total]
 
         cap_dir = workdir / "captions"
@@ -158,11 +182,15 @@ class CaptionRenderer:
             active = ev[2] if ev else None
             show_end = mid >= end_start
             pop = bool(ev) and (mid - ev[0]) < POP and (ev[1] - ev[0]) > POP * 1.5
-            key = (None if show_end else active, mid < self.hook_seconds, show_end, pop and not show_end)
+            st = next(((a, t) for a, b, t in self.stamps if a <= mid < b), None)
+            slide = round(max(0.0, 1 - (mid - st[0]) / SLIDE), 2) if st else 0.0
+            key = (None if show_end else active, mid < self.hook_seconds, show_end, pop and not show_end,
+                   st[1] if st else None, slide)
             if key not in cache:
                 group = group_of[active] if active is not None and not show_end else None
                 path = cap_dir / f"c{len(cache):04d}.png"
-                self._frame(words, group, key[0], key[1], show_end, pop=key[3]).save(path, optimize=True)
+                self._frame(words, group, key[0], key[1], show_end, pop=key[3], stamp=key[4],
+                            stamp_slide=key[5]).save(path, optimize=True)
                 cache[key] = path
             if entries and entries[-1][0] == cache[key]:
                 entries[-1] = (cache[key], entries[-1][1] + (b - a))

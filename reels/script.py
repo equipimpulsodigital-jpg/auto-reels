@@ -54,7 +54,7 @@ class Character(BaseModel):
 class Block(BaseModel):
     label: str = Field(description="Nombre del tramo: GANCHO, CONTEXTO, TENSIÓN, GIRO, CLIFFHANGER...")
     speaker: str = Field(description="'narrador' o el id de un personaje que dice esta frase en pantalla.")
-    narration: str = Field(description="Frase que se oye en este plano (5-9 palabras): voz en off del narrador o diálogo del personaje.")
+    narration: str = Field(description="Frase que se oye en este plano (4-8 palabras): voz en off del narrador o diálogo del personaje.")
     location: Literal[tuple(LOCATIONS)]
     framing: Literal[tuple(K.FRAMINGS)]
     cast: List[str] = Field(default_factory=list, description="Ids de los personajes que salen en el plano (el que habla primero).")
@@ -67,6 +67,9 @@ class Block(BaseModel):
     walk: bool = False
     camera: Literal[tuple(K.CAMERAS)] = "push_in"
     sfx: List[Literal[tuple(K.SFX)]] = Field(default_factory=list, description="Efectos extra al empezar el plano.")
+    on_screen: Optional[str] = Field(default=None, description=(
+        "Rótulo corto en pantalla (máx. 24 caracteres) con el dato duro de este plano: fecha, lugar, cifra o "
+        "nombre (p. ej. «AGOSTO DE 1897», «12 MUERTOS», «EL 80 % LO HACE»). En 2-4 bloques por parte; null en el resto."))
     emphasis: Optional[str] = Field(default=None, description=(
         "UNA palabra de `narration` (copiada tal cual) que es el golpe de la frase: sale enorme en pantalla con un "
         "golpe de zoom y de sonido. Úsala en 4-6 bloques por parte, en las palabras más impactantes; null en el resto."))
@@ -109,6 +112,15 @@ class Series(BaseModel):
     year: str
     place: str
     topic: str = Field(description="Resumen del tema en una línea (para no repetirlo en el futuro).")
+    angle: str = Field(default="", description=(
+        "PLAN (escríbelo antes que nada): el ángulo que hace que esta historia enganche, en una frase: qué tiene de "
+        "sorprendente, injusto, absurdo o útil y qué está en juego."))
+    open_question: str = Field(default="", description=(
+        "PLAN: la pregunta que el espectador se hace en el segundo 3 y que no se responde hasta el final."))
+    payoff: str = Field(default="", description=(
+        "PLAN: el dato, giro o consejo más potente (y cierto) de la historia. Se guarda para el final de la última parte."))
+    beats: List[str] = Field(default_factory=list, description=(
+        "PLAN: escaleta de 6-9 pasos (una frase cada uno) de principio a fin, con los re-ganchos marcados."))
     era: Literal[K.ERAS] = Field(description="Época de la historia (cambia detalles de los escenarios).")
     characters: List[Character] = Field(description="Personajes (2-5): los que hablan y los que salen en plano.")
     historical_notes: str = Field(description="Fuentes o matices: qué está documentado y qué es incierto.")
@@ -152,10 +164,17 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
         "Historias ya publicadas (no repitas ninguna):\n"
         + ("\n".join(f"- {t}" for t in done) if done else "- (ninguna todavía)")
     )
-    if _use_claude_code(cfg):
-        series = _claude_code(cfg, _system_prompt(cfg), user)
-    else:
-        series = _api(cfg, _system_prompt(cfg), user)
+    write = _claude_code if _use_claude_code(cfg) else _api
+    series = write(cfg, _system_prompt(cfg), user)
+    longest = max(sum(len(b.narration.split()) for b in p.blocks) for p in series.parts)
+    if longest > 120:  # se ha pasado de largo: un vídeo de 55 s se ve entero mucho menos que uno de 40 s
+        print(f"  guion demasiado largo ({longest} palabras en una parte): se pide otra versión más corta")
+        try:
+            series = write(cfg, _system_prompt(cfg), user + (
+                f"\n\nIMPORTANTE: cada parte debe tener entre 85 y 105 palabras en total (un intento anterior tenía "
+                f"{longest}). Frases más cortas y menos bloques de contexto; el gancho y el final, intactos."))
+        except Exception as e:  # si falla, mejor un vídeo algo largo que ninguno
+            print(f"  no se pudo acortar ({e}); se usa la primera versión")
     series.format = fmt
     series.parts = series.parts[: _max_parts(cfg)]
     for i, p in enumerate(series.parts, 1):
@@ -169,6 +188,9 @@ def _schema() -> dict:
     part = schema["$defs"]["Part"]
     part["required"] = sorted(set(part.get("required", [])) | {"hook_candidates"})
     part["properties"]["hook_candidates"].update(minItems=5, maxItems=5)
+    # la planificación va antes que el guion y es obligatoria: obliga a pensar la historia antes de escribirla
+    schema["required"] = sorted(set(schema.get("required", [])) | {"angle", "open_question", "payoff", "beats"})
+    schema["properties"]["beats"].update(minItems=6, maxItems=9)
     return schema
 
 

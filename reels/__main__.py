@@ -63,7 +63,10 @@ def write_guion(cfg, path, series, part, durations) -> None:
         "## 1. Ficha del episodio",
         f"- **Serie:** {series.series_title}", f"- **Parte:** {part.part_number}/{n}",
         f"- **Formato:** {fmt}", f"- **Año y lugar:** {series.year} · {series.place}",
-        f"- **Notas históricas:** {series.historical_notes}", "",
+        f"- **Notas históricas:** {series.historical_notes}",
+        f"- **Ángulo:** {series.angle}", f"- **Pregunta abierta:** {series.open_question}",
+        f"- **Giro final:** {series.payoff}",
+        *([f"- **Escaleta:**"] + [f"  {k}. {s}" for k, s in enumerate(series.beats, 1)] if series.beats else []), "",
         f"## 2. Reparto (época: {series.era})",
         *[f"- **{c.name}** ({c.voice}): " + ", ".join(f"{k}={v}" for k, v in c.look.model_dump().items() if v not in (None, False, "ninguno", "ninguna"))
           for c in series.characters], "",
@@ -76,6 +79,7 @@ def write_guion(cfg, path, series, part, durations) -> None:
                 f"- *{who}:* \"{b.narration}\"",
                 f"- *Plano:* {b.location} · {b.framing} · {b.mood}" + (f" · suceso: {b.event}" if b.event else "")
                 + (f" · objeto: {b.prop}" if b.framing == "objeto" else "") + f" · cámara: {b.camera}",
+                *([f"- *Rótulo:* {b.on_screen}"] if b.on_screen else []),
                 f"- *Animación:* {b.visual_direction} (gesto: {b.gesture}, emoción: {b.emotion})", ""]
         t += d
     out += ["## 4. Cierre / Gancho para la siguiente parte", part.cliffhanger, ""]
@@ -98,6 +102,17 @@ def _mark_emphasis(words, blocks) -> None:
             if w.scene == i and _norm(w.text) == target:
                 w.emph = True
                 break
+
+
+def _stamps(blocks, durations) -> list[tuple[float, float, str]]:
+    """Rótulos de datos (fecha, lugar, cifra) que pidió el guionista, durante su plano."""
+    out, t = [], 0.0
+    for b, d in zip(blocks, durations):
+        text = (getattr(b, "on_screen", None) or "").strip()
+        if text:
+            out.append((t + 0.08, t + max(d - 0.05, 1.4), text[:28]))
+        t += d
+    return out
 
 
 def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
@@ -173,7 +188,8 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     end_card = "Sigue en la parte 2" if badge and part.part_number < n else cfg["channel"].get("end_card", "Sígueme para más")
     captions = CaptionRenderer(v["width"], v["height"], cfg["channel"].get("accent_color", "#E2A84B"), part.hook_title,
                                badge=badge, end_card=end_card, end_start=total - tail + 0.2,
-                               caption_y=cfg.get("animation", {}).get("caption_y", 0.86))
+                               caption_y=cfg.get("animation", {}).get("caption_y", 0.86),
+                               stamps=_stamps(part.blocks, durations))
     cap_list = captions.render(words, total, workdir)
     video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
                      v.get("music_volume", 0.35), 0.0, sfx=sfx,

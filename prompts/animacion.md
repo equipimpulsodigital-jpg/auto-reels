@@ -1,3 +1,16 @@
+### LA HISTORIA: PIÉNSALA ANTES DE ESCRIBIRLA
+Rellena primero el PLAN (`angle`, `open_question`, `payoff`, `beats`) y después escribe el guion siguiéndolo. El plan sirve para elegir lo mejor, no para meterlo todo: la parte sigue teniendo el límite de palabras del canal.
+- **Elige el tema por lo que provoca, no por lo que enseña:** algo que haga decir «¿en serio?», «eso me pasa a mí» o «no puede ser». Entre varios temas posibles, quédate con el que tenga el detalle más concreto y sorprendente; descarta lo que ya sale en todos los vídeos del nicho o tiene un ángulo genérico.
+- **Una persona en el centro:** alguien concreto con un objetivo y algo que perder (nombre, edad u oficio, un deseo). El espectador sigue a una persona, no a un tema. En los canales de consejos, esa persona es alguien como el espectador en una situación reconocible.
+- **Una pregunta abierta** (`open_question`) que se planta en los 3 primeros segundos y se responde al final. Todo lo de en medio la alimenta.
+- **El `payoff` se guarda:** el dato o giro más fuerte va al final (de la última parte). Nunca lo gastes en el gancho ni en la mitad.
+- **Escalada:** cada paso de la escaleta es más grave, más raro o más personal que el anterior. Si un paso no sube la tensión ni aporta información nueva, sobra.
+- **Pocos nombres:** como mucho 2–3 nombres propios por parte; el resto, «el cochero», «su mujer», «el médico». Cada nombre nuevo cuesta atención.
+- **Concreto y sensorial:** una hora, un objeto, un olor, una cifra exacta. Un detalle concreto vale más que tres adjetivos.
+- **Final que se queda:** la última frase es la que se comenta. En historias, una ironía, una consecuencia inesperada o un dato que lo cambia todo. En consejos, una frase corta que se pueda repetir o guardar («Hazlo esta semana y fíjate en lo que pasa.»).
+- **Rótulos (`on_screen`):** pon en pantalla las fechas, lugares y cifras clave (2–4 por parte) para que la voz pueda ir a la emoción y no tenga que cargar con todos los datos.
+- **Escenario coherente:** cada `location` tiene que ser el sitio real de la acción (un balneario o un jardín es `campo` o `palacio`, nunca `salon` si pasa al aire libre); si ningún escenario encaja exactamente, elige el más parecido visualmente.
+
 ### EL GANCHO (LO MÁS IMPORTANTE DEL VÍDEO)
 En redes la gente decide en 1–2 segundos si sigue mirando. La primera frase (primer bloque, siempre del **narrador** o de un personaje en plena tensión) tiene que frenar el dedo.
 - **Corta y potente:** 6–12 palabras, que se diga en menos de 4 segundos. La palabra más fuerte (bomba, cadáver, nadie, desaparecieron, traición…) en las primeras palabras.
@@ -58,7 +71,7 @@ El canal es una **serie de dibujos animados**: caricaturas 2D que se mueven, hab
 - Las mujeres llevan `female: true`.
 
 ### 4. PLANIFICACIÓN DE LA ANIMACIÓN
-- **Muchos planos cortos:** cada bloque es un plano de **2–3 segundos** (5–9 palabras), y cada parte tiene **entre 15 y 18 bloques**. Cada plano muestra la acción concreta de esa frase y es distinto del anterior: cambia de encuadre (general, personaje, dos, objeto), de lugar o de cámara en cada corte. Nunca dos planos seguidos iguales.
+- **Muchos planos cortos:** cada bloque es un plano de **2–3 segundos** (4–8 palabras, ~6 de media), y cada parte tiene **entre 14 y 17 bloques**. **El límite de palabras por parte que marca el canal es obligatorio** (cuéntalas antes de terminar): si te pasas, recorta frases o quita bloques de contexto, nunca el gancho ni el final. Cada plano muestra la acción concreta de esa frase y es distinto del anterior: cambia de encuadre (general, personaje, dos, objeto), de lugar o de cámara en cada corte. Nunca dos planos seguidos iguales.
 - **Narrador:** alterna planos `general` del lugar (con personajes de cuerpo entero en `cast`, caminando con `walk` cuando se mueven), planos `objeto` (la carta, el arma, el mapa, el oro...) y `event` para la acción (explosiones, disparos, incendios, multitudes...). Usa el suceso o el objeto que mejor ilustre la frase.
 - **Diálogo:** `framing: personaje` con `cast: [quien_habla, quien_escucha]` para plano/contraplano (el primer plano del que habla con la nuca del otro), o `dos` para verlos juntos. Elige `gesture` y `emotion` acordes a la frase y `listener_emotion` para la reacción del otro.
 - Mantén el **mismo lugar** durante un intercambio de diálogo; cambia de lugar solo cuando la historia avanza. Usa `mood` (día, atardecer, noche, tormenta) para el ambiente y la tensión.

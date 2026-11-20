@@ -86,7 +86,7 @@ channels:
     compilation_tags: [historiadeespaña, historia, españa, crimenesreales, recopilacion]
     hashtag: "#biencontadas"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-AlvaroNeural, rate: "+18%", pitch: "-4Hz"}   # voz del narrador de la marca
-    music: [misterio, intriga, epica, suspense, niebla]
+    music: [epica, intriga, conspiracion, batalla, misterio, suspense]
     end_card: "Sígueme para más historias"
     tagline: "Historias reales de España, contadas en dibujos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
@@ -96,6 +96,8 @@ channels:
     formats:
       punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
       crimen_historico: "Crimen, conspiración o suceso oscuro real de la historia de España"
+      personaje_olvidado: "Personaje olvidado: una persona real de la historia de España que hizo algo increíble y casi nadie conoce"
+      error_historico: "El error que lo cambió todo: una equivocación, malentendido o casualidad real con consecuencias enormes"
   elanecdotario:
     name: Archivo del Misterio
     enabled: true
@@ -111,7 +113,7 @@ channels:
     compilation_tags: [misterio, casossinresolver, enigmas, misterios, recopilacion]
     hashtag: "#archivodelmisterio"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-AlvaroNeural, rate: "+14%", pitch: "-10Hz"}   # voz del narrador de la marca
-    music: [misterio, niebla, suspense, intriga]
+    music: [misterio, niebla, suspense, expediente, intriga]
     end_card: "Sígueme para más misterios"
     tagline: "Misterios reales que nadie ha sabido explicar."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
@@ -121,6 +123,8 @@ channels:
     formats:
       caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
       enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"
+      ultimo_rastro: "Lo último que se supo: la última carta, llamada, foto o testimonio antes de una desaparición o tragedia real"
+      caso_con_giro: "Caso con giro: un misterio real que parecía imposible hasta que alguien descubrió la verdad"
   # Cada canal puede tener sus propias horas con `slots` (si no, usa publish.slots).
   conexionconchispa:
     name: Conexión con Chispa
@@ -138,7 +142,7 @@ channels:
     compilation_tags: [ligar, citas, romperelhielo, habilidadessociales, recopilacion]
     hashtag: "#conexionconchispa"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-XimenaNeural, rate: "+18%", pitch: "+0Hz"}   # voz del narrador de la marca
-    music: [chispa, cita]
+    music: [chispa, cita, verano]
     end_card: "Sígueme para más trucos"
     tagline: "Trucos para romper el hielo y conectar con la gente."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
@@ -148,6 +152,8 @@ channels:
     formats:
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
       psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
+      error_comun: "El error que casi todos cometen al ligar, en una cita o por mensaje, y la frase o gesto concreto que lo arregla"
+      senales: "Señales: cómo saber si le gustas (o no) por lo que hace, con una situación real y qué hacer en cada caso"
   lacabezapordentro:
     name: La Cabeza por Dentro
     enabled: true
@@ -164,7 +170,7 @@ channels:
     compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
     hashtag: "#lacabezapordentro"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-ElviraNeural, rate: "+14%", pitch: "-2Hz"}   # voz del narrador de la marca
-    music: [calma, pensar]
+    music: [calma, pensar, mente]
     end_card: "Sígueme para entenderte mejor"
     tagline: "Psicología cotidiana: por qué hacemos lo que hacemos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
@@ -173,6 +179,8 @@ channels:
     formats:
       por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
       como_salir: "Cómo salir de ahí: un problema cotidiano y una herramienta práctica con respaldo"
+      experimento: "Un experimento real de psicología contado como historia: qué hicieron, qué pasó y qué dice de ti"
+      trampa_mental: "La trampa de tu cerebro: un sesgo que te afecta a diario, con una escena reconocible y cómo esquivarlo"
   ysiciencia:
     name: ¿Y si…?
     enabled: true
@@ -188,7 +196,7 @@ channels:
     compilation_tags: [ciencia, quepasariasi, espacio, curiosidades, recopilacion]
     hashtag: "#ysiciencia"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-AlvaroNeural, rate: "+20%", pitch: "+4Hz"}   # voz del narrador de la marca
-    music: [cosmos, experimento, epica]
+    music: [cosmos, experimento, orbita, epica]
     end_card: "Sígueme para más «¿y si…?»"
     tagline: "Escenarios imposibles explicados con ciencia."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
@@ -198,3 +206,5 @@ channels:
     formats:
       y_si_planeta: "¿Y si... el planeta? La Tierra, el espacio o la naturaleza en un escenario imposible"
       y_si_nosotros: "¿Y si... nosotros? El cuerpo humano, la tecnología o la sociedad en un escenario imposible"
+      cuenta_atras: "¿Y si...? contado como cuenta atrás (segundo a segundo, día a día o año a año), cada paso peor que el anterior"
+      y_si_historia: "¿Y si... la historia de la ciencia hubiera sido distinta? Un cambio en un descubrimiento real y sus consecuencias"
