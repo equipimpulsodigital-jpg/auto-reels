@@ -20,7 +20,21 @@
         "request_id": "b7d47a092028492fa8f522d641448532",
         "failed": [],
         "at": "2026-11-18T03:58:20+00:00",
-        "job_id": "317486a8ddb24f6b853dd421b042cf9a"
+        "job_id": "317486a8ddb24f6b853dd421b042cf9a",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1133,
+            "likes": 24,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -30,6 +44,13 @@
       "cover": "https://covers.openlibrary.org/b/id/7427954-M.jpg",
       "isbn": "9788498929065",
       "pitch": "Lo que pasó de verdad en Palomares en 1966, contado con un detalle que pocos conocen."
+    },
+    "stats": {
+      "views": 4270,
+      "likes": 69,
+      "comments": 1,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -46,7 +67,21 @@
         "request_id": "2c72bb43e09b4ad2b6d42c1abe5f5a89",
         "failed": [],
         "at": "2026-11-18T04:07:07+00:00",
-        "job_id": "deba96863dd4455b87023d43d8f1399d"
+        "job_id": "deba96863dd4455b87023d43d8f1399d",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 662,
+            "likes": 10,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -55,7 +90,21 @@
         "request_id": "e935bac722bc4927ba937f0cf42efaec",
         "failed": [],
         "at": "2026-11-18T04:13:42+00:00",
-        "job_id": "3a0385adeead4268b9a6084639d60492"
+        "job_id": "3a0385adeead4268b9a6084639d60492",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 454,
+            "likes": 8,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -65,6 +114,13 @@
       "cover": "https://covers.openlibrary.org/b/id/10495801-M.jpg",
       "isbn": "9788496080010",
       "pitch": "Galdós sigue de cerca el crimen que tuvo en vilo a todo Madrid. Imprescindible."
+    },
+    "stats": {
+      "views": 7390,
+      "likes": 108,
+      "comments": 2,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -81,7 +137,21 @@
         "request_id": "d3bcc9943611483787e8caeef2160942",
         "failed": [],
         "at": "2026-11-18T04:21:20+00:00",
-        "job_id": "1e12abbe1fc3424dab40746bda8e110e"
+        "job_id": "1e12abbe1fc3424dab40746bda8e110e",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 228,
+            "likes": 5,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -90,7 +160,21 @@
         "request_id": "6132c54cdfb646608ef5bb4c14c98fca",
         "job_id": "24ad782ec2754dab9dfc8aecf8ac444e",
         "failed": [],
-        "at": "2026-11-19T10:53:40+00:00"
+        "at": "2026-11-19T10:53:40+00:00",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1300,
+            "likes": 24,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -98,6 +182,13 @@
       "author": "Eduard Masjuan",
       "looked_up": true,
       "pitch": "Quién era de verdad Mateo Morral, el hombre detrás de la bomba de la calle Mayor."
+    },
+    "stats": {
+      "views": 7802,
+      "likes": 119,
+      "comments": 2,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -114,7 +205,21 @@
         "request_id": "3aa6aa9fb4b64d51a5a9aa1ff3758839",
         "job_id": "1829452c0735470e86c8cbcc153fc792",
         "failed": [],
-        "at": "2026-11-19T11:02:55+00:00"
+        "at": "2026-11-19T11:02:55+00:00",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 992,
+            "likes": 15,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -123,7 +228,21 @@
         "request_id": "af546cf40280491db763552bc1435b0f",
         "job_id": "9573224cfc3f4660a525e987dbfd14cc",
         "failed": [],
-        "at": "2026-11-19T11:07:42+00:00"
+        "at": "2026-11-19T11:07:42+00:00",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1001,
+            "likes": 14,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -133,6 +252,13 @@
       "cover": "https://covers.openlibrary.org/b/id/7315364-M.jpg",
       "isbn": "9788408124542",
       "pitch": "Una investigación a fondo sobre uno de los grandes misterios sin resolver de nuestra historia."
+    },
+    "stats": {
+      "views": 8267,
+      "likes": 119,
+      "comments": 2,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -149,7 +275,21 @@
         "request_id": "74eadf6ef6584f9381f50accfd8db6c0",
         "job_id": "6f5c62633c68438fa54a504c559c5ef3",
         "failed": [],
-        "at": "2026-11-19T11:16:38+00:00"
+        "at": "2026-11-19T11:16:38+00:00",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 857,
+            "likes": 24,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -158,9 +298,30 @@
         "request_id": "a3e345cd815f4ef3af9ed1dd849ac304",
         "job_id": "64ebfc9c66ea4b048ea50bd13d428a46",
         "failed": [],
-        "at": "2026-11-19T11:23:35+00:00"
+        "at": "2026-11-19T11:23:35+00:00",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 569,
+            "likes": 20,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
-    ]
+    ],
+    "stats": {
+      "views": 7700,
+      "likes": 134,
+      "comments": 3,
+      "shares": 0,
+      "updated": "2026-11-20"
+    }
   },
   {
     "date": "2026-11-19",
@@ -176,7 +337,21 @@
         "request_id": "f27f97f2f7094011ad5782723b76e432",
         "job_id": "7293e2f5fb454351afe72c726e23a82b",
         "failed": [],
-        "at": "2026-11-19T14:48:02+00:00"
+        "at": "2026-11-19T14:48:02+00:00",
+        "stats": {
+          "instagram": {
+            "views": 3137,
+            "likes": 45,
+            "comments": 1,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 224,
+            "likes": 8,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -193,6 +368,13 @@
       "author": "Lola Salvador Maldonado",
       "looked_up": true,
       "pitch": "Un error judicial tan estremecedor que todavía hoy cuesta creer que ocurriera de verdad."
+    },
+    "stats": {
+      "views": 3361,
+      "likes": 53,
+      "comments": 1,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
