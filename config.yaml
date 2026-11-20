@@ -93,6 +93,7 @@ channels:
       youtube: https://www.youtube.com/@historiasbiencontadas-o4l
       instagram: https://www.instagram.com/bien_contadas/
       tiktok: https://www.tiktok.com/@historias.bien.co86
+    interest_queries: ["historia de España", "hallazgo arqueológico España", "crimen histórico", "serie basada en hechos reales"]   # noticias de la semana para inspirar temas
     formats:
       punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
       crimen_historico: "Crimen, conspiración o suceso oscuro real de la historia de España"
@@ -122,6 +123,7 @@ channels:
       youtube: https://www.youtube.com/@elanecdotarioes
       instagram: https://www.instagram.com/elanecdotarioes/
       tiktok: https://www.tiktok.com/@elanecdotarioes
+    interest_queries: ["misterio sin resolver", "desaparición misteriosa", "caso sin resolver", "enigma historia"]   # noticias de la semana para inspirar temas
     formats:
       caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
       enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"
@@ -151,6 +153,7 @@ channels:
       youtube: https://www.youtube.com/@conexionconchispa
       instagram: https://www.instagram.com/conexionconchispa/
       tiktok: https://www.tiktok.com/@tintaibericaes
+    interest_queries: ["citas pareja", "ligar aplicaciones", "relaciones estudio", "generación Z amor"]   # noticias de la semana para inspirar temas
     formats:
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
       psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
@@ -178,6 +181,7 @@ channels:
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@lacabezapordentro
       instagram: https://www.instagram.com/lacabezapordentro/
+    interest_queries: ["psicología estudio", "salud mental", "ansiedad estudio", "hábitos cerebro"]   # noticias de la semana para inspirar temas
     formats:
       por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
       como_salir: "Cómo salir de ahí: un problema cotidiano y una herramienta práctica con respaldo"
@@ -207,6 +211,7 @@ channels:
       youtube: https://www.youtube.com/@ysiciencia2
       instagram: https://www.instagram.com/ysiciencia2/
       tiktok: https://www.tiktok.com/@user5758110653335
+    interest_queries: ["descubrimiento científico", "NASA", "espacio asteroide", "ciencia estudio sorprendente"]   # noticias de la semana para inspirar temas
     formats:
       y_si_planeta: "¿Y si... el planeta? La Tierra, el espacio o la naturaleza en un escenario imposible"
       y_si_nosotros: "¿Y si... nosotros? El cuerpo humano, la tecnología o la sociedad en un escenario imposible"
