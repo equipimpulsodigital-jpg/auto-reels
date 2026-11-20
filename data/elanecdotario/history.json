@@ -19,10 +19,11 @@
             "views": 136,
             "likes": 1,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 9.0
           },
           "youtube": {
-            "views": 978,
+            "views": 979,
             "likes": 28,
             "comments": 0,
             "shares": 0
@@ -42,10 +43,11 @@
             "views": 114,
             "likes": 2,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 9.5
           },
           "youtube": {
-            "views": 103,
+            "views": 104,
             "likes": 3,
             "comments": 0,
             "shares": 0
@@ -54,10 +56,11 @@
       }
     ],
     "stats": {
-      "views": 1331,
+      "views": 1333,
       "likes": 34,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 1083,
       "updated": "2026-11-20"
     }
   },
@@ -81,7 +84,8 @@
             "views": 113,
             "likes": 1,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 9.5
           },
           "youtube": {
             "views": 1068,
@@ -104,7 +108,8 @@
             "views": 147,
             "likes": 1,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 9.6
           },
           "youtube": {
             "views": 3,
@@ -120,6 +125,7 @@
       "likes": 21,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 1071,
       "updated": "2026-11-20"
     }
   },
@@ -146,7 +152,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 179,
+            "views": 184,
             "likes": 7,
             "comments": 0,
             "shares": 0
@@ -166,10 +172,11 @@
             "views": 129,
             "likes": 0,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 13.4
           },
           "youtube": {
-            "views": 29,
+            "views": 32,
             "likes": 3,
             "comments": 0,
             "shares": 0
@@ -186,10 +193,11 @@
       "pitch": "Un clásico para recorrer la historia del cine desde sus primeros fotogramas. Te engancha."
     },
     "stats": {
-      "views": 337,
+      "views": 345,
       "likes": 10,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 216,
       "updated": "2026-11-20"
     }
   },
@@ -235,10 +243,39 @@
         "request_id": "22400211cf464d9792ec2521bd008470",
         "job_id": "6653b0b3aa654e419bbf7b5b1a303a29",
         "failed": [],
-        "at": "2026-11-20T12:49:45+00:00"
+        "at": "2026-11-20T12:49:45+00:00",
+        "stats": {
+          "instagram": {
+            "views": 103,
+            "likes": 2,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 7.6
+          },
+          "youtube": {
+            "views": 1079,
+            "likes": 18,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1182,
+      "likes": 20,
+      "comments": 1,
+      "shares": 0,
+      "youtube_views": 1079,
+      "updated": "2026-11-20"
+    }
   },
   {
     "date": "2026-11-20",
