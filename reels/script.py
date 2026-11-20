@@ -163,14 +163,15 @@ def _max_parts(cfg: dict) -> int:
     return int(cfg["channel"].get("max_parts") or cfg["series"].get("max_parts", 2))
 
 
-def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None = None) -> Series:
+def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None = None,
+                    max_parts: int | None = None) -> Series:
     fmt_name = cfg["channel"]["formats"][fmt]
     done = [h["topic"] for h in history[-80:]]
     user = (
         f"Fecha: {date.today().isoformat()}\n"
         f"Formato: {fmt_name} (en el campo `format` pon exactamente: {fmt})\n"
         f"Tema a desarrollar: {topic or 'propón tú uno potente, poco trillado y bien documentado'}\n"
-        f"Partes: máximo {_max_parts(cfg)}.\n\n"
+        f"Partes: máximo {max_parts or _max_parts(cfg)}.\n\n"
         "Historias ya publicadas (no repitas ninguna):\n"
         + ("\n".join(f"- {t}" for t in done) if done else "- (ninguna todavía)")
         + _performance(history)
@@ -188,7 +189,7 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
         except Exception as e:  # si falla, mejor un vídeo algo largo que ninguno
             print(f"  no se pudo acortar ({e}); se usa la primera versión")
     series.format = fmt
-    series.parts = series.parts[: _max_parts(cfg)]
+    series.parts = series.parts[: max_parts or _max_parts(cfg)]
     for i, p in enumerate(series.parts, 1):
         p.part_number = i
     return series

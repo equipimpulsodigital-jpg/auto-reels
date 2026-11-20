@@ -104,6 +104,24 @@ def _mark_emphasis(words, blocks) -> None:
                 break
 
 
+def _continuation_after(state: dict, history: list[dict], slot: datetime) -> bool:
+    """¿La siguiente parte pendiente es una continuación cuya parte anterior sale DESPUÉS de esta franja?
+    (pasa al rellenar tarde una franja que falló). Entonces esta franja necesita una historia suelta."""
+    if not state["queue"] or state["queue"][0]["part"] == 0:
+        return False
+    title = state["queue"][0]["series"].get("series_title")
+    prev = state["queue"][0]["part"]  # número de la parte anterior (part es el índice desde 0)
+    for h in reversed(history):
+        if h.get("series_title") == title:
+            for p in h.get("published_parts", []):
+                if p.get("part") == prev and p.get("slot") and datetime.fromisoformat(p["slot"]) > slot:
+                    print(f"  La parte {prev} de «{title}» sale el {datetime.fromisoformat(p['slot']):%d/%m %H:%M}: "
+                          "esta franja, anterior, lleva una historia suelta para no adelantar la continuación.")
+                    return True
+            return False
+    return False
+
+
 def update_stats(cfg: dict) -> None:
     """Consulta en Upload-Post las visualizaciones de lo publicado en los últimos 30 días y las guarda
     en el historial: así el guionista sabe qué historias han gustado más."""
@@ -174,14 +192,19 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
             args.format = args.format or old.get("format")
 
     # 1. Guion: siguiente parte pendiente o historia nueva (con todas sus partes de una vez)
-    if args.new or not state["queue"]:
+    single = getattr(args, "single", False)
+    if args.new or not state["queue"] or single:
         fmt = next_format(cfg, history, args.format)
-        print(f"1/5 Historia nueva · {fmt}" + (f" · tema: {args.topic}" if args.topic else ""))
-        series = generate_series(cfg, fmt, history, args.topic)
+        print(f"1/5 Historia nueva · {fmt}" + (f" · tema: {args.topic}" if args.topic else "")
+              + (" · de una sola parte (hueco antes de una parte 2 ya programada)" if single else ""))
+        series = generate_series(cfg, fmt, history, args.topic, max_parts=1 if single else None)
         history.append({"date": today, "format": series.format, "topic": series.topic,
                         "series_title": series.series_title, "parts": len(series.parts), "published_parts": [],
                         "book": series.book.model_dump() if series.book else None})
-        state["queue"] = [{"series": series.model_dump(), "part": i} for i in range(len(series.parts))]
+        items = [{"series": series.model_dump(), "part": i} for i in range(len(series.parts))]
+        # una historia suelta para un hueco va delante, sin perder las partes pendientes
+        state["queue"] = items + state["queue"] if single else items
+        args.single = False
         _save(cfg, "history.json", history)
         _save(cfg, "state.json", state)
         args.new, args.topic, args.format = False, None, None  # solo para la primera historia
@@ -417,6 +440,7 @@ def main() -> int:
     for slot in slots:
         print(f"\n--- Franja {slot:%d/%m %H:%M} ---")
         try:
+            args.single = _continuation_after(state, history, slot)
             video, series, part = make_episode(cfg, state, history, args, f"{slot:%Y%m%d_%H%M}")
             ok = publish_episode(cfg, state, history, video, series, part, slot)
         except LimitReached as e:
