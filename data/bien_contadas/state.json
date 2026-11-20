@@ -1,8 +1,850 @@
 {
-  "queue": [],
-  "last_published": "2026-11-19T21:19:01+00:00",
+  "queue": [
+    {
+      "series": {
+        "series_title": "El huésped de Santa Águeda: el asesinato de Cánovas del Castillo",
+        "format": "crimen_historico",
+        "year": "1897",
+        "place": "Balneario de Santa Águeda (Mondragón, Guipúzcoa), Barcelona, París y Vergara",
+        "topic": "Asesinato de Antonio Cánovas del Castillo por el anarquista Michele Angiolillo en el balneario de Santa Águeda (8-VIII-1897): nombre falso, venganza por las torturas de Montjuïc tras la bomba del Corpus de 1896, la posible influencia de Betances en París y el garrote en Vergara al grito de «Germinal».",
+        "era": "1800",
+        "characters": [
+          {
+            "id": "canovas",
+            "name": "Cánovas",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "clara",
+              "hair_color": "canoso",
+              "hair_style": "corto",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "bigote",
+              "beard_color": "canoso",
+              "outfit": "levita",
+              "outfit_color": "negro",
+              "accent_color": "blanco",
+              "pants_color": "gris",
+              "nose": "aguileña",
+              "jaw": "redonda",
+              "eyes": "marrones",
+              "glasses": true
+            }
+          },
+          {
+            "id": "joaquina",
+            "name": "Joaquina de Osma",
+            "voice": "mujer",
+            "look": {
+              "female": true,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "negro",
+              "hair_style": "moño",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "ninguna",
+              "beard_color": null,
+              "outfit": "vestido",
+              "outfit_color": "granate",
+              "accent_color": "dorado",
+              "pants_color": "gris",
+              "nose": "pequeña",
+              "jaw": "fina",
+              "eyes": "negros",
+              "glasses": false
+            }
+          },
+          {
+            "id": "angiolillo",
+            "name": "Angiolillo",
+            "voice": "italiano",
+            "look": {
+              "female": false,
+              "age": "joven",
+              "skin": "media",
+              "hair_color": "negro",
+              "hair_style": "corto",
+              "hat": "bombin",
+              "hat_color": "negro",
+              "beard": "barba_corta",
+              "beard_color": "negro",
+              "outfit": "traje",
+              "outfit_color": "gris",
+              "accent_color": "negro",
+              "pants_color": "gris",
+              "nose": "gancho",
+              "jaw": "fina",
+              "eyes": "negros",
+              "glasses": false
+            }
+          },
+          {
+            "id": "betances",
+            "name": "Betances",
+            "voice": "latino",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "morena",
+              "hair_color": "blanco",
+              "hair_style": "corto",
+              "hat": "chistera",
+              "hat_color": "negro",
+              "beard": "barba",
+              "beard_color": "blanco",
+              "outfit": "levita",
+              "outfit_color": "marron",
+              "accent_color": "crema",
+              "pants_color": "negro",
+              "nose": "patata",
+              "jaw": "cuadrada",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          }
+        ],
+        "historical_notes": "Documentado: Antonio Cánovas del Castillo, presidente del Consejo de Ministros, fue asesinado el 8 de agosto de 1897 en el balneario de Santa Águeda (Mondragón, Guipúzcoa), donde descansaba con su esposa Joaquina de Osma. El autor, el anarquista italiano Michele Angiolillo, llevaba días alojado allí haciéndose pasar por el periodista «Emilio Rinaldini». Le disparó tres veces mientras leía en una galería. Angiolillo justificó el crimen como venganza por la represión y las torturas denunciadas en el castillo de Montjuïc tras la bomba lanzada contra la procesión del Corpus en la calle Canvis Nous de Barcelona (7-VI-1896, unos 12 muertos), por la que hubo cientos de detenidos y cinco fusilados en 1897. Un consejo de guerra lo condenó y murió a garrote vil el 20 de agosto de 1897 en la cárcel de Vergara; según las crónicas, su última palabra fue «Germinal». Incierto: su encuentro en París con el independentista puertorriqueño Ramón Emeterio Betances aparece en varios testimonios y estudios (p. ej. Frank Fernández), que afirman que Angiolillo pensaba atentar contra la reina regente o el rey niño y Betances le orientó hacia Cánovas; nunca se ha probado que le diera dinero. Los diálogos son recreaciones coherentes con los hechos, no citas literales.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_candidates": [
+              "Se registró con nombre falso. Dormía bajo el mismo techo que su víctima.",
+              "Tres disparos a un presidente. Y el asesino era un huésped educado.",
+              "Si hubieras veraneado en aquel balneario, habrías saludado al asesino.",
+              "El presidente levanta la vista del periódico. Hay un revólver.",
+              "El periodista italiano no existía. Nadie en el balneario lo comprobó."
+            ],
+            "hook_title": "¿QUIÉN DISPARA?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "El presidente levanta la vista del periódico. Hay un revólver.",
+                "location": "salon",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "pistola",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "revólver",
+                "visual_direction": "Primer plano de un revólver apuntando, con la galería del balneario desenfocada detrás."
+              },
+              {
+                "label": "SUBE LA APUESTA",
+                "speaker": "narrador",
+                "narration": "Y quien lo empuña lleva días alojado allí.",
+                "location": "salon",
+                "framing": "general",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Un joven bien vestido con bombín cruza el salón del balneario como un huésped más."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Agosto de 1897. Balneario de Santa Águeda, Guipúzcoa.",
+                "location": "campo",
+                "framing": "general",
+                "cast": [
+                  "canovas",
+                  "joaquina"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Paseo verde junto al balneario; Cánovas y su esposa caminan despacio del brazo."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Es Antonio Cánovas, presidente del Gobierno.",
+                "location": "campo",
+                "framing": "dos",
+                "cast": [
+                  "canovas",
+                  "joaquina"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "presidente",
+                "visual_direction": "Cánovas, con levita y quevedos, mira el horizonte junto a Joaquina."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "canovas",
+                "narration": "Aquí, por fin, nadie me habla de Cuba.",
+                "location": "campo",
+                "framing": "personaje",
+                "cast": [
+                  "canovas",
+                  "joaquina"
+                ],
+                "gesture": "shrug",
+                "emotion": "pensativo",
+                "listener_emotion": "triste",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Cánovas suspira, agotado por la guerra de Cuba."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "joaquina",
+                "narration": "Pues descansa, Antonio. Para eso hemos venido.",
+                "location": "campo",
+                "framing": "personaje",
+                "cast": [
+                  "joaquina",
+                  "canovas"
+                ],
+                "gesture": "chest",
+                "emotion": "contento",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Joaquina le sonríe y le aprieta el brazo."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Pero hay un huésped muy educado.",
+                "location": "salon",
+                "framing": "general",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": null,
+                "visual_direction": "Angiolillo saluda con el sombrero a otros huéspedes junto a la chimenea."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Firma como Emilio Rinaldini, periodista italiano.",
+                "location": "salon",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El libro de registro del balneario con el nombre falso recién escrito."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "angiolillo",
+                "narration": "Nadie desconfía de un periodista.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "idle",
+                "emotion": "burlon",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Angiolillo, solo junto a la ventana de noche, sonríe a medias."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Su verdadero nombre es Michele Angiolillo. Es anarquista.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "idle",
+                "emotion": "serio",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "anarquista",
+                "visual_direction": "El rostro de Angiolillo se endurece; la sonrisa desaparece."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "8 de agosto. Cánovas lee en la galería.",
+                "location": "salon",
+                "framing": "general",
+                "cast": [
+                  "canovas"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Cánovas sentado en un banco, absorto en el periódico."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Su mujer no está a su lado.",
+                "location": "salon",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "periodico",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El periódico abierto entre las manos de Cánovas; al fondo, un banco vacío."
+              },
+              {
+                "label": "CLÍMAX",
+                "speaker": "angiolillo",
+                "narration": "Ahora. No habrá otra ocasión.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "angiolillo",
+                  "canovas"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Angiolillo avanza por la galería con la mano en el bolsillo, detrás de Cánovas."
+              },
+              {
+                "label": "CLÍMAX",
+                "speaker": "narrador",
+                "narration": "Tres disparos rompen el silencio del balneario.",
+                "location": "salon",
+                "framing": "general",
+                "cast": [
+                  "angiolillo",
+                  "canovas"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": "disparos",
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [
+                  "boom"
+                ],
+                "emphasis": "Tres",
+                "visual_direction": "Fogonazos y humo de pólvora en la galería; el periódico cae al suelo."
+              },
+              {
+                "label": "GRITO",
+                "speaker": "joaquina",
+                "narration": "¡Asesino! ¡Antonio!",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "joaquina",
+                  "angiolillo"
+                ],
+                "gesture": "point",
+                "emotion": "asustado",
+                "listener_emotion": "serio",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Joaquina llega corriendo y señala al tirador, que no huye."
+              },
+              {
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Pero esa bala se fabricó en Barcelona.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": "Barcelona",
+                "visual_direction": "Calle oscura de Barcelona con humo a lo lejos; la cámara se aleja lentamente."
+              }
+            ],
+            "cliffhanger": "Cánovas cae tiroteado por un falso periodista y la parte termina revelando que el origen del crimen está en Barcelona, sin explicar todavía el motivo ni quién más pudo estar detrás.",
+            "caption": "El periodista italiano del balneario no existía. Y nadie lo comprobó.\nAgosto de 1897: Cánovas del Castillo descansa en Santa Águeda mientras un huésped educado espera su momento.\nParte 1/2\n¿Cómo crees que pudo acercarse tanto al presidente?",
+            "hashtags": [
+              "historia",
+              "historiadeespaña",
+              "canovasdelcastillo",
+              "santaagueda",
+              "anarquismo"
+            ],
+            "youtube_title": "El falso periodista que mató a Cánovas del Castillo | Parte 1",
+            "youtube_description": "El asesinato de Cánovas del Castillo en el balneario de Santa Águeda: un huésped con nombre falso y tres disparos.\nAgosto de 1897, Guipúzcoa: el presidente del Gobierno descansa con su esposa sin saber quién duerme bajo su mismo techo.\nUn joven que se hace llamar Emilio Rinaldini, periodista italiano, lleva días observándolo. Su verdadero nombre es Michele Angiolillo. Y su viaje empezó mucho antes, en Barcelona.\nFuentes: José Luis Comellas, «Cánovas del Castillo» (Ariel); Frank Fernández, «La sangre de Santa Águeda»; prensa española de agosto de 1897 (Hemeroteca Digital de la BNE)."
+          },
+          {
+            "part_number": 2,
+            "hook_candidates": [
+              "Lo ejecutaron por matar a un presidente. Su última palabra fue un libro.",
+              "Doce días. Eso tardó España en juzgar y ejecutar al asesino.",
+              "Si hubieras salido de Montjuïc en 1897, contarías lo mismo que ellos.",
+              "El verdugo aprieta el garrote. El preso grita.",
+              "Antes de disparar, el asesino visitó a un médico puertorriqueño en París."
+            ],
+            "hook_title": "¿QUÉ GRITÓ?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "El verdugo aprieta el garrote. El preso grita.",
+                "location": "carcel",
+                "framing": "general",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "garrote",
+                "visual_direction": "Celda en penumbra: Angiolillo sentado ante el garrote, iluminado por un haz de luz."
+              },
+              {
+                "label": "SUBE LA APUESTA",
+                "speaker": "narrador",
+                "narration": "Doce días antes, había matado a Cánovas.",
+                "location": "salon",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "periodico",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": "Doce",
+                "visual_direction": "Periódico de 1897 con la noticia del asesinato de Cánovas en portada."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Pero su odio nace en Barcelona, en 1896.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": "multitud",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Calle de Barcelona llena de gente durante la procesión del Corpus."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Una bomba estalla en la procesión del Corpus.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": "explosion",
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [
+                  "boom"
+                ],
+                "emphasis": "bomba",
+                "visual_direction": "Una explosión arrasa el cortejo en la calle Canvis Nous."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Doce muertos. Cientos de detenidos, encerrados en Montjuïc.",
+                "location": "castillo",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El castillo de Montjuïc sobre la colina bajo un cielo de tormenta."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Y de sus celdas salen relatos de tortura.",
+                "location": "carcel",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": null,
+                "visual_direction": "Una mazmorra vacía con cadenas en la pared y un haz de luz por el ventanuco."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Según varios testimonios, Angiolillo viaja entonces a París.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Angiolillo camina con su bombín por una calle parisina al atardecer."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Allí le recibe Ramón Emeterio Betances, independentista puertorriqueño.",
+                "location": "despacho",
+                "framing": "dos",
+                "cast": [
+                  "betances",
+                  "angiolillo"
+                ],
+                "gesture": "explain",
+                "emotion": "desconfiado",
+                "listener_emotion": "serio",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "Betances",
+                "visual_direction": "Un despacho iluminado por una lámpara: Betances observa al joven italiano."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "angiolillo",
+                "narration": "Alguien tiene que pagar lo de Montjuïc.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "angiolillo",
+                  "betances"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "pensativo",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Angiolillo golpea el aire con el puño, con rabia contenida."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "betances",
+                "narration": "¿Y en quién está pensando usted?",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "betances",
+                  "angiolillo"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "serio",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Betances se acaricia la barba blanca, midiendo al joven."
+              },
+              {
+                "label": "DIÁLOGO",
+                "speaker": "angiolillo",
+                "narration": "En la reina regente, o en su hijo.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "angiolillo",
+                  "betances"
+                ],
+                "gesture": "point",
+                "emotion": "serio",
+                "listener_emotion": "sorprendido",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Angiolillo señala un retrato real imaginario; Betances abre los ojos."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Y, según esos relatos, él le señala a Cánovas.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "mapa",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "Cánovas",
+                "visual_direction": "Un mapa de España con una ruta marcada desde París hasta Guipúzcoa."
+              },
+              {
+                "label": "MATIZ",
+                "speaker": "narrador",
+                "narration": "¿Hubo dinero? Nunca se probó.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "monedas",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Unas monedas de oro sobre la mesa, en la sombra."
+              },
+              {
+                "label": "DESENLACE",
+                "speaker": "narrador",
+                "narration": "20 de agosto de 1897, cárcel de Vergara.",
+                "location": "carcel",
+                "framing": "general",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Patio de la cárcel de Vergara al amanecer; Angiolillo es conducido al garrote."
+              },
+              {
+                "label": "REVELACIÓN",
+                "speaker": "angiolillo",
+                "narration": "¡Germinal!",
+                "location": "carcel",
+                "framing": "personaje",
+                "cast": [
+                  "angiolillo"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": "Germinal",
+                "visual_direction": "Angiolillo grita con todas sus fuerzas antes de que el verdugo actúe."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "Un año después, España perdía Cuba para siempre.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": "barco",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Un velero se aleja hacia el horizonte al atardecer, como despedida del imperio."
+              }
+            ],
+            "cliffhanger": "Cierre: Angiolillo, que actuó por las torturas de Montjuïc y quizá orientado por Betances en París, muere a garrote en Vergara gritando «Germinal», y un año después España pierde Cuba, el tema del que Cánovas quería descansar.",
+            "caption": "Antes de disparar a Cánovas, el asesino pasó por París. Y alguien le ayudó a elegir a la víctima.\nLa bomba del Corpus, las celdas de Montjuïc y un garrote en Vergara solo 12 días después.\nParte 2/2\n¿Crees que Betances estaba detrás del asesinato?",
+            "hashtags": [
+              "historia",
+              "historiadeespaña",
+              "montjuic",
+              "canovasdelcastillo",
+              "angiolillo"
+            ],
+            "youtube_title": "Montjuïc, Betances y el garrote de Angiolillo | Parte 2",
+            "youtube_description": "Por qué mataron a Cánovas del Castillo: de la bomba del Corpus en Barcelona a las torturas de Montjuïc y un encuentro secreto en París.\nMichele Angiolillo fue ejecutado a garrote en Vergara solo doce días después del asesinato de Santa Águeda.\nVarios testimonios lo sitúan en París con el independentista puertorriqueño Ramón Emeterio Betances antes del crimen. Lo que se habló allí y si hubo dinero de por medio sigue siendo objeto de debate.\nFuentes: José Luis Comellas, «Cánovas del Castillo» (Ariel); Frank Fernández, «La sangre de Santa Águeda»; prensa española de agosto de 1897 (Hemeroteca Digital de la BNE)."
+          }
+        ],
+        "book": {
+          "title": "Cánovas del Castillo",
+          "author": "José Luis Comellas",
+          "pitch": "La biografía del hombre que construyó la Restauración y murió de tres disparos en un balneario."
+        }
+      },
+      "part": 1
+    }
+  ],
+  "last_published": "2026-11-20T11:20:45+00:00",
   "scheduled": [
-    "2026-11-18T10:00:00+01:00",
     "2026-11-18T13:00:00+01:00",
     "2026-11-18T16:00:00+01:00",
     "2026-11-18T19:00:00+01:00",
@@ -12,6 +854,9 @@
     "2026-11-19T22:00:00+01:00",
     "2026-11-20T10:00:00+01:00",
     "2026-11-20T13:00:00+01:00",
-    "2026-11-20T16:00:00+01:00"
+    "2026-11-20T16:00:00+01:00",
+    "2026-11-20T19:00:00+01:00",
+    "2026-11-20T22:00:00+01:00",
+    "2026-11-21T10:00:00+01:00"
   ]
 }

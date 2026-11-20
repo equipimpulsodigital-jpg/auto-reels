@@ -194,5 +194,64 @@
       "looked_up": true,
       "pitch": "Un error judicial tan estremecedor que todavía hoy cuesta creer que ocurriera de verdad."
     }
+  },
+  {
+    "date": "2026-11-20",
+    "format": "punto_inflexion",
+    "topic": "El programa secreto de bomba atómica del franquismo: Guillermo Velarde, los restos de Palomares, el freno de Franco, la reactivación de Carrero Blanco (Proyecto Islero), la reunión con Kissinger y la renuncia de España en 1987.",
+    "series_title": "Proyecto Islero: la bomba atómica española",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T19:00:00+01:00",
+        "request_id": "87ffcde50cd54b64b0783fa8103efab0",
+        "job_id": "02bbd27c6f974d2786a5bb0c3f68dd09",
+        "failed": [],
+        "at": "2026-11-20T11:07:18+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T22:00:00+01:00",
+        "request_id": "48f5f6bd0bed4dc080f9a85798bc5564",
+        "job_id": "7b72dcc4e60640e580d6c7405681bd14",
+        "failed": [],
+        "at": "2026-11-20T11:13:02+00:00"
+      }
+    ],
+    "book": {
+      "title": "Proyecto Islero: cuando España pudo desarrollar armas nucleares",
+      "author": "Guillermo Velarde",
+      "pitch": "El físico que diseñó la bomba española cuenta en primera persona cómo estuvo a punto de existir.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "format": "crimen_historico",
+    "topic": "Asesinato de Antonio Cánovas del Castillo por el anarquista Michele Angiolillo en el balneario de Santa Águeda (8-VIII-1897): nombre falso, venganza por las torturas de Montjuïc tras la bomba del Corpus de 1896, la posible influencia de Betances en París y el garrote en Vergara al grito de «Germinal».",
+    "series_title": "El huésped de Santa Águeda: el asesinato de Cánovas del Castillo",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T10:00:00+01:00",
+        "request_id": "aef739c9aae04f69a2789d1fdda603ff",
+        "job_id": "73e335ae1ca34f1c8d92759a288385c4",
+        "failed": [],
+        "at": "2026-11-20T11:20:45+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cánovas del Castillo",
+      "author": "José Luis Comellas",
+      "pitch": "La biografía del hombre que construyó la Restauración y murió de tres disparos en un balneario.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/3746984-M.jpg",
+      "isbn": "9788434465985"
+    }
   }
 ]
