@@ -13,7 +13,21 @@
         "request_id": "8fb4abace46a4c738759fa9b3c46e27d",
         "job_id": "1da9a576ed00451e81a711610be572f7",
         "failed": [],
-        "at": "2026-11-19T15:03:28+00:00"
+        "at": "2026-11-19T15:03:28+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1686,
+            "likes": 67,
+            "comments": 0,
+            "shares": 1
+          },
+          "youtube": {
+            "views": 1142,
+            "likes": 26,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -23,6 +37,13 @@
       "cover": "https://covers.openlibrary.org/b/id/12411688-M.jpg",
       "isbn": "9788403519428",
       "pitch": "Te hará escuchar mejor… y darte cuenta de todo lo que te pierdes cuando no lo haces."
+    },
+    "stats": {
+      "views": 2828,
+      "likes": 93,
+      "comments": 0,
+      "shares": 1,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -39,7 +60,21 @@
         "request_id": "b972ce51b1404280b623039e3a9f8e1e",
         "job_id": "f364248e644a4a638edc9cffc08b2720",
         "failed": [],
-        "at": "2026-11-19T15:11:18+00:00"
+        "at": "2026-11-19T15:11:18+00:00",
+        "stats": {
+          "instagram": {
+            "views": 150,
+            "likes": 4,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1063,
+            "likes": 26,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -47,6 +82,13 @@
       "author": "Charles Duhigg",
       "looked_up": true,
       "pitch": "Por qué con algunas personas conectas al instante y cómo aprender a hacerlo tú también."
+    },
+    "stats": {
+      "views": 1213,
+      "likes": 30,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -63,7 +105,21 @@
         "request_id": "00a2783253ba46759b92343386a48188",
         "job_id": "27394907712c42c8bbe2c8a8518cad01",
         "failed": [],
-        "at": "2026-11-19T15:19:44+00:00"
+        "at": "2026-11-19T15:19:44+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1203,
+            "likes": 29,
+            "comments": 0,
+            "shares": 1
+          },
+          "youtube": {
+            "views": 1131,
+            "likes": 22,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -73,6 +129,13 @@
       "cover": "https://covers.openlibrary.org/b/id/13535864-M.jpg",
       "isbn": "9788466649537",
       "pitch": "Seligman propone una mirada al bienestar que va mucho más allá de simplemente estar contento."
+    },
+    "stats": {
+      "views": 2334,
+      "likes": 51,
+      "comments": 0,
+      "shares": 1,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -89,10 +152,37 @@
         "request_id": "1b483dc89b3b489daa9af34026abc8a3",
         "job_id": "0f373df7632640dc9c7d2034ec93b7b8",
         "failed": [],
-        "at": "2026-11-19T21:05:13+00:00"
+        "at": "2026-11-19T21:05:13+00:00",
+        "stats": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 507,
+            "likes": 8,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 197,
+            "likes": 4,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 704,
+      "likes": 12,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
+    }
   },
   {
     "date": "2026-11-19",
