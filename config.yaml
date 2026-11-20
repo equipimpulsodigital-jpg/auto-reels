@@ -181,6 +181,7 @@ channels:
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@lacabezapordentro
       instagram: https://www.instagram.com/lacabezapordentro/
+      tiktok: https://www.tiktok.com/@lacabezapordentro
     interest_queries: ["psicología estudio", "salud mental", "ansiedad estudio", "hábitos cerebro"]   # noticias de la semana para inspirar temas
     formats:
       por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
