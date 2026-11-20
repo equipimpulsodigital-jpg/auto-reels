@@ -13,7 +13,21 @@
         "request_id": "cdd70b0369a24c67ac29f0392f4ad1ea",
         "job_id": "67b62c9e80704102937231b15ffebc57",
         "failed": [],
-        "at": "2026-11-19T15:05:33+00:00"
+        "at": "2026-11-19T15:05:33+00:00",
+        "stats": {
+          "instagram": {
+            "views": 143,
+            "likes": 2,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 342,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -22,9 +36,30 @@
         "request_id": "b031ee2265824ac8a6d75d7bf57395a4",
         "job_id": "656957a92dad441eb4e71b0cd561d298",
         "failed": [],
-        "at": "2026-11-19T15:10:27+00:00"
+        "at": "2026-11-19T15:10:27+00:00",
+        "stats": {
+          "instagram": {
+            "views": 109,
+            "likes": 2,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1207,
+            "likes": 9,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
-    ]
+    ],
+    "stats": {
+      "views": 1801,
+      "likes": 16,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
+    }
   },
   {
     "date": "2026-11-19",
@@ -40,7 +75,21 @@
         "request_id": "25e9998af26c4b7f90271a1a0817cbda",
         "job_id": "e1de81b2f6f64f869917f064f2f50ab9",
         "failed": [],
-        "at": "2026-11-19T15:19:48+00:00"
+        "at": "2026-11-19T15:19:48+00:00",
+        "stats": {
+          "instagram": {
+            "views": 92,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -49,7 +98,27 @@
         "request_id": "03a2ecce9ce44b11889da0bdeaa4c06c",
         "job_id": "a5cfac8c00cb448b86aace306637921a",
         "failed": [],
-        "at": "2026-11-19T21:06:21+00:00"
+        "at": "2026-11-19T21:06:21+00:00",
+        "stats": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 700,
+            "likes": 12,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -59,6 +128,13 @@
       "cover": "https://covers.openlibrary.org/b/id/13654-M.jpg",
       "isbn": "9788483060520",
       "pitch": "La apasionante historia de cómo aprendimos a saber dónde estamos en mitad del mar."
+    },
+    "stats": {
+      "views": 793,
+      "likes": 13,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
