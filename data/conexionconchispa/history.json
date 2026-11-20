@@ -19,7 +19,8 @@
             "views": 1686,
             "likes": 67,
             "comments": 0,
-            "shares": 1
+            "shares": 1,
+            "avg_watch_s": 20.5
           },
           "youtube": {
             "views": 1142,
@@ -43,6 +44,7 @@
       "likes": 93,
       "comments": 0,
       "shares": 1,
+      "youtube_views": 1142,
       "updated": "2026-11-20"
     }
   },
@@ -66,7 +68,8 @@
             "views": 150,
             "likes": 4,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 9.7
           },
           "youtube": {
             "views": 1063,
@@ -88,6 +91,7 @@
       "likes": 30,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 1063,
       "updated": "2026-11-20"
     }
   },
@@ -108,13 +112,14 @@
         "at": "2026-11-19T15:19:44+00:00",
         "stats": {
           "instagram": {
-            "views": 1203,
+            "views": 1204,
             "likes": 29,
             "comments": 0,
-            "shares": 1
+            "shares": 1,
+            "avg_watch_s": 16.5
           },
           "youtube": {
-            "views": 1131,
+            "views": 1177,
             "likes": 22,
             "comments": 0,
             "shares": 0
@@ -131,10 +136,11 @@
       "pitch": "Seligman propone una mirada al bienestar que va mucho más allá de simplemente estar contento."
     },
     "stats": {
-      "views": 2334,
+      "views": 2381,
       "likes": 51,
       "comments": 0,
       "shares": 1,
+      "youtube_views": 1177,
       "updated": "2026-11-20"
     }
   },
@@ -161,8 +167,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 507,
-            "likes": 8,
+            "views": 627,
+            "likes": 13,
             "comments": 0,
             "shares": 0
           },
@@ -170,17 +176,19 @@
             "views": 197,
             "likes": 4,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 6.2
           }
         }
       }
     ],
     "book": null,
     "stats": {
-      "views": 704,
-      "likes": 12,
+      "views": 824,
+      "likes": 17,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 627,
       "updated": "2026-11-20"
     }
   },
@@ -198,7 +206,29 @@
         "request_id": "687fd6dd9bc04afbba979b35260f7077",
         "job_id": "c1cedefcaa91400fb09ec19d9b774212",
         "failed": [],
-        "at": "2026-11-19T21:14:35+00:00"
+        "at": "2026-11-19T21:14:35+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1510,
+            "likes": 40,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 16.5
+          },
+          "youtube": {
+            "views": 1193,
+            "likes": 21,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 196,
+            "likes": 10,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 5.7
+          }
+        }
       }
     ],
     "book": {
@@ -206,6 +236,14 @@
       "author": "Charles Duhigg",
       "pitch": "Por qué con algunas personas conectamos al momento y cómo aprender a hacerlo con cualquiera.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 2899,
+      "likes": 71,
+      "comments": 0,
+      "shares": 0,
+      "youtube_views": 1193,
+      "updated": "2026-11-20"
     }
   },
   {
