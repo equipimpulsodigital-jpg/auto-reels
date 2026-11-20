@@ -103,6 +103,7 @@ channels:
     enabled: true
     profile: elanecdotario
     platforms: [instagram, youtube, tiktok]
+    max_parts: 1                      # historias de una sola parte: las partes 2 casi no se veían en YouTube
     tiktok_paused_until: "2026-11-23"   # TikTok rechazaba los vídeos («risky», cuenta nueva): sin TikTok hasta este día incluido; vuelve solo el 24
     prompt: prompts/elanecdotario.md
     accent_color: "#7FD1C7"
@@ -187,6 +188,7 @@ channels:
     enabled: true
     profile: ysiciencia               # perfil de Upload-Post (las cuentas son @ysiciencia2)
     platforms: [instagram, youtube, tiktok]
+    max_parts: 1                      # historias de una sola parte: las partes 2 casi no se veían en YouTube
     tiktok_paused_until: "2026-11-23"   # TikTok rechazaba los vídeos («risky», cuenta nueva): sin TikTok hasta este día incluido; vuelve solo el 24
     prompt: prompts/ysiciencia.md
     accent_color: "#4FC3F7"
