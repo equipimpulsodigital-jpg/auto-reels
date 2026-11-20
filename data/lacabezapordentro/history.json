@@ -123,5 +123,74 @@
       "cover": "https://covers.openlibrary.org/b/id/15262775-M.jpg",
       "isbn": "9788411193016"
     }
+  },
+  {
+    "date": "2026-11-20",
+    "format": "como_salir",
+    "topic": "Ansiedad antes de hablar en público: reinterpretar los nervios como emoción («estoy emocionado») funciona mejor que intentar calmarse (Brooks, 2014)",
+    "series_title": "No te calmes: emociónate",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T19:00:00+01:00",
+        "request_id": "2843569eb1334106b7516010d0b2d452",
+        "job_id": "91a613214c8144f9a3fd5d7faa9aad1b",
+        "failed": [],
+        "at": "2026-11-20T11:07:46+00:00"
+      }
+    ],
+    "book": {
+      "title": "Estrés: el lado bueno",
+      "author": "Kelly McGonigal",
+      "pitch": "Por qué los nervios pueden jugar a tu favor si cambias cómo los entiendes.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "format": "por_que",
+    "topic": "Efecto foco (spotlight effect): creemos que los demás se fijan en nuestros fallos mucho más de lo que lo hacen (Gilovich, Medvec y Savitsky, 2000)",
+    "series_title": "La mancha que nadie vio: el efecto foco",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T22:00:00+01:00",
+        "request_id": "9ca089f70caa4a58a44d20c12a34f71c",
+        "job_id": "f60a12ee4f9d4fbb991af339446240c6",
+        "failed": [],
+        "at": "2026-11-20T11:15:08+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-20",
+    "format": "como_salir",
+    "topic": "Etiquetado afectivo: ponerle un nombre preciso a la emoción reduce la activación de la amígdala y funciona mejor que ordenarse «cálmate» (Lieberman et al., 2007)",
+    "series_title": "Ponle nombre y se calma: el etiquetado afectivo",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T10:00:00+01:00",
+        "request_id": "490e6ab4df294b60a078ca4e220aa86a",
+        "job_id": "f60ab4f79791448f9f87698d587d2455",
+        "failed": [],
+        "at": "2026-11-20T11:23:05+00:00"
+      }
+    ],
+    "book": {
+      "title": "Permiso para sentir",
+      "author": "Marc Brackett",
+      "pitch": "El método de Yale para reconocer, nombrar y gestionar lo que sientes cada día.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
+    }
   }
 ]
