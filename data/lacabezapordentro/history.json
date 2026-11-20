@@ -19,7 +19,8 @@
             "views": 529,
             "likes": 11,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 14.8
           },
           "youtube": {
             "views": 1,
@@ -42,6 +43,7 @@
       "likes": 11,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 1,
       "updated": "2026-11-20"
     }
   },
@@ -65,7 +67,8 @@
             "views": 503,
             "likes": 19,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 10.8
           },
           "youtube": {
             "views": 1172,
@@ -89,6 +92,7 @@
       "likes": 46,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 1172,
       "updated": "2026-11-20"
     }
   },
@@ -109,13 +113,14 @@
         "at": "2026-11-19T15:20:58+00:00",
         "stats": {
           "instagram": {
-            "views": 193,
+            "views": 194,
             "likes": 3,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 11.2
           },
           "youtube": {
-            "views": 1285,
+            "views": 1301,
             "likes": 19,
             "comments": 0,
             "shares": 0
@@ -130,10 +135,11 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1478,
+      "views": 1495,
       "likes": 22,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 1301,
       "updated": "2026-11-20"
     }
   },
@@ -179,6 +185,7 @@
       "likes": 12,
       "comments": 0,
       "shares": 0,
+      "youtube_views": 1183,
       "updated": "2026-11-20"
     }
   },
@@ -196,7 +203,22 @@
         "request_id": "c83a5cdfa95345b08f10630194e2e611",
         "job_id": "984e992845c7436ca838ed8f32aced58",
         "failed": [],
-        "at": "2026-11-19T21:11:05+00:00"
+        "at": "2026-11-19T21:11:05+00:00",
+        "stats": {
+          "instagram": {
+            "views": 157,
+            "likes": 2,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 13.4
+          },
+          "youtube": {
+            "views": 1138,
+            "likes": 11,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -206,6 +228,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/15262775-M.jpg",
       "isbn": "9788411193016"
+    },
+    "stats": {
+      "views": 1295,
+      "likes": 13,
+      "comments": 0,
+      "shares": 0,
+      "youtube_views": 1138,
+      "updated": "2026-11-20"
     }
   },
   {
