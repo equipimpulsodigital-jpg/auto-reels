@@ -13,7 +13,21 @@
         "request_id": "e083dac80184403887c7c31f98f9bb6c",
         "job_id": "33aab971d9634b6fbc05e9dbad37dd41",
         "failed": [],
-        "at": "2026-11-19T15:07:52+00:00"
+        "at": "2026-11-19T15:07:52+00:00",
+        "stats": {
+          "instagram": {
+            "views": 529,
+            "likes": 11,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -22,6 +36,13 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg",
       "pitch": "El clásico de siempre sobre caer bien, y sigue funcionando sorprendentemente bien hoy."
+    },
+    "stats": {
+      "views": 530,
+      "likes": 11,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -38,7 +59,21 @@
         "request_id": "c57e79f262eb40d7b4326bbb086a04fd",
         "job_id": "34f1d385fee24f56af7aabc3e66e9aa2",
         "failed": [],
-        "at": "2026-11-19T15:14:37+00:00"
+        "at": "2026-11-19T15:14:37+00:00",
+        "stats": {
+          "instagram": {
+            "views": 503,
+            "likes": 19,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1172,
+            "likes": 27,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -48,6 +83,13 @@
       "cover": "https://covers.openlibrary.org/b/id/13663242-M.jpg",
       "isbn": "9788449338717",
       "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
+    },
+    "stats": {
+      "views": 1675,
+      "likes": 46,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -64,7 +106,21 @@
         "request_id": "a1436c84915c4731b0ec499b0898e279",
         "job_id": "acad659874ca46f1b0f9265e06ec030e",
         "failed": [],
-        "at": "2026-11-19T15:20:58+00:00"
+        "at": "2026-11-19T15:20:58+00:00",
+        "stats": {
+          "instagram": {
+            "views": 193,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1285,
+            "likes": 19,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -72,6 +128,13 @@
       "author": "Charan Ranganath",
       "looked_up": true,
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
+    },
+    "stats": {
+      "views": 1478,
+      "likes": 22,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
@@ -88,7 +151,21 @@
         "request_id": "e4df6b79ccb941afb01d6609ecbf606d",
         "job_id": "6e5cd12bb01a481e88ed95374c6f64e5",
         "failed": [],
-        "at": "2026-11-19T21:04:25+00:00"
+        "at": "2026-11-19T21:04:25+00:00",
+        "stats": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "youtube": {
+            "views": 1183,
+            "likes": 12,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -96,6 +173,13 @@
       "author": "Matthew Walker",
       "pitch": "Un neurocientífico del sueño explica qué pasa en tu cabeza cada noche y por qué importa tanto.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1183,
+      "likes": 12,
+      "comments": 0,
+      "shares": 0,
+      "updated": "2026-11-20"
     }
   },
   {
