@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from .character import Character, Look
 from .locations import LOCATIONS
+from .more_props import EXTRA_EVENT_DESC, EXTRA_PROP_DESC
 from .props import EVENTS, PROPS
 
 COLORS = {
@@ -38,11 +39,29 @@ GESTURES = {
     "shrug": "se encoge de hombros", "fist": "puño en alto (rabia, arenga)", "wave": "saluda o llama con la mano",
     "think": "mano en la barbilla (duda)", "idle": "brazos quietos",
 }
-EMOTIONS = {  # (cejas, sonrisa)
-    "neutral": (0.0, 0.0), "serio": (-0.4, -0.1), "enfadado": (-0.9, -0.4), "sorprendido": (0.9, 0.0),
-    "asustado": (1.0, -0.5), "triste": (0.35, -0.7), "contento": (0.3, 0.8), "pensativo": (-0.3, 0.0),
-    "burlon": (0.2, 0.6), "desconfiado": (-0.6, 0.2),
+EMOTIONS = {  # (cejas, sonrisa, preocupación: cejas en pena, extra visual)
+    "neutral": (0.0, 0.0, 0.0, ""), "serio": (-0.4, -0.1, 0.0, ""), "enfadado": (-0.9, -0.4, 0.0, ""),
+    "furioso": (-1.0, -0.6, 0.0, "furia"), "sorprendido": (0.9, 0.0, 0.0, "abierta"),
+    "asustado": (0.8, -0.5, 0.7, "sudor"), "horrorizado": (1.0, -0.6, 0.5, "shock"),
+    "triste": (0.1, -0.7, 0.9, ""), "llorando": (0.1, -0.9, 1.0, "lagrimas"), "contento": (0.3, 0.8, 0.0, ""),
+    "euforico": (0.6, 1.0, 0.0, "brillo"), "pensativo": (-0.3, 0.0, 0.0, "mira_arriba"), "burlon": (0.2, 0.6, 0.0, ""),
+    "desconfiado": (-0.6, 0.2, 0.0, "entorna"), "nervioso": (0.3, -0.2, 0.6, "sudor"),
+    "avergonzado": (0.2, 0.2, 0.5, "rubor"), "enamorado": (0.4, 0.7, 0.0, "enamorado"),
+    "aliviado": (0.2, 0.5, 0.3, "suspiro"), "decidido": (-0.6, 0.15, 0.0, ""),
 }
+EMOTION_DESC = {
+    "furioso": "rojo de ira, con la vena marcada", "sorprendido": "boca abierta", "asustado": "con una gota de sudor",
+    "horrorizado": "pálido, pupilas diminutas y boca en O", "triste": "cejas caídas de pena",
+    "llorando": "con lágrimas", "euforico": "sonrisa enorme y ojos brillantes", "desconfiado": "ojos entornados",
+    "nervioso": "sudando", "avergonzado": "colorado, mirando abajo", "enamorado": "colorado y con corazones",
+    "aliviado": "suspira con los ojos medio cerrados", "decidido": "ceño firme y media sonrisa",
+}
+
+
+def emotion(name: str) -> tuple[float, float, float, str]:
+    return EMOTIONS.get(name, EMOTIONS["neutral"])
+
+
 CAMERAS = {"push_in": "acercamiento lento", "pull_back": "alejamiento que revela", "static": "cámara quieta",
            "shake": "cámara temblorosa (caos, golpes)"}
 MOODS = {"dia": "día", "atardecer": "atardecer", "noche": "noche", "tormenta": "cielo de tormenta"}
@@ -67,6 +86,10 @@ EVENT_DESC = {
     "corazones": "corazones que suben flotando (flechazo, amor)",
     "pensamientos": "nubes de pensamientos girando sobre la escena (darle vueltas a algo, dudas, ansiedad)",
 }
+
+
+PROP_DESC.update(EXTRA_PROP_DESC)
+EVENT_DESC.update(EXTRA_EVENT_DESC)
 
 
 def make_character(name: str, look: dict, seed: int) -> Character:
@@ -113,7 +136,7 @@ def catalog_text(voices: list[str]) -> str:
 {lst({k: EVENT_DESC.get(k, k) for k in EVENTS})}
 - **Gestos (`gesture`, del personaje que habla)**:
 {lst(GESTURES)}
-- **Emociones (`emotion` del que habla, `listener_emotion` del que escucha)**: {", ".join(f"`{k}`" for k in EMOTIONS)}
+- **Emociones (`emotion` del que habla, `listener_emotion` del que escucha)**: {", ".join(f"`{k}`" + (f" ({EMOTION_DESC[k]})" if k in EMOTION_DESC else "") for k in EMOTIONS)}. Que la cara diga lo mismo que la frase: una mala noticia es `triste` o `llorando`, nunca `neutral`; quien escucha algo grave reacciona (`sorprendido`, `triste`, `horrorizado`).
 - **Cámara (`camera`)**:
 {lst(CAMERAS)}
 - **Luz (`mood`)**: {", ".join(f"`{k}`" for k in MOODS)} · **Época (`era`, de la serie)**: {", ".join(f"`{e}`" for e in ERAS)}

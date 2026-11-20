@@ -74,6 +74,11 @@ class Shot:
     brow: float = 0.0
     smile: float = 0.0
     listener_brow: float = 0.0
+    worry: float = 0.0                      # cejas de pena/preocupación (extremo interior arriba)
+    extra: str = ""                         # lágrimas, sudor, rubor, furia, shock... (ver catalog.EMOTIONS)
+    listener_smile: float = 0.0
+    listener_worry: float = 0.0
+    listener_extra: str = ""
     mood: str = "dia"
     era: str = "1900"
     event: Optional[str] = None             # suceso animado (EVENTS)
@@ -120,12 +125,14 @@ def _pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: float) -
                 nod = max(nod, math.sin(math.pi * k / 7))
         amt = ease_back(t / 0.5) * (1 - ease((t - (shot.duration - 0.45)) / 0.45))
         return Pose(t=t, mouth=m, facing=facing, look=0.3 + darts(t, seed) * 0.4, look_up=0.1, blink=blink(t, seed),
-                    brow=shot.brow + 0.3 * m, smile=shot.smile, gesture=shot.gesture, gesture_amt=amt,
+                    brow=shot.brow + 0.3 * m * (1 - shot.worry), smile=shot.smile, gesture=shot.gesture, gesture_amt=amt,
+                    worry=shot.worry, extra=shot.extra,
                     talking=True, nod=nod)
     # el que escucha reacciona: asiente de vez en cuando y sigue con la mirada
     nod = max(0.0, math.sin(t * 2.1 + seed)) ** 8
     return Pose(t=t, facing=facing, look=0.5 + darts(t, seed + 7) * 0.3, blink=blink(t, seed),
-                brow=shot.listener_brow, smile=0.0, gesture="idle", gesture_amt=0.0, nod=nod * 0.6,
+                brow=shot.listener_brow, smile=shot.listener_smile, worry=shot.listener_worry,
+                extra=shot.listener_extra, gesture="idle", gesture_amt=0.0, nod=nod * 0.6,
                 walk=1.0 if shot.walk else 0.0)
 
 
@@ -206,7 +213,7 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{W}x{H}",
          "-r", str(fps), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "17",
          "-pix_fmt", "yuv420p", str(out)], stdin=subprocess.PIPE)
-    shaky = shot.camera == "shake" or shot.event in ("explosion", "bombardeo", "cañonazos")
+    shaky = shot.camera == "shake" or shot.event in ("explosion", "bombardeo", "cañonazos", "terremoto")
     for i in range(frames):
         t = i / fps
         c = surface.getCanvas()

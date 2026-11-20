@@ -78,3 +78,5 @@ El canal es una **serie de dibujos animados**: caricaturas 2D que se mueven, hab
 - `camera`: `push_in` para tensión, `pull_back` para revelar, `shake` en momentos violentos, `static` para pausas. Varía entre planos.
 - `sfx` solo para remarcar golpes de efecto (`hit` en una revelación, `whoosh` en un giro); los sucesos ya traen su sonido.
 - En `visual_direction` (español) describe en una frase qué pasa en el plano.
+- **Que se vea lo que se dice:** si la frase nombra algo que existe en el catálogo (un globo, una foto, un teléfono, dinero, una calavera, niebla, un rayo, la policía...), ese plano lo enseña con `prop` (plano `objeto`) o con `event`. Nunca un cielo o una pared vacíos mientras la voz habla de algo concreto.
+- **La cara dice lo mismo que la frase:** elige `emotion` y `listener_emotion` con intención (una pérdida es `triste` o `llorando`; una amenaza, `asustado` u `horrorizado` en quien escucha; un ligue que sale bien, `enamorado` o `avergonzado`). Evita `neutral` en los diálogos.

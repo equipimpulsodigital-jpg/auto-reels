@@ -32,12 +32,13 @@ def block_to_shot(b, series, chars: dict, duration: float) -> Shot:
         framing = "general"
     if framing == "dos" and len(cast) < 2:
         framing = "personaje"
-    brow, smile = K.EMOTIONS.get(b.emotion, (0.0, 0.0))
-    lbrow, _ = K.EMOTIONS.get(b.listener_emotion, (0.0, 0.0))
+    brow, smile, worry, extra = K.emotion(b.emotion)
+    lbrow, lsmile, lworry, lextra = K.emotion(b.listener_emotion)
     return Shot(
         location=b.location if b.location in LOCATIONS else "pueblo",
         duration=duration, framing=framing, speaker=speaker, cast=cast,
         gesture=b.gesture, brow=brow, smile=smile, listener_brow=lbrow,
+        worry=worry, extra=extra, listener_smile=lsmile * 0.7, listener_worry=lworry, listener_extra=lextra,
         mood=b.mood, era=series.era, event=b.event,
         prop=b.prop or ("carta" if framing == "objeto" else None),
         walk=b.walk and framing == "general", camera=b.camera,

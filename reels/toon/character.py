@@ -52,7 +52,9 @@ class Pose:
     look_up: float = 0.0
     blink: float = 0.0        # 0 abiertos … 1 cerrados
     brow: float = 0.0         # -1 enfadado … 0 neutro … 1 sorprendido
-    smile: float = 0.0        # -1 triste … 1 sonrisa (con la boca cerrada)
+    smile: float = 0.0        # -1 triste … 1 sonrisa (también curva las comisuras al hablar)
+    worry: float = 0.0        # 0-1 cejas de pena/miedo (extremo interior hacia arriba)
+    extra: str = ""           # lagrimas | sudor | rubor | furia | shock | abierta | brillo | entorna | enamorado ...
     gesture: str = "idle"     # idle | point | explain | chest | shrug | fist | wave | think
     gesture_amt: float = 1.0  # 0-1 (para entrar/salir del gesto)
     talking: bool = False
@@ -332,6 +334,7 @@ class Character:
         # mejillas
         for side in (-1, 1):
             c.drawPath(oval(side * 92 + f * 22, -380, 34, 22), fill("#e0705a", 0.22))
+        self._emotion_tint(c, p, f)
         c.restore()
         if L.beard == "barba":
             bc = L.beard_color or hair
@@ -343,11 +346,78 @@ class Character:
         self._nose(c, f)
         self._mouth(c, p, f)
         self._facial_hair(c, f)
+        self._emotion_fx(c, p, f, head)
         if L.glasses:
             for side in (-1, 1):
                 c.drawPath(oval(side * 60 + f * 26, -468, 46, 40), stroke(INK, 8))
             c.drawLine(-14 + f * 26, -470, 14 + f * 26, -470, stroke(INK, 7))
         self._hat(c, f)
+
+    def _emotion_tint(self, c: skia.Canvas, p: Pose, f: float) -> None:
+        """Color de la piel según la emoción (se dibuja debajo de ojos y boca, ya recortado a la cabeza)."""
+        e, t = p.extra, p.t
+        if e == "furia":  # rojo que sube desde la frente, en degradado
+            pulse = 0.06 * math.sin(t * 9)
+            for k in range(12):
+                y0 = -660 + k * 24
+                c.drawRect(skia.Rect.MakeLTRB(-220, y0, 220, y0 + 24), fill("#d4322c", max(0.0, 0.5 - k * 0.04 + pulse)))
+        elif e == "shock":  # palidez azulada que baja desde la frente
+            for k in range(10):
+                y0 = -660 + k * 22
+                c.drawRect(skia.Rect.MakeLTRB(-220, y0, 220, y0 + 22), fill("#7d8db8", max(0.0, 0.4 - k * 0.04)))
+            for k in range(4):
+                x = -70 + k * 45 + f * 20
+                c.drawLine(x, -630, x, -585, stroke("#4a5a88", 6, 0.55))
+        elif e in ("rubor", "enamorado"):  # colorado
+            for side in (-1, 1):
+                c.drawPath(oval(side * 92 + f * 22, -385, 52, 30), fill("#ff4f6d", 0.42))
+                for k in range(3):
+                    x = side * 92 + f * 22 - 24 + k * 22
+                    c.drawLine(x, -398, x - 10, -372, stroke("#c2304a", 4, 0.6))
+
+    def _emotion_fx(self, c: skia.Canvas, p: Pose, f: float, head: skia.Path) -> None:
+        """Detalles que hacen legible la emoción a la primera: lágrimas, sudor, rubor, ira, palidez..."""
+        e, t = p.extra, p.t
+        if e == "furia":  # vena de cómic en la frente
+            vx, vy = -f * 85, -585
+            for a in range(4):
+                ang = a * math.pi / 2 + math.pi / 4
+                c.drawLine(vx + math.cos(ang) * 8, vy + math.sin(ang) * 8, vx + math.cos(ang) * 30, vy + math.sin(ang) * 30,
+                           stroke("#c01f1f", 10))
+        if e == "sudor":  # gota que resbala por la sien
+            k = (t * 0.6) % 1.0
+            sx, sy = -f * 140, -560 + k * 120
+            drop = poly([(sx, sy - 34), (sx + 18, sy + 2), (sx, sy + 20), (sx - 18, sy + 2)], smooth=True)
+            c.drawPath(drop, fill("#9fd8ff", 0.95))
+            c.drawPath(drop, stroke(INK, 4))
+            c.drawCircle(sx - 5, sy, 4, fill("#ffffff"))
+        if e == "lagrimas":  # regueros y gotas que caen
+            for side in (-1, 1):
+                ex = side * 58 + f * 26
+                c.drawLine(ex, -440, ex + side * 6, -330, stroke("#7fc8ff", 14, 0.75))
+                k = (t * 1.3 + (0.5 if side > 0 else 0)) % 1.0
+                yy = -440 + k * 170
+                d = poly([(ex + side * 6, yy - 20), (ex + side * 6 + 13, yy + 4), (ex + side * 6, yy + 16), (ex + side * 6 - 13, yy + 4)], smooth=True)
+                c.drawPath(d, fill("#7fc8ff"))
+                c.drawPath(d, stroke(INK, 3))
+        if e == "enamorado":  # corazoncitos que suben junto a la cabeza
+            for k in range(3):
+                ph = (t * 0.5 + k / 3) % 1.0
+                hx, hy, sz = f * 200 + math.sin(ph * 6 + k) * 20, -560 - ph * 220, 0.18 + 0.05 * k
+                hp = skia.Path()
+                hp.moveTo(hx, hy + 90 * sz)
+                hp.cubicTo(hx - 170 * sz, hy - 10 * sz, hx - 90 * sz, hy - 150 * sz, hx, hy - 60 * sz)
+                hp.cubicTo(hx + 90 * sz, hy - 150 * sz, hx + 170 * sz, hy - 10 * sz, hx, hy + 90 * sz)
+                c.drawPath(hp, fill("#ff4f6d", 1 - ph * 0.7))
+        if e == "suspiro":  # bocanada de aire
+            k = (t * 0.7) % 1.0
+            c.drawCircle(f * (90 + k * 90), -330 - k * 30, 14 + k * 22, fill("#ffffff", 0.55 * (1 - k)))
+        if e == "shock":  # líneas de impacto alrededor de la cabeza
+            for k in range(6):
+                ang = -math.pi * (0.15 + k * 0.14)
+                r0 = 250 + 10 * math.sin(t * 12 + k)
+                c.drawLine(math.cos(ang) * r0, -450 + math.sin(ang) * r0, math.cos(ang) * (r0 + 60),
+                           -450 + math.sin(ang) * (r0 + 60), stroke(INK, 7))
 
     def _hair(self, c: skia.Canvas, f: float) -> None:
         L = self.look
@@ -370,23 +440,34 @@ class Character:
     def _eyes(self, c: skia.Canvas, p: Pose, f: float) -> None:
         L = self.look
         lid = 0.25 if L.age == "mayor" else 0.0
+        if p.extra == "suspiro":
+            lid = max(lid, 0.45)
         open_amt = max(0.05, 1 - p.blink)
+        big = 1.18 if p.extra in ("shock", "abierta") else 1.0
+        pupil = 11 if p.extra == "shock" else 18
+        look_up = {"mira_arriba": 0.9, "rubor": -0.8}.get(p.extra, p.look_up)
         for side in (-1, 1):
             ex, ey = side * 58 + f * 26, -468
             rx, ry = (30, 36) if side == f else (27, 34)  # el ojo lejano un poco más pequeño
+            rx, ry = rx * big, ry * big
             white = oval(ex, ey, rx, ry * open_amt)
             c.drawPath(white, fill("#fbf8f2"))
             c.save()
             c.clipPath(white, doAntiAlias=True)
             px = ex + (p.look * 0.6 + f * 0.6) * 12
-            py = ey - p.look_up * 10 + 3
-            c.drawCircle(px, py, 18, fill(L.eyes))
-            c.drawCircle(px, py, 18, stroke(shade(L.eyes, -0.5), 3))
-            c.drawCircle(px, py, 9, fill("#141111"))
-            c.drawCircle(px + 6, py - 7, 6, fill("#ffffff"))
-            c.drawCircle(px - 5, py + 6, 2.5, fill("#ffffff", 0.8))
-            if lid > 0 or p.brow < -0.3:  # párpado: cansado o enfadado
-                amt = max(lid, -p.brow * 0.35)
+            py = ey - look_up * 12 + 3
+            c.drawCircle(px, py, pupil, fill(L.eyes))
+            c.drawCircle(px, py, pupil, stroke(shade(L.eyes, -0.5), 3))
+            c.drawCircle(px, py, pupil / 2, fill("#141111"))
+            if p.extra == "brillo":  # ojos brillantes de emoción
+                c.drawCircle(px + 6, py - 6, 9, fill("#ffffff"))
+                c.drawCircle(px - 7, py + 6, 5, fill("#ffffff"))
+            else:
+                c.drawCircle(px + 6, py - 7, 6 * pupil / 18, fill("#ffffff"))
+                c.drawCircle(px - 5, py + 6, 2.5, fill("#ffffff", 0.8))
+            squint = 0.42 if p.extra == "entorna" else 0.0
+            if lid > 0 or p.brow < -0.3 or squint:  # párpado: cansado, enfadado o desconfiado
+                amt = max(lid, -p.brow * 0.35, squint)
                 c.drawRect(skia.Rect.MakeLTRB(ex - rx - 2, ey - ry - 2, ex + rx + 2, ey - ry + 2 * ry * amt), fill(shade(L.skin_color, -0.08)))
             c.restore()
             c.drawPath(white, stroke(INK, 5))
@@ -396,11 +477,19 @@ class Character:
             if L.female:
                 c.drawLine(ex + side * rx * 0.85, ey - ry * open_amt * 0.6, ex + side * (rx + 14), ey - ry * open_amt - 6, stroke(INK, 6))
             # ceja
-            by = ey - 52 - p.brow * 14
+            by = ey - 52 * big - p.brow * 14
             tilt = (-p.brow * 10 if p.brow < 0 else p.brow * 4) * side
             w = 16 if L.female else 20 if L.age == "mayor" else 17
-            c.drawLine(ex - 30, by + tilt * -side, ex + 30, by - tilt * -side, stroke(INK, w + 6))
-            c.drawLine(ex - 30, by + tilt * -side, ex + 30, by - tilt * -side, stroke(L.hair if L.age != "mayor" else mix(L.hair, "#dddddd", 0.5), w))
+            y_l, y_r = by + tilt * -side, by - tilt * -side
+            if p.worry > 0:  # pena o miedo: el extremo de dentro (hacia la nariz) sube, el de fuera baja
+                inner_left = side < 0  # en el ojo izquierdo el extremo interior es el derecho
+                up, down = p.worry * 24, p.worry * 8
+                y_l, y_r = (y_l + down, y_r - up) if inner_left else (y_l - up, y_r + down)
+            bpath = skia.Path()
+            bpath.moveTo(ex - 30, y_l)
+            bpath.quadTo(ex, min(y_l, y_r) - 8 * (1 - p.worry), ex + 30, y_r)
+            c.drawPath(bpath, stroke(INK, w + 6))
+            c.drawPath(bpath, stroke(L.hair if L.age != "mayor" else mix(L.hair, "#dddddd", 0.5), w))
 
     def _nose(self, c: skia.Canvas, f: float) -> None:
         L = self.look
@@ -421,14 +510,30 @@ class Character:
         L = self.look
         mx, my = f * 30, -332
         o = max(0.0, min(1.0, p.mouth))
+        if o < 0.08 and p.extra in ("shock", "abierta"):  # boca en O (susto, sorpresa)
+            r = 22 if p.extra == "abierta" else 28
+            m = oval(mx, my + 6, r * 0.8, r)
+            c.drawPath(m, fill("#4a1414"))
+            c.drawPath(m, stroke(INK, 6))
+            return
+        if o < 0.08 and p.smile > 0.85:  # gran sonrisa con dientes
+            m = poly([(mx - 44, my - 10), (mx + 44, my - 10), (mx + 30, my + 22), (mx, my + 32), (mx - 30, my + 22)], smooth=True)
+            c.drawPath(m, fill("#4a1414"))
+            c.save()
+            c.clipPath(m, doAntiAlias=True)
+            c.drawRect(skia.Rect.MakeLTRB(mx - 50, my - 14, mx + 50, my + 6), fill("#fbf6ee"))
+            c.restore()
+            c.drawPath(m, stroke(INK, 6))
+            return
         if o < 0.08:
             path = skia.Path()
             path.moveTo(mx - 34, my - p.smile * 6)
             path.quadTo(mx, my + p.smile * 16, mx + 34, my - p.smile * 6)
             c.drawPath(path, stroke(INK, 7))
             return
-        w, h = 36 + o * 10, 8 + o * 40
-        m = poly([(mx - w, my - 4), (mx - w * 0.5, my - h * 0.35), (mx + w * 0.5, my - h * 0.35), (mx + w, my - 4),
+        w, h = 36 + o * 10 + max(0.0, p.smile) * 8, 8 + o * 40
+        cy = my - 4 - p.smile * 14  # comisuras: arriba si sonríe, abajo si está triste o enfadado
+        m = poly([(mx - w, cy), (mx - w * 0.5, my - h * 0.35), (mx + w * 0.5, my - h * 0.35), (mx + w, cy),
                   (mx + w * 0.6, my + h * 0.7), (mx, my + h), (mx - w * 0.6, my + h * 0.7)], smooth=True)
         c.drawPath(m, fill("#4a1414"))
         c.save()

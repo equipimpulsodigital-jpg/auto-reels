@@ -908,3 +908,8 @@ LOCATIONS: dict[str, Loc] = {cls.key: cls() for cls in (
     Costa, Barca, Cielo, Pueblo, Ciudad, Campo, Castillo, Batalla, Estacion,
     Palacio, Despacho, Iglesia, Taberna, Carcel, Salon, Tienda, Bosque,
     Casa, Dormitorio, Oficina, Cafeteria, Luna, Laboratorio)}
+
+# escenarios añadidos (more_locations.py)
+from .more_locations import EXTRA_LOCATIONS  # noqa: E402
+
+LOCATIONS.update(EXTRA_LOCATIONS)
