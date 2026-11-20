@@ -117,5 +117,72 @@
       "pitch": "Por qué con algunas personas conectamos al momento y cómo aprender a hacerlo con cualquiera.",
       "looked_up": true
     }
+  },
+  {
+    "date": "2026-11-20",
+    "format": "psicologia_atraccion",
+    "topic": "Efecto foco (Gilovich, Medvec y Savitsky, 2000): creemos que todos se fijan en nuestros fallos; consejo: tras meter la pata en una cita, mencionarlo una sola vez con humor y pasar el foco a la otra persona",
+    "series_title": "El café derramado y el efecto foco",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T19:00:00+01:00",
+        "request_id": "7d7515d253914af6a8747b127f9d0563",
+        "job_id": "9427a4759e74408bbcb8b907f33cce6b",
+        "failed": [],
+        "at": "2026-11-20T11:05:33+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-20",
+    "format": "antes_despues",
+    "topic": "Las conversaciones casi nunca terminan cuando ambos quieren (Mastroianni et al., 2021) y recordamos sobre todo el final (regla del pico-final); consejo: despedirse en el mejor momento de una cita proponiendo un plan concreto",
+    "series_title": "Despedirse en el mejor momento de la cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T22:00:00+01:00",
+        "request_id": "06eb830db4bf497ba4731edbd54441c3",
+        "job_id": "c33115b59a954848bc8da7ae62f27c37",
+        "failed": [],
+        "at": "2026-11-20T11:12:52+00:00"
+      }
+    ],
+    "book": {
+      "title": "Pensar rápido, pensar despacio",
+      "author": "Daniel Kahneman",
+      "pitch": "El Nobel que explica por qué recordamos las experiencias por su mejor momento y su final.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "format": "psicologia_atraccion",
+    "topic": "Efecto del bello desastre (Bruk, Scholl y Bless, 2018): vemos nuestra vulnerabilidad como debilidad y la de los demás como valentía; consejo: decir en voz alta y una sola vez que estás nervioso en una primera cita",
+    "series_title": "El efecto del bello desastre: decir «estoy nervioso» en una cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T10:00:00+01:00",
+        "request_id": "d5f118c32f20460cab1cda4caef3c35f",
+        "job_id": "cc1844ac3eb74334a1e74494f031a773",
+        "failed": [],
+        "at": "2026-11-20T11:20:20+00:00"
+      }
+    ],
+    "book": {
+      "title": "El poder de ser vulnerable",
+      "author": "Brené Brown",
+      "pitch": "Por qué atreverte a mostrarte tal como eres te acerca a los demás en vez de alejarte.",
+      "looked_up": true
+    }
   }
 ]
