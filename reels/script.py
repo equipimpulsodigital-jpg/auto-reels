@@ -174,6 +174,7 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
         "Historias ya publicadas (no repitas ninguna):\n"
         + ("\n".join(f"- {t}" for t in done) if done else "- (ninguna todavía)")
         + _performance(history)
+        + ("" if topic else _interest())
     )
     write = _claude_code if _use_claude_code(cfg) else _api
     series = write(cfg, _system_prompt(cfg), user)
@@ -191,6 +192,11 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
     for i, p in enumerate(series.parts, 1):
         p.part_number = i
     return series
+
+
+def _interest() -> str:
+    from .interest import current_interest
+    return current_interest()
 
 
 def _performance(history: list[dict]) -> str:
