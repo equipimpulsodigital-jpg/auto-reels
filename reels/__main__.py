@@ -104,6 +104,30 @@ def _mark_emphasis(words, blocks) -> None:
                 break
 
 
+def cancel_slot(cfg: dict, when: str) -> bool:
+    """Quita de Upload-Post el vídeo programado en una franja y la deja libre para volver a llenarla."""
+    from .publish import cancel_scheduled
+    tz = ZoneInfo(cfg["publish"].get("timezone", "Europe/Madrid"))
+    slot = datetime.fromisoformat(when.strip().replace(" ", "T"))
+    slot = slot if slot.tzinfo else slot.replace(tzinfo=tz)
+    history = _load(cfg, "history.json", [])
+    state = _load(cfg, "state.json", {"queue": [], "scheduled": []})
+    for h in history:
+        for p in list(h.get("published_parts", [])):
+            if p.get("slot") and datetime.fromisoformat(p["slot"]) == slot:
+                print(f"Quitando «{h['series_title']}» (parte {p['part']}) de la franja {slot:%d/%m %H:%M}")
+                if not p.get("job_id") or not cancel_scheduled(p["job_id"]):
+                    print("No se pudo quitar de Upload-Post.", file=sys.stderr)
+                    return False
+                h["published_parts"].remove(p)
+                state["scheduled"] = [s for s in state.get("scheduled", []) if datetime.fromisoformat(s) != slot]
+                _save(cfg, "history.json", history)
+                _save(cfg, "state.json", state)
+                return True
+    print(f"No hay ningún vídeo programado el {slot:%d/%m %H:%M}.", file=sys.stderr)
+    return False
+
+
 def _continuation_after(state: dict, history: list[dict], slot: datetime) -> bool:
     """¿La siguiente parte pendiente es una continuación cuya parte anterior sale DESPUÉS de esta franja?
     (pasa al rellenar tarde una franja que falló). Entonces esta franja necesita una historia suelta."""
@@ -363,6 +387,7 @@ def main() -> int:
     ap.add_argument("--compile", action="store_true", help="recopilación semanal para YouTube (con --clips)")
     ap.add_argument("--clips", action="append", default=[], help="carpeta con vídeos ya publicados (se puede repetir)")
     ap.add_argument("--pages", action="store_true", help="regenera la página de enlaces de la bio (docs/)")
+    ap.add_argument("--cancel", help="quita de la programación el vídeo de una franja, p. ej. «2026-11-21 10:00»")
     ap.add_argument("--stats", action="store_true", help="guarda las visualizaciones de cada vídeo publicado")
     ap.add_argument("--accounts", action="store_true", help="enlaces de las cuentas conectadas en Upload-Post")
     args = ap.parse_args()
@@ -384,6 +409,12 @@ def main() -> int:
         from .publish import unlabel_scheduled
         unlabel_scheduled(load_config(args.channel)["channel"]["profile"])
         return 0
+    if args.cancel:
+        ok = cancel_slot(load_config(args.channel), args.cancel)
+        if not ok:
+            return 1
+        # sigue: se vuelve a programar la franja vacía con una historia nueva
+
     if args.stats:
         update_stats(load_config(args.channel))
         return 0

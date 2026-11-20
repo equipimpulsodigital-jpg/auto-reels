@@ -328,3 +328,11 @@ def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
     if not out:
         out["total"] = _metrics(data)
     return out
+
+
+def cancel_scheduled(job_id: str) -> bool:
+    """Borra de Upload-Post una publicación programada (todavía no publicada)."""
+    headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
+    r = requests.delete(f"{API}/uploadposts/schedule/{job_id}", headers=headers, timeout=60)
+    print(f"  Upload-Post: {r.status_code} {r.text[:300]}")
+    return r.status_code < 300

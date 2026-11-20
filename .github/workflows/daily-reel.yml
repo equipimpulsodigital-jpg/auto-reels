@@ -20,7 +20,7 @@ on:
       mode:
         description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya · estado = cómo acabaron las últimas publicaciones · estadisticas = visualizaciones de cada vídeo"
         type: choice
-        options: [prueba, programar, ahora, estado, estadisticas, quitar_etiqueta, cuentas]
+        options: [prueba, programar, ahora, estado, estadisticas, cancelar, quitar_etiqueta, cuentas]
         default: prueba
       new_story:
         description: "Empezar historia nueva (aunque quede una parte pendiente)"
@@ -32,6 +32,10 @@ on:
         default: ""
       format:
         description: "Formato de la historia nueva (vacío = alterna; ver formats en config.yaml)"
+        type: string
+        default: ""
+      franja:
+        description: "Solo para «cancelar»: franja a quitar y volver a llenar, p. ej. 2026-11-21 10:00"
         type: string
         default: ""
       force:
@@ -74,6 +78,7 @@ jobs:
             echo "go=false" >> "$GITHUB_OUTPUT"; echo "Este canal no se ha elegido."; exit 0
           fi
           if [ "${{ inputs.mode }}" = "estado" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "status=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "${{ inputs.mode }}" = "cancelar" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ inputs.mode }}" = "estadisticas" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "stats=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ inputs.mode }}" = "cuentas" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "accounts=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ inputs.mode }}" = "quitar_etiqueta" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "unlabel=true" >> "$GITHUB_OUTPUT"; exit 0; fi
@@ -152,6 +157,7 @@ jobs:
             if [ "${{ inputs.new_story }}" = "true" ]; then ARGS+=(--new); fi
             if [ -n "$FORMAT" ]; then ARGS+=(--format "$FORMAT"); fi
             if [ -n "$TOPIC" ]; then ARGS+=(--topic "$TOPIC"); fi
+            if [ "${{ inputs.mode }}" = "cancelar" ]; then ARGS+=(--cancel "${{ inputs.franja }}"); fi
           fi
           # antes de escribir la historia de cada noche, se miran las visualizaciones (el guionista aprende de ellas)
           if [ "${{ github.event.schedule }}" = "5 3 * * *" ]; then python -m reels --stats --channel "$CH" || true; fi
