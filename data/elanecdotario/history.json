@@ -87,5 +87,52 @@
       "isbn": "9788426411792",
       "pitch": "Un clásico para recorrer la historia del cine desde sus primeros fotogramas. Te engancha."
     }
+  },
+  {
+    "date": "2026-11-20",
+    "format": "enigma",
+    "topic": "La goleta Carroll A. Deering, hallada encallada y sin sus 11 tripulantes en Diamond Shoals en enero de 1921",
+    "series_title": "El barco fantasma de Diamond Shoals: la Carroll A. Deering",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T19:00:00+01:00",
+        "request_id": "e2d33e87f1f64b60bc4fc7c5342af752",
+        "job_id": "b7ed311141d0488daae650e091d1805c",
+        "failed": [],
+        "at": "2026-11-20T11:07:26+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T22:00:00+01:00",
+        "request_id": "f44d784c4f314ab9aa9729504359fddc",
+        "job_id": "259aae730cb340b59508d8bd5587b8a9",
+        "failed": [],
+        "at": "2026-11-20T11:13:27+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-20",
+    "format": "caso_sin_resolver",
+    "topic": "La mujer de Isdal: hallada quemada en un valle de Bergen en 1970, sin etiquetas en la ropa, con nombres falsos y una nota en clave; sigue sin identificar",
+    "series_title": "La mujer de Isdal: la desconocida que borró su propia existencia",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T10:00:00+01:00",
+        "request_id": "21d9bc711a6e4497957352a198aac7f0",
+        "job_id": "ab8da071659b4557b6aa03ecbd5a9e96",
+        "failed": [],
+        "at": "2026-11-20T11:22:25+00:00"
+      }
+    ],
+    "book": null
   }
 ]

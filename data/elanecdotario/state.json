@@ -1,12 +1,851 @@
 {
-  "queue": [],
-  "last_published": "2026-11-19T14:52:06+00:00",
+  "queue": [
+    {
+      "series": {
+        "series_title": "La mujer de Isdal: la desconocida que borró su propia existencia",
+        "format": "caso_sin_resolver",
+        "year": "1970",
+        "place": "Isdalen (valle del Hielo), Bergen, Noruega",
+        "topic": "La mujer de Isdal: hallada quemada en un valle de Bergen en 1970, sin etiquetas en la ropa, con nombres falsos y una nota en clave; sigue sin identificar",
+        "era": "1950",
+        "characters": [
+          {
+            "id": "excursionista",
+            "name": "El excursionista",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "rubio",
+              "hair_style": "corto",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "barba_corta",
+              "beard_color": "rubio",
+              "outfit": "jersey",
+              "outfit_color": "verde_oscuro",
+              "accent_color": "dorado",
+              "pants_color": "marron",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "azules",
+              "glasses": false
+            }
+          },
+          {
+            "id": "policia",
+            "name": "Inspector",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "clara",
+              "hair_color": "canoso",
+              "hair_style": "corto",
+              "hat": "sombrero",
+              "hat_color": "gris",
+              "beard": "bigote",
+              "beard_color": "canoso",
+              "outfit": "traje",
+              "outfit_color": "gris",
+              "accent_color": "negro",
+              "pants_color": "gris",
+              "nose": "aguileña",
+              "jaw": "cuadrada",
+              "eyes": "azules",
+              "glasses": false
+            }
+          },
+          {
+            "id": "recepcionista",
+            "name": "Recepcionista",
+            "voice": "mujer_joven",
+            "look": {
+              "female": true,
+              "age": "joven",
+              "skin": "clara",
+              "hair_color": "rubio",
+              "hair_style": "moño",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "ninguna",
+              "beard_color": null,
+              "outfit": "vestido",
+              "outfit_color": "granate",
+              "accent_color": "blanco",
+              "pants_color": "gris",
+              "nose": "pequeña",
+              "jaw": "fina",
+              "eyes": "verdes",
+              "glasses": false
+            }
+          },
+          {
+            "id": "mujer",
+            "name": "La mujer de Isdal",
+            "voice": "frances",
+            "look": {
+              "female": true,
+              "age": "adulto",
+              "skin": "clara",
+              "hair_color": "negro",
+              "hair_style": "largo",
+              "hat": "sombrero",
+              "hat_color": "negro",
+              "beard": "ninguna",
+              "beard_color": null,
+              "outfit": "vestido",
+              "outfit_color": "azul_marino",
+              "accent_color": "dorado",
+              "pants_color": "gris",
+              "nose": "aguileña",
+              "jaw": "fina",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          }
+        ],
+        "historical_notes": "Documentado: el 29 de noviembre de 1970 un hombre y sus hijas encontraron en Isdalen (Bergen) el cuerpo quemado de una mujer. Alrededor había restos quemados y objetos como un reloj, pendientes y un paraguas, pero nada que la identificara; a su ropa le habían quitado las etiquetas. La autopsia encontró decenas de somníferos (Fenemal) en su cuerpo y hollín en los pulmones (seguía viva durante el fuego). Días después aparecieron en la consigna de la estación de Bergen dos maletas suyas con pelucas, gafas sin graduación, ropa sin etiquetas y objetos con las huellas borradas, además de una nota en clave que resultó ser un registro de fechas y lugares. Había viajado por Noruega y Europa con varios nombres falsos (Fenella Lorch, Vera Schlosseneck, Claudia Tielt, entre otros) y al dejar el hotel de Bergen pagó en efectivo y pidió un taxi. El personal la recordaba hablando alemán. La policía cerró el caso como suicidio. Enterrada en 1971 en Bergen sin identificar. En 2017-2018, la investigación de NRK y la BBC (pódcast «Death in Ice Valley») analizó isótopos de sus dientes: nació hacia 1930, probablemente en la zona de Núremberg. Teorías, sin confirmar: espionaje en la Guerra Fría (Noruega probaba entonces misiles Penguin y hay quien relaciona sus viajes con esas pruebas), asesinato o suicidio. Los diálogos son recreaciones de lo que vieron y se preguntaron testigos e investigadores; no son citas literales.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_candidates": [
+              "Le habían quitado la etiqueta a cada prenda de su ropa.",
+              "Decenas de somníferos en el cuerpo, y aun así seguía viva entre las llamas.",
+              "Si hubieras subido a ese valle aquel día, la habrías encontrado tú.",
+              "El humo todavía salía de las rocas cuando las niñas la vieron.",
+              "Alguien arrancó todas las etiquetas de su ropa."
+            ],
+            "hook_title": "¿QUIÉN ERA ELLA?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Alguien arrancó todas las etiquetas de su ropa.",
+                "location": "bosque",
+                "framing": "general",
+                "cast": [
+                  "mujer"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "fuego",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "etiquetas",
+                "visual_direction": "Silueta de la mujer entre los árboles con el resplandor de un fuego detrás."
+              },
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Y apareció quemada en un valle helado.",
+                "location": "bosque",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": "quemada",
+                "visual_direction": "El valle rocoso y vacío al atardecer, con humo saliendo de entre las piedras."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Noruega, 29 de noviembre de 1970.",
+                "location": "bosque",
+                "framing": "general",
+                "cast": [
+                  "excursionista"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El excursionista camina por el sendero del valle de Isdalen, cerca de Bergen."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "excursionista",
+                "narration": "¡Niñas, atrás! Hay alguien entre las piedras.",
+                "location": "bosque",
+                "framing": "personaje",
+                "cast": [
+                  "excursionista"
+                ],
+                "gesture": "point",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El padre frena en seco y señala hacia las rocas, aterrado."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "policia",
+                "narration": "Un reloj, pendientes... y ni un documento.",
+                "location": "bosque",
+                "framing": "dos",
+                "cast": [
+                  "policia",
+                  "excursionista"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El inspector enumera lo encontrado junto al cuerpo mientras el excursionista escucha."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "excursionista",
+                "narration": "¿Nadie sabe quién es?",
+                "location": "bosque",
+                "framing": "personaje",
+                "cast": [
+                  "excursionista",
+                  "policia"
+                ],
+                "gesture": "shrug",
+                "emotion": "sorprendido",
+                "listener_emotion": "serio",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Primer plano del excursionista, incrédulo, con la nuca del inspector delante."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "policia",
+                "narration": "Ni cartera, ni nombre. Nada.",
+                "location": "bosque",
+                "framing": "personaje",
+                "cast": [
+                  "policia",
+                  "excursionista"
+                ],
+                "gesture": "idle",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "Nada",
+                "visual_direction": "Contraplano del inspector, grave, negando con la cabeza."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Y la autopsia encontró algo peor.",
+                "location": "despacho",
+                "framing": "general",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": null,
+                "visual_direction": "El inspector, solo en su despacho de noche, abre el informe de la autopsia."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Decenas de pastillas para dormir en su cuerpo.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "veneno",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "Decenas",
+                "visual_direction": "Primer plano de un frasco de pastillas sobre el informe."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Y hollín en los pulmones: seguía viva.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "idle",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "viva",
+                "visual_direction": "El inspector levanta la vista del informe, helado."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "policia",
+                "narration": "¿Suicidio? No me cuadra.",
+                "location": "despacho",
+                "framing": "general",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "think",
+                "emotion": "desconfiado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El inspector se levanta y piensa junto a la ventana, con la mano en la barbilla."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Días después aparecen sus maletas en la estación.",
+                "location": "estacion",
+                "framing": "general",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": null,
+                "visual_direction": "El inspector cruza el andén de la estación de Bergen hacia la consigna."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Pelucas. Ropa sin etiquetas. Gafas sin graduación.",
+                "location": "estacion",
+                "framing": "personaje",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "idle",
+                "emotion": "sorprendido",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El inspector mira dentro de las maletas abiertas sin dar crédito."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "policia",
+                "narration": "Han borrado las huellas. De todo.",
+                "location": "estacion",
+                "framing": "general",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El inspector cierra el puño junto a las maletas en el andén."
+              },
+              {
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Y entre sus cosas, una nota en clave.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "carta",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "clave",
+                "visual_direction": "Primer plano de un papel con letras y números en clave bajo la lámpara."
+              },
+              {
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Descifrada, revela un rastro por media Europa.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "mapa",
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "Europa",
+                "visual_direction": "Un mapa de Europa con una ruta marcada que se va dibujando ciudad a ciudad."
+              }
+            ],
+            "cliffhanger": "La nota en clave, una vez descifrada, revela que la mujer recorrió media Europa: ¿quién era y de quién huía?",
+            "caption": "La encontraron en un valle de Bergen y nadie pudo ponerle nombre.\nSin etiquetas en la ropa, con pelucas en la maleta y las huellas borradas.\nLa mujer de Isdal, Noruega, 1970.\nParte 1/2\n¿Quién crees que se esconde así?",
+            "hashtags": [
+              "misterio",
+              "casossinresolver",
+              "mujerdeisdal",
+              "noruega",
+              "bergen"
+            ],
+            "youtube_title": "La mujer de Isdal: sin nombre y sin huellas | Parte 1",
+            "youtube_description": "La mujer de Isdal: el caso sin resolver más extraño de Noruega. En 1970 apareció quemada en un valle de Bergen, sin etiquetas en la ropa y sin un solo documento.\nUn padre y sus hijas encuentran el cuerpo. La autopsia y dos maletas abandonadas en la estación complican todo: pelucas, huellas borradas y una nota escrita en clave.\nFuentes: investigación de NRK y BBC «Death in Ice Valley» (2018); archivos de la policía de Bergen sobre el caso Isdalskvinnen."
+          },
+          {
+            "part_number": 2,
+            "hook_candidates": [
+              "Cambió de nombre en cada hotel. Ninguno era real.",
+              "Sus dientes, analizados casi cincuenta años después, revelaron dónde nació.",
+              "Si hubieras sido recepcionista en Bergen, le habrías dado la llave sin sospechar nada.",
+              "Paga en efectivo, pide un taxi... y desaparece para siempre.",
+              "Viajaba con pelucas y nombres falsos mientras Noruega probaba misiles en secreto."
+            ],
+            "hook_title": "¿POR QUÉ SE ESCONDÍA?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Cambió de nombre en cada hotel. Ninguno era real.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "Ninguno",
+                "visual_direction": "Fichas de hotel con firmas distintas se amontonan bajo la lámpara."
+              },
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Fenella Lorch. Vera Schlosseneck. Claudia Tielt.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [
+                  "mujer"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "La mujer camina sola bajo las farolas de una ciudad europea."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "La mujer de Isdalen, 1970.",
+                "location": "bosque",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": "fuego",
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El valle de Isdalen con humo entre las rocas, recordando el hallazgo."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "policia",
+                "narration": "La nota en clave... son fechas y ciudades.",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El inspector, con la nota en la mano, empieza a entenderla."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "recepcionista",
+                "narration": "Aquí pagó en efectivo y pidió un taxi.",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "recepcionista",
+                  "policia"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "desconfiado",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": "efectivo",
+                "visual_direction": "La recepcionista del hotel de Bergen responde al inspector."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "policia",
+                "narration": "¿Habló con alguien? ¿Alguna visita?",
+                "location": "salon",
+                "framing": "personaje",
+                "cast": [
+                  "policia",
+                  "recepcionista"
+                ],
+                "gesture": "point",
+                "emotion": "desconfiado",
+                "listener_emotion": "pensativo",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Contraplano del inspector, insistente."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "recepcionista",
+                "narration": "Hablaba alemán. Poco más sé.",
+                "location": "salon",
+                "framing": "dos",
+                "cast": [
+                  "recepcionista",
+                  "policia"
+                ],
+                "gesture": "shrug",
+                "emotion": "pensativo",
+                "listener_emotion": "serio",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Los dos juntos en la recepción; ella se encoge de hombros."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Muchos creen que era una espía.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [
+                  "mujer"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": "espía",
+                "visual_direction": "La mujer pasea de noche por un muelle noruego, mirando al mar."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "narrador",
+                "narration": "Noruega probaba misiles secretos entonces.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "explosion",
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Un fogonazo ilumina el mar frente a la costa en plena noche."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "policia",
+                "narration": "¿Y si la eliminaron por saber demasiado?",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El inspector plantea la teoría en voz baja en su despacho."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "narrador",
+                "narration": "La versión oficial dice otra cosa: suicidio.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "periodico",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": "suicidio",
+                "visual_direction": "Un periódico de 1971 anuncia el cierre del caso."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "policia",
+                "narration": "¿Con las huellas borradas?",
+                "location": "despacho",
+                "framing": "general",
+                "cast": [
+                  "policia"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El inspector golpea la mesa, incapaz de aceptar la versión oficial."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "En 2017, el análisis de sus dientes habla.",
+                "location": "laboratorio",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": null,
+                "visual_direction": "Un laboratorio moderno con muestras y fórmulas en la pizarra."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Nació hacia 1930, cerca de Núremberg.",
+                "location": "laboratorio",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "tierra",
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "Núremberg",
+                "visual_direction": "La Tierra gira y se detiene sobre el sur de Alemania."
+              },
+              {
+                "label": "FINAL",
+                "speaker": "narrador",
+                "narration": "Hoy sigue enterrada sin nombre en Bergen.",
+                "location": "iglesia",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Interior de una iglesia con velas encendidas, silencioso y vacío."
+              },
+              {
+                "label": "FINAL",
+                "speaker": "narrador",
+                "narration": "Esperando que alguien pronuncie su verdadero nombre.",
+                "location": "bosque",
+                "framing": "general",
+                "cast": [
+                  "mujer"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "nombre",
+                "visual_direction": "La silueta de la mujer se aleja entre los árboles y se funde con la oscuridad."
+              }
+            ],
+            "cliffhanger": "Sabemos más o menos dónde nació, pero no quién era: sigue enterrada sin nombre en Bergen.",
+            "caption": "Usó al menos tres nombres falsos y ninguno era el suyo.\nEspía en plena Guerra Fría, asesinato o suicidio: la mujer de Isdal sigue sin identificar.\nSus dientes revelaron dónde nació.\nParte 2/2\n¿Espía o suicidio? ¿Tú qué crees?",
+            "hashtags": [
+              "misterio",
+              "casossinresolver",
+              "mujerdeisdal",
+              "guerrafria",
+              "noruega"
+            ],
+            "youtube_title": "La mujer de Isdal: ¿espía o suicidio? | Parte 2",
+            "youtube_description": "La mujer de Isdal usaba nombres falsos, pelucas y una nota en clave. ¿Fue una espía de la Guerra Fría en Noruega o se suicidó?\nRepasamos lo que contó el hotel de Bergen, la teoría del espionaje durante las pruebas secretas de misiles y la versión oficial. El análisis de sus dientes en 2017 desveló una pista, pero no su nombre.\nFuentes: NRK y BBC, «Death in Ice Valley» (2018); archivos de la policía de Bergen sobre el caso Isdalskvinnen."
+          }
+        ],
+        "book": null
+      },
+      "part": 1
+    }
+  ],
+  "last_published": "2026-11-20T11:22:25+00:00",
   "scheduled": [
     "2026-11-19T13:00:00+01:00",
     "2026-11-19T16:00:00+01:00",
     "2026-11-19T19:00:00+01:00",
     "2026-11-19T22:00:00+01:00",
     "2026-11-20T10:00:00+01:00",
-    "2026-11-20T13:00:00+01:00"
+    "2026-11-20T13:00:00+01:00",
+    "2026-11-20T19:00:00+01:00",
+    "2026-11-20T22:00:00+01:00",
+    "2026-11-21T10:00:00+01:00"
   ]
 }
