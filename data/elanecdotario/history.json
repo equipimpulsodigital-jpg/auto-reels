@@ -131,6 +131,34 @@
         "job_id": "ab8da071659b4557b6aa03ecbd5a9e96",
         "failed": [],
         "at": "2026-11-20T11:22:25+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-20",
+        "slot": "2026-11-20T16:00:00+01:00",
+        "request_id": "22400211cf464d9792ec2521bd008470",
+        "job_id": "6653b0b3aa654e419bbf7b5b1a303a29",
+        "failed": [],
+        "at": "2026-11-20T12:49:45+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-20",
+    "format": "enigma",
+    "topic": "La plaga del baile de 1518 en Estrasburgo: cientos de personas bailaron sin control durante semanas y aún no hay una explicación cerrada",
+    "series_title": "La epidemia de baile de Estrasburgo",
+    "parts": 2,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T13:00:00+01:00",
+        "request_id": "3652d297541143b2a0e36df471cc27fb",
+        "job_id": "7225c7dde07f444faef1ad5e5663c6d7",
+        "failed": [],
+        "at": "2026-11-20T12:56:42+00:00"
       }
     ],
     "book": null

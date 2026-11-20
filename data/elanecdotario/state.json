@@ -2,40 +2,64 @@
   "queue": [
     {
       "series": {
-        "series_title": "La mujer de Isdal: la desconocida que borró su propia existencia",
-        "format": "caso_sin_resolver",
-        "year": "1970",
-        "place": "Isdalen (valle del Hielo), Bergen, Noruega",
-        "topic": "La mujer de Isdal: hallada quemada en un valle de Bergen en 1970, sin etiquetas en la ropa, con nombres falsos y una nota en clave; sigue sin identificar",
-        "era": "1950",
+        "series_title": "La epidemia de baile de Estrasburgo",
+        "format": "enigma",
+        "year": "1518",
+        "place": "Estrasburgo (Sacro Imperio Romano Germánico, hoy Francia)",
+        "topic": "La plaga del baile de 1518 en Estrasburgo: cientos de personas bailaron sin control durante semanas y aún no hay una explicación cerrada",
+        "era": "1500",
         "characters": [
           {
-            "id": "excursionista",
-            "name": "El excursionista",
-            "voice": "hombre_joven",
+            "id": "troffea",
+            "name": "Frau Troffea",
+            "voice": "mujer",
             "look": {
-              "female": false,
+              "female": true,
               "age": "adulto",
               "skin": "clara",
-              "hair_color": "rubio",
-              "hair_style": "corto",
-              "hat": "ninguno",
-              "hat_color": "negro",
-              "beard": "barba_corta",
-              "beard_color": "rubio",
-              "outfit": "jersey",
-              "outfit_color": "verde_oscuro",
-              "accent_color": "dorado",
-              "pants_color": "marron",
-              "nose": "patata",
-              "jaw": "redonda",
+              "hair_color": "castaño",
+              "hair_style": "moño",
+              "hat": "pañuelo",
+              "hat_color": "blanco",
+              "beard": "ninguna",
+              "beard_color": null,
+              "outfit": "vestido",
+              "outfit_color": "granate",
+              "accent_color": "crema",
+              "pants_color": "gris",
+              "nose": "pequeña",
+              "jaw": "fina",
               "eyes": "azules",
               "glasses": false
             }
           },
           {
-            "id": "policia",
-            "name": "Inspector",
+            "id": "marido",
+            "name": "Su marido",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "adulto",
+              "skin": "media",
+              "hair_color": "negro",
+              "hair_style": "corto",
+              "hat": "gorra_plana",
+              "hat_color": "marron",
+              "beard": "barba_corta",
+              "beard_color": "negro",
+              "outfit": "campesino",
+              "outfit_color": "marron",
+              "accent_color": "dorado",
+              "pants_color": "beige",
+              "nose": "patata",
+              "jaw": "redonda",
+              "eyes": "marrones",
+              "glasses": false
+            }
+          },
+          {
+            "id": "medico",
+            "name": "Médico",
             "voice": "hombre_mayor",
             "look": {
               "female": false,
@@ -44,111 +68,111 @@
               "hair_color": "canoso",
               "hair_style": "corto",
               "hat": "sombrero",
-              "hat_color": "gris",
-              "beard": "bigote",
+              "hat_color": "negro",
+              "beard": "perilla",
               "beard_color": "canoso",
-              "outfit": "traje",
-              "outfit_color": "gris",
-              "accent_color": "negro",
-              "pants_color": "gris",
+              "outfit": "noble",
+              "outfit_color": "negro",
+              "accent_color": "blanco",
+              "pants_color": "negro",
+              "nose": "gancho",
+              "jaw": "fina",
+              "eyes": "marrones",
+              "glasses": true
+            }
+          },
+          {
+            "id": "consejero",
+            "name": "Consejero",
+            "voice": "hombre_mayor",
+            "look": {
+              "female": false,
+              "age": "mayor",
+              "skin": "media",
+              "hair_color": "blanco",
+              "hair_style": "calvo",
+              "hat": "boina",
+              "hat_color": "morado",
+              "beard": "bigotazo",
+              "beard_color": "blanco",
+              "outfit": "noble",
+              "outfit_color": "morado",
+              "accent_color": "dorado",
+              "pants_color": "negro",
               "nose": "aguileña",
               "jaw": "cuadrada",
-              "eyes": "azules",
-              "glasses": false
-            }
-          },
-          {
-            "id": "recepcionista",
-            "name": "Recepcionista",
-            "voice": "mujer_joven",
-            "look": {
-              "female": true,
-              "age": "joven",
-              "skin": "clara",
-              "hair_color": "rubio",
-              "hair_style": "moño",
-              "hat": "ninguno",
-              "hat_color": "negro",
-              "beard": "ninguna",
-              "beard_color": null,
-              "outfit": "vestido",
-              "outfit_color": "granate",
-              "accent_color": "blanco",
-              "pants_color": "gris",
-              "nose": "pequeña",
-              "jaw": "fina",
-              "eyes": "verdes",
-              "glasses": false
-            }
-          },
-          {
-            "id": "mujer",
-            "name": "La mujer de Isdal",
-            "voice": "frances",
-            "look": {
-              "female": true,
-              "age": "adulto",
-              "skin": "clara",
-              "hair_color": "negro",
-              "hair_style": "largo",
-              "hat": "sombrero",
-              "hat_color": "negro",
-              "beard": "ninguna",
-              "beard_color": null,
-              "outfit": "vestido",
-              "outfit_color": "azul_marino",
-              "accent_color": "dorado",
-              "pants_color": "gris",
-              "nose": "aguileña",
-              "jaw": "fina",
               "eyes": "marrones",
               "glasses": false
             }
           }
         ],
-        "historical_notes": "Documentado: el 29 de noviembre de 1970 un hombre y sus hijas encontraron en Isdalen (Bergen) el cuerpo quemado de una mujer. Alrededor había restos quemados y objetos como un reloj, pendientes y un paraguas, pero nada que la identificara; a su ropa le habían quitado las etiquetas. La autopsia encontró decenas de somníferos (Fenemal) en su cuerpo y hollín en los pulmones (seguía viva durante el fuego). Días después aparecieron en la consigna de la estación de Bergen dos maletas suyas con pelucas, gafas sin graduación, ropa sin etiquetas y objetos con las huellas borradas, además de una nota en clave que resultó ser un registro de fechas y lugares. Había viajado por Noruega y Europa con varios nombres falsos (Fenella Lorch, Vera Schlosseneck, Claudia Tielt, entre otros) y al dejar el hotel de Bergen pagó en efectivo y pidió un taxi. El personal la recordaba hablando alemán. La policía cerró el caso como suicidio. Enterrada en 1971 en Bergen sin identificar. En 2017-2018, la investigación de NRK y la BBC (pódcast «Death in Ice Valley») analizó isótopos de sus dientes: nació hacia 1930, probablemente en la zona de Núremberg. Teorías, sin confirmar: espionaje en la Guerra Fría (Noruega probaba entonces misiles Penguin y hay quien relaciona sus viajes con esas pruebas), asesinato o suicidio. Los diálogos son recreaciones de lo que vieron y se preguntaron testigos e investigadores; no son citas literales.",
+        "historical_notes": "Documentado (actas municipales, crónicas de la época y el relato posterior de Paracelso): en julio de 1518 una mujer llamada Frau Troffea empezó a bailar en una calle de Estrasburgo y siguió durante varios días; en una semana se le unieron unas treinta personas y, según algunas fuentes, en agosto llegaron a ser hasta unas 400 (cifra discutida). Los médicos lo atribuyeron a 'sangre caliente', una causa natural, y recomendaron más baile: el consejo cedió salones de gremios, montó un escenario de madera, contrató músicos y pagó a hombres para sostener a los bailarines. Después cambió de criterio, prohibió el baile y la música en público (además del juego y la prostitución) y envió a los afectados al santuario de San Vito, cerca de Saverne, donde hubo rezos, cruces, aceite santo y zapatos rojos. A principios de septiembre la epidemia se extinguió. Incierto: el número exacto de bailarines y de muertos (la cifra de 15 muertos al día procede de fuentes tardías poco fiables). Teorías: ergotismo por cornezuelo del centeno (cuestionada porque provoca convulsiones y mala circulación, no baile prolongado); enfermedad psicógena masiva en un contexto de hambruna, viruela, sífilis y creencia en la maldición de San Vito (John Waller). Hubo brotes similares en 1374 en la región del Rin. Los diálogos son recreaciones coherentes con los hechos; el nombre del marido y de los médicos y consejeros no se usa.",
         "parts": [
           {
             "part_number": 1,
             "hook_candidates": [
-              "Le habían quitado la etiqueta a cada prenda de su ropa.",
-              "Decenas de somníferos en el cuerpo, y aun así seguía viva entre las llamas.",
-              "Si hubieras subido a ese valle aquel día, la habrías encontrado tú.",
-              "El humo todavía salía de las rocas cuando las niñas la vieron.",
-              "Alguien arrancó todas las etiquetas de su ropa."
+              "Una mujer empieza a bailar... y no puede parar.",
+              "Treinta vecinos bailaban en la calle. Una semana después, cuatrocientos.",
+              "Si hubieras vivido en Estrasburgo en 1518, quizá bailarías hasta caer.",
+              "Le sangran los pies, la música no para, y ella sigue bailando.",
+              "Los médicos recetaron la cura más absurda: bailar todavía más."
             ],
-            "hook_title": "¿QUIÉN ERA ELLA?",
+            "hook_title": "¿POR QUÉ NO PARA?",
             "blocks": [
               {
                 "label": "GANCHO",
                 "speaker": "narrador",
-                "narration": "Alguien arrancó todas las etiquetas de su ropa.",
-                "location": "bosque",
+                "narration": "Una mujer empieza a bailar... y no puede parar.",
+                "location": "ciudad",
                 "framing": "general",
                 "cast": [
-                  "mujer"
+                  "troffea"
                 ],
                 "gesture": "explain",
-                "emotion": "neutral",
+                "emotion": "asustado",
                 "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": "fuego",
+                "mood": "dia",
+                "event": null,
                 "prop": null,
-                "walk": false,
+                "walk": true,
                 "camera": "push_in",
                 "sfx": [
                   "hit"
                 ],
-                "emphasis": "etiquetas",
-                "visual_direction": "Silueta de la mujer entre los árboles con el resplandor de un fuego detrás."
+                "emphasis": "parar",
+                "visual_direction": "Frau Troffea gira sola en mitad de una calle adoquinada mientras los vecinos la miran desde los balcones."
               },
               {
-                "label": "GANCHO",
+                "label": "SUBE LA APUESTA",
                 "speaker": "narrador",
-                "narration": "Y apareció quemada en un valle helado.",
-                "location": "bosque",
+                "narration": "Le sangran los pies. Sigue bailando.",
+                "location": "ciudad",
+                "framing": "personaje",
+                "cast": [
+                  "troffea"
+                ],
+                "gesture": "idle",
+                "emotion": "asustado",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": "sangran",
+                "visual_direction": "Primer plano de Troffea, agotada y aterrada, sin dejar de moverse al caer la tarde."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Estrasburgo, julio de 1518. Frau Troffea.",
+                "location": "ciudad",
                 "framing": "general",
-                "cast": [],
+                "cast": [
+                  "troffea",
+                  "marido"
+                ],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
@@ -158,64 +182,109 @@
                 "walk": false,
                 "camera": "pull_back",
                 "sfx": [],
-                "emphasis": "quemada",
-                "visual_direction": "El valle rocoso y vacío al atardecer, con humo saliendo de entre las piedras."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "narrador",
-                "narration": "Noruega, 29 de noviembre de 1970.",
-                "location": "bosque",
-                "framing": "general",
-                "cast": [
-                  "excursionista"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "static",
-                "sfx": [],
                 "emphasis": null,
-                "visual_direction": "El excursionista camina por el sendero del valle de Isdalen, cerca de Bergen."
+                "visual_direction": "Plano amplio de la ciudad medieval; el marido corre hacia ella entre los adoquines."
               },
               {
-                "label": "CONTEXTO",
-                "speaker": "excursionista",
-                "narration": "¡Niñas, atrás! Hay alguien entre las piedras.",
-                "location": "bosque",
+                "label": "TENSIÓN",
+                "speaker": "marido",
+                "narration": "¡Para ya, mujer! ¡Te vas a matar!",
+                "location": "ciudad",
                 "framing": "personaje",
                 "cast": [
-                  "excursionista"
+                  "marido",
+                  "troffea"
                 ],
-                "gesture": "point",
+                "gesture": "wave",
                 "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "dia",
+                "listener_emotion": "asustado",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El marido le grita desesperado bajo la luz de las farolas."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "troffea",
+                "narration": "¡No puedo! ¡Las piernas no me obedecen!",
+                "location": "ciudad",
+                "framing": "personaje",
+                "cast": [
+                  "troffea",
+                  "marido"
+                ],
+                "gesture": "chest",
+                "emotion": "asustado",
+                "listener_emotion": "sorprendido",
+                "mood": "noche",
                 "event": null,
                 "prop": null,
                 "walk": false,
                 "camera": "shake",
                 "sfx": [],
                 "emphasis": null,
-                "visual_direction": "El padre frena en seco y señala hacia las rocas, aterrado."
+                "visual_direction": "Contraplano: Troffea llora mientras sus pies siguen moviéndose solos."
               },
               {
-                "label": "TENSIÓN",
-                "speaker": "policia",
-                "narration": "Un reloj, pendientes... y ni un documento.",
-                "location": "bosque",
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Y entonces, alguien se une a ella.",
+                "location": "ciudad",
                 "framing": "dos",
                 "cast": [
-                  "policia",
-                  "excursionista"
+                  "troffea",
+                  "marido"
                 ],
                 "gesture": "explain",
-                "emotion": "serio",
+                "emotion": "asustado",
                 "listener_emotion": "asustado",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [
+                  "whoosh"
+                ],
+                "emphasis": null,
+                "visual_direction": "Una sombra entra en la calle y empieza a moverse al ritmo de Troffea; el marido retrocede."
+              },
+              {
+                "label": "CONTAGIO",
+                "speaker": "narrador",
+                "narration": "En una semana, son más de treinta.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": "multitud",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": "treinta",
+                "visual_direction": "Decenas de siluetas agitan los brazos y bailan por toda la calle."
+              },
+              {
+                "label": "EL CONSEJO",
+                "speaker": "consejero",
+                "narration": "¿Qué mal obliga a bailar así?",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "consejero",
+                  "medico"
+                ],
+                "gesture": "think",
+                "emotion": "desconfiado",
+                "listener_emotion": "serio",
                 "mood": "dia",
                 "event": null,
                 "prop": null,
@@ -223,17 +292,39 @@
                 "camera": "push_in",
                 "sfx": [],
                 "emphasis": null,
-                "visual_direction": "El inspector enumera lo encontrado junto al cuerpo mientras el excursionista escucha."
+                "visual_direction": "En el despacho del ayuntamiento, el consejero interroga al médico."
               },
               {
-                "label": "TENSIÓN",
-                "speaker": "excursionista",
-                "narration": "¿Nadie sabe quién es?",
-                "location": "bosque",
+                "label": "EL CONSEJO",
+                "speaker": "medico",
+                "narration": "Sangre caliente. Se cura... bailando más.",
+                "location": "despacho",
                 "framing": "personaje",
                 "cast": [
-                  "excursionista",
-                  "policia"
+                  "medico",
+                  "consejero"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "sorprendido",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El médico, muy seguro, explica su diagnóstico con las manos."
+              },
+              {
+                "label": "EL CONSEJO",
+                "speaker": "consejero",
+                "narration": "¿Más baile? ¿Habláis en serio?",
+                "location": "despacho",
+                "framing": "dos",
+                "cast": [
+                  "consejero",
+                  "medico"
                 ],
                 "gesture": "shrug",
                 "emotion": "sorprendido",
@@ -242,259 +333,22 @@
                 "event": null,
                 "prop": null,
                 "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "emphasis": null,
-                "visual_direction": "Primer plano del excursionista, incrédulo, con la nuca del inspector delante."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "policia",
-                "narration": "Ni cartera, ni nombre. Nada.",
-                "location": "bosque",
-                "framing": "personaje",
-                "cast": [
-                  "policia",
-                  "excursionista"
-                ],
-                "gesture": "idle",
-                "emotion": "serio",
-                "listener_emotion": "asustado",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "emphasis": "Nada",
-                "visual_direction": "Contraplano del inspector, grave, negando con la cabeza."
-              },
-              {
-                "label": "RE-GANCHO",
-                "speaker": "narrador",
-                "narration": "Y la autopsia encontró algo peor.",
-                "location": "despacho",
-                "framing": "general",
-                "cast": [
-                  "policia"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [
-                  "whoosh"
-                ],
-                "emphasis": null,
-                "visual_direction": "El inspector, solo en su despacho de noche, abre el informe de la autopsia."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "Decenas de pastillas para dormir en su cuerpo.",
-                "location": "despacho",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": "veneno",
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "emphasis": "Decenas",
-                "visual_direction": "Primer plano de un frasco de pastillas sobre el informe."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "narrador",
-                "narration": "Y hollín en los pulmones: seguía viva.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "policia"
-                ],
-                "gesture": "idle",
-                "emotion": "asustado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [
-                  "hit"
-                ],
-                "emphasis": "viva",
-                "visual_direction": "El inspector levanta la vista del informe, helado."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "policia",
-                "narration": "¿Suicidio? No me cuadra.",
-                "location": "despacho",
-                "framing": "general",
-                "cast": [
-                  "policia"
-                ],
-                "gesture": "think",
-                "emotion": "desconfiado",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": false,
                 "camera": "push_in",
                 "sfx": [],
                 "emphasis": null,
-                "visual_direction": "El inspector se levanta y piensa junto a la ventana, con la mano en la barbilla."
+                "visual_direction": "Los dos juntos: el consejero incrédulo, el médico impasible."
               },
               {
                 "label": "GIRO",
                 "speaker": "narrador",
-                "narration": "Días después aparecen sus maletas en la estación.",
-                "location": "estacion",
-                "framing": "general",
-                "cast": [
-                  "policia"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "pull_back",
-                "sfx": [
-                  "whoosh"
-                ],
-                "emphasis": null,
-                "visual_direction": "El inspector cruza el andén de la estación de Bergen hacia la consigna."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "narrador",
-                "narration": "Pelucas. Ropa sin etiquetas. Gafas sin graduación.",
-                "location": "estacion",
-                "framing": "personaje",
-                "cast": [
-                  "policia"
-                ],
-                "gesture": "idle",
-                "emotion": "sorprendido",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "emphasis": null,
-                "visual_direction": "El inspector mira dentro de las maletas abiertas sin dar crédito."
-              },
-              {
-                "label": "GIRO",
-                "speaker": "policia",
-                "narration": "Han borrado las huellas. De todo.",
-                "location": "estacion",
-                "framing": "general",
-                "cast": [
-                  "policia"
-                ],
-                "gesture": "fist",
-                "emotion": "enfadado",
-                "listener_emotion": "neutral",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "emphasis": null,
-                "visual_direction": "El inspector cierra el puño junto a las maletas en el andén."
-              },
-              {
-                "label": "CLIFFHANGER",
-                "speaker": "narrador",
-                "narration": "Y entre sus cosas, una nota en clave.",
+                "narration": "La ciudad le hace caso.",
                 "location": "despacho",
                 "framing": "objeto",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": "carta",
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "emphasis": "clave",
-                "visual_direction": "Primer plano de un papel con letras y números en clave bajo la lámpara."
-              },
-              {
-                "label": "CLIFFHANGER",
-                "speaker": "narrador",
-                "narration": "Descifrada, revela un rastro por media Europa.",
-                "location": "despacho",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": "mapa",
-                "walk": false,
-                "camera": "pull_back",
-                "sfx": [
-                  "hit"
-                ],
-                "emphasis": "Europa",
-                "visual_direction": "Un mapa de Europa con una ruta marcada que se va dibujando ciudad a ciudad."
-              }
-            ],
-            "cliffhanger": "La nota en clave, una vez descifrada, revela que la mujer recorrió media Europa: ¿quién era y de quién huía?",
-            "caption": "La encontraron en un valle de Bergen y nadie pudo ponerle nombre.\nSin etiquetas en la ropa, con pelucas en la maleta y las huellas borradas.\nLa mujer de Isdal, Noruega, 1970.\nParte 1/2\n¿Quién crees que se esconde así?",
-            "hashtags": [
-              "misterio",
-              "casossinresolver",
-              "mujerdeisdal",
-              "noruega",
-              "bergen"
-            ],
-            "youtube_title": "La mujer de Isdal: sin nombre y sin huellas | Parte 1",
-            "youtube_description": "La mujer de Isdal: el caso sin resolver más extraño de Noruega. En 1970 apareció quemada en un valle de Bergen, sin etiquetas en la ropa y sin un solo documento.\nUn padre y sus hijas encuentran el cuerpo. La autopsia y dos maletas abandonadas en la estación complican todo: pelucas, huellas borradas y una nota escrita en clave.\nFuentes: investigación de NRK y BBC «Death in Ice Valley» (2018); archivos de la policía de Bergen sobre el caso Isdalskvinnen."
-          },
-          {
-            "part_number": 2,
-            "hook_candidates": [
-              "Cambió de nombre en cada hotel. Ninguno era real.",
-              "Sus dientes, analizados casi cincuenta años después, revelaron dónde nació.",
-              "Si hubieras sido recepcionista en Bergen, le habrías dado la llave sin sospechar nada.",
-              "Paga en efectivo, pide un taxi... y desaparece para siempre.",
-              "Viajaba con pelucas y nombres falsos mientras Noruega probaba misiles en secreto."
-            ],
-            "hook_title": "¿POR QUÉ SE ESCONDÍA?",
-            "blocks": [
-              {
-                "label": "GANCHO",
-                "speaker": "narrador",
-                "narration": "Cambió de nombre en cada hotel. Ninguno era real.",
-                "location": "despacho",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
+                "mood": "dia",
                 "event": null,
                 "prop": "documento",
                 "walk": false,
@@ -502,250 +356,253 @@
                 "sfx": [
                   "hit"
                 ],
-                "emphasis": "Ninguno",
-                "visual_direction": "Fichas de hotel con firmas distintas se amontonan bajo la lámpara."
+                "emphasis": null,
+                "visual_direction": "Una orden oficial sellada sobre el escritorio."
               },
               {
-                "label": "GANCHO",
+                "label": "GIRO",
                 "speaker": "narrador",
-                "narration": "Fenella Lorch. Vera Schlosseneck. Claudia Tielt.",
-                "location": "ciudad",
+                "narration": "Montan un escenario y contratan músicos.",
+                "location": "pueblo",
                 "framing": "general",
                 "cast": [
-                  "mujer"
+                  "troffea"
                 ],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
+                "mood": "dia",
+                "event": "multitud",
                 "prop": null,
                 "walk": true,
                 "camera": "pull_back",
                 "sfx": [],
                 "emphasis": null,
-                "visual_direction": "La mujer camina sola bajo las farolas de una ciudad europea."
+                "visual_direction": "En la plaza levantan un escenario de madera mientras la gente baila delante."
               },
               {
-                "label": "CONTEXTO",
+                "label": "ESCALADA",
                 "speaker": "narrador",
-                "narration": "La mujer de Isdalen, 1970.",
-                "location": "bosque",
+                "narration": "Pagan hombres que sostengan a los que caen.",
+                "location": "pueblo",
+                "framing": "dos",
+                "cast": [
+                  "marido",
+                  "troffea"
+                ],
+                "gesture": "explain",
+                "emotion": "serio",
+                "listener_emotion": "asustado",
+                "mood": "atardecer",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Un hombre sujeta por los brazos a Troffea, que se desploma sin dejar de mover los pies."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Pero la música no cura. Contagia.",
+                "location": "pueblo",
                 "framing": "general",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
                 "mood": "atardecer",
-                "event": "fuego",
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "emphasis": null,
-                "visual_direction": "El valle de Isdalen con humo entre las rocas, recordando el hallazgo."
-              },
-              {
-                "label": "CONTEXTO",
-                "speaker": "policia",
-                "narration": "La nota en clave... son fechas y ciudades.",
-                "location": "despacho",
-                "framing": "personaje",
-                "cast": [
-                  "policia"
-                ],
-                "gesture": "think",
-                "emotion": "pensativo",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
+                "event": "multitud",
                 "prop": null,
                 "walk": false,
                 "camera": "push_in",
                 "sfx": [],
-                "emphasis": null,
-                "visual_direction": "El inspector, con la nota en la mano, empieza a entenderla."
+                "emphasis": "Contagia",
+                "visual_direction": "La muchedumbre crece alrededor del escenario mientras suenan los tambores."
               },
               {
-                "label": "TENSIÓN",
-                "speaker": "recepcionista",
-                "narration": "Aquí pagó en efectivo y pidió un taxi.",
-                "location": "salon",
-                "framing": "personaje",
-                "cast": [
-                  "recepcionista",
-                  "policia"
-                ],
-                "gesture": "explain",
-                "emotion": "serio",
-                "listener_emotion": "desconfiado",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "emphasis": "efectivo",
-                "visual_direction": "La recepcionista del hotel de Bergen responde al inspector."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "policia",
-                "narration": "¿Habló con alguien? ¿Alguna visita?",
-                "location": "salon",
-                "framing": "personaje",
-                "cast": [
-                  "policia",
-                  "recepcionista"
-                ],
-                "gesture": "point",
-                "emotion": "desconfiado",
-                "listener_emotion": "pensativo",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "push_in",
-                "sfx": [],
-                "emphasis": null,
-                "visual_direction": "Contraplano del inspector, insistente."
-              },
-              {
-                "label": "TENSIÓN",
-                "speaker": "recepcionista",
-                "narration": "Hablaba alemán. Poco más sé.",
-                "location": "salon",
-                "framing": "dos",
-                "cast": [
-                  "recepcionista",
-                  "policia"
-                ],
-                "gesture": "shrug",
-                "emotion": "pensativo",
-                "listener_emotion": "serio",
-                "mood": "dia",
-                "event": null,
-                "prop": null,
-                "walk": false,
-                "camera": "static",
-                "sfx": [],
-                "emphasis": null,
-                "visual_direction": "Los dos juntos en la recepción; ella se encoge de hombros."
-              },
-              {
-                "label": "RE-GANCHO",
+                "label": "ESCALADA",
                 "speaker": "narrador",
-                "narration": "Muchos creen que era una espía.",
-                "location": "costa",
-                "framing": "general",
-                "cast": [
-                  "mujer"
-                ],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "noche",
-                "event": null,
-                "prop": null,
-                "walk": true,
-                "camera": "push_in",
-                "sfx": [
-                  "whoosh"
-                ],
-                "emphasis": "espía",
-                "visual_direction": "La mujer pasea de noche por un muelle noruego, mirando al mar."
-              },
-              {
-                "label": "TEORÍAS",
-                "speaker": "narrador",
-                "narration": "Noruega probaba misiles secretos entonces.",
-                "location": "costa",
+                "narration": "En agosto, quizá cuatrocientos bailan sin control.",
+                "location": "ciudad",
                 "framing": "general",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
                 "mood": "noche",
-                "event": "explosion",
+                "event": "multitud",
                 "prop": null,
                 "walk": false,
-                "camera": "shake",
+                "camera": "pull_back",
                 "sfx": [],
-                "emphasis": null,
-                "visual_direction": "Un fogonazo ilumina el mar frente a la costa en plena noche."
+                "emphasis": "cuatrocientos",
+                "visual_direction": "Vista nocturna de la ciudad con siluetas bailando en cada calle."
               },
               {
-                "label": "TEORÍAS",
-                "speaker": "policia",
-                "narration": "¿Y si la eliminaron por saber demasiado?",
-                "location": "despacho",
+                "label": "CLIFFHANGER",
+                "speaker": "narrador",
+                "narration": "Y algunos ya no vuelven a levantarse.",
+                "location": "ciudad",
                 "framing": "personaje",
                 "cast": [
-                  "policia"
+                  "troffea"
+                ],
+                "gesture": "idle",
+                "emotion": "triste",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "static",
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": null,
+                "visual_direction": "Troffea se detiene al fin, exhausta, bajo la lluvia; a su alrededor algunos cuerpos ya no se mueven."
+              }
+            ],
+            "cliffhanger": "La epidemia está fuera de control y empiezan a caer bailarines: ¿qué hará la ciudad y qué lo provocó?",
+            "caption": "En 1518, en Estrasburgo, la gente bailó hasta desplomarse.\nEmpezó con una sola mujer en la calle. En semanas eran cientos.\nY los médicos recetaron… más música.\nParte 1/2\n¿Tú qué crees que les pasaba?",
+            "hashtags": [
+              "misterio",
+              "historia",
+              "epidemiadebaile",
+              "estrasburgo",
+              "plagadelbaile"
+            ],
+            "youtube_title": "La epidemia de baile de Estrasburgo de 1518 | Parte 1",
+            "youtube_description": "La epidemia de baile de 1518: en Estrasburgo, cientos de personas bailaron durante semanas sin poder parar.\nTodo empezó con una mujer, Frau Troffea, en mitad de la calle.\nEn pocos días se le unieron decenas de vecinos, y las autoridades tomaron una decisión desconcertante que lo empeoró todo. Uno de los enigmas más extraños de la historia europea.\nFuentes: John Waller, «A Time to Dance, a Time to Die» (2008); actas del consejo municipal de Estrasburgo de 1518; escritos de Paracelso."
+          },
+          {
+            "part_number": 2,
+            "hook_candidates": [
+              "Les pusieron zapatos rojos... y rezaron para que dejaran de bailar.",
+              "Cientos de personas bailaron semanas enteras. Nadie sabe todavía por qué.",
+              "Si hubieras sido uno de ellos, te habrían llevado ante un santo.",
+              "La ciudad prohibió la música de golpe. Los bailarines seguían cayendo.",
+              "Las actas de la ciudad lo cuentan todo menos lo más importante: la causa."
+            ],
+            "hook_title": "¿UNA MALDICIÓN?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Les pusieron zapatos rojos... y rezaron para que dejaran de bailar.",
+                "location": "iglesia",
+                "framing": "general",
+                "cast": [
+                  "troffea"
                 ],
                 "gesture": "explain",
-                "emotion": "serio",
+                "emotion": "neutral",
                 "listener_emotion": "neutral",
                 "mood": "noche",
                 "event": null,
                 "prop": null,
                 "walk": false,
                 "camera": "push_in",
-                "sfx": [],
-                "emphasis": null,
-                "visual_direction": "El inspector plantea la teoría en voz baja en su despacho."
+                "sfx": [
+                  "hit"
+                ],
+                "emphasis": "rojos",
+                "visual_direction": "En una capilla iluminada por velas, Troffea, agotada, se arrodilla con unos zapatos rojos."
               },
               {
-                "label": "TEORÍAS",
+                "label": "RECORDATORIO",
                 "speaker": "narrador",
-                "narration": "La versión oficial dice otra cosa: suicidio.",
+                "narration": "Bailaban sin parar desde hacía semanas.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": "multitud",
+                "prop": null,
+                "walk": false,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Flashback: la multitud bailando sin control por las calles de Estrasburgo."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "consejero",
+                "narration": "¡Se acabó la música! ¡Es un castigo divino!",
+                "location": "despacho",
+                "framing": "personaje",
+                "cast": [
+                  "consejero",
+                  "medico"
+                ],
+                "gesture": "fist",
+                "emotion": "enfadado",
+                "listener_emotion": "sorprendido",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "El consejero golpea la mesa y cambia de rumbo ante el médico."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Agosto de 1518: prohíben bailar en público.",
                 "location": "despacho",
                 "framing": "objeto",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "noche",
+                "mood": "dia",
                 "event": null,
-                "prop": "periodico",
+                "prop": "documento",
                 "walk": false,
-                "camera": "static",
+                "camera": "push_in",
                 "sfx": [],
-                "emphasis": "suicidio",
-                "visual_direction": "Un periódico de 1971 anuncia el cierre del caso."
+                "emphasis": "prohíben",
+                "visual_direction": "Primer plano del decreto que prohíbe la música y el baile en la ciudad."
               },
               {
-                "label": "TEORÍAS",
-                "speaker": "policia",
-                "narration": "¿Con las huellas borradas?",
-                "location": "despacho",
+                "label": "EL SANTUARIO",
+                "speaker": "narrador",
+                "narration": "Los llevan al santuario de San Vito.",
+                "location": "campo",
                 "framing": "general",
                 "cast": [
-                  "policia"
+                  "troffea",
+                  "marido"
                 ],
-                "gesture": "fist",
-                "emotion": "enfadado",
+                "gesture": "explain",
+                "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "noche",
+                "mood": "atardecer",
                 "event": null,
                 "prop": null,
-                "walk": false,
-                "camera": "shake",
+                "walk": true,
+                "camera": "static",
                 "sfx": [],
                 "emphasis": null,
-                "visual_direction": "El inspector golpea la mesa, incapaz de aceptar la versión oficial."
+                "visual_direction": "Troffea y su marido caminan por un sendero hacia el santuario en las colinas."
               },
               {
-                "label": "GIRO",
+                "label": "RE-GANCHO",
                 "speaker": "narrador",
-                "narration": "En 2017, el análisis de sus dientes habla.",
-                "location": "laboratorio",
+                "narration": "En septiembre, todo se apaga. ¿Qué fue?",
+                "location": "pueblo",
                 "framing": "general",
                 "cast": [],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
-                "mood": "dia",
+                "mood": "noche",
                 "event": null,
                 "prop": null,
                 "walk": false,
@@ -754,37 +611,43 @@
                   "whoosh"
                 ],
                 "emphasis": null,
-                "visual_direction": "Un laboratorio moderno con muestras y fórmulas en la pizarra."
+                "visual_direction": "La plaza vacía y en silencio, con el escenario de madera abandonado."
               },
               {
-                "label": "GIRO",
-                "speaker": "narrador",
-                "narration": "Nació hacia 1930, cerca de Núremberg.",
+                "label": "TEORÍAS",
+                "speaker": "medico",
+                "narration": "Quizá pan podrido. El cornezuelo del centeno.",
                 "location": "laboratorio",
-                "framing": "objeto",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
-                "mood": "dia",
+                "framing": "personaje",
+                "cast": [
+                  "medico",
+                  "consejero"
+                ],
+                "gesture": "think",
+                "emotion": "pensativo",
+                "listener_emotion": "desconfiado",
+                "mood": "noche",
                 "event": null,
-                "prop": "tierra",
+                "prop": null,
                 "walk": false,
                 "camera": "push_in",
                 "sfx": [],
-                "emphasis": "Núremberg",
-                "visual_direction": "La Tierra gira y se detiene sobre el sur de Alemania."
+                "emphasis": null,
+                "visual_direction": "El médico examina frascos y espigas, pensativo, entre velas."
               },
               {
-                "label": "FINAL",
-                "speaker": "narrador",
-                "narration": "Hoy sigue enterrada sin nombre en Bergen.",
-                "location": "iglesia",
-                "framing": "general",
-                "cast": [],
-                "gesture": "explain",
-                "emotion": "neutral",
-                "listener_emotion": "neutral",
+                "label": "TEORÍAS",
+                "speaker": "consejero",
+                "narration": "Eso da convulsiones, no días de baile.",
+                "location": "laboratorio",
+                "framing": "personaje",
+                "cast": [
+                  "consejero",
+                  "medico"
+                ],
+                "gesture": "point",
+                "emotion": "desconfiado",
+                "listener_emotion": "pensativo",
                 "mood": "noche",
                 "event": null,
                 "prop": null,
@@ -792,21 +655,102 @@
                 "camera": "static",
                 "sfx": [],
                 "emphasis": null,
-                "visual_direction": "Interior de una iglesia con velas encendidas, silencioso y vacío."
+                "visual_direction": "Contraplano: el consejero señala al médico, nada convencido."
               },
               {
-                "label": "FINAL",
+                "label": "RE-GANCHO",
                 "speaker": "narrador",
-                "narration": "Esperando que alguien pronuncie su verdadero nombre.",
-                "location": "bosque",
+                "narration": "Otros culpan al miedo: hambre, viruela, sífilis.",
+                "location": "pueblo",
                 "framing": "general",
                 "cast": [
-                  "mujer"
+                  "marido"
                 ],
                 "gesture": "explain",
                 "emotion": "neutral",
                 "listener_emotion": "neutral",
+                "mood": "tormenta",
+                "event": "pensamientos",
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": "miedo",
+                "visual_direction": "Un vecino solo en la plaza bajo la tormenta, rodeado de nubes de pensamientos angustiosos."
+              },
+              {
+                "label": "LA MALDICIÓN",
+                "speaker": "narrador",
+                "narration": "San Vito, decían, castigaba haciendo bailar.",
+                "location": "iglesia",
+                "framing": "dos",
+                "cast": [
+                  "troffea",
+                  "marido"
+                ],
+                "gesture": "explain",
+                "emotion": "asustado",
+                "listener_emotion": "asustado",
                 "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Troffea y su marido miran aterrados la vidriera del santo entre velas."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "narrador",
+                "narration": "Hoy se habla de psicosis colectiva.",
+                "location": "despacho",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "cerebro",
+                "walk": false,
+                "camera": "static",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Un cerebro con chispas de actividad sobre la mesa del despacho."
+              },
+              {
+                "label": "TEORÍAS",
+                "speaker": "narrador",
+                "narration": "El miedo, contagiado, movía los cuerpos.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [
+                  "troffea"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": "multitud",
+                "prop": null,
+                "walk": true,
+                "camera": "shake",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Troffea vuelve a moverse entre una multitud que baila como poseída."
+              },
+              {
+                "label": "DATO FINAL",
+                "speaker": "narrador",
+                "narration": "Ya había pasado en 1374, junto al Rin.",
+                "location": "costa",
+                "framing": "general",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "tormenta",
                 "event": null,
                 "prop": null,
                 "walk": false,
@@ -814,21 +758,63 @@
                 "sfx": [
                   "hit"
                 ],
-                "emphasis": "nombre",
-                "visual_direction": "La silueta de la mujer se aleja entre los árboles y se funde con la oscuridad."
+                "emphasis": "1374",
+                "visual_direction": "Orilla de un gran río bajo la tormenta, con un pueblo al fondo."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "troffea",
+                "narration": "Yo solo empecé a bailar... y no pude parar.",
+                "location": "ciudad",
+                "framing": "personaje",
+                "cast": [
+                  "troffea"
+                ],
+                "gesture": "chest",
+                "emotion": "triste",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "camera": "push_in",
+                "sfx": [],
+                "emphasis": null,
+                "visual_direction": "Troffea, sola en la calle vacía, mira a cámara con los pies aún inquietos."
+              },
+              {
+                "label": "PREGUNTA FINAL",
+                "speaker": "narrador",
+                "narration": "Nadie sabe por qué empezó... ni por qué paró.",
+                "location": "ciudad",
+                "framing": "general",
+                "cast": [
+                  "troffea"
+                ],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": true,
+                "camera": "pull_back",
+                "sfx": [],
+                "emphasis": "Nadie",
+                "visual_direction": "La cámara se aleja mientras Troffea vuelve a girar sola bajo la farola, como al principio."
               }
             ],
-            "cliffhanger": "Sabemos más o menos dónde nació, pero no quién era: sigue enterrada sin nombre en Bergen.",
-            "caption": "Usó al menos tres nombres falsos y ninguno era el suyo.\nEspía en plena Guerra Fría, asesinato o suicidio: la mujer de Isdal sigue sin identificar.\nSus dientes revelaron dónde nació.\nParte 2/2\n¿Espía o suicidio? ¿Tú qué crees?",
+            "cliffhanger": "La epidemia se apaga en septiembre sin explicación definitiva: ¿hongo, miedo colectivo o algo más? Ya había ocurrido antes.",
+            "caption": "Zapatos rojos, cruces y aceite santo: así intentaron curar a los bailarines de Estrasburgo.\nCornezuelo, psicosis colectiva, maldición de San Vito… y nada lo explica del todo.\nY no era la primera vez que pasaba.\nParte 2/2\n¿Qué teoría te convence más?",
             "hashtags": [
               "misterio",
-              "casossinresolver",
-              "mujerdeisdal",
-              "guerrafria",
-              "noruega"
+              "historia",
+              "epidemiadebaile",
+              "sanvito",
+              "psicosiscolectiva"
             ],
-            "youtube_title": "La mujer de Isdal: ¿espía o suicidio? | Parte 2",
-            "youtube_description": "La mujer de Isdal usaba nombres falsos, pelucas y una nota en clave. ¿Fue una espía de la Guerra Fría en Noruega o se suicidó?\nRepasamos lo que contó el hotel de Bergen, la teoría del espionaje durante las pruebas secretas de misiles y la versión oficial. El análisis de sus dientes en 2017 desveló una pista, pero no su nombre.\nFuentes: NRK y BBC, «Death in Ice Valley» (2018); archivos de la policía de Bergen sobre el caso Isdalskvinnen."
+            "youtube_title": "Epidemia de baile de 1518: la teoría que nadie descarta | Parte 2",
+            "youtube_description": "¿Qué causó la epidemia de baile de Estrasburgo de 1518? Cornezuelo del centeno, psicosis colectiva o la maldición de San Vito.\nTras semanas de baile sin control, la ciudad prohibió la música y llevó a los afectados a un santuario.\nEn septiembre todo se detuvo. Repasamos las teorías principales y el dato que hace este enigma todavía más inquietante.\nFuentes: John Waller, «A Time to Dance, a Time to Die» (2008); actas del consejo municipal de Estrasburgo de 1518; escritos de Paracelso."
           }
         ],
         "book": null
@@ -836,7 +822,7 @@
       "part": 1
     }
   ],
-  "last_published": "2026-11-20T11:22:25+00:00",
+  "last_published": "2026-11-20T12:56:42+00:00",
   "scheduled": [
     "2026-11-19T13:00:00+01:00",
     "2026-11-19T16:00:00+01:00",
@@ -846,6 +832,8 @@
     "2026-11-20T13:00:00+01:00",
     "2026-11-20T19:00:00+01:00",
     "2026-11-20T22:00:00+01:00",
-    "2026-11-21T10:00:00+01:00"
+    "2026-11-21T10:00:00+01:00",
+    "2026-11-20T16:00:00+01:00",
+    "2026-11-21T13:00:00+01:00"
   ]
 }
