@@ -156,7 +156,7 @@ channels:
       youtube: https://www.youtube.com/@conexionconchispa
       instagram: https://www.instagram.com/conexionconchispa/
       tiktok: https://www.tiktok.com/@conexionconchispa
-    style: amable                  # estilo de dibujo: caricatura | plano | amable
+    style: caricatura                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["citas pareja", "ligar aplicaciones", "relaciones estudio", "generación Z amor"]   # noticias de la semana para inspirar temas
     format_cycle: [antes_despues, error_comun, antes_despues, senales, antes_despues, psicologia_atraccion]   # «antes y después» es lo que mejor funciona (2.716 de media)
     formats:
