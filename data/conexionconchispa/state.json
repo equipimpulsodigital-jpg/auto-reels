@@ -1,5 +1,505 @@
 {
-  "queue": [],
+  "queue": [
+    {
+      "series": {
+        "topic_candidates": [
+          {
+            "topic": "El primer mensaje en una app: los datos de OkCupid dicen que el «hola, ¿qué tal?» y el «guapa» son lo que peor funciona",
+            "hook": "«Hola, ¿qué tal?»: el mensaje que entierra tu match.",
+            "why": "Lo ha hecho casi todo el mundo, es una situación muy cercana (apps de ligar), tiene un dato que sorprende y una frase concreta que se puede copiar hoy mismo.",
+            "score": 8
+          },
+          {
+            "topic": "Volver a ligar en persona («el levante»): cómo empezar a hablar con alguien en un bar sin frases ensayadas, comentando algo que compartís en ese momento",
+            "hook": "Llevas veinte minutos mirando a esa persona sin decir nada.",
+            "why": "Es tendencia y da mucho miedo, pero el respaldo científico es más flojo y puede sonar a técnica.",
+            "score": 6
+          },
+          {
+            "topic": "Reír juntos predice cómo de bien va una relación (Kurtz y Algoe, 2015): contar algo gracioso y reírse a la vez",
+            "hook": "No importa lo gracioso que seas. Importa otra cosa.",
+            "why": "Es cercano, pero el consejo queda poco concreto y cuesta enseñarlo en un antes y después.",
+            "score": 6
+          },
+          {
+            "topic": "Pedir consejo hace que te vean más competente (Brooks, Gino y Schweitzer, 2015), aplicado a conocer a alguien del trabajo",
+            "hook": "Esta pregunta hace que te vean más listo, y no la haces.",
+            "why": "El dato sorprende, pero la situación queda lejos del ligue.",
+            "score": 5
+          },
+          {
+            "topic": "Relaciones con ChatGPT y soledad (estudio reciente de Michigan): por qué conviene escribir a una persona real",
+            "hook": "Le cuentas tu día a una IA. Y te sientes más solo.",
+            "why": "Es actualidad, pero el estudio es reciente, no lo conozco bien y no da para un truco de ligar.",
+            "score": 4
+          }
+        ],
+        "series_title": "El «hola, ¿qué tal?» que entierra tu match",
+        "format": "antes_despues",
+        "year": "actualidad",
+        "place": "Una app de ligar, entre el piso de Dani y el de Marta",
+        "topic": "Primer mensaje en apps de ligar: el «hola» genérico y el piropo físico frente a un detalle del perfil más una pregunta (datos de OkCupid, 2009)",
+        "angle": "Casi todo el mundo abre un match con «hola, ¿qué tal?» o un piropo, y los datos de OkCupid dicen que es justo lo que menos respuestas consigue; con un detalle concreto del perfil y una pregunta, el chat arranca.",
+        "open_question": "¿Qué tiene de malo el «hola, ¿qué tal?» y qué hay que escribir en su lugar?",
+        "payoff": "Lo que funcionaba aún peor que el «hola» eran los piropos físicos como «guapa» o «sexy». Lo que mejor funciona es comentar algo concreto de su perfil y terminar con una pregunta.",
+        "beats": [
+          "GANCHO: «Hola, ¿qué tal?» es el mensaje que entierra tu match, y tú también lo mandas.",
+          "ANTES: Dani hace match con Marta y le escribe «Hola, ¿qué tal? Eres guapísima».",
+          "Marta lo deja en visto dos días y Dani no entiende nada (re-gancho: ¿qué ha hecho mal?).",
+          "DATO: OkCupid analizó cientos de miles de primeros mensajes, y los «hola» a secas recibían menos respuestas.",
+          "RE-GANCHO: rebobinamos, y en su perfil Marta sale en lo alto del Teide.",
+          "DESPUÉS: Dani pregunta por el Teide, Marta responde con ganas y le devuelve la pregunta.",
+          "RE-GANCHO: hay algo que funciona peor que el «hola».",
+          "PAYOFF: llamarle «guapa» o «sexy» funcionaba todavía peor. Truco: un detalle de su perfil y una pregunta; pruébalo hoy."
+        ],
+        "era": "moderno",
+        "characters": [
+          {
+            "id": "dani",
+            "name": "Dani",
+            "voice": "hombre_joven",
+            "look": {
+              "female": false,
+              "age": "joven",
+              "skin": "media",
+              "hair_color": "negro",
+              "hair_style": "corto",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "barba_corta",
+              "beard_color": "negro",
+              "outfit": "jersey",
+              "outfit_color": "mostaza",
+              "accent_color": "blanco",
+              "pants_color": "azul_marino",
+              "nose": "aguileña",
+              "jaw": "fina",
+              "eyes": "marrones",
+              "glasses": false,
+              "build": "delgado",
+              "height": "alto"
+            }
+          },
+          {
+            "id": "marta",
+            "name": "Marta",
+            "voice": "mujer_joven",
+            "look": {
+              "female": true,
+              "age": "joven",
+              "skin": "clara",
+              "hair_color": "pelirrojo",
+              "hair_style": "moño",
+              "hat": "ninguno",
+              "hat_color": "negro",
+              "beard": "ninguna",
+              "beard_color": null,
+              "outfit": "camisa",
+              "outfit_color": "verde_oscuro",
+              "accent_color": "dorado",
+              "pants_color": "negro",
+              "nose": "pequeña",
+              "jaw": "redonda",
+              "eyes": "verdes",
+              "glasses": true,
+              "build": "normal",
+              "height": "bajo"
+            }
+          }
+        ],
+        "historical_notes": "Se basa en el análisis de primeros mensajes que publicó OkCupid en su blog OkTrends (Christian Rudder, 2009, «Online Dating Advice: Exactly What To Say In A First Message»), con cientos de miles de primeros contactos. Los saludos genéricos («hey», «hi», «hello») tenían una tasa de respuesta menor que los mensajes sin ese saludo, y los piropos físicos («sexy», «beautiful», «hot», «cutie») salían entre los peores. Los mensajes que mencionaban intereses concretos funcionaban mejor. Los datos son de una app estadounidense y de mensajes en inglés: «guapa» es una adaptación de esos piropos. No es un experimento controlado, sino datos de una plataforma. El truco de «detalle del perfil + pregunta» es una aplicación práctica de esos datos.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_candidates": [
+              "Contradicción: Escribes «hola, ¿qué tal?» por educación. Por eso no te contestan.",
+              "Dato imposible: El piropo que más mandas es de los que menos respuestas consiguen.",
+              "Tú estabas allí: «Hola, ¿qué tal?»: el mensaje que entierra tu match.",
+              "En mitad de la acción: Le das a enviar… y el doble check se queda azul dos días.",
+              "Secreto: Una app de ligar miró cientos de miles de mensajes y vio qué falla."
+            ],
+            "hook_title": "¿LO MANDAS TÚ?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "«Hola, ¿qué tal?»: el mensaje que entierra tu match.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": "movil",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "on_screen": null,
+                "emphasis": "entierra",
+                "visual_direction": "Primer plano de un móvil con un chat en el que aparece solo «Hola, ¿qué tal?» y ninguna respuesta."
+              },
+              {
+                "label": "SUBE LA APUESTA",
+                "speaker": "narrador",
+                "narration": "Y seguramente tú también lo mandas.",
+                "location": "casa",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "contento",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "action": "sentado",
+                "held_prop": null,
+                "camera": "pull_back",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": null,
+                "visual_direction": "Dani está tirado en el sofá, sonriendo y deslizando en la app de ligar."
+              },
+              {
+                "label": "ANTES",
+                "speaker": "narrador",
+                "narration": "Dani acaba de hacer match con Marta.",
+                "location": "casa",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "euforico",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "corazones",
+                "prop": null,
+                "walk": false,
+                "action": "al_telefono",
+                "held_prop": "movil",
+                "camera": "static",
+                "sfx": [],
+                "on_screen": "MATCH NUEVO",
+                "emphasis": null,
+                "visual_direction": "Dani mira el móvil emocionado mientras suben corazones: es un match."
+              },
+              {
+                "label": "ANTES",
+                "speaker": "dani",
+                "narration": "Hola, ¿qué tal? Eres guapísima.",
+                "location": "casa",
+                "framing": "personaje",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "wave",
+                "emotion": "contento",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": null,
+                "visual_direction": "Dani escribe y lee en voz alta su mensaje, muy seguro de sí mismo."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "narrador",
+                "narration": "Visto. Ni una respuesta. Dos días.",
+                "location": "casa",
+                "framing": "general",
+                "cast": [
+                  "marta"
+                ],
+                "gesture": "explain",
+                "emotion": "desconfiado",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "action": "brazos_cruzados",
+                "held_prop": null,
+                "camera": "static",
+                "sfx": [],
+                "on_screen": "VISTO HACE 2 DÍAS",
+                "emphasis": null,
+                "visual_direction": "Marta, en su piso, mira el mensaje de reojo y se cruza de brazos sin contestar."
+              },
+              {
+                "label": "TENSIÓN",
+                "speaker": "dani",
+                "narration": "¿Pero qué he hecho mal?",
+                "location": "casa",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "nervioso",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "pensamientos",
+                "prop": null,
+                "walk": false,
+                "action": "manos_cabeza",
+                "held_prop": null,
+                "camera": "shake",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": null,
+                "visual_direction": "Dani se lleva las manos a la cabeza mientras le dan vueltas los pensamientos."
+              },
+              {
+                "label": "EL DATO",
+                "speaker": "narrador",
+                "narration": "OkCupid analizó cientos de miles de primeros mensajes.",
+                "location": "oficina",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "portatil",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [],
+                "on_screen": "OKCUPID, 2009",
+                "emphasis": "miles",
+                "visual_direction": "Un portátil muestra gráficas de miles de mensajes de una app de ligar."
+              },
+              {
+                "label": "EL DATO",
+                "speaker": "narrador",
+                "narration": "Los «hola» a secas recibían menos respuestas.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": "notificaciones",
+                "prop": "movil",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "static",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": null,
+                "visual_direction": "En la pantalla del móvil se amontonan «holas» sin respuesta."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Rebobinamos. En su perfil sale en el Teide.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "foto",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "on_screen": null,
+                "emphasis": "Teide",
+                "visual_direction": "La imagen rebobina y se ve la foto del perfil de Marta en la cima de una montaña."
+              },
+              {
+                "label": "DESPUÉS",
+                "speaker": "dani",
+                "narration": "¿Subiste el Teide andando? Yo me rendí.",
+                "location": "casa",
+                "framing": "personaje",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "shrug",
+                "emotion": "burlon",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": null,
+                "visual_direction": "Dani escribe con una sonrisa curiosa y se encoge de hombros al confesar que se rindió."
+              },
+              {
+                "label": "DESPUÉS",
+                "speaker": "marta",
+                "narration": "¡Andando! Casi muero. ¿Hasta dónde llegaste?",
+                "location": "casa",
+                "framing": "general",
+                "cast": [
+                  "marta"
+                ],
+                "gesture": "explain",
+                "emotion": "euforico",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "action": "sentado",
+                "held_prop": null,
+                "camera": "static",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": null,
+                "visual_direction": "Marta se sienta de golpe en el sofá, se ríe y contesta en el momento."
+              },
+              {
+                "label": "DESPUÉS",
+                "speaker": "narrador",
+                "narration": "Un detalle y una pregunta. Ya hablan.",
+                "location": "casa",
+                "framing": "dos",
+                "cast": [
+                  "dani",
+                  "marta"
+                ],
+                "gesture": "explain",
+                "emotion": "enamorado",
+                "listener_emotion": "contento",
+                "mood": "dia",
+                "event": "corazones",
+                "prop": null,
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "pull_back",
+                "sfx": [],
+                "on_screen": "DETALLE + PREGUNTA",
+                "emphasis": null,
+                "visual_direction": "Pantalla partida: los dos sonríen escribiéndose sin parar, con corazones flotando."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Pero hay algo peor que el «hola».",
+                "location": "casa",
+                "framing": "personaje",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "think",
+                "emotion": "sorprendido",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "on_screen": null,
+                "emphasis": "peor",
+                "visual_direction": "Dani se queda quieto, sorprendido, con la mano en la barbilla."
+              },
+              {
+                "label": "PAYOFF",
+                "speaker": "narrador",
+                "narration": "Llamarle «guapa» o «sexy» funcionaba aún peor.",
+                "location": "casa",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "avergonzado",
+                "listener_emotion": "neutral",
+                "mood": "noche",
+                "event": null,
+                "prop": null,
+                "walk": false,
+                "action": "manos_cabeza",
+                "held_prop": null,
+                "camera": "shake",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": "guapa",
+                "visual_direction": "Dani se pone colorado y se lleva las manos a la cabeza al recordar su primer mensaje."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "Un detalle de su perfil y una pregunta. Pruébalo hoy.",
+                "location": "calle",
+                "framing": "general",
+                "cast": [
+                  "dani"
+                ],
+                "gesture": "explain",
+                "emotion": "decidido",
+                "listener_emotion": "neutral",
+                "mood": "atardecer",
+                "event": "coche",
+                "prop": null,
+                "walk": true,
+                "action": "sostener",
+                "held_prop": "movil",
+                "camera": "pull_back",
+                "sfx": [],
+                "on_screen": null,
+                "emphasis": null,
+                "visual_direction": "Dani camina por la calle muy seguro, móvil en mano, mientras pasa un coche detrás."
+              }
+            ],
+            "cliffhanger": "Cierre: el truco es comentar un detalle concreto del perfil y terminar con una pregunta, y lo que peor funciona es el piropo físico, justo el que mandó Dani al principio.",
+            "caption": "Le das a enviar y el doble check se queda azul dos días.\nOkCupid revisó cientos de miles de primeros mensajes en su app de ligar.\nEl «hola, ¿qué tal?» sale mal parado… y hay algo que funciona todavía peor.\n¿Tu primer mensaje es «hola»? Sí o no",
+            "comment_question": "¿Tu primer mensaje es «hola»? Sí o no",
+            "first_comment": "Dato extra: en ese mismo análisis de OkCupid, palabras como «impresionante» o «fascinante» en un primer mensaje conseguían más respuestas que la media. ¿Tu primer mensaje es «hola»? Sí o no",
+            "hashtags": [
+              "ligar",
+              "consejosdepareja",
+              "appsdecitas",
+              "tinder",
+              "primermensaje"
+            ],
+            "youtube_title": "El primer mensaje que mata tu match en apps de ligar",
+            "youtube_description": "Qué escribir en el primer mensaje de Tinder, Bumble o cualquier app de ligar: por qué el «hola, ¿qué tal?» no funciona.\nUn antes y después con datos reales de cientos de miles de primeros mensajes.\nDani hace match y lo estropea con el mensaje de siempre. Rebobinamos y lo intenta otra vez con un truco muy sencillo que puedes usar hoy mismo.\nFuentes: OkTrends, blog de OkCupid (Christian Rudder, 2009), «Online Dating Advice: Exactly What To Say In A First Message»."
+          }
+        ],
+        "book": null
+      },
+      "part": 0
+    }
+  ],
   "last_published": "2026-11-21T09:18:42+00:00",
   "scheduled": [
     "2026-11-19T18:00:00+01:00",
