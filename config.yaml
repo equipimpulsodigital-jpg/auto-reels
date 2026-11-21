@@ -218,7 +218,7 @@ channels:
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@ysiciencia2
       instagram: https://www.instagram.com/ysiciencia2/
-      tiktok: https://www.tiktok.com/@user5758110653335
+      tiktok: https://www.tiktok.com/@ysiconciencia
     style: plano                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["fin del mundo científicos", "futuro de la humanidad", "NASA asteroide", "estudio científico sorprendente"]   # noticias de la semana para inspirar temas
     formats:
