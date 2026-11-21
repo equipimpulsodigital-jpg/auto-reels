@@ -199,6 +199,10 @@ def publish(video: Path, script: Part, cfg: dict, idempotency_key: str, total_pa
                    ("selfDeclaredMadeForKids", "false"), ("containsSyntheticMedia", ai)]
         fields += [("tags[]", t.lstrip("#")) for t in script.hashtags]
 
+    first = (getattr(script, "first_comment", "") or "").strip()
+    if first and any(p in platforms for p in ("instagram", "youtube")):  # TikTok no lo admite
+        fields.append(("first_comment", first[:500]))
+
     headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}", "Idempotency-Key": idempotency_key}
     files = {"video": (video.name, open(video, "rb"), "video/mp4")}
     cover = video.parent / "portada.jpg"

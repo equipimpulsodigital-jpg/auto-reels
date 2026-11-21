@@ -58,7 +58,7 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
 class CaptionRenderer:
     def __init__(self, width: int, height: int, accent: str, hook: str, hook_seconds: float = 2.8,
                  badge: str = "", end_card: str = "", end_start: float | None = None, caption_y: float = 0.64,
-                 stamps: list[tuple[float, float, str]] | None = None):
+                 stamps: list[tuple[float, float, str]] | None = None, end_sub: str = ""):
         self.w, self.h = width, height
         self.stamps = [(a, b, t.upper().strip()) for a, b, t in (stamps or []) if t and t.strip()]
         self.caption_y = caption_y
@@ -67,6 +67,7 @@ class CaptionRenderer:
         self.hook_seconds = hook_seconds
         self.badge = badge.upper()
         self.end_card = end_card.upper()
+        self.end_sub = end_sub.upper()
         self.end_start = end_start
 
     def _box(self, d: ImageDraw.ImageDraw, text: str, size: int, top: int, fill: str, color: str) -> None:
@@ -110,7 +111,9 @@ class CaptionRenderer:
         if self.badge:
             self._box(d, self.badge, int(self.w * 0.045), int(self.h * 0.085), (0, 0, 0, 170), self.accent)
         if show_end and self.end_card:
-            self._box(d, self.end_card, int(self.w * 0.08), int(self.h * 0.42), self.accent, "#111111")
+            self._box(d, self.end_card, int(self.w * 0.08), int(self.h * 0.36), self.accent, "#111111")
+            if self.end_sub:  # promesa de la marca, debajo y más pequeña
+                self._box(d, self.end_sub, int(self.w * 0.05), int(self.h * 0.6), (0, 0, 0, 200), "#ffffff")
             return img
 
         if show_hook:

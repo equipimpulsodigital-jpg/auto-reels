@@ -87,7 +87,7 @@ channels:
     hashtag: "#biencontadas"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-AlvaroNeural, rate: "+18%", pitch: "-4Hz"}   # voz del narrador de la marca
     music: [epica, intriga, conspiracion, batalla, misterio, suspense]
-    end_card: "Sígueme para más historias"
+    end_card: "Una historia real cada día · Sígueme"
     tagline: "Historias reales de España, contadas en dibujos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@historiasbiencontadass
@@ -118,7 +118,7 @@ channels:
     hashtag: "#archivodelmisterio"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-AlvaroNeural, rate: "+14%", pitch: "-10Hz"}   # voz del narrador de la marca
     music: [misterio, niebla, suspense, expediente, intriga]
-    end_card: "Sígueme para más misterios"
+    end_card: "Un caso real cada día · Sígueme"
     tagline: "Misterios reales que nadie ha sabido explicar."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@elanecdotarioes
@@ -150,7 +150,7 @@ channels:
     hashtag: "#conexionconchispa"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-XimenaNeural, rate: "+18%", pitch: "+0Hz"}   # voz del narrador de la marca
     music: [chispa, cita, verano]
-    end_card: "Sígueme para más trucos"
+    end_card: "Un truco para ligar cada día · Sígueme"
     tagline: "Trucos para romper el hielo y conectar con la gente."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@conexionconchispa
@@ -158,6 +158,7 @@ channels:
       tiktok: https://www.tiktok.com/@tintaibericaes
     style: amable                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["citas pareja", "ligar aplicaciones", "relaciones estudio", "generación Z amor"]   # noticias de la semana para inspirar temas
+    format_cycle: [antes_despues, error_comun, antes_despues, senales, antes_despues, psicologia_atraccion]   # «antes y después» es lo que mejor funciona (2.716 de media)
     formats:
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
       psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
@@ -180,7 +181,7 @@ channels:
     hashtag: "#lacabezapordentro"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-ElviraNeural, rate: "+14%", pitch: "-2Hz"}   # voz del narrador de la marca
     music: [calma, pensar, mente]
-    end_card: "Sígueme para entenderte mejor"
+    end_card: "Entiende tu cabeza cada día · Sígueme"
     tagline: "Psicología cotidiana: por qué hacemos lo que hacemos."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@lacabezapordentro
@@ -211,7 +212,7 @@ channels:
     hashtag: "#ysiciencia"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-AlvaroNeural, rate: "+20%", pitch: "+4Hz"}   # voz del narrador de la marca
     music: [cosmos, experimento, orbita, epica]
-    end_card: "Sígueme para más «¿y si…?»"
+    end_card: "Un «¿y si…?» cada día · Sígueme"
     tagline: "Escenarios imposibles explicados con ciencia."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@ysiciencia2

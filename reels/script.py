@@ -93,6 +93,12 @@ class Part(BaseModel):
     caption: str = Field(description=(
         "Texto del post para Instagram y TikTok, sin hashtags (ver TEXTOS DE PUBLICACIÓN): 1.ª línea = gancho "
         "distinto del vídeo; 2-3 líneas cortas; 'Parte X/Y' si hay 2 partes; termina con una pregunta. 150-350 caracteres."))
+    comment_question: str = Field(default="", description=(
+        "Pregunta de DOS opciones para que la gente comente, máx. 45 caracteres, que se pueda responder con una palabra o "
+        "un número (ver COMENTARIOS). Ej.: «¿Real o fraude? Comenta 1 o 2», «¿Te ha pasado? Sí o no», «¿Culpable o inocente?». Sin emojis (no se ven en pantalla)."))
+    first_comment: str = Field(default="", description=(
+        "Primer comentario que publica la cuenta (Instagram y YouTube), máx. 220 caracteres: un dato extra sorprendente que "
+        "NO sale en el vídeo y, al final, la misma pregunta de dos opciones."))
     hashtags: List[str] = Field(description="4-6 hashtags sin '#': 2 generales del nicho y 2-3 del tema concreto, en español.")
     youtube_title: str = Field(description=(
         "Título de YouTube: 40-65 caracteres, intriga + palabra clave que la gente buscaría, sin mayúsculas enteras "
@@ -159,6 +165,9 @@ def next_format(cfg: dict, history: list[dict], forced: str | None) -> str:
         if forced not in formats:
             raise SystemExit(f"Formato desconocido para este canal: {forced}. Opciones: {', '.join(formats)}")
         return forced
+    cycle = [f for f in cfg["channel"].get("format_cycle") or [] if f in formats]
+    if cycle:  # rotación con pesos: los formatos que mejor funcionan salen más a menudo
+        return cycle[len(history) % len(cycle)]
     last = history[-1]["format"] if history else None
     return formats[(formats.index(last) + 1) % len(formats)] if last in formats else formats[0]
 
@@ -231,6 +240,7 @@ def _schema() -> dict:
     part = schema["$defs"]["Part"]
     part["required"] = sorted(set(part.get("required", [])) | {"hook_candidates"})
     part["properties"]["hook_candidates"].update(minItems=5, maxItems=5)
+    part["required"] = sorted(set(part["required"]) | {"comment_question", "first_comment"})
     # la planificación va antes que el guion y es obligatoria: obliga a pensar la historia antes de escribirla
     schema["required"] = sorted(set(schema.get("required", [])) | {"angle", "open_question", "payoff", "beats",
                                                                     "topic_candidates"})

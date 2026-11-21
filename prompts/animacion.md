@@ -52,7 +52,7 @@ Cada segundo el espectador decide si sigue. Escribe para que nunca tenga un moti
 - **Contraste y emoción:** alterna calma y golpe. Los personajes reaccionan con emoción real (miedo, rabia, incredulidad), no explican.
 - **Habla al espectador** de vez en cuando ("Fíjate en esto.", "Tú también lo habrías hecho."), sin abusar.
 - **Palabras clave (`emphasis`):** en 4–6 bloques marca la palabra más impactante de la frase (un número, un nombre, "muerto", "nadie", "nunca"...). Saldrá enorme con un golpe de zoom y de sonido.
-- **Comentarios:** termina `caption` con una pregunta corta que invite a comentar ("¿Tú qué crees que pasó?", "¿Lo habrías notado?"). Los comentarios hacen que el vídeo llegue a más gente.
+- **COMENTARIOS (muy importante: casi nadie comenta y es lo que más hace crecer un vídeo):** una pregunta abierta («¿tú qué crees?») no funciona. Escribe en `comment_question` una pregunta de DOS opciones que se responda en un segundo, con algo de polémica o de identificación personal: «¿Real o fraude? Comenta 1 o 2», «¿Culpable o inocente?», «¿Te ha pasado? Sí o no», «¿Lo harías? Sí o no», «¿Quién tenía razón, él o ella?». Sale en grande al final del vídeo y es la última línea de `caption`. En `first_comment`, un dato extra jugoso que no está en el vídeo y otra vez la pregunta.
 
 ### TEXTOS DE PUBLICACIÓN (TÍTULO, DESCRIPCIONES Y HASHTAGS)
 La gente decide si pulsa o sigue leyendo por estos textos: trátalos como parte del gancho.
