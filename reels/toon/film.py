@@ -16,6 +16,7 @@ from .locations import LOCATIONS, G
 from .more_props import BEHIND_EVENTS
 from .props import EVENT_AMBIENCE, EVENT_SFX, EVENTS, draw_prop
 from .character import Character, Pose
+from . import finish as F
 from .draw import STYLE, ease, noise1, set_style
 
 
@@ -183,10 +184,12 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
     ev = EVENTS.get(shot.event or "")
     if fr == "objeto":
         _blurred(c, lambda: loc.back(c, g), 12, 1.8, W / 2, H * 0.45)
+        F.mood_light(c, W, H, shot.mood)  # la luz de ambiente tiñe el fondo; a los personajes, solo un poco
         draw_prop(c, W, H, shot.prop or "carta", t)
         return
     if fr == "general":
         loc.back(c, g)
+        F.mood_light(c, W, H, shot.mood)
         behind = ev is not None and shot.event in BEHIND_EVENTS
         if behind:  # los vehículos pasan por detrás de los personajes
             ev(c, W, H, t, shot.duration)
@@ -218,6 +221,7 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
         return
     zoom, sigma = (1.45, 7) if fr == "personaje" else (1.15, 3)
     _blurred(c, lambda: loc.back(c, g), sigma, zoom, W / 2, H * 0.42)
+    F.mood_light(c, W, H, shot.mood)
     if ev:
         ev(c, W, H, t, shot.duration)
     if fr == "personaje":
@@ -281,6 +285,10 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
         c.translate(-W / 2, -H * 0.5)
         draw_frame(c, ctx, shot, t, i)
         c.restore()
+        # acabado del estilo: luz de ambiente, brillo de las luces, grano/papel y viñeta
+        F.mood_light(c, W, H, shot.mood, 0.3)
+        F.bloom(c, surface, W, H)
+        F.texture(c, W, H, i)
         S.vignette(c, W, H, STYLE["vignette"])
         arr = surface.makeImageSnapshot().toarray(colorType=skia.ColorType.kRGBA_8888_ColorType)
         proc.stdin.write(arr.tobytes())

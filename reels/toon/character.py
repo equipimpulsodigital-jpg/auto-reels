@@ -521,7 +521,7 @@ class Character:
         hand = poly([(hx - 30 * s, hy - 24 * s), (hx + 28 * s, hy - 26 * s), (hx + (34 + ux * 14) * s, hy + (8 + uy * 14) * s),
                      (hx + ux * 26 * s, hy + (30 + uy * 20) * s), (hx + (-32 + ux * 10) * s, hy + (10 + uy * 14) * s)], smooth=True)
         toon(c, hand, L.skin_color, light=(-f, -0.5))
-        for k in (-1, 0, 1):  # dedos
+        for k in ((-1, 0, 1) if STYLE.get("outline", 1.0) > 0 else ()):  # dedos (el estilo plano los omite)
             c.drawLine(hx + (k * 12 + ux * 12) * s, hy + (4 + uy * 12) * s, hx + (k * 13 + ux * 26) * s, hy + (8 + uy * 26) * s,
                        stroke(shade(L.skin_color, -0.4), 3.5))
         if point:
@@ -569,7 +569,7 @@ class Character:
         rim.offset(f * 14, 6)
         edge = skia.Op(head, rim, skia.PathOp.kDifference_PathOp)
         if edge is not None:  # luz de contorno (contraluz) en el borde de la nuca
-            c.drawPath(edge, fill("#fff1d6", 0.45))
+            c.drawPath(edge, fill("#fff1d6", 0.2 + 0.5 * STYLE.get("rim", 0.5)))
         if L.hat not in ("ninguno", "corona", "mantilla"):  # sombra de la gorra en la frente
             c.drawRect(skia.Rect.MakeLTRB(-200, -600, 200, -545), fill("#000000", 0.16))
         if STYLE.get("stubble", True) and (L.beard in ("barba_corta", "barba") or L.age == "mayor" and L.beard == "ninguna" and not L.female):

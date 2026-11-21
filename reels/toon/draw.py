@@ -11,18 +11,27 @@ OUTLINE = 7.0
 
 # Estilo visual de la marca (lo fija film.render_shot según config: channels.<id>.style).
 STYLES = {
-    # el de siempre: contorno negro grueso, colores vivos, cabeza grande
-    "caricatura": dict(outline=1.0, ink=None, shade=1.0, sat=1.0, light=0.0, warm=0.0, contrast=1.0,
-                       head=1.0, eyes="cartoon", vignette=0.35, nose=1.0, stubble=True, blush=0.22, eye_size=1.0),
-    # divulgación moderna: sin contorno, colores planos saturados, cabeza más pequeña, ojos de punto
-    "plano": dict(outline=0.0, ink=None, shade=0.35, sat=1.15, light=0.04, warm=0.0, contrast=1.05,
-                  head=0.82, eyes="dot", vignette=0.08, nose=0.55, stubble=False, blush=0.3, eye_size=1.0),
-    # novela gráfica de misterio: tinta gruesa, sombras duras, colores apagados y fríos, mucho contraste
-    "comic": dict(outline=1.4, ink="#0b0a0d", shade=2.2, sat=0.55, light=-0.07, warm=-0.12, contrast=1.25,
-                  head=0.84, eyes="cartoon", vignette=0.65, nose=0.9, stubble=True, blush=0.0, eye_size=0.85),
-    # ilustración amable: línea fina del mismo color, tonos pastel y cálidos, cabeza mediana
-    "amable": dict(outline=0.6, ink="auto", shade=0.45, sat=1.0, light=0.0, warm=0.05, contrast=1.04,
-                   head=0.92, eyes="soft", vignette=0.06, nose=0.6, stubble=False, blush=0.5, eye_size=1.25),
+    # Clave común: outline (grosor de la tinta; 0 = sin líneas), ink (color de la tinta; "auto" = del color de la forma),
+    # shade (fuerza de la sombra lateral), gradient (degradado vertical en cada forma), sat/light/warm/contrast
+    # (etalonaje de todos los colores), head/eyes/nose/stubble/blush/eye_size (personaje), y el acabado de la imagen:
+    # bloom (brillo de las luces), grain (grano), paper (textura de papel), mood (fuerza de la luz de ambiente),
+    # rim (luz de contorno en los personajes), vignette.
+    # el de siempre, con más acabado: sombras ricas, luz de contorno, un punto de brillo y de grano
+    "caricatura": dict(outline=1.0, ink=None, shade=1.15, gradient=0.06, sat=1.04, light=0.0, warm=0.0, contrast=1.04,
+                       head=1.0, eyes="cartoon", vignette=0.3, nose=1.0, stubble=True, blush=0.22, eye_size=1.0,
+                       bloom=0.18, grain=0.018, paper=0.0, mood=1.0, rim=0.5),
+    # divulgación moderna (tipo Kurzgesagt): sin ninguna línea, degradados suaves, colores vivos y mucho brillo
+    "plano": dict(outline=0.0, ink=None, shade=0.3, gradient=0.13, sat=1.14, light=0.03, warm=0.0, contrast=1.06,
+                  head=0.82, eyes="dot", vignette=0.12, nose=0.55, stubble=False, blush=0.3, eye_size=1.0,
+                  bloom=0.22, grain=0.02, paper=0.0, mood=0.9, rim=0.0),
+    # novela gráfica de misterio (sin uso por ahora)
+    "comic": dict(outline=1.4, ink="#0b0a0d", shade=2.2, gradient=0.0, sat=0.55, light=-0.07, warm=-0.12, contrast=1.25,
+                  head=0.84, eyes="cartoon", vignette=0.65, nose=0.9, stubble=True, blush=0.0, eye_size=0.85,
+                  bloom=0.1, grain=0.08, paper=0.0, mood=1.2, rim=0.3),
+    # ilustración amable: línea fina del color de la forma, degradados suaves, papel y brillo cálido
+    "amable": dict(outline=0.6, ink="auto", shade=0.45, gradient=0.1, sat=1.0, light=0.0, warm=0.05, contrast=1.04,
+                   head=0.92, eyes="soft", vignette=0.08, nose=0.6, stubble=False, blush=0.5, eye_size=1.25,
+                   bloom=0.24, grain=0.0, paper=0.07, mood=0.8, rim=0.25),
 }
 STYLE = dict(STYLES["caricatura"])
 
@@ -83,11 +92,15 @@ def fill(color: str, alpha: float = 1.0) -> skia.Paint:
 
 def stroke(color: str = INK, width: float = OUTLINE, alpha: float = 1.0) -> skia.Paint:
     if color == INK:  # el contorno sigue el estilo (grosor y color de la tinta)
-        width *= STYLE["outline"] if STYLE["outline"] > 0 else 0.35
-        if STYLE["ink"] and STYLE["ink"] != "auto":
-            color = STYLE["ink"]
-        elif STYLE["outline"] == 0 or STYLE["ink"] == "auto":
-            alpha *= 0.55
+        if STYLE["outline"] == 0:  # estilo sin líneas: los detalles finos se ven como un trazo suave, no negro
+            width *= 0.6
+            color, alpha = "#2a2238", alpha * 0.35
+        else:
+            width *= STYLE["outline"]
+            if STYLE["ink"] and STYLE["ink"] != "auto":
+                color = STYLE["ink"]
+            elif STYLE["ink"] == "auto":
+                alpha *= 0.55
     return skia.Paint(Color=col(color, alpha), AntiAlias=True, Style=skia.Paint.kStroke_Style,
                       StrokeWidth=width, StrokeCap=skia.Paint.kRound_Cap, StrokeJoin=skia.Paint.kRound_Join)
 
@@ -144,7 +157,12 @@ def poly(points: list[tuple[float, float]], smooth: bool = False) -> skia.Path:
 def toon(canvas: skia.Canvas, path: skia.Path, color: str, outline: float = OUTLINE,
          light: tuple[float, float] | None = None, shade_amt: float = 0.22) -> None:
     """Relleno plano + sombra lateral suave + contorno grueso: el look de caricatura."""
-    canvas.drawPath(path, fill(color))
+    g = STYLE.get("gradient", 0.0)
+    if g > 0:  # degradado vertical suave: más luz arriba, más sombra abajo
+        b0 = path.computeTightBounds()
+        canvas.drawPath(path, linear(fill(color), (0, b0.top()), (0, b0.bottom()), [shade(color, g), shade(color, -g)]))
+    else:
+        canvas.drawPath(path, fill(color))
     shade_amt *= STYLE["shade"]
     if light is not None:
         b = path.computeTightBounds()
