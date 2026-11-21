@@ -20,10 +20,12 @@
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 12.1
+            "avg_watch_s": 12.1,
+            "saves": 0,
+            "reach": 118
           },
           "youtube": {
-            "views": 415,
+            "views": 427,
             "likes": 3,
             "comments": 0,
             "shares": 0
@@ -44,7 +46,9 @@
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 6.0
+            "avg_watch_s": 6.0,
+            "saves": 0,
+            "reach": 101
           },
           "youtube": {
             "views": 1210,
@@ -56,11 +60,11 @@
       }
     ],
     "stats": {
-      "views": 1877,
+      "views": 1889,
       "likes": 16,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1625,
+      "youtube_views": 1637,
       "updated": "2026-11-21"
     }
   },
@@ -81,11 +85,13 @@
         "at": "2026-11-19T15:19:48+00:00",
         "stats": {
           "instagram": {
-            "views": 96,
+            "views": 98,
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 12.2
+            "avg_watch_s": 12.2,
+            "saves": 0,
+            "reach": 84
           },
           "youtube": {
             "views": 1,
@@ -111,7 +117,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 820,
+            "views": 822,
             "likes": 14,
             "comments": 0,
             "shares": 0
@@ -134,11 +140,11 @@
       "pitch": "La apasionante historia de cómo aprendimos a saber dónde estamos en mitad del mar."
     },
     "stats": {
-      "views": 917,
+      "views": 921,
       "likes": 15,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 821,
+      "youtube_views": 823,
       "updated": "2026-11-21"
     }
   },
@@ -163,7 +169,9 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.8
+            "avg_watch_s": 11.8,
+            "saves": 0,
+            "reach": 101
           },
           "youtube": {
             "views": 1225,
@@ -190,13 +198,15 @@
         "stats": {
           "instagram": {
             "views": 249,
-            "likes": 2,
+            "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.9
+            "avg_watch_s": 12.0,
+            "saves": 0,
+            "reach": 203
           },
           "youtube": {
-            "views": 0,
+            "views": 4,
             "likes": 0,
             "comments": 0,
             "shares": 0
@@ -212,11 +222,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1591,
-      "likes": 19,
+      "views": 1595,
+      "likes": 20,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1225,
+      "youtube_views": 1229,
       "updated": "2026-11-21"
     }
   },
