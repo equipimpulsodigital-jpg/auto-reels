@@ -16,7 +16,7 @@
         "at": "2026-11-19T15:05:33+00:00",
         "stats": {
           "instagram": {
-            "views": 143,
+            "views": 144,
             "likes": 2,
             "comments": 0,
             "shares": 0,
@@ -25,7 +25,7 @@
             "reach": 118
           },
           "youtube": {
-            "views": 427,
+            "views": 464,
             "likes": 3,
             "comments": 0,
             "shares": 0
@@ -42,7 +42,7 @@
         "at": "2026-11-19T15:10:27+00:00",
         "stats": {
           "instagram": {
-            "views": 109,
+            "views": 110,
             "likes": 2,
             "comments": 0,
             "shares": 0,
@@ -60,11 +60,11 @@
       }
     ],
     "stats": {
-      "views": 1889,
+      "views": 1928,
       "likes": 16,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1637,
+      "youtube_views": 1674,
       "updated": "2026-11-21"
     }
   },
@@ -85,16 +85,16 @@
         "at": "2026-11-19T15:19:48+00:00",
         "stats": {
           "instagram": {
-            "views": 98,
-            "likes": 1,
+            "views": 117,
+            "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 12.2,
+            "avg_watch_s": 11.1,
             "saves": 0,
-            "reach": 84
+            "reach": 102
           },
           "youtube": {
-            "views": 1,
+            "views": 2,
             "likes": 0,
             "comments": 0,
             "shares": 0
@@ -117,7 +117,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 822,
+            "views": 896,
             "likes": 14,
             "comments": 0,
             "shares": 0
@@ -140,11 +140,11 @@
       "pitch": "La apasionante historia de cómo aprendimos a saber dónde estamos en mitad del mar."
     },
     "stats": {
-      "views": 921,
-      "likes": 15,
+      "views": 1015,
+      "likes": 16,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 823,
+      "youtube_views": 898,
       "updated": "2026-11-21"
     }
   },
@@ -165,17 +165,17 @@
         "at": "2026-11-19T21:16:29+00:00",
         "stats": {
           "instagram": {
-            "views": 117,
+            "views": 120,
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.8,
+            "avg_watch_s": 11.7,
             "saves": 0,
-            "reach": 101
+            "reach": 102
           },
           "youtube": {
-            "views": 1225,
-            "likes": 16,
+            "views": 1312,
+            "likes": 15,
             "comments": 0,
             "shares": 0
           },
@@ -197,13 +197,13 @@
         "at": "2026-11-19T21:22:26+00:00",
         "stats": {
           "instagram": {
-            "views": 249,
-            "likes": 3,
+            "views": 1012,
+            "likes": 21,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 12.0,
+            "avg_watch_s": 14.9,
             "saves": 0,
-            "reach": 203
+            "reach": 746
           },
           "youtube": {
             "views": 4,
@@ -222,11 +222,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1595,
-      "likes": 20,
+      "views": 2448,
+      "likes": 37,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1229,
+      "youtube_views": 1316,
       "updated": "2026-11-21"
     }
   },
@@ -244,7 +244,30 @@
         "request_id": "1d931aceaf434b309f12d9fb9cffb8f3",
         "job_id": "d34b7deaaebd47c9a6c7f8d45fa6fa1d",
         "failed": [],
-        "at": "2026-11-20T11:07:38+00:00"
+        "at": "2026-11-20T11:07:38+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1505,
+            "likes": 35,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 14.6,
+            "saves": 0,
+            "reach": 1221
+          },
+          "youtube": {
+            "views": 2,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -256,7 +279,15 @@
         "at": "2026-11-20T11:13:44+00:00"
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1507,
+      "likes": 35,
+      "comments": 0,
+      "shares": 0,
+      "youtube_views": 2,
+      "updated": "2026-11-21"
+    }
   },
   {
     "date": "2026-11-21",
