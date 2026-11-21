@@ -339,5 +339,101 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
     }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "experimento",
+    "topic": "Experimento de la fotocopiadora de Ellen Langer (1978): «porque» con una excusa vacía consigue casi tantos «sí» como un motivo real, pero solo en favores pequeños",
+    "series_title": "El experimento de la fotocopiadora: la palabra «porque»",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T13:00:00+01:00",
+        "request_id": "6f78c0ce9fe248fbbdd98e3f2f52c026",
+        "job_id": "0415ff9e2cf2425c999d5a64fdc3f2b8",
+        "failed": [],
+        "at": "2026-11-21T08:58:25+00:00"
+      }
+    ],
+    "book": {
+      "title": "Influencia. La psicología de la persuasión",
+      "author": "Robert B. Cialdini",
+      "pitch": "El clásico que explica por qué decimos que sí sin pensar, con este experimento entre muchos.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "trampa_mental",
+    "topic": "Falacia de la planificación: subestimamos cuánto tardaremos aunque ya nos haya pasado antes; incluso el «peor escenario» se queda corto (Buehler, Griffin y Ross, 1994). Herramienta: estimar según cuánto tardaste otras veces.",
+    "series_title": "Por qué siempre llegas tarde: la falacia de la planificación",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T16:00:00+01:00",
+        "request_id": "29c68db499de48e1948c764ec456e4c9",
+        "job_id": "971268377cca42c2b87aa1dc839be61a",
+        "failed": [],
+        "at": "2026-11-21T09:05:46+00:00"
+      }
+    ],
+    "book": {
+      "title": "Pensar rápido, pensar despacio",
+      "author": "Daniel Kahneman",
+      "pitch": "El Nobel que explica por qué tu intuición te engaña, también al calcular cuánto tardarás.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "por_que",
+    "topic": "Gusano auditivo (earworm): fragmentos de canciones que se repiten porque el cerebro los canta en silencio; mascar chicle los reduce (Beaman et al., 2015)",
+    "series_title": "Por qué se te pega una canción (y el truco del chicle)",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T19:00:00+01:00",
+        "request_id": "df69b89f85cb48a29e271d2bba57f276",
+        "job_id": "862e83733a414a9aac67707c103b1bdd",
+        "failed": [],
+        "at": "2026-11-21T09:11:46+00:00"
+      }
+    ],
+    "book": {
+      "title": "Musicofilia",
+      "author": "Oliver Sacks",
+      "pitch": "Historias reales de cerebros atrapados, curados y obsesionados por la música.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "como_salir",
+    "topic": "Efecto test: releer y subrayar da ilusión de fluidez; recordar sin mirar fija mucho mejor (Roediger y Karpicke, 2006)",
+    "series_title": "Por qué releer los apuntes te engaña",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T22:00:00+01:00",
+        "request_id": "793c3bd3cf3d4956a186149b371b51d0",
+        "job_id": "581de051c26145f4926bd4c02c0f84f8",
+        "failed": [],
+        "at": "2026-11-21T09:18:00+00:00"
+      }
+    ],
+    "book": {
+      "title": "¿Cómo aprendemos? Una aproximación científica al aprendizaje y la enseñanza",
+      "author": "Héctor Ruiz Martín",
+      "pitch": "Lo que la ciencia sabe de verdad sobre estudiar y recordar, explicado con claridad.",
+      "looked_up": true
+    }
   }
 ]
