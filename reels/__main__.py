@@ -180,6 +180,15 @@ def update_stats(cfg: dict) -> None:
             print(f"  {total['views']:>7} vis · {total['likes']:>5} me gusta · {total['comments']:>4} coment. · {h['series_title'][:60]}")
     _save(cfg, "history.json", history)
     print(f"  {n} publicaciones consultadas")
+    from .publish import _ACCOUNT
+    if _ACCOUNT:  # seguidores de cada red, con histórico diario para ver el crecimiento
+        acc = _load(cfg, "account.json", {"history": []})
+        today = now.strftime("%Y-%m-%d")
+        acc["latest"] = dict(_ACCOUNT)
+        acc["history"] = [e for e in acc.get("history", []) if e.get("date") != today]
+        acc["history"].append({"date": today, **{k: v.get("followers") for k, v in _ACCOUNT.items()}})
+        _save(cfg, "account.json", acc)
+        print("  seguidores: " + ", ".join(f"{k} {v.get('followers')}" for k, v in _ACCOUNT.items()))
 
 
 def _stamps(blocks, durations) -> list[tuple[float, float, str]]:

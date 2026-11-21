@@ -125,9 +125,10 @@ channels:
       instagram: https://www.instagram.com/elanecdotarioes/
       tiktok: https://www.tiktok.com/@elanecdotarioes
     style: caricatura                  # estilo de dibujo: caricatura | plano | amable
-    interest_queries: ["misterio sin resolver", "desaparición misteriosa", "caso sin resolver", "enigma historia"]   # noticias de la semana para inspirar temas
+    interest_queries: ["película terror basada en hechos reales", "Warren paranormal", "misterio sin resolver", "documental crimen Netflix"]   # noticias de la semana para inspirar temas
     formats:
-      caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
+      caso_famoso: "Caso famoso con película o serie (Annabelle, los Warren, Amityville, Enfield, El exorcista, Vallecas...): la historia real y lo que la película no contó"
+      caso_sin_resolver: "Caso sin resolver célebre (desaparición, muerte extraña o crimen nunca aclarado que la gente conoce o ha oído nombrar)"
       enigma: "Enigma o suceso inexplicable (lugar, objeto, barco, expedición o fenómeno real)"
       ultimo_rastro: "Lo último que se supo: la última carta, llamada, foto o testimonio antes de una desaparición o tragedia real"
       caso_con_giro: "Caso con giro: un misterio real que parecía imposible hasta que alguien descubrió la verdad"

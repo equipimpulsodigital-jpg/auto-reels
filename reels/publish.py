@@ -306,6 +306,9 @@ def _metrics(obj) -> dict:
     return found
 
 
+_ACCOUNT: dict = {}  # últimos datos de cada cuenta vistos en las estadísticas (por red)
+
+
 def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
     """Estadísticas de una publicación (todas sus redes): {"instagram": {"views": .., ...}, ...}."""
     headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
@@ -339,7 +342,15 @@ def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
                      "shares": int(pm.get("shares") or 0)} if isinstance(pm, dict) else _metrics(pm)
                 if isinstance(pm, dict) and pm.get("avg_watch_seconds"):
                     m["avg_watch_s"] = round(float(pm["avg_watch_seconds"]), 1)
+                if isinstance(pm, dict):
+                    for k in ("saves", "reach"):
+                        if pm.get(k) is not None:
+                            m[k] = int(pm.get(k) or 0)
                 out[platform] = m
+                snap = pdata.get("profile_snapshot_latest") if isinstance(pdata, dict) else None
+                if isinstance(snap, dict):  # datos de la cuenta (seguidores, alcance...), no del vídeo
+                    _ACCOUNT[platform] = {k: snap.get(k) for k in ("followers", "reach", "views", "impressions", "profileViews")
+                                          if snap.get(k) is not None}
     elif isinstance(container, list):
         for item in container:
             if isinstance(item, dict) and item.get("platform"):
