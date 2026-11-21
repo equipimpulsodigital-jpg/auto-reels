@@ -602,5 +602,24 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-21",
+    "format": "crimen_historico",
+    "topic": "Manuel Blanco Romasanta, el buhonero gallego que guiaba mujeres por el monte, confesó 13 crímenes alegando ser lobo y la reina Isabel II le perdonó el garrote por la carta de un hipnotizador francés.",
+    "series_title": "Romasanta: el hombre lobo de Allariz",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T10:00:00+01:00",
+        "request_id": "981c332df3184a438b765d2c97dc0097",
+        "job_id": "6228e03318c341edba38398475588613",
+        "failed": [],
+        "at": "2026-11-21T22:35:57+00:00"
+      }
+    ],
+    "book": null
   }
 ]
