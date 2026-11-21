@@ -519,6 +519,15 @@
         "job_id": "73e335ae1ca34f1c8d92759a288385c4",
         "failed": [],
         "at": "2026-11-20T11:20:45+00:00"
+      },
+      {
+        "part": 2,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T13:00:00+01:00",
+        "request_id": "26e1c6594e9343b4ae5a3542d9e03163",
+        "job_id": "24853f2f9fdb45a28d708b60c931f373",
+        "failed": [],
+        "at": "2026-11-21T08:55:45+00:00"
       }
     ],
     "book": {
@@ -529,5 +538,69 @@
       "cover": "https://covers.openlibrary.org/b/id/3746984-M.jpg",
       "isbn": "9788434465985"
     }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "personaje_olvidado",
+    "topic": "Joan Pujol 'Garbo', el granjero barcelonés y agente doble que engañó a Hitler sobre el Día D con 27 espías inventados, condecorado por los dos bandos, que fingió su muerte en 1949.",
+    "series_title": "Garbo: el español que engañó a Hitler",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T16:00:00+01:00",
+        "request_id": "7be5f50129a94ccab5765d7b4c3b0485",
+        "job_id": "e999a715ec65496b810185ac8fe57826",
+        "failed": [],
+        "at": "2026-11-21T09:03:25+00:00"
+      }
+    ],
+    "book": {
+      "title": "Juan Pujol, el espía que derrotó a Hitler",
+      "author": "Javier Juárez",
+      "pitch": "La vida real del barcelonés que engañó a los nazis con espías que no existían.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/13572733-M.jpg",
+      "isbn": "9788484603726"
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "error_historico",
+    "topic": "Explosión del vapor Cabo Machichaco en Santander (3-XI-1893): incendio en el muelle, curiosos y bomberos a bordo, 51 toneladas de dinamita, unos 590 muertos y segunda explosión en 1894.",
+    "series_title": "El barco que Santander fue a mirar",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T19:00:00+01:00",
+        "request_id": "276a449df2ae4bd089cdc340297859be",
+        "job_id": "d954b6f5e9dc49db917f276f107b736a",
+        "failed": [],
+        "at": "2026-11-21T09:09:49+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-21",
+    "format": "punto_inflexion",
+    "topic": "Catástrofe del camping Los Alfaques (11-VII-1978): camión cisterna sobrecargado con 23 t de propileno explota junto al camping, más de 200 muertos, curiosos ante la nube y el peaje evitado.",
+    "series_title": "Los Alfaques: la nube blanca del camping",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T22:00:00+01:00",
+        "request_id": "7f64c0b8e8614173901f9ff70b0be5b8",
+        "job_id": "ce08f8705119445ea4b4ad35d58b1dd6",
+        "failed": [],
+        "at": "2026-11-21T09:16:44+00:00"
+      }
+    ],
+    "book": null
   }
 ]
