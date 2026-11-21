@@ -20,7 +20,9 @@
             "likes": 11,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.8
+            "avg_watch_s": 14.8,
+            "saves": 0,
+            "reach": 425
           },
           "youtube": {
             "views": 1,
@@ -68,7 +70,9 @@
             "likes": 19,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 10.8
+            "avg_watch_s": 10.8,
+            "saves": 2,
+            "reach": 430
           },
           "youtube": {
             "views": 1172,
@@ -117,10 +121,12 @@
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.4
+            "avg_watch_s": 11.4,
+            "saves": 0,
+            "reach": 170
           },
           "youtube": {
-            "views": 1285,
+            "views": 1302,
             "likes": 19,
             "comments": 0,
             "shares": 0
@@ -135,11 +141,11 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1486,
+      "views": 1503,
       "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1285,
+      "youtube_views": 1302,
       "updated": "2026-11-21"
     }
   },
@@ -210,7 +216,9 @@
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 13.3
+            "avg_watch_s": 13.3,
+            "saves": 0,
+            "reach": 132
           },
           "youtube": {
             "views": 1164,
@@ -255,11 +263,13 @@
         "at": "2026-11-20T11:07:46+00:00",
         "stats": {
           "instagram": {
-            "views": 323,
+            "views": 326,
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 15.7
+            "avg_watch_s": 15.7,
+            "saves": 1,
+            "reach": 261
           },
           "youtube": {
             "views": 7,
@@ -278,7 +288,7 @@
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
     },
     "stats": {
-      "views": 330,
+      "views": 333,
       "likes": 3,
       "comments": 0,
       "shares": 0,
