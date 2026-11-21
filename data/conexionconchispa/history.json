@@ -355,5 +355,98 @@
       "pitch": "Por qué atreverte a mostrarte tal como eres te acerca a los demás en vez de alejarte.",
       "looked_up": true
     }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "antes_despues",
+    "topic": "Efecto iPhone (Misra et al., 2016): el móvil a la vista en la mesa, aunque no se toque, resta empatía; consejo: guardarlo y decirlo en voz alta en una cita",
+    "series_title": "El móvil boca abajo que enfría tu cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T13:00:00+01:00",
+        "request_id": "4382cda3ca614c36969f8f7bec32d747",
+        "job_id": "b5b038c91be74058a018a971d598296f",
+        "failed": [],
+        "at": "2026-11-21T08:57:44+00:00"
+      }
+    ],
+    "book": {
+      "title": "En defensa de la conversación",
+      "author": "Sherry Turkle",
+      "pitch": "Por qué las pantallas nos roban las charlas que de verdad nos unen, y cómo recuperarlas.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/8062416-M.jpg",
+      "isbn": "9788416222278"
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "senales",
+    "topic": "No nos damos cuenta del flirteo (Hall et al., 2015: los hombres lo notan un 36 %, las mujeres un 18 %); señal práctica: si a tu plan responde con otra fecha, le gustas",
+    "series_title": "Está ligando contigo y no lo ves",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T16:00:00+01:00",
+        "request_id": "95b3546e52a74457b680a5b2eea249a2",
+        "job_id": "7af64f9eafc0463db6b86aa74a5bdc09",
+        "failed": [],
+        "at": "2026-11-21T09:04:46+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-21",
+    "format": "antes_despues",
+    "topic": "Efecto del siguiente en la fila (Brenner, 1973): olvidamos el nombre al presentarnos porque preparamos nuestra frase; truco: repetirlo en voz alta al oírlo y usarlo al despedirse",
+    "series_title": "El nombre que se te olvida en tres segundos",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T19:00:00+01:00",
+        "request_id": "4ce0131eb9c644908d1ed6679f7c4235",
+        "job_id": "4c7e6b93f27c458aada2c7c83813d2a9",
+        "failed": [],
+        "at": "2026-11-21T09:12:06+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cómo ganar amigos e influir sobre las personas",
+      "author": "Dale Carnegie",
+      "pitch": "El clásico que explica por qué recordar un nombre abre más puertas que cualquier frase ingeniosa."
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "psicologia_atraccion",
+    "topic": "Transferencia espontánea de rasgos: lo que dices de tu ex (o de cualquiera) en una cita se te pega a ti; consejo: hablar bien de alguien ausente",
+    "series_title": "Lo que dices de tu ex te describe a ti",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T22:00:00+01:00",
+        "request_id": "7eee32b851e547a3a5b6f2aa0921447a",
+        "job_id": "0764ac06379e4dd393bb12fe63d3801c",
+        "failed": [],
+        "at": "2026-11-21T09:18:42+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cómo ganar amigos e influir sobre las personas",
+      "author": "Dale Carnegie",
+      "pitch": "El clásico que lleva casi un siglo enseñando por qué criticar a los demás nunca te deja bien.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
+    }
   }
 ]
