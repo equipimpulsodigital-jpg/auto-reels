@@ -169,6 +169,8 @@ def _max_parts(cfg: dict) -> int:
 
 def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None = None,
                     max_parts: int | None = None) -> Series:
+    if max_parts is None and _max_parts(cfg) > 1 and any(h.get("parts", 1) > 1 for h in history[-2:]):
+        max_parts = 1  # las historias de 2 partes, solo de vez en cuando (nunca dos seguidas ni casi)
     fmt_name = cfg["channel"]["formats"][fmt]
     done = [h["topic"] for h in history[-80:]]
     user = (

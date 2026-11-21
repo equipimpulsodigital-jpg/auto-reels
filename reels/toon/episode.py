@@ -60,7 +60,7 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
     v = cfg["video"]
     W, H, fps = v["width"], v["height"], v["fps"]
     chars, sides = build_cast(series)
-    ctx = Ctx(W, H, fps, chars, dict(sides))
+    ctx = Ctx(W, H, fps, chars, dict(sides), style=cfg["channel"].get("style", "caricatura"))
     shots, files = [], []
     for i, (b, dur) in enumerate(zip(part.blocks, durations)):
         shot = block_to_shot(b, series, chars, dur)

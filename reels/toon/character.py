@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 
 import skia
 
-from .draw import INK, OUTLINE, ease, fill, mix, noise1, oval, poly, rrect, shade, stroke, toon
+from .draw import INK, OUTLINE, STYLE, ease, fill, mix, noise1, oval, poly, rrect, shade, stroke, toon
 
 SKIN = {"clara": "#f1c7a3", "media": "#dda177", "morena": "#b9784f", "oscura": "#7b4b30"}
 
@@ -149,9 +149,10 @@ class Character:
         canvas.save()
         canvas.translate(0, bob + breathe * 0.5 + p.nod * 14)
         canvas.rotate(lean + p.nod * 5 * f + (noise1(p.t * 1.3, L.seed + 3) * 3 * p.mouth if p.talking else 0), 0, -300)
-        if L.child:  # cabeza proporcionalmente más grande
+        hk = STYLE["head"] * (1.18 if L.child else 1.0)  # tamaño de la cabeza (según estilo y edad)
+        if hk != 1.0:
             canvas.translate(0, -270)
-            canvas.scale(1.18, 1.18)
+            canvas.scale(hk, hk)
             canvas.translate(0, 270)
         # squash & stretch: la cabeza se estira un poco al abrir mucho la boca
         st = 1 + 0.03 * p.mouth
@@ -571,7 +572,7 @@ class Character:
             c.drawPath(edge, fill("#fff1d6", 0.45))
         if L.hat not in ("ninguno", "corona", "mantilla"):  # sombra de la gorra en la frente
             c.drawRect(skia.Rect.MakeLTRB(-200, -600, 200, -545), fill("#000000", 0.16))
-        if L.beard in ("barba_corta", "barba") or L.age == "mayor" and L.beard == "ninguna" and not L.female:
+        if STYLE.get("stubble", True) and (L.beard in ("barba_corta", "barba") or L.age == "mayor" and L.beard == "ninguna" and not L.female):
             bc = L.beard_color or hair
             a = 0.55 if L.beard == "barba_corta" else 0.35
             for sx, sy, r in self._stubble:
@@ -585,7 +586,9 @@ class Character:
                 c.drawPath(pth, stroke(shade(skin, -0.3), 4))
         # mejillas
         for side in (-1, 1):
-            c.drawPath(oval(side * 92 + f * 22, -380, 34, 22), fill("#e0705a", 0.22))
+            bk = 1 + max(0.0, STYLE.get("blush", 0.22) - 0.22) * 1.6
+            c.drawPath(oval(side * 92 + f * 22, -380, 34 * bk, 22 * bk),
+                       fill("#ff6f7d" if STYLE.get("blush", 0.22) > 0.3 else "#e0705a", STYLE.get("blush", 0.22)))
         self._emotion_tint(c, p, f)
         c.restore()
         if L.beard == "barba":
@@ -698,10 +701,29 @@ class Character:
         big = 1.18 if p.extra in ("shock", "abierta") else 1.0
         pupil = 11 if p.extra == "shock" else 18
         look_up = {"mira_arriba": 0.9, "rubor": -0.8}.get(p.extra, p.look_up)
+        if STYLE["eyes"] == "dot":  # estilo plano: ojos de punto con brillo, cejas finas
+            for side in (-1, 1):
+                ex, ey = side * 56 + f * 26 + (p.look * 0.6 + f * 0.6) * 6, -462 - look_up * 6
+                ry = 24 * open_amt * big
+                c.drawPath(oval(ex, ey, 15 * big, max(3, ry)), fill("#1f1a24"))
+                if open_amt > 0.4:
+                    c.drawCircle(ex + 5, ey - 8, 5, fill("#ffffff"))
+                by = ey - 44 - p.brow * 12
+                y_l, y_r = by, by
+                if p.worry > 0:
+                    up = p.worry * 16
+                    y_l, y_r = (by, by - up) if side < 0 else (by - up, by)
+                elif p.brow < -0.3:
+                    dn = -p.brow * 12
+                    y_l, y_r = (by - dn, by + dn) if side < 0 else (by + dn, by - dn)
+                c.drawLine(ex - 24, y_l, ex + 24, y_r, stroke(mix(L.hair, "#000000", 0.2), 11))
+            return
+        soft = STYLE["eyes"] == "soft"
         for side in (-1, 1):
             ex, ey = side * 58 + f * 26, -468
             rx, ry = (30, 36) if side == f else (27, 34)  # el ojo lejano un poco más pequeño
             rx, ry = rx * big, ry * big
+            rx, ry = rx * STYLE.get("eye_size", 1.0), ry * STYLE.get("eye_size", 1.0)
             white = oval(ex, ey, rx, ry * open_amt)
             c.drawPath(white, fill("#fbf8f2"))
             c.save()
@@ -725,7 +747,7 @@ class Character:
             c.drawPath(white, stroke(INK, 5))
             lash = skia.Path()  # párpado superior marcado
             lash.addArc(skia.Rect.MakeLTRB(ex - rx, ey - ry * open_amt, ex + rx, ey + ry * open_amt), 200, 140)
-            c.drawPath(lash, stroke(INK, 10 if not L.female else 12))
+            c.drawPath(lash, stroke(INK, (10 if not L.female else 12) * (0.75 if soft else 1.0)))
             if L.female:
                 c.drawLine(ex + side * rx * 0.85, ey - ry * open_amt * 0.6, ex + side * (rx + 14), ey - ry * open_amt - 6, stroke(INK, 6))
             # ceja
@@ -744,6 +766,18 @@ class Character:
             c.drawPath(bpath, stroke(L.hair if L.age != "mayor" else mix(L.hair, "#dddddd", 0.5), w))
 
     def _nose(self, c: skia.Canvas, f: float) -> None:
+        k = STYLE.get("nose", 1.0)
+        if k != 1.0:  # nariz más pequeña según el estilo
+            c.save()
+            c.translate(f * 50, -430)
+            c.scale(k, k)
+            c.translate(-f * 50, 430)
+            self._nose_shape(c, f)
+            c.restore()
+            return
+        self._nose_shape(c, f)
+
+    def _nose_shape(self, c: skia.Canvas, f: float) -> None:
         L = self.look
         skin = shade(L.skin_color, -0.06)
         nx = f * 48

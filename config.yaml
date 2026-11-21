@@ -93,6 +93,7 @@ channels:
       youtube: https://www.youtube.com/@historiasbiencontadass
       instagram: https://www.instagram.com/bien_contadas/
       tiktok: https://www.tiktok.com/@historias.bien.co86
+    style: caricatura                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["historia de España", "hallazgo arqueológico España", "crimen histórico", "serie basada en hechos reales"]   # noticias de la semana para inspirar temas
     formats:
       punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
@@ -123,6 +124,7 @@ channels:
       youtube: https://www.youtube.com/@elanecdotarioes
       instagram: https://www.instagram.com/elanecdotarioes/
       tiktok: https://www.tiktok.com/@elanecdotarioes
+    style: caricatura                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["misterio sin resolver", "desaparición misteriosa", "caso sin resolver", "enigma historia"]   # noticias de la semana para inspirar temas
     formats:
       caso_sin_resolver: "Caso sin resolver (desaparición, muerte extraña o crimen nunca aclarado)"
@@ -153,6 +155,7 @@ channels:
       youtube: https://www.youtube.com/@conexionconchispa
       instagram: https://www.instagram.com/conexionconchispa/
       tiktok: https://www.tiktok.com/@tintaibericaes
+    style: amable                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["citas pareja", "ligar aplicaciones", "relaciones estudio", "generación Z amor"]   # noticias de la semana para inspirar temas
     formats:
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
@@ -182,6 +185,7 @@ channels:
       youtube: https://www.youtube.com/@lacabezapordentro
       instagram: https://www.instagram.com/lacabezapordentro/
       tiktok: https://www.tiktok.com/@lacabezapordentro
+    style: plano                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["psicología estudio", "salud mental", "ansiedad estudio", "hábitos cerebro"]   # noticias de la semana para inspirar temas
     formats:
       por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
@@ -212,9 +216,10 @@ channels:
       youtube: https://www.youtube.com/@ysiciencia2
       instagram: https://www.instagram.com/ysiciencia2/
       tiktok: https://www.tiktok.com/@user5758110653335
-    interest_queries: ["descubrimiento científico", "NASA", "espacio asteroide", "ciencia estudio sorprendente"]   # noticias de la semana para inspirar temas
+    style: plano                  # estilo de dibujo: caricatura | plano | amable
+    interest_queries: ["fin del mundo científicos", "futuro de la humanidad", "NASA asteroide", "estudio científico sorprendente"]   # noticias de la semana para inspirar temas
     formats:
-      y_si_planeta: "¿Y si... el planeta? La Tierra, el espacio o la naturaleza en un escenario imposible"
-      y_si_nosotros: "¿Y si... nosotros? El cuerpo humano, la tecnología o la sociedad en un escenario imposible"
-      cuenta_atras: "¿Y si...? contado como cuenta atrás (segundo a segundo, día a día o año a año), cada paso peor que el anterior"
-      y_si_historia: "¿Y si... la historia de la ciencia hubiera sido distinta? Un cambio en un descubrimiento real y sus consecuencias"
+      y_si_humanidad: "¿Y si... a toda la humanidad? Desaparecer, no poder tener hijos, no poder mentir, ser inmortales, desaparecer un sexo, el dinero, los móviles..."
+      y_si_tu: "¿Y si te pasara a ti? Tu cuerpo o tu mente en un escenario imposible: ser el último humano, no dormir nunca, saber tu fecha de muerte, leer mentes..."
+      y_si_planeta: "¿Y si... el planeta o el universo? La Tierra, el Sol, la Luna, los océanos o el espacio en un escenario imposible (que se apague el Sol, que pase un agujero negro...)"
+      cuenta_atras: "¿Y si...? contado como cuenta atrás (segundo a segundo, día a día o año a año), cada paso peor que el anterior, sobre un escenario enorme"

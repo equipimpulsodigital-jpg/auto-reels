@@ -16,7 +16,7 @@ from .locations import LOCATIONS, G
 from .more_props import BEHIND_EVENTS
 from .props import EVENT_AMBIENCE, EVENT_SFX, EVENTS, draw_prop
 from .character import Character, Pose
-from .draw import ease, noise1
+from .draw import STYLE, ease, noise1, set_style
 
 
 def mouth_envelope(wav_path: Path, fps: int, frames: int) -> list[float]:
@@ -107,6 +107,7 @@ class Ctx:
     fps: int
     chars: dict[str, Character]
     sides: dict[str, float] = field(default_factory=dict)  # lado fijo de cada personaje: -1 izquierda, 1 derecha
+    style: str = "caricatura"               # estilo visual de la marca (draw.STYLES)
 
     def side(self, cid: str) -> float:
         if cid not in self.sides:
@@ -246,6 +247,7 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
 
 def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
     W, H, fps = ctx.W, ctx.H, ctx.fps
+    set_style(ctx.style)
     frames = max(1, round(shot.duration * fps))
     info = skia.ImageInfo.Make(W, H, skia.ColorType.kRGBA_8888_ColorType, skia.AlphaType.kPremul_AlphaType)
     surface = skia.Surface.MakeRaster(info)
@@ -279,7 +281,7 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
         c.translate(-W / 2, -H * 0.5)
         draw_frame(c, ctx, shot, t, i)
         c.restore()
-        S.vignette(c, W, H, 0.35)
+        S.vignette(c, W, H, STYLE["vignette"])
         arr = surface.makeImageSnapshot().toarray(colorType=skia.ColorType.kRGBA_8888_ColorType)
         proc.stdin.write(arr.tobytes())
     proc.stdin.close()
