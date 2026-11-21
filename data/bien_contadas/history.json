@@ -27,7 +27,9 @@
             "likes": 15,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 22.0
+            "avg_watch_s": 22.0,
+            "saves": 1,
+            "reach": 1103
           },
           "youtube": {
             "views": 1133,
@@ -76,7 +78,9 @@
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.2
+            "avg_watch_s": 8.2,
+            "saves": 0,
+            "reach": 141
           },
           "youtube": {
             "views": 662,
@@ -100,7 +104,9 @@
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 9.0
+            "avg_watch_s": 9.0,
+            "saves": 0,
+            "reach": 147
           },
           "youtube": {
             "views": 454,
@@ -149,7 +155,9 @@
             "likes": 12,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 16.4
+            "avg_watch_s": 16.4,
+            "saves": 0,
+            "reach": 494
           },
           "youtube": {
             "views": 312,
@@ -173,7 +181,9 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 9.7
+            "avg_watch_s": 9.7,
+            "saves": 1,
+            "reach": 128
           },
           "youtube": {
             "views": 1325,
@@ -220,7 +230,9 @@
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 6.0
+            "avg_watch_s": 6.0,
+            "saves": 0,
+            "reach": 137
           },
           "youtube": {
             "views": 1012,
@@ -244,7 +256,9 @@
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 5.2
+            "avg_watch_s": 5.2,
+            "saves": 0,
+            "reach": 115
           },
           "youtube": {
             "views": 1002,
@@ -293,10 +307,12 @@
             "likes": 5,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.2
+            "avg_watch_s": 8.2,
+            "saves": 0,
+            "reach": 123
           },
           "youtube": {
-            "views": 1229,
+            "views": 1244,
             "likes": 22,
             "comments": 1,
             "shares": 0
@@ -317,10 +333,12 @@
             "likes": 6,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.9
+            "avg_watch_s": 14.9,
+            "saves": 0,
+            "reach": 299
           },
           "youtube": {
-            "views": 719,
+            "views": 732,
             "likes": 25,
             "comments": 0,
             "shares": 0
@@ -329,11 +347,11 @@
       }
     ],
     "stats": {
-      "views": 2458,
+      "views": 2486,
       "likes": 58,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1948,
+      "youtube_views": 1976,
       "updated": "2026-11-21"
     }
   },
@@ -358,10 +376,12 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.7
+            "avg_watch_s": 8.7,
+            "saves": 0,
+            "reach": 129
           },
           "youtube": {
-            "views": 334,
+            "views": 337,
             "likes": 11,
             "comments": 0,
             "shares": 0
@@ -382,10 +402,12 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.1
+            "avg_watch_s": 8.1,
+            "saves": 0,
+            "reach": 120
           },
           "youtube": {
-            "views": 548,
+            "views": 551,
             "likes": 15,
             "comments": 0,
             "shares": 0
@@ -395,7 +417,8 @@
             "likes": 6,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 4.1
+            "avg_watch_s": 4.1,
+            "reach": 0
           }
         }
       }
@@ -407,11 +430,11 @@
       "pitch": "Un error judicial tan estremecedor que todavía hoy cuesta creer que ocurriera de verdad."
     },
     "stats": {
-      "views": 1908,
+      "views": 1914,
       "likes": 34,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 882,
+      "youtube_views": 888,
       "updated": "2026-11-21"
     }
   },
@@ -436,10 +459,12 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.3
+            "avg_watch_s": 11.3,
+            "saves": 0,
+            "reach": 117
           },
           "youtube": {
-            "views": 689,
+            "views": 696,
             "likes": 22,
             "comments": 0,
             "shares": 0
@@ -449,7 +474,8 @@
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 5.0
+            "avg_watch_s": 5.0,
+            "reach": 0
           }
         }
       },
@@ -470,11 +496,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1044,
+      "views": 1051,
       "likes": 26,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 689,
+      "youtube_views": 696,
       "updated": "2026-11-21"
     }
   },
