@@ -44,7 +44,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1,
-      "updated": "2026-11-20"
+      "updated": "2026-11-21"
     }
   },
   {
@@ -93,7 +93,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1172,
-      "updated": "2026-11-20"
+      "updated": "2026-11-21"
     }
   },
   {
@@ -113,14 +113,14 @@
         "at": "2026-11-19T15:20:58+00:00",
         "stats": {
           "instagram": {
-            "views": 194,
+            "views": 201,
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.2
+            "avg_watch_s": 11.4
           },
           "youtube": {
-            "views": 1301,
+            "views": 1285,
             "likes": 19,
             "comments": 0,
             "shares": 0
@@ -135,12 +135,12 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1495,
+      "views": 1486,
       "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1301,
-      "updated": "2026-11-20"
+      "youtube_views": 1285,
+      "updated": "2026-11-21"
     }
   },
   {
@@ -166,7 +166,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1183,
+            "views": 1187,
             "likes": 12,
             "comments": 0,
             "shares": 0
@@ -181,12 +181,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1183,
+      "views": 1187,
       "likes": 12,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1183,
-      "updated": "2026-11-20"
+      "youtube_views": 1187,
+      "updated": "2026-11-21"
     }
   },
   {
@@ -206,14 +206,14 @@
         "at": "2026-11-19T21:11:05+00:00",
         "stats": {
           "instagram": {
-            "views": 157,
+            "views": 159,
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 13.4
+            "avg_watch_s": 13.3
           },
           "youtube": {
-            "views": 1138,
+            "views": 1164,
             "likes": 11,
             "comments": 0,
             "shares": 0
@@ -230,12 +230,12 @@
       "isbn": "9788411193016"
     },
     "stats": {
-      "views": 1295,
+      "views": 1323,
       "likes": 13,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1138,
-      "updated": "2026-11-20"
+      "youtube_views": 1164,
+      "updated": "2026-11-21"
     }
   },
   {
@@ -252,7 +252,22 @@
         "request_id": "2843569eb1334106b7516010d0b2d452",
         "job_id": "91a613214c8144f9a3fd5d7faa9aad1b",
         "failed": [],
-        "at": "2026-11-20T11:07:46+00:00"
+        "at": "2026-11-20T11:07:46+00:00",
+        "stats": {
+          "instagram": {
+            "views": 323,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 15.7
+          },
+          "youtube": {
+            "views": 7,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -261,6 +276,14 @@
       "pitch": "Por qué los nervios pueden jugar a tu favor si cambias cómo los entiendes.",
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
+    },
+    "stats": {
+      "views": 330,
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "youtube_views": 7,
+      "updated": "2026-11-21"
     }
   },
   {
