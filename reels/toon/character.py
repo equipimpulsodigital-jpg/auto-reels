@@ -80,6 +80,7 @@ class Pose:
     action: str = ""          # correr | caer | sentado | agachado | manos_cabeza | levantar_manos | brazos_cruzados |
                               # al_telefono | sostener | abrazar | golpear | empujar | saltar
     held: str = ""            # objeto en la mano (clave de PROPS)
+    relative_height: bool = False  # plano de medio cuerpo con varios personajes: aplicar su estatura
 
 
 @dataclass
@@ -129,6 +130,10 @@ class Character:
                 canvas.translate(0, 112)
             elif act == "saltar":
                 canvas.translate(0, -abs(math.sin(p.t * 4.2)) * 150)
+        elif p.relative_height and L.hs != 1.0:
+            # medio cuerpo: el más bajo asoma menos (la cintura queda fuera de plano, abajo)
+            canvas.translate(0, 560 * (1 - L.hs))
+            canvas.scale(L.hs, L.hs)
         # respiración y balanceo
         breathe = math.sin(p.t * 2.2) * 4
         bob = -abs(math.sin(p.t * 7.5)) * 10 * p.mouth if p.talking else 0

@@ -131,8 +131,8 @@ def _pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: float) -
     actor = _actor(shot)
     if cid == actor:
         p.action, p.held = shot.action, shot.held
-    elif shot.action == "abrazar" and cid in shot.cast:
-        p.action = shot.action  # abrazo mutuo
+    elif shot.action in ("abrazar", "sentado") and cid in shot.cast:
+        p.action = shot.action  # abrazo mutuo; si uno se sienta, se sientan todos (una mesa, una cita...)
     return p
 
 
@@ -242,7 +242,9 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
     # plano de dos
     for cid in shot.cast[:2]:
         side = ctx.side(cid)
-        ctx.chars[cid].draw(c, W * (0.5 + side * 0.24), H * 0.95, 0.92, _pose(ctx, shot, cid, t, frame, -side))
+        p = _pose(ctx, shot, cid, t, frame, -side)
+        p.relative_height = True  # en el plano de dos se nota quién es más alto o más bajo
+        ctx.chars[cid].draw(c, W * (0.5 + side * 0.24), H * 0.95, 0.92, p)
     c.save()
     c.translate(0, H * 0.07)  # en el plano de dos, la mesa/barra queda más baja
     loc.front(c, g, True)

@@ -62,8 +62,15 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
     chars, sides = build_cast(series)
     ctx = Ctx(W, H, fps, chars, dict(sides), style=cfg["channel"].get("style", "caricatura"))
     shots, files = [], []
+    seated_at = None  # lugar donde los personajes se han sentado (siguen sentados mientras no cambie)
     for i, (b, dur) in enumerate(zip(part.blocks, durations)):
         shot = block_to_shot(b, series, chars, dur)
+        if shot.action == "sentado":
+            seated_at = shot.location
+        elif shot.location != seated_at or shot.action:
+            seated_at = None  # cambian de sitio o hacen otra cosa: ya no están sentados
+        elif shot.framing == "general" and not shot.action:
+            shot.action = "sentado"  # continuidad: si estaban sentados en este sitio, siguen sentados
         if i == 0:  # el gancho: arranque con impacto (zoom, destello y golpe de sonido)
             shot.camera = "shake" if shot.camera == "shake" else "golpe"
             if not any(name in ("hit", "boom") for name, _ in shot.sfx):
