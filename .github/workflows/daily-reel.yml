@@ -2,11 +2,14 @@ name: Episodio diario
 
 on:
   schedule:
-    # 4:05 (España, invierno): prepara HOY y MAÑANA (44 h) y lo deja programado en Upload-Post. Así, si GitHub se
-    # salta una ejecución (pasa), el día ya estaba cubierto desde la víspera. Es de madrugada para no chocar con
-    # el límite de uso de Claude (ventanas de 5 h).
-    - cron: "5 3 * * *"
-    # Reservas: solo rellenan huecos de las 12 h siguientes (no gastan Claude si todo está programado).
+    # De madrugada (España, invierno) se prepara HOY y MAÑANA (44 h) y se deja programado en Upload-Post. GitHub a veces
+    # se salta ejecuciones programadas (pasó el 17/11, el 20/11 y el 21/11), así que hay TRES intentos nocturnos en
+    # minutos poco habituales: el primero que se ejecute hace el trabajo y los demás terminan en segundos sin gastar
+    # Claude. De noche para no chocar con el límite de uso de Claude (ventanas de 5 h).
+    - cron: "17 0 * * *"    # 1:17
+    - cron: "43 2 * * *"    # 3:43
+    - cron: "29 4 * * *"    # 5:29
+    # Reservas de día: solo rellenan huecos de las 12 h siguientes (no gastan Claude si todo está programado).
     - cron: "40 6 * * *"
     - cron: "40 12 * * *"
     - cron: "40 17 * * *"
@@ -60,7 +63,7 @@ jobs:
     timeout-minutes: 240
     env:
       CH: ${{ matrix.channel }}
-      HORIZON: ${{ github.event.schedule == '5 3 * * *' && '44' || '12' }}
+      HORIZON: ${{ contains(fromJSON('["17 0 * * *","43 2 * * *","29 4 * * *"]'), github.event.schedule) && '44' || '12' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -160,7 +163,7 @@ jobs:
             if [ "${{ inputs.mode }}" = "cancelar" ]; then ARGS+=(--cancel "${{ inputs.franja }}"); fi
           fi
           # antes de escribir la historia de cada noche, se miran las visualizaciones (el guionista aprende de ellas)
-          if [ "${{ github.event.schedule }}" = "5 3 * * *" ]; then python -m reels --stats --channel "$CH" || true; fi
+          if [ "$HORIZON" = "44" ]; then python -m reels --stats --channel "$CH" || true; fi
           python -m reels --channel "$CH" "${ARGS[@]}"
 
       - name: Vista previa (fotogramas)
