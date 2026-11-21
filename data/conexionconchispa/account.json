@@ -1,0 +1,31 @@
+{
+  "history": [
+    {
+      "date": "2026-11-21",
+      "instagram": 0,
+      "youtube": 16,
+      "tiktok": 0
+    }
+  ],
+  "latest": {
+    "instagram": {
+      "followers": 0,
+      "reach": 0,
+      "views": 0,
+      "impressions": 0,
+      "profileViews": 0
+    },
+    "youtube": {
+      "followers": 16,
+      "reach": 0,
+      "impressions": 0,
+      "profileViews": 0
+    },
+    "tiktok": {
+      "followers": 0,
+      "reach": 0,
+      "impressions": 0,
+      "profileViews": 0
+    }
+  }
+}

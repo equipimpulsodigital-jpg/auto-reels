@@ -20,7 +20,9 @@
             "likes": 67,
             "comments": 0,
             "shares": 1,
-            "avg_watch_s": 20.5
+            "avg_watch_s": 20.5,
+            "saves": 4,
+            "reach": 1316
           },
           "youtube": {
             "views": 1143,
@@ -69,7 +71,9 @@
             "likes": 4,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 9.7
+            "avg_watch_s": 9.7,
+            "saves": 1,
+            "reach": 131
           },
           "youtube": {
             "views": 1063,
@@ -116,7 +120,9 @@
             "likes": 29,
             "comments": 0,
             "shares": 1,
-            "avg_watch_s": 16.5
+            "avg_watch_s": 16.5,
+            "saves": 0,
+            "reach": 1023
           },
           "youtube": {
             "views": 1177,
@@ -167,8 +173,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 734,
-            "likes": 14,
+            "views": 779,
+            "likes": 15,
             "comments": 0,
             "shares": 0
           },
@@ -177,18 +183,19 @@
             "likes": 4,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 6.2
+            "avg_watch_s": 6.2,
+            "reach": 0
           }
         }
       }
     ],
     "book": null,
     "stats": {
-      "views": 931,
-      "likes": 18,
+      "views": 976,
+      "likes": 19,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 734,
+      "youtube_views": 779,
       "updated": "2026-11-21"
     }
   },
@@ -213,7 +220,9 @@
             "likes": 40,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 16.5
+            "avg_watch_s": 16.5,
+            "saves": 7,
+            "reach": 1229
           },
           "youtube": {
             "views": 1226,
@@ -226,7 +235,8 @@
             "likes": 10,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 5.7
+            "avg_watch_s": 5.7,
+            "reach": 0
           }
         }
       }
@@ -267,7 +277,9 @@
             "likes": 6,
             "comments": 0,
             "shares": 1,
-            "avg_watch_s": 13.0
+            "avg_watch_s": 12.9,
+            "saves": 0,
+            "reach": 357
           },
           "youtube": {
             "views": 0,
@@ -280,7 +292,8 @@
             "likes": 8,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 7.1
+            "avg_watch_s": 7.1,
+            "reach": 0
           }
         }
       }
