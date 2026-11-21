@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 
 import skia
 
-from .draw import INK, OUTLINE, STYLE, ease, fill, mix, noise1, oval, poly, rrect, shade, stroke, toon
+from .draw import INK, OUTLINE, STYLE, ease, tube, fill, mix, noise1, oval, poly, rrect, shade, stroke, toon
 
 SKIN = {"clara": "#f1c7a3", "media": "#dda177", "morena": "#b9784f", "oscura": "#7b4b30"}
 
@@ -366,6 +366,7 @@ class Character:
                 pth.moveTo(*seg[0])
                 pth.lineTo(*seg[1])
                 c.drawPath(pth, stroke(col, w))
+                tube(c, seg[0], seg[1], w, col)
             # bajo del pantalón
             c.drawLine(ankle[0] - thick * 0.42, ankle[1] + 8, ankle[0] + thick * 0.42, ankle[1] + 8, stroke(shade(col, -0.35), 5))
             self._shoe(c, foot[0], foot[1], f, dark=back)
@@ -498,6 +499,7 @@ class Character:
                 c.drawLine(a[0], a[1], b[0], b[1], stroke(INK, w + OUTLINE * 2))
             for (a, b), w in (((pts[0], pts[1]), w1), ((pts[1], pts[2]), w2)):
                 c.drawLine(a[0], a[1], b[0], b[1], stroke(sleeve, w))
+                tube(c, a, b, w, sleeve)
             c.drawCircle(pts[1][0], pts[1][1], w2 * 0.5, fill(shade(sleeve, -0.08)))  # codo
             hx, hy = pts[-1]
             ux, uy = hx - pts[1][0], hy - pts[1][1]

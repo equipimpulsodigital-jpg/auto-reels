@@ -28,6 +28,10 @@ STYLES = {
     "comic": dict(outline=1.4, ink="#0b0a0d", shade=2.2, gradient=0.0, sat=0.55, light=-0.07, warm=-0.12, contrast=1.25,
                   head=0.84, eyes="cartoon", vignette=0.65, nose=0.9, stubble=True, blush=0.0, eye_size=0.85,
                   bloom=0.1, grain=0.08, paper=0.0, mood=1.2, rim=0.3),
+    # aspecto 3D tipo juguete/plastilina: volumen con luz direccional, bordes que se oscurecen, brillo de plástico
+    "volumen": dict(outline=0.35, ink="auto", shade=0.0, gradient=0.0, sat=1.18, light=-0.02, warm=0.03, contrast=1.12,
+                    head=0.95, eyes="cartoon", vignette=0.25, nose=0.85, stubble=False, blush=0.3, eye_size=1.08,
+                    bloom=0.07, grain=0.012, paper=0.0, mood=0.9, rim=0.35, vol=1.0, spec=0.22, ao=0.5),
     # ilustración amable: línea fina del color de la forma, degradados suaves, papel y brillo cálido
     "amable": dict(outline=0.6, ink="auto", shade=0.45, gradient=0.1, sat=1.0, light=0.0, warm=0.05, contrast=1.04,
                    head=0.92, eyes="soft", vignette=0.08, nose=0.6, stubble=False, blush=0.5, eye_size=1.25,
@@ -157,6 +161,9 @@ def poly(points: list[tuple[float, float]], smooth: bool = False) -> skia.Path:
 def toon(canvas: skia.Canvas, path: skia.Path, color: str, outline: float = OUTLINE,
          light: tuple[float, float] | None = None, shade_amt: float = 0.22) -> None:
     """Relleno plano + sombra lateral suave + contorno grueso: el look de caricatura."""
+    if STYLE.get("vol"):
+        _volume(canvas, path, color, outline)
+        return
     g = STYLE.get("gradient", 0.0)
     if g > 0:  # degradado vertical suave: más luz arriba, más sombra abajo
         b0 = path.computeTightBounds()
@@ -182,6 +189,63 @@ def toon(canvas: skia.Canvas, path: skia.Path, color: str, outline: float = OUTL
                                              StrokeWidth=outline * STYLE["outline"], StrokeJoin=skia.Paint.kRound_Join))
         else:
             canvas.drawPath(path, stroke(INK, outline))
+
+
+def _lift(color: str, t: float) -> str:
+    """Aclara un color sin lavarlo de blanco: sube la luz conservando el tono y la saturación."""
+    h = color.lstrip("#")
+    r, g, b = (int(h[k:k + 2], 16) for k in (0, 2, 4))
+    f = 1 + t
+    return "#" + "".join(f"{min(255, int(v * f + 10 * t)):02x}" for v in (r, g, b))
+
+
+def _volume(canvas: skia.Canvas, path: skia.Path, color: str, outline: float) -> None:
+    """Aspecto 3D: degradado radial desde la luz (arriba a la izquierda), bordes oscurecidos y brillo de plástico."""
+    b = path.computeTightBounds()
+    w, h = b.width(), b.height()
+    if w < 2 or h < 2:
+        canvas.drawPath(path, fill(color))
+        return
+    lx, ly = b.left() + w * 0.33, b.top() + h * 0.26
+    paint = fill(color)
+    paint.setShader(skia.GradientShader.MakeRadial(center=(lx, ly), radius=max(w, h) * 1.0,
+                                                   colors=[col(_lift(color, 0.16)), col(color), col(shade(color, -0.34))],
+                                                   positions=[0.0, 0.42, 1.0]))
+    canvas.drawPath(path, paint)
+    m = min(w, h)
+    canvas.save()
+    canvas.clipPath(path, doAntiAlias=True)
+    ao = STYLE.get("ao", 0.4)
+    if ao and m > 12:  # los bordes se oscurecen como en un objeto redondo
+        edge = stroke(shade(color, -0.5), m * 0.22, ao)
+        edge.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, m * 0.07))
+        canvas.drawPath(path, edge)
+    sp = STYLE.get("spec", 0.4)
+    if sp and m > 18:  # brillo de plástico
+        hl = fill("#ffffff", sp)
+        hl.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, max(2.0, m * 0.05)))
+        canvas.drawOval(skia.Rect.MakeXYWH(lx - w * 0.06, ly - h * 0.035, w * 0.12, h * 0.07), hl)
+    canvas.restore()
+    if outline > 0 and STYLE["outline"] > 0:
+        canvas.drawPath(path, skia.Paint(Color=col(shade(color, -0.5)), AntiAlias=True, Style=skia.Paint.kStroke_Style,
+                                         StrokeWidth=outline * STYLE["outline"], StrokeJoin=skia.Paint.kRound_Join))
+
+
+def tube(canvas: skia.Canvas, a: tuple, b: tuple, width: float, color: str) -> None:
+    """Brazo/pierna con volumen (estilo «volumen»): luz en un lado del tubo y sombra en el otro."""
+    if not STYLE.get("vol"):
+        return
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    n = math.hypot(dx, dy) or 1
+    nx, ny = -dy / n, dx / n
+    if nx > 0 or (nx == 0 and ny > 0):  # la luz viene de arriba a la izquierda
+        nx, ny = -nx, -ny
+    hi = stroke(_lift(color, 0.25), width * 0.24, 0.55)
+    hi.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, width * 0.08))
+    canvas.drawLine(a[0] + nx * width * 0.2, a[1] + ny * width * 0.2, b[0] + nx * width * 0.2, b[1] + ny * width * 0.2, hi)
+    lo = stroke(shade(color, -0.35), width * 0.3, 0.6)
+    lo.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, width * 0.1))
+    canvas.drawLine(a[0] - nx * width * 0.3, a[1] - ny * width * 0.3, b[0] - nx * width * 0.3, b[1] - ny * width * 0.3, lo)
 
 
 def limb(canvas: skia.Canvas, pts: list[tuple[float, float]], width: float, color: str) -> None:
