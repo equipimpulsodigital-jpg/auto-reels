@@ -20,7 +20,9 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 9.0
+            "avg_watch_s": 9.0,
+            "saves": 0,
+            "reach": 121
           },
           "youtube": {
             "views": 981,
@@ -44,7 +46,9 @@
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 9.5
+            "avg_watch_s": 9.5,
+            "saves": 0,
+            "reach": 108
           },
           "youtube": {
             "views": 107,
@@ -85,7 +89,9 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 9.5
+            "avg_watch_s": 9.5,
+            "saves": 0,
+            "reach": 99
           },
           "youtube": {
             "views": 1068,
@@ -109,7 +115,9 @@
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 9.6
+            "avg_watch_s": 9.6,
+            "saves": 0,
+            "reach": 121
           },
           "youtube": {
             "views": 4,
@@ -152,7 +160,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 189,
+            "views": 191,
             "likes": 7,
             "comments": 0,
             "shares": 0
@@ -173,7 +181,9 @@
             "likes": 0,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 13.3
+            "avg_watch_s": 13.3,
+            "saves": 0,
+            "reach": 111
           },
           "youtube": {
             "views": 36,
@@ -193,11 +203,11 @@
       "pitch": "Un clásico para recorrer la historia del cine desde sus primeros fotogramas. Te engancha."
     },
     "stats": {
-      "views": 355,
+      "views": 357,
       "likes": 10,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 225,
+      "youtube_views": 227,
       "updated": "2026-11-21"
     }
   },
@@ -222,7 +232,9 @@
             "likes": 0,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.9
+            "avg_watch_s": 8.9,
+            "saves": 0,
+            "reach": 11
           },
           "youtube": {
             "views": 2,
@@ -279,7 +291,9 @@
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.0
+            "avg_watch_s": 8.0,
+            "saves": 0,
+            "reach": 103
           },
           "youtube": {
             "views": 1123,
