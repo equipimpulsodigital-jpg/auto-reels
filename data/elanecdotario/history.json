@@ -417,5 +417,24 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-21",
+    "format": "caso_famoso",
+    "topic": "El caso Smurl (West Pittston, 1986), la familia que inspiró «Expediente Warren: El último rito», y la casa en la que los nuevos dueños nunca oyeron nada",
+    "series_title": "La casa real de «El último rito»: el caso Smurl",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T10:00:00+01:00",
+        "request_id": "f46bd3ba252d400d80144ce876f7b8ce",
+        "job_id": "ec6c1ba1f7d04906a8a31b54b81dfc5d",
+        "failed": [],
+        "at": "2026-11-21T22:34:02+00:00"
+      }
+    ],
+    "book": null
   }
 ]
