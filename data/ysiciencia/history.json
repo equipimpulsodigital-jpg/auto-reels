@@ -388,5 +388,29 @@
       "isbn": "9788417636135",
       "cover": "https://covers.openlibrary.org/b/id/11949957-M.jpg"
     }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "y_si_humanidad",
+    "topic": "Qué pasaría si todos los hombres del planeta desaparecieran a la vez: aviones sin piloto, bomberos que no llegan, apagones, el fin de los nacimientos y el giro de los ratones de dos madres (Kaguya, 2004; China, 2018).",
+    "series_title": "¿Y si desaparecieran todos los hombres?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T10:00:00+01:00",
+        "request_id": "f6a5aeb666e34cb89c2d10d76413b887",
+        "job_id": "791603a8c7a447c09bbec418e033f039",
+        "failed": [],
+        "at": "2026-11-21T22:34:28+00:00"
+      }
+    ],
+    "book": {
+      "title": "Y, el último hombre",
+      "author": "Brian K. Vaughan y Pia Guerra",
+      "pitch": "El cómic de culto sobre un mundo donde todos los hombres mueren a la vez, salvo uno.",
+      "looked_up": true
+    }
   }
 ]
