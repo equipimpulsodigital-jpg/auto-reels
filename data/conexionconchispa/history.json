@@ -488,7 +488,17 @@
     "topic": "Primer mensaje en apps de ligar: el «hola» genérico y el piropo físico frente a un detalle del perfil más una pregunta (datos de OkCupid, 2009)",
     "series_title": "El «hola, ¿qué tal?» que entierra tu match",
     "parts": 1,
-    "published_parts": [],
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T10:00:00+01:00",
+        "request_id": "36d9d7a9d6eb407eb217e2389557bc97",
+        "job_id": "16987c81a81944e09eb439deb3ebb5a9",
+        "failed": [],
+        "at": "2026-11-21T22:28:25+00:00"
+      }
+    ],
     "book": null
   }
 ]
