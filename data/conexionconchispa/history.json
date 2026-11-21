@@ -23,7 +23,7 @@
             "avg_watch_s": 20.5
           },
           "youtube": {
-            "views": 1142,
+            "views": 1143,
             "likes": 26,
             "comments": 0,
             "shares": 0
@@ -40,12 +40,12 @@
       "pitch": "Te hará escuchar mejor… y darte cuenta de todo lo que te pierdes cuando no lo haces."
     },
     "stats": {
-      "views": 2828,
+      "views": 2829,
       "likes": 93,
       "comments": 0,
       "shares": 1,
-      "youtube_views": 1142,
-      "updated": "2026-11-20"
+      "youtube_views": 1143,
+      "updated": "2026-11-21"
     }
   },
   {
@@ -92,7 +92,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1063,
-      "updated": "2026-11-20"
+      "updated": "2026-11-21"
     }
   },
   {
@@ -112,7 +112,7 @@
         "at": "2026-11-19T15:19:44+00:00",
         "stats": {
           "instagram": {
-            "views": 1204,
+            "views": 1205,
             "likes": 29,
             "comments": 0,
             "shares": 1,
@@ -136,12 +136,12 @@
       "pitch": "Seligman propone una mirada al bienestar que va mucho más allá de simplemente estar contento."
     },
     "stats": {
-      "views": 2381,
+      "views": 2382,
       "likes": 51,
       "comments": 0,
       "shares": 1,
       "youtube_views": 1177,
-      "updated": "2026-11-20"
+      "updated": "2026-11-21"
     }
   },
   {
@@ -167,8 +167,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 627,
-            "likes": 13,
+            "views": 734,
+            "likes": 14,
             "comments": 0,
             "shares": 0
           },
@@ -184,12 +184,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 824,
-      "likes": 17,
+      "views": 931,
+      "likes": 18,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 627,
-      "updated": "2026-11-20"
+      "youtube_views": 734,
+      "updated": "2026-11-21"
     }
   },
   {
@@ -209,20 +209,20 @@
         "at": "2026-11-19T21:14:35+00:00",
         "stats": {
           "instagram": {
-            "views": 1510,
+            "views": 1514,
             "likes": 40,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 16.5
           },
           "youtube": {
-            "views": 1193,
-            "likes": 21,
+            "views": 1226,
+            "likes": 22,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 196,
+            "views": 197,
             "likes": 10,
             "comments": 0,
             "shares": 0,
@@ -238,12 +238,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2899,
-      "likes": 71,
+      "views": 2937,
+      "likes": 72,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1193,
-      "updated": "2026-11-20"
+      "youtube_views": 1226,
+      "updated": "2026-11-21"
     }
   },
   {
@@ -260,10 +260,40 @@
         "request_id": "7d7515d253914af6a8747b127f9d0563",
         "job_id": "9427a4759e74408bbcb8b907f33cce6b",
         "failed": [],
-        "at": "2026-11-20T11:05:33+00:00"
+        "at": "2026-11-20T11:05:33+00:00",
+        "stats": {
+          "instagram": {
+            "views": 423,
+            "likes": 6,
+            "comments": 0,
+            "shares": 1,
+            "avg_watch_s": 13.0
+          },
+          "youtube": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 204,
+            "likes": 8,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 7.1
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 627,
+      "likes": 14,
+      "comments": 0,
+      "shares": 1,
+      "youtube_views": 0,
+      "updated": "2026-11-21"
+    }
   },
   {
     "date": "2026-11-20",
