@@ -93,7 +93,7 @@ channels:
       youtube: https://www.youtube.com/@historiasbiencontadass
       instagram: https://www.instagram.com/bien_contadas/
       tiktok: https://www.tiktok.com/@historias.bien.co86
-    style: caricatura                  # estilo de dibujo: caricatura | plano | amable
+    style: volumen                   # estilo de dibujo: caricatura | volumen | plano | amable
     interest_queries: ["historia de España", "hallazgo arqueológico España", "crimen histórico", "serie basada en hechos reales"]   # noticias de la semana para inspirar temas
     formats:
       punto_inflexion: "Punto de inflexión («El día que España estuvo a punto de...»)"
@@ -124,7 +124,7 @@ channels:
       youtube: https://www.youtube.com/@elanecdotarioes
       instagram: https://www.instagram.com/elanecdotarioes/
       tiktok: https://www.tiktok.com/@archivodemisterio
-    style: caricatura                  # estilo de dibujo: caricatura | plano | amable
+    style: volumen                   # estilo de dibujo: caricatura | volumen | plano | amable
     interest_queries: ["película terror basada en hechos reales", "Warren paranormal", "misterio sin resolver", "documental crimen Netflix"]   # noticias de la semana para inspirar temas
     formats:
       caso_famoso: "Caso famoso con película o serie (Annabelle, los Warren, Amityville, Enfield, El exorcista, Vallecas...): la historia real y lo que la película no contó"
@@ -156,7 +156,7 @@ channels:
       youtube: https://www.youtube.com/@conexionconchispa
       instagram: https://www.instagram.com/conexionconchispa/
       tiktok: https://www.tiktok.com/@conexionconchispa
-    style: caricatura                  # estilo de dibujo: caricatura | plano | amable
+    style: volumen                   # estilo de dibujo: caricatura | volumen | plano | amable
     interest_queries: ["citas pareja", "ligar aplicaciones", "relaciones estudio", "generación Z amor"]   # noticias de la semana para inspirar temas
     format_cycle: [antes_despues, error_comun, antes_despues, senales, antes_despues, psicologia_atraccion]   # «antes y después» es lo que mejor funciona (2.716 de media)
     formats:
