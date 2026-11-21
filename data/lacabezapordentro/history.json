@@ -16,13 +16,13 @@
         "at": "2026-11-19T15:07:52+00:00",
         "stats": {
           "instagram": {
-            "views": 529,
-            "likes": 11,
+            "views": 530,
+            "likes": 12,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.8,
+            "avg_watch_s": 14.7,
             "saves": 0,
-            "reach": 425
+            "reach": 426
           },
           "youtube": {
             "views": 1,
@@ -41,8 +41,8 @@
       "pitch": "El clásico de siempre sobre caer bien, y sigue funcionando sorprendentemente bien hoy."
     },
     "stats": {
-      "views": 530,
-      "likes": 11,
+      "views": 531,
+      "likes": 12,
       "comments": 0,
       "shares": 0,
       "youtube_views": 1,
@@ -66,16 +66,16 @@
         "at": "2026-11-19T15:14:37+00:00",
         "stats": {
           "instagram": {
-            "views": 503,
-            "likes": 19,
+            "views": 505,
+            "likes": 20,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 10.8,
+            "avg_watch_s": 10.7,
             "saves": 2,
-            "reach": 430
+            "reach": 432
           },
           "youtube": {
-            "views": 1172,
+            "views": 1173,
             "likes": 27,
             "comments": 0,
             "shares": 0
@@ -92,11 +92,11 @@
       "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
     },
     "stats": {
-      "views": 1675,
-      "likes": 46,
+      "views": 1678,
+      "likes": 47,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1172,
+      "youtube_views": 1173,
       "updated": "2026-11-21"
     }
   },
@@ -117,13 +117,13 @@
         "at": "2026-11-19T15:20:58+00:00",
         "stats": {
           "instagram": {
-            "views": 201,
+            "views": 220,
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.4,
+            "avg_watch_s": 11.6,
             "saves": 0,
-            "reach": 170
+            "reach": 182
           },
           "youtube": {
             "views": 1302,
@@ -141,7 +141,7 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1503,
+      "views": 1522,
       "likes": 22,
       "comments": 0,
       "shares": 0,
@@ -212,16 +212,16 @@
         "at": "2026-11-19T21:11:05+00:00",
         "stats": {
           "instagram": {
-            "views": 159,
-            "likes": 2,
+            "views": 163,
+            "likes": 3,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 13.3,
             "saves": 0,
-            "reach": 132
+            "reach": 135
           },
           "youtube": {
-            "views": 1164,
+            "views": 1178,
             "likes": 11,
             "comments": 0,
             "shares": 0
@@ -238,11 +238,11 @@
       "isbn": "9788411193016"
     },
     "stats": {
-      "views": 1323,
-      "likes": 13,
+      "views": 1341,
+      "likes": 14,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1164,
+      "youtube_views": 1178,
       "updated": "2026-11-21"
     }
   },
@@ -263,16 +263,16 @@
         "at": "2026-11-20T11:07:46+00:00",
         "stats": {
           "instagram": {
-            "views": 326,
-            "likes": 3,
+            "views": 1053,
+            "likes": 33,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 15.7,
+            "shares": 4,
+            "avg_watch_s": 13.9,
             "saves": 1,
-            "reach": 261
+            "reach": 890
           },
           "youtube": {
-            "views": 7,
+            "views": 12,
             "likes": 0,
             "comments": 0,
             "shares": 0
@@ -288,11 +288,11 @@
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
     },
     "stats": {
-      "views": 333,
-      "likes": 3,
+      "views": 1065,
+      "likes": 33,
       "comments": 0,
-      "shares": 0,
-      "youtube_views": 7,
+      "shares": 4,
+      "youtube_views": 12,
       "updated": "2026-11-21"
     }
   },
@@ -310,10 +310,35 @@
         "request_id": "9ca089f70caa4a58a44d20c12a34f71c",
         "job_id": "f60a12ee4f9d4fbb991af339446240c6",
         "failed": [],
-        "at": "2026-11-20T11:15:08+00:00"
+        "at": "2026-11-20T11:15:08+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1375,
+            "likes": 22,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 16.2,
+            "saves": 1,
+            "reach": 1086
+          },
+          "youtube": {
+            "views": 2,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1377,
+      "likes": 22,
+      "comments": 0,
+      "shares": 0,
+      "youtube_views": 2,
+      "updated": "2026-11-21"
+    }
   },
   {
     "date": "2026-11-20",
