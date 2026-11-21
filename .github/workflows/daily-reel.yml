@@ -21,9 +21,9 @@ on:
         options: [todos, bien_contadas, elanecdotario, conexionconchispa, lacabezapordentro, ysiciencia]
         default: todos
       mode:
-        description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya · estado = cómo acabaron las últimas publicaciones · estadisticas = visualizaciones de cada vídeo"
+        description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya · estado = cómo acabaron las últimas publicaciones · estadisticas = visualizaciones de cada vídeo · noche = la ejecución nocturna (la lanza cron-job.org)"
         type: choice
-        options: [prueba, programar, ahora, estado, estadisticas, cancelar, quitar_etiqueta, cuentas]
+        options: [prueba, programar, noche, ahora, estado, estadisticas, cancelar, quitar_etiqueta, cuentas]
         default: prueba
       new_story:
         description: "Empezar historia nueva (aunque quede una parte pendiente)"
@@ -63,7 +63,7 @@ jobs:
     timeout-minutes: 240
     env:
       CH: ${{ matrix.channel }}
-      HORIZON: ${{ contains(fromJSON('["17 0 * * *","43 2 * * *","29 4 * * *"]'), github.event.schedule) && '44' || '12' }}
+      HORIZON: ${{ inputs.mode == 'noche' && '44' || contains(fromJSON('["17 0 * * *","43 2 * * *","29 4 * * *"]'), github.event.schedule) && '44' || '12' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -150,7 +150,7 @@ jobs:
           TZ: Europe/Madrid
         run: |
           ARGS=(--horizon "$HORIZON")
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.mode }}" != "noche" ]; then
             ARGS=(--horizon 24)
             case "${{ inputs.mode }}" in
               prueba) ARGS+=(--dry-run) ;;
