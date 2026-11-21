@@ -123,7 +123,7 @@ channels:
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@elanecdotarioes
       instagram: https://www.instagram.com/elanecdotarioes/
-      tiktok: https://www.tiktok.com/@elanecdotarioes
+      tiktok: https://www.tiktok.com/@archivodemisterio
     style: caricatura                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["película terror basada en hechos reales", "Warren paranormal", "misterio sin resolver", "documental crimen Netflix"]   # noticias de la semana para inspirar temas
     formats:
