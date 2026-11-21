@@ -214,19 +214,13 @@ class Character:
         waist = sh * (1.02 if L.build == "robusto" else 0.8 if L.female else 0.86)
         hip = sh * (0.98 if L.female else 0.9)
         hem = self._jacket_hem()
-        pts = [(-sh + 26, top - 2), (-sh - 8, top + 34), (-sh * 0.97, top + 150), (-waist, 40),
-               (-hip, 120), (-hip * 1.02, hem), (hip * 1.02, hem), (hip, 120), (waist, 40),
+        belly = 18 if L.build == "robusto" else 0  # el robusto ensancha suavemente por delante, sin dibujar barriga
+        pts = [(-sh + 26, top - 2), (-sh - 8, top + 34), (-sh * 0.97, top + 150), (-waist - belly * (f < 0), 40),
+               (-hip, 120), (-hip * 1.02, hem), (hip * 1.02, hem), (hip, 120), (waist + belly * (f > 0), 40),
                (sh * 0.97, top + 150), (sh + 8, top + 34), (sh - 26, top - 2)]
         body = poly(pts, smooth=True)
         color = L.outfit_color
         toon(c, body, color, light=(-f, -0.3), shade_amt=0.25)
-        if L.build == "robusto":  # barriga
-            belly = oval(f * 18, 40, waist * 0.9, 120)
-            c.save()
-            c.clipPath(body, doAntiAlias=True)
-            c.drawPath(belly, fill(shade(color, 0.06)))
-            c.drawPath(belly, stroke(shade(color, -0.3), 4))
-            c.restore()
         # pliegues en las axilas y la cintura
         for side in (-1, 1):
             pth = skia.Path()
