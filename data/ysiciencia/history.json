@@ -257,5 +257,105 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-21",
+    "format": "y_si_humanidad",
+    "topic": "Qué pasaría si la humanidad entera dejara de poder tener hijos: colegios vacíos, nadie que cuide a los mayores, el último humano y cómo Japón y España ya ven el principio.",
+    "series_title": "¿Y si nadie pudiera volver a tener hijos?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T13:00:00+01:00",
+        "request_id": "04e5600a0006484cac8f4eca2020af90",
+        "job_id": "5cc685dd3bb044abbcc61e24cc82c368",
+        "failed": [],
+        "at": "2026-11-21T08:56:26+00:00"
+      }
+    ],
+    "book": {
+      "title": "El mundo sin nosotros",
+      "author": "Alan Weisman",
+      "pitch": "Qué le pasaría al planeta, casa a casa y ciudad a ciudad, si los humanos desapareciéramos.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/14249980-M.jpg",
+      "isbn": "9788418967832"
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "y_si_tu",
+    "topic": "Qué te pasaría si dejaras de dormir para siempre: microsueños, alucinaciones, el récord de Randy Gardner, la limpieza del cerebro y el insomnio familiar letal en el País Vasco.",
+    "series_title": "¿Y si dejaras de dormir para siempre?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T16:00:00+01:00",
+        "request_id": "5e721a951ee14baf933a581d0a0554d6",
+        "job_id": "6308a62ae35645eaa37b32b074785507",
+        "failed": [],
+        "at": "2026-11-21T09:02:34+00:00"
+      }
+    ],
+    "book": {
+      "title": "Por qué dormimos",
+      "author": "Matthew Walker",
+      "pitch": "El neurocientífico que explica qué le hace a tu cuerpo cada hora de sueño que te quitas.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "y_si_planeta",
+    "topic": "Qué pasaría si un agujero negro errante de 10 masas solares cruzara el Sistema Solar: es invisible, deforma las órbitas y lanza la Tierra al espacio helado.",
+    "series_title": "¿Y si un agujero negro cruzara el Sistema Solar?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T19:00:00+01:00",
+        "request_id": "91c20396fadc4340a22e3617813032b7",
+        "job_id": "cff93027f7fe4a63ae15ab328e4ee4df",
+        "failed": [],
+        "at": "2026-11-21T09:10:42+00:00"
+      }
+    ],
+    "book": {
+      "title": "Breve historia del tiempo",
+      "author": "Stephen Hawking",
+      "pitch": "El clásico que te explica los agujeros negros como si te los contaran en una cena.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-21",
+    "format": "cuenta_atras",
+    "topic": "Cuenta atrás del impacto de un asteroide como el de Chicxulub si cayera hoy, vivido desde Madrid, con el giro de que sin él no existiríamos.",
+    "series_title": "¿Y si hoy cayera el asteroide de los dinosaurios?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-21",
+        "slot": "2026-11-21T22:00:00+01:00",
+        "request_id": "ada6b514187f4c738ef800b86845dc67",
+        "job_id": "3b93ca59d7114f55b4ce4b25f9a077b1",
+        "failed": [],
+        "at": "2026-11-21T09:18:32+00:00"
+      }
+    ],
+    "book": {
+      "title": "Auge y caída de los dinosaurios",
+      "author": "Steve Brusatte",
+      "pitch": "La historia viva de los dinosaurios, hasta el día exacto en que cayó el asteroide.",
+      "looked_up": true,
+      "isbn": "9788417636135",
+      "cover": "https://covers.openlibrary.org/b/id/11949957-M.jpg"
+    }
   }
 ]
