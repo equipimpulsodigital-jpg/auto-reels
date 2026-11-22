@@ -28,7 +28,8 @@
             "views": 1214,
             "likes": 19,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 18.0
           }
         }
       },
@@ -54,7 +55,8 @@
             "views": 1208,
             "likes": 9,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 14.0
           }
         }
       }
@@ -174,7 +176,7 @@
             "reach": 105
           },
           "youtube": {
-            "views": 1274,
+            "views": 1276,
             "likes": 15,
             "comments": 0,
             "shares": 0
@@ -222,11 +224,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 2980,
+      "views": 2982,
       "likes": 43,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1280,
+      "youtube_views": 1282,
       "updated": "2026-11-22"
     }
   },
@@ -288,7 +290,7 @@
             "reach": 303
           },
           "youtube": {
-            "views": 1368,
+            "views": 1371,
             "likes": 42,
             "comments": 0,
             "shares": 0
@@ -304,11 +306,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3265,
+      "views": 3268,
       "likes": 84,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1381,
+      "youtube_views": 1384,
       "updated": "2026-11-22"
     }
   },
@@ -329,16 +331,16 @@
         "at": "2026-11-21T08:56:26+00:00",
         "stats": {
           "instagram": {
-            "views": 1058,
-            "likes": 26,
+            "views": 1249,
+            "likes": 29,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 14.8,
+            "avg_watch_s": 14.7,
             "saves": 0,
-            "reach": 832
+            "reach": 1018
           },
           "youtube": {
-            "views": 1045,
+            "views": 1047,
             "likes": 14,
             "comments": 1,
             "shares": 0
@@ -355,11 +357,11 @@
       "isbn": "9788418967832"
     },
     "stats": {
-      "views": 2103,
-      "likes": 40,
+      "views": 2296,
+      "likes": 43,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1045,
+      "youtube_views": 1047,
       "updated": "2026-11-22"
     }
   },
@@ -389,7 +391,7 @@
             "reach": 147
           },
           "youtube": {
-            "views": 1216,
+            "views": 1218,
             "likes": 22,
             "comments": 1,
             "shares": 0
@@ -404,11 +406,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1378,
+      "views": 1380,
       "likes": 22,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1216,
+      "youtube_views": 1218,
       "updated": "2026-11-22"
     }
   },
@@ -429,13 +431,13 @@
         "at": "2026-11-21T09:10:42+00:00",
         "stats": {
           "instagram": {
-            "views": 201,
+            "views": 205,
             "likes": 3,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 16.9,
+            "avg_watch_s": 17.0,
             "saves": 0,
-            "reach": 155
+            "reach": 158
           },
           "youtube": {
             "views": 0,
@@ -453,7 +455,7 @@
       "looked_up": true
     },
     "stats": {
-      "views": 201,
+      "views": 205,
       "likes": 3,
       "comments": 2,
       "shares": 0,
@@ -478,16 +480,16 @@
         "at": "2026-11-21T09:18:32+00:00",
         "stats": {
           "instagram": {
-            "views": 196,
-            "likes": 1,
+            "views": 199,
+            "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.4,
+            "avg_watch_s": 13.6,
             "saves": 0,
-            "reach": 158
+            "reach": 161
           },
           "youtube": {
-            "views": 8,
+            "views": 9,
             "likes": 0,
             "comments": 1,
             "shares": 0
@@ -504,11 +506,11 @@
       "cover": "https://covers.openlibrary.org/b/id/11949957-M.jpg"
     },
     "stats": {
-      "views": 204,
-      "likes": 1,
+      "views": 208,
+      "likes": 2,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 8,
+      "youtube_views": 9,
       "updated": "2026-11-22"
     }
   },

@@ -8,21 +8,21 @@
     {
       "date": "2026-11-22",
       "instagram": 0,
-      "youtube": 3
+      "youtube": 9
     }
   ],
   "latest": {
     "instagram": {
       "followers": 0,
-      "reach": 2732,
-      "views": 3372,
-      "impressions": 3372,
-      "profileViews": 68
+      "reach": 4600,
+      "views": 5716,
+      "impressions": 5716,
+      "profileViews": 110
     },
     "youtube": {
-      "followers": 3,
+      "followers": 9,
       "reach": 0,
-      "impressions": 0,
+      "impressions": 1537,
       "profileViews": 0
     }
   }
