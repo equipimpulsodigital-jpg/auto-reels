@@ -16,19 +16,17 @@
         "at": "2026-11-19T11:30:19+00:00",
         "stats": {
           "instagram": {
-            "views": 136,
-            "likes": 1,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 9.0,
-            "saves": 0,
-            "reach": 121
+            "shares": 0
           },
           "youtube": {
             "views": 997,
             "likes": 29,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 22.0
           }
         }
       },
@@ -42,26 +40,24 @@
         "at": "2026-11-19T11:37:19+00:00",
         "stats": {
           "instagram": {
-            "views": 114,
-            "likes": 2,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 9.5,
-            "saves": 0,
-            "reach": 108
+            "shares": 0
           },
           "youtube": {
             "views": 116,
             "likes": 4,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 15.0
           }
         }
       }
     ],
     "stats": {
-      "views": 1363,
-      "likes": 36,
+      "views": 1113,
+      "likes": 33,
       "comments": 0,
       "shares": 0,
       "youtube_views": 1113,
@@ -85,19 +81,17 @@
         "at": "2026-11-19T11:45:43+00:00",
         "stats": {
           "instagram": {
-            "views": 116,
-            "likes": 1,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 9.5,
-            "saves": 0,
-            "reach": 100
+            "shares": 0
           },
           "youtube": {
             "views": 1198,
             "likes": 22,
             "comments": 0,
-            "shares": 0
+            "shares": 1,
+            "avg_watch_s": 15.0
           }
         }
       },
@@ -111,28 +105,26 @@
         "at": "2026-11-19T11:51:49+00:00",
         "stats": {
           "instagram": {
-            "views": 148,
-            "likes": 1,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 9.6,
-            "saves": 0,
-            "reach": 122
+            "shares": 0
           },
           "youtube": {
             "views": 405,
             "likes": 7,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 22.0
           }
         }
       }
     ],
     "stats": {
-      "views": 1867,
-      "likes": 31,
+      "views": 1603,
+      "likes": 29,
       "comments": 0,
-      "shares": 0,
+      "shares": 1,
       "youtube_views": 1603,
       "updated": "2026-11-22"
     }
@@ -160,8 +152,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 434,
-            "likes": 26,
+            "views": 446,
+            "likes": 24,
             "comments": 0,
             "shares": 0
           }
@@ -177,16 +169,13 @@
         "at": "2026-11-19T14:52:06+00:00",
         "stats": {
           "instagram": {
-            "views": 130,
+            "views": 0,
             "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 13.3,
-            "saves": 0,
-            "reach": 111
+            "shares": 0
           },
           "youtube": {
-            "views": 204,
+            "views": 205,
             "likes": 15,
             "comments": 0,
             "shares": 0
@@ -203,11 +192,11 @@
       "pitch": "Un clásico para recorrer la historia del cine desde sus primeros fotogramas. Te engancha."
     },
     "stats": {
-      "views": 768,
-      "likes": 41,
+      "views": 651,
+      "likes": 39,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 638,
+      "youtube_views": 651,
       "updated": "2026-11-22"
     }
   },
@@ -228,16 +217,13 @@
         "at": "2026-11-20T11:07:26+00:00",
         "stats": {
           "instagram": {
-            "views": 52,
-            "likes": 2,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 6.6,
-            "saves": 0,
-            "reach": 43
+            "shares": 0
           },
           "youtube": {
-            "views": 419,
+            "views": 422,
             "likes": 7,
             "comments": 0,
             "shares": 0
@@ -260,16 +246,13 @@
         "at": "2026-11-20T11:13:27+00:00",
         "stats": {
           "instagram": {
-            "views": 158,
-            "likes": 3,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 11.9,
-            "saves": 0,
-            "reach": 136
+            "shares": 0
           },
           "youtube": {
-            "views": 523,
+            "views": 526,
             "likes": 13,
             "comments": 0,
             "shares": 0
@@ -285,11 +268,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1152,
-      "likes": 25,
+      "views": 948,
+      "likes": 20,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 942,
+      "youtube_views": 948,
       "updated": "2026-11-22"
     }
   },
@@ -310,13 +293,10 @@
         "at": "2026-11-20T12:49:45+00:00",
         "stats": {
           "instagram": {
-            "views": 115,
-            "likes": 2,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 8.0,
-            "saves": 0,
-            "reach": 103
+            "shares": 0
           },
           "youtube": {
             "views": 1291,
@@ -335,8 +315,8 @@
     ],
     "book": null,
     "stats": {
-      "views": 1406,
-      "likes": 29,
+      "views": 1291,
+      "likes": 27,
       "comments": 1,
       "shares": 0,
       "youtube_views": 1291,
@@ -360,26 +340,23 @@
         "at": "2026-11-20T12:56:42+00:00",
         "stats": {
           "instagram": {
-            "views": 74,
-            "likes": 5,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 15.3,
-            "saves": 0,
-            "reach": 30
+            "shares": 0
           },
           "youtube": {
-            "views": 1392,
-            "likes": 47,
+            "views": 1422,
+            "likes": 48,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 1,
+            "views": 2,
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 1.2,
+            "avg_watch_s": 9.3,
             "reach": 0
           }
         }
@@ -394,16 +371,13 @@
         "at": "2026-11-20T21:50:34+00:00",
         "stats": {
           "instagram": {
-            "views": 1258,
-            "likes": 49,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 14.2,
-            "saves": 2,
-            "reach": 1011
+            "shares": 0
           },
           "youtube": {
-            "views": 1213,
+            "views": 1215,
             "likes": 11,
             "comments": 0,
             "shares": 0
@@ -421,11 +395,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3940,
-      "likes": 114,
+      "views": 2641,
+      "likes": 61,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2605,
+      "youtube_views": 2637,
       "updated": "2026-11-22"
     }
   },
@@ -446,16 +420,13 @@
         "at": "2026-11-20T21:43:59+00:00",
         "stats": {
           "instagram": {
-            "views": 138,
-            "likes": 2,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 10.9,
-            "saves": 0,
-            "reach": 109
+            "shares": 0
           },
           "youtube": {
-            "views": 1401,
+            "views": 1409,
             "likes": 49,
             "comments": 0,
             "shares": 0
@@ -471,11 +442,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1539,
-      "likes": 51,
+      "views": 1409,
+      "likes": 49,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1401,
+      "youtube_views": 1409,
       "updated": "2026-11-22"
     }
   },
@@ -496,23 +467,20 @@
         "at": "2026-11-20T21:58:57+00:00",
         "stats": {
           "instagram": {
-            "views": 15,
-            "likes": 1,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 7.5,
-            "saves": 0,
-            "reach": 13
+            "shares": 0
           },
           "youtube": {
-            "views": 1243,
-            "likes": 26,
+            "views": 1246,
+            "likes": 25,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 184,
-            "likes": 5,
+            "views": 188,
+            "likes": 6,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 6.0,
@@ -530,22 +498,19 @@
         "at": "2026-11-20T22:05:04+00:00",
         "stats": {
           "instagram": {
-            "views": 130,
-            "likes": 3,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 24.7,
-            "saves": 0,
-            "reach": 74
+            "shares": 0
           },
           "youtube": {
-            "views": 1117,
+            "views": 1119,
             "likes": 19,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 185,
+            "views": 189,
             "likes": 11,
             "comments": 0,
             "shares": 0,
@@ -557,11 +522,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 2874,
-      "likes": 65,
+      "views": 2742,
+      "likes": 61,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2360,
+      "youtube_views": 2365,
       "updated": "2026-11-22"
     }
   },
