@@ -294,7 +294,7 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     from .captions import CaptionRenderer
     from .render import assemble
     from .script import Series, generate_series, next_format
-    from .toon.episode import render_episode
+    from .toon.episode import music_envelope, render_episode
     from .tts import synthesize_scenes
 
     today = date.today().isoformat()
@@ -380,7 +380,8 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
                      v.get("music_volume", 0.35), 0.0, sfx=sfx,
                      progress_color=cfg["channel"].get("accent_color") if v.get("progress_bar", True) else None,
-                     music_names=cfg["channel"].get("music"))
+                     music_names=cfg["channel"].get("music"),
+                     music_env=music_envelope(part.blocks, durations))
     try:  # portada diseñada (fotograma del personaje + gancho), para que el vídeo no se vea con un fotograma cualquiera
         from .cover import make_cover, pick_frame
         f, at = pick_frame(shots, [b.framing for b in part.blocks], durations)

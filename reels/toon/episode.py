@@ -85,6 +85,51 @@ def visemes_for(words: list, scene: int, start: float, fps: int, frames: int) ->
     return out
 
 
+REVEAL_LABELS = ("PAYOFF", "REVELACI", "CLÍMAX", "CLIMAX", "GIRO FINAL", "DESENLACE")
+
+
+def key_moments(blocks) -> tuple[int, int | None]:
+    """(bloque de la revelación final, bloque del primer giro). Sirven para la música y los planos de reacción."""
+    reveal = None
+    for i, b in enumerate(blocks):
+        if any(k in (b.label or "").upper() for k in REVEAL_LABELS):
+            reveal = i
+    if reveal is None:
+        reveal = max(0, len(blocks) - 2)  # el penúltimo (el último lo cierra el presentador)
+    turn = next((i for i, b in enumerate(blocks) if "GIRO" in (b.label or "").upper() and i != reveal and i > 1), None)
+    return reveal, turn
+
+
+def music_envelope(blocks, durations: list[float]) -> list[tuple[float, float]]:
+    """Volumen de la música a lo largo del vídeo: algo más baja en la tensión, casi en silencio justo antes de
+    la revelación y con fuerza en el giro (luego vuelve a su nivel)."""
+    reveal, _ = key_moments(blocks)
+    starts = [sum(durations[:i]) for i in range(len(durations))]
+    pts = [(0.0, 1.0)]
+    for i, b in enumerate(blocks):
+        lab = (b.label or "").upper()
+        g = 0.78 if ("TENSI" in lab or "SUSPENSE" in lab) else 1.0
+        pts.append((starts[i] + 0.25, g))
+    r = starts[reveal]
+    pts = [p for p in pts if not (r - 1.0 <= p[0] <= r + 2.6)]
+    pts += [(r - 1.0, 0.9), (r - 0.15, 0.22), (r + 0.05, 1.35), (r + 2.6, 1.0)]
+    return sorted(pts)
+
+
+def _reaction_shot(shot, react_id: str, dur: float):
+    """Plano de reacción: la cara de otro personaje durante un segundo (la voz sigue sonando por encima)."""
+    from dataclasses import replace
+    em = "horrorizado" if shot.mood in ("noche", "tormenta") or shot.brow < -0.4 else "sorprendido"
+    if shot.smile > 0.4:
+        em = "contento"
+    if shot.worry > 0.6 and shot.smile < -0.3:
+        em = "triste"
+    brow, smile, worry, extra = K.emotion(em)
+    return replace(shot, duration=dur, framing="personaje", cast=[react_id], speaker=None, event=None, action="",
+                   held="", camera="push_in", punches=[0.04], mouth=[], visemes=[], sfx=[], whip=False,
+                   brow=brow, smile=smile, worry=worry, extra=extra)
+
+
 def host_character(cfg: dict):
     """Presentador fijo de la marca (config: channels.<id>.host)."""
     h = cfg["channel"].get("host")
@@ -103,6 +148,7 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
         chars["_host"], sides["_host"] = host, -1.0
     ctx = Ctx(W, H, fps, chars, dict(sides), style=cfg["channel"].get("style", "caricatura"))
     shots, files = [], []
+    reveal, turn = key_moments(part.blocks)
     seated_at = None  # lugar donde los personajes se han sentado (siguen sentados mientras no cambie)
     for i, (b, dur) in enumerate(zip(part.blocks, durations)):
         shot = block_to_shot(b, series, chars, dur)
@@ -141,9 +187,30 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
         if shot.speaker:
             shot.mouth = mouth_envelope(workdir / f"voice_{i}.wav", fps, round(dur * fps))
             shot.visemes = visemes_for(words or [], i, start, fps, round(dur * fps))
+        if i == reveal:
+            shot.sfx.append(("hit", 0.0))  # golpe de la revelación (la música entra con fuerza a la vez)
         print(f"  plano {i + 1}/{len(part.blocks)} · {shot.location} · {shot.framing}"
               + (f" · {shot.event}" if shot.event else "") + (f" · {shot.prop}" if shot.framing == "objeto" else ""), flush=True)
-        files.append(render_shot(ctx, shot, workdir / f"shot_{i}.mp4"))
+        react = None
+        if i in (reveal, turn) and dur >= 2.6 and shot.framing != "objeto":
+            who = [c for c in list(shot.cast) + list(chars) if c not in (shot.speaker, "_host")]
+            react = who[0] if who else None
+        if react:  # plano de reacción al final del bloque (montaje en «J»: la frase sigue sonando)
+            from dataclasses import replace
+            cut = dur - 0.9
+            n = round(cut * fps)
+            main = replace(shot, duration=cut, mouth=shot.mouth[:n], visemes=shot.visemes[:n])
+            a = render_shot(ctx, main, workdir / f"shot_{i}_a.mp4")
+            b = render_shot(ctx, _reaction_shot(shot, react, 0.9), workdir / f"shot_{i}_b.mp4")
+            lst = workdir / f"shot_{i}_list.txt"
+            lst.write_text(f"file '{a.resolve()}'\nfile '{b.resolve()}'\n")
+            from ..media import run_ffmpeg
+            out = workdir / f"shot_{i}.mp4"
+            run_ffmpeg(["-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", out])
+            files.append(out)
+            print(f"    + reacción de {react}", flush=True)
+        else:
+            files.append(render_shot(ctx, shot, workdir / f"shot_{i}.mp4"))
         shots.append(shot)
     fx = build_track(shots, durations, sum(durations), workdir / "sfx.wav")
     return files, fx

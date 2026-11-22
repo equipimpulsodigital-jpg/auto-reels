@@ -17,6 +17,7 @@ from .more_props import BEHIND_EVENTS
 from .props import EVENT_AMBIENCE, EVENT_SFX, EVENTS, draw_prop
 from .character import Character, Pose
 from . import finish as F
+from .life import draw_life
 from .draw import STYLE, ease, noise1, set_style
 
 
@@ -129,6 +130,16 @@ def _actor(shot: Shot) -> Optional[str]:
     return shot.cast[0] if shot.cast else None
 
 
+def _punch_react(shot: Shot, t: float) -> float:
+    """0-1: reacción a una palabra fuerte (sorpresa: cejas arriba, cabeza atrás) en los 0,6 s siguientes."""
+    best = 0.0
+    for p in shot.punches:
+        d = t - p
+        if 0 <= d < 0.6:
+            best = max(best, 1 - d / 0.6)
+    return best
+
+
 def zlib_side(shot: Shot) -> int:
     """Sentido del travelling lateral, estable para cada plano."""
     import zlib
@@ -158,6 +169,13 @@ def _base_pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: flo
             if 0 < j < len(mo) and mo[j] - mo[j - 1] > 0.35:
                 nod = max(nod, math.sin(math.pi * k / 7))
         amt = ease_back(t / 0.5) * (1 - ease((t - (shot.duration - 0.45)) / 0.45))
+        gesture = shot.gesture
+        if gesture == "explain" and shot.duration > 2.2:  # al hablar, va cambiando de gesto (no siempre el mismo)
+            seq = ["explain", "point", "explain", "chest", "shrug", "explain", "point"]
+            seg = int(t / 1.4)
+            gesture = seq[(seg + seed) % len(seq)]
+            amt *= 0.35 + 0.65 * math.sin(math.pi * min(1.0, (t % 1.4) / 1.4))
+        hit = _punch_react(shot, t)
         vis = shot.visemes[frame] if frame < len(shot.visemes) else None
         rnd = 0.0
         if vis and m > 0.05:  # la boca forma la letra que suena (a abierta, o/u redondas, m/b/p cerradas...)
@@ -165,14 +183,15 @@ def _base_pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: flo
             if vis[0] == 0.0:
                 m = 0.0
         return Pose(t=t, mouth=m, mouth_round=rnd, facing=facing, look=0.3 + darts(t, seed) * 0.4, look_up=0.1, blink=blink(t, seed),
-                    brow=shot.brow + 0.3 * m * (1 - shot.worry), smile=shot.smile, gesture=shot.gesture, gesture_amt=amt,
+                    brow=shot.brow + 0.3 * m * (1 - shot.worry) + 0.5 * hit, smile=shot.smile, gesture=gesture, gesture_amt=amt,
                     worry=shot.worry, extra=shot.extra,
                     talking=True, nod=nod)
-    # el que escucha reacciona: asiente de vez en cuando y sigue con la mirada
-    nod = max(0.0, math.sin(t * 2.1 + seed)) ** 8
+    # el que escucha reacciona: asiente de vez en cuando y sigue con la mirada; en los golpes, se echa atrás
+    hit = _punch_react(shot, t)
+    nod = max(0.0, math.sin(t * 2.1 + seed)) ** 8 - 1.6 * hit
     narrated = shot.speaker is None  # habla el narrador: los que salen ponen la cara de la escena (`emotion`)
     return Pose(t=t, facing=facing, look=0.5 + darts(t, seed + 7) * 0.3, blink=blink(t, seed),
-                brow=shot.brow if narrated else shot.listener_brow,
+                brow=(shot.brow if narrated else shot.listener_brow) + 0.8 * hit,
                 smile=shot.smile if narrated else shot.listener_smile,
                 worry=shot.worry if narrated else shot.listener_worry,
                 extra=shot.extra if narrated else shot.listener_extra, gesture="idle", gesture_amt=0.0, nod=nod * 0.6,
@@ -210,6 +229,7 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
         c.scale(1.04, 1.04)
         c.translate(-W * 0.02, -H * 0.02)
         loc.back(c, g)
+        draw_life(c, W, H, t, shot.location, shot.mood)  # gente y detalles al fondo
         c.restore()
         F.mood_light(c, W, H, shot.mood)
         c.save()

@@ -38,10 +38,38 @@ def pick_music(names: Optional[list[str]] = None) -> Optional[Path]:
     return random.choice(tracks) if tracks else None
 
 
+def _shape_music(track: Path, total: float, env: list[tuple[float, float]], workdir: Path) -> Path:
+    """Repite la pista hasta cubrir el vídeo y le aplica la curva de volumen (tensión, silencio, golpe)."""
+    import subprocess
+    import wave
+
+    import numpy as np
+    sr = 44100
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(track), "-f", "s16le", "-ac", "2", "-ar", str(sr), "-"],
+                         capture_output=True, check=True).stdout
+    x = np.frombuffer(raw, dtype="<i2").astype(np.float32).reshape(-1, 2) / 32768
+    n = int((total + 0.5) * sr)
+    if len(x) < n:
+        x = np.tile(x, (n // max(len(x), 1) + 1, 1))
+    x = x[:n]
+    tt = np.arange(n) / sr
+    ts, gs = zip(*sorted(env))
+    g = np.interp(tt, ts, gs).astype(np.float32)
+    y = np.clip(x * g[:, None], -1, 1)
+    out = workdir / "music_shaped.wav"
+    with wave.open(str(out), "wb") as w:
+        w.setnchannels(2)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes((y * 32767).astype("<i2").tobytes())
+    return out
+
+
 def assemble(shot_files: list[Path], durations: list[float], voice: Path, captions_list: Path, total: float,
              out: Path, workdir: Path, music_volume: float, fade: float = 0.0,
              sfx: Optional[Path] = None, progress_color: Optional[str] = None,
-             music_names: Optional[list[str]] = None) -> Path:
+             music_names: Optional[list[str]] = None,
+             music_env: Optional[list[tuple[float, float]]] = None) -> Path:
     bg = join_shots(shot_files, durations, fade, workdir / "background.mp4", workdir)
 
     music = pick_music(music_names)
@@ -57,7 +85,11 @@ def assemble(shot_files: list[Path], durations: list[float], voice: Path, captio
     idx = 3
     if music:
         print(f"  música: {music.name}")
-        inputs += ["-stream_loop", "-1", "-i", music]
+        if music_env:  # la música sigue la historia: se prepara aparte con su curva de volumen
+            music = _shape_music(music, total, music_env, workdir)
+            inputs += ["-i", music]
+        else:
+            inputs += ["-stream_loop", "-1", "-i", music]
         fade_start = max(0.0, total - 1.5)
         # La música baja automáticamente mientras habla el narrador (sidechain) y sube en las pausas.
         fc += ("[2:a]apad,asplit=2[vo][sc];"

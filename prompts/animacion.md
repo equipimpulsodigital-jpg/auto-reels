@@ -1,3 +1,12 @@
+### POLÉMICA: LO QUE HACE QUE LA GENTE COMENTE
+Los temas que más se ven y se comentan son los que **dividen a la gente** o tocan algo que se dice en voz baja. En cada marca, busca el ángulo polémico (sin perder el rigor ni los límites del canal):
+- **Historia:** ¿héroe o villano?, el mito que te enseñaron mal, el escándalo que se tapó, la decisión que hoy sería un crimen, el rey o el general que no era lo que dicen los libros.
+- **Misterio:** el caso con dos versiones enfrentadas (¿fraude o real?, ¿accidente o asesinato?), la prueba que nadie supo explicar, lo que la policía o la película no contó.
+- **Citas y relaciones:** debates de pareja que dividen (quién paga, el móvil, el ex, celos, infidelidad, relaciones abiertas), picante sin ser explícito.
+- **Psicología:** verdades incómodas sobre nosotros (envidia, ego, manipulación, celos, dinero, por qué mentimos, por qué nos atrae quien nos trata mal).
+- **Ciencia:** escenarios que dan miedo de verdad o que la gente discute (IA, guerra, apagón, pandemia, inmortalidad, el fin de la especie).
+Polémico no es falso ni ofensivo: datos reales, los dos lados cuando los hay, y nada que ataque a colectivos ni a personas reales vivas sin pruebas.
+
 ### ELEGIR EL TEMA: LO QUE LE IMPORTA A LA GENTE
 El tema decide el 70 % del éxito. No elijas lo que es interesante para un experto, sino lo que haría que alguien que no sabe nada del tema deje de deslizar. Propón 5 en `topic_candidates`, puntúalos con exigencia y desarrolla el mejor. Un buen tema cumple casi todo esto:
 - **Se cuenta en una frase y da ganas de saber más:** «Un hombre vivió 30 años en un aeropuerto», «Por qué siempre te acuerdas de lo que dijiste mal hace 10 años». Si necesita explicación previa, descártalo.
