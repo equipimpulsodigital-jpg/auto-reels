@@ -375,7 +375,7 @@ def make_episode(cfg: dict, state: dict, history: list[dict], args, label: str):
     captions = CaptionRenderer(v["width"], v["height"], cfg["channel"].get("accent_color", "#E2A84B"), part.hook_title,
                                badge=badge, end_card=end_card, end_sub=end_sub, end_start=total - tail + 0.2,
                                caption_y=cfg.get("animation", {}).get("caption_y", 0.86),
-                               stamps=_stamps(part.blocks, durations))
+                               stamps=None if cfg["channel"].get("render") == "tipografia" else _stamps(part.blocks, durations))
     cap_list = captions.render(words, total, workdir)
     video = assemble(shots, durations, voice, cap_list, total, workdir / "reel.mp4", workdir,
                      v.get("music_volume", 0.35), 0.0, sfx=sfx,

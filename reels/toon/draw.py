@@ -32,6 +32,10 @@ STYLES = {
     "volumen": dict(outline=0.35, ink="auto", shade=0.0, gradient=0.0, sat=1.18, light=-0.02, warm=0.03, contrast=1.12,
                     head=0.95, eyes="cartoon", vignette=0.25, nose=0.85, stubble=False, blush=0.3, eye_size=1.08,
                     bloom=0.07, grain=0.012, paper=0.0, mood=0.9, rim=0.35, vol=1.0, spec=0.22, ao=0.5),
+    # tipografía (La Cabeza): sin personajes, fondo oscuro, palabras enormes; aquí solo cuenta el acabado
+    "tipografia": dict(outline=0.0, ink=None, shade=0.0, gradient=0.0, sat=1.05, light=0.0, warm=0.0, contrast=1.05,
+                       head=1.0, eyes="cartoon", vignette=0.55, nose=1.0, stubble=True, blush=0.22, eye_size=1.0,
+                       bloom=0.28, grain=0.03, paper=0.0, mood=0.0, rim=0.0),
     # ilustración amable: línea fina del color de la forma, degradados suaves, papel y brillo cálido
     "amable": dict(outline=0.6, ink="auto", shade=0.45, gradient=0.1, sat=1.0, light=0.0, warm=0.05, contrast=1.04,
                    head=0.92, eyes="soft", vignette=0.08, nose=0.6, stubble=False, blush=0.5, eye_size=1.25,

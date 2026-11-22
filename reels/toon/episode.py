@@ -138,8 +138,34 @@ def host_character(cfg: dict):
     return K.make_character(h.get("name", "Presentador"), h.get("look", {}), seed=77), h
 
 
+def render_typo_episode(part, durations: list[float], workdir: Path, cfg: dict,
+                        words: list | None = None) -> tuple[list[Path], Path]:
+    """Modo tipografía: cada bloque es una palabra clave enorme sobre fondo oscuro (sin personajes)."""
+    from .typo import render_typo_shot
+    v = cfg["video"]
+    W, H, fps = v["width"], v["height"], v["fps"]
+    accent = cfg["channel"].get("accent_color", "#E2A84B")
+    files, shots = [], []
+    reveal, _ = key_moments(part.blocks)
+    for i, (b, dur) in enumerate(zip(part.blocks, durations)):
+        start = sum(durations[:i])
+        punches = [max(0.0, w.start - start) for w in (words or []) if w.scene == i and w.emph]
+        sfx = [("whoosh", 0.0)] + [("hit", p - 0.03) for p in punches]
+        if i == 0 or i == reveal:
+            sfx.append(("hit", 0.0))
+        shots.append(Shot(location="despacho", duration=dur, framing="objeto", mood="noche", sfx=sfx,
+                          ambience="viento", punches=punches))
+        print(f"  plano {i + 1}/{len(part.blocks)} · tipografía · {b.on_screen or b.emphasis or ''}", flush=True)
+        files.append(render_typo_shot(b, dur, workdir / f"shot_{i}.mp4", W, H, fps, accent, seed=i * 13 + 5,
+                                      punches=punches))
+    fx = build_track(shots, durations, sum(durations), workdir / "sfx.wav")
+    return files, fx
+
+
 def render_episode(series, part, durations: list[float], workdir: Path, cfg: dict,
                    words: list | None = None) -> tuple[list[Path], Path]:
+    if cfg["channel"].get("render") == "tipografia":
+        return render_typo_episode(part, durations, workdir, cfg, words)
     v = cfg["video"]
     W, H, fps = v["width"], v["height"], v["fps"]
     chars, sides = build_cast(series)

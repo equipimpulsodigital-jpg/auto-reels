@@ -121,7 +121,7 @@ class CaptionRenderer:
 
         if group:
             size = int(self.w * 0.105)
-            texts = [words[j].text.strip(",.;:…").upper() for j in group]
+            texts = [words[j].text.strip(",.;:…").replace("«", '"').replace("»", '"').upper() for j in group]
             font = _font(size)
             while d.textlength(" ".join(texts), font=font) > self.w * 0.9 and size > 40:
                 size -= 4
