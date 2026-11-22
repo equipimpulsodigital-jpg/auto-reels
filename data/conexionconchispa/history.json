@@ -175,7 +175,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1139,
+            "views": 1158,
             "likes": 20,
             "comments": 0,
             "shares": 0
@@ -193,11 +193,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1336,
+      "views": 1355,
       "likes": 25,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1139,
+      "youtube_views": 1158,
       "updated": "2026-11-22"
     }
   },
@@ -227,7 +227,7 @@
             "reach": 1238
           },
           "youtube": {
-            "views": 1255,
+            "views": 1256,
             "likes": 22,
             "comments": 0,
             "shares": 0
@@ -250,11 +250,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2983,
+      "views": 2984,
       "likes": 74,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1255,
+      "youtube_views": 1256,
       "updated": "2026-11-22"
     }
   },
@@ -393,7 +393,7 @@
             "reach": 135
           },
           "youtube": {
-            "views": 1206,
+            "views": 1207,
             "likes": 16,
             "comments": 0,
             "shares": 0
@@ -416,11 +416,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1575,
+      "views": 1576,
       "likes": 33,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1206,
+      "youtube_views": 1207,
       "updated": "2026-11-22"
     }
   },
@@ -506,7 +506,7 @@
             "shares": 1,
             "avg_watch_s": 18.2,
             "saves": 8,
-            "reach": 1267
+            "reach": 1269
           },
           "youtube": {
             "views": 1221,
@@ -937,5 +937,29 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "red_flag",
+    "topic": "Poner los ojos en blanco y el desprecio como mejor predictor de ruptura (Gottman), con su asociación con más enfermedades en quien lo recibe",
+    "series_title": "El gesto de medio segundo que predice rupturas",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T09:23:00+01:00",
+        "request_id": "5ea0a34423ec4c7199aa6fa491c7944f",
+        "job_id": "4ec915d972264e08a4ad2154acb46852",
+        "failed": [],
+        "at": "2026-11-22T13:00:41+00:00"
+      }
+    ],
+    "book": {
+      "title": "Siete reglas de oro para vivir en pareja",
+      "author": "John M. Gottman y Nan Silver",
+      "pitch": "El psicólogo que predice divorcios explica qué hacen distinto las parejas que duran.",
+      "looked_up": true
+    }
   }
 ]
