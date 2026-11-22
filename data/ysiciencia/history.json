@@ -16,17 +16,17 @@
         "at": "2026-11-19T15:05:33+00:00",
         "stats": {
           "instagram": {
-            "views": 144,
+            "views": 145,
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 12.1,
+            "avg_watch_s": 12.3,
             "saves": 0,
-            "reach": 118
+            "reach": 120
           },
           "youtube": {
-            "views": 464,
-            "likes": 3,
+            "views": 1211,
+            "likes": 19,
             "comments": 0,
             "shares": 0
           }
@@ -42,16 +42,16 @@
         "at": "2026-11-19T15:10:27+00:00",
         "stats": {
           "instagram": {
-            "views": 110,
+            "views": 113,
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 6.0,
+            "avg_watch_s": 6.3,
             "saves": 0,
-            "reach": 101
+            "reach": 103
           },
           "youtube": {
-            "views": 1210,
+            "views": 1208,
             "likes": 9,
             "comments": 0,
             "shares": 0
@@ -60,12 +60,12 @@
       }
     ],
     "stats": {
-      "views": 1928,
-      "likes": 16,
+      "views": 2677,
+      "likes": 32,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1674,
-      "updated": "2026-11-21"
+      "youtube_views": 2419,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -85,13 +85,13 @@
         "at": "2026-11-19T15:19:48+00:00",
         "stats": {
           "instagram": {
-            "views": 117,
+            "views": 120,
             "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.1,
+            "avg_watch_s": 11.5,
             "saves": 0,
-            "reach": 102
+            "reach": 103
           },
           "youtube": {
             "views": 2,
@@ -117,8 +117,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 896,
-            "likes": 14,
+            "views": 1147,
+            "likes": 19,
             "comments": 0,
             "shares": 0
           },
@@ -140,12 +140,12 @@
       "pitch": "La apasionante historia de cómo aprendimos a saber dónde estamos en mitad del mar."
     },
     "stats": {
-      "views": 1015,
-      "likes": 16,
+      "views": 1269,
+      "likes": 21,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 898,
-      "updated": "2026-11-21"
+      "youtube_views": 1149,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -165,16 +165,16 @@
         "at": "2026-11-19T21:16:29+00:00",
         "stats": {
           "instagram": {
-            "views": 120,
+            "views": 126,
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.7,
+            "avg_watch_s": 12.2,
             "saves": 0,
-            "reach": 102
+            "reach": 105
           },
           "youtube": {
-            "views": 1312,
+            "views": 1271,
             "likes": 15,
             "comments": 0,
             "shares": 0
@@ -197,16 +197,16 @@
         "at": "2026-11-19T21:22:26+00:00",
         "stats": {
           "instagram": {
-            "views": 1012,
-            "likes": 21,
+            "views": 1574,
+            "likes": 27,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.9,
+            "avg_watch_s": 15.2,
             "saves": 0,
-            "reach": 746
+            "reach": 1205
           },
           "youtube": {
-            "views": 4,
+            "views": 6,
             "likes": 0,
             "comments": 0,
             "shares": 0
@@ -222,12 +222,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 2448,
-      "likes": 37,
+      "views": 2977,
+      "likes": 43,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1316,
-      "updated": "2026-11-21"
+      "youtube_views": 1277,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -247,17 +247,17 @@
         "at": "2026-11-20T11:07:38+00:00",
         "stats": {
           "instagram": {
-            "views": 1505,
-            "likes": 35,
+            "views": 1509,
+            "likes": 36,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 14.6,
             "saves": 0,
-            "reach": 1221
+            "reach": 1226
           },
           "youtube": {
-            "views": 2,
-            "likes": 0,
+            "views": 10,
+            "likes": 1,
             "comments": 0,
             "shares": 0
           },
@@ -276,17 +276,40 @@
         "request_id": "e344879b0914424c96d33b7d9527f070",
         "job_id": "d017fd6ab7d44f0096d48af202952490",
         "failed": [],
-        "at": "2026-11-20T11:13:44+00:00"
+        "at": "2026-11-20T11:13:44+00:00",
+        "stats": {
+          "instagram": {
+            "views": 372,
+            "likes": 5,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 14.0,
+            "saves": 1,
+            "reach": 303
+          },
+          "youtube": {
+            "views": 1334,
+            "likes": 42,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": null,
     "stats": {
-      "views": 1507,
-      "likes": 35,
+      "views": 3225,
+      "likes": 84,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2,
-      "updated": "2026-11-21"
+      "youtube_views": 1344,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -303,7 +326,24 @@
         "request_id": "04e5600a0006484cac8f4eca2020af90",
         "job_id": "5cc685dd3bb044abbcc61e24cc82c368",
         "failed": [],
-        "at": "2026-11-21T08:56:26+00:00"
+        "at": "2026-11-21T08:56:26+00:00",
+        "stats": {
+          "instagram": {
+            "views": 646,
+            "likes": 14,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 15.1,
+            "saves": 0,
+            "reach": 522
+          },
+          "youtube": {
+            "views": 907,
+            "likes": 15,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -313,6 +353,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/14249980-M.jpg",
       "isbn": "9788418967832"
+    },
+    "stats": {
+      "views": 1553,
+      "likes": 29,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 907,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -329,7 +377,24 @@
         "request_id": "5e721a951ee14baf933a581d0a0554d6",
         "job_id": "6308a62ae35645eaa37b32b074785507",
         "failed": [],
-        "at": "2026-11-21T09:02:34+00:00"
+        "at": "2026-11-21T09:02:34+00:00",
+        "stats": {
+          "instagram": {
+            "views": 162,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 12.3,
+            "saves": 0,
+            "reach": 147
+          },
+          "youtube": {
+            "views": 1214,
+            "likes": 22,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -337,6 +402,14 @@
       "author": "Matthew Walker",
       "pitch": "El neurocientífico que explica qué le hace a tu cuerpo cada hora de sueño que te quitas.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1376,
+      "likes": 22,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1214,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -353,7 +426,24 @@
         "request_id": "91c20396fadc4340a22e3617813032b7",
         "job_id": "cff93027f7fe4a63ae15ab328e4ee4df",
         "failed": [],
-        "at": "2026-11-21T09:10:42+00:00"
+        "at": "2026-11-21T09:10:42+00:00",
+        "stats": {
+          "instagram": {
+            "views": 196,
+            "likes": 3,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 17.2,
+            "saves": 0,
+            "reach": 150
+          },
+          "youtube": {
+            "views": 0,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -361,6 +451,14 @@
       "author": "Stephen Hawking",
       "pitch": "El clásico que te explica los agujeros negros como si te los contaran en una cena.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 196,
+      "likes": 3,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 0,
+      "updated": "2026-11-22"
     }
   },
   {
