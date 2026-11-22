@@ -63,6 +63,7 @@ class Pose:
     """Estado del personaje en un fotograma."""
     t: float = 0.0
     mouth: float = 0.0        # apertura de la boca 0-1 (de la voz)
+    mouth_round: float = 0.0  # forma de la boca: >0 redonda (o, u), <0 estirada (e, i)
     facing: float = 1.0       # 1 = mira a la derecha de la pantalla, -1 = a la izquierda
     look: float = 0.0         # pupilas: -1 izquierda … 1 derecha (relativo a facing)
     look_up: float = 0.0
@@ -819,6 +820,11 @@ class Character:
             c.drawPath(path, stroke(INK, 7))
             return
         w, h = 36 + o * 10 + max(0.0, p.smile) * 8, 8 + o * 40
+        r = p.mouth_round
+        if r > 0:  # o / u: boca redonda y más estrecha
+            w, h = w * (1 - 0.42 * r), h * (1 + 0.15 * r)
+        elif r < 0:  # e / i: boca estirada y más baja
+            w, h = w * (1 - 0.3 * r), h * (1 + 0.45 * r)
         cy = my - 4 - p.smile * 14  # comisuras: arriba si sonríe, abajo si está triste o enfadado
         m = poly([(mx - w, cy), (mx - w * 0.5, my - h * 0.35), (mx + w * 0.5, my - h * 0.35), (mx + w, cy),
                   (mx + w * 0.6, my + h * 0.7), (mx, my + h), (mx - w * 0.6, my + h * 0.7)], smooth=True)

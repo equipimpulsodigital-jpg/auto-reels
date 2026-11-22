@@ -55,11 +55,52 @@ def block_to_shot(b, series, chars: dict, duration: float) -> Shot:
     )
 
 
+_VOWEL = {"a": (1.0, 0.0), "á": (1.0, 0.0), "e": (0.6, -0.5), "é": (0.6, -0.5), "i": (0.4, -0.8), "í": (0.4, -0.8),
+          "o": (0.75, 0.75), "ó": (0.75, 0.75), "u": (0.45, 1.0), "ú": (0.45, 1.0), "ü": (0.45, 1.0)}
+_CLOSED = set("mbp")
+_LIP = set("fv")
+
+
+def visemes_for(words: list, scene: int, start: float, fps: int, frames: int) -> list:
+    """Forma de la boca en cada fotograma según la letra que suena (aproximada por el tiempo de cada palabra)."""
+    out = [None] * frames
+    for w in words:
+        if w.scene != scene:
+            continue
+        letters = [ch for ch in w.text.lower() if ch.isalpha()]
+        if not letters:
+            continue
+        a, b = w.start - start, max(w.end - start, w.start - start + 0.05)
+        for f in range(max(0, int(a * fps)), min(frames, int(b * fps) + 1)):
+            k = (f / fps - a) / (b - a)
+            ch = letters[min(len(letters) - 1, max(0, int(k * len(letters))))]
+            if ch in _VOWEL:
+                out[f] = _VOWEL[ch]
+            elif ch in _CLOSED:
+                out[f] = (0.0, 0.0)
+            elif ch in _LIP:
+                out[f] = (0.15, -0.3)
+            else:
+                out[f] = (0.35, 0.0)
+    return out
+
+
+def host_character(cfg: dict):
+    """Presentador fijo de la marca (config: channels.<id>.host)."""
+    h = cfg["channel"].get("host")
+    if not h:
+        return None, None
+    return K.make_character(h.get("name", "Presentador"), h.get("look", {}), seed=77), h
+
+
 def render_episode(series, part, durations: list[float], workdir: Path, cfg: dict,
                    words: list | None = None) -> tuple[list[Path], Path]:
     v = cfg["video"]
     W, H, fps = v["width"], v["height"], v["fps"]
     chars, sides = build_cast(series)
+    host, host_cfg = host_character(cfg)
+    if host:
+        chars["_host"], sides["_host"] = host, -1.0
     ctx = Ctx(W, H, fps, chars, dict(sides), style=cfg["channel"].get("style", "caricatura"))
     shots, files = [], []
     seated_at = None  # lugar donde los personajes se han sentado (siguen sentados mientras no cambie)
@@ -71,19 +112,35 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
             seated_at = None  # cambian de sitio o hacen otra cosa: ya no están sentados
         elif shot.framing == "general" and not shot.action:
             shot.action = "sentado"  # continuidad: si estaban sentados en este sitio, siguen sentados
+        last = i == len(part.blocks) - 1
+        if host and last and b.speaker not in chars:
+            # el presentador de la marca cierra el vídeo mirando a cámara (dice la última frase del narrador)
+            shot.framing, shot.cast, shot.speaker = "personaje", ["_host"], "_host"
+            shot.location, shot.mood = host_cfg.get("location", "despacho"), host_cfg.get("mood", "dia")
+            shot.event, shot.action, shot.held, shot.gesture = None, "", "", host_cfg.get("gesture", "explain")
+            if abs(shot.brow) < 0.05 and abs(shot.smile) < 0.05:
+                shot.smile, shot.brow = 0.5, 0.2
+        if i == 0 and shot.framing == "general" and not shot.event:
+            # primer segundo: nada de planos generales tranquilos; de cerca, a la cara o al objeto clave
+            if shot.cast:
+                shot.framing = "personaje"
+            elif shot.prop:
+                shot.framing = "objeto"
         if i == 0:  # el gancho: arranque con impacto (zoom, destello y golpe de sonido)
             shot.camera = "shake" if shot.camera == "shake" else "golpe"
             if not any(name in ("hit", "boom") for name, _ in shot.sfx):
                 shot.sfx.append(("hit", 0.0))
         start = sum(durations[:i])
-        if i > 0 and shots and shot.location != shots[-1].location:  # cambio de lugar: transición con «whoosh»
+        if i > 0 and shots and shot.location != shots[-1].location:  # cambio de lugar: barrido de cámara con «whoosh»
             shot.sfx.append(("whoosh", 0.0))
+            shot.whip = True
         for w in words or []:  # palabra clave: golpe de zoom y de sonido justo cuando se dice
             if w.scene == i and w.emph:
                 shot.punches.append(max(0.0, w.start - start))
                 shot.sfx.append(("hit", max(0.0, w.start - start - 0.03)))
         if shot.speaker:
             shot.mouth = mouth_envelope(workdir / f"voice_{i}.wav", fps, round(dur * fps))
+            shot.visemes = visemes_for(words or [], i, start, fps, round(dur * fps))
         print(f"  plano {i + 1}/{len(part.blocks)} · {shot.location} · {shot.framing}"
               + (f" · {shot.event}" if shot.event else "") + (f" · {shot.prop}" if shot.framing == "objeto" else ""), flush=True)
         files.append(render_shot(ctx, shot, workdir / f"shot_{i}.mp4"))

@@ -88,6 +88,8 @@ class Shot:
     walk: bool = False                      # en plano general, los personajes caminan
     action: str = ""                        # acción del protagonista del plano (ver catalog.ACTIONS)
     held: str = ""                          # objeto en la mano del protagonista
+    whip: bool = False                      # entra con un barrido rápido de cámara (cambio de lugar)
+    visemes: list = field(default_factory=list)  # forma de la boca por fotograma: (apertura 0-1, redondez -1..1)
     camera: str = "push_in"                 # push_in | pull_back | shake | static
     punches: list = field(default_factory=list)  # segundos (dentro del plano) con golpe de zoom
     mouth: list[float] = field(default_factory=list)
@@ -95,7 +97,8 @@ class Shot:
     ambience: str = ""                      # sonido de fondo: mar | viento | avion | "" (por defecto, el del lugar)
 
     def resolved_ambience(self) -> str:
-        return self.ambience or EVENT_AMBIENCE.get(self.event or "", "") or LOCATIONS[self.location].ambience
+        from .sfx import pick_ambience
+        return pick_ambience(self, LOCATIONS[self.location].ambience, EVENT_AMBIENCE.get(self.event or "", ""))
 
     def resolved_sfx(self) -> list[tuple[str, float]]:
         return self.sfx + EVENT_SFX.get(self.event or "", [])
@@ -126,6 +129,12 @@ def _actor(shot: Shot) -> Optional[str]:
     return shot.cast[0] if shot.cast else None
 
 
+def zlib_side(shot: Shot) -> int:
+    """Sentido del travelling lateral, estable para cada plano."""
+    import zlib
+    return 1 if zlib.crc32(f"{shot.location}{shot.duration:.2f}".encode()) % 2 else -1
+
+
 def _pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: float) -> Pose:
     p = _base_pose(ctx, shot, cid, t, frame, facing)
     actor = _actor(shot)
@@ -149,7 +158,13 @@ def _base_pose(ctx: Ctx, shot: Shot, cid: str, t: float, frame: int, facing: flo
             if 0 < j < len(mo) and mo[j] - mo[j - 1] > 0.35:
                 nod = max(nod, math.sin(math.pi * k / 7))
         amt = ease_back(t / 0.5) * (1 - ease((t - (shot.duration - 0.45)) / 0.45))
-        return Pose(t=t, mouth=m, facing=facing, look=0.3 + darts(t, seed) * 0.4, look_up=0.1, blink=blink(t, seed),
+        vis = shot.visemes[frame] if frame < len(shot.visemes) else None
+        rnd = 0.0
+        if vis and m > 0.05:  # la boca forma la letra que suena (a abierta, o/u redondas, m/b/p cerradas...)
+            m, rnd = max(0.06, min(1.0, m * (0.45 + 0.9 * vis[0]))), vis[1]
+            if vis[0] == 0.0:
+                m = 0.0
+        return Pose(t=t, mouth=m, mouth_round=rnd, facing=facing, look=0.3 + darts(t, seed) * 0.4, look_up=0.1, blink=blink(t, seed),
                     brow=shot.brow + 0.3 * m * (1 - shot.worry), smile=shot.smile, gesture=shot.gesture, gesture_amt=amt,
                     worry=shot.worry, extra=shot.extra,
                     talking=True, nod=nod)
@@ -188,8 +203,17 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
         draw_prop(c, W, H, shot.prop or "carta", t)
         return
     if fr == "general":
+        k = t / max(shot.duration, 0.01) - 0.5
+        drift = -1.0 if (zlib_side(shot) < 0) else 1.0
+        c.save()  # el fondo se desplaza menos que los personajes: sensación de profundidad (travelling lateral)
+        c.translate(k * 34 * drift, 0)
+        c.scale(1.04, 1.04)
+        c.translate(-W * 0.02, -H * 0.02)
         loc.back(c, g)
+        c.restore()
         F.mood_light(c, W, H, shot.mood)
+        c.save()
+        c.translate(k * 70 * drift, 0)
         behind = ev is not None and shot.event in BEHIND_EVENTS
         if behind:  # los vehículos pasan por detrás de los personajes
             ev(c, W, H, t, shot.duration)
@@ -216,6 +240,7 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
             p = _pose(ctx, shot, cid, t, frame, facing)
             p.full_body = True
             ctx.chars[cid].draw(c, x, feet - 440 * s, s, p)
+        c.restore()
         if ev and not behind:
             ev(c, W, H, t, shot.duration)
         return
@@ -230,7 +255,9 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
             side = ctx.side(cid)
             facing = -side
             S.light_glow(c, W, H, shot.mood, facing)
-            ctx.chars[cid].draw(c, W * (0.5 + side * 0.1), H * 1.02, 1.7, _pose(ctx, shot, cid, t, frame, facing))
+            low = shot.brow < -0.5 and cid == shot.speaker  # contrapicado: ira, amenaza, decisión
+            ctx.chars[cid].draw(c, W * (0.5 + side * 0.1), H * (1.08 if low else 1.02), 1.88 if low else 1.7,
+                                _pose(ctx, shot, cid, t, frame, facing))
         loc.front(c, g, True)
         others = [o for o in shot.cast if o != cid]
         if others:  # plano por encima del hombro del que escucha
@@ -285,7 +312,14 @@ def render_shot(ctx: Ctx, shot: Shot, out: Path) -> Path:
             amp = 18 * (1 - t / 0.45)
             c.translate(noise1(t * 40, 3) * amp, noise1(t * 40, 4) * amp)
         c.translate(-W / 2, -H * 0.5)
+        whip = shot.whip and t < 0.22
+        if whip:  # barrido rápido: la imagen entra deslizándose, con desenfoque de movimiento
+            k = ease(t / 0.22)
+            c.saveLayer(None, skia.Paint(ImageFilter=skia.ImageFilters.Blur(60 * (1 - k) + 0.1, 0.1)))
+            c.translate(W * 0.55 * (1 - k), 0)
         draw_frame(c, ctx, shot, t, i)
+        if whip:
+            c.restore()
         c.restore()
         # acabado del estilo: luz de ambiente, brillo de las luces, grano/papel y viñeta
         F.mood_light(c, W, H, shot.mood, 0.3)
