@@ -360,16 +360,16 @@
         "at": "2026-11-20T12:56:42+00:00",
         "stats": {
           "instagram": {
-            "views": 9,
+            "views": 10,
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 5.9,
+            "avg_watch_s": 6.6,
             "saves": 0,
-            "reach": 6
+            "reach": 8
           },
           "youtube": {
-            "views": 1270,
+            "views": 1281,
             "likes": 48,
             "comments": 0,
             "shares": 0
@@ -394,13 +394,13 @@
         "at": "2026-11-20T21:50:34+00:00",
         "stats": {
           "instagram": {
-            "views": 1185,
+            "views": 1208,
             "likes": 45,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.3,
+            "avg_watch_s": 14.4,
             "saves": 2,
-            "reach": 940
+            "reach": 964
           },
           "youtube": {
             "views": 1188,
@@ -421,11 +421,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3655,
+      "views": 3690,
       "likes": 109,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2458,
+      "youtube_views": 2469,
       "updated": "2026-11-22"
     }
   },
@@ -497,10 +497,10 @@
         "stats": {
           "instagram": {
             "views": 5,
-            "likes": 0,
+            "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 5.8,
+            "avg_watch_s": 6.4,
             "saves": 0,
             "reach": 6
           },
@@ -511,7 +511,7 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 183,
+            "views": 184,
             "likes": 5,
             "comments": 0,
             "shares": 0,
@@ -532,8 +532,8 @@
     ],
     "book": null,
     "stats": {
-      "views": 1376,
-      "likes": 32,
+      "views": 1377,
+      "likes": 33,
       "comments": 0,
       "shares": 0,
       "youtube_views": 1188,
@@ -555,6 +555,82 @@
         "job_id": "ec6c1ba1f7d04906a8a31b54b81dfc5d",
         "failed": [],
         "at": "2026-11-21T22:34:02+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "caso_sin_resolver",
+    "topic": "Secuestro del vuelo 305 por D. B. Cooper (24/11/1971): salto con 200.000 dólares, nunca identificado; 5.800 dólares hallados por un niño en el río Columbia en 1980",
+    "series_title": "D. B. Cooper: el hombre que saltó con el dinero",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T12:00:00+01:00",
+        "request_id": "09d0e278d3074f95aefab37b20e598a5",
+        "job_id": "26aba2c27fac4b0e800500764fc77753",
+        "failed": [],
+        "at": "2026-11-22T01:22:18+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "enigma",
+    "topic": "Incidente del paso Dyatlov (1959): nueve montañeros huyen descalzos de su tienda rajada; en 2021 una simulación inspirada en la nieve de Frozen apunta a una avalancha de placa",
+    "series_title": "El paso Dyatlov: la tienda rajada desde dentro",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T16:00:00+01:00",
+        "request_id": "4a36bbd72fb34c1ea8701a7dc77c5c7f",
+        "job_id": "7366261e59b94d01a19c51c81515cf0e",
+        "failed": [],
+        "at": "2026-11-22T01:31:45+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "ultimo_rastro",
+    "topic": "Último mensaje por radio de Amelia Earhart (2/7/1937) y los huesos de Nikumaroro hallados en 1940 y perdidos",
+    "series_title": "La última llamada de Amelia Earhart",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T18:00:00+01:00",
+        "request_id": "4a9aed2242554410886e932c0a954636",
+        "job_id": "0f2dae05304548bd9bbdb80bd833a700",
+        "failed": [],
+        "at": "2026-11-22T01:41:40+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "caso_con_giro",
+    "topic": "Caso de la «familia H.» (Wilmer, 1921): apariciones y enfermedad en una casa encantada causadas por monóxido de carbono de una caldera defectuosa",
+    "series_title": "La casa encantada de la familia H.",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T21:00:00+01:00",
+        "request_id": "e27cd341dfe84f779ef8c826b5f96867",
+        "job_id": "807c3bf084db4e9aaa9d743936d5e05e",
+        "failed": [],
+        "at": "2026-11-22T01:50:39+00:00"
       }
     ],
     "book": null
