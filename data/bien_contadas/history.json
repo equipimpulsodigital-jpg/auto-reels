@@ -664,7 +664,10 @@
             "avg_watch_s": 6.2,
             "reach": 0
           }
-        }
+        },
+        "retried": [
+          "youtube"
+        ]
       }
     ],
     "book": {
