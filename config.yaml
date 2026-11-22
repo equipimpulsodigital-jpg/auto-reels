@@ -255,3 +255,8 @@ channels:
       y_si_tu: "¿Y si te pasara a ti? Tu cuerpo o tu mente en un escenario imposible: ser el último humano, no dormir nunca, saber tu fecha de muerte, leer mentes..."
       y_si_planeta: "¿Y si... el planeta o el universo? La Tierra, el Sol, la Luna, los océanos o el espacio en un escenario imposible (que se apague el Sol, que pase un agujero negro...)"
       cuenta_atras: "¿Y si...? hora a hora: qué pasa en el minuto 1, la hora 1, la hora 12, el día 1, la semana 1... sobre un escenario enorme o un tema caliente de hoy (IA, apagón, guerra, pandemia, internet)"
+
+# Caducidades: el sistema avisa 15 días antes (formato AAAA-MM-DD). Rellena las fechas reales.
+expirations: {}
+#  clave_cronjob_github: "2027-02-20"
+#  clave_claude_github: "2027-11-19"
