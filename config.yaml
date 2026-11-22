@@ -200,25 +200,27 @@ channels:
     compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
     hashtag: "#lacabezapordentro"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-ElviraNeural, rate: "+14%", pitch: "-2Hz"}   # voz del narrador de la marca
-    music: [calma, pensar, mente]
-    end_card: "Entiende tu cabeza cada día · Sígueme"
-    tagline: "Psicología cotidiana: por qué hacemos lo que hacemos."
+    music: [misterio, suspense, expediente, niebla, mente]   # ambiente misterioso (psicología oscura)
+    end_card: "Un secreto de la mente cada día · Sígueme"
+    tagline: "Psicología oscura, persuasión y los trucos de la mente."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@lacabezapordentro
       instagram: https://www.instagram.com/lacabezapordentro/
       tiktok: https://www.tiktok.com/@lacabezapordentro
     style: plano                  # estilo de dibujo: caricatura | plano | amable
-    interest_queries: ["psicología estudio", "salud mental", "ansiedad estudio", "hábitos cerebro"]   # noticias de la semana para inspirar temas
+    interest_queries: ["manipulación psicológica", "psicología oscura", "narcisismo relaciones", "lenguaje corporal mentira"]   # noticias de la semana para inspirar temas
     host:                             # presentadora fija: cierra cada vídeo mirando a cámara
       name: La Doctora
-      location: oficina
-      mood: dia
+      location: despacho
+      mood: noche
       look: {female: true, age: adulto, skin: clara, hair_color: castaño, hair_style: moño, glasses: true, outfit: traje, outfit_color: morado, accent_color: crema, nose: pequeña, jaw: fina, eyes: azules}
+    format_cycle: [psicologia_oscura, trucos_persuasion, psicologia_oscura, calar_gente, si_haces_esto]
     formats:
-      por_que: "Por qué lo hacemos: un comportamiento cotidiano y el mecanismo psicológico que lo explica"
-      como_salir: "Cómo salir de ahí: un problema cotidiano y una herramienta práctica con respaldo"
-      experimento: "Un experimento real de psicología contado como historia: qué hicieron, qué pasó y qué dice de ti"
-      trampa_mental: "La trampa de tu cerebro: un sesgo que te afecta a diario, con una escena reconocible y cómo esquivarlo"
+      psicologia_oscura: "Psicología oscura: un truco de manipulación real que usan contigo (chantaje, gaslighting, refuerzo intermitente, culpa...), cómo funciona y cómo protegerte"
+      trucos_persuasion: "Trucos de persuasión inofensivos: caer bien, conseguir un sí, que te cuenten secretos, ganar una discusión... con una escena (gancho tipo «cómo manipular a tus amigos»)"
+      calar_gente: "Calar a la gente: cómo saber si alguien miente, qué delata su lenguaje corporal, qué dice de alguien cómo trata a los demás"
+      si_haces_esto: "Si haces esto, es por esto: una conducta cotidiana con la que todos se identifican y lo que dice de tu mente"
+
   ysiciencia:
     name: ¿Y si…?
     enabled: true
