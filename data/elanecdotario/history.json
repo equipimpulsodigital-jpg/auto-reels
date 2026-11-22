@@ -94,7 +94,7 @@
             "reach": 100
           },
           "youtube": {
-            "views": 1197,
+            "views": 1198,
             "likes": 22,
             "comments": 0,
             "shares": 0
@@ -120,7 +120,7 @@
             "reach": 122
           },
           "youtube": {
-            "views": 404,
+            "views": 405,
             "likes": 7,
             "comments": 0,
             "shares": 0
@@ -129,11 +129,11 @@
       }
     ],
     "stats": {
-      "views": 1865,
+      "views": 1867,
       "likes": 31,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1601,
+      "youtube_views": 1603,
       "updated": "2026-11-22"
     }
   },
@@ -160,8 +160,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 349,
-            "likes": 23,
+            "views": 434,
+            "likes": 26,
             "comments": 0,
             "shares": 0
           }
@@ -186,8 +186,8 @@
             "reach": 111
           },
           "youtube": {
-            "views": 146,
-            "likes": 14,
+            "views": 204,
+            "likes": 15,
             "comments": 0,
             "shares": 0
           }
@@ -203,11 +203,11 @@
       "pitch": "Un clásico para recorrer la historia del cine desde sus primeros fotogramas. Te engancha."
     },
     "stats": {
-      "views": 625,
-      "likes": 37,
+      "views": 768,
+      "likes": 41,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 495,
+      "youtube_views": 638,
       "updated": "2026-11-22"
     }
   },
@@ -237,7 +237,7 @@
             "reach": 43
           },
           "youtube": {
-            "views": 389,
+            "views": 419,
             "likes": 7,
             "comments": 0,
             "shares": 0
@@ -269,7 +269,7 @@
             "reach": 136
           },
           "youtube": {
-            "views": 496,
+            "views": 523,
             "likes": 13,
             "comments": 0,
             "shares": 0
@@ -285,11 +285,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1095,
+      "views": 1152,
       "likes": 25,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 885,
+      "youtube_views": 942,
       "updated": "2026-11-22"
     }
   },
@@ -319,8 +319,8 @@
             "reach": 103
           },
           "youtube": {
-            "views": 1088,
-            "likes": 18,
+            "views": 1291,
+            "likes": 27,
             "comments": 1,
             "shares": 0
           },
@@ -335,11 +335,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1203,
-      "likes": 20,
+      "views": 1406,
+      "likes": 29,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1088,
+      "youtube_views": 1291,
       "updated": "2026-11-22"
     }
   },
@@ -360,17 +360,17 @@
         "at": "2026-11-20T12:56:42+00:00",
         "stats": {
           "instagram": {
-            "views": 10,
-            "likes": 3,
+            "views": 74,
+            "likes": 5,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 6.6,
+            "avg_watch_s": 15.3,
             "saves": 0,
-            "reach": 8
+            "reach": 30
           },
           "youtube": {
-            "views": 1281,
-            "likes": 48,
+            "views": 1392,
+            "likes": 47,
             "comments": 0,
             "shares": 0
           },
@@ -394,16 +394,16 @@
         "at": "2026-11-20T21:50:34+00:00",
         "stats": {
           "instagram": {
-            "views": 1208,
-            "likes": 45,
+            "views": 1258,
+            "likes": 49,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.4,
+            "avg_watch_s": 14.2,
             "saves": 2,
-            "reach": 964
+            "reach": 1011
           },
           "youtube": {
-            "views": 1188,
+            "views": 1213,
             "likes": 11,
             "comments": 0,
             "shares": 0
@@ -421,11 +421,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3690,
-      "likes": 109,
+      "views": 3940,
+      "likes": 114,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2469,
+      "youtube_views": 2605,
       "updated": "2026-11-22"
     }
   },
@@ -455,8 +455,8 @@
             "reach": 109
           },
           "youtube": {
-            "views": 1338,
-            "likes": 47,
+            "views": 1401,
+            "likes": 49,
             "comments": 0,
             "shares": 0
           },
@@ -471,11 +471,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1476,
-      "likes": 49,
+      "views": 1539,
+      "likes": 51,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1338,
+      "youtube_views": 1401,
       "updated": "2026-11-22"
     }
   },
@@ -496,17 +496,17 @@
         "at": "2026-11-20T21:58:57+00:00",
         "stats": {
           "instagram": {
-            "views": 5,
+            "views": 15,
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 6.4,
+            "avg_watch_s": 7.5,
             "saves": 0,
-            "reach": 6
+            "reach": 13
           },
           "youtube": {
-            "views": 1188,
-            "likes": 27,
+            "views": 1243,
+            "likes": 26,
             "comments": 0,
             "shares": 0
           },
@@ -527,16 +527,41 @@
         "request_id": "22178917c7bc4fd985eb0db469cc7793",
         "job_id": "dd09ecc953454df2a995c6cee57e0883",
         "failed": [],
-        "at": "2026-11-20T22:05:04+00:00"
+        "at": "2026-11-20T22:05:04+00:00",
+        "stats": {
+          "instagram": {
+            "views": 130,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 24.7,
+            "saves": 0,
+            "reach": 74
+          },
+          "youtube": {
+            "views": 1117,
+            "likes": 19,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 185,
+            "likes": 11,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 6.4,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": null,
     "stats": {
-      "views": 1377,
-      "likes": 33,
+      "views": 2874,
+      "likes": 65,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1188,
+      "youtube_views": 2360,
       "updated": "2026-11-22"
     }
   },
@@ -631,6 +656,116 @@
         "job_id": "807c3bf084db4e9aaa9d743936d5e05e",
         "failed": [],
         "at": "2026-11-22T01:50:39+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "caso_famoso",
+    "topic": "El exorcismo de Roland Doe (1949) que inspiró «El exorcista»: era un niño y, según investigadores, acabó trabajando para la NASA",
+    "series_title": "El niño real de El exorcista",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T10:00:00+01:00",
+        "request_id": "742885099f694d83b209930bfe1257dd",
+        "job_id": "8bc3af2e6e1d406f86d13aa9a1c7f695",
+        "failed": [],
+        "at": "2026-11-22T06:54:20+00:00"
+      }
+    ],
+    "book": {
+      "title": "El exorcista",
+      "author": "William Peter Blatty",
+      "pitch": "La novela que nació de un caso real de 1949 y aterrorizó al mundo.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "caso_sin_resolver",
+    "topic": "Los asesinatos de Hinterkaifeck (Baviera, 31/3/1922): huellas que solo entraban, pasos en el desván, seis muertos y alguien que siguió en la granja dando de comer al ganado; nunca resuelto",
+    "series_title": "Hinterkaifeck: el asesino que no se fue",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T12:00:00+01:00",
+        "request_id": "80fc51a9c0844856bf14c35d2cc30d5c",
+        "job_id": "5f02fdf85f7e47c99d29e3671dbcf689",
+        "failed": [],
+        "at": "2026-11-22T07:03:14+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "enigma",
+    "topic": "Las caras de Bélmez (1971): rostros en el suelo de una cocina de Jaén que volvían tras destruirlos y huesos humanos bajo el suelo",
+    "series_title": "Las caras de Bélmez: lo que había bajo la cocina",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T16:00:00+01:00",
+        "request_id": "c11a18506c6a454da71a004f7fb068bf",
+        "job_id": "834f039e41364825b7458846458263d6",
+        "failed": [],
+        "at": "2026-11-22T07:13:39+00:00"
+      }
+    ],
+    "book": {
+      "title": "El ocaso de las caras de Bélmez",
+      "author": "Javier Cavanilles y Francisco Máñez",
+      "pitch": "La investigación que destripa el caso paranormal más famoso de España, pieza a pieza.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "ultimo_rastro",
+    "topic": "Desaparición de Agatha Christie del 3 al 14 de diciembre de 1926: coche abandonado en Newlands Corner y reaparición en Harrogate con el apellido de la amante de su marido",
+    "series_title": "Los once días en que desapareció Agatha Christie",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T18:00:00+01:00",
+        "request_id": "d3aa4d1fcae2412fbd9e2379a9700b19",
+        "job_id": "d1959190e2b44642a1e7076f8ed036c7",
+        "failed": [],
+        "at": "2026-11-22T07:22:00+00:00"
+      }
+    ],
+    "book": {
+      "title": "Autobiografía",
+      "author": "Agatha Christie",
+      "pitch": "Su vida contada por ella misma… y los once días que decidió no contar.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "caso_con_giro",
+    "topic": "Los perytons de Parkes (1998-2015): señales de radio misteriosas que resultaron ser el microondas del observatorio",
+    "series_title": "Las señales del espacio que salían a la hora de comer",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T21:00:00+01:00",
+        "request_id": "0c06618e051a4164be0e56fc87068a20",
+        "job_id": "7a34552fdf4941b9ae79c7c6200a3c75",
+        "failed": [],
+        "at": "2026-11-22T07:31:15+00:00"
       }
     ],
     "book": null
