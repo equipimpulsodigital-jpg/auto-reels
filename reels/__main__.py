@@ -438,8 +438,67 @@ def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, 
             break
     _save(cfg, "history.json", history)
     _save(cfg, "state.json", state)
+    _keep_series(cfg, series)
     if failed:
         print(f"Publicado, pero falló en: {failed}", file=sys.stderr)
+    return True
+
+
+def _series_path(cfg: dict, title: str) -> Path:
+    return channel_data(cfg) / "series" / f"{zlib.crc32(title.encode()):08x}.json"
+
+
+def _keep_series(cfg: dict, series) -> None:
+    """Guarda el guion completo de lo publicado: permite reciclar más adelante los vídeos que mejor funcionan."""
+    path = _series_path(cfg, series.series_title)
+    if not path.exists():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(series.model_dump_json(), encoding="utf-8")
+
+
+def _recycle_candidate(cfg: dict, history: list[dict]) -> dict | None:
+    """El mejor vídeo de la marca que se puede volver a publicar: una sola parte, con más de `min_age_days`, por encima
+    de la media (`min_ratio`) y sin reciclar en las últimas `cooldown_days`."""
+    rc = cfg["publish"].get("recycle") or {}
+    now = datetime.now(timezone.utc).date()
+    rated = [h for h in history if (h.get("stats") or {}).get("views") is not None and not h.get("recycled_from")]
+    if len(rated) < 5:
+        return None
+    avg = sum(h["stats"]["views"] for h in rated) / len(rated)
+    best = None
+    for h in rated:
+        if h.get("parts", 1) != 1 or h["stats"]["views"] < avg * float(rc.get("min_ratio", 1.3)):
+            continue
+        if (now - date.fromisoformat(h["date"])).days < int(rc.get("min_age_days", 14)):
+            continue
+        last = max(h.get("recycled", []) or ["2000-01-01"])
+        if (now - date.fromisoformat(last)).days < int(rc.get("cooldown_days", 21)):
+            continue
+        if not _series_path(cfg, h["series_title"]).exists():
+            continue
+        if best is None or h["stats"]["views"] > best["stats"]["views"]:
+            best = h
+    return best
+
+
+def _queue_recycle(cfg: dict, state: dict, history: list[dict], h: dict) -> bool:
+    """Pone delante de la cola el vídeo ganador con un gancho distinto (uno de los alternativos que no se usó)."""
+    from .script import Series
+    series = Series.model_validate_json(_series_path(cfg, h["series_title"]).read_text(encoding="utf-8"))
+    part = series.parts[0]
+    used = {part.blocks[0].narration.strip().lower()} | {x.lower() for x in h.get("recycled_hooks", [])}
+    hooks = [c for c in part.hook_candidates if c.strip().lower() not in used and len(c.split()) <= 16]
+    if not hooks:
+        return False
+    part.blocks[0].narration = hooks[0]
+    part.blocks[0].emphasis = None
+    h.setdefault("recycled", []).append(date.today().isoformat())
+    h.setdefault("recycled_hooks", []).append(hooks[0])
+    history.append({"date": date.today().isoformat(), "format": h.get("format"), "topic": h.get("topic", ""),
+                    "series_title": series.series_title, "parts": 1, "published_parts": [],
+                    "recycled_from": h["date"], "book": h.get("book")})
+    state["queue"].insert(0, {"series": series.model_dump(), "part": 0, "recycle": True})
+    print(f"  Reciclado: «{series.series_title}» ({h['stats']['views']} visualizaciones) con gancho nuevo: «{hooks[0]}»")
     return True
 
 
@@ -595,8 +654,15 @@ def main() -> int:
         print(f"\n--- Franja {slot:%d/%m %H:%M} ---")
         try:
             args.single = _continuation_after(state, history, slot)
+            every = int((cfg["publish"].get("recycle") or {}).get("every", 0) or 0)
+            recycled = False
+            if every and not args.single and state.get("since_recycle", 0) >= every - 1:
+                cand = _recycle_candidate(cfg, history)
+                recycled = bool(cand) and _queue_recycle(cfg, state, history, cand)
             video, series, part = make_episode(cfg, state, history, args, f"{slot:%Y%m%d_%H%M}")
             ok = publish_episode(cfg, state, history, video, series, part, slot)
+            if ok:
+                state["since_recycle"] = 0 if recycled else state.get("since_recycle", 0) + 1
         except LimitReached as e:
             print(f"{e}\nSe para aquí: contrata un plan con más publicaciones o espera al reinicio mensual.", file=sys.stderr)
             errors += 1

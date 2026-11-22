@@ -217,7 +217,8 @@ def _interest(cfg: dict) -> str:
 
 def _performance(history: list[dict]) -> str:
     """Qué historias del canal han gustado más y menos (visualizaciones reales), para aprender de ellas."""
-    rated = [h for h in history if (h.get("stats") or {}).get("views") is not None and h.get("published_parts")]
+    rated = [h for h in history if (h.get("stats") or {}).get("views") is not None and h.get("published_parts")
+             and not h.get("recycled_from")]
     if len(rated) < 4:
         return ""
     rated.sort(key=lambda h: h["stats"]["views"], reverse=True)
