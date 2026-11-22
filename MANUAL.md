@@ -36,7 +36,7 @@ Una de cada 5 franjas reutiliza un vídeo ganador (más de 14 días y un 30 % po
 | Pasa esto | Haz esto |
 |---|---|
 | Te llega un aviso de **franjas sin vídeo** | GitHub → Actions → **Episodio diario** → Run workflow → canal `todos`, modo **programar** |
-| El aviso dice **«pide reconectarla»** o **«session… password»** | En Upload-Post → Users → la marca → reconecta esa red (pasa si cambias la contraseña) |
+| El aviso dice **«pide reconectarla»** o **«session… password»** | En Upload-Post → Users → la marca → reconecta esa red (pasa si cambias la contraseña). Después, modo **reintentar** con esa marca para subir lo que falló |
 | El aviso dice **TikTok «risky»** | TikTok desconfía de la cuenta: úsala unos días desde el móvil y sube algún vídeo a mano |
 | El aviso dice **canal de YouTube no disponible** | Revisa el correo de esa cuenta de Google; si YouTube lo cerró, apela desde ese correo |
 | Un vídeo **falló en una red** por un error pasajero | Nada: se reintenta solo. A mano: modo **reintentar** |
