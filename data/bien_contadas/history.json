@@ -310,7 +310,7 @@
             "likes": 5,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.2,
+            "avg_watch_s": 8.1,
             "saves": 0,
             "reach": 123
           },
@@ -333,7 +333,7 @@
         "stats": {
           "instagram": {
             "views": 567,
-            "likes": 10,
+            "likes": 11,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 16.8,
@@ -351,7 +351,7 @@
     ],
     "stats": {
       "views": 3049,
-      "likes": 63,
+      "likes": 64,
       "comments": 1,
       "shares": 0,
       "youtube_views": 2336,
@@ -376,10 +376,10 @@
         "stats": {
           "instagram": {
             "views": 139,
-            "likes": 1,
+            "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 8.7,
+            "avg_watch_s": 8.6,
             "saves": 0,
             "reach": 129
           },
@@ -402,7 +402,7 @@
         "stats": {
           "instagram": {
             "views": 139,
-            "likes": 1,
+            "likes": 2,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 8.1,
@@ -434,7 +434,7 @@
     },
     "stats": {
       "views": 2900,
-      "likes": 52,
+      "likes": 54,
       "comments": 1,
       "shares": 0,
       "youtube_views": 1873,
@@ -459,15 +459,15 @@
         "stats": {
           "instagram": {
             "views": 150,
-            "likes": 1,
+            "likes": 2,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.6,
+            "avg_watch_s": 11.5,
             "saves": 0,
             "reach": 119
           },
           "youtube": {
-            "views": 977,
+            "views": 980,
             "likes": 24,
             "comments": 0,
             "shares": 0
@@ -493,7 +493,7 @@
         "stats": {
           "instagram": {
             "views": 146,
-            "likes": 0,
+            "likes": 1,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 5.9,
@@ -501,7 +501,7 @@
             "reach": 127
           },
           "youtube": {
-            "views": 416,
+            "views": 423,
             "likes": 10,
             "comments": 0,
             "shares": 0
@@ -524,11 +524,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2127,
-      "likes": 43,
+      "views": 2137,
+      "likes": 45,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1393,
+      "youtube_views": 1403,
       "updated": "2026-11-22"
     }
   },
@@ -549,16 +549,16 @@
         "at": "2026-11-20T11:20:45+00:00",
         "stats": {
           "instagram": {
-            "views": 714,
-            "likes": 3,
+            "views": 719,
+            "likes": 4,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 11.5,
             "saves": 0,
-            "reach": 600
+            "reach": 604
           },
           "youtube": {
-            "views": 986,
+            "views": 1022,
             "likes": 21,
             "comments": 0,
             "shares": 0
@@ -583,16 +583,16 @@
         "at": "2026-11-21T08:55:45+00:00",
         "stats": {
           "instagram": {
-            "views": 731,
-            "likes": 11,
+            "views": 757,
+            "likes": 12,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 12.4,
             "saves": 0,
-            "reach": 621
+            "reach": 650
           },
           "youtube": {
-            "views": 298,
+            "views": 332,
             "likes": 7,
             "comments": 0,
             "shares": 0
@@ -617,11 +617,11 @@
       "isbn": "9788434465985"
     },
     "stats": {
-      "views": 3165,
-      "likes": 68,
+      "views": 3266,
+      "likes": 70,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1284,
+      "youtube_views": 1354,
       "updated": "2026-11-22"
     }
   },
@@ -642,13 +642,13 @@
         "at": "2026-11-21T09:03:25+00:00",
         "stats": {
           "instagram": {
-            "views": 234,
-            "likes": 0,
+            "views": 240,
+            "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.2,
+            "avg_watch_s": 13.3,
             "saves": 0,
-            "reach": 194
+            "reach": 197
           },
           "youtube": {
             "views": 0,
@@ -679,8 +679,8 @@
       "isbn": "9788484603726"
     },
     "stats": {
-      "views": 461,
-      "likes": 7,
+      "views": 467,
+      "likes": 8,
       "comments": 1,
       "shares": 0,
       "youtube_views": 0,
@@ -704,13 +704,13 @@
         "at": "2026-11-21T09:09:49+00:00",
         "stats": {
           "instagram": {
-            "views": 168,
-            "likes": 4,
+            "views": 170,
+            "likes": 5,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 9.9,
+            "avg_watch_s": 9.8,
             "saves": 1,
-            "reach": 142
+            "reach": 144
           },
           "youtube": {
             "views": 1198,
@@ -731,8 +731,8 @@
     ],
     "book": null,
     "stats": {
-      "views": 1585,
-      "likes": 34,
+      "views": 1587,
+      "likes": 35,
       "comments": 3,
       "shares": 0,
       "youtube_views": 1198,
@@ -773,6 +773,70 @@
         "job_id": "6228e03318c341edba38398475588613",
         "failed": [],
         "at": "2026-11-21T22:35:57+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "personaje_olvidado",
+    "topic": "Isabel Zendal y los 22 huérfanos de la expedición Balmis (1803) que llevaron viva la vacuna de la viruela a América de brazo a brazo; ella murió olvidada en México y hoy da nombre al hospital madrileño de la pandemia.",
+    "series_title": "Isabel Zendal: la mujer que cruzó el mar con la vacuna dentro de 22 niños",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T12:00:00+01:00",
+        "request_id": "4bcb14e0a4c846e4b7c37503d8a70589",
+        "job_id": "96021443a0c045c0a449704620b22ae8",
+        "failed": [],
+        "at": "2026-11-22T01:26:59+00:00"
+      }
+    ],
+    "book": {
+      "title": "A flor de piel",
+      "author": "Javier Moro",
+      "pitch": "La novela de la expedición que cruzó el mundo con la vacuna dentro de veintidós niños.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/8910329-M.jpg",
+      "isbn": "9788432239007"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "error_historico",
+    "topic": "Desastre de Los Rodeos (Tenerife, 27-III-1977): bomba del MPAIAC en la floristería de Gando, desvío a Tenerife, niebla, el «OK» pisado por radio, el KLM despega sin permiso contra el Pan Am, 583 muertos; el piloto era la cara de los anuncios de KLM.",
+    "series_title": "Los Rodeos: la palabra que mató a 583 personas",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T16:00:00+01:00",
+        "request_id": "162cf13e9691457a932cd1b309d526c3",
+        "job_id": "cf047c111e844248b3c0a4fff9fb938d",
+        "failed": [],
+        "at": "2026-11-22T01:41:59+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "punto_inflexion",
+    "topic": "Accidente ferroviario de Torre del Bierzo (3-I-1944): correo 421 sin frenos, choque en el túnel 20 con una locomotora y un tren de carbón, dos días de fuego, 78 muertos oficiales y cientos de viajeros sin billete nunca contados por la censura.",
+    "series_title": "El túnel 20: el accidente de tren que nadie contó",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T18:00:00+01:00",
+        "request_id": "ddd087e513cd4344977f8f1eb3117ab2",
+        "job_id": "b8fdf875dfbf4d8192d229a6c57dac9e",
+        "failed": [],
+        "at": "2026-11-22T01:55:22+00:00"
       }
     ],
     "book": null
