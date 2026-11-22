@@ -257,6 +257,6 @@ channels:
       cuenta_atras: "¿Y si...? hora a hora: qué pasa en el minuto 1, la hora 1, la hora 12, el día 1, la semana 1... sobre un escenario enorme o un tema caliente de hoy (IA, apagón, guerra, pandemia, internet)"
 
 # Caducidades: el sistema avisa 15 días antes (formato AAAA-MM-DD). Rellena las fechas reales.
-expirations: {}
-#  clave_cronjob_github: "2027-02-20"
-#  clave_claude_github: "2027-11-19"
+expirations:
+  clave_claude_github (CLAUDE_CODE_OAUTH_TOKEN, renovar con `claude setup-token`): "2027-11-16"   # creada hacia el 16/11/2026, dura ~1 año
+  # la clave de GitHub de cron-job.org no caduca
