@@ -167,14 +167,16 @@ channels:
       instagram: https://www.instagram.com/conexionconchispa/
       tiktok: https://www.tiktok.com/@conexionconchispa
     style: volumen                   # estilo de dibujo: caricatura | volumen | plano | amable
-    interest_queries: ["citas pareja", "ligar aplicaciones", "relaciones estudio", "generación Z amor"]   # noticias de la semana para inspirar temas
-    format_cycle: [antes_despues, error_comun, antes_despues, senales, antes_despues, psicologia_atraccion]   # «antes y después» es lo que mejor funciona (2.716 de media)
+    interest_queries: ["polémica citas pareja", "infidelidad estudio", "relaciones abiertas", "apps de citas tendencia"]   # noticias de la semana para inspirar temas
+    format_cycle: [debate, antes_despues, red_flag, antes_despues, debate, senales, antes_despues, error_comun]   # polémica y «antes y después», lo que más se comenta y ve
     host:                             # presentadora fija: cierra cada vídeo mirando a cámara
       name: Chispa
       location: cafeteria
       mood: atardecer
       look: {female: true, age: joven, skin: media, hair_color: pelirrojo, hair_style: largo, outfit: camisa, outfit_color: rojo, accent_color: dorado, nose: pequeña, jaw: fina, eyes: verdes}
     formats:
+      debate: "Debate polémico de citas o pareja con dos bandos (quién paga, el móvil de la pareja, amigos con derecho, el ex, el pasado...) y un veredicto o un dato que lo complica"
+      red_flag: "¿Red flag o green flag?: una conducta concreta en una cita o una relación y qué dice de esa persona"
       antes_despues: "Antes y después: la misma situación mal y bien, con un truco concreto para ligar o conectar"
       psicologia_atraccion: "Lo que dice la psicología sobre atracción, conversación o confianza, con un consejo práctico"
       error_comun: "El error que casi todos cometen al ligar, en una cita o por mensaje, y la frase o gesto concreto que lo arregla"
@@ -240,7 +242,7 @@ channels:
       instagram: https://www.instagram.com/ysiciencia2/
       tiktok: https://www.tiktok.com/@ysiconciencia
     style: plano                  # estilo de dibujo: caricatura | plano | amable
-    interest_queries: ["fin del mundo científicos", "futuro de la humanidad", "NASA asteroide", "estudio científico sorprendente"]   # noticias de la semana para inspirar temas
+    interest_queries: ["inteligencia artificial riesgo", "apagón guerra nuclear", "fin del mundo científicos", "estudio científico sorprendente"]   # noticias de la semana para inspirar temas
     host:                             # presentador fijo: cierra cada vídeo mirando a cámara
       name: El Profe
       location: laboratorio
@@ -250,4 +252,4 @@ channels:
       y_si_humanidad: "¿Y si... a toda la humanidad? Desaparecer, no poder tener hijos, no poder mentir, ser inmortales, desaparecer un sexo, el dinero, los móviles..."
       y_si_tu: "¿Y si te pasara a ti? Tu cuerpo o tu mente en un escenario imposible: ser el último humano, no dormir nunca, saber tu fecha de muerte, leer mentes..."
       y_si_planeta: "¿Y si... el planeta o el universo? La Tierra, el Sol, la Luna, los océanos o el espacio en un escenario imposible (que se apague el Sol, que pase un agujero negro...)"
-      cuenta_atras: "¿Y si...? contado como cuenta atrás (segundo a segundo, día a día o año a año), cada paso peor que el anterior, sobre un escenario enorme"
+      cuenta_atras: "¿Y si...? hora a hora: qué pasa en el minuto 1, la hora 1, la hora 12, el día 1, la semana 1... sobre un escenario enorme o un tema caliente de hoy (IA, apagón, guerra, pandemia, internet)"

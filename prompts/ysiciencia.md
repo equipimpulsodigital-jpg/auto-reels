@@ -8,11 +8,15 @@ Un tema de este canal tiene que hacer que alguien piense «uf, ¿y qué pasaría
 - Ejemplos del nivel que buscamos (no los repitas tal cual si ya salieron; sirven de vara de medir): ¿y si mañana desapareciera la humanidad entera?, ¿y si desaparecieran todos los hombres (o todas las mujeres)?, ¿y si nadie pudiera volver a tener hijos?, ¿y si fueras la última persona de la Tierra?, ¿y si nadie pudiera mentir?, ¿y si fuéramos inmortales?, ¿y si el Sol se apagara?, ¿y si desaparecieran todos los insectos?, ¿y si el dinero dejara de existir?, ¿y si recibiéramos una señal extraterrestre?, ¿y si pudieras ver tu fecha de muerte?, ¿y si todos supiéramos lo que piensan los demás?, ¿y si la Tierra tuviera anillos como Saturno?, ¿y si los océanos se secaran?, ¿y si dejaras de dormir para siempre?, ¿y si un agujero negro pasara cerca?
 - Lo que ha funcionado mejor en el canal (los datos reales van en la petición) manda sobre estos ejemplos.
 
-### 1. ESTRUCTURA DEL VÍDEO (UNA sola parte)
-- **Segundo 0:** el instante en que ocurre, contado en presente y en segunda persona cuando encaje: «Son las 9:14. De repente, todos los hombres del planeta desaparecen.» Nada de «hoy vamos a ver qué pasaría si…».
-- **Escalada en el tiempo:** saltos cada vez más grandes («a los 10 minutos…», «esa noche…», «al cabo de un año…», «dentro de 10.000 años…»). Cada salto, una consecuencia más sorprendente, más personal o más grave que la anterior. Mezcla lo grandioso (ciudades, planeta) con lo íntimo (tu casa, tu familia, tu móvil).
-- **Un detalle que nadie había pensado** a mitad del vídeo (el re-gancho fuerte): la consecuencia indirecta que sorprende («Pero el mayor problema no serían los aviones sin piloto…»).
-- **Final con giro:** la conclusión más inesperada (y cierta según la ciencia), que cambie cómo se ve todo el escenario, y una pregunta que obligue a comentar («¿Qué harías tú la primera noche?», «¿Firmarías por ser inmortal?»).
+### 1. ESTRUCTURA DEL VÍDEO: LO QUE PASA HORA A HORA (UNA sola parte)
+El formato estrella es la **cronología**: qué pasaría en los primeros segundos, en las primeras horas, el primer día y después. La gente se queda para ver «el siguiente salto» del reloj.
+- **Segundo 0:** el instante en que ocurre, en presente y en segunda persona cuando encaje: «Son las 9:14. De repente, todos los hombres del planeta desaparecen.» Nada de «hoy vamos a ver qué pasaría si…».
+- **Saltos de tiempo marcados**, cada uno en su bloque y con su rótulo en pantalla (`on_screen`): «MINUTO 1», «HORA 2», «HORA 12», «DÍA 3», «1 AÑO», «100 AÑOS»… Mínimo 5 saltos. Cada salto, una consecuencia más grave, más rara o más personal que la anterior. Las primeras horas son lo más concreto y cercano (tu móvil, el metro, el súper, tu familia); los saltos largos, lo más impresionante.
+- **Un detalle que nadie había pensado** a mitad del vídeo (el re-gancho fuerte): la consecuencia indirecta que sorprende («Pero a la hora 6 el problema no son los aviones…»).
+- **Final con giro:** la conclusión más inesperada (y cierta según la ciencia) y una pregunta que obligue a comentar («¿Qué harías tú la primera hora?», «¿Sobrevivirías al día 3?»).
+
+### TEMAS CALIENTES
+Además de los grandes «¿y si…?» de siempre, prioriza los que **ya preocupan o se discuten hoy**, contados con ciencia y sin tomar partido político: ¿y si la IA tomara el control mañana?, ¿y si estallara una guerra nuclear?, ¿y si se cayera internet una semana?, ¿y si desapareciera el dinero en efectivo?, ¿y si se acabara el petróleo de golpe?, ¿y si hubiera un apagón total en España?, ¿y si una nueva pandemia empezara hoy?, ¿y si se prohibieran los móviles?, ¿y si los robots hicieran todos los trabajos?, ¿y si los polos se derritieran este año? Usa las noticias de la semana que van en la petición para encontrar el tema caliente del momento.
 
 ### 2. REGLAS DEL GUION Y LA NARRACIÓN
 - **Duración por parte:** entre 85 y 105 palabras en total entre narrador y diálogos (35–45 segundos).
