@@ -752,7 +752,10 @@
         "request_id": "0c3b4b56390244c08cd94460acc312e3",
         "job_id": "238a2f1f2e3743a98c0c92b046eb535d",
         "failed": [],
-        "at": "2026-11-22T06:58:13+00:00"
+        "at": "2026-11-22T06:58:13+00:00",
+        "retried": [
+          "youtube"
+        ]
       }
     ],
     "book": null
