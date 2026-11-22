@@ -126,7 +126,7 @@
             "reach": 182
           },
           "youtube": {
-            "views": 1263,
+            "views": 1264,
             "likes": 19,
             "comments": 0,
             "shares": 0
@@ -141,11 +141,11 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1483,
+      "views": 1484,
       "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1263,
+      "youtube_views": 1264,
       "updated": "2026-11-22"
     }
   },
@@ -411,9 +411,9 @@
             "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 16.9,
+            "avg_watch_s": 17.0,
             "saves": 1,
-            "reach": 131
+            "reach": 132
           },
           "youtube": {
             "views": 1162,
@@ -465,7 +465,7 @@
             "reach": 132
           },
           "youtube": {
-            "views": 998,
+            "views": 993,
             "likes": 9,
             "comments": 1,
             "shares": 0
@@ -480,11 +480,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1154,
+      "views": 1149,
       "likes": 10,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 998,
+      "youtube_views": 993,
       "updated": "2026-11-22"
     }
   },
@@ -509,13 +509,13 @@
             "likes": 4,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 11.2,
+            "avg_watch_s": 11.1,
             "saves": 0,
-            "reach": 132
+            "reach": 133
           },
           "youtube": {
-            "views": 0,
-            "likes": 0,
+            "views": 1,
+            "likes": 1,
             "comments": 1,
             "shares": 0
           }
@@ -529,11 +529,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 154,
-      "likes": 4,
+      "views": 155,
+      "likes": 5,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 0,
+      "youtube_views": 1,
       "updated": "2026-11-22"
     }
   },
@@ -579,5 +579,79 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "trampa_mental",
+    "topic": "Ilusión de profundidad explicativa: creemos entender objetos cotidianos (y nuestras opiniones) hasta que tenemos que explicarlos paso a paso",
+    "series_title": "Crees que sabes cómo funciona un váter",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T12:00:00+01:00",
+        "request_id": "3e7f90a946114efcb4b0e0ed2299b328",
+        "job_id": "44c0da397c87472da632b6123ff74e5a",
+        "failed": [],
+        "at": "2026-11-22T01:24:22+00:00"
+      }
+    ],
+    "book": {
+      "title": "La ilusión del conocimiento",
+      "author": "Steven Sloman y Philip Fernbach",
+      "pitch": "Por qué creemos saber mucho más de lo que sabemos, y por qué nunca pensamos solos.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "por_que",
+    "topic": "Efecto de mera exposición con la propia cara: preferimos nuestra imagen de espejo y los amigos prefieren la foto real (Mita, Dermer y Knight, 1977)",
+    "series_title": "Por qué te ves fatal en las fotos (y bien en el espejo)",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T16:00:00+01:00",
+        "request_id": "94a5266171ad4b80b6ea10ba4ed0352b",
+        "job_id": "b1fe0a30c0974b5fbdceb33263d2eb35",
+        "failed": [],
+        "at": "2026-11-22T01:36:09+00:00"
+      }
+    ],
+    "book": {
+      "title": "Pensar rápido, pensar despacio",
+      "author": "Daniel Kahneman",
+      "pitch": "El Nobel que explica por qué tu cerebro elige lo conocido sin pedirte permiso.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "como_salir",
+    "topic": "Efecto «brain drain»: la mera presencia del móvil (aunque esté boca abajo y en silencio) resta capacidad mental; dejarlo en otra habitación ayuda a concentrarse (Ward et al., 2017)",
+    "series_title": "Boca abajo no basta: el móvil que te roba atención",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T18:00:00+01:00",
+        "request_id": "b0799982460d4ccb81493284a032b0be",
+        "job_id": "00898eb835e24f78bee3ead81ee5c6a9",
+        "failed": [],
+        "at": "2026-11-22T01:47:34+00:00"
+      }
+    ],
+    "book": {
+      "title": "El valor de la atención",
+      "author": "Johann Hari",
+      "pitch": "Por qué nos cuesta tanto concentrarnos y qué podemos hacer para recuperar la atención.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/13537621-M.jpg",
+      "isbn": "9788411001298"
+    }
   }
 ]
