@@ -7,19 +7,11 @@
     },
     {
       "date": "2026-11-22",
-      "instagram": 0,
       "youtube": 28,
       "tiktok": 0
     }
   ],
   "latest": {
-    "instagram": {
-      "followers": 0,
-      "reach": 0,
-      "views": 0,
-      "impressions": 0,
-      "profileViews": 0
-    },
     "youtube": {
       "followers": 28,
       "reach": 0,
