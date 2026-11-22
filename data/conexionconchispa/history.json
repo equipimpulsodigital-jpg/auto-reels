@@ -184,7 +184,7 @@
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 6.1,
-            "reach": 0
+            "reach": 194
           }
         }
       }
@@ -225,7 +225,7 @@
             "reach": 1238
           },
           "youtube": {
-            "views": 1249,
+            "views": 1250,
             "likes": 22,
             "comments": 0,
             "shares": 0
@@ -236,7 +236,7 @@
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 5.7,
-            "reach": 0
+            "reach": 190
           }
         }
       }
@@ -248,11 +248,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2977,
+      "views": 2978,
       "likes": 74,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1249,
+      "youtube_views": 1250,
       "updated": "2026-11-22"
     }
   },
@@ -279,7 +279,7 @@
             "shares": 1,
             "avg_watch_s": 14.7,
             "saves": 0,
-            "reach": 1095
+            "reach": 1096
           },
           "youtube": {
             "views": 1,
@@ -293,7 +293,7 @@
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 7.1,
-            "reach": 0
+            "reach": 197
           }
         }
       }
@@ -397,11 +397,11 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 180,
-            "likes": 13,
+            "views": 184,
+            "likes": 14,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 7.0,
+            "avg_watch_s": 6.8,
             "reach": 0
           }
         }
@@ -414,8 +414,8 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1527,
-      "likes": 31,
+      "views": 1531,
+      "likes": 32,
       "comments": 0,
       "shares": 0,
       "youtube_views": 1201,
@@ -454,8 +454,8 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 582,
-            "likes": 27,
+            "views": 623,
+            "likes": 32,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 6.5,
@@ -473,8 +473,8 @@
       "isbn": "9788416222278"
     },
     "stats": {
-      "views": 2943,
-      "likes": 70,
+      "views": 2984,
+      "likes": 75,
       "comments": 3,
       "shares": 0,
       "youtube_views": 1039,
@@ -513,11 +513,11 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 138,
-            "likes": 3,
+            "views": 147,
+            "likes": 4,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.6,
+            "avg_watch_s": 15.6,
             "reach": 0
           }
         }
@@ -525,8 +525,8 @@
     ],
     "book": null,
     "stats": {
-      "views": 2881,
-      "likes": 59,
+      "views": 2890,
+      "likes": 60,
       "comments": 3,
       "shares": 1,
       "youtube_views": 1194,
@@ -565,11 +565,11 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 2,
-            "likes": 1,
+            "views": 101,
+            "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 5.6,
+            "avg_watch_s": 10.5,
             "reach": 0
           }
         }
@@ -581,8 +581,8 @@
       "pitch": "El clásico que explica por qué recordar un nombre abre más puertas que cualquier frase ingeniosa."
     },
     "stats": {
-      "views": 1500,
-      "likes": 45,
+      "views": 1599,
+      "likes": 46,
       "comments": 3,
       "shares": 0,
       "youtube_views": 0,
@@ -632,5 +632,75 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "senales",
+    "topic": "Imitación del estilo al escribir y de los gestos como señal de interés (Ireland et al., 2011; efecto camaleón); qué hacer si te imita y si no",
+    "series_title": "Si escribe como tú, le gustas",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T11:45:00+01:00",
+        "request_id": "012775b6606747b895e522f98cdca6fb",
+        "job_id": "8848d387032f4a44b1f016991896bd42",
+        "failed": [],
+        "at": "2026-11-22T01:23:46+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "antes_despues",
+    "topic": "Atribución errónea de la activación (Dutton y Aron, 1974, puente de Capilano): cambiar la cita de café por un plan activo que acelere el pulso",
+    "series_title": "El café que mata tu primera cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T14:00:00+01:00",
+        "request_id": "56699469383c40a8baf530fd8a39af46",
+        "job_id": "439f9e49657f41d3a3a11b13c67c18b1",
+        "failed": [],
+        "at": "2026-11-22T01:34:42+00:00"
+      }
+    ],
+    "book": {
+      "title": "Por qué amamos",
+      "author": "Helen Fisher",
+      "pitch": "La antropóloga que metió el enamoramiento en un escáner cerebral explica qué nos pasa por dentro.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/3353863-M.jpg",
+      "isbn": "9788466314916"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "error_comun",
+    "topic": "Humblebrag (Sezer, Gino y Norton, 2018): presumir disfrazado de queja cae peor que presumir y que quejarse; consejo: contar el logro con orgullo y sin disfraz en una cita",
+    "series_title": "La queja que en realidad es presumir",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T16:00:00+01:00",
+        "request_id": "137c619f0d3842e5980f18aef15af592",
+        "job_id": "2cb0c69dbe11431cb97c76bbc8a5ddd6",
+        "failed": [],
+        "at": "2026-11-22T01:45:59+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cómo ganar amigos e influir sobre las personas",
+      "author": "Dale Carnegie",
+      "pitch": "El clásico que explica por qué caemos mejor cuando dejamos de intentar quedar bien.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
+    }
   }
 ]
