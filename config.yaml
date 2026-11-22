@@ -47,7 +47,7 @@ publish:
   # Horas de publicación (hora de España). Una ejecución diaria de GitHub prepara los vídeos
   # y los deja PROGRAMADOS en Upload-Post a estas horas exactas (aunque GitHub llegue tarde).
   timezone: Europe/Madrid
-  slots: ["10:00", "13:00", "16:00", "19:00", "22:00"]
+  slots: ["10:00", "12:00", "16:00", "18:00", "21:00"]   # las franjas que mejor funcionaron (datos del 18-21/11)
   min_lead_minutes: 20        # no programa una franja que empiece antes de este margen
   min_gap_minutes: 100        # ni una franja a menos de este tiempo de otra ya programada
   label_as_ai: false          # etiqueta «hecho con IA» de cada red (no hace falta para animación)
@@ -168,6 +168,7 @@ channels:
       tiktok: https://www.tiktok.com/@conexionconchispa
     style: volumen                   # estilo de dibujo: caricatura | volumen | plano | amable
     interest_queries: ["polémica citas pareja", "infidelidad estudio", "relaciones abiertas", "apps de citas tendencia"]   # noticias de la semana para inspirar temas
+    slots: ["09:30", "11:45", "14:00", "16:00", "18:00", "20:00", "21:45"]   # la marca que mejor funciona: 7 vídeos al día
     format_cycle: [debate, antes_despues, red_flag, antes_despues, debate, senales, antes_despues, error_comun]   # polémica y «antes y después», lo que más se comenta y ve
     host:                             # presentadora fija: cierra cada vídeo mirando a cámara
       name: Chispa

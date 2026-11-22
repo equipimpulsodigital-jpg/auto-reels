@@ -195,11 +195,11 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
     write = _claude_code if _use_claude_code(cfg) else _api
     series = write(cfg, _system_prompt(cfg), user)
     longest = max(sum(len(b.narration.split()) for b in p.blocks) for p in series.parts)
-    if longest > 120:  # se ha pasado de largo: un vídeo de 55 s se ve entero mucho menos que uno de 40 s
+    if longest > 92:  # se ha pasado de largo: un vídeo de 45 s se ve entero mucho menos que uno de 30 s
         print(f"  guion demasiado largo ({longest} palabras en una parte): se pide otra versión más corta")
         try:
             series = write(cfg, _system_prompt(cfg), user + (
-                f"\n\nIMPORTANTE: cada parte debe tener entre 85 y 105 palabras en total (un intento anterior tenía "
+                f"\n\nIMPORTANTE: cada parte debe tener entre 65 y 80 palabras en total (un intento anterior tenía "
                 f"{longest}). Frases más cortas y menos bloques de contexto; el gancho y el final, intactos."))
         except Exception as e:  # si falla, mejor un vídeo algo largo que ninguno
             print(f"  no se pudo acortar ({e}); se usa la primera versión")

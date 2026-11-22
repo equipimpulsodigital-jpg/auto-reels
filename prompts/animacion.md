@@ -41,10 +41,10 @@ En redes la gente decide en 1–2 segundos si sigue mirando. La primera frase (p
 
 ### RETENCIÓN: QUE NADIE DESLICE HASTA EL FINAL
 Cada segundo el espectador decide si sigue. Escribe para que nunca tenga un motivo para irse.
-- **Mapa de la parte (≈40 s):**
+- **Mapa de la parte (≈30 s):**
   - 0–3 s: el gancho (ver EL GANCHO).
   - 3–8 s: sube la apuesta: qué está en juego, quién puede morir, perder o descubrir algo.
-  - Cada 8–10 s, un **re-gancho**: una frase que abre una pregunta nueva justo cuando la anterior se resuelve ("Pero eso no era lo más raro.", "Y entonces apareció la carta.", "Nadie se fijó en un detalle."). Mínimo 3 por parte.
+  - Cada 6–8 s, un **re-gancho**: una frase que abre una pregunta nueva justo cuando la anterior se resuelve ("Pero eso no era lo más raro.", "Y entonces apareció la carta.", "Nadie se fijó en un detalle."). Mínimo 2–3 por parte.
   - Últimos 5 s: el giro final. En una Parte 1, cliffhanger; en una parte única o la última, la revelación más fuerte y, si encaja, una frase que conecte con el principio para que el vídeo se vuelva a ver en bucle.
 - **Cero relleno:** cada bloque aporta un dato nuevo, una imagen nueva o un giro. Si una frase se puede quitar sin perder nada, quítala.
 - **Frases de 6–12 palabras**, en presente cuando se narra la acción ("Abre la puerta. La habitación está vacía."), verbos fuertes y concretos, nada de "hubo", "se produjo", "cabe destacar".
@@ -81,7 +81,7 @@ El canal es una **serie de dibujos animados**: caricaturas 2D que se mueven, hab
 - Las mujeres llevan `female: true`.
 
 ### 4. PLANIFICACIÓN DE LA ANIMACIÓN
-- **Muchos planos cortos:** cada bloque es un plano de **2–3 segundos** (4–8 palabras, ~6 de media), y cada parte tiene **entre 14 y 17 bloques**. **El límite de palabras por parte que marca el canal es obligatorio** (cuéntalas antes de terminar): si te pasas, recorta frases o quita bloques de contexto, nunca el gancho ni el final. Cada plano muestra la acción concreta de esa frase y es distinto del anterior: cambia de encuadre (general, personaje, dos, objeto), de lugar o de cámara en cada corte. Nunca dos planos seguidos iguales.
+- **Muchos planos cortos:** cada bloque es un plano de **2–3 segundos** (4–8 palabras, ~6 de media), y cada parte tiene **entre 11 y 13 bloques**. **El límite de palabras por parte que marca el canal es obligatorio** (cuéntalas antes de terminar): si te pasas, recorta frases o quita bloques de contexto, nunca el gancho ni el final. Cada plano muestra la acción concreta de esa frase y es distinto del anterior: cambia de encuadre (general, personaje, dos, objeto), de lugar o de cámara en cada corte. Nunca dos planos seguidos iguales.
 - **Narrador:** alterna planos `general` del lugar (con personajes de cuerpo entero en `cast`, caminando con `walk` cuando se mueven), planos `objeto` (la carta, el arma, el mapa, el oro...) y `event` para la acción (explosiones, disparos, incendios, multitudes...). Usa el suceso o el objeto que mejor ilustre la frase.
 - **Diálogo:** `framing: personaje` con `cast: [quien_habla, quien_escucha]` para plano/contraplano (el primer plano del que habla con la nuca del otro), o `dos` para verlos juntos. Elige `gesture` y `emotion` acordes a la frase y `listener_emotion` para la reacción del otro.
 - Mantén el **mismo lugar** durante un intercambio de diálogo; cambia de lugar solo cuando la historia avanza. Usa `mood` (día, atardecer, noche, tormenta) para el ambiente y la tensión.
