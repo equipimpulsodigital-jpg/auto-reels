@@ -27,4 +27,4 @@ jobs:
           key: piper-voices-v1
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libegl1 libgl1 fontconfig
       - run: pip install -r requirements.txt
-      - run: python tests/smoke.py
+      - run: PYTHONPATH=. python tests/smoke.py
