@@ -85,8 +85,8 @@ def check() -> tuple[list[str], list[str]]:
                     if res.get("success") or plat not in _platforms_for(cfg, when):
                         continue
                     err = str(res.get("error_message") or res.get("message") or res.get("error") or "")
-                    if any(k in err.lower() for k in RETRYABLE) and plat not in p.get("retried", []):
-                        continue  # lo reintentará la próxima ejecución
+                    if plat in p.get("retried", []) or any(k in err.lower() for k in RETRYABLE):
+                        continue  # ya se volvió a subir, o lo reintentará la próxima ejecución
                     hint = ""
                     if "risky" in err.lower():
                         hint = " TikTok desconfía de la cuenta: úsala unos días desde el móvil y sube algún vídeo a mano."
