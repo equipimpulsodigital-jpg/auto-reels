@@ -438,3 +438,8 @@ EVENT_SFX.update({"coche": [("whoosh", 0.8)], "coche_antiguo": [("whoosh", 0.8)]
 EVENT_AMBIENCE.update({"helicoptero": "avion", "tren": "viento", "camion": "viento", "tractor": "viento"})
 EVENT_SFX.update(EXTRA_EVENT_SFX)
 EVENT_AMBIENCE.update(EXTRA_EVENT_AMBIENCE)
+
+# iconos simbólicos del modo tipografía (también valen como objeto en primer plano)
+from .typo import ICONS as _TYPO_ICONS  # noqa: E402
+
+PROPS.update(_TYPO_ICONS)

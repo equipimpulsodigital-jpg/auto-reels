@@ -19,8 +19,8 @@ failures = []
 styles_done = set()
 for cid in load_config().get("channels", {}):
     cfg = load_config(cid)
-    style = cfg["channel"].get("style", "caricatura")
-    if style in styles_done:  # un canal por estilo basta
+    style = (cfg["channel"].get("render", "dibujos"), cfg["channel"].get("style", "caricatura"))
+    if style in styles_done:  # un canal por estilo (y modo de dibujo) basta
         continue
     styles_done.add(style)
     folder = tmp / cid

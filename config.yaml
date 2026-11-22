@@ -207,6 +207,7 @@ channels:
       youtube: https://www.youtube.com/@lacabezapordentro
       instagram: https://www.instagram.com/lacabezapordentro/
       tiktok: https://www.tiktok.com/@lacabezapordentro
+    render: tipografia                # sin personajes: listas con palabras enormes sobre fondo oscuro
     style: plano                  # estilo de dibujo: caricatura | plano | amable
     interest_queries: ["manipulación psicológica", "psicología oscura", "narcisismo relaciones", "lenguaje corporal mentira"]   # noticias de la semana para inspirar temas
     host:                             # presentadora fija: cierra cada vídeo mirando a cámara

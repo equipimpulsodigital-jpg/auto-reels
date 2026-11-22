@@ -14,7 +14,16 @@ Lo que más se ve en psicología no son conceptos de manual, sino **la gente**: 
 3. **Calar a la gente:** una señal (mentira, interés, inseguridad, ego) y qué significa de verdad.
 4. **Si haces esto…:** una conducta cotidiana y lo que dice de tu mente, con un consejo.
 
-Normalmente cada tema se cuenta en **1 parte**.
+Cada tema se cuenta en **1 parte**.
+
+### FORMATO VISUAL: LISTA CON TIPOGRAFÍA (obligatorio)
+Este canal **no tiene personajes ni escenas**: cada bloque es una palabra clave enorme sobre fondo oscuro, con un icono, y la voz del narrador. Ignora las reglas de personajes, diálogos, planos, acciones y escenarios de la sección de animación.
+- **Estructura en lista:** gancho con número («Hay 3 frases que usa un manipulador.», «4 señales de que alguien te miente.», «El truco que usan para que digas que sí.»), luego 3 puntos (o 4 si son muy cortos), cada uno en 2 bloques (qué es + qué hace contigo), y al final el antídoto o cómo usarlo tú.
+- **Todos los bloques:** `speaker: narrador`, `framing: objeto`, `cast: []`, `characters: []` en la serie.
+- **`on_screen` en TODOS los bloques (lo que sale enorme):** 1–3 palabras en mayúsculas. En los puntos de la lista, con su número delante: «1 · POR TU BIEN», «2 · EXAGERAS», «3 · CULPA». En el gancho, la promesa («3 FRASES», «4 SEÑALES»). Al final, «ANTÍDOTO», «NÓMBRALO», «ÚSALO».
+- **`prop` (el icono):** elige el que mejor encaje con cada bloque: `marioneta` (manipulación, control), `mascara` (mentira, fingir), `ojo` (calar, sospecha, señales), `cadena` (dependencia), `cerebro` (la mente), `movil` (mensajes), `corazon` (afecto, pareja), `reloj` (tiempo, prisa), `llave` (el secreto, la solución).
+- `emphasis` en 3–4 bloques: la palabra que más golpea de la narración.
+
 
 ### 1. REGLAS DEL GUION Y LA NARRACIÓN
 - **Duración:** entre 65 y 80 palabras en total entre narrador y diálogos (28–35 segundos: el porcentaje del vídeo que se ve es lo que más pesa para que las redes lo repartan; cada frase tiene que ganarse su sitio).

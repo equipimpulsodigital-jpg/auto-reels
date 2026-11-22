@@ -108,6 +108,9 @@ EVENT_DESC = {
 
 PROP_DESC.update(EXTRA_PROP_DESC)
 PROP_DESC.update(EXTRA_PROP_DESC_2)
+PROP_DESC.update({"marioneta": "mano que mueve los hilos de una marioneta (manipulación, control)",
+                  "mascara": "máscara (fingir, mentir, doble cara)", "ojo": "ojo que observa (calar a alguien, sospecha)",
+                  "cadena": "cadena (dependencia, no poder irse)"})
 EVENT_DESC.update(EXTRA_EVENT_DESC)
 EVENT_DESC.update({k: v + " (vehículo: en plano general, cruza por detrás de los personajes)" for k, v in VEHICLE_DESC.items()})
 
