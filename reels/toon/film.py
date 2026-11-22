@@ -221,9 +221,11 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
         n = len(shot.cast)
         actor = _actor(shot)
         order = sorted(shot.cast, key=lambda c_: ctx.side(c_)) if n > 1 else list(shot.cast)
+        if n == 2 and ctx.side(order[0]) == ctx.side(order[1]):
+            order = list(shot.cast)  # mismo lado asignado: el primero a la izquierda y el segundo a la derecha
         for i, cid in enumerate(order):
             s = 0.6
-            side = ctx.side(cid)
+            side = ctx.side(cid) if n != 2 else (-1.0 if i == 0 else 1.0)
             x = W * (0.5 + (i - (n - 1) / 2) * 0.36) if n > 1 else W * 0.5
             facing = -side if n > 1 else 1.0
             if shot.action == "correr" and cid == actor:  # cruza la pantalla corriendo
@@ -263,12 +265,16 @@ def draw_frame(c, ctx: Ctx, shot: Shot, t: float, frame: int) -> None:
         if others:  # plano por encima del hombro del que escucha
             o = others[0]
             c.saveLayer(None, skia.Paint(ImageFilter=skia.ImageFilters.Blur(14, 14)))
-            ctx.chars[o].draw_back(c, W * (0.5 + ctx.side(o) * 0.48), H * 1.12, 1.55, -ctx.side(o), t)
+            o_side = -ctx.side(cid)  # el que escucha, siempre en el lado contrario al que habla
+            ctx.chars[o].draw_back(c, W * (0.5 + o_side * 0.48), H * 1.12, 1.55, -o_side, t)
             c.restore()
         return
     # plano de dos
-    for cid in shot.cast[:2]:
-        side = ctx.side(cid)
+    pair = shot.cast[:2]
+    first_side = ctx.side(pair[0]) if pair else -1.0
+    for k, cid in enumerate(pair):
+        # cada uno en un lado: si los dos tenían asignado el mismo lado, el segundo pasa al contrario
+        side = first_side if k == 0 else -first_side
         p = _pose(ctx, shot, cid, t, frame, -side)
         p.relative_height = True  # en el plano de dos se nota quién es más alto o más bajo
         ctx.chars[cid].draw(c, W * (0.5 + side * 0.24), H * 0.95, 0.92, p)
