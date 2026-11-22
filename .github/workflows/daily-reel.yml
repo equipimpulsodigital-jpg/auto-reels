@@ -61,7 +61,7 @@ jobs:
       group: reel-${{ matrix.channel }}
       cancel-in-progress: false
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 350   # el máximo de GitHub es 360
     env:
       CH: ${{ matrix.channel }}
       HORIZON: ${{ inputs.mode == 'noche' && '44' || contains(fromJSON('["17 0 * * *","43 2 * * *","29 4 * * *"]'), github.event.schedule) && '44' || '12' }}

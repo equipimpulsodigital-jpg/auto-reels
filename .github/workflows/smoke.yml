@@ -1,0 +1,30 @@
+name: Prueba del código
+
+# Cada vez que cambia el código, genera un vídeo corto de prueba en cada estilo (sin Claude y sin publicar) y prueba
+# la voz de reserva. Si algo se rompe, la ejecución falla y GitHub avisa por correo antes de la ejecución nocturna.
+on:
+  push:
+    branches: [main]
+    paths: ["reels/**", "prompts/**", "config.yaml", "requirements.txt", "assets/**", "tests/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/piper
+          key: piper-voices-v1
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libegl1 libgl1 fontconfig
+      - run: pip install -r requirements.txt
+      - run: python tests/smoke.py

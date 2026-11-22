@@ -38,17 +38,61 @@ def _edge(text: str, mp3: Path, voice: str, rate: str, pitch: str = "+0Hz") -> l
         return words
 
     # El servicio gratuito de voces falla a veces de forma pasajera («No audio was received»): reintenta con esperas.
+    # Si aun así no responde (o lo cortan), se usa una voz de reserva que funciona sin internet (Piper).
     import time
     for attempt in range(5):
         try:
             return asyncio.run(go())
         except Exception as e:
             if attempt == 4:
-                raise
+                print(f"  voz: el servicio principal no responde ({str(e)[:80]}); uso la voz de reserva", flush=True)
+                return _piper(text, mp3, voice, rate)
             wait = (3, 8, 20, 45)[attempt]
             print(f"  voz: fallo pasajero ({str(e)[:80]}); reintento en {wait} s", flush=True)
             time.sleep(wait)
     return []
+
+
+_PIPER = "https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/{n}/medium/es_ES-{n}-medium.onnx"
+_FEMALE = ("elvira", "ximena", "abril", "dalia", "elena", "irene", "triana", "vera", "estrella", "laia", "female")
+
+
+def _piper(text: str, out: Path, voice: str, rate: str = "+0%") -> list[Word]:
+    """Voz de reserva sin internet (Piper). Los tiempos de cada palabra se reparten según su longitud."""
+    import shutil
+    import subprocess
+    import wave
+    female = any(k in voice.lower() for k in _FEMALE)
+    name, speaker = ("sharvard", "1") if female else ("davefx", None)
+    models = Path.home() / ".cache" / "piper"
+    models.mkdir(parents=True, exist_ok=True)
+    model = models / f"es_ES-{name}-medium.onnx"
+    for suffix in ("", ".json"):
+        f = Path(str(model) + suffix)
+        if not f.exists():
+            r = requests.get(_PIPER.format(n=name) + suffix, timeout=300)
+            r.raise_for_status()
+            f.write_bytes(r.content)
+    exe = shutil.which("piper") or "piper"
+    try:
+        speed = 1 / (1 + int(rate.strip("%+")) / 100) if rate.strip("%+-").isdigit() else 0.9
+    except ValueError:
+        speed = 0.9
+    cmd = [exe, "--model", str(model), "--output_file", str(out), "--length_scale", f"{speed:.2f}"]
+    if speaker:
+        cmd += ["--speaker", speaker]
+    subprocess.run(cmd, input=text, text=True, check=True, capture_output=True, timeout=300)
+    with wave.open(str(out), "rb") as w:
+        dur = w.getnframes() / w.getframerate()
+    tokens = text.split()
+    weights = [len(t) + 2 for t in tokens]
+    total, t, words = sum(weights) or 1, 0.08, []
+    span = max(0.1, dur - 0.2)
+    for tok, wgt in zip(tokens, weights):
+        d = span * wgt / total
+        words.append(Word(tok, t, t + d * 0.9))
+        t += d
+    return words
 
 
 def _elevenlabs(text: str, mp3: Path, voice_id: str, model: str) -> list[Word]:

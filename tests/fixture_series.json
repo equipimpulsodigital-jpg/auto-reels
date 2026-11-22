@@ -1,0 +1,268 @@
+{
+ "topic_candidates": [
+  {
+   "topic": "Joan Pujol 'Garbo': un granjero de Barcelona engaña a Hitler sobre el Día D con 27 espías inventados y le condecoran los dos bandos",
+   "hook": "Hitler y los ingleses le condecoraron. Por la misma mentira.",
+   "why": "Un don nadie contra Hitler, una mentira enorme y un final increíble: segunda guerra mundial, como los vídeos que mejor funcionan",
+   "score": 9
+  },
+  {
+   "topic": "Isabel Zendal y los 22 niños huérfanos que llevaron la vacuna de la viruela por el mundo dentro de su propio cuerpo",
+   "hook": "La vacuna viajaba dentro de 22 niños huérfanos.",
+   "why": "Mucha ternura, niños y salud; ya es más conocida desde la COVID",
+   "score": 8
+  },
+  {
+   "topic": "Ángel Sanz Briz, el diplomático que salvó a más de 5.000 judíos en Budapest",
+   "hook": "Con un sello y una mentira, salvó a 5.000 personas.",
+   "why": "Un héroe con un dilema moral, pero el nicho ya lo ha contado mucho",
+   "score": 7
+  },
+  {
+   "topic": "Elisa y Marcela, las dos mujeres que se casaron en A Coruña en 1901 haciéndose pasar una por hombre",
+   "hook": "El novio era una mujer. Y el cura los casó.",
+   "why": "Amor prohibido y un engaño; da mucho que comentar",
+   "score": 7
+  },
+  {
+   "topic": "Juan Sebastián Elcano, el primero en dar la vuelta al mundo, que murió olvidado",
+   "hook": "Volvieron 18 de 239. Él los trajo.",
+   "why": "Una épica muy conocida y con poca sorpresa",
+   "score": 5
+  }
+ ],
+ "series_title": "Garbo: el español que engañó a Hitler",
+ "format": "personaje_olvidado",
+ "year": "1941-1944",
+ "place": "Barcelona, Lisboa y Londres",
+ "topic": "Joan Pujol 'Garbo', el granjero barcelonés y agente doble que engañó a Hitler sobre el Día D con 27 espías inventados, condecorado por los dos bandos, que fingió su muerte en 1949.",
+ "angle": "Un granjero de pollos de Barcelona, rechazado por los ingleses, engaña a Hitler con 27 espías inventados y una guía turística; acaba condecorado por los dos bandos por la misma mentira y, al final, se inventa hasta su propia muerte.",
+ "open_question": "¿Cómo consigue un don nadie de Barcelona que Hitler y los ingleses le condecoren por la misma mentira?",
+ "payoff": "Su última mentira fue su propia muerte: en 1949 fingió morir en Angola y en 1984 lo encontraron vivo en Venezuela.",
+ "beats": [
+  "Gancho: Hitler y los ingleses le condecoran por la misma mentira.",
+  "Sube la apuesta: esa mentira salvó miles de vidas.",
+  "Quién es: Joan Pujol, granjero de pollos en Barcelona; los ingleses lo rechazan.",
+  "Re-gancho: hace algo absurdo, se ofrece a los nazis.",
+  "Le mandan a Londres, pero se esconde en Lisboa e inventa informes con una guía turística y 27 espías falsos.",
+  "Re-gancho: los ingleses descubren que los nazis le creen y lo fichan.",
+  "Clímax: tras el desembarco jura a Berlín que Normandía es un engaño; Hitler deja tropas en Calais.",
+  "Payoff: su última mentira fue fingir su muerte en 1949; en 1984 aparece vivo en Venezuela."
+ ],
+ "era": "1950",
+ "characters": [
+  {
+   "id": "pujol",
+   "name": "Joan Pujol",
+   "voice": "hombre_joven",
+   "look": {
+    "female": false,
+    "age": "joven",
+    "skin": "media",
+    "hair_color": "negro",
+    "hair_style": "corto",
+    "hat": "sombrero",
+    "hat_color": "marron",
+    "beard": "bigote",
+    "beard_color": "negro",
+    "outfit": "traje",
+    "outfit_color": "gris",
+    "accent_color": "granate",
+    "pants_color": "gris",
+    "nose": "aguileña",
+    "jaw": "fina",
+    "eyes": "marrones",
+    "glasses": false,
+    "build": "delgado",
+    "height": "bajo"
+   }
+  },
+  {
+   "id": "ingles",
+   "name": "Agente británico",
+   "voice": "ingles",
+   "look": {
+    "female": false,
+    "age": "adulto",
+    "skin": "clara",
+    "hair_color": "rubio",
+    "hair_style": "corto",
+    "hat": "bombin",
+    "hat_color": "negro",
+    "beard": "perilla",
+    "beard_color": "rubio",
+    "outfit": "traje",
+    "outfit_color": "azul_marino",
+    "accent_color": "rojo",
+    "pants_color": "azul_marino",
+    "nose": "patata",
+    "jaw": "redonda",
+    "eyes": "azules",
+    "glasses": true,
+    "build": "robusto",
+    "height": "alto"
+   }
+  },
+  {
+   "id": "aleman",
+   "name": "Oficial alemán",
+   "voice": "hombre_mayor",
+   "look": {
+    "female": false,
+    "age": "mayor",
+    "skin": "clara",
+    "hair_color": "canoso",
+    "hair_style": "calvo",
+    "hat": "gorra_militar",
+    "hat_color": "gris",
+    "beard": "ninguna",
+    "beard_color": null,
+    "outfit": "uniforme",
+    "outfit_color": "gris",
+    "accent_color": "plateado",
+    "pants_color": "negro",
+    "nose": "gancho",
+    "jaw": "cuadrada",
+    "eyes": "azules",
+    "glasses": false,
+    "build": "robusto",
+    "height": "normal"
+   }
+  }
+ ],
+ "historical_notes": "Joan Pujol García (Barcelona, 1912 - Caracas, 1988), alias Garbo para el MI5 y Arabel para el Abwehr. Documentado: se ofreció a los británicos en 1941 y lo rechazaron; después se ofreció a los alemanes, que le aceptaron y le encargaron ir a Gran Bretaña; se quedó en Lisboa y se inventó los informes con guías, mapas, horarios de tren y revistas. En 1942 los británicos lo ficharon y lo llevaron a Londres. Su red tenía 27 agentes ficticios. Dentro de la Operación Fortitude, el 9 de junio de 1944 dijo a los alemanes que Normandía era una maniobra de distracción y que el ataque principal sería en el Paso de Calais; el alto mando alemán retuvo allí al XV Ejército. Recibió la Cruz de Hierro de segunda clase (aprobada por Hitler) y el MBE británico. En 1949 fingió morir de malaria en Angola con la ayuda del MI5; el historiador Nigel West lo localizó en Venezuela en 1984. Cuántas vidas salvó exactamente es una estimación, no una cifra documentada.",
+ "parts": [
+  {
+   "part_number": 1,
+   "hook_candidates": [
+    "Hitler y los ingleses le condecoraron. Por la misma mentira.",
+    "Tenía 27 espías a su cargo. Ninguno existía.",
+    "Si desembarcaste en Normandía, quizá le debes la vida a un granjero catalán.",
+    "Berlín esperaba su mensaje. Y él iba a mentir otra vez.",
+    "Fingió su propia muerte en 1949 y el MI5 le ayudó."
+   ],
+   "hook_title": "UN GRANJERO DE BARCELONA",
+   "blocks": [
+    {
+     "label": "GANCHO",
+     "speaker": "narrador",
+     "narration": "Hitler y los ingleses le condecoraron. Por la misma mentira.",
+     "location": "despacho",
+     "framing": "personaje",
+     "cast": [
+      "pujol"
+     ],
+     "gesture": "chest",
+     "emotion": "burlon",
+     "listener_emotion": "neutral",
+     "mood": "noche",
+     "event": null,
+     "prop": null,
+     "walk": false,
+     "action": "ninguna",
+     "held_prop": null,
+     "camera": "push_in",
+     "sfx": [
+      "hit"
+     ],
+     "on_screen": null,
+     "emphasis": "mentira",
+     "visual_direction": "Primer plano de Pujol sonriendo con picardía, con la mano en el pecho, en un despacho en penumbra."
+    },
+    {
+     "label": "DIÁLOGO",
+     "speaker": "pujol",
+     "narration": "Quiero espiar contra Hitler.",
+     "location": "despacho",
+     "framing": "personaje",
+     "cast": [
+      "pujol",
+      "ingles"
+     ],
+     "gesture": "fist",
+     "emotion": "decidido",
+     "listener_emotion": "desconfiado",
+     "mood": "dia",
+     "event": null,
+     "prop": null,
+     "walk": false,
+     "action": "ninguna",
+     "held_prop": null,
+     "camera": "push_in",
+     "sfx": [],
+     "on_screen": null,
+     "emphasis": null,
+     "visual_direction": "Pujol, con el puño cerrado, se ofrece al agente británico, que le mira con desconfianza."
+    },
+    {
+     "label": "RECHAZO",
+     "speaker": "ingles",
+     "narration": "No. Váyase a casa.",
+     "location": "despacho",
+     "framing": "general",
+     "cast": [
+      "ingles",
+      "pujol"
+     ],
+     "gesture": "idle",
+     "emotion": "burlon",
+     "listener_emotion": "avergonzado",
+     "mood": "dia",
+     "event": null,
+     "prop": null,
+     "walk": false,
+     "action": "correr",
+     "held_prop": null,
+     "camera": "static",
+     "sfx": [],
+     "on_screen": null,
+     "emphasis": null,
+     "visual_direction": "El inglés se cruza de brazos con desdén y Pujol baja la mirada."
+    },
+    {
+     "label": "FINAL",
+     "speaker": "narrador",
+     "narration": "En 1984 lo encontraron vivo en Venezuela.",
+     "location": "costa",
+     "framing": "general",
+     "cast": [
+      "pujol"
+     ],
+     "gesture": "explain",
+     "emotion": "contento",
+     "listener_emotion": "neutral",
+     "mood": "atardecer",
+     "event": null,
+     "prop": null,
+     "walk": true,
+     "action": "ninguna",
+     "held_prop": null,
+     "camera": "pull_back",
+     "sfx": [],
+     "on_screen": null,
+     "emphasis": null,
+     "visual_direction": "Pujol, ya mayor, pasea tranquilo por la costa al atardecer, vivo y sin que nadie lo sepa."
+    }
+   ],
+   "cliffhanger": "Cierre: el hombre que engañó a Hitler con espías inventados también se inventó su propia muerte y apareció vivo en Venezuela 35 años después.",
+   "caption": "Le dieron una medalla los nazis y otra los ingleses. Por lo mismo.\nJoan Pujol, alias Garbo, era un granjero de Barcelona sin ninguna formación de espía.\nCon una guía turística engañó a Hitler sobre el Día D.\n¿Héroe o mentiroso? Comenta 1 o 2",
+   "comment_question": "¿Héroe o mentiroso? Comenta 1 o 2",
+   "first_comment": "Dato extra: en sus informes inventados llegó a contar que los estibadores de Glasgow lo harían todo por un litro de vino. Los alemanes se lo creyeron. ¿Héroe o mentiroso? Comenta 1 o 2",
+   "hashtags": [
+    "historia",
+    "historiadeespaña",
+    "garbo",
+    "juanpujol",
+    "diad",
+    "espias"
+   ],
+   "youtube_title": "Garbo: el espía español que engañó a Hitler el Día D",
+   "youtube_description": "Joan Pujol, alias Garbo, un granjero de Barcelona que engañó a Hitler con 27 espías que no existían.\nEl agente doble español que la Alemania nazi y el Reino Unido condecoraron por la misma mentira.\nLos ingleses lo rechazaron, así que se ofreció a los nazis y desde Lisboa se inventó una red de espionaje entera. Su engaño cambió el Día D en Normandía. Y su última mentira fue la más increíble de todas.\nFuentes: Juan Pujol y Nigel West, «Operación Garbo»; Javier Juárez, «Juan Pujol, el espía que derrotó a Hitler»; archivos del MI5 (The National Archives, Reino Unido)."
+  }
+ ],
+ "book": {
+  "title": "Juan Pujol, el espía que derrotó a Hitler",
+  "author": "Javier Juárez",
+  "pitch": "La vida real del barcelonés que engañó a los nazis con espías que no existían."
+ }
+}

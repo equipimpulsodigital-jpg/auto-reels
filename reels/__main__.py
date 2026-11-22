@@ -444,6 +444,30 @@ def publish_episode(cfg: dict, state: dict, history: list[dict], video, series, 
     return True
 
 
+def qa_video(path: Path) -> str | None:
+    """Revisión antes de publicar: devuelve el problema (o None si el vídeo está bien)."""
+    import re
+    import subprocess
+    from .media import probe_duration
+    if not path or not Path(path).exists():
+        return "no se generó el vídeo"
+    dur = probe_duration(path)
+    if not 12 <= dur <= 80:
+        return f"duración anómala ({dur:.0f} s)"
+    vol = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-af", "volumedetect", "-vn", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    m = re.search(r"mean_volume: (-?[\d.]+) dB", vol)
+    if not m or float(m.group(1)) < -45:
+        return "sin sonido"
+    st = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf",
+                         "select='not(mod(n\\,90))',signalstats,metadata=print:key=lavfi.signalstats.YAVG",
+                         "-an", "-f", "null", "-"], capture_output=True, text=True).stderr
+    lum = [float(x) for x in re.findall(r"YAVG=([\d.]+)", st)]
+    if lum and max(lum) < 14:
+        return "imagen en negro"
+    return None
+
+
 def _series_path(cfg: dict, title: str) -> Path:
     return channel_data(cfg) / "series" / f"{zlib.crc32(title.encode()):08x}.json"
 
@@ -454,6 +478,23 @@ def _keep_series(cfg: dict, series) -> None:
     if not path.exists():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(series.model_dump_json(), encoding="utf-8")
+    _prune_series(cfg)
+
+
+def _prune_series(cfg: dict, keep_days: int = 60) -> None:
+    """Borra los guiones guardados de más de `keep_days` días, salvo los de los vídeos ganadores (reciclables)."""
+    folder = channel_data(cfg) / "series"
+    if not folder.exists():
+        return
+    history = _load(cfg, "history.json", [])
+    rated = [h for h in history if (h.get("stats") or {}).get("views") is not None]
+    avg = sum(h["stats"]["views"] for h in rated) / max(len(rated), 1)
+    cutoff = date.today() - timedelta(days=keep_days)
+    keep = {_series_path(cfg, h["series_title"]).name for h in history
+            if date.fromisoformat(h["date"]) >= cutoff or (h.get("stats") or {}).get("views", 0) >= avg * 1.3}
+    for f in folder.glob("*.json"):
+        if f.name not in keep:
+            f.unlink()
 
 
 def _recycle_candidate(cfg: dict, history: list[dict]) -> dict | None:
@@ -660,6 +701,13 @@ def main() -> int:
                 cand = _recycle_candidate(cfg, history)
                 recycled = bool(cand) and _queue_recycle(cfg, state, history, cand)
             video, series, part = make_episode(cfg, state, history, args, f"{slot:%Y%m%d_%H%M}")
+            problem = qa_video(video)
+            if problem:  # vídeo roto: se rehace una vez; si sigue mal, no se publica (la franja queda para la reserva)
+                print(f"Control de calidad: {problem}. Se rehace el vídeo.", file=sys.stderr)
+                video, series, part = make_episode(cfg, state, history, args, f"{slot:%Y%m%d_%H%M}")
+                problem = qa_video(video)
+                if problem:
+                    raise RuntimeError(f"el vídeo sigue mal tras rehacerlo ({problem}); no se publica")
             ok = publish_episode(cfg, state, history, video, series, part, slot)
             if ok:
                 state["since_recycle"] = 0 if recycled else state.get("since_recycle", 0) + 1

@@ -72,9 +72,14 @@ def bloom(c: skia.Canvas, surface: skia.Surface, W: int, H: int) -> None:
          0, 0, g, 0, -t * g,
          0, 0, 0, 1, 0]
     cf = skia.ImageFilters.ColorFilter(skia.ColorFilters.Matrix(m))
-    flt = skia.ImageFilters.Blur(36, 36, skia.TileMode.kClamp, cf)
+    # se calcula a un tercio de tamaño (9 veces menos trabajo; el brillo es borroso, no se nota) y se amplía
+    small = img.resize(W // 3, H // 3)
+    flt = skia.ImageFilters.Blur(12, 12, skia.TileMode.kClamp, cf)
     p = skia.Paint(ImageFilter=flt, BlendMode=skia.BlendMode.kScreen, Alphaf=min(1.0, amt * 3.2))
-    c.drawImage(img, 0, 0, skia.SamplingOptions(), p)
+    c.save()
+    c.scale(3, 3)
+    c.drawImage(small, 0, 0, skia.SamplingOptions(skia.FilterMode.kLinear), p)
+    c.restore()
 
 
 def texture(c: skia.Canvas, W: int, H: int, frame: int) -> None:

@@ -181,7 +181,7 @@ def generate_series(cfg: dict, fmt: str, history: list[dict], topic: str | None 
     if max_parts is None and _max_parts(cfg) > 1 and any(h.get("parts", 1) > 1 for h in history[-2:]):
         max_parts = 1  # las historias de 2 partes, solo de vez en cuando (nunca dos seguidas ni casi)
     fmt_name = cfg["channel"]["formats"][fmt]
-    done = [h["topic"] for h in history[-80:]]
+    done = list(dict.fromkeys(h["topic"] for h in history if h.get("topic")))[-400:]  # todo el historial (sin repetidos)
     user = (
         f"Fecha: {date.today().isoformat()}\n"
         f"Formato: {fmt_name} (en el campo `format` pon exactamente: {fmt})\n"
