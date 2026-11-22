@@ -646,7 +646,10 @@ def main() -> int:
     if args.status:
         from .publish import report
         cfg = load_config(args.channel)
-        recent = [p for h in _load(cfg, "history.json", []) for p in h.get("published_parts", [])][-8:]
+        now = datetime.now(timezone.utc)
+        recent = sorted((p for h in _load(cfg, "history.json", []) for p in h.get("published_parts", [])
+                         if p.get("slot") and now - timedelta(hours=36) <= datetime.fromisoformat(p["slot"]) <= now),
+                        key=lambda p: p["slot"])  # lo ya publicado en las últimas 36 h
         for p in recent:
             print(f"Parte {p['part']} · {p.get('slot') or p.get('date')}")
             report([p.get("job_id") or p.get("request_id")] if (p.get("job_id") or p.get("request_id")) else [])
