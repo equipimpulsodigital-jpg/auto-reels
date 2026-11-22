@@ -25,7 +25,7 @@
             "reach": 426
           },
           "youtube": {
-            "views": 1,
+            "views": 0,
             "likes": 0,
             "comments": 0,
             "shares": 0
@@ -41,12 +41,12 @@
       "pitch": "El clásico de siempre sobre caer bien, y sigue funcionando sorprendentemente bien hoy."
     },
     "stats": {
-      "views": 531,
+      "views": 530,
       "likes": 12,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1,
-      "updated": "2026-11-21"
+      "youtube_views": 0,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -66,17 +66,17 @@
         "at": "2026-11-19T15:14:37+00:00",
         "stats": {
           "instagram": {
-            "views": 505,
+            "views": 507,
             "likes": 20,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 10.7,
+            "avg_watch_s": 10.8,
             "saves": 2,
-            "reach": 432
+            "reach": 433
           },
           "youtube": {
-            "views": 1173,
-            "likes": 27,
+            "views": 1375,
+            "likes": 31,
             "comments": 0,
             "shares": 0
           }
@@ -92,12 +92,12 @@
       "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
     },
     "stats": {
-      "views": 1678,
-      "likes": 47,
+      "views": 1882,
+      "likes": 51,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1173,
-      "updated": "2026-11-21"
+      "youtube_views": 1375,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -126,7 +126,7 @@
             "reach": 182
           },
           "youtube": {
-            "views": 1302,
+            "views": 1263,
             "likes": 19,
             "comments": 0,
             "shares": 0
@@ -141,12 +141,12 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1522,
+      "views": 1483,
       "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1302,
-      "updated": "2026-11-21"
+      "youtube_views": 1263,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -172,7 +172,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1187,
+            "views": 1163,
             "likes": 12,
             "comments": 0,
             "shares": 0
@@ -187,12 +187,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1187,
+      "views": 1163,
       "likes": 12,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1187,
-      "updated": "2026-11-21"
+      "youtube_views": 1163,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -212,16 +212,16 @@
         "at": "2026-11-19T21:11:05+00:00",
         "stats": {
           "instagram": {
-            "views": 163,
+            "views": 165,
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 13.3,
+            "avg_watch_s": 13.2,
             "saves": 0,
-            "reach": 135
+            "reach": 137
           },
           "youtube": {
-            "views": 1178,
+            "views": 1142,
             "likes": 11,
             "comments": 0,
             "shares": 0
@@ -238,12 +238,12 @@
       "isbn": "9788411193016"
     },
     "stats": {
-      "views": 1341,
+      "views": 1307,
       "likes": 14,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1178,
-      "updated": "2026-11-21"
+      "youtube_views": 1142,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -263,17 +263,17 @@
         "at": "2026-11-20T11:07:46+00:00",
         "stats": {
           "instagram": {
-            "views": 1053,
-            "likes": 33,
+            "views": 1261,
+            "likes": 41,
             "comments": 0,
-            "shares": 4,
-            "avg_watch_s": 13.9,
-            "saves": 1,
-            "reach": 890
+            "shares": 6,
+            "avg_watch_s": 14.9,
+            "saves": 5,
+            "reach": 1064
           },
           "youtube": {
-            "views": 12,
-            "likes": 0,
+            "views": 24,
+            "likes": 2,
             "comments": 0,
             "shares": 0
           }
@@ -288,12 +288,12 @@
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
     },
     "stats": {
-      "views": 1065,
-      "likes": 33,
+      "views": 1285,
+      "likes": 43,
       "comments": 0,
-      "shares": 4,
-      "youtube_views": 12,
-      "updated": "2026-11-21"
+      "shares": 6,
+      "youtube_views": 24,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -313,17 +313,17 @@
         "at": "2026-11-20T11:15:08+00:00",
         "stats": {
           "instagram": {
-            "views": 1375,
+            "views": 1388,
             "likes": 22,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 16.2,
             "saves": 1,
-            "reach": 1086
+            "reach": 1098
           },
           "youtube": {
-            "views": 2,
-            "likes": 0,
+            "views": 4,
+            "likes": 2,
             "comments": 0,
             "shares": 0
           }
@@ -332,12 +332,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1377,
-      "likes": 22,
+      "views": 1392,
+      "likes": 24,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2,
-      "updated": "2026-11-21"
+      "youtube_views": 4,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -354,7 +354,24 @@
         "request_id": "490e6ab4df294b60a078ca4e220aa86a",
         "job_id": "f60ab4f79791448f9f87698d587d2455",
         "failed": [],
-        "at": "2026-11-20T11:23:05+00:00"
+        "at": "2026-11-20T11:23:05+00:00",
+        "stats": {
+          "instagram": {
+            "views": 136,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 19.6,
+            "saves": 0,
+            "reach": 112
+          },
+          "youtube": {
+            "views": 994,
+            "likes": 20,
+            "comments": 0,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -363,6 +380,14 @@
       "pitch": "El método de Yale para reconocer, nombrar y gestionar lo que sientes cada día.",
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
+    },
+    "stats": {
+      "views": 1130,
+      "likes": 21,
+      "comments": 0,
+      "shares": 0,
+      "youtube_views": 994,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -379,7 +404,24 @@
         "request_id": "6f78c0ce9fe248fbbdd98e3f2f52c026",
         "job_id": "0415ff9e2cf2425c999d5a64fdc3f2b8",
         "failed": [],
-        "at": "2026-11-21T08:58:25+00:00"
+        "at": "2026-11-21T08:58:25+00:00",
+        "stats": {
+          "instagram": {
+            "views": 185,
+            "likes": 2,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 16.9,
+            "saves": 1,
+            "reach": 131
+          },
+          "youtube": {
+            "views": 1162,
+            "likes": 21,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -387,6 +429,14 @@
       "author": "Robert B. Cialdini",
       "pitch": "El clásico que explica por qué decimos que sí sin pensar, con este experimento entre muchos.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1347,
+      "likes": 23,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1162,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -403,7 +453,24 @@
         "request_id": "29c68db499de48e1948c764ec456e4c9",
         "job_id": "971268377cca42c2b87aa1dc839be61a",
         "failed": [],
-        "at": "2026-11-21T09:05:46+00:00"
+        "at": "2026-11-21T09:05:46+00:00",
+        "stats": {
+          "instagram": {
+            "views": 156,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 9.1,
+            "saves": 0,
+            "reach": 132
+          },
+          "youtube": {
+            "views": 998,
+            "likes": 9,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -411,6 +478,14 @@
       "author": "Daniel Kahneman",
       "pitch": "El Nobel que explica por qué tu intuición te engaña, también al calcular cuánto tardarás.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1154,
+      "likes": 10,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 998,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -427,7 +502,24 @@
         "request_id": "df69b89f85cb48a29e271d2bba57f276",
         "job_id": "862e83733a414a9aac67707c103b1bdd",
         "failed": [],
-        "at": "2026-11-21T09:11:46+00:00"
+        "at": "2026-11-21T09:11:46+00:00",
+        "stats": {
+          "instagram": {
+            "views": 154,
+            "likes": 4,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 11.2,
+            "saves": 0,
+            "reach": 132
+          },
+          "youtube": {
+            "views": 0,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -435,6 +527,14 @@
       "author": "Oliver Sacks",
       "pitch": "Historias reales de cerebros atrapados, curados y obsesionados por la música.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 154,
+      "likes": 4,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 0,
+      "updated": "2026-11-22"
     }
   },
   {
