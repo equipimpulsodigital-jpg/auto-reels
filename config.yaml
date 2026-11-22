@@ -50,7 +50,8 @@ publish:
   slots: ["10:00", "12:00", "16:00", "18:00", "21:00"]   # las franjas que mejor funcionaron (datos del 18-21/11)
   min_lead_minutes: 20        # no programa una franja que empiece antes de este margen
   recycle: {every: 5, min_age_days: 14, min_ratio: 1.3, cooldown_days: 21}   # 1 de cada 5 franjas: un vídeo ganador con gancho nuevo
-  min_gap_minutes: 100        # ni una franja a menos de este tiempo de otra ya programada
+  jitter_minutes: [-8, 12]    # cada vídeo sale unos minutos antes o después de su hora (distinto cada día)
+  min_gap_minutes: 75         # ni una franja a menos de este tiempo de otra ya programada
   label_as_ai: false          # etiqueta «hecho con IA» de cada red (no hace falta para animación)
   youtube_privacy: public     # public | unlisted | private
   youtube_thumbnail: true     # portada propia también en YouTube (los 5 canales están verificados)

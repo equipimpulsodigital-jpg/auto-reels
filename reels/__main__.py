@@ -44,6 +44,11 @@ def pending_slots(cfg: dict, state: dict, now: datetime | None = None, horizon: 
         for hhmm in cfg["channel"].get("slots") or pcfg["slots"]:
             h, m = map(int, hhmm.split(":"))
             slot = datetime.combine(day, time(h, m), tz)
+            # unos minutos al azar (siempre los mismos para ese día y franja): sin patrón de robot ni hora en punto
+            jit = pcfg.get("jitter_minutes", [-8, 12])
+            if jit:
+                span = int(jit[1]) - int(jit[0]) + 1
+                slot += timedelta(minutes=int(jit[0]) + zlib.crc32(f"{cfg['channel']['id']}{day}{hhmm}".encode()) % span)
             if start <= slot <= now + timedelta(hours=horizon) and slot.isoformat() not in done \
                     and all(abs(slot - t) >= gap for t in taken):  # al cambiar las horas, no amontona vídeos
                 out.append(slot)
