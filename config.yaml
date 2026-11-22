@@ -193,9 +193,9 @@ channels:
     accent_color: "#A08CFF"
     max_parts: 2
     compilation_titles:
-      - "{n} cosas que hace tu cerebro y no sabías por qué"
-      - "Psicología cotidiana: {n} explicaciones que te van a cambiar el día"
-      - "{n} razones por las que haces lo que haces"
+      - "{n} trucos de psicología oscura que usan contigo"
+      - "Psicología oscura: {n} trucos para calar a cualquiera"
+      - "{n} secretos de la mente que nadie te cuenta"
     compilation_thumb: "Tu cerebro te engaña"
     compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
     hashtag: "#lacabezapordentro"           # hashtag propio de la marca, en todos sus vídeos
