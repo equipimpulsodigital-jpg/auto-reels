@@ -66,16 +66,16 @@
         "at": "2026-11-19T15:14:37+00:00",
         "stats": {
           "instagram": {
-            "views": 507,
+            "views": 508,
             "likes": 20,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 10.8,
+            "avg_watch_s": 10.7,
             "saves": 2,
-            "reach": 433
+            "reach": 434
           },
           "youtube": {
-            "views": 1375,
+            "views": 1377,
             "likes": 31,
             "comments": 0,
             "shares": 0
@@ -92,11 +92,11 @@
       "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
     },
     "stats": {
-      "views": 1882,
+      "views": 1885,
       "likes": 51,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1375,
+      "youtube_views": 1377,
       "updated": "2026-11-22"
     }
   },
@@ -126,8 +126,8 @@
             "reach": 182
           },
           "youtube": {
-            "views": 1264,
-            "likes": 19,
+            "views": 1266,
+            "likes": 20,
             "comments": 0,
             "shares": 0
           }
@@ -141,11 +141,11 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1484,
-      "likes": 22,
+      "views": 1486,
+      "likes": 23,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1264,
+      "youtube_views": 1266,
       "updated": "2026-11-22"
     }
   },
@@ -172,7 +172,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1163,
+            "views": 1175,
             "likes": 12,
             "comments": 0,
             "shares": 0
@@ -187,11 +187,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1163,
+      "views": 1175,
       "likes": 12,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1163,
+      "youtube_views": 1175,
       "updated": "2026-11-22"
     }
   },
@@ -221,8 +221,8 @@
             "reach": 137
           },
           "youtube": {
-            "views": 1142,
-            "likes": 11,
+            "views": 1152,
+            "likes": 12,
             "comments": 0,
             "shares": 0
           }
@@ -238,11 +238,11 @@
       "isbn": "9788411193016"
     },
     "stats": {
-      "views": 1307,
-      "likes": 14,
+      "views": 1317,
+      "likes": 15,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1142,
+      "youtube_views": 1152,
       "updated": "2026-11-22"
     }
   },
@@ -263,16 +263,16 @@
         "at": "2026-11-20T11:07:46+00:00",
         "stats": {
           "instagram": {
-            "views": 1261,
+            "views": 1262,
             "likes": 41,
             "comments": 0,
             "shares": 6,
             "avg_watch_s": 14.9,
             "saves": 5,
-            "reach": 1064
+            "reach": 1065
           },
           "youtube": {
-            "views": 24,
+            "views": 25,
             "likes": 2,
             "comments": 0,
             "shares": 0
@@ -288,11 +288,11 @@
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
     },
     "stats": {
-      "views": 1285,
+      "views": 1287,
       "likes": 43,
       "comments": 0,
       "shares": 6,
-      "youtube_views": 24,
+      "youtube_views": 25,
       "updated": "2026-11-22"
     }
   },
@@ -313,13 +313,13 @@
         "at": "2026-11-20T11:15:08+00:00",
         "stats": {
           "instagram": {
-            "views": 1388,
+            "views": 1389,
             "likes": 22,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 16.2,
             "saves": 1,
-            "reach": 1098
+            "reach": 1099
           },
           "youtube": {
             "views": 4,
@@ -332,7 +332,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 1392,
+      "views": 1393,
       "likes": 24,
       "comments": 0,
       "shares": 0,
@@ -366,8 +366,8 @@
             "reach": 112
           },
           "youtube": {
-            "views": 994,
-            "likes": 20,
+            "views": 1073,
+            "likes": 21,
             "comments": 0,
             "shares": 0
           }
@@ -382,11 +382,11 @@
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
     },
     "stats": {
-      "views": 1130,
-      "likes": 21,
+      "views": 1209,
+      "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 994,
+      "youtube_views": 1073,
       "updated": "2026-11-22"
     }
   },
@@ -407,16 +407,16 @@
         "at": "2026-11-21T08:58:25+00:00",
         "stats": {
           "instagram": {
-            "views": 185,
+            "views": 188,
             "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 17.0,
+            "avg_watch_s": 16.9,
             "saves": 1,
-            "reach": 132
+            "reach": 134
           },
           "youtube": {
-            "views": 1162,
+            "views": 1177,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -431,11 +431,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1347,
+      "views": 1365,
       "likes": 23,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1162,
+      "youtube_views": 1177,
       "updated": "2026-11-22"
     }
   },
@@ -465,7 +465,7 @@
             "reach": 132
           },
           "youtube": {
-            "views": 993,
+            "views": 1001,
             "likes": 9,
             "comments": 1,
             "shares": 0
@@ -480,11 +480,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1149,
+      "views": 1157,
       "likes": 10,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 993,
+      "youtube_views": 1001,
       "updated": "2026-11-22"
     }
   },
@@ -514,7 +514,7 @@
             "reach": 133
           },
           "youtube": {
-            "views": 1,
+            "views": 2,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -529,11 +529,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 155,
+      "views": 156,
       "likes": 5,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1,
+      "youtube_views": 2,
       "updated": "2026-11-22"
     }
   },
@@ -551,7 +551,24 @@
         "request_id": "793c3bd3cf3d4956a186149b371b51d0",
         "job_id": "581de051c26145f4926bd4c02c0f84f8",
         "failed": [],
-        "at": "2026-11-21T09:18:00+00:00"
+        "at": "2026-11-21T09:18:00+00:00",
+        "stats": {
+          "instagram": {
+            "views": 121,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 7.2,
+            "saves": 0,
+            "reach": 107
+          },
+          "youtube": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -559,6 +576,14 @@
       "author": "Héctor Ruiz Martín",
       "pitch": "Lo que la ciencia sabe de verdad sobre estudiar y recordar, explicado con claridad.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 122,
+      "likes": 2,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -652,6 +677,134 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/13537621-M.jpg",
       "isbn": "9788411001298"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "experimento",
+    "topic": "La incertidumbre aumenta la atracción: preferimos a quien no sabemos si nos quiere porque pensamos más en él (Whitchurch, Wilson y Gilbert, 2011)",
+    "series_title": "El experimento del chico que no sabías si te quería",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T21:00:00+01:00",
+        "request_id": "293d4d553149403abd64f30cadaf5977",
+        "job_id": "89cd9dbec2924a55a88c100df5d4209e",
+        "failed": [],
+        "at": "2026-11-22T06:54:29+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "trampa_mental",
+    "topic": "Efecto ancla en compras de Black Friday: el precio tachado fija el valor; experimento de la ruleta trucada (Tversky y Kahneman, 1974) y truco de tapar el precio de referencia",
+    "series_title": "El precio tachado que piensa por ti: el efecto ancla",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T10:00:00+01:00",
+        "request_id": "4b8869d54b4b471684aa1243109756d1",
+        "job_id": "98b051648a8641b0a7d36aa74fef1705",
+        "failed": [],
+        "at": "2026-11-22T07:07:19+00:00"
+      }
+    ],
+    "book": {
+      "title": "Pensar rápido, pensar despacio",
+      "author": "Daniel Kahneman",
+      "pitch": "El Nobel que destapó los atajos con los que tu cerebro decide sin preguntarte."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "por_que",
+    "topic": "Schadenfreude: el placer secreto por el fracaso de quien envidiamos y su base cerebral (Takahashi et al., 2009)",
+    "series_title": "Por qué te alegra que le vaya mal: la Schadenfreude",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T12:00:00+01:00",
+        "request_id": "1389d889df094f1b8b72b98715dc6751",
+        "job_id": "71e2fb4c268143749cbe50532067131b",
+        "failed": [],
+        "at": "2026-11-22T07:18:41+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "como_salir",
+    "topic": "Subestimamos cuánto agradece un viejo amigo un mensaje inesperado, y más cuanto más inesperado (Liu et al., 2022/2023); herramienta: mandar hoy una línea.",
+    "series_title": "El mensaje que no envías por vergüenza",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T16:00:00+01:00",
+        "request_id": "2980258e621e488b89ca203d95b53927",
+        "job_id": "d3c59e1dd37342c6b29b981da8050932",
+        "failed": [],
+        "at": "2026-11-22T07:29:53+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "experimento",
+    "topic": "Ceguera a la elección: tras cambiar a escondidas la cara elegida, la mayoría no lo nota y justifica una elección que no hizo (Johansson y Hall, 2005)",
+    "series_title": "Te cambian la foto y la defiendes: la ceguera a la elección",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T18:00:00+01:00",
+        "request_id": "70cd57a8d31c4126bc5676ec8aa8294b",
+        "job_id": "4050bc73167b42e1ad5f470737ffa1bd",
+        "failed": [],
+        "at": "2026-11-22T07:40:46+00:00"
+      }
+    ],
+    "book": {
+      "title": "Pensar rápido, pensar despacio",
+      "author": "Daniel Kahneman",
+      "pitch": "El Nobel que destapa cuántas decisiones toma tu mente antes de que tú te enteres.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "trampa_mental",
+    "topic": "Maldición del conocimiento: experimento de los tamborileros de Elizabeth Newton (Stanford, 1990), creían que acertarían el 50 % y se acertaron 3 de 120; aplicado a mensajes de WhatsApp malinterpretados",
+    "series_title": "Tú oyes la canción, ellos solo golpes: la maldición del conocimiento",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T21:00:00+01:00",
+        "request_id": "92fe50c163c74b61b8b163c1b5fe33db",
+        "job_id": "8431c12826d74d5791e5d2f2671675fb",
+        "failed": [],
+        "at": "2026-11-22T07:51:36+00:00"
+      }
+    ],
+    "book": {
+      "title": "Ideas que pegan",
+      "author": "Chip Heath y Dan Heath",
+      "pitch": "Por qué unas ideas se entienden y recuerdan y otras se pierden, explicado con historias.",
+      "looked_up": true
     }
   }
 ]
