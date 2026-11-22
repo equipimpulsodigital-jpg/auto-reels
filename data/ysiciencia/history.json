@@ -25,7 +25,7 @@
             "reach": 120
           },
           "youtube": {
-            "views": 1211,
+            "views": 1214,
             "likes": 19,
             "comments": 0,
             "shares": 0
@@ -60,11 +60,11 @@
       }
     ],
     "stats": {
-      "views": 2677,
+      "views": 2680,
       "likes": 32,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2419,
+      "youtube_views": 2422,
       "updated": "2026-11-22"
     }
   },
@@ -117,7 +117,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1147,
+            "views": 1148,
             "likes": 19,
             "comments": 0,
             "shares": 0
@@ -140,11 +140,11 @@
       "pitch": "La apasionante historia de cómo aprendimos a saber dónde estamos en mitad del mar."
     },
     "stats": {
-      "views": 1269,
+      "views": 1270,
       "likes": 21,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1149,
+      "youtube_views": 1150,
       "updated": "2026-11-22"
     }
   },
@@ -174,7 +174,7 @@
             "reach": 105
           },
           "youtube": {
-            "views": 1271,
+            "views": 1274,
             "likes": 15,
             "comments": 0,
             "shares": 0
@@ -222,11 +222,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 2977,
+      "views": 2980,
       "likes": 43,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1277,
+      "youtube_views": 1280,
       "updated": "2026-11-22"
     }
   },
@@ -247,16 +247,16 @@
         "at": "2026-11-20T11:07:38+00:00",
         "stats": {
           "instagram": {
-            "views": 1509,
+            "views": 1512,
             "likes": 36,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.6,
+            "avg_watch_s": 14.5,
             "saves": 0,
-            "reach": 1226
+            "reach": 1228
           },
           "youtube": {
-            "views": 10,
+            "views": 13,
             "likes": 1,
             "comments": 0,
             "shares": 0
@@ -288,8 +288,8 @@
             "reach": 303
           },
           "youtube": {
-            "views": 1337,
-            "likes": 43,
+            "views": 1368,
+            "likes": 42,
             "comments": 0,
             "shares": 0
           },
@@ -304,11 +304,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3228,
-      "likes": 85,
+      "views": 3265,
+      "likes": 84,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1347,
+      "youtube_views": 1381,
       "updated": "2026-11-22"
     }
   },
@@ -329,17 +329,17 @@
         "at": "2026-11-21T08:56:26+00:00",
         "stats": {
           "instagram": {
-            "views": 659,
-            "likes": 14,
+            "views": 1058,
+            "likes": 26,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 15.0,
+            "avg_watch_s": 14.8,
             "saves": 0,
-            "reach": 538
+            "reach": 832
           },
           "youtube": {
-            "views": 973,
-            "likes": 15,
+            "views": 1045,
+            "likes": 14,
             "comments": 1,
             "shares": 0
           }
@@ -355,11 +355,11 @@
       "isbn": "9788418967832"
     },
     "stats": {
-      "views": 1632,
-      "likes": 29,
+      "views": 2103,
+      "likes": 40,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 973,
+      "youtube_views": 1045,
       "updated": "2026-11-22"
     }
   },
@@ -389,7 +389,7 @@
             "reach": 147
           },
           "youtube": {
-            "views": 1214,
+            "views": 1216,
             "likes": 22,
             "comments": 1,
             "shares": 0
@@ -404,11 +404,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1376,
+      "views": 1378,
       "likes": 22,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1214,
+      "youtube_views": 1216,
       "updated": "2026-11-22"
     }
   },
@@ -429,13 +429,13 @@
         "at": "2026-11-21T09:10:42+00:00",
         "stats": {
           "instagram": {
-            "views": 196,
+            "views": 201,
             "likes": 3,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 17.2,
+            "avg_watch_s": 16.9,
             "saves": 0,
-            "reach": 150
+            "reach": 155
           },
           "youtube": {
             "views": 0,
@@ -453,7 +453,7 @@
       "looked_up": true
     },
     "stats": {
-      "views": 196,
+      "views": 201,
       "likes": 3,
       "comments": 2,
       "shares": 0,
@@ -475,7 +475,24 @@
         "request_id": "ada6b514187f4c738ef800b86845dc67",
         "job_id": "3b93ca59d7114f55b4ce4b25f9a077b1",
         "failed": [],
-        "at": "2026-11-21T09:18:32+00:00"
+        "at": "2026-11-21T09:18:32+00:00",
+        "stats": {
+          "instagram": {
+            "views": 196,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 13.4,
+            "saves": 0,
+            "reach": 158
+          },
+          "youtube": {
+            "views": 8,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -485,6 +502,14 @@
       "looked_up": true,
       "isbn": "9788417636135",
       "cover": "https://covers.openlibrary.org/b/id/11949957-M.jpg"
+    },
+    "stats": {
+      "views": 204,
+      "likes": 1,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 8,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -567,5 +592,145 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "y_si_humanidad",
+    "topic": "Qué pasaría si desde hoy nadie en la Tierra pudiera mentir: el regalo, el jefe, el ex, los currículums y el estudio de Notre Dame según el cual dejar de mentir mejora la salud.",
+    "series_title": "¿Y si nadie pudiera mentir?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T21:00:00+01:00",
+        "request_id": "c42e7665f66c4b298b0ee9e6cb3be1fe",
+        "job_id": "4d42ee73647a47bfa0c68e75a5fb0fb4",
+        "failed": [],
+        "at": "2026-11-22T06:58:33+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "y_si_tu",
+    "topic": "Qué te pasaría si mañana dejaras de sentir miedo: la amígdala apagada, la confianza ciega, la paciente S.M. (enfermedad de Urbach-Wiethe) y el CO2, lo único que la aterra.",
+    "series_title": "¿Y si dejaras de sentir miedo?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T10:00:00+01:00",
+        "request_id": "1ec0c60472b64ed6aaa3111f87b8efd9",
+        "job_id": "82986451b006495d8c5c7c731f8d59d3",
+        "failed": [],
+        "at": "2026-11-22T07:10:20+00:00"
+      }
+    ],
+    "book": {
+      "title": "El cerebro emocional",
+      "author": "Joseph LeDoux",
+      "pitch": "El neurocientífico que descubrió cómo la amígdala fabrica el miedo te lo explica desde dentro.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/13662239-M.jpg"
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "y_si_planeta",
+    "topic": "Qué pasaría si la Tierra dejara de girar de golpe: tú sigues a 1.300 km/h en Madrid, vientos supersónicos, océanos desbocados, el mar que huye a los polos y un solo amanecer al año.",
+    "series_title": "¿Y si la Tierra dejara de girar?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T12:00:00+01:00",
+        "request_id": "877d014c273e44518c3b889c709ad64a",
+        "job_id": "dc87cb0d4ca749b5b490fdb125e4784d",
+        "failed": [],
+        "at": "2026-11-22T07:21:33+00:00"
+      }
+    ],
+    "book": {
+      "title": "¿Qué pasaría si...? Respuestas científicas a preguntas hipotéticas absurdas",
+      "author": "Randall Munroe",
+      "pitch": "Un exingeniero de la NASA responde con física real a las preguntas más locas.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "cuenta_atras",
+    "topic": "Qué te pasaría hora a hora si dejaras de beber agua: boca de lija, cerebro que encoge, sangre espesa, riñones que se apagan al día 3 y el récord de 18 días de Andreas Mihavecz, olvidado en un calabozo austriaco en 1979.",
+    "series_title": "¿Y si dejaras de beber agua?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T16:00:00+01:00",
+        "request_id": "b6862c83d37b4fb9871a3e840f8872a3",
+        "job_id": "f59f6eb2eb674e0285c8d3e9666b2ef5",
+        "failed": [],
+        "at": "2026-11-22T07:34:03+00:00"
+      }
+    ],
+    "book": {
+      "title": "El cuerpo humano. Guía para ocupantes",
+      "author": "Bill Bryson",
+      "pitch": "Un viaje divertidísimo por dentro de ti que te hará mirar tu cuerpo con otros ojos.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "y_si_humanidad",
+    "topic": "Qué pasaría si de repente nadie envejeciera: 100.000 muertes diarias que no ocurren, 40 millones más al año, pensiones eternas imposibles, parejas para mil años y el giro de que morirías de accidente hacia los mil años y vivirías con más miedo que nunca.",
+    "series_title": "¿Y si nadie volviera a envejecer?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T18:00:00+01:00",
+        "request_id": "45cabe0c27bc48dfb4dde9e6b2560660",
+        "job_id": "617bc2cae40a48f884ff8f68ce3a1831",
+        "failed": [],
+        "at": "2026-11-22T07:48:06+00:00"
+      }
+    ],
+    "book": {
+      "title": "La muerte de la muerte",
+      "author": "José Luis Cordeiro y David Wood",
+      "pitch": "Dos futurólogos defienden que vencer al envejecimiento está más cerca de lo que crees.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "y_si_tu",
+    "topic": "Qué te pasaría si tu cerebro solo guardara 30 segundos: el diario tachado, el piano que las manos recuerdan y Clive Wearing, que olvidó casi todo menos a su mujer.",
+    "series_title": "¿Y si tu memoria durara solo 30 segundos?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-23",
+        "slot": "2026-11-23T21:00:00+01:00",
+        "request_id": "f3c04d41a7d34139b85929bde0006ca2",
+        "job_id": "8054d3ba672a44e7a4452875a6c6395c",
+        "failed": [],
+        "at": "2026-11-22T08:00:51+00:00"
+      }
+    ],
+    "book": {
+      "title": "Musicofilia",
+      "author": "Oliver Sacks",
+      "pitch": "Historias reales de cerebros extraordinarios, incluido el hombre que lo olvidaba todo menos la música.",
+      "looked_up": true
+    }
   }
 ]
