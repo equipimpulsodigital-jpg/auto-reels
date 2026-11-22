@@ -1,0 +1,66 @@
+name: Avisos y resumen
+
+# Comprueba el sistema dos veces al día y, SOLO si hay algo que hacer, abre una incidencia en GitHub (llega por
+# correo). Cuando se arregla, la cierra sola. Los lunes manda el resumen semanal de visualizaciones y seguidores.
+on:
+  schedule:
+    - cron: "23 7 * * *"     # 8:23 España (antes del primer vídeo del día)
+    - cron: "23 16 * * *"    # 17:23 España
+    - cron: "37 7 * * 1"     # lunes 8:37: resumen semanal
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check = comprobar ahora · weekly = resumen semanal ahora"
+        type: choice
+        options: [check, weekly]
+        default: check
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+      OWNER: ${{ github.repository_owner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests pyyaml
+
+      - name: Comprobación del sistema
+        if: github.event.schedule != '37 7 * * 1' && inputs.mode != 'weekly'
+        run: |
+          python -m reels.health check
+          n=$(cat problems.txt)
+          gh label create aviso --color D93F0B --description "Algo que revisar en auto-reels" 2>/dev/null || true
+          open=$(gh issue list --label aviso --state open --json number -q '.[0].number' || true)
+          if [ "$n" -gt 0 ]; then
+            body="$(cat report.md)
+
+          @$OWNER"
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body "$body"
+            else
+              gh issue create --title "⚠️ auto-reels: hay algo que revisar" --label aviso --body "$body"
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --comment "✅ Todo vuelve a estar en orden."
+          fi
+
+      - name: Resumen semanal
+        if: github.event.schedule == '37 7 * * 1' || inputs.mode == 'weekly'
+        run: |
+          python -m reels.health weekly
+          gh label create resumen --color 0E8A16 --description "Resumen semanal" 2>/dev/null || true
+          num=$(gh issue create --title "📊 Resumen semanal de auto-reels ($(date +%d/%m))" --label resumen \
+                --body "$(cat report.md)
+
+          @$OWNER" | grep -o '[0-9]*$')
+          gh issue close "$num"
