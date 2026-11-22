@@ -5,18 +5,24 @@
       "instagram": 0,
       "youtube": 16,
       "tiktok": 0
+    },
+    {
+      "date": "2026-11-22",
+      "instagram": 1,
+      "youtube": 21,
+      "tiktok": 0
     }
   ],
   "latest": {
     "instagram": {
-      "followers": 0,
-      "reach": 0,
-      "views": 0,
-      "impressions": 0,
-      "profileViews": 0
+      "followers": 1,
+      "reach": 5726,
+      "views": 6959,
+      "impressions": 6959,
+      "profileViews": 227
     },
     "youtube": {
-      "followers": 16,
+      "followers": 21,
       "reach": 0,
       "impressions": 0,
       "profileViews": 0
@@ -24,7 +30,7 @@
     "tiktok": {
       "followers": 0,
       "reach": 0,
-      "impressions": 0,
+      "impressions": 891,
       "profileViews": 0
     }
   }
