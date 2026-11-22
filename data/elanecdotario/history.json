@@ -602,7 +602,10 @@
         "request_id": "09d0e278d3074f95aefab37b20e598a5",
         "job_id": "26aba2c27fac4b0e800500764fc77753",
         "failed": [],
-        "at": "2026-11-22T01:22:18+00:00"
+        "at": "2026-11-22T01:22:18+00:00",
+        "retried": [
+          "instagram"
+        ]
       }
     ],
     "book": null
