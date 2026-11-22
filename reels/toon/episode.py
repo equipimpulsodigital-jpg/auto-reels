@@ -153,8 +153,8 @@ def render_typo_episode(part, durations: list[float], workdir: Path, cfg: dict,
         sfx = [("whoosh", 0.0)] + [("hit", p - 0.03) for p in punches]
         if i == 0 or i == reveal:
             sfx.append(("hit", 0.0))
-        shots.append(Shot(location="despacho", duration=dur, framing="objeto", mood="noche", sfx=sfx,
-                          ambience="viento", punches=punches))
+        shots.append(Shot(location="casa", duration=dur, framing="objeto", mood="noche", sfx=sfx,
+                          ambience="", punches=punches))  # sin ambiente: solo voz, música y golpes
         print(f"  plano {i + 1}/{len(part.blocks)} · tipografía · {b.on_screen or b.emphasis or ''}", flush=True)
         files.append(render_typo_shot(b, dur, workdir / f"shot_{i}.mp4", W, H, fps, accent, seed=i * 13 + 5,
                                       punches=punches))

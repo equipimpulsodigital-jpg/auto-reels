@@ -202,21 +202,22 @@ def pasos(dur: float, every: float = 0.48) -> np.ndarray:
 
 
 ONESHOTS = {"boom": (boom, 0.9), "splash": (splash, 0.55), "whoosh": (whoosh, 0.35), "hit": (hit, 0.6)}
-AMBIENCES = {"mar": (waves, 0.16), "viento": (wind, 0.14), "avion": (drone, 0.22), "cafe": (cafe, 0.12),
-             "trafico": (trafico, 0.12), "noche": (noche, 0.12), "pajaros": (pajaros, 0.12), "reloj": (reloj, 0.1),
-             "hospital": (hospital, 0.1), "oficina": (oficina, 0.1), "lluvia": (lluvia, 0.14), "fuego": (fuego, 0.14),
-             "sala": (sala, 0.08)}
+AMBIENCES = {"mar": (waves, 0.06), "viento": (wind, 0.045), "avion": (drone, 0.09), "cafe": (cafe, 0.06),
+             "trafico": (trafico, 0.035), "noche": (noche, 0.05), "pajaros": (pajaros, 0.05), "reloj": (reloj, 0.05),
+             "hospital": (hospital, 0.05), "oficina": (oficina, 0.045), "lluvia": (lluvia, 0.07), "fuego": (fuego, 0.07),
+             "sala": (sala, 0.0)}
 
 # ambiente de cada escenario (de día / de noche) cuando el escenario no trae uno propio
 LOC_AMBIENCE = {
     "cafeteria": ("cafe", "cafe"), "taberna": ("cafe", "cafe"), "calle": ("trafico", "trafico"),
-    "ciudad": ("trafico", "noche"), "carretera": ("viento", "noche"), "pueblo": ("pajaros", "noche"),
-    "campo": ("pajaros", "noche"), "bosque": ("pajaros", "noche"), "cementerio": ("viento", "noche"),
-    "caseron": ("noche", "noche"), "castillo": ("viento", "noche"), "despacho": ("reloj", "reloj"),
-    "aula": ("reloj", "reloj"), "salon": ("reloj", "reloj"), "palacio": ("sala", "sala"), "iglesia": ("sala", "sala"),
-    "carcel": ("sala", "sala"), "tribunal": ("sala", "sala"), "hospital": ("hospital", "hospital"),
-    "oficina": ("oficina", "oficina"), "casa": ("sala", "sala"), "dormitorio": ("sala", "reloj"),
-    "laboratorio": ("sala", "sala"), "estacion": ("viento", "noche"), "desierto": ("viento", "viento"),
+    "ciudad": ("trafico", ""), "carretera": ("", "noche"), "pueblo": ("pajaros", "noche"),
+    "campo": ("pajaros", "noche"), "bosque": ("pajaros", "noche"), "cementerio": ("", "noche"),
+    "caseron": ("noche", "noche"), "castillo": ("", ""), "despacho": ("reloj", "reloj"),
+    "aula": ("reloj", "reloj"), "salon": ("reloj", "reloj"), "palacio": ("", ""), "iglesia": ("", ""),
+    "carcel": ("", ""), "tribunal": ("", ""), "hospital": ("hospital", "hospital"),
+    "oficina": ("oficina", "oficina"), "casa": ("", ""), "dormitorio": ("", "reloj"),
+    "laboratorio": ("", ""), "estacion": ("", ""), "desierto": ("viento", "viento"), "hielo": ("viento", "viento"),
+    "cielo": ("viento", "viento"), "batalla": ("", ""), "tienda": ("", ""),
 }
 
 
@@ -228,8 +229,11 @@ def pick_ambience(shot, loc_ambience: str, event_ambience: str) -> str:
         return "fuego"
     if shot.ambience or event_ambience:
         return shot.ambience or event_ambience
-    day, night = LOC_AMBIENCE.get(shot.location, (loc_ambience, loc_ambience))
-    return night if shot.mood == "noche" else (day or loc_ambience)
+    # solo el ambiente propio del lugar (sin viento por defecto); si el lugar no tiene, silencio
+    if shot.location in LOC_AMBIENCE:
+        day, night = LOC_AMBIENCE[shot.location]
+        return night if shot.mood == "noche" else day
+    return loc_ambience if loc_ambience in ("mar",) else ""
 
 
 def build_track(shots: list, durations: list[float], total: float, out: Path) -> Path:
