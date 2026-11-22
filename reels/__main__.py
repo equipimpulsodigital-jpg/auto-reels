@@ -104,6 +104,90 @@ def _mark_emphasis(words, blocks) -> None:
                 break
 
 
+def _find_video(cid: str, label: str) -> Path | None:
+    """El vídeo ya publicado: en out/ si está, o en los artefactos de GitHub (se guardan 14 días)."""
+    import os
+    import subprocess
+    import tempfile
+    local = OUT / f"{cid}_{label}" / "reel.mp4"
+    if local.exists():
+        return local
+    repo = os.environ.get("GITHUB_REPOSITORY", "equipimpulsodigital-jpg/auto-reels")
+    try:
+        arts = json.loads(subprocess.run(["gh", "api", f"repos/{repo}/actions/artifacts?per_page=100"],
+                                         capture_output=True, text=True, timeout=120).stdout)["artifacts"]
+    except Exception as e:
+        print(f"  no se pudieron listar los artefactos: {e}")
+        return None
+    for a in arts:
+        if not a["name"].startswith(f"reel-{cid}-") or a.get("expired"):
+            continue
+        dest = Path(tempfile.mkdtemp(prefix="retry_"))
+        run_id = a["workflow_run"]["id"]
+        subprocess.run(["gh", "run", "download", str(run_id), "-R", repo, "-n", a["name"], "-D", str(dest)],
+                       capture_output=True, timeout=300)
+        for f in dest.rglob("reel.mp4"):
+            if f.parent.name == f"{cid}_{label}":
+                return f
+    return None
+
+
+def retry_failed(cfg: dict) -> None:
+    """Vuelve a subir a una red lo que falló por un error pasajero (límite de subidas, fallo del servidor...).
+    Los errores que necesitan al usuario (TikTok «risky», sesión caducada) no se reintentan."""
+    from .publish import RETRYABLE, post_results, publish
+    from .script import Series
+    ch = cfg["channel"]
+    tz = ZoneInfo(cfg["publish"].get("timezone", "Europe/Madrid"))
+    now = datetime.now(timezone.utc)
+    history = _load(cfg, "history.json", [])
+    changed = False
+    for h in history:
+        for p in h.get("published_parts", []):
+            slot = p.get("slot")
+            rid = p.get("job_id") or p.get("request_id")
+            if not slot or not rid:
+                continue
+            when = datetime.fromisoformat(slot)
+            if not (now - timedelta(hours=48) < when < now - timedelta(minutes=20)):
+                continue
+            results = post_results(rid)
+            if not results:
+                continue
+            done = set(p.get("retried", []))
+            todo = []
+            for res in results:
+                plat, err = res.get("platform"), str(res.get("error_message") or res.get("message") or res.get("error") or "")
+                if res.get("success") or plat in done or plat not in _platforms_for(cfg, when):
+                    continue
+                if any(k in err.lower() for k in RETRYABLE):
+                    todo.append(plat)
+                else:
+                    print(f"  {when.astimezone(tz):%d/%m %H:%M} {plat}: no se reintenta ({err[:90]})")
+            if not todo:
+                continue
+            label = when.astimezone(tz).strftime("%Y%m%d_%H%M")
+            print(f"Reintentando «{h['series_title']}» ({when.astimezone(tz):%d/%m %H:%M}) en: {', '.join(todo)}")
+            video = _find_video(ch["id"], label)
+            if not video or not (video.parent / "series.json").exists():
+                print("  no se encuentra el vídeo (los artefactos duran 14 días)")
+                continue
+            series = Series.model_validate_json((video.parent / "series.json").read_text(encoding="utf-8"))
+            part = next((x for x in series.parts if x.part_number == p["part"]), series.parts[0])
+            sub = {**cfg, "channel": {**ch, "platforms": todo, "_all_platforms": todo}}
+            key = f"{ch['id']}-{zlib.crc32(series.series_title.encode())}-{p['part']}-{label}-retry-{'-'.join(todo)}"
+            try:
+                publish(video, part, sub, idempotency_key=key, total_parts=len(series.parts), scheduled_at=None, book=False)
+            except Exception as e:
+                print(f"  falló el reintento: {e}")
+            p["retried"] = sorted(done | set(todo))  # un solo reintento por red
+            changed = True
+    if changed:
+        _save(cfg, "history.json", history)
+    else:
+        print("Nada que reintentar.")
+
+
 def cancel_slot(cfg: dict, when: str) -> bool:
     """Quita de Upload-Post el vídeo programado en una franja y la deja libre para volver a llenarla."""
     from .publish import cancel_scheduled
@@ -420,6 +504,7 @@ def main() -> int:
     ap.add_argument("--compile", action="store_true", help="recopilación semanal para YouTube (con --clips)")
     ap.add_argument("--clips", action="append", default=[], help="carpeta con vídeos ya publicados (se puede repetir)")
     ap.add_argument("--pages", action="store_true", help="regenera la página de enlaces de la bio (docs/)")
+    ap.add_argument("--retry", action="store_true", help="vuelve a subir a cada red lo que falló por un error pasajero")
     ap.add_argument("--cancel", help="quita de la programación el vídeo de una franja, p. ej. «2026-11-21 10:00»")
     ap.add_argument("--stats", action="store_true", help="guarda las visualizaciones de cada vídeo publicado")
     ap.add_argument("--accounts", action="store_true", help="enlaces de las cuentas conectadas en Upload-Post")
@@ -442,6 +527,10 @@ def main() -> int:
         from .publish import unlabel_scheduled
         unlabel_scheduled(load_config(args.channel)["channel"]["profile"])
         return 0
+    if args.retry:
+        retry_failed(load_config(args.channel))
+        return 0
+
     if args.cancel:
         ok = cancel_slot(load_config(args.channel), args.cancel)
         if not ok:

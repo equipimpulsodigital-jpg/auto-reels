@@ -23,7 +23,7 @@ on:
       mode:
         description: "programar = deja programadas las franjas de 24 h · prueba = solo genera un vídeo · ahora = publica uno ya · estado = cómo acabaron las últimas publicaciones · estadisticas = visualizaciones de cada vídeo · noche = la ejecución nocturna (la lanza cron-job.org)"
         type: choice
-        options: [prueba, programar, noche, ahora, estado, estadisticas, cancelar, quitar_etiqueta, cuentas]
+        options: [prueba, programar, noche, ahora, estado, estadisticas, reintentar, cancelar, quitar_etiqueta, cuentas]
         default: prueba
       new_story:
         description: "Empezar historia nueva (aunque quede una parte pendiente)"
@@ -48,6 +48,7 @@ on:
 
 permissions:
   contents: write
+  actions: read      # para descargar los vídeos ya generados al reintentar una subida
 
 jobs:
   reel:
@@ -81,6 +82,9 @@ jobs:
             echo "go=false" >> "$GITHUB_OUTPUT"; echo "Este canal no se ha elegido."; exit 0
           fi
           if [ "${{ inputs.mode }}" = "estado" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "status=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          # en las ejecuciones programadas (y en el modo «reintentar») se vuelven a subir las publicaciones que fallaron
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.mode }}" = "reintentar" ] || [ "${{ inputs.mode }}" = "noche" ]; then echo "retry=true" >> "$GITHUB_OUTPUT"; fi
+          if [ "${{ inputs.mode }}" = "reintentar" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ inputs.mode }}" = "cancelar" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ inputs.mode }}" = "estadisticas" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "stats=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ "${{ inputs.mode }}" = "cuentas" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; echo "accounts=true" >> "$GITHUB_OUTPUT"; exit 0; fi
@@ -103,6 +107,15 @@ jobs:
         run: |
           pip install -q requests
           python -m reels --status --channel "$CH"
+
+      - name: Reintentar subidas fallidas
+        if: steps.todo.outputs.retry == 'true'
+        env:
+          UPLOAD_POST_API_KEY: ${{ secrets.UPLOAD_POST_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pip install -q -r requirements.txt
+          python -m reels --retry --channel "$CH" || true
 
       - name: Visualizaciones de cada vídeo
         if: steps.todo.outputs.stats == 'true'
@@ -197,7 +210,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Guardar historial y partes pendientes
-        if: always() && (steps.todo.outputs.go == 'true' || steps.todo.outputs.stats == 'true')
+        if: always() && (steps.todo.outputs.go == 'true' || steps.todo.outputs.stats == 'true' || steps.todo.outputs.retry == 'true')
         run: |
           git config user.name "reels-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"

@@ -278,6 +278,27 @@ def wait_for_status(request_id: str, headers: dict, timeout_s: int = 900, interv
     return status
 
 
+RETRYABLE = ("rate limit", "retry", "temporar", "timeout", "timed out", "try again", "internal", "503", "502", "500",
+             "unavailable", "quota")
+
+
+def post_results(rid: str) -> list[dict] | None:
+    """Resultado por red de una publicación ya hecha (None si aún no se ha publicado o no se encuentra)."""
+    headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
+    for key in ("job_id", "request_id"):
+        try:
+            r = requests.get(f"{API}/uploadposts/status", headers=headers, params={key: rid}, timeout=60)
+            st = r.json()
+        except (requests.RequestException, ValueError):
+            return None
+        if r.status_code == 404 or str(st.get("status", "")).lower() == "not_found":
+            continue
+        if str(st.get("status", "")).lower() not in ("completed", "failed", "error", "partial", "partially_completed"):
+            return None
+        return st.get("results") or []
+    return None
+
+
 def failed_platforms(result: dict) -> list[str]:
     status = result.get("final_status") or {}
     if status and str(status.get("status")).lower() not in {"completed", "scheduled"}:
