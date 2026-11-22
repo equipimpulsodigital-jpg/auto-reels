@@ -23,7 +23,7 @@
         "job_id": "317486a8ddb24f6b853dd421b042cf9a",
         "stats": {
           "instagram": {
-            "views": 1497,
+            "views": 1498,
             "likes": 15,
             "comments": 0,
             "shares": 0,
@@ -32,10 +32,11 @@
             "reach": 1103
           },
           "youtube": {
-            "views": 1133,
+            "views": 1137,
             "likes": 24,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 26.0
           }
         }
       }
@@ -49,12 +50,12 @@
       "pitch": "Lo que pasó de verdad en Palomares en 1966, contado con un detalle que pocos conocen."
     },
     "stats": {
-      "views": 2630,
+      "views": 2635,
       "likes": 39,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1133,
-      "updated": "2026-11-21"
+      "youtube_views": 1137,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -86,7 +87,8 @@
             "views": 662,
             "likes": 10,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 33.0
           }
         }
       },
@@ -109,10 +111,11 @@
             "reach": 147
           },
           "youtube": {
-            "views": 454,
+            "views": 455,
             "likes": 8,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 17.0
           }
         }
       }
@@ -126,12 +129,12 @@
       "pitch": "Galdós sigue de cerca el crimen que tuvo en vilo a todo Madrid. Imprescindible."
     },
     "stats": {
-      "views": 1439,
+      "views": 1440,
       "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1116,
-      "updated": "2026-11-21"
+      "youtube_views": 1117,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -160,7 +163,7 @@
             "reach": 494
           },
           "youtube": {
-            "views": 312,
+            "views": 289,
             "likes": 5,
             "comments": 0,
             "shares": 0
@@ -186,7 +189,7 @@
             "reach": 128
           },
           "youtube": {
-            "views": 1325,
+            "views": 1327,
             "likes": 24,
             "comments": 0,
             "shares": 0
@@ -201,12 +204,12 @@
       "pitch": "Quién era de verdad Mateo Morral, el hombre detrás de la bomba de la calle Mayor."
     },
     "stats": {
-      "views": 2425,
+      "views": 2404,
       "likes": 42,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1637,
-      "updated": "2026-11-21"
+      "youtube_views": 1616,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -235,8 +238,8 @@
             "reach": 137
           },
           "youtube": {
-            "views": 1012,
-            "likes": 15,
+            "views": 1055,
+            "likes": 16,
             "comments": 0,
             "shares": 0
           }
@@ -261,8 +264,8 @@
             "reach": 115
           },
           "youtube": {
-            "views": 1002,
-            "likes": 14,
+            "views": 1230,
+            "likes": 19,
             "comments": 0,
             "shares": 0
           }
@@ -278,12 +281,12 @@
       "pitch": "Una investigación a fondo sobre uno de los grandes misterios sin resolver de nuestra historia."
     },
     "stats": {
-      "views": 2302,
-      "likes": 35,
+      "views": 2573,
+      "likes": 41,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2014,
-      "updated": "2026-11-21"
+      "youtube_views": 2285,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -312,7 +315,7 @@
             "reach": 123
           },
           "youtube": {
-            "views": 1244,
+            "views": 1221,
             "likes": 22,
             "comments": 1,
             "shares": 0
@@ -329,17 +332,17 @@
         "at": "2026-11-19T11:23:35+00:00",
         "stats": {
           "instagram": {
-            "views": 364,
-            "likes": 6,
+            "views": 567,
+            "likes": 10,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 14.9,
+            "avg_watch_s": 16.8,
             "saves": 0,
-            "reach": 299
+            "reach": 463
           },
           "youtube": {
-            "views": 732,
-            "likes": 25,
+            "views": 1115,
+            "likes": 26,
             "comments": 0,
             "shares": 0
           }
@@ -347,12 +350,12 @@
       }
     ],
     "stats": {
-      "views": 2486,
-      "likes": 58,
+      "views": 3049,
+      "likes": 63,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1976,
-      "updated": "2026-11-21"
+      "youtube_views": 2336,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -381,9 +384,9 @@
             "reach": 129
           },
           "youtube": {
-            "views": 337,
-            "likes": 11,
-            "comments": 0,
+            "views": 849,
+            "likes": 25,
+            "comments": 1,
             "shares": 0
           }
         }
@@ -407,13 +410,13 @@
             "reach": 120
           },
           "youtube": {
-            "views": 551,
-            "likes": 15,
+            "views": 1024,
+            "likes": 19,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 748,
+            "views": 749,
             "likes": 6,
             "comments": 0,
             "shares": 0,
@@ -430,12 +433,12 @@
       "pitch": "Un error judicial tan estremecedor que todavía hoy cuesta creer que ocurriera de verdad."
     },
     "stats": {
-      "views": 1914,
-      "likes": 34,
-      "comments": 0,
+      "views": 2900,
+      "likes": 52,
+      "comments": 1,
       "shares": 0,
-      "youtube_views": 888,
-      "updated": "2026-11-21"
+      "youtube_views": 1873,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -455,26 +458,26 @@
         "at": "2026-11-20T11:07:18+00:00",
         "stats": {
           "instagram": {
-            "views": 146,
+            "views": 150,
             "likes": 1,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 11.3,
+            "avg_watch_s": 11.6,
             "saves": 0,
-            "reach": 117
+            "reach": 119
           },
           "youtube": {
-            "views": 696,
-            "likes": 22,
+            "views": 977,
+            "likes": 24,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 209,
+            "views": 211,
             "likes": 3,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 5.0,
+            "avg_watch_s": 5.2,
             "reach": 0
           }
         }
@@ -486,7 +489,32 @@
         "request_id": "48f5f6bd0bed4dc080f9a85798bc5564",
         "job_id": "7b72dcc4e60640e580d6c7405681bd14",
         "failed": [],
-        "at": "2026-11-20T11:13:02+00:00"
+        "at": "2026-11-20T11:13:02+00:00",
+        "stats": {
+          "instagram": {
+            "views": 146,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 5.9,
+            "saves": 0,
+            "reach": 127
+          },
+          "youtube": {
+            "views": 416,
+            "likes": 10,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 227,
+            "likes": 5,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 6.3,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -496,12 +524,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1051,
-      "likes": 26,
+      "views": 2127,
+      "likes": 43,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 696,
-      "updated": "2026-11-21"
+      "youtube_views": 1393,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -518,7 +546,32 @@
         "request_id": "aef739c9aae04f69a2789d1fdda603ff",
         "job_id": "73e335ae1ca34f1c8d92759a288385c4",
         "failed": [],
-        "at": "2026-11-20T11:20:45+00:00"
+        "at": "2026-11-20T11:20:45+00:00",
+        "stats": {
+          "instagram": {
+            "views": 714,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 11.5,
+            "saves": 0,
+            "reach": 600
+          },
+          "youtube": {
+            "views": 986,
+            "likes": 21,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 227,
+            "likes": 8,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 8.2,
+            "reach": 0
+          }
+        }
       },
       {
         "part": 2,
@@ -527,7 +580,32 @@
         "request_id": "26e1c6594e9343b4ae5a3542d9e03163",
         "job_id": "24853f2f9fdb45a28d708b60c931f373",
         "failed": [],
-        "at": "2026-11-21T08:55:45+00:00"
+        "at": "2026-11-21T08:55:45+00:00",
+        "stats": {
+          "instagram": {
+            "views": 731,
+            "likes": 11,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 12.4,
+            "saves": 0,
+            "reach": 621
+          },
+          "youtube": {
+            "views": 298,
+            "likes": 7,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 209,
+            "likes": 18,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 5.8,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -537,6 +615,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/3746984-M.jpg",
       "isbn": "9788434465985"
+    },
+    "stats": {
+      "views": 3165,
+      "likes": 68,
+      "comments": 0,
+      "shares": 0,
+      "youtube_views": 1284,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -553,7 +639,32 @@
         "request_id": "7be5f50129a94ccab5765d7b4c3b0485",
         "job_id": "e999a715ec65496b810185ac8fe57826",
         "failed": [],
-        "at": "2026-11-21T09:03:25+00:00"
+        "at": "2026-11-21T09:03:25+00:00",
+        "stats": {
+          "instagram": {
+            "views": 234,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 13.2,
+            "saves": 0,
+            "reach": 194
+          },
+          "youtube": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 227,
+            "likes": 7,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 6.2,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -563,6 +674,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/13572733-M.jpg",
       "isbn": "9788484603726"
+    },
+    "stats": {
+      "views": 461,
+      "likes": 7,
+      "comments": 1,
+      "shares": 0,
+      "youtube_views": 0,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -579,10 +698,43 @@
         "request_id": "276a449df2ae4bd089cdc340297859be",
         "job_id": "d954b6f5e9dc49db917f276f107b736a",
         "failed": [],
-        "at": "2026-11-21T09:09:49+00:00"
+        "at": "2026-11-21T09:09:49+00:00",
+        "stats": {
+          "instagram": {
+            "views": 168,
+            "likes": 4,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 9.9,
+            "saves": 1,
+            "reach": 142
+          },
+          "youtube": {
+            "views": 1198,
+            "likes": 15,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 219,
+            "likes": 15,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 6.4,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1585,
+      "likes": 34,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 1198,
+      "updated": "2026-11-22"
+    }
   },
   {
     "date": "2026-11-21",
