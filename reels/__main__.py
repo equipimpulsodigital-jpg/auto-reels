@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import zlib
 from pathlib import Path
@@ -166,7 +167,8 @@ def retry_failed(cfg: dict) -> None:
                 plat, err = res.get("platform"), str(res.get("error_message") or res.get("message") or res.get("error") or "")
                 if res.get("success") or plat in done or plat not in _platforms_for(cfg, when):
                     continue
-                if any(k in err.lower() for k in RETRYABLE):
+                # a mano (modo «reintentar») se reintenta todo: p. ej. tras reconectar una cuenta
+                if any(k in err.lower() for k in RETRYABLE) or os.environ.get("REINTENTAR_TODO") == "1":
                     todo.append(plat)
                 else:
                     print(f"  {when.astimezone(tz):%d/%m %H:%M} {plat}: no se reintenta ({err[:90]})")

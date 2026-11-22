@@ -116,6 +116,7 @@ jobs:
         run: |
           sudo apt-get install -y -qq libegl1 libgl1 >/dev/null 2>&1 || true
           pip install -q -r requirements.txt
+          if [ "${{ inputs.mode }}" = "reintentar" ]; then export REINTENTAR_TODO=1; fi
           python -m reels --retry --channel "$CH" || true
 
       - name: Visualizaciones de cada vídeo
