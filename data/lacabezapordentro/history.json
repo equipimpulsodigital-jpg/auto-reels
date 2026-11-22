@@ -75,7 +75,7 @@
             "reach": 434
           },
           "youtube": {
-            "views": 1377,
+            "views": 1361,
             "likes": 31,
             "comments": 0,
             "shares": 0,
@@ -93,11 +93,11 @@
       "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
     },
     "stats": {
-      "views": 1885,
+      "views": 1869,
       "likes": 51,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1377,
+      "youtube_views": 1361,
       "updated": "2026-11-22"
     }
   },
@@ -127,7 +127,7 @@
             "reach": 182
           },
           "youtube": {
-            "views": 1266,
+            "views": 1270,
             "likes": 20,
             "comments": 0,
             "shares": 0
@@ -142,11 +142,11 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1486,
+      "views": 1490,
       "likes": 23,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1266,
+      "youtube_views": 1270,
       "updated": "2026-11-22"
     }
   },
@@ -173,8 +173,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1178,
-            "likes": 12,
+            "views": 1183,
+            "likes": 13,
             "comments": 0,
             "shares": 0
           }
@@ -188,11 +188,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1178,
-      "likes": 12,
+      "views": 1183,
+      "likes": 13,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1178,
+      "youtube_views": 1183,
       "updated": "2026-11-22"
     }
   },
@@ -222,8 +222,8 @@
             "reach": 138
           },
           "youtube": {
-            "views": 1381,
-            "likes": 12,
+            "views": 1383,
+            "likes": 13,
             "comments": 0,
             "shares": 0
           }
@@ -239,11 +239,11 @@
       "isbn": "9788411193016"
     },
     "stats": {
-      "views": 1547,
-      "likes": 15,
+      "views": 1549,
+      "likes": 16,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1381,
+      "youtube_views": 1383,
       "updated": "2026-11-22"
     }
   },
@@ -264,16 +264,16 @@
         "at": "2026-11-20T11:07:46+00:00",
         "stats": {
           "instagram": {
-            "views": 1262,
+            "views": 1264,
             "likes": 41,
             "comments": 0,
             "shares": 6,
             "avg_watch_s": 14.9,
             "saves": 5,
-            "reach": 1065
+            "reach": 1067
           },
           "youtube": {
-            "views": 25,
+            "views": 27,
             "likes": 2,
             "comments": 0,
             "shares": 0
@@ -289,11 +289,11 @@
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
     },
     "stats": {
-      "views": 1287,
+      "views": 1291,
       "likes": 43,
       "comments": 0,
       "shares": 6,
-      "youtube_views": 25,
+      "youtube_views": 27,
       "updated": "2026-11-22"
     }
   },
@@ -367,7 +367,7 @@
             "reach": 112
           },
           "youtube": {
-            "views": 1075,
+            "views": 1078,
             "likes": 21,
             "comments": 0,
             "shares": 0
@@ -383,11 +383,11 @@
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
     },
     "stats": {
-      "views": 1211,
+      "views": 1214,
       "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1075,
+      "youtube_views": 1078,
       "updated": "2026-11-22"
     }
   },
@@ -515,7 +515,7 @@
             "reach": 133
           },
           "youtube": {
-            "views": 2,
+            "views": 9,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -530,11 +530,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 156,
+      "views": 163,
       "likes": 5,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 2,
+      "youtube_views": 9,
       "updated": "2026-11-22"
     }
   },
@@ -601,10 +601,35 @@
         "request_id": "17122d3138014e86972b457a13af0992",
         "job_id": "337fd4ce170d42578d2a2e6013313fac",
         "failed": [],
-        "at": "2026-11-21T22:34:07+00:00"
+        "at": "2026-11-21T22:34:07+00:00",
+        "stats": {
+          "instagram": {
+            "views": 197,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 8.8,
+            "saves": 0,
+            "reach": 169
+          },
+          "youtube": {
+            "views": 1202,
+            "likes": 21,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1399,
+      "likes": 21,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1202,
+      "updated": "2026-11-22"
+    }
   },
   {
     "date": "2026-11-22",
@@ -620,7 +645,24 @@
         "request_id": "3e7f90a946114efcb4b0e0ed2299b328",
         "job_id": "44c0da397c87472da632b6123ff74e5a",
         "failed": [],
-        "at": "2026-11-22T01:24:22+00:00"
+        "at": "2026-11-22T01:24:22+00:00",
+        "stats": {
+          "instagram": {
+            "views": 134,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 13.0,
+            "saves": 0,
+            "reach": 115
+          },
+          "youtube": {
+            "views": 1145,
+            "likes": 21,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -628,6 +670,14 @@
       "author": "Steven Sloman y Philip Fernbach",
       "pitch": "Por qué creemos saber mucho más de lo que sabemos, y por qué nunca pensamos solos.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1279,
+      "likes": 21,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1145,
+      "updated": "2026-11-22"
     }
   },
   {
@@ -644,7 +694,24 @@
         "request_id": "94a5266171ad4b80b6ea10ba4ed0352b",
         "job_id": "b1fe0a30c0974b5fbdceb33263d2eb35",
         "failed": [],
-        "at": "2026-11-22T01:36:09+00:00"
+        "at": "2026-11-22T01:36:09+00:00",
+        "stats": {
+          "instagram": {
+            "views": 204,
+            "likes": 3,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 10.2,
+            "saves": 0,
+            "reach": 162
+          },
+          "youtube": {
+            "views": 1276,
+            "likes": 19,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -652,6 +719,14 @@
       "author": "Daniel Kahneman",
       "pitch": "El Nobel que explica por qué tu cerebro elige lo conocido sin pedirte permiso.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1480,
+      "likes": 22,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1276,
+      "updated": "2026-11-22"
     }
   },
   {
