@@ -288,8 +288,8 @@
             "reach": 303
           },
           "youtube": {
-            "views": 1334,
-            "likes": 42,
+            "views": 1337,
+            "likes": 43,
             "comments": 0,
             "shares": 0
           },
@@ -304,11 +304,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3225,
-      "likes": 84,
+      "views": 3228,
+      "likes": 85,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1344,
+      "youtube_views": 1347,
       "updated": "2026-11-22"
     }
   },
@@ -329,16 +329,16 @@
         "at": "2026-11-21T08:56:26+00:00",
         "stats": {
           "instagram": {
-            "views": 646,
+            "views": 659,
             "likes": 14,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 15.1,
+            "avg_watch_s": 15.0,
             "saves": 0,
-            "reach": 522
+            "reach": 538
           },
           "youtube": {
-            "views": 907,
+            "views": 973,
             "likes": 15,
             "comments": 1,
             "shares": 0
@@ -355,11 +355,11 @@
       "isbn": "9788418967832"
     },
     "stats": {
-      "views": 1553,
+      "views": 1632,
       "likes": 29,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 907,
+      "youtube_views": 973,
       "updated": "2026-11-22"
     }
   },
@@ -510,5 +510,62 @@
       "pitch": "El cómic de culto sobre un mundo donde todos los hombres mueren a la vez, salvo uno.",
       "looked_up": true
     }
+  },
+  {
+    "date": "2026-11-22",
+    "format": "y_si_tu",
+    "topic": "Qué te pasaría hora a hora si dejaras de comer (solo agua): mal humor, cetosis, el hambre que desaparece al día 3, el límite de dos meses y los 382 días de Angus Barbieri.",
+    "series_title": "¿Y si dejaras de comer hoy?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T12:00:00+01:00",
+        "request_id": "aa45a995bde941cda89c8b88f597db7d",
+        "job_id": "e58ce336e3874d239bf704641fc98637",
+        "failed": [],
+        "at": "2026-11-22T01:26:23+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "y_si_planeta",
+    "topic": "Qué pasaría si se derritiera de golpe todo el hielo de la Tierra: el mar sube 70 m, se inundan Cádiz, Sevilla, Valencia y Barcelona, llega el frío porque se frena la corriente del Golfo y el giro de la Tierra se hace más lento (y ya se nota hoy).",
+    "series_title": "¿Y si se derritiera todo el hielo del planeta?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T16:00:00+01:00",
+        "request_id": "efa6c596cbd941b7b064e7bb6ec786ea",
+        "job_id": "5b372353d3824e7d9dea928ce41af776",
+        "failed": [],
+        "at": "2026-11-22T01:39:52+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-22",
+    "format": "cuenta_atras",
+    "topic": "Qué pasaría hora a hora si internet cayera en todo el planeta: datáfonos muertos, solo efectivo, la caída de Facebook de 2021 que dejó a sus técnicos en la calle, el súper vacío al día 3 y el kit de 72 horas que recomienda Europa.",
+    "series_title": "¿Y si internet se cayera en todo el mundo?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-22",
+        "slot": "2026-11-22T18:00:00+01:00",
+        "request_id": "99eb287964944f849a48e3289c772482",
+        "job_id": "37258f6b94f44017b938bfcf1d16311f",
+        "failed": [],
+        "at": "2026-11-22T01:53:07+00:00"
+      }
+    ],
+    "book": null
   }
 ]
