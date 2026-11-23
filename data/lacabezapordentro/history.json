@@ -46,7 +46,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 0,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -76,7 +76,7 @@
           },
           "youtube": {
             "views": 1361,
-            "likes": 31,
+            "likes": 32,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 18.0
@@ -94,11 +94,11 @@
     },
     "stats": {
       "views": 1869,
-      "likes": 51,
+      "likes": 52,
       "comments": 0,
       "shares": 0,
       "youtube_views": 1361,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -147,7 +147,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1270,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -173,8 +173,8 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1183,
-            "likes": 13,
+            "views": 1187,
+            "likes": 14,
             "comments": 0,
             "shares": 0
           }
@@ -188,12 +188,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1183,
-      "likes": 13,
+      "views": 1187,
+      "likes": 14,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1183,
-      "updated": "2026-11-22"
+      "youtube_views": 1187,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -244,7 +244,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1383,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -294,7 +294,7 @@
       "comments": 0,
       "shares": 6,
       "youtube_views": 27,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -338,7 +338,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 4,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -367,7 +367,7 @@
             "reach": 112
           },
           "youtube": {
-            "views": 1078,
+            "views": 1081,
             "likes": 21,
             "comments": 0,
             "shares": 0
@@ -383,12 +383,12 @@
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
     },
     "stats": {
-      "views": 1214,
+      "views": 1217,
       "likes": 22,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1078,
-      "updated": "2026-11-22"
+      "youtube_views": 1081,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -417,7 +417,7 @@
             "reach": 136
           },
           "youtube": {
-            "views": 1184,
+            "views": 1188,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -432,12 +432,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1375,
+      "views": 1379,
       "likes": 23,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1184,
-      "updated": "2026-11-22"
+      "youtube_views": 1188,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -486,7 +486,7 @@
       "comments": 2,
       "shares": 0,
       "youtube_views": 1001,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -515,7 +515,7 @@
             "reach": 133
           },
           "youtube": {
-            "views": 9,
+            "views": 11,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -530,12 +530,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 163,
+      "views": 165,
       "likes": 5,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 9,
-      "updated": "2026-11-22"
+      "youtube_views": 11,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -564,7 +564,7 @@
             "reach": 108
           },
           "youtube": {
-            "views": 1,
+            "views": 3,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -579,12 +579,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 123,
+      "views": 125,
       "likes": 2,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1,
-      "updated": "2026-11-22"
+      "youtube_views": 3,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -613,8 +613,8 @@
             "reach": 169
           },
           "youtube": {
-            "views": 1202,
-            "likes": 21,
+            "views": 1205,
+            "likes": 22,
             "comments": 1,
             "shares": 0
           }
@@ -623,12 +623,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1399,
-      "likes": 21,
+      "views": 1402,
+      "likes": 22,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1202,
-      "updated": "2026-11-22"
+      "youtube_views": 1205,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -648,13 +648,13 @@
         "at": "2026-11-22T01:24:22+00:00",
         "stats": {
           "instagram": {
-            "views": 134,
+            "views": 135,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.0,
+            "avg_watch_s": 12.9,
             "saves": 0,
-            "reach": 115
+            "reach": 116
           },
           "youtube": {
             "views": 1145,
@@ -672,12 +672,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1279,
+      "views": 1280,
       "likes": 21,
       "comments": 2,
       "shares": 0,
       "youtube_views": 1145,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -697,16 +697,16 @@
         "at": "2026-11-22T01:36:09+00:00",
         "stats": {
           "instagram": {
-            "views": 204,
+            "views": 205,
             "likes": 3,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 10.2,
             "saves": 0,
-            "reach": 162
+            "reach": 163
           },
           "youtube": {
-            "views": 1276,
+            "views": 1320,
             "likes": 19,
             "comments": 1,
             "shares": 0
@@ -721,12 +721,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1480,
+      "views": 1525,
       "likes": 22,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1276,
-      "updated": "2026-11-22"
+      "youtube_views": 1320,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -743,7 +743,24 @@
         "request_id": "b0799982460d4ccb81493284a032b0be",
         "job_id": "00898eb835e24f78bee3ead81ee5c6a9",
         "failed": [],
-        "at": "2026-11-22T01:47:34+00:00"
+        "at": "2026-11-22T01:47:34+00:00",
+        "stats": {
+          "instagram": {
+            "views": 125,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 5.7,
+            "saves": 0,
+            "reach": 112
+          },
+          "youtube": {
+            "views": 3,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -753,6 +770,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/13537621-M.jpg",
       "isbn": "9788411001298"
+    },
+    "stats": {
+      "views": 128,
+      "likes": 0,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 3,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -882,5 +907,110 @@
       "pitch": "Por qué unas ideas se entienden y recuerdan y otras se pierden, explicado con historias.",
       "looked_up": true
     }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "psicologia_oscura",
+    "topic": "DARVO (Freyd, 1997): niega, ataca e invierte víctima y culpable; conocer los pasos le quita fuerza (Harsey y Freyd, 2020)",
+    "series_title": "Le reclamas algo y acabas pidiendo perdón tú",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T09:57:00+01:00",
+        "request_id": "38cbe6efd72a49a5b78c509aef4d314a",
+        "job_id": "6b1ffe0d704b404b81d9b59c0a4bbd62",
+        "failed": [],
+        "at": "2026-11-23T01:19:52+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-23",
+    "format": "calar_gente",
+    "topic": "Mitos para detectar mentiras (mirada, nervios) frente a la señal real (pocos detalles) y el truco de contarlo al revés (DePaulo 2003; Vrij 2008; Bond y DePaulo 2006)",
+    "series_title": "Cómo pillar a un mentiroso (y no es por la mirada)",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T12:07:00+01:00",
+        "request_id": "1ae01a6398f3489daf0dd4cf5d871fa3",
+        "job_id": "aa891e9781dc47999e08f5452959ed6c",
+        "failed": [],
+        "at": "2026-11-23T01:28:15+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cómo detectar mentiras",
+      "author": "Paul Ekman",
+      "pitch": "El psicólogo que inspiró «Miénteme» explica por qué casi nadie sabe pillar una mentira.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "si_haces_esto",
+    "topic": "Por qué nuestra propia voz grabada nos suena fatal (conducción ósea y 'voice confrontation') y por qué, sin saber que era la suya, a la gente le gustó más (Hughes y Harrison, 2013)",
+    "series_title": "Por qué odias tu voz en los audios",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T15:54:00+01:00",
+        "request_id": "e73327eb1eaa48c6b9ebb448c5575143",
+        "job_id": "703525bbeee44ebcb0997a34531302ad",
+        "failed": [],
+        "at": "2026-11-23T01:35:10+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-23",
+    "format": "psicologia_oscura",
+    "topic": "Refuerzo intermitente en las relaciones: el cariño a ratos y al azar engancha como una tragaperras (Ferster y Skinner, 1957); el antídoto es juzgar la media, no el mejor día",
+    "series_title": "Por qué no puedes dejar a quien te contesta a ratos",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T18:03:00+01:00",
+        "request_id": "e38bca5741474d289242bea40fa17946",
+        "job_id": "8c85080af18a4e9ea42539b29208d6e8",
+        "failed": [],
+        "at": "2026-11-23T01:42:43+00:00"
+      }
+    ],
+    "book": {
+      "title": "Maneras de amar",
+      "author": "Amir Levine y Rachel Heller",
+      "pitch": "Por qué te atrae quien te hace dudar y cómo reconocer un amor que te da calma.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "trucos_persuasion",
+    "topic": "Preguntas de seguimiento: en citas rápidas, quien más pregunta (sobre todo «¿y qué pasó después?») consigue más segundas citas (Huang et al., 2017)",
+    "series_title": "La pregunta que consigue la segunda cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T21:11:00+01:00",
+        "request_id": "bf51bd3815cb4cdaa7c31b7d3e4e92cb",
+        "job_id": "29825932f94643d894140b48bd82e08f",
+        "failed": [],
+        "at": "2026-11-23T01:49:48+00:00"
+      }
+    ],
+    "book": null
   }
 ]
