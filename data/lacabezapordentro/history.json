@@ -25,7 +25,7 @@
             "reach": 426
           },
           "youtube": {
-            "views": 0,
+            "views": 1,
             "likes": 0,
             "comments": 0,
             "shares": 0
@@ -41,11 +41,11 @@
       "pitch": "El clásico de siempre sobre caer bien, y sigue funcionando sorprendentemente bien hoy."
     },
     "stats": {
-      "views": 530,
+      "views": 531,
       "likes": 12,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 0,
+      "youtube_views": 1,
       "updated": "2026-11-23"
     }
   },
@@ -75,11 +75,10 @@
             "reach": 434
           },
           "youtube": {
-            "views": 1361,
+            "views": 1363,
             "likes": 32,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 18.0
+            "shares": 0
           }
         }
       }
@@ -93,11 +92,11 @@
       "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
     },
     "stats": {
-      "views": 1869,
+      "views": 1871,
       "likes": 52,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1361,
+      "youtube_views": 1363,
       "updated": "2026-11-23"
     }
   },
@@ -127,7 +126,7 @@
             "reach": 182
           },
           "youtube": {
-            "views": 1270,
+            "views": 1273,
             "likes": 20,
             "comments": 0,
             "shares": 0
@@ -142,11 +141,11 @@
       "pitch": "Un neurocientífico explica por qué olvidamos lo que olvidamos… y por qué no es tan malo."
     },
     "stats": {
-      "views": 1490,
+      "views": 1493,
       "likes": 23,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1270,
+      "youtube_views": 1273,
       "updated": "2026-11-23"
     }
   },
@@ -173,7 +172,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1187,
+            "views": 1194,
             "likes": 14,
             "comments": 0,
             "shares": 0
@@ -188,11 +187,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1187,
+      "views": 1194,
       "likes": 14,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1187,
+      "youtube_views": 1194,
       "updated": "2026-11-23"
     }
   },
@@ -264,16 +263,16 @@
         "at": "2026-11-20T11:07:46+00:00",
         "stats": {
           "instagram": {
-            "views": 1264,
+            "views": 1265,
             "likes": 41,
             "comments": 0,
             "shares": 6,
             "avg_watch_s": 14.9,
             "saves": 5,
-            "reach": 1067
+            "reach": 1068
           },
           "youtube": {
-            "views": 27,
+            "views": 29,
             "likes": 2,
             "comments": 0,
             "shares": 0
@@ -289,11 +288,11 @@
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
     },
     "stats": {
-      "views": 1291,
+      "views": 1294,
       "likes": 43,
       "comments": 0,
       "shares": 6,
-      "youtube_views": 27,
+      "youtube_views": 29,
       "updated": "2026-11-23"
     }
   },
@@ -367,8 +366,8 @@
             "reach": 112
           },
           "youtube": {
-            "views": 1081,
-            "likes": 21,
+            "views": 1133,
+            "likes": 22,
             "comments": 0,
             "shares": 0
           }
@@ -383,11 +382,11 @@
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
     },
     "stats": {
-      "views": 1217,
-      "likes": 22,
+      "views": 1269,
+      "likes": 23,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1081,
+      "youtube_views": 1133,
       "updated": "2026-11-23"
     }
   },
@@ -417,8 +416,8 @@
             "reach": 136
           },
           "youtube": {
-            "views": 1188,
-            "likes": 21,
+            "views": 1424,
+            "likes": 28,
             "comments": 1,
             "shares": 0
           }
@@ -432,11 +431,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1379,
-      "likes": 23,
+      "views": 1615,
+      "likes": 30,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1188,
+      "youtube_views": 1424,
       "updated": "2026-11-23"
     }
   },
@@ -466,8 +465,8 @@
             "reach": 132
           },
           "youtube": {
-            "views": 1001,
-            "likes": 9,
+            "views": 1067,
+            "likes": 11,
             "comments": 1,
             "shares": 0
           }
@@ -481,11 +480,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1157,
-      "likes": 10,
+      "views": 1223,
+      "likes": 12,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1001,
+      "youtube_views": 1067,
       "updated": "2026-11-23"
     }
   },
@@ -515,8 +514,8 @@
             "reach": 133
           },
           "youtube": {
-            "views": 11,
-            "likes": 1,
+            "views": 1014,
+            "likes": 24,
             "comments": 1,
             "shares": 0
           }
@@ -530,11 +529,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 165,
-      "likes": 5,
+      "views": 1168,
+      "likes": 28,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 11,
+      "youtube_views": 1014,
       "updated": "2026-11-23"
     }
   },
@@ -564,8 +563,8 @@
             "reach": 108
           },
           "youtube": {
-            "views": 3,
-            "likes": 1,
+            "views": 347,
+            "likes": 8,
             "comments": 1,
             "shares": 0
           }
@@ -579,11 +578,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 125,
-      "likes": 2,
+      "views": 469,
+      "likes": 9,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 3,
+      "youtube_views": 347,
       "updated": "2026-11-23"
     }
   },
@@ -604,16 +603,16 @@
         "at": "2026-11-21T22:34:07+00:00",
         "stats": {
           "instagram": {
-            "views": 197,
+            "views": 201,
             "likes": 0,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 8.8,
             "saves": 0,
-            "reach": 169
+            "reach": 173
           },
           "youtube": {
-            "views": 1205,
+            "views": 1215,
             "likes": 22,
             "comments": 1,
             "shares": 0
@@ -623,11 +622,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1402,
+      "views": 1416,
       "likes": 22,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1205,
+      "youtube_views": 1215,
       "updated": "2026-11-23"
     }
   },
@@ -706,8 +705,8 @@
             "reach": 163
           },
           "youtube": {
-            "views": 1320,
-            "likes": 19,
+            "views": 1359,
+            "likes": 20,
             "comments": 1,
             "shares": 0
           }
@@ -721,11 +720,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1525,
-      "likes": 22,
+      "views": 1564,
+      "likes": 23,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1320,
+      "youtube_views": 1359,
       "updated": "2026-11-23"
     }
   },
@@ -755,8 +754,8 @@
             "reach": 112
           },
           "youtube": {
-            "views": 3,
-            "likes": 0,
+            "views": 260,
+            "likes": 8,
             "comments": 1,
             "shares": 0
           }
@@ -772,11 +771,11 @@
       "isbn": "9788411001298"
     },
     "stats": {
-      "views": 128,
-      "likes": 0,
+      "views": 385,
+      "likes": 8,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 3,
+      "youtube_views": 260,
       "updated": "2026-11-23"
     }
   },
@@ -794,10 +793,35 @@
         "request_id": "293d4d553149403abd64f30cadaf5977",
         "job_id": "89cd9dbec2924a55a88c100df5d4209e",
         "failed": [],
-        "at": "2026-11-22T06:54:29+00:00"
+        "at": "2026-11-22T06:54:29+00:00",
+        "stats": {
+          "instagram": {
+            "views": 148,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 8.4,
+            "saves": 0,
+            "reach": 116
+          },
+          "youtube": {
+            "views": 595,
+            "likes": 8,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 743,
+      "likes": 9,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 595,
+      "updated": "2026-11-23"
+    }
   },
   {
     "date": "2026-11-22",
@@ -813,13 +837,38 @@
         "request_id": "4b8869d54b4b471684aa1243109756d1",
         "job_id": "98b051648a8641b0a7d36aa74fef1705",
         "failed": [],
-        "at": "2026-11-22T07:07:19+00:00"
+        "at": "2026-11-22T07:07:19+00:00",
+        "stats": {
+          "instagram": {
+            "views": 148,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 12.9,
+            "saves": 0,
+            "reach": 119
+          },
+          "youtube": {
+            "views": 178,
+            "likes": 7,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
       "title": "Pensar rápido, pensar despacio",
       "author": "Daniel Kahneman",
       "pitch": "El Nobel que destapó los atajos con los que tu cerebro decide sin preguntarte."
+    },
+    "stats": {
+      "views": 326,
+      "likes": 7,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 178,
+      "updated": "2026-11-23"
     }
   },
   {
