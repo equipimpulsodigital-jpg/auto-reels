@@ -48,7 +48,7 @@
       "comments": 0,
       "shares": 1,
       "youtube_views": 1281,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -98,7 +98,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1279,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -149,7 +149,7 @@
       "comments": 0,
       "shares": 1,
       "youtube_views": 1336,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -198,7 +198,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1158,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -255,7 +255,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1256,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -307,7 +307,7 @@
       "comments": 0,
       "shares": 1,
       "youtube_views": 1,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -364,7 +364,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 2,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -393,7 +393,7 @@
             "reach": 135
           },
           "youtube": {
-            "views": 1207,
+            "views": 1208,
             "likes": 16,
             "comments": 0,
             "shares": 0
@@ -416,12 +416,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1576,
+      "views": 1577,
       "likes": 33,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1207,
-      "updated": "2026-11-22"
+      "youtube_views": 1208,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -441,13 +441,13 @@
         "at": "2026-11-21T08:57:44+00:00",
         "stats": {
           "instagram": {
-            "views": 1323,
+            "views": 1325,
             "likes": 30,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 17.8,
             "saves": 0,
-            "reach": 1132
+            "reach": 1134
           },
           "youtube": {
             "views": 1039,
@@ -475,12 +475,12 @@
       "isbn": "9788416222278"
     },
     "stats": {
-      "views": 3069,
+      "views": 3071,
       "likes": 81,
       "comments": 3,
       "shares": 0,
       "youtube_views": 1039,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -509,7 +509,7 @@
             "reach": 1271
           },
           "youtube": {
-            "views": 1219,
+            "views": 1223,
             "likes": 20,
             "comments": 1,
             "shares": 0
@@ -527,12 +527,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 3084,
+      "views": 3088,
       "likes": 74,
       "comments": 3,
       "shares": 1,
-      "youtube_views": 1219,
-      "updated": "2026-11-22"
+      "youtube_views": 1223,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -588,7 +588,7 @@
       "comments": 3,
       "shares": 0,
       "youtube_views": 3,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -646,7 +646,7 @@
       "comments": 3,
       "shares": 0,
       "youtube_views": 4,
-      "updated": "2026-11-22"
+      "updated": "2026-11-23"
     }
   },
   {
@@ -666,26 +666,26 @@
         "at": "2026-11-21T22:28:25+00:00",
         "stats": {
           "instagram": {
-            "views": 203,
+            "views": 216,
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 9.4,
+            "avg_watch_s": 9.7,
             "saves": 0,
-            "reach": 182
+            "reach": 193
           },
           "youtube": {
-            "views": 296,
+            "views": 321,
             "likes": 2,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 4,
-            "likes": 1,
+            "views": 87,
+            "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 19.6,
+            "avg_watch_s": 8.2,
             "reach": 0
           }
         }
@@ -693,12 +693,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 503,
-      "likes": 4,
+      "views": 624,
+      "likes": 5,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 296,
-      "updated": "2026-11-22"
+      "youtube_views": 321,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -727,17 +727,17 @@
             "reach": 171
           },
           "youtube": {
-            "views": 1203,
+            "views": 1205,
             "likes": 24,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 7,
-            "likes": 1,
+            "views": 94,
+            "likes": 3,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 10.6,
+            "avg_watch_s": 5.7,
             "reach": 0
           }
         }
@@ -745,12 +745,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1414,
-      "likes": 26,
+      "views": 1503,
+      "likes": 28,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1203,
-      "updated": "2026-11-22"
+      "youtube_views": 1205,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -770,26 +770,26 @@
         "at": "2026-11-22T01:34:42+00:00",
         "stats": {
           "instagram": {
-            "views": 306,
+            "views": 336,
             "likes": 5,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.5,
+            "avg_watch_s": 13.9,
             "saves": 0,
-            "reach": 242
+            "reach": 264
           },
           "youtube": {
-            "views": 1243,
+            "views": 1247,
             "likes": 17,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 7,
+            "views": 74,
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 6.0,
+            "avg_watch_s": 4.4,
             "reach": 0
           }
         }
@@ -804,12 +804,12 @@
       "isbn": "9788466314916"
     },
     "stats": {
-      "views": 1556,
+      "views": 1657,
       "likes": 23,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1243,
-      "updated": "2026-11-22"
+      "youtube_views": 1247,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -829,16 +829,16 @@
         "at": "2026-11-22T01:45:59+00:00",
         "stats": {
           "instagram": {
-            "views": 1485,
+            "views": 1486,
             "likes": 23,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 15.0,
+            "avg_watch_s": 14.9,
             "saves": 3,
-            "reach": 1236
+            "reach": 1238
           },
           "youtube": {
-            "views": 0,
+            "views": 1,
             "likes": 0,
             "comments": 1,
             "shares": 0
@@ -862,12 +862,12 @@
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
     },
     "stats": {
-      "views": 1486,
+      "views": 1488,
       "likes": 24,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 0,
-      "updated": "2026-11-22"
+      "youtube_views": 1,
+      "updated": "2026-11-23"
     }
   },
   {
@@ -887,10 +887,43 @@
         "at": "2026-11-22T06:58:13+00:00",
         "retried": [
           "youtube"
-        ]
+        ],
+        "stats": {
+          "instagram": {
+            "views": 1432,
+            "likes": 31,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 14.9,
+            "saves": 3,
+            "reach": 1190
+          },
+          "youtube": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 2,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 4.8,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1434,
+      "likes": 32,
+      "comments": 2,
+      "shares": 1,
+      "youtube_views": 0,
+      "updated": "2026-11-23"
+    }
   },
   {
     "date": "2026-11-22",
@@ -906,10 +939,43 @@
         "request_id": "3484463c1cd94f0892be2d66934d4e1f",
         "job_id": "53cde95c3d7d4b06940133631be51d9b",
         "failed": [],
-        "at": "2026-11-22T07:11:31+00:00"
+        "at": "2026-11-22T07:11:31+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1522,
+            "likes": 53,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 16.1,
+            "saves": 3,
+            "reach": 1209
+          },
+          "youtube": {
+            "views": 2,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 2,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 9.3,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1526,
+      "likes": 54,
+      "comments": 3,
+      "shares": 1,
+      "youtube_views": 2,
+      "updated": "2026-11-23"
+    }
   },
   {
     "date": "2026-11-22",
@@ -1095,6 +1161,148 @@
       "author": "John M. Gottman y Nan Silver",
       "pitch": "El psicólogo que predice divorcios explica qué hacen distinto las parejas que duran.",
       "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "antes_despues",
+    "topic": "Arranque duro frente a arranque suave (Gottman): los tres primeros minutos predicen el final de una discusión en el 96 % de los casos; truco: evitar «siempre/nunca» y decir lo que sientes más una petición concreta",
+    "series_title": "La palabra que condena tu discusión",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T11:40:00+01:00",
+        "request_id": "fe04cf598ef84e44b76fe14b284f5198",
+        "job_id": "df7f215fa2294024a051d7b45ff1930b",
+        "failed": [],
+        "at": "2026-11-23T01:26:42+00:00"
+      }
+    ],
+    "book": {
+      "title": "Siete reglas de oro para vivir en pareja",
+      "author": "John M. Gottman y Nan Silver",
+      "pitch": "El psicólogo que predice divorcios explica qué hacen distinto las parejas que duran.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "debate",
+    "topic": "Infidelidad sexual frente a emocional: qué duele más según el estudio de Frederick y Fales (2016, 63.894 personas) y el veredicto de hablarlo en pareja",
+    "series_title": "¿Qué duele más: la cama o el corazón?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T13:53:00+01:00",
+        "request_id": "9608b496e5364ecab52c630f03ce4429",
+        "job_id": "5f5fcc4015a64248baa2862a8bb69e0d",
+        "failed": [],
+        "at": "2026-11-23T01:42:43+00:00"
+      }
+    ],
+    "book": {
+      "title": "Estado de infidelidad",
+      "author": "Esther Perel",
+      "pitch": "La terapeuta de pareja más famosa del mundo explica por qué engañamos y si se puede superar.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "senales",
+    "topic": "Señal de interés: que te devuelva días después un detalle que dijiste de pasada (responsividad, Reis; Birnbaum y Reis: sentirse escuchado aumenta el deseo); qué hacer si pregunta y si nunca pregunta",
+    "series_title": "Se acordó de tu entrevista: la señal que no falla",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T15:58:00+01:00",
+        "request_id": "f65cb7d12b40475488ee3b5906954cb4",
+        "job_id": "ba9b1407851b4551801b10f4f6e707bb",
+        "failed": [],
+        "at": "2026-11-23T01:56:42+00:00"
+      }
+    ],
+    "book": {
+      "title": "Maneras de amar",
+      "author": "Amir Levine y Rachel Heller",
+      "pitch": "Por qué unas personas responden a tus mensajes con ganas y otras te dejan dudando.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "antes_despues",
+    "topic": "Efecto Benjamin Franklin (Jecker y Landy, 1969; Niiya, 2016): en una cita, pedir un favor pequeño une más que complacer; truco: pedir que te recomiende o te preste un libro",
+    "series_title": "El favor que hace que le gustes",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T17:58:00+01:00",
+        "request_id": "e50f0bc0c5e9468e8a2e318cb2b41ae7",
+        "job_id": "ab6906201fac4975b55ce4a4c2f00c4a",
+        "failed": [],
+        "at": "2026-11-23T02:10:19+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cómo ganar amigos e influir sobre las personas",
+      "author": "Dale Carnegie",
+      "pitch": "El clásico sobre caer bien con trucos sencillos que siguen funcionando hoy.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
+    }
+  },
+  {
+    "date": "2026-11-23",
+    "format": "error_comun",
+    "topic": "Error de lanzarse de golpe en el primer beso (Hughes, Harrison y Gallup, 2007: 66 % de ellas y 59 % de ellos perdieron el interés tras un primer beso); truco: regla del 90/10, acercarse despacio y dejar que el otro recorra el último tramo",
+    "series_title": "El primer beso que lo apaga todo",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T20:05:00+01:00",
+        "request_id": "24aadb2e256c41868c7e457dc82c6cec",
+        "job_id": "1cbe56cec3014a3d8913c163c9fdf3cb",
+        "failed": [],
+        "at": "2026-11-23T02:25:04+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-23",
+    "format": "debate",
+    "topic": "Debate: cuándo es pronto para decir «te quiero» y el dato de Ackerman et al. (2011): en parejas de hombre y mujer lo dicen antes ellos, unas seis semanas antes",
+    "series_title": "¿«Te quiero» a los dos meses? Quién lo dice primero",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-24",
+        "slot": "2026-11-24T21:48:00+01:00",
+        "request_id": "7854c999cd47460e9f7d235553575a45",
+        "job_id": "f2a539c9aa2e4e8fb17766cc6e765d77",
+        "failed": [],
+        "at": "2026-11-23T02:38:24+00:00"
+      }
+    ],
+    "book": {
+      "title": "Por qué amamos",
+      "author": "Helen Fisher",
+      "pitch": "La antropóloga que metió el enamoramiento en un escáner explica qué le pasa a tu cerebro.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/3353863-M.jpg",
+      "isbn": "9788466314916"
     }
   }
 ]
