@@ -28,8 +28,7 @@
             "views": 995,
             "likes": 29,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 22.0
+            "shares": 0
           }
         }
       },
@@ -55,8 +54,7 @@
             "views": 111,
             "likes": 4,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 15.0
+            "shares": 0
           }
         }
       }
@@ -99,8 +97,7 @@
             "views": 1197,
             "likes": 22,
             "comments": 0,
-            "shares": 1,
-            "avg_watch_s": 15.0
+            "shares": 0
           }
         }
       },
@@ -126,8 +123,7 @@
             "views": 406,
             "likes": 7,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 22.0
+            "shares": 0
           }
         }
       }
@@ -136,7 +132,7 @@
       "views": 1867,
       "likes": 31,
       "comments": 0,
-      "shares": 1,
+      "shares": 0,
       "youtube_views": 1603,
       "updated": "2026-11-23"
     }
@@ -368,13 +364,13 @@
             "likes": 8,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 12.2,
+            "avg_watch_s": 12.1,
             "saves": 0,
-            "reach": 120
+            "reach": 121
           },
           "youtube": {
-            "views": 1487,
-            "likes": 49,
+            "views": 1493,
+            "likes": 50,
             "comments": 0,
             "shares": 0
           },
@@ -425,11 +421,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 4147,
-      "likes": 119,
+      "views": 4153,
+      "likes": 120,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2701,
+      "youtube_views": 2707,
       "updated": "2026-11-23"
     }
   },
@@ -459,7 +455,7 @@
             "reach": 109
           },
           "youtube": {
-            "views": 1437,
+            "views": 1456,
             "likes": 49,
             "comments": 0,
             "shares": 0
@@ -475,11 +471,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1575,
+      "views": 1594,
       "likes": 51,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1437,
+      "youtube_views": 1456,
       "updated": "2026-11-23"
     }
   },
@@ -509,17 +505,17 @@
             "reach": 82
           },
           "youtube": {
-            "views": 1248,
+            "views": 1250,
             "likes": 25,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 194,
+            "views": 197,
             "likes": 6,
             "comments": 0,
             "shares": 0,
-            "avg_watch_s": 5.9,
+            "avg_watch_s": 5.8,
             "reach": 181
           }
         }
@@ -543,13 +539,13 @@
             "reach": 110
           },
           "youtube": {
-            "views": 1116,
-            "likes": 19,
+            "views": 1345,
+            "likes": 23,
             "comments": 0,
             "shares": 0
           },
           "tiktok": {
-            "views": 199,
+            "views": 201,
             "likes": 11,
             "comments": 0,
             "shares": 0,
@@ -561,11 +557,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3008,
-      "likes": 68,
+      "views": 3244,
+      "likes": 72,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2364,
+      "youtube_views": 2595,
       "updated": "2026-11-23"
     }
   },
@@ -595,8 +591,8 @@
             "reach": 101
           },
           "youtube": {
-            "views": 1336,
-            "likes": 25,
+            "views": 1349,
+            "likes": 24,
             "comments": 1,
             "shares": 0
           }
@@ -605,11 +601,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1455,
-      "likes": 28,
+      "views": 1468,
+      "likes": 27,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1336,
+      "youtube_views": 1349,
       "updated": "2026-11-23"
     }
   },
@@ -639,7 +635,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1114,
+            "views": 1117,
             "likes": 24,
             "comments": 1,
             "shares": 0
@@ -649,11 +645,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1114,
+      "views": 1117,
       "likes": 24,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1114,
+      "youtube_views": 1117,
       "updated": "2026-11-23"
     }
   },
@@ -683,7 +679,7 @@
             "reach": 105
           },
           "youtube": {
-            "views": 1166,
+            "views": 1181,
             "likes": 18,
             "comments": 1,
             "shares": 0
@@ -693,11 +689,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1303,
+      "views": 1318,
       "likes": 22,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1166,
+      "youtube_views": 1181,
       "updated": "2026-11-23"
     }
   },
@@ -721,13 +717,13 @@
         ],
         "stats": {
           "instagram": {
-            "views": 9,
+            "views": 25,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 5.1,
+            "avg_watch_s": 5.2,
             "saves": 0,
-            "reach": 9
+            "reach": 24
           },
           "youtube": {
             "views": 0,
@@ -740,7 +736,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 9,
+      "views": 25,
       "likes": 0,
       "comments": 1,
       "shares": 0,
@@ -762,10 +758,35 @@
         "request_id": "e27cd341dfe84f779ef8c826b5f96867",
         "job_id": "807c3bf084db4e9aaa9d743936d5e05e",
         "failed": [],
-        "at": "2026-11-22T01:50:39+00:00"
+        "at": "2026-11-22T01:50:39+00:00",
+        "stats": {
+          "instagram": {
+            "views": 127,
+            "likes": 2,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 12.4,
+            "saves": 0,
+            "reach": 99
+          },
+          "youtube": {
+            "views": 1018,
+            "likes": 15,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1145,
+      "likes": 17,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1018,
+      "updated": "2026-11-23"
+    }
   },
   {
     "date": "2026-11-22",
@@ -781,7 +802,24 @@
         "request_id": "742885099f694d83b209930bfe1257dd",
         "job_id": "8bc3af2e6e1d406f86d13aa9a1c7f695",
         "failed": [],
-        "at": "2026-11-22T06:54:20+00:00"
+        "at": "2026-11-22T06:54:20+00:00",
+        "stats": {
+          "instagram": {
+            "views": 828,
+            "likes": 27,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 13.2,
+            "saves": 3,
+            "reach": 621
+          },
+          "youtube": {
+            "views": 1082,
+            "likes": 32,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -789,6 +827,14 @@
       "author": "William Peter Blatty",
       "pitch": "La novela que nació de un caso real de 1949 y aterrorizó al mundo.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1910,
+      "likes": 59,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1082,
+      "updated": "2026-11-23"
     }
   },
   {
