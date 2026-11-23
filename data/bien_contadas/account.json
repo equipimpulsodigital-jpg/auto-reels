@@ -15,29 +15,29 @@
     {
       "date": "2026-11-23",
       "instagram": 3,
-      "youtube": 31,
-      "tiktok": 0
+      "youtube": 41,
+      "tiktok": 1
     }
   ],
   "latest": {
     "instagram": {
       "followers": 3,
-      "reach": 6596,
-      "views": 8359,
-      "impressions": 8359,
-      "profileViews": 90
+      "reach": 8802,
+      "views": 11025,
+      "impressions": 11025,
+      "profileViews": 112
     },
     "youtube": {
-      "followers": 31,
+      "followers": 41,
       "reach": 0,
-      "impressions": 5385,
+      "impressions": 11162,
       "profileViews": 0
     },
     "tiktok": {
-      "followers": 0,
-      "reach": 1118,
-      "impressions": 2229,
-      "profileViews": 7
+      "followers": 1,
+      "reach": 2014,
+      "impressions": 2648,
+      "profileViews": 11
     }
   }
 }
