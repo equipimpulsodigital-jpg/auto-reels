@@ -1056,5 +1056,62 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "caso_famoso",
+    "topic": "Anneliese Michel (1976), la historia real de «El exorcismo de Emily Rose»: 67 exorcismos, muerte por desnutrición y condena a padres y sacerdotes",
+    "series_title": "La chica real de El exorcismo de Emily Rose",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T10:01:00+01:00",
+        "request_id": "b04c0d66d30946e8873fa92c3ed7eeae",
+        "job_id": "9ca08ebbdb974c80b5b55c86ed9f4a0c",
+        "failed": [],
+        "at": "2026-11-24T21:51:03+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "caso_sin_resolver",
+    "topic": "Asesino del Zodiaco (California, 1969): el código Z13 «Mi nombre es…» de abril de 1970, nunca descifrado, frente al 408 resuelto por los Harden y el 340 resuelto en 2020",
+    "series_title": "El código del Zodiaco que esconde su nombre",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T12:02:00+01:00",
+        "request_id": "70e5c85d09614bc3862b13d6ab59bb31",
+        "job_id": "ebf3bc853ac94f5d805933b3e833d258",
+        "failed": [],
+        "at": "2026-11-24T22:07:20+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "enigma",
+    "topic": "El Mary Celeste (1872): el barco fantasma hallado sin sus 10 ocupantes, el mito del té caliente inventado por Conan Doyle y la teoría de los barriles de alcohol",
+    "series_title": "El Mary Celeste: lo que la leyenda no te contó",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T16:08:00+01:00",
+        "request_id": "482f09782dab48d0b3c3d4aa7d450c97",
+        "job_id": "66f78160bae44030a4141480a579e111",
+        "failed": [],
+        "at": "2026-11-24T22:22:36+00:00"
+      }
+    ],
+    "book": null
   }
 ]
