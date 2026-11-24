@@ -16,19 +16,17 @@
         "at": "2026-11-19T15:03:28+00:00",
         "stats": {
           "instagram": {
-            "views": 1697,
-            "likes": 69,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 1,
-            "avg_watch_s": 20.4,
-            "saves": 4,
-            "reach": 1322
+            "shares": 0
           },
           "youtube": {
             "views": 1282,
             "likes": 32,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 22.0
           }
         }
       }
@@ -42,10 +40,10 @@
       "pitch": "Te hará escuchar mejor… y darte cuenta de todo lo que te pierdes cuando no lo haces."
     },
     "stats": {
-      "views": 2979,
-      "likes": 101,
+      "views": 1282,
+      "likes": 32,
       "comments": 0,
-      "shares": 1,
+      "shares": 0,
       "youtube_views": 1282,
       "updated": "2026-11-24"
     }
@@ -67,19 +65,17 @@
         "at": "2026-11-19T15:11:18+00:00",
         "stats": {
           "instagram": {
-            "views": 151,
-            "likes": 4,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 9.6,
-            "saves": 1,
-            "reach": 132
+            "shares": 0
           },
           "youtube": {
             "views": 1278,
             "likes": 31,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 19.0
           }
         }
       }
@@ -91,8 +87,8 @@
       "pitch": "Por qué con algunas personas conectas al instante y cómo aprender a hacerlo tú también."
     },
     "stats": {
-      "views": 1429,
-      "likes": 35,
+      "views": 1278,
+      "likes": 31,
       "comments": 0,
       "shares": 0,
       "youtube_views": 1278,
@@ -116,19 +112,17 @@
         "at": "2026-11-19T15:19:44+00:00",
         "stats": {
           "instagram": {
-            "views": 1206,
-            "likes": 30,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 1,
-            "avg_watch_s": 16.5,
-            "saves": 0,
-            "reach": 1025
+            "shares": 0
           },
           "youtube": {
             "views": 1335,
             "likes": 27,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 17.0
           }
         }
       }
@@ -142,10 +136,10 @@
       "pitch": "Seligman propone una mirada al bienestar que va mucho más allá de simplemente estar contento."
     },
     "stats": {
-      "views": 2541,
-      "likes": 57,
+      "views": 1335,
+      "likes": 27,
       "comments": 0,
-      "shares": 1,
+      "shares": 0,
       "youtube_views": 1335,
       "updated": "2026-11-24"
     }
@@ -173,29 +167,28 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1159,
+            "views": 1160,
             "likes": 20,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 17.0
           },
           "tiktok": {
-            "views": 197,
-            "likes": 5,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 6.1,
-            "reach": 194
+            "shares": 0
           }
         }
       }
     ],
     "book": null,
     "stats": {
-      "views": 1356,
-      "likes": 25,
+      "views": 1160,
+      "likes": 20,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1159,
+      "youtube_views": 1160,
       "updated": "2026-11-24"
     }
   },
@@ -216,19 +209,17 @@
         "at": "2026-11-19T21:14:35+00:00",
         "stats": {
           "instagram": {
-            "views": 1522,
-            "likes": 41,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 16.4,
-            "saves": 7,
-            "reach": 1238
+            "shares": 0
           },
           "youtube": {
             "views": 1257,
             "likes": 22,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 15.0
           },
           "tiktok": {
             "views": 206,
@@ -248,8 +239,8 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2985,
-      "likes": 74,
+      "views": 1463,
+      "likes": 33,
       "comments": 0,
       "shares": 0,
       "youtube_views": 1257,
@@ -273,19 +264,17 @@
         "at": "2026-11-20T11:05:33+00:00",
         "stats": {
           "instagram": {
-            "views": 1309,
-            "likes": 18,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 1,
-            "avg_watch_s": 14.7,
-            "saves": 0,
-            "reach": 1100
+            "shares": 0
           },
           "youtube": {
             "views": 1,
             "likes": 0,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 15.0
           },
           "tiktok": {
             "views": 204,
@@ -300,10 +289,10 @@
     ],
     "book": null,
     "stats": {
-      "views": 1514,
-      "likes": 27,
+      "views": 205,
+      "likes": 9,
       "comments": 0,
-      "shares": 1,
+      "shares": 0,
       "youtube_views": 1,
       "updated": "2026-11-24"
     }
@@ -325,19 +314,17 @@
         "at": "2026-11-20T11:12:52+00:00",
         "stats": {
           "instagram": {
-            "views": 1602,
-            "likes": 37,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 22.0,
-            "saves": 3,
-            "reach": 1284
+            "shares": 0
           },
           "youtube": {
             "views": 2,
             "likes": 0,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 14.0
           },
           "tiktok": {
             "views": 195,
@@ -357,8 +344,8 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1799,
-      "likes": 50,
+      "views": 197,
+      "likes": 13,
       "comments": 0,
       "shares": 0,
       "youtube_views": 2,
@@ -382,19 +369,17 @@
         "at": "2026-11-20T11:20:20+00:00",
         "stats": {
           "instagram": {
-            "views": 147,
-            "likes": 2,
-            "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 10.2,
-            "saves": 0,
-            "reach": 135
-          },
-          "youtube": {
-            "views": 1215,
-            "likes": 16,
+            "views": 0,
+            "likes": 0,
             "comments": 0,
             "shares": 0
+          },
+          "youtube": {
+            "views": 1219,
+            "likes": 16,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 17.0
           },
           "tiktok": {
             "views": 238,
@@ -414,11 +399,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1600,
-      "likes": 33,
+      "views": 1457,
+      "likes": 31,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1215,
+      "youtube_views": 1219,
       "updated": "2026-11-24"
     }
   },
@@ -439,19 +424,17 @@
         "at": "2026-11-21T08:57:44+00:00",
         "stats": {
           "instagram": {
-            "views": 1325,
-            "likes": 30,
-            "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 17.8,
-            "saves": 0,
-            "reach": 1135
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
             "views": 1182,
             "likes": 17,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 20.0
           },
           "tiktok": {
             "views": 707,
@@ -473,9 +456,9 @@
       "isbn": "9788416222278"
     },
     "stats": {
-      "views": 3214,
-      "likes": 85,
-      "comments": 3,
+      "views": 1889,
+      "likes": 55,
+      "comments": 2,
       "shares": 0,
       "youtube_views": 1182,
       "updated": "2026-11-24"
@@ -498,19 +481,17 @@
         "at": "2026-11-21T09:04:46+00:00",
         "stats": {
           "instagram": {
-            "views": 1560,
-            "likes": 37,
-            "comments": 1,
-            "shares": 1,
-            "avg_watch_s": 18.1,
-            "saves": 9,
-            "reach": 1273
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
-            "views": 1237,
+            "views": 1240,
             "likes": 20,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 20.0
           },
           "tiktok": {
             "views": 308,
@@ -525,11 +506,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 3105,
-      "likes": 75,
-      "comments": 3,
-      "shares": 1,
-      "youtube_views": 1237,
+      "views": 1548,
+      "likes": 38,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1240,
       "updated": "2026-11-24"
     }
   },
@@ -550,19 +531,17 @@
         "at": "2026-11-21T09:12:06+00:00",
         "stats": {
           "instagram": {
-            "views": 1500,
-            "likes": 44,
-            "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 19.9,
-            "saves": 2,
-            "reach": 1236
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
-            "views": 1184,
+            "views": 1186,
             "likes": 22,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 16.0
           },
           "tiktok": {
             "views": 528,
@@ -581,11 +560,11 @@
       "pitch": "El clásico que explica por qué recordar un nombre abre más puertas que cualquier frase ingeniosa."
     },
     "stats": {
-      "views": 3212,
-      "likes": 105,
-      "comments": 3,
+      "views": 1714,
+      "likes": 61,
+      "comments": 2,
       "shares": 0,
-      "youtube_views": 1184,
+      "youtube_views": 1186,
       "updated": "2026-11-24"
     }
   },
@@ -606,19 +585,17 @@
         "at": "2026-11-21T09:18:42+00:00",
         "stats": {
           "instagram": {
-            "views": 1500,
-            "likes": 32,
-            "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 16.6,
-            "saves": 5,
-            "reach": 1240
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
-            "views": 1215,
+            "views": 1217,
             "likes": 22,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 36.0
           },
           "tiktok": {
             "views": 157,
@@ -639,11 +616,11 @@
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
     },
     "stats": {
-      "views": 2872,
-      "likes": 57,
-      "comments": 3,
+      "views": 1374,
+      "likes": 25,
+      "comments": 2,
       "shares": 0,
-      "youtube_views": 1215,
+      "youtube_views": 1217,
       "updated": "2026-11-24"
     }
   },
@@ -664,16 +641,13 @@
         "at": "2026-11-21T22:28:25+00:00",
         "stats": {
           "instagram": {
-            "views": 254,
-            "likes": 1,
-            "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 9.7,
-            "saves": 0,
-            "reach": 226
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
-            "views": 491,
+            "views": 562,
             "likes": 2,
             "comments": 1,
             "shares": 0
@@ -691,11 +665,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 908,
-      "likes": 12,
-      "comments": 3,
+      "views": 725,
+      "likes": 11,
+      "comments": 2,
       "shares": 0,
-      "youtube_views": 491,
+      "youtube_views": 562,
       "updated": "2026-11-24"
     }
   },
@@ -716,13 +690,10 @@
         "at": "2026-11-22T01:23:46+00:00",
         "stats": {
           "instagram": {
-            "views": 204,
-            "likes": 1,
-            "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 11.4,
-            "saves": 0,
-            "reach": 171
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
             "views": 1203,
@@ -743,9 +714,9 @@
     ],
     "book": null,
     "stats": {
-      "views": 1604,
-      "likes": 33,
-      "comments": 3,
+      "views": 1400,
+      "likes": 32,
+      "comments": 2,
       "shares": 0,
       "youtube_views": 1203,
       "updated": "2026-11-24"
@@ -768,26 +739,23 @@
         "at": "2026-11-22T01:34:42+00:00",
         "stats": {
           "instagram": {
-            "views": 464,
-            "likes": 8,
-            "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 14.1,
-            "saves": 0,
-            "reach": 360
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
-            "views": 1245,
+            "views": 1246,
             "likes": 17,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 81,
+            "views": 82,
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 5.3,
+            "avg_watch_s": 5.2,
             "reach": 6
           }
         }
@@ -802,11 +770,11 @@
       "isbn": "9788466314916"
     },
     "stats": {
-      "views": 1790,
-      "likes": 26,
-      "comments": 3,
+      "views": 1328,
+      "likes": 18,
+      "comments": 2,
       "shares": 0,
-      "youtube_views": 1245,
+      "youtube_views": 1246,
       "updated": "2026-11-24"
     }
   },
@@ -827,17 +795,14 @@
         "at": "2026-11-22T01:45:59+00:00",
         "stats": {
           "instagram": {
-            "views": 1488,
-            "likes": 23,
-            "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 14.9,
-            "saves": 3,
-            "reach": 1242
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
-            "views": 1102,
-            "likes": 19,
+            "views": 1147,
+            "likes": 20,
             "comments": 1,
             "shares": 0
           },
@@ -860,11 +825,11 @@
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
     },
     "stats": {
-      "views": 2591,
-      "likes": 43,
-      "comments": 3,
+      "views": 1148,
+      "likes": 21,
+      "comments": 2,
       "shares": 0,
-      "youtube_views": 1102,
+      "youtube_views": 1147,
       "updated": "2026-11-24"
     }
   },
@@ -888,13 +853,10 @@
         ],
         "stats": {
           "instagram": {
-            "views": 1437,
-            "likes": 31,
-            "comments": 1,
-            "shares": 1,
-            "avg_watch_s": 14.9,
-            "saves": 4,
-            "reach": 1193
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
             "views": 0,
@@ -915,10 +877,10 @@
     ],
     "book": null,
     "stats": {
-      "views": 1439,
-      "likes": 32,
-      "comments": 2,
-      "shares": 1,
+      "views": 2,
+      "likes": 1,
+      "comments": 1,
+      "shares": 0,
       "youtube_views": 0,
       "updated": "2026-11-24"
     }
@@ -940,13 +902,10 @@
         "at": "2026-11-22T07:11:31+00:00",
         "stats": {
           "instagram": {
-            "views": 1531,
-            "likes": 54,
-            "comments": 1,
-            "shares": 1,
-            "avg_watch_s": 16.2,
-            "saves": 3,
-            "reach": 1214
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
             "views": 1040,
@@ -955,24 +914,24 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 3,
+            "views": 4,
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 6.6,
-            "reach": 0
+            "avg_watch_s": 5.3,
+            "reach": 1
           }
         }
       }
     ],
     "book": null,
     "stats": {
-      "views": 2574,
-      "likes": 66,
-      "comments": 3,
-      "shares": 1,
+      "views": 1044,
+      "likes": 12,
+      "comments": 2,
+      "shares": 0,
       "youtube_views": 1040,
-      "updated": "2026-11-23"
+      "updated": "2026-11-24"
     }
   },
   {
@@ -992,16 +951,13 @@
         "at": "2026-11-22T07:24:56+00:00",
         "stats": {
           "instagram": {
-            "views": 1397,
-            "likes": 31,
-            "comments": 1,
-            "shares": 2,
-            "avg_watch_s": 14.0,
-            "saves": 1,
-            "reach": 1171
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0
           },
           "youtube": {
-            "views": 1236,
+            "views": 1239,
             "likes": 20,
             "comments": 1,
             "shares": 0
@@ -1012,7 +968,7 @@
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 3.2,
-            "reach": 0
+            "reach": 1
           }
         }
       }
@@ -1024,12 +980,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2634,
-      "likes": 52,
-      "comments": 3,
-      "shares": 2,
-      "youtube_views": 1236,
-      "updated": "2026-11-23"
+      "views": 1240,
+      "likes": 21,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1239,
+      "updated": "2026-11-24"
     }
   },
   {
