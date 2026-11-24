@@ -1088,5 +1088,62 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "cuenta_atras",
+    "topic": "Qué pasaría hora a hora si estallara una guerra nuclear: alerta de 30 minutos, destello, onda, ceniza radiactiva, quedarse 24 h dentro y el giro del invierno nuclear: 5.000 millones de muertos por hambre aunque a tu ciudad no le caiga ninguna bomba (Xia et al. 2022).",
+    "series_title": "¿Y si estallara hoy una guerra nuclear?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T09:55:00+01:00",
+        "request_id": "af41ecece7144e5396f8fc52d54c6cde",
+        "job_id": "475ea861b6064655a168fc095e82db23",
+        "failed": [],
+        "at": "2026-11-24T21:47:16+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "y_si_humanidad",
+    "topic": "Qué pasaría día a día si mañana dejaran de funcionar todos los antibióticos: el rasguño de un niño, cesáreas y operaciones canceladas, quimios y trasplantes parados, la neumonía de 1930 y el giro de que las superbacterias ya matan a un millón al año.",
+    "series_title": "¿Y si los antibióticos dejaran de funcionar?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T11:59:00+01:00",
+        "request_id": "96e5baa5bed048a2a5263d3c55653f89",
+        "job_id": "3d20ef5fd8094b90a7e4481d28772d48",
+        "failed": [],
+        "at": "2026-11-24T21:59:17+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "y_si_tu",
+    "topic": "Qué te pasaría segundo a segundo si tu corazón se parara en plena calle: 10 segundos de conciencia, la respiración agónica que engaña, las neuronas que mueren al minuto 4, el 10 % por minuto sin masaje y el giro de Audrey Schoeman, 6 horas sin latido en el Pirineo (2019).",
+    "series_title": "¿Y si tu corazón se parara ahora mismo?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T16:09:00+01:00",
+        "request_id": "0cc4eb57f4804bf8a367d57a22a09448",
+        "job_id": "b3ac5aa60bd64a6ca44403d2bb131344",
+        "failed": [],
+        "at": "2026-11-24T22:15:20+00:00"
+      }
+    ],
+    "book": null
   }
 ]
