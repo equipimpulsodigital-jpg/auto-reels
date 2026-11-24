@@ -262,5 +262,5 @@ channels:
 
 # Caducidades: el sistema avisa 15 días antes (formato AAAA-MM-DD). Rellena las fechas reales.
 expirations:
-  clave_claude_github (CLAUDE_CODE_OAUTH_TOKEN, renovar con `claude setup-token`): "2027-11-16"   # creada hacia el 16/11/2026, dura ~1 año
+  clave_claude_github (CLAUDE_CODE_OAUTH_TOKEN, renovar con `claude setup-token`): "2027-11-24"   # renovada el 24/11/2026, dura ~1 año
   # la clave de GitHub de cron-job.org no caduca
