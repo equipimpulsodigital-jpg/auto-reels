@@ -1373,5 +1373,67 @@
       "cover": "https://covers.openlibrary.org/b/id/3353863-M.jpg",
       "isbn": "9788466314916"
     }
+  },
+  {
+    "date": "2026-11-24",
+    "format": "antes_despues",
+    "topic": "Luz tenue y pupilas dilatadas (Hess, 1965): las pupilas grandes resultan más atractivas; truco: quedar al anochecer con luz baja; payoff de la belladona",
+    "series_title": "La bombilla que enfría tu primera cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T09:29:00+01:00",
+        "request_id": "82b0930909bb4def893e275b33e29be1",
+        "job_id": "7d459542c35049bba2004e98c4d37b1b",
+        "failed": [],
+        "at": "2026-11-24T21:47:11+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "red_flag",
+    "topic": "Love bombing (Strutzenberg et al., 2017: asociado a narcisismo y baja autoestima); red flag: intensidad desmedida al principio; prueba: pedir ir más despacio y ver cómo reacciona",
+    "series_title": "Tu alma gemela en la segunda cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T11:39:00+01:00",
+        "request_id": "c46dd8fbf8da4b5ab17719893ce47d94",
+        "job_id": "83c2c7ada783498a86d11216f02bf6c6",
+        "failed": [],
+        "at": "2026-11-24T22:00:44+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "antes_despues",
+    "topic": "Postura abierta frente a cerrada en una cita (Vacharkulksemsuk et al., 2016, PNAS: citas rápidas y Tinder); truco: descruzar los brazos, abrir los hombros e inclinarse hacia la otra persona",
+    "series_title": "Los brazos cruzados que rechazan a alguien",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T14:00:00+01:00",
+        "request_id": "0a87d3876bf7407b913e41449ca186b4",
+        "job_id": "c4373242527e424f8ea6e422ff76b99d",
+        "failed": [],
+        "at": "2026-11-24T22:15:36+00:00"
+      }
+    ],
+    "book": {
+      "title": "El lenguaje del cuerpo",
+      "author": "Allan Pease y Barbara Pease",
+      "pitch": "Un manual divertidísimo para leer los gestos de los demás y controlar los tuyos.",
+      "looked_up": true
+    }
   }
 ]
