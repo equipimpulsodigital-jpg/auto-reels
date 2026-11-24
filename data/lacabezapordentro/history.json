@@ -665,8 +665,8 @@
             "reach": 116
           },
           "youtube": {
-            "views": 1141,
-            "likes": 21,
+            "views": 1193,
+            "likes": 24,
             "comments": 1,
             "shares": 0
           }
@@ -680,11 +680,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1276,
-      "likes": 21,
+      "views": 1328,
+      "likes": 24,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1141,
+      "youtube_views": 1193,
       "updated": "2026-11-24"
     }
   },
@@ -711,10 +711,10 @@
             "shares": 0,
             "avg_watch_s": 10.2,
             "saves": 0,
-            "reach": 163
+            "reach": 164
           },
           "youtube": {
-            "views": 1585,
+            "views": 1628,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -729,11 +729,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1790,
+      "views": 1833,
       "likes": 24,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1585,
+      "youtube_views": 1628,
       "updated": "2026-11-24"
     }
   },
@@ -763,8 +763,8 @@
             "reach": 112
           },
           "youtube": {
-            "views": 623,
-            "likes": 15,
+            "views": 940,
+            "likes": 17,
             "comments": 1,
             "shares": 0
           }
@@ -780,11 +780,11 @@
       "isbn": "9788411001298"
     },
     "stats": {
-      "views": 748,
-      "likes": 15,
+      "views": 1065,
+      "likes": 17,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 623,
+      "youtube_views": 940,
       "updated": "2026-11-24"
     }
   },
@@ -814,7 +814,7 @@
             "reach": 116
           },
           "youtube": {
-            "views": 1128,
+            "views": 1150,
             "likes": 24,
             "comments": 1,
             "shares": 0
@@ -824,11 +824,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1276,
+      "views": 1298,
       "likes": 25,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1128,
+      "youtube_views": 1150,
       "updated": "2026-11-24"
     }
   },
@@ -849,17 +849,17 @@
         "at": "2026-11-22T07:07:19+00:00",
         "stats": {
           "instagram": {
-            "views": 152,
+            "views": 154,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 12.5,
+            "avg_watch_s": 12.6,
             "saves": 0,
-            "reach": 123
+            "reach": 125
           },
           "youtube": {
-            "views": 651,
-            "likes": 17,
+            "views": 904,
+            "likes": 21,
             "comments": 1,
             "shares": 0
           }
@@ -872,11 +872,11 @@
       "pitch": "El Nobel que destapó los atajos con los que tu cerebro decide sin preguntarte."
     },
     "stats": {
-      "views": 803,
-      "likes": 17,
+      "views": 1058,
+      "likes": 21,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 651,
+      "youtube_views": 904,
       "updated": "2026-11-24"
     }
   },
@@ -894,10 +894,35 @@
         "request_id": "1389d889df094f1b8b72b98715dc6751",
         "job_id": "71e2fb4c268143749cbe50532067131b",
         "failed": [],
-        "at": "2026-11-22T07:18:41+00:00"
+        "at": "2026-11-22T07:18:41+00:00",
+        "stats": {
+          "instagram": {
+            "views": 132,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 7.5,
+            "saves": 0,
+            "reach": 115
+          },
+          "youtube": {
+            "views": 1025,
+            "likes": 18,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1157,
+      "likes": 19,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1025,
+      "updated": "2026-11-24"
+    }
   },
   {
     "date": "2026-11-22",
@@ -913,10 +938,35 @@
         "request_id": "2980258e621e488b89ca203d95b53927",
         "job_id": "d3c59e1dd37342c6b29b981da8050932",
         "failed": [],
-        "at": "2026-11-22T07:29:53+00:00"
+        "at": "2026-11-22T07:29:53+00:00",
+        "stats": {
+          "instagram": {
+            "views": 139,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 9.6,
+            "saves": 0,
+            "reach": 115
+          },
+          "youtube": {
+            "views": 959,
+            "likes": 23,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1098,
+      "likes": 23,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 959,
+      "updated": "2026-11-24"
+    }
   },
   {
     "date": "2026-11-22",
@@ -932,7 +982,24 @@
         "request_id": "70cd57a8d31c4126bc5676ec8aa8294b",
         "job_id": "4050bc73167b42e1ad5f470737ffa1bd",
         "failed": [],
-        "at": "2026-11-22T07:40:46+00:00"
+        "at": "2026-11-22T07:40:46+00:00",
+        "stats": {
+          "instagram": {
+            "views": 186,
+            "likes": 2,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 12.0,
+            "saves": 0,
+            "reach": 140
+          },
+          "youtube": {
+            "views": 912,
+            "likes": 9,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -940,6 +1007,14 @@
       "author": "Daniel Kahneman",
       "pitch": "El Nobel que destapa cuántas decisiones toma tu mente antes de que tú te enteres.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1098,
+      "likes": 11,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 912,
+      "updated": "2026-11-24"
     }
   },
   {
@@ -956,7 +1031,24 @@
         "request_id": "92fe50c163c74b61b8b163c1b5fe33db",
         "job_id": "8431c12826d74d5791e5d2f2671675fb",
         "failed": [],
-        "at": "2026-11-22T07:51:36+00:00"
+        "at": "2026-11-22T07:51:36+00:00",
+        "stats": {
+          "instagram": {
+            "views": 171,
+            "likes": 1,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 16.4,
+            "saves": 0,
+            "reach": 127
+          },
+          "youtube": {
+            "views": 1005,
+            "likes": 17,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -964,6 +1056,14 @@
       "author": "Chip Heath y Dan Heath",
       "pitch": "Por qué unas ideas se entienden y recuerdan y otras se pierden, explicado con historias.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1176,
+      "likes": 18,
+      "comments": 2,
+      "shares": 1,
+      "youtube_views": 1005,
+      "updated": "2026-11-24"
     }
   },
   {
