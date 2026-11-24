@@ -1319,5 +1319,62 @@
       "pitch": "La historia global de la gripe de 1918, contada a través de quienes la sufrieron.",
       "looked_up": true
     }
+  },
+  {
+    "date": "2026-11-24",
+    "format": "punto_inflexion",
+    "topic": "Síndrome del aceite tóxico (1981): primer niño muerto, el «bichito» del ministro Sancho Rof, aceite de colza industrial en garrafas de mercadillo, más de 300 muertos y 20.000 enfermos, la teoría de los tomates y la molécula nunca identificada.",
+    "series_title": "El aceite que envenenó a España",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T09:54:00+01:00",
+        "request_id": "6a08efe0fe0a4c868b88fcf0b8ce76fd",
+        "job_id": "24b580cb0d914fad9f0c512968eb2839",
+        "failed": [],
+        "at": "2026-11-24T21:46:41+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "crimen_historico",
+    "topic": "Crimen de Los Galindos (Paradas, Sevilla, 22-VII-1975): cinco muertos en un cortijo, incendio en el pajar, escena contaminada, culpa inicial al tractorista José González descartada por los forenses y prescripción en 1995 sin culpables.",
+    "series_title": "Los Galindos: el cortijo de los cinco muertos",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T11:55:00+01:00",
+        "request_id": "e7f8dbdd9d13405da80570a1bc54213f",
+        "job_id": "4141e8e88e374cbc9eed9fe284b3df6c",
+        "failed": [],
+        "at": "2026-11-24T21:59:40+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "personaje_olvidado",
+    "topic": "Juan de la Cierva: el autogiro de Getafe (1923), su ayuda para alquilar el Dragon Rapide de Franco (1936) y su muerte en el accidente de KLM en Croydon entre la niebla (9-XII-1936).",
+    "series_title": "Juan de la Cierva: el inventor que voló hacia la guerra",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T16:02:00+01:00",
+        "request_id": "4cb7b00fc5dc41cd9868a84cae190107",
+        "job_id": "e752ef40595349de8fecbe18ccd7fec3",
+        "failed": [],
+        "at": "2026-11-24T22:14:03+00:00"
+      }
+    ],
+    "book": null
   }
 ]
