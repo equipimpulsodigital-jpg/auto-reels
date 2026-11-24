@@ -35,7 +35,8 @@
             "views": 1138,
             "likes": 24,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 26.0
           }
         }
       }
@@ -86,7 +87,8 @@
             "views": 662,
             "likes": 10,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 33.0
           }
         }
       },
@@ -112,7 +114,8 @@
             "views": 456,
             "likes": 8,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 17.0
           }
         }
       }
@@ -163,7 +166,8 @@
             "views": 291,
             "likes": 5,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 23.0
           }
         }
       },
@@ -189,7 +193,8 @@
             "views": 1326,
             "likes": 24,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 20.0
           }
         }
       }
@@ -238,7 +243,8 @@
             "views": 1049,
             "likes": 16,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 17.0
           }
         }
       },
@@ -264,7 +270,8 @@
             "views": 1228,
             "likes": 19,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 19.0
           }
         }
       }
@@ -315,7 +322,8 @@
             "views": 1223,
             "likes": 22,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 15.0
           }
         }
       },
@@ -341,7 +349,8 @@
             "views": 1119,
             "likes": 26,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 30.0
           }
         }
       }
@@ -381,10 +390,11 @@
             "reach": 130
           },
           "youtube": {
-            "views": 1029,
+            "views": 1030,
             "likes": 28,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 27.0
           }
         }
       },
@@ -407,10 +417,11 @@
             "reach": 122
           },
           "youtube": {
-            "views": 1195,
+            "views": 1197,
             "likes": 27,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 17.0
           },
           "tiktok": {
             "views": 749,
@@ -430,11 +441,11 @@
       "pitch": "Un error judicial tan estremecedor que todavía hoy cuesta creer que ocurriera de verdad."
     },
     "stats": {
-      "views": 3261,
+      "views": 3264,
       "likes": 65,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 2224,
+      "youtube_views": 2227,
       "updated": "2026-11-24"
     }
   },
@@ -467,7 +478,8 @@
             "views": 1158,
             "likes": 31,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 25.0
           },
           "tiktok": {
             "views": 215,
@@ -501,7 +513,8 @@
             "views": 498,
             "likes": 12,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 19.0
           },
           "tiktok": {
             "views": 232,
