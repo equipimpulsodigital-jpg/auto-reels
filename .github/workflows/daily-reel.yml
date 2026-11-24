@@ -48,6 +48,7 @@ on:
 
 permissions:
   contents: write
+  issues: write      # aviso inmediato si la clave de Claude deja de funcionar
   actions: read      # para descargar los vídeos ya generados al reintentar una subida
 
 jobs:
@@ -179,7 +180,29 @@ jobs:
           fi
           # antes de escribir la historia de cada noche, se miran las visualizaciones (el guionista aprende de ellas)
           if [ "$HORIZON" = "44" ]; then python -m reels --stats --channel "$CH" || true; fi
-          python -m reels --channel "$CH" "${ARGS[@]}"
+          set -o pipefail
+          python -m reels --channel "$CH" "${ARGS[@]}" 2>&1 | tee claude_run.log
+
+      - name: Aviso si la clave de Claude no funciona
+        if: always() && steps.todo.outputs.go == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f claude_run.log ] || exit 0
+          T="🔑 auto-reels: la clave de Claude no funciona"
+          open=$(gh issue list --label clave --state open --json number -q '.[0].number' || true)
+          if grep -qiE "OAuth token (revoked|expired)|Failed to authenticate|invalid.*(api key|token)" claude_run.log; then
+            sleep $((RANDOM % 25))
+            open=$(gh issue list --label clave --state open --json number -q '.[0].number' || true)
+            [ -n "$open" ] && exit 0
+            gh issue create --title "$T" --label clave --body "GitHub no puede usar Claude para escribir los guiones (\`$(grep -oiE 'OAuth token [a-z]+|Failed to authenticate[^.]*' claude_run.log | head -1)\`). **Hasta que se arregle no se generan vídeos nuevos.**
+
+          Cómo arreglarlo: en Claude Code, \`! claude setup-token\` y después \`! gh secret set CLAUDE_CODE_OAUTH_TOKEN --repo ${{ github.repository }}\` (pega la clave). Luego Actions → Episodio diario → modo **programar**.
+
+          @${{ github.repository_owner }}"
+          elif [ -n "$open" ] && grep -q "Guion listo\|\[OK" claude_run.log; then
+            gh issue close "$open" --comment "✅ Claude vuelve a funcionar." || true
+          fi
 
       - name: Vista previa (fotogramas)
         if: always() && steps.todo.outputs.go == 'true'
