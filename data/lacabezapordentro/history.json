@@ -78,7 +78,8 @@
             "views": 1363,
             "likes": 32,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 18.0
           }
         }
       }
@@ -129,7 +130,8 @@
             "views": 1275,
             "likes": 20,
             "comments": 0,
-            "shares": 0
+            "shares": 1,
+            "avg_watch_s": 23.0
           }
         }
       }
@@ -144,7 +146,7 @@
       "views": 1495,
       "likes": 23,
       "comments": 0,
-      "shares": 0,
+      "shares": 1,
       "youtube_views": 1275,
       "updated": "2026-11-24"
     }
@@ -172,10 +174,11 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1201,
-            "likes": 14,
+            "views": 1203,
+            "likes": 15,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 16.0
           }
         }
       }
@@ -187,11 +190,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1201,
-      "likes": 14,
+      "views": 1203,
+      "likes": 15,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1201,
+      "youtube_views": 1203,
       "updated": "2026-11-24"
     }
   },
@@ -224,7 +227,8 @@
             "views": 1384,
             "likes": 13,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 16.0
           }
         }
       }
@@ -275,7 +279,8 @@
             "views": 30,
             "likes": 2,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 23.0
           }
         }
       }
@@ -325,7 +330,8 @@
             "views": 5,
             "likes": 2,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 7.0
           }
         }
       }
@@ -366,10 +372,11 @@
             "reach": 112
           },
           "youtube": {
-            "views": 1135,
+            "views": 1142,
             "likes": 22,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 30.0
           }
         }
       }
@@ -382,11 +389,11 @@
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
     },
     "stats": {
-      "views": 1271,
+      "views": 1278,
       "likes": 23,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1135,
+      "youtube_views": 1142,
       "updated": "2026-11-24"
     }
   },
@@ -416,10 +423,11 @@
             "reach": 136
           },
           "youtube": {
-            "views": 1426,
+            "views": 1428,
             "likes": 29,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 29.0
           }
         }
       }
@@ -431,11 +439,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1617,
+      "views": 1619,
       "likes": 31,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1426,
+      "youtube_views": 1428,
       "updated": "2026-11-24"
     }
   },
@@ -465,10 +473,11 @@
             "reach": 132
           },
           "youtube": {
-            "views": 1151,
+            "views": 1155,
             "likes": 12,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 20.0
           }
         }
       }
@@ -480,11 +489,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1308,
+      "views": 1312,
       "likes": 13,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1151,
+      "youtube_views": 1155,
       "updated": "2026-11-24"
     }
   },
@@ -514,7 +523,7 @@
             "reach": 133
           },
           "youtube": {
-            "views": 1236,
+            "views": 1238,
             "likes": 24,
             "comments": 1,
             "shares": 0
@@ -529,11 +538,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1390,
+      "views": 1392,
       "likes": 28,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1236,
+      "youtube_views": 1238,
       "updated": "2026-11-24"
     }
   },
@@ -563,7 +572,7 @@
             "reach": 108
           },
           "youtube": {
-            "views": 877,
+            "views": 879,
             "likes": 18,
             "comments": 1,
             "shares": 0
@@ -578,11 +587,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 999,
+      "views": 1001,
       "likes": 19,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 877,
+      "youtube_views": 879,
       "updated": "2026-11-24"
     }
   },
@@ -612,7 +621,7 @@
             "reach": 173
           },
           "youtube": {
-            "views": 1217,
+            "views": 1219,
             "likes": 22,
             "comments": 1,
             "shares": 0
@@ -622,11 +631,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1418,
+      "views": 1420,
       "likes": 22,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1217,
+      "youtube_views": 1219,
       "updated": "2026-11-24"
     }
   },
