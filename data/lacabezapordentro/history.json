@@ -1170,5 +1170,67 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "psicologia_oscura",
+    "topic": "Ley del hielo (silencio como castigo): el ostracismo activa zonas del dolor físico (Eisenberger, 2003), genera culpa y duele incluso si te ignora un ordenador (Zadro et al., 2004); antídoto: no perseguirlo y nombrarlo",
+    "series_title": "La ley del hielo: por qué el silencio duele tanto",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T09:53:00+01:00",
+        "request_id": "28da9928d124499eac99e66fc9455c93",
+        "job_id": "cd8dfb36a2af4163b78e2dda9e81941e",
+        "failed": [],
+        "at": "2026-11-24T21:47:09+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "calar_gente",
+    "topic": "Escala de un solo ítem (Konrath et al., 2014): los narcisistas admiten serlo si se les pregunta, y saben que caen peor (Carlson et al., 2011)",
+    "series_title": "La pregunta que delata a un narcisista",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T12:03:00+01:00",
+        "request_id": "571d0847addb40eb8ee389a8fcbba26a",
+        "job_id": "7208b0f2fc4a481eb9e1011c078c25c7",
+        "failed": [],
+        "at": "2026-11-24T21:58:21+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-24",
+    "format": "si_haces_esto",
+    "topic": "Hablar solo en voz alta: ayuda a buscar (Lupyan y Swingley 2012), a recordar (efecto producción) y a controlarse (autodiálogo), y vuelve bajo presión (habla privada de Vygotsky)",
+    "series_title": "Por qué hablas solo (y no estás loco)",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T16:02:00+01:00",
+        "request_id": "211c0316a5ea4512ac64a391bee5e36f",
+        "job_id": "b9dd141c7263483bb173174ece8e57f8",
+        "failed": [],
+        "at": "2026-11-24T22:11:50+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cháchara: La voz en nuestra cabeza, por qué es importante y cómo dominarla",
+      "author": "Ethan Kross",
+      "pitch": "El psicólogo que estudia la voz interior explica cómo usarla a tu favor.",
+      "looked_up": true
+    }
   }
 ]
