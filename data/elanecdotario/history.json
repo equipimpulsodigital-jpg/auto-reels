@@ -814,7 +814,7 @@
             "reach": 1108
           },
           "youtube": {
-            "views": 1380,
+            "views": 1387,
             "likes": 37,
             "comments": 1,
             "shares": 0
@@ -829,11 +829,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2769,
+      "views": 2776,
       "likes": 114,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1380,
+      "youtube_views": 1387,
       "updated": "2026-11-25"
     }
   },
@@ -863,7 +863,7 @@
             "reach": 460
           },
           "youtube": {
-            "views": 938,
+            "views": 939,
             "likes": 13,
             "comments": 1,
             "shares": 0
@@ -873,11 +873,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1532,
+      "views": 1533,
       "likes": 21,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 938,
+      "youtube_views": 939,
       "updated": "2026-11-25"
     }
   },
@@ -1107,7 +1107,7 @@
           },
           "youtube": {
             "views": 409,
-            "likes": 13,
+            "likes": 14,
             "comments": 1,
             "shares": 0
           },
@@ -1125,7 +1125,7 @@
     "book": null,
     "stats": {
       "views": 783,
-      "likes": 34,
+      "likes": 35,
       "comments": 3,
       "shares": 0,
       "youtube_views": 409,
@@ -1201,13 +1201,13 @@
         "at": "2026-11-23T02:12:01+00:00",
         "stats": {
           "instagram": {
-            "views": 29,
+            "views": 32,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 5.9,
+            "avg_watch_s": 5.6,
             "saves": 0,
-            "reach": 25
+            "reach": 28
           },
           "youtube": {
             "views": 956,
@@ -1228,7 +1228,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 1165,
+      "views": 1168,
       "likes": 23,
       "comments": 3,
       "shares": 0,
@@ -1253,13 +1253,13 @@
         "at": "2026-11-23T02:25:36+00:00",
         "stats": {
           "instagram": {
-            "views": 228,
+            "views": 241,
             "likes": 3,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 15.2,
+            "avg_watch_s": 15.0,
             "saves": 0,
-            "reach": 166
+            "reach": 175
           },
           "youtube": {
             "views": 910,
@@ -1272,7 +1272,7 @@
             "likes": 17,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 33.2,
+            "avg_watch_s": 33.0,
             "reach": 0
           }
         }
@@ -1280,7 +1280,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 1298,
+      "views": 1311,
       "likes": 48,
       "comments": 3,
       "shares": 0,
@@ -1474,6 +1474,25 @@
         "job_id": "ae4309ce0457402baad0dbf9f616d731",
         "failed": [],
         "at": "2026-11-25T09:28:50+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "caso_famoso",
+    "topic": "Caso Vallecas (Estefanía Gutiérrez, 1990-1992): la ouija, su muerte y el atestado policial de Negri que inspiró «Verónica»",
+    "series_title": "El informe policial del caso Vallecas",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-27",
+        "slot": "2026-11-27T10:01:00+01:00",
+        "request_id": "cb5fb2ddfd2049dab4bcb575749ea5e7",
+        "job_id": "257647daac5c415394375f80d18903f2",
+        "failed": [],
+        "at": "2026-11-25T15:02:37+00:00"
       }
     ],
     "book": null
