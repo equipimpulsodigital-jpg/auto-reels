@@ -565,7 +565,7 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 528,
+            "views": 529,
             "likes": 39,
             "comments": 1,
             "shares": 0,
@@ -581,7 +581,7 @@
       "pitch": "El clásico que explica por qué recordar un nombre abre más puertas que cualquier frase ingeniosa."
     },
     "stats": {
-      "views": 3218,
+      "views": 3219,
       "likes": 105,
       "comments": 3,
       "shares": 0,
@@ -1115,7 +1115,7 @@
             "reach": 1148
           },
           "youtube": {
-            "views": 972,
+            "views": 973,
             "likes": 14,
             "comments": 1,
             "shares": 0
@@ -1133,11 +1133,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 2456,
+      "views": 2457,
       "likes": 37,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 972,
+      "youtube_views": 973,
       "updated": "2026-11-25"
     }
   },
@@ -1219,7 +1219,7 @@
             "reach": 482
           },
           "youtube": {
-            "views": 980,
+            "views": 982,
             "likes": 15,
             "comments": 2,
             "shares": 0
@@ -1237,11 +1237,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1558,
+      "views": 1560,
       "likes": 26,
       "comments": 4,
       "shares": 0,
-      "youtube_views": 980,
+      "youtube_views": 982,
       "updated": "2026-11-25"
     }
   },
@@ -1375,8 +1375,8 @@
             "reach": 779
           },
           "youtube": {
-            "views": 960,
-            "likes": 14,
+            "views": 966,
+            "likes": 17,
             "comments": 1,
             "shares": 0
           },
@@ -1393,11 +1393,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1856,
-      "likes": 39,
+      "views": 1862,
+      "likes": 42,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 960,
+      "youtube_views": 966,
       "updated": "2026-11-25"
     }
   },
@@ -1475,16 +1475,16 @@
         "at": "2026-11-23T01:26:42+00:00",
         "stats": {
           "instagram": {
-            "views": 1191,
+            "views": 1192,
             "likes": 20,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.9,
+            "avg_watch_s": 13.8,
             "saves": 2,
-            "reach": 996
+            "reach": 998
           },
           "youtube": {
-            "views": 981,
+            "views": 982,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -1507,11 +1507,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2173,
+      "views": 2175,
       "likes": 42,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 981,
+      "youtube_views": 982,
       "updated": "2026-11-25"
     }
   },
@@ -1589,13 +1589,13 @@
         "at": "2026-11-23T01:56:42+00:00",
         "stats": {
           "instagram": {
-            "views": 225,
+            "views": 236,
             "likes": 0,
             "comments": 1,
             "shares": 1,
-            "avg_watch_s": 11.7,
+            "avg_watch_s": 11.8,
             "saves": 1,
-            "reach": 187
+            "reach": 196
           },
           "youtube": {
             "views": 943,
@@ -1621,7 +1621,7 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1169,
+      "views": 1180,
       "likes": 25,
       "comments": 3,
       "shares": 1,
@@ -1646,13 +1646,13 @@
         "at": "2026-11-23T02:10:19+00:00",
         "stats": {
           "instagram": {
-            "views": 376,
-            "likes": 7,
+            "views": 411,
+            "likes": 9,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 13.4,
             "saves": 3,
-            "reach": 317
+            "reach": 344
           },
           "youtube": {
             "views": 992,
@@ -1679,8 +1679,8 @@
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
     },
     "stats": {
-      "views": 1369,
-      "likes": 20,
+      "views": 1404,
+      "likes": 22,
       "comments": 3,
       "shares": 0,
       "youtube_views": 992,
@@ -1704,16 +1704,16 @@
         "at": "2026-11-23T02:25:04+00:00",
         "stats": {
           "instagram": {
-            "views": 1472,
+            "views": 1474,
             "likes": 25,
             "comments": 1,
             "shares": 1,
-            "avg_watch_s": 15.5,
+            "avg_watch_s": 15.6,
             "saves": 16,
             "reach": 1189
           },
           "youtube": {
-            "views": 1169,
+            "views": 1170,
             "likes": 25,
             "comments": 1,
             "shares": 0
@@ -1731,11 +1731,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 2644,
+      "views": 2647,
       "likes": 51,
       "comments": 3,
       "shares": 1,
-      "youtube_views": 1169,
+      "youtube_views": 1170,
       "updated": "2026-11-25"
     }
   },
@@ -1812,10 +1812,43 @@
         "request_id": "82b0930909bb4def893e275b33e29be1",
         "job_id": "7d459542c35049bba2004e98c4d37b1b",
         "failed": [],
-        "at": "2026-11-24T21:47:11+00:00"
+        "at": "2026-11-24T21:47:11+00:00",
+        "stats": {
+          "instagram": {
+            "views": 144,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 11.2,
+            "saves": 0,
+            "reach": 117
+          },
+          "youtube": {
+            "views": 86,
+            "likes": 3,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 16.4,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 231,
+      "likes": 4,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 86,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-24",
@@ -2100,6 +2133,25 @@
         "job_id": "3b301eab50ad40a9a5a2ef74848177d2",
         "failed": [],
         "at": "2026-11-25T09:59:40+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "error_comun",
+    "topic": "Error: pedir cada uno su plato en una cita; comer lo mismo y compartir plato genera confianza (Woolley y Fishbach 2017, 2019) y hasta los bebés lo leen como intimidad (Science 2022); truco: proponer unas bravas para compartir",
+    "series_title": "El plato que enfría tu primera cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-27",
+        "slot": "2026-11-27T09:31:00+01:00",
+        "request_id": "f2523a55bd7041f7a6e47141007402ad",
+        "job_id": "d386740d2be1403aa7d186cf6f89d8ea",
+        "failed": [],
+        "at": "2026-11-25T15:05:36+00:00"
       }
     ],
     "book": null
