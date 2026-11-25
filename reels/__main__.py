@@ -36,6 +36,8 @@ def pending_slots(cfg: dict, state: dict, now: datetime | None = None, horizon: 
     pcfg = cfg["publish"]
     tz = ZoneInfo(pcfg.get("timezone", "Europe/Madrid"))
     now = (now or datetime.now(timezone.utc)).astimezone(tz)
+    # canales de actualidad: solo se programa lo más cercano, para que el tema no caduque
+    horizon = min(horizon, float(cfg["channel"].get("max_horizon_hours", horizon)))
     start = now + timedelta(minutes=int(pcfg.get("min_lead_minutes", 20)))
     done = set(state.get("scheduled", []))
     taken = [datetime.fromisoformat(d) for d in done]
@@ -200,6 +202,19 @@ def cancel_slot(cfg: dict, when: str) -> bool:
     """Quita de Upload-Post el vídeo programado en una franja y la deja libre para volver a llenarla."""
     from .publish import cancel_scheduled
     tz = ZoneInfo(cfg["publish"].get("timezone", "Europe/Madrid"))
+    if when.strip().lower() in ("futuras", "todas"):  # quitar todo lo programado (p. ej. al cambiar de temática)
+        state = _load(cfg, "state.json", {"queue": [], "scheduled": []})
+        soon = datetime.now(timezone.utc) + timedelta(minutes=20)
+        ok = True
+        for s_ in sorted(state.get("scheduled", [])):
+            if datetime.fromisoformat(s_) > soon:
+                ok = cancel_slot(cfg, s_) and ok
+        state = _load(cfg, "state.json", {"queue": [], "scheduled": []})
+        if state.get("queue"):
+            print(f"  Se descartan {len(state['queue'])} partes pendientes de la temática anterior")
+            state["queue"] = []
+            _save(cfg, "state.json", state)
+        return ok
     slot = datetime.fromisoformat(when.strip().replace(" ", "T"))
     slot = slot if slot.tzinfo else slot.replace(tzinfo=tz)
     history = _load(cfg, "history.json", [])

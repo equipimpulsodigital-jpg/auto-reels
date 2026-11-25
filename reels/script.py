@@ -268,7 +268,8 @@ def _claude_code(cfg: dict, system: str, user: str) -> Series:
         "--system-prompt", system,
         "--json-schema", json.dumps(_schema()),
         "--output-format", "json",
-        "--tools", "",
+        *(["--tools", ",".join(cfg["channel"]["claude_tools"]), "--allowedTools", *cfg["channel"]["claude_tools"]]
+          if cfg.get("channel", {}).get("claude_tools") else ["--tools", ""]),
         "--strict-mcp-config", "--setting-sources", "", "--disable-slash-commands",
         "--no-session-persistence",
     ]

@@ -192,36 +192,40 @@ channels:
     tiktok_paused_until: "2026-11-23"   # cuenta de TikTok nueva: unos días sin publicar por API para que no la marquen como «risky»
     prompt: prompts/lacabezapordentro.md
     accent_color: "#A08CFF"
-    max_parts: 2
+    max_parts: 1
     compilation_titles:
-      - "{n} trucos de psicología oscura que usan contigo"
-      - "Psicología oscura: {n} trucos para calar a cualquiera"
-      - "{n} secretos de la mente que nadie te cuenta"
-    compilation_thumb: "Tu cerebro te engaña"
-    compilation_tags: [psicologia, saludmental, cerebro, procrastinacion, recopilacion]
+      - "{n} momentos de la semana que todo el mundo comenta"
+      - "La semana en {n} claves: política y famosos"
+    compilation_thumb: "La semana, por dentro"
+    compilation_tags: [actualidad, politica, elecciones, famosos, noticias, recopilacion]
     hashtag: "#lacabezapordentro"           # hashtag propio de la marca, en todos sus vídeos
     narrator: {voice: es-ES-ElviraNeural, rate: "+14%", pitch: "-2Hz"}   # voz del narrador de la marca
-    music: [misterio, suspense, expediente, niebla, mente]   # ambiente misterioso (psicología oscura)
-    end_card: "Un secreto de la mente cada día · Sígueme"
-    tagline: "Psicología oscura, persuasión y los trucos de la mente."
+    music: [suspense, expediente, misterio, niebla]   # tensión de última hora
+    end_card: "La actualidad, por dentro · Sígueme"
+    tagline: "Política, elecciones y famosos: lo que está pasando, por dentro."
     links:                    # para la página de enlaces (actualiza los @ si cambian)
       youtube: https://www.youtube.com/@lacabezapordentro
       instagram: https://www.instagram.com/lacabezapordentro/
       tiktok: https://www.tiktok.com/@lacabezapordentro
     render: tipografia                # sin personajes: listas con palabras enormes sobre fondo oscuro
     style: plano                  # estilo de dibujo: caricatura | plano | amable
-    interest_queries: ["manipulación psicológica", "psicología oscura", "narcisismo relaciones", "lenguaje corporal mentira"]   # noticias de la semana para inspirar temas
+    interest_queries: ["elecciones generales 29N", "campaña electoral", "encuesta elecciones", "debate electoral", "candidatos propuestas vivienda impuestos", "famosos polémica", "famosos ruptura", "viral redes sociales polémica", "cantante comentario viral"]
+    news_days: 2                      # solo noticias de las últimas 48 horas
+    max_horizon_hours: 26             # se programa solo hasta el día siguiente, para que el tema no caduque
+    claude_tools: [WebSearch, WebFetch]   # el guionista comprueba los hechos en internet antes de escribir
+    interest_note: "Este canal es de actualidad: elige SIEMPRE una noticia de las de arriba (política de la campaña o cotilleo de famosos), la que más conversación genere, y compruébala en internet antes de escribir."
     host:                             # presentadora fija: cierra cada vídeo mirando a cámara
       name: La Doctora
       location: despacho
       mood: noche
       look: {female: true, age: adulto, skin: clara, hair_color: castaño, hair_style: moño, glasses: true, outfit: traje, outfit_color: morado, accent_color: crema, nose: pequeña, jaw: fina, eyes: azules}
-    format_cycle: [psicologia_oscura, trucos_persuasion, psicologia_oscura, calar_gente, si_haces_esto]
+    format_cycle: [campana_hoy, cotilleo, que_propone_cada_uno, polemica_redes, dicho_vs_dato]
     formats:
-      psicologia_oscura: "Psicología oscura: un truco de manipulación real que usan contigo (chantaje, gaslighting, refuerzo intermitente, culpa...), cómo funciona y cómo protegerte"
-      trucos_persuasion: "Trucos de persuasión inofensivos: caer bien, conseguir un sí, que te cuenten secretos, ganar una discusión... con una escena (gancho tipo «cómo manipular a tus amigos»)"
-      calar_gente: "Calar a la gente: cómo saber si alguien miente, qué delata su lenguaje corporal, qué dice de alguien cómo trata a los demás"
-      si_haces_esto: "Si haces esto, es por esto: una conducta cotidiana con la que todos se identifican y lo que dice de tu mente"
+      campana_hoy: "Campaña hoy: la noticia política del día (elecciones 29-N) en 30 segundos: qué ha pasado, por qué importa y qué viene ahora. Neutral."
+      que_propone_cada_uno: "Qué propone cada uno: un tema concreto (vivienda, impuestos, sueldos, pensiones...) y lo que proponen los principales partidos, en paralelo y con el mismo trato."
+      dicho_vs_dato: "Dicho vs dato: una frase de campaña o una idea muy repetida, comparada con los datos oficiales (con fuente)."
+      cotilleo: "El cotilleo del día: lo que ha pasado con un famoso que es noticia hoy, con lo que se sabe y lo que no, atribuido a sus fuentes."
+      polemica_redes: "La polémica de las redes: el tema viral de hoy del que todo el mundo opina, y los dos bandos."
 
   ysiciencia:
     name: ¿Y si…?
