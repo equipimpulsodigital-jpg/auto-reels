@@ -23,20 +23,19 @@
         "job_id": "317486a8ddb24f6b853dd421b042cf9a",
         "stats": {
           "instagram": {
-            "views": 1498,
+            "views": 1499,
             "likes": 15,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 22.0,
             "saves": 1,
-            "reach": 1103
+            "reach": 1105
           },
           "youtube": {
             "views": 1138,
             "likes": 24,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 26.0
+            "shares": 0
           }
         }
       }
@@ -50,7 +49,7 @@
       "pitch": "Lo que pasó de verdad en Palomares en 1966, contado con un detalle que pocos conocen."
     },
     "stats": {
-      "views": 2636,
+      "views": 2637,
       "likes": 39,
       "comments": 0,
       "shares": 0,
@@ -87,8 +86,7 @@
             "views": 663,
             "likes": 10,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 33.0
+            "shares": 0
           }
         }
       },
@@ -114,8 +112,7 @@
             "views": 456,
             "likes": 8,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 17.0
+            "shares": 0
           }
         }
       }
@@ -166,8 +163,7 @@
             "views": 291,
             "likes": 5,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 23.0
+            "shares": 0
           }
         }
       },
@@ -193,8 +189,7 @@
             "views": 1327,
             "likes": 24,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 20.0
+            "shares": 0
           }
         }
       }
@@ -243,8 +238,7 @@
             "views": 1049,
             "likes": 16,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 17.0
+            "shares": 0
           }
         }
       },
@@ -267,11 +261,10 @@
             "reach": 116
           },
           "youtube": {
-            "views": 1229,
+            "views": 1230,
             "likes": 19,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 19.0
+            "shares": 0
           }
         }
       }
@@ -285,11 +278,11 @@
       "pitch": "Una investigación a fondo sobre uno de los grandes misterios sin resolver de nuestra historia."
     },
     "stats": {
-      "views": 2568,
+      "views": 2569,
       "likes": 41,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2278,
+      "youtube_views": 2279,
       "updated": "2026-11-25"
     }
   },
@@ -322,8 +315,7 @@
             "views": 1223,
             "likes": 22,
             "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 15.0
+            "shares": 0
           }
         }
       },
@@ -349,8 +341,7 @@
             "views": 1119,
             "likes": 26,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 30.0
+            "shares": 0
           }
         }
       }
@@ -393,8 +384,7 @@
             "views": 1030,
             "likes": 28,
             "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 27.0
+            "shares": 0
           }
         }
       },
@@ -420,8 +410,7 @@
             "views": 1198,
             "likes": 27,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 17.0
+            "shares": 0
           },
           "tiktok": {
             "views": 749,
@@ -478,8 +467,7 @@
             "views": 1158,
             "likes": 31,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 25.0
+            "shares": 0
           },
           "tiktok": {
             "views": 215,
@@ -513,8 +501,7 @@
             "views": 498,
             "likes": 12,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 19.0
+            "shares": 0
           },
           "tiktok": {
             "views": 232,
