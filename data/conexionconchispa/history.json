@@ -562,8 +562,7 @@
             "views": 1190,
             "likes": 22,
             "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 16.0
+            "shares": 0
           },
           "tiktok": {
             "views": 528,
@@ -619,8 +618,7 @@
             "views": 1217,
             "likes": 22,
             "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 36.0
+            "shares": 0
           },
           "tiktok": {
             "views": 157,
@@ -727,7 +725,7 @@
             "reach": 171
           },
           "youtube": {
-            "views": 1208,
+            "views": 1209,
             "likes": 24,
             "comments": 1,
             "shares": 0
@@ -745,11 +743,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1610,
+      "views": 1611,
       "likes": 33,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1208,
+      "youtube_views": 1209,
       "updated": "2026-11-25"
     }
   },
@@ -838,7 +836,7 @@
             "reach": 1243
           },
           "youtube": {
-            "views": 1168,
+            "views": 1202,
             "likes": 22,
             "comments": 1,
             "shares": 0
@@ -862,12 +860,12 @@
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
     },
     "stats": {
-      "views": 2658,
+      "views": 2692,
       "likes": 46,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1168,
-      "updated": "2026-11-24"
+      "youtube_views": 1202,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -896,7 +894,7 @@
             "shares": 1,
             "avg_watch_s": 14.9,
             "saves": 4,
-            "reach": 1194
+            "reach": 1195
           },
           "youtube": {
             "views": 0,
@@ -922,7 +920,7 @@
       "comments": 2,
       "shares": 1,
       "youtube_views": 0,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -942,14 +940,17 @@
         "at": "2026-11-22T07:11:31+00:00",
         "stats": {
           "instagram": {
-            "views": 0,
-            "likes": 0,
-            "comments": 0,
-            "shares": 0
+            "views": 1533,
+            "likes": 54,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 16.1,
+            "saves": 3,
+            "reach": 1216
           },
           "youtube": {
-            "views": 1040,
-            "likes": 11,
+            "views": 1204,
+            "likes": 17,
             "comments": 1,
             "shares": 0
           },
@@ -966,12 +967,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1044,
-      "likes": 12,
-      "comments": 2,
-      "shares": 0,
-      "youtube_views": 1040,
-      "updated": "2026-11-24"
+      "views": 2741,
+      "likes": 72,
+      "comments": 3,
+      "shares": 1,
+      "youtube_views": 1204,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -991,13 +992,16 @@
         "at": "2026-11-22T07:24:56+00:00",
         "stats": {
           "instagram": {
-            "views": 0,
-            "likes": 0,
-            "comments": 0,
-            "shares": 0
+            "views": 1398,
+            "likes": 31,
+            "comments": 1,
+            "shares": 2,
+            "avg_watch_s": 14.0,
+            "saves": 1,
+            "reach": 1173
           },
           "youtube": {
-            "views": 1239,
+            "views": 1242,
             "likes": 20,
             "comments": 1,
             "shares": 0
@@ -1020,12 +1024,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1240,
-      "likes": 21,
-      "comments": 2,
-      "shares": 0,
-      "youtube_views": 1239,
-      "updated": "2026-11-24"
+      "views": 2641,
+      "likes": 52,
+      "comments": 3,
+      "shares": 2,
+      "youtube_views": 1242,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1045,26 +1049,27 @@
         "at": "2026-11-22T07:38:25+00:00",
         "stats": {
           "instagram": {
-            "views": 1356,
+            "views": 1364,
             "likes": 17,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 14.9,
+            "avg_watch_s": 14.8,
             "saves": 4,
-            "reach": 1119
+            "reach": 1129
           },
           "youtube": {
-            "views": 683,
-            "likes": 23,
+            "views": 999,
+            "likes": 20,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 0,
-            "likes": 0,
+            "views": 3,
+            "likes": 2,
             "comments": 1,
             "shares": 0,
-            "reach": 0
+            "avg_watch_s": 9.8,
+            "reach": 1
           }
         }
       }
@@ -1076,12 +1081,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2039,
-      "likes": 40,
+      "views": 2366,
+      "likes": 39,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 683,
-      "updated": "2026-11-23"
+      "youtube_views": 999,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1098,10 +1103,43 @@
         "request_id": "a83eb67fed794097a64aeaddacffffb8",
         "job_id": "828942295c764796b4111970121f3ee7",
         "failed": [],
-        "at": "2026-11-22T07:51:33+00:00"
+        "at": "2026-11-22T07:51:33+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1482,
+            "likes": 22,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 15.0,
+            "saves": 4,
+            "reach": 1148
+          },
+          "youtube": {
+            "views": 972,
+            "likes": 14,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 2,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 4.7,
+            "reach": 1
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 2456,
+      "likes": 37,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 972,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-22",
@@ -1117,10 +1155,43 @@
         "request_id": "a7ba5e722dae499f831fc99393526ba7",
         "job_id": "54c82a73e4324cada3dfd1e7cb4ced6f",
         "failed": [],
-        "at": "2026-11-22T08:04:25+00:00"
+        "at": "2026-11-22T08:04:25+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1489,
+            "likes": 27,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 14.3,
+            "saves": 2,
+            "reach": 1218
+          },
+          "youtube": {
+            "views": 1224,
+            "likes": 30,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 2.6,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 2714,
+      "likes": 58,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 1224,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-22",
@@ -1136,10 +1207,43 @@
         "request_id": "f55259ddcd174b9699b21b77a0439887",
         "job_id": "5aa6202699b94da4a78ba05e98840387",
         "failed": [],
-        "at": "2026-11-22T08:18:28+00:00"
+        "at": "2026-11-22T08:18:28+00:00",
+        "stats": {
+          "instagram": {
+            "views": 577,
+            "likes": 10,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 12.8,
+            "saves": 2,
+            "reach": 482
+          },
+          "youtube": {
+            "views": 980,
+            "likes": 15,
+            "comments": 2,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 18.0,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1558,
+      "likes": 26,
+      "comments": 4,
+      "shares": 0,
+      "youtube_views": 980,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-22",
@@ -1155,10 +1259,43 @@
         "request_id": "4e6a01ffb2304db1a3065faa4fb3275d",
         "job_id": "80b6b01c20ef4fd39669214793e02c3c",
         "failed": [],
-        "at": "2026-11-22T08:29:38+00:00"
+        "at": "2026-11-22T08:29:38+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1270,
+            "likes": 10,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 12.7,
+            "saves": 3,
+            "reach": 1067
+          },
+          "youtube": {
+            "views": 1016,
+            "likes": 7,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 2,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 8.0,
+            "reach": 1
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 2288,
+      "likes": 18,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1016,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-22",
@@ -1174,10 +1311,43 @@
         "request_id": "55c5753ab2884670a50f31b185da0862",
         "job_id": "95201b69a3b247daa540bc8239a74510",
         "failed": [],
-        "at": "2026-11-22T08:42:45+00:00"
+        "at": "2026-11-22T08:42:45+00:00",
+        "stats": {
+          "instagram": {
+            "views": 190,
+            "likes": 2,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 15.8,
+            "saves": 0,
+            "reach": 161
+          },
+          "youtube": {
+            "views": 1064,
+            "likes": 18,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 27,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 33.7,
+            "reach": 26
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1281,
+      "likes": 20,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 1064,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-22",
@@ -1193,10 +1363,43 @@
         "request_id": "ca06d2e89fc94d559d42de7dbd177c6c",
         "job_id": "2d265c50e4a04b6e87d40264e5c7ab2b",
         "failed": [],
-        "at": "2026-11-22T08:55:43+00:00"
+        "at": "2026-11-22T08:55:43+00:00",
+        "stats": {
+          "instagram": {
+            "views": 894,
+            "likes": 24,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 9.6,
+            "saves": 2,
+            "reach": 779
+          },
+          "youtube": {
+            "views": 960,
+            "likes": 14,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 2,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 10.3,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1856,
+      "likes": 39,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 960,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-22",
@@ -1212,7 +1415,32 @@
         "request_id": "5ea0a34423ec4c7199aa6fa491c7944f",
         "job_id": "4ec915d972264e08a4ad2154acb46852",
         "failed": [],
-        "at": "2026-11-22T13:00:41+00:00"
+        "at": "2026-11-22T13:00:41+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1306,
+            "likes": 23,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 13.2,
+            "saves": 4,
+            "reach": 1014
+          },
+          "youtube": {
+            "views": 1008,
+            "likes": 23,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 2.6,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1220,6 +1448,14 @@
       "author": "John M. Gottman y Nan Silver",
       "pitch": "El psicólogo que predice divorcios explica qué hacen distinto las parejas que duran.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 2315,
+      "likes": 46,
+      "comments": 3,
+      "shares": 1,
+      "youtube_views": 1008,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1236,7 +1472,32 @@
         "request_id": "fe04cf598ef84e44b76fe14b284f5198",
         "job_id": "df7f215fa2294024a051d7b45ff1930b",
         "failed": [],
-        "at": "2026-11-23T01:26:42+00:00"
+        "at": "2026-11-23T01:26:42+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1191,
+            "likes": 20,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 13.9,
+            "saves": 2,
+            "reach": 996
+          },
+          "youtube": {
+            "views": 981,
+            "likes": 21,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 1.6,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1244,6 +1505,14 @@
       "author": "John M. Gottman y Nan Silver",
       "pitch": "El psicólogo que predice divorcios explica qué hacen distinto las parejas que duran.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 2173,
+      "likes": 42,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 981,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1260,7 +1529,32 @@
         "request_id": "9608b496e5364ecab52c630f03ce4429",
         "job_id": "5f5fcc4015a64248baa2862a8bb69e0d",
         "failed": [],
-        "at": "2026-11-23T01:42:43+00:00"
+        "at": "2026-11-23T01:42:43+00:00",
+        "stats": {
+          "instagram": {
+            "views": 133,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 15.1,
+            "saves": 0,
+            "reach": 109
+          },
+          "youtube": {
+            "views": 970,
+            "likes": 12,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 19.7,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1268,6 +1562,14 @@
       "author": "Esther Perel",
       "pitch": "La terapeuta de pareja más famosa del mundo explica por qué engañamos y si se puede superar.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1104,
+      "likes": 13,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 970,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1284,7 +1586,32 @@
         "request_id": "f65cb7d12b40475488ee3b5906954cb4",
         "job_id": "ba9b1407851b4551801b10f4f6e707bb",
         "failed": [],
-        "at": "2026-11-23T01:56:42+00:00"
+        "at": "2026-11-23T01:56:42+00:00",
+        "stats": {
+          "instagram": {
+            "views": 225,
+            "likes": 0,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 11.7,
+            "saves": 1,
+            "reach": 187
+          },
+          "youtube": {
+            "views": 943,
+            "likes": 24,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 33.8,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1292,6 +1619,14 @@
       "author": "Amir Levine y Rachel Heller",
       "pitch": "Por qué unas personas responden a tus mensajes con ganas y otras te dejan dudando.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1169,
+      "likes": 25,
+      "comments": 3,
+      "shares": 1,
+      "youtube_views": 943,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1308,7 +1643,32 @@
         "request_id": "e50f0bc0c5e9468e8a2e318cb2b41ae7",
         "job_id": "ab6906201fac4975b55ce4a4c2f00c4a",
         "failed": [],
-        "at": "2026-11-23T02:10:19+00:00"
+        "at": "2026-11-23T02:10:19+00:00",
+        "stats": {
+          "instagram": {
+            "views": 376,
+            "likes": 7,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 13.4,
+            "saves": 3,
+            "reach": 317
+          },
+          "youtube": {
+            "views": 992,
+            "likes": 12,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 70.6,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1317,6 +1677,14 @@
       "pitch": "El clásico sobre caer bien con trucos sencillos que siguen funcionando hoy.",
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
+    },
+    "stats": {
+      "views": 1369,
+      "likes": 20,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 992,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1333,10 +1701,43 @@
         "request_id": "24aadb2e256c41868c7e457dc82c6cec",
         "job_id": "1cbe56cec3014a3d8913c163c9fdf3cb",
         "failed": [],
-        "at": "2026-11-23T02:25:04+00:00"
+        "at": "2026-11-23T02:25:04+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1472,
+            "likes": 25,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 15.5,
+            "saves": 16,
+            "reach": 1189
+          },
+          "youtube": {
+            "views": 1169,
+            "likes": 25,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 3,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 8.9,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 2644,
+      "likes": 51,
+      "comments": 3,
+      "shares": 1,
+      "youtube_views": 1169,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-23",
@@ -1352,7 +1753,32 @@
         "request_id": "7854c999cd47460e9f7d235553575a45",
         "job_id": "f2a539c9aa2e4e8fb17766cc6e765d77",
         "failed": [],
-        "at": "2026-11-23T02:38:24+00:00"
+        "at": "2026-11-23T02:38:24+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1281,
+            "likes": 23,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 13.8,
+            "saves": 2,
+            "reach": 1078
+          },
+          "youtube": {
+            "views": 909,
+            "likes": 17,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 1,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 5.4,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1362,6 +1788,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/3353863-M.jpg",
       "isbn": "9788466314916"
+    },
+    "stats": {
+      "views": 2191,
+      "likes": 41,
+      "comments": 3,
+      "shares": 1,
+      "youtube_views": 909,
+      "updated": "2026-11-25"
     }
   },
   {
