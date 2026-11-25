@@ -207,18 +207,17 @@ channels:
       youtube: https://www.youtube.com/@lacabezapordentro
       instagram: https://www.instagram.com/lacabezapordentro/
       tiktok: https://www.tiktok.com/@lacabezapordentro
-    render: tipografia                # sin personajes: listas con palabras enormes sobre fondo oscuro
-    style: plano                  # estilo de dibujo: caricatura | plano | amable
+    style: caricatura             # caricaturas de los políticos y famosos de la noticia
     interest_queries: ["elecciones generales 29N", "campaña electoral", "encuesta elecciones", "debate electoral", "candidatos propuestas vivienda impuestos", "famosos polémica", "famosos ruptura", "viral redes sociales polémica", "cantante comentario viral"]
     news_days: 2                      # solo noticias de las últimas 48 horas
     max_horizon_hours: 26             # se programa solo hasta el día siguiente, para que el tema no caduque
     claude_tools: [WebSearch, WebFetch]   # el guionista comprueba los hechos en internet antes de escribir
     interest_note: "Este canal es de actualidad: elige SIEMPRE una noticia de las de arriba (política de la campaña o cotilleo de famosos), la que más conversación genere, y compruébala en internet antes de escribir."
-    host:                             # presentadora fija: cierra cada vídeo mirando a cámara
-      name: La Doctora
-      location: despacho
+    host:                             # presentadora fija (de informativos): cierra cada vídeo mirando a cámara
+      name: La Presentadora
+      location: plato_debate
       mood: noche
-      look: {female: true, age: adulto, skin: clara, hair_color: castaño, hair_style: moño, glasses: true, outfit: traje, outfit_color: morado, accent_color: crema, nose: pequeña, jaw: fina, eyes: azules}
+      look: {female: true, age: adulto, skin: clara, hair_color: castaño, hair_style: moño, glasses: true, outfit: traje, outfit_color: azul_marino, accent_color: crema, nose: pequeña, jaw: fina, eyes: azules}
     format_cycle: [campana_hoy, cotilleo, que_propone_cada_uno, polemica_redes, dicho_vs_dato]
     formats:
       campana_hoy: "Campaña hoy: la noticia política del día (elecciones 29-N) en 30 segundos: qué ha pasado, por qué importa y qué viene ahora. Neutral."

@@ -347,5 +347,122 @@ class Caseron(Loc):
         _fog(c, W, H * 0.84, g.t, 0.08)
 
 
+class Hemiciclo(Loc):
+    key, desc, ambience = "hemiciclo", "el Congreso: hemiciclo con escaños rojos en gradas, tribuna de oradores con micrófono y bandera de España (debates, votaciones, sesión de control)", ""
+    interior = True
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        wall(c, W, H, fy, "#7a5a3c", "madera")
+        # cúpula / vidriera y lámparas
+        c.drawPath(oval(W * 0.5, H * 0.02, W * 0.42, H * 0.1), fill("#d9c48a", 0.55))
+        for k in range(7):
+            x = W * (0.2 + k * 0.1)
+            c.drawLine(W * 0.5, -H * 0.05, x, H * 0.1, stroke("#8a6a3a", 4, 0.6))
+        for x in (W * 0.2, W * 0.8):
+            lamp_glow(c, x, H * 0.14, 160, "#ffe2a0", 0.35)
+            c.drawCircle(x, H * 0.14, 26, fill("#f0d58a"))
+        # gradas de escaños rojos (en arco)
+        for row in range(5):
+            y = H * 0.2 + row * 62
+            n = 9 + row * 2
+            for k in range(n):
+                f = (k + 0.5) / n
+                x = W * (0.04 + 0.92 * f)
+                dy = abs(f - 0.5) * -90 * (1 - row * 0.12)
+                toon(c, rrect(x - 30, y + dy, 60, 46, 12), "#a3262a", outline=3)
+                c.drawRect(skia.Rect.MakeXYWH(x - 34, y + dy + 40, 68, 14), fill("#5a3a24"))
+                if (k * 7 + row * 3) % 4 == 0:  # diputados lejanos
+                    c.drawCircle(x, y + dy - 10, 13, fill(mix("#c9926b", "#7a5a3c", 0.25)))
+                    c.drawPath(rrect(x - 17, y + dy + 2, 34, 30, 10), fill(mix("#2a2f3a", "#7a5a3c", 0.2)))
+        # bandera de España al fondo
+        bx, by = W * 0.86, H * 0.2
+        c.drawLine(bx, by, bx, fy - 10, stroke("#d4af37", 8))
+        wav = math.sin(g.t * 2) * 6
+        for i, col in enumerate(("#c60b1e", "#ffc400", "#ffc400", "#c60b1e")):
+            c.drawPath(poly([(bx, by + i * 30), (bx - 150, by + i * 30 + wav), (bx - 150, by + (i + 1) * 30 + wav), (bx, by + (i + 1) * 30)]), fill(col))
+        floor(c, W, H, fy, "#8a3a2a", "madera")
+    def front(self, c, g, close):
+        W, H = g.W, g.H
+        y = H * (0.9 if close else 0.82)
+        # tribuna de oradores con micrófono
+        toon(c, poly([(W * 0.36, y), (W * 0.64, y), (W * 0.61, H + 20), (W * 0.39, H + 20)]), "#6b4a2f", light=(0, -1))
+        c.drawRect(skia.Rect.MakeXYWH(W * 0.36, y - 12, W * 0.28, 18), fill("#4a3220"))
+        c.drawLine(W * 0.5, y - 12, W * 0.47, y - 110, stroke("#222222", 6))
+        c.drawPath(oval(W * 0.47, y - 118, 12, 16), fill("#333333"))
+
+
+class PlatoDebate(Loc):
+    key, desc, ambience = "plato_debate", "plató de televisión de un debate electoral: fondo azul oscuro con pantallas y luces, atriles enfrentados y focos (debates, entrevistas, tertulias)", ""
+    interior = True
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        c.drawRect(skia.Rect.MakeWH(W, fy), linear(fill("#0f1d3a"), (0, 0), (0, fy), ["#070d1c", "#14285a"]))
+        # pantallas de vídeo con barras de luz
+        for k in range(3):
+            x = W * (0.08 + k * 0.31)
+            c.drawPath(rrect(x, H * 0.12, W * 0.24, H * 0.2, 10), fill("#1d3f8a"))
+            for j in range(6):
+                a = 0.25 + 0.2 * math.sin(g.t * 2 + j + k)
+                c.drawRect(skia.Rect.MakeXYWH(x + 14, H * 0.12 + 16 + j * 34, W * 0.24 - 28, 14), fill("#5aa0ff", a))
+        # rótulo «DEBATE» y cuenta atrás
+        c.drawPath(rrect(W * 0.3, H * 0.36, W * 0.4, 70, 14), fill("#c0392b"))
+        for k in range(12):  # tiras de led en el suelo del decorado
+            x = k * W / 11
+            c.drawLine(x, fy - 6, W * 0.5 + (x - W * 0.5) * 1.6, H, stroke("#5aa0ff", 3, 0.25))
+        for x in (W * 0.15, W * 0.85):  # focos
+            c.drawPath(poly([(x - 20, 0), (x + 20, 0), (x + 220 * (1 if x < W / 2 else -1) + 120, fy), (x + 220 * (1 if x < W / 2 else -1) - 120, fy)]), fill("#cfe0ff", 0.06))
+        floor(c, W, H, fy, "#101a30", "madera")
+    def front(self, c, g, close):
+        W, H = g.W, g.H
+        y = H * (0.9 if close else 0.8)
+        for x in (W * 0.16, W * 0.84):  # atriles a los lados
+            toon(c, poly([(x - 110, y), (x + 110, y), (x + 80, H + 20), (x - 80, H + 20)]), "#e8ecf4", light=(0, -1))
+            c.drawRect(skia.Rect.MakeXYWH(x - 110, y + 40, 220, 18), fill("#c0392b"))
+            c.drawLine(x, y, x - 20, y - 90, stroke("#222222", 5))
+            c.drawPath(oval(x - 20, y - 96, 10, 13), fill("#333333"))
+
+
+class Mitin(Loc):
+    key, desc, ambience = "mitin", "mitin de campaña: escenario con atril y pantalla gigante, focos y un público con banderas y pancartas (actos electorales, discursos)", ""
+    def back(self, c, g):
+        W, H = g.W, g.H
+        fy = H * FLOOR
+        c.drawRect(skia.Rect.MakeWH(W, fy), linear(fill("#1a1430"), (0, 0), (0, fy), ["#0a0814", "#2a1f4a"]))
+        # pantalla gigante y focos de colores
+        c.drawPath(rrect(W * 0.12, H * 0.08, W * 0.76, H * 0.24, 12), fill("#2b4c8f"))
+        c.drawPath(rrect(W * 0.14, H * 0.09, W * 0.72, H * 0.22, 10), linear(fill("#3d6fd1"), (0, H * 0.09), (0, H * 0.31), ["#4f86f0", "#24448a"]))
+        for k, col in enumerate(("#ff5a5a", "#ffd23f", "#5ab0ff", "#7dff9a")):
+            x = W * (0.1 + k * 0.27)
+            a = 0.08 + 0.05 * math.sin(g.t * 3 + k)
+            c.drawPath(poly([(x - 15, 0), (x + 15, 0), (x + 140, fy), (x - 140, fy)]), fill(col, a))
+        # escenario
+        c.drawRect(skia.Rect.MakeLTRB(0, fy - 40, W, fy), fill("#2a2a3a"))
+        floor(c, W, H, fy, "#22222e", "madera")
+        # público con banderas genéricas (sin partidos)
+        rnd = random.Random(29)
+        for row in range(2):
+            for k in range(14):
+                x = (k + 0.5) * W / 14 + rnd.uniform(-20, 20)
+                y = H * (0.78 + row * 0.08)
+                bob = math.sin(g.t * 4 + k + row) * 6
+                c.drawCircle(x, y - 60 + bob, 26, fill("#141020"))
+                c.drawPath(rrect(x - 36, y - 38 + bob, 72, 90, 22), fill("#141020"))
+                if rnd.random() < 0.3:
+                    col = rnd.choice(["#c60b1e", "#ffc400", "#ffffff", "#5ab0ff", "#7dd37d"])
+                    hx = x + 30
+                    c.drawLine(hx, y - 50 + bob, hx + 10, y - 170 + bob, stroke("#aaaaaa", 4))
+                    w = math.sin(g.t * 5 + k) * 8
+                    c.drawPath(poly([(hx + 10, y - 170 + bob), (hx + 90, y - 165 + bob + w), (hx + 85, y - 120 + bob + w), (hx + 8, y - 125 + bob)]), fill(col, 0.9))
+    def front(self, c, g, close):
+        W, H = g.W, g.H
+        y = H * (0.9 if close else 0.82)
+        toon(c, poly([(W * 0.4, y), (W * 0.6, y), (W * 0.58, H + 20), (W * 0.42, H + 20)]), "#e8ecf4", light=(0, -1))
+        c.drawLine(W * 0.5, y, W * 0.48, y - 90, stroke("#222222", 5))
+        c.drawPath(oval(W * 0.48, y - 96, 10, 13), fill("#333333"))
+
+
+
 EXTRA_LOCATIONS = {cls.key: cls() for cls in (Hielo, Desierto, CalleModerna, Carretera, Hospital, Tribunal, Aula,
-                                               Cementerio, Caseron)}
+                                               Cementerio, Caseron, Hemiciclo, PlatoDebate, Mitin)}
