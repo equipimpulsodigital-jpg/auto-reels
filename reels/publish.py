@@ -336,8 +336,18 @@ _ACCOUNT: dict = {}  # últimos datos de cada cuenta vistos en las estadísticas
 
 def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
     """Estadísticas de una publicación (todas sus redes): {"instagram": {"views": .., ...}, ...}."""
+    import time as _t
     headers = {"Authorization": f"Apikey {env('UPLOAD_POST_API_KEY')}"}
-    r = requests.get(f"{API}/uploadposts/post-analytics/{request_id}", headers=headers, timeout=60)
+    for attempt in range(5):  # Upload-Post limita las consultas por minuto: espera lo que pide y repite
+        r = requests.get(f"{API}/uploadposts/post-analytics/{request_id}", headers=headers, timeout=60)
+        if r.status_code != 429:
+            break
+        try:
+            wait = float(r.json().get("retry_after_seconds") or 30)
+        except ValueError:
+            wait = 30
+        _t.sleep(min(wait, 75) + attempt * 5)
+    _t.sleep(1.5)  # sin ráfagas: las cinco marcas consultan a la vez
     if show_raw:  # estructura de la respuesta (sin los textos largos), para revisar de dónde sale cada cifra
         try:
             def slim(o):
