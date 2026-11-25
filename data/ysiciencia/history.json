@@ -25,7 +25,7 @@
             "reach": 120
           },
           "youtube": {
-            "views": 1212,
+            "views": 1213,
             "likes": 19,
             "comments": 0,
             "shares": 0,
@@ -62,12 +62,12 @@
       }
     ],
     "stats": {
-      "views": 2678,
+      "views": 2679,
       "likes": 32,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2420,
-      "updated": "2026-11-24"
+      "youtube_views": 2421,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -148,7 +148,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1175,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -232,7 +232,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1348,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -261,7 +261,7 @@
             "reach": 1228
           },
           "youtube": {
-            "views": 23,
+            "views": 24,
             "likes": 1,
             "comments": 0,
             "shares": 0,
@@ -311,12 +311,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 3312,
+      "views": 3313,
       "likes": 86,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1428,
-      "updated": "2026-11-24"
+      "youtube_views": 1429,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -368,7 +368,7 @@
       "comments": 2,
       "shares": 0,
       "youtube_views": 1328,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -397,7 +397,7 @@
             "reach": 147
           },
           "youtube": {
-            "views": 1226,
+            "views": 1228,
             "likes": 23,
             "comments": 1,
             "shares": 0,
@@ -413,12 +413,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1388,
+      "views": 1390,
       "likes": 23,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1226,
-      "updated": "2026-11-24"
+      "youtube_views": 1228,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -467,7 +467,7 @@
       "comments": 2,
       "shares": 0,
       "youtube_views": 1339,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -496,7 +496,7 @@
             "reach": 204
           },
           "youtube": {
-            "views": 1238,
+            "views": 1233,
             "likes": 29,
             "comments": 1,
             "shares": 0,
@@ -514,12 +514,12 @@
       "cover": "https://covers.openlibrary.org/b/id/11949957-M.jpg"
     },
     "stats": {
-      "views": 1488,
+      "views": 1483,
       "likes": 31,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1238,
-      "updated": "2026-11-24"
+      "youtube_views": 1233,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -548,7 +548,7 @@
             "reach": 175
           },
           "youtube": {
-            "views": 1427,
+            "views": 1431,
             "likes": 22,
             "comments": 2,
             "shares": 0
@@ -563,12 +563,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1656,
+      "views": 1660,
       "likes": 26,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1427,
-      "updated": "2026-11-24"
+      "youtube_views": 1431,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -597,7 +597,7 @@
             "reach": 132
           },
           "youtube": {
-            "views": 1439,
+            "views": 1445,
             "likes": 25,
             "comments": 0,
             "shares": 0
@@ -607,12 +607,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1601,
+      "views": 1607,
       "likes": 26,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1439,
-      "updated": "2026-11-24"
+      "youtube_views": 1445,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -641,7 +641,7 @@
             "reach": 361
           },
           "youtube": {
-            "views": 1223,
+            "views": 1231,
             "likes": 9,
             "comments": 1,
             "shares": 0
@@ -651,12 +651,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1666,
+      "views": 1674,
       "likes": 15,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1223,
-      "updated": "2026-11-24"
+      "youtube_views": 1231,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -685,7 +685,7 @@
             "reach": 117
           },
           "youtube": {
-            "views": 1001,
+            "views": 1000,
             "likes": 16,
             "comments": 1,
             "shares": 0
@@ -695,12 +695,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1136,
+      "views": 1135,
       "likes": 17,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1001,
-      "updated": "2026-11-24"
+      "youtube_views": 1000,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -720,17 +720,17 @@
         "at": "2026-11-22T06:58:33+00:00",
         "stats": {
           "instagram": {
-            "views": 180,
+            "views": 181,
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 14.7,
+            "avg_watch_s": 14.6,
             "saves": 1,
-            "reach": 147
+            "reach": 148
           },
           "youtube": {
-            "views": 1659,
-            "likes": 33,
+            "views": 1668,
+            "likes": 32,
             "comments": 1,
             "shares": 0
           }
@@ -739,12 +739,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1839,
-      "likes": 34,
+      "views": 1849,
+      "likes": 33,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1659,
-      "updated": "2026-11-24"
+      "youtube_views": 1668,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -773,7 +773,7 @@
             "reach": 166
           },
           "youtube": {
-            "views": 1702,
+            "views": 1723,
             "likes": 36,
             "comments": 1,
             "shares": 0
@@ -789,12 +789,12 @@
       "cover": "https://covers.openlibrary.org/b/id/13662239-M.jpg"
     },
     "stats": {
-      "views": 1898,
+      "views": 1919,
       "likes": 38,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1702,
-      "updated": "2026-11-24"
+      "youtube_views": 1723,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -823,7 +823,7 @@
             "reach": 153
           },
           "youtube": {
-            "views": 1400,
+            "views": 1425,
             "likes": 32,
             "comments": 1,
             "shares": 0
@@ -838,12 +838,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1586,
+      "views": 1611,
       "likes": 32,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1400,
-      "updated": "2026-11-24"
+      "youtube_views": 1425,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -863,16 +863,16 @@
         "at": "2026-11-22T07:34:03+00:00",
         "stats": {
           "instagram": {
-            "views": 1202,
+            "views": 1203,
             "likes": 13,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 14.0,
             "saves": 1,
-            "reach": 998
+            "reach": 1000
           },
           "youtube": {
-            "views": 1112,
+            "views": 1119,
             "likes": 16,
             "comments": 1,
             "shares": 0
@@ -887,12 +887,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2314,
+      "views": 2322,
       "likes": 29,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1112,
-      "updated": "2026-11-24"
+      "youtube_views": 1119,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1145,5 +1145,74 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "y_si_planeta",
+    "topic": "Qué pasaría si la Luna desapareciera esta noche: noche negra, la marea de Cádiz a un tercio, corales sin luna llena, el eje de la Tierra que se tambalea y el giro de que la Luna ya se aleja 3,8 cm al año.",
+    "series_title": "¿Y si la Luna desapareciera esta noche?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T17:54:00+01:00",
+        "request_id": "51127e8f001248b08a2da3fe122a3dc3",
+        "job_id": "25bd29c8e89744bdbb5b9d494750a6f8",
+        "failed": [],
+        "at": "2026-11-25T01:23:18+00:00"
+      }
+    ],
+    "book": {
+      "title": "¿Y si...? Respuestas científicas serias a preguntas hipotéticas absurdas",
+      "author": "Randall Munroe",
+      "pitch": "El exingeniero de la NASA que responde con física real a las preguntas más locas.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "cuenta_atras",
+    "topic": "Qué te pasaría segundo a segundo si se te rajara el visor en el espacio: 15 segundos consciente, la saliva que hierve, no explotas ni te congelas, aguantar el aire revienta los pulmones, el límite de 90 segundos y Jim LeBlanc (NASA, 1966), que sobrevivió.",
+    "series_title": "¿Y si te quedaras sin traje en el espacio?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T21:05:00+01:00",
+        "request_id": "8f0be023860744cc910d4e09394ec27c",
+        "job_id": "39523002276844b794621c10972a6ace",
+        "failed": [],
+        "at": "2026-11-25T01:35:02+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "y_si_humanidad",
+    "topic": "Qué habría pasado si se hubiera cumplido la fórmula de Science (1960) que fijaba el fin del mundo por superpoblación el 13 de noviembre de 2026, y por qué no pasó: la caída de la natalidad y el pico de la ONU en 2084.",
+    "series_title": "¿Y si la humanidad no hubiera dejado de crecer?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T10:09:00+01:00",
+        "request_id": "444aa9cd05474b7898d0524a0054472e",
+        "job_id": "a42e9e2ade134fef8a63a0d2db853cf0",
+        "failed": [],
+        "at": "2026-11-25T01:45:22+00:00"
+      }
+    ],
+    "book": {
+      "title": "Factfulness",
+      "author": "Hans Rosling",
+      "pitch": "Por qué la población dejó de dispararse y todo lo que creemos mal sobre el mundo.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/8186237-M.jpg",
+      "isbn": "9788416863488"
+    }
   }
 ]
