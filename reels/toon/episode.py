@@ -130,6 +130,12 @@ def _reaction_shot(shot, react_id: str, dur: float):
                    brow=brow, smile=smile, worry=worry, extra=extra)
 
 
+def _norm(s: str) -> str:
+    import unicodedata
+    s = unicodedata.normalize("NFD", (s or "").lower())
+    return "".join(ch for ch in s if ch.isalnum() or ch == " ").strip()
+
+
 def host_character(cfg: dict):
     """Presentador fijo de la marca (config: channels.<id>.host)."""
     h = cfg["channel"].get("host")
@@ -172,6 +178,12 @@ def render_episode(series, part, durations: list[float], workdir: Path, cfg: dic
     host, host_cfg = host_character(cfg)
     if host:
         chars["_host"], sides["_host"] = host, -1.0
+        # si el guionista mete a la presentadora como personaje («La Cabeza», «Presentadora»...), siempre con su cara fija
+        alias = {_norm(host_cfg.get("name", "")), _norm(cfg["channel"].get("name", ""))}
+        for c in series.characters:
+            n = _norm(c.name)
+            if n in alias or "presentador" in n or (len(n) > 4 and any(n in a or a in n for a in alias if len(a) > 4)):
+                chars[c.id] = host
     ctx = Ctx(W, H, fps, chars, dict(sides), style=cfg["channel"].get("style", "caricatura"))
     shots, files = [], []
     reveal, turn = key_moments(part.blocks)

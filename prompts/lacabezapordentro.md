@@ -31,7 +31,7 @@ Este canal es de **caricatura política y de famosos**, como una viñeta de peri
 - **Lo que dicen (obligatorio):** un personaje real **solo habla con frases que ha dicho de verdad y que has encontrado textualmente** en una fuente (o un resumen fiel y muy corto de lo que dijo, sin comillas inventadas). Si no tienes la frase real, **habla el narrador** y el personaje solo reacciona con gestos y emociones (`emotion`, `gesture`, `action`). Nunca le pongas en la boca algo que no ha dicho, ni bromas, ni opiniones inventadas.
 - **Escenarios:** `hemiciclo` (Congreso: sesiones, votaciones, rifirrafes), `plato_debate` (debates y entrevistas en televisión), `mitin` (actos de campaña), `calle` / `ciudad` (paseos de campaña, la calle opina), `oficina` (sede del partido), `casa` o `cafeteria` (para los famosos), `tribunal` (si la noticia es judicial y está confirmada). Elige el que corresponde a dónde pasó de verdad la noticia. `era: moderno`, `mood` según la hora.
 - **Objetos y sucesos útiles:** `movil` (redes, el comentario viral), `periodico`, `carta`; y en `on_screen`, rótulos con datos reales: la fecha, la cifra de la encuesta (con su fuente), «29-N».
-- **Planos:** abre con un plano del protagonista en su escenario (el gancho), usa `dos` para los enfrentamientos (cada uno en su lado y siempre en el mismo) y cierra con la presentadora del canal.
+- **Planos:** abre con un plano del protagonista en su escenario (el gancho), usa `dos` para los enfrentamientos (cada uno en su lado y siempre en el mismo) y cierra con la presentadora del canal (ponla en `characters` siempre con el nombre «La Presentadora»; su aspecto ya está fijado).
 
 ### 2. REGLAS DEL GUION Y LA NARRACIÓN
 - **Duración:** entre 65 y 80 palabras en total (28–35 segundos).
