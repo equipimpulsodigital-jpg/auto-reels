@@ -1,5 +1,327 @@
 {
-  "queue": [],
+  "queue": [
+    {
+      "series": {
+        "topic_candidates": [
+          {
+            "topic": "Primer piso: qué proponen PP, PSOE, Vox y Frente Amplio para comprar o alquilar (IVA 4 %, préstamo de 50.000 €, IVA 0 %, 1 % del PIB)",
+            "hook": "Tu primer piso: cuatro partidos y cuatro recetas distintas.",
+            "why": "Toca a casi todo el mundo joven, cifras concretas y comparables, y divide (comprar o alquilar).",
+            "score": 8
+          },
+          {
+            "topic": "El 'efecto Robin Hood' de Sánchez: impuesto a banca y ultrarricos para recaudar 3.400 millones, frente a las bajadas de impuestos del resto",
+            "hook": "3.400 millones: eso quiere sacar a la banca y a los ultrarricos.",
+            "why": "Dinero y polémica, pero centrado en un solo partido; cuesta tratar a todos igual.",
+            "score": 6
+          },
+          {
+            "topic": "Junta Electoral de Madrid prohíbe y luego rectifica votar con camisetas por la educación pública",
+            "hook": "Te podían echar del colegio electoral por tu camiseta.",
+            "why": "Curioso y cercano, pero ya rectificado y con poco recorrido.",
+            "score": 6
+          },
+          {
+            "topic": "Marcos Llorente y la polémica del caviar con su hija",
+            "hook": "Una cucharada de caviar ha incendiado las redes.",
+            "why": "Viral, pero implica a una menor: fuera de los límites del canal.",
+            "score": 3
+          },
+          {
+            "topic": "El sondeo 'australiano' que se publica en plena veda de encuestas",
+            "hook": "En España está prohibido publicarla. En Australia, no.",
+            "why": "Sorprendente, pero exige explicar la ley y es una estimación poco fiable.",
+            "score": 6
+          }
+        ],
+        "series_title": "Tu primer piso según cada partido el 29-N",
+        "format": "que_propone_cada_uno",
+        "year": "24-25 de noviembre de 2026",
+        "place": "España (campaña de las elecciones generales del 29-N)",
+        "topic": "Propuestas de vivienda (primer piso) de PP, PSOE, Vox y Frente Amplio para las generales del 29-N de 2026",
+        "angle": "La vivienda es el primer problema para quien ronda los 30, y a cuatro días del 29-N los cuatro grandes partidos ofrecen recetas muy distintas para el primer piso: dos bajan impuestos para comprar y dos ponen dinero público en préstamos o en alquiler.",
+        "open_question": "Si quiero mi primer piso, ¿qué me ofrece cada partido y en qué se diferencian de verdad?",
+        "payoff": "La diferencia de fondo: PP y Vox rebajan impuestos para que compres; PSOE y Frente Amplio ponen dinero público en préstamos o en alquiler público.",
+        "beats": [
+          "GANCHO: tu primer piso y cuatro recetas distintas.",
+          "Contexto: lo que dicen sus programas para el 29-N.",
+          "Clave 1: PP, IVA del 4 % para menores de 40.",
+          "Clave 2: PSOE, préstamo de hasta 50.000 € sin intereses para la entrada.",
+          "Clave 3: Vox, IVA del 0 % en obra nueva para familias españolas.",
+          "Clave 4: Frente Amplio, 1 % del PIB al año para alquiler público.",
+          "RE-GANCHO: pero fíjate en el fondo.",
+          "PAYOFF: dos rebajan impuestos para comprar, dos tiran de dinero público.",
+          "Cierre: ¿comprar o alquilar?"
+        ],
+        "era": "moderno",
+        "characters": [],
+        "historical_notes": "Fuente principal: Rankia, «Elecciones 29N: ¿qué proponen los partidos en vivienda y qué cambiaría si compras casa con hipoteca?» (actualizado el 24/11/2026). Según ese texto: PP, IVA de la primera vivienda del 10 % al 4 % para menores de 40, aval público y un millón de viviendas; PSOE, Préstamo Tu Casa del ICO de hasta 50.000 € sin intereses para la entrada y un parque estatal de 100.000 viviendas; Vox, IVA del 0 % en la primera vivienda de obra nueva para familias españolas, prioridad nacional en la vivienda protegida y recuperar la deducción por vivienda habitual; Frente Amplio, 1 % del PIB al año para 1,5 millones de viviendas públicas de alquiler en 12 años y escudo hipotecario. Contraste: Telecinco (13/11/2026), que publicó las medidas anunciadas antes de los programas (PP, un millón de viviendas; PSOE, más del 6 % de vivienda pública; Vox, arraigo y deducción; Frente Amplio, intervenir el mercado), y Última Hora (19/11/2026). Hay pequeñas diferencias entre medios en algunas cifras (por ejemplo, Última Hora atribuye el 1 % del PIB al PSOE), así que el guion usa solo las medidas más repetidas y las atribuye a los programas. Son propuestas y ninguna está en vigor.",
+        "parts": [
+          {
+            "part_number": 1,
+            "hook_candidates": [
+              "Cuatro partidos quieren pagarte el piso. Ninguno de la misma forma.",
+              "50.000 euros sin intereses o IVA cero: tú eliges.",
+              "Si tienes 30 años y vives de alquiler, esto te toca a ti.",
+              "Tu primer piso: cuatro partidos y cuatro recetas distintas.",
+              "Lo que no te cuentan en los mítines sobre tu primer piso."
+            ],
+            "hook_title": "¿QUIÉN TE AYUDA MÁS?",
+            "blocks": [
+              {
+                "label": "GANCHO",
+                "speaker": "narrador",
+                "narration": "Tu primer piso: cuatro partidos y cuatro recetas distintas.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "llave",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "on_screen": "TU PRIMER PISO",
+                "emphasis": "cuatro",
+                "visual_direction": "Llave de casa enorme sobre fondo oscuro con el rótulo TU PRIMER PISO."
+              },
+              {
+                "label": "CONTEXTO",
+                "speaker": "narrador",
+                "narration": "Lo dicen sus programas del 29-N.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "reloj",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "static",
+                "sfx": [],
+                "on_screen": "29-N",
+                "emphasis": null,
+                "visual_direction": "Reloj en marcha, cuenta atrás hacia el 29-N."
+              },
+              {
+                "label": "CLAVE 1",
+                "speaker": "narrador",
+                "narration": "Uno, PP: IVA al cuatro por ciento, menores de cuarenta.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "monedas",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "on_screen": "1 · PP",
+                "emphasis": "cuatro",
+                "visual_direction": "Monedas con el rótulo 1 · PP: IVA del 4 % para menores de 40."
+              },
+              {
+                "label": "CLAVE 2",
+                "speaker": "narrador",
+                "narration": "Dos, PSOE: cincuenta mil euros sin intereses para la entrada.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "billetes",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "on_screen": "2 · PSOE",
+                "emphasis": "cincuenta",
+                "visual_direction": "Fajo de billetes con el rótulo 2 · PSOE: préstamo de 50.000 € sin intereses."
+              },
+              {
+                "label": "CLAVE 3",
+                "speaker": "narrador",
+                "narration": "Tres, Vox: IVA cero en obra nueva, para familias españolas.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "llave",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [
+                  "whoosh"
+                ],
+                "on_screen": "3 · VOX",
+                "emphasis": null,
+                "visual_direction": "Llave con el rótulo 3 · VOX: IVA del 0 % en obra nueva."
+              },
+              {
+                "label": "CLAVE 4",
+                "speaker": "narrador",
+                "narration": "Cuatro, Frente Amplio: alquiler público con el uno por ciento del PIB.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "documento",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "pull_back",
+                "sfx": [
+                  "whoosh"
+                ],
+                "on_screen": "4 · FRENTE AMPLIO",
+                "emphasis": null,
+                "visual_direction": "Documento con el rótulo 4 · FRENTE AMPLIO: el 1 % del PIB al año para alquiler público."
+              },
+              {
+                "label": "RE-GANCHO",
+                "speaker": "narrador",
+                "narration": "Pero fíjate en el fondo.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "ojo",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [
+                  "hit"
+                ],
+                "on_screen": "EL FONDO",
+                "emphasis": null,
+                "visual_direction": "Un ojo enorme que observa, pausa antes del giro."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Dos rebajan impuestos para que compres.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "llave",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "static",
+                "sfx": [],
+                "on_screen": "COMPRAR",
+                "emphasis": "compres",
+                "visual_direction": "Llave de casa con el rótulo COMPRAR: PP y Vox, menos impuestos."
+              },
+              {
+                "label": "GIRO",
+                "speaker": "narrador",
+                "narration": "Dos tiran de dinero público: préstamos o alquiler.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "cadena",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "push_in",
+                "sfx": [],
+                "on_screen": "DINERO PÚBLICO",
+                "emphasis": null,
+                "visual_direction": "Rótulo DINERO PÚBLICO: PSOE y Frente Amplio, préstamos y alquiler público."
+              },
+              {
+                "label": "CIERRE",
+                "speaker": "narrador",
+                "narration": "¿Comprar o alquilar? Comenta.",
+                "location": "casa",
+                "framing": "objeto",
+                "cast": [],
+                "gesture": "explain",
+                "emotion": "neutral",
+                "listener_emotion": "neutral",
+                "mood": "dia",
+                "event": null,
+                "prop": "movil",
+                "walk": false,
+                "action": "ninguna",
+                "held_prop": null,
+                "camera": "pull_back",
+                "sfx": [],
+                "on_screen": "¿Y TÚ?",
+                "emphasis": null,
+                "visual_direction": "Móvil con comentarios que van llegando, rótulo ¿Y TÚ?"
+              }
+            ],
+            "cliffhanger": "Cierra con la diferencia de fondo (impuestos para comprar frente a dinero público para préstamos o alquiler) y pregunta qué urge más.",
+            "caption": "IVA al 4 %, IVA al 0 %, 50.000 € sin intereses o alquiler público: el 29-N también se vota tu primer piso.\nComparamos las propuestas de vivienda de PP, PSOE, Vox y Frente Amplio con el mismo trato.\nInformación basada en noticias publicadas (fuentes en la descripción). Contenido informativo, sin afiliación política.\n¿Comprar o alquilar? Comenta 1 o 2",
+            "comment_question": "¿Comprar o alquilar? Comenta 1 o 2",
+            "first_comment": "Dato extra: según Rankia, el PP también propone una «Hucha Hogar Joven» de hasta 2.000 € al año con un 20 % de deducción, y el Frente Amplio un escudo hipotecario de hasta 300 € al mes. ¿Comprar o alquilar? 1 o 2",
+            "hashtags": [
+              "politica",
+              "actualidad",
+              "elecciones29N",
+              "vivienda",
+              "alquiler",
+              "programaselectorales"
+            ],
+            "youtube_title": "Tu primer piso: qué propone cada partido el 29-N",
+            "youtube_description": "Vivienda en las elecciones generales del 29-N: qué proponen PP, PSOE, Vox y Frente Amplio para tu primer piso.\nIVA del 4 %, préstamo de 50.000 € sin intereses, IVA del 0 % o alquiler público: las cuatro recetas, una al lado de la otra.\nEn 30 segundos te contamos la medida estrella de cada programa y la diferencia de fondo entre ellos. Son propuestas: ninguna está en vigor.\nInformación basada en noticias publicadas (fuentes en la descripción). Contenido informativo, sin afiliación política.\nFuentes: Rankia, «Elecciones 29N: ¿qué proponen los partidos en vivienda?» (24/11/2026); Telecinco, «Programas electorales del 29N» (13/11/2026); Última Hora, «Los programas electorales de los principales partidos» (19/11/2026)."
+          }
+        ],
+        "book": null
+      },
+      "part": 0
+    }
+  ],
   "last_published": "2026-11-25T09:05:11+00:00",
   "scheduled": [
     "2026-11-23T10:00:00+01:00",
