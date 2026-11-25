@@ -46,7 +46,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -98,7 +98,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1363,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -148,7 +148,7 @@
       "comments": 0,
       "shares": 1,
       "youtube_views": 1275,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -195,7 +195,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1203,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -247,7 +247,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1384,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -276,7 +276,7 @@
             "reach": 1068
           },
           "youtube": {
-            "views": 30,
+            "views": 31,
             "likes": 2,
             "comments": 0,
             "shares": 0,
@@ -293,12 +293,12 @@
       "cover": "https://covers.openlibrary.org/b/id/13586009-M.jpg"
     },
     "stats": {
-      "views": 1295,
+      "views": 1296,
       "likes": 43,
       "comments": 0,
       "shares": 6,
-      "youtube_views": 30,
-      "updated": "2026-11-24"
+      "youtube_views": 31,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -343,7 +343,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 5,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -394,7 +394,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1142,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -444,7 +444,7 @@
       "comments": 2,
       "shares": 0,
       "youtube_views": 1428,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -494,7 +494,7 @@
       "comments": 2,
       "shares": 0,
       "youtube_views": 1155,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -523,7 +523,7 @@
             "reach": 133
           },
           "youtube": {
-            "views": 1239,
+            "views": 1245,
             "likes": 24,
             "comments": 1,
             "shares": 0
@@ -538,12 +538,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1393,
+      "views": 1399,
       "likes": 28,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1239,
-      "updated": "2026-11-24"
+      "youtube_views": 1245,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -573,7 +573,7 @@
           },
           "youtube": {
             "views": 879,
-            "likes": 18,
+            "likes": 19,
             "comments": 1,
             "shares": 0
           }
@@ -588,11 +588,11 @@
     },
     "stats": {
       "views": 1001,
-      "likes": 19,
+      "likes": 20,
       "comments": 2,
       "shares": 0,
       "youtube_views": 879,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -621,8 +621,8 @@
             "reach": 173
           },
           "youtube": {
-            "views": 1219,
-            "likes": 22,
+            "views": 1220,
+            "likes": 23,
             "comments": 1,
             "shares": 0
           }
@@ -631,12 +631,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1420,
-      "likes": 22,
+      "views": 1421,
+      "likes": 23,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1219,
-      "updated": "2026-11-24"
+      "youtube_views": 1220,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -685,7 +685,7 @@
       "comments": 2,
       "shares": 0,
       "youtube_views": 1200,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -714,7 +714,7 @@
             "reach": 164
           },
           "youtube": {
-            "views": 1628,
+            "views": 1637,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -729,12 +729,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1833,
+      "views": 1842,
       "likes": 24,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1628,
-      "updated": "2026-11-24"
+      "youtube_views": 1637,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1232,5 +1232,90 @@
       "pitch": "El psicólogo que estudia la voz interior explica cómo usarla a tu favor.",
       "looked_up": true
     }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "psicologia_oscura",
+    "topic": "Técnica del portazo en la cara (door-in-the-face): pedir algo absurdo para que te niegues y luego colar la petición real; 50 % frente a 17 % (Cialdini et al., 1975). Antídoto: juzgar la segunda petición como si fuera la primera.",
+    "series_title": "El portazo en la cara: por qué te piden algo absurdo a propósito",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T18:03:00+01:00",
+        "request_id": "06b0884923a344d1af59fdada79d68c5",
+        "job_id": "6d5605c6838a43c183c4622b41162a2c",
+        "failed": [],
+        "at": "2026-11-25T01:22:11+00:00"
+      }
+    ],
+    "book": {
+      "title": "Influencia: la psicología de la persuasión",
+      "author": "Robert B. Cialdini",
+      "pitch": "El clásico que destapa los trucos con los que te sacan un «sí» sin que te des cuenta."
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "trucos_persuasion",
+    "topic": "Efecto camaleón: imitar con disimulo las palabras y la postura de alguien aumenta el agrado, las propinas y las ganas de ayudar (Chartrand y Bargh 1999; van Baaren 2003, 2004)",
+    "series_title": "Cópiale en secreto y le caerás mejor",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T20:56:00+01:00",
+        "request_id": "3e88fd3089b34ec0b34d39866b55714b",
+        "job_id": "05fa8ea040d84cc590f9ec3674fb475a",
+        "failed": [],
+        "at": "2026-11-25T01:31:44+00:00"
+      }
+    ],
+    "book": {
+      "title": "Influencia: la psicología de la persuasión",
+      "author": "Robert B. Cialdini",
+      "pitch": "El clásico que destapa los resortes que te hacen decir que sí sin darte cuenta.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "psicologia_oscura",
+    "topic": "Gaslighting (luz de gas): tres frases típicas («eso nunca pasó», «exageras», «todos piensan como yo») y el antídoto de apuntarlo con fecha (Stern 2007; Sweet 2019)",
+    "series_title": "Las 3 frases que te hacen dudar de tu memoria",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T09:53:00+01:00",
+        "request_id": "24e8d0caecf24474b1e32abd3918e283",
+        "job_id": "ac5435e46c204f86bb5e0cd1785e26a6",
+        "failed": [],
+        "at": "2026-11-25T01:41:50+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "calar_gente",
+    "topic": "Humblebrag o falsa modestia: presumir disfrazándolo de queja o de humildad cae peor y parece menos sincero que presumir abiertamente, e incluso que quejarse (Sezer, Gino y Norton, 2018)",
+    "series_title": "La forma de presumir que cae peor que presumir",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T12:11:00+01:00",
+        "request_id": "8b30931be6444874b5f7bb4fa56fdc9b",
+        "job_id": "708ce74f5a3b4b2aa3b189ca331bac6d",
+        "failed": [],
+        "at": "2026-11-25T01:51:24+00:00"
+      }
+    ],
+    "book": null
   }
 ]
