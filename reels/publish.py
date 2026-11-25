@@ -350,6 +350,7 @@ def post_stats(request_id: str, show_raw: bool = False) -> dict | None:
         except ValueError:
             print("  respuesta de ejemplo:", r.status_code, r.text[:1500])
     if r.status_code >= 400:
+        print(f"  sin estadísticas ({r.status_code}) {request_id[:8]}: {r.text[:160]}")
         return None
     data = r.json()
     out = {}
