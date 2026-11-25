@@ -763,7 +763,7 @@
             "reach": 166
           },
           "youtube": {
-            "views": 1735,
+            "views": 1737,
             "likes": 37,
             "comments": 1,
             "shares": 0
@@ -779,11 +779,11 @@
       "cover": "https://covers.openlibrary.org/b/id/13662239-M.jpg"
     },
     "stats": {
-      "views": 1931,
+      "views": 1933,
       "likes": 39,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1735,
+      "youtube_views": 1737,
       "updated": "2026-11-25"
     }
   },
@@ -813,7 +813,7 @@
             "reach": 153
           },
           "youtube": {
-            "views": 1447,
+            "views": 1449,
             "likes": 32,
             "comments": 1,
             "shares": 0
@@ -828,11 +828,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1633,
+      "views": 1635,
       "likes": 32,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1447,
+      "youtube_views": 1449,
       "updated": "2026-11-25"
     }
   },
@@ -1066,7 +1066,7 @@
             "reach": 1086
           },
           "youtube": {
-            "views": 1051,
+            "views": 1054,
             "likes": 17,
             "comments": 2,
             "shares": 0
@@ -1091,11 +1091,11 @@
       "isbn": "9788490323762"
     },
     "stats": {
-      "views": 2602,
+      "views": 2605,
       "likes": 42,
       "comments": 4,
       "shares": 0,
-      "youtube_views": 1051,
+      "youtube_views": 1054,
       "updated": "2026-11-25"
     }
   },
@@ -1116,16 +1116,16 @@
         "at": "2026-11-23T01:41:47+00:00",
         "stats": {
           "instagram": {
-            "views": 179,
+            "views": 180,
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 12.0,
+            "avg_watch_s": 11.9,
             "saves": 1,
-            "reach": 148
+            "reach": 149
           },
           "youtube": {
-            "views": 1369,
+            "views": 1398,
             "likes": 20,
             "comments": 1,
             "shares": 0
@@ -1150,11 +1150,11 @@
       "isbn": "9788418967832"
     },
     "stats": {
-      "views": 1760,
+      "views": 1790,
       "likes": 35,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1369,
+      "youtube_views": 1398,
       "updated": "2026-11-25"
     }
   },
@@ -1489,5 +1489,24 @@
       "cover": "https://covers.openlibrary.org/b/id/14249980-M.jpg",
       "isbn": "9788418967832"
     }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "y_si_tu",
+    "topic": "Qué te pasaría segundo a segundo si cayeras de un avión a 10.000 m sin paracaídas: -50 °C, 200 km/h en 12 segundos, desmayo por falta de oxígeno, despertar en el minuto 1, dónde caer y el giro de que caer de 10.000 m es como caer de 500 y Vesna Vulović sobrevivió en 1972.",
+    "series_title": "¿Y si cayeras de un avión sin paracaídas?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-27",
+        "slot": "2026-11-27T10:05:00+01:00",
+        "request_id": "67ccd7c0a31f40659d71b97946768705",
+        "job_id": "08b83377820142bfa5b5271ef545b38e",
+        "failed": [],
+        "at": "2026-11-25T14:58:27+00:00"
+      }
+    ],
+    "book": null
   }
 ]
