@@ -164,7 +164,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 447,
+            "views": 448,
             "likes": 24,
             "comments": 0,
             "shares": 0,
@@ -209,11 +209,11 @@
       "pitch": "Un clásico para recorrer la historia del cine desde sus primeros fotogramas. Te engancha."
     },
     "stats": {
-      "views": 785,
+      "views": 786,
       "likes": 39,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 655,
+      "youtube_views": 656,
       "updated": "2026-11-25"
     }
   },
@@ -243,7 +243,7 @@
             "reach": 43
           },
           "youtube": {
-            "views": 464,
+            "views": 465,
             "likes": 9,
             "comments": 0,
             "shares": 0,
@@ -293,11 +293,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1235,
+      "views": 1236,
       "likes": 31,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1025,
+      "youtube_views": 1026,
       "updated": "2026-11-25"
     }
   },
@@ -430,11 +430,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1709,
-      "likes": 60,
+      "views": 4218,
+      "likes": 121,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1557,
+      "youtube_views": 2771,
       "updated": "2026-11-25"
     }
   },
@@ -485,7 +485,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1472,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -514,7 +514,7 @@
             "reach": 82
           },
           "youtube": {
-            "views": 1257,
+            "views": 1254,
             "likes": 25,
             "comments": 0,
             "shares": 0
@@ -525,7 +525,7 @@
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 5.8,
-            "reach": 187
+            "reach": 200
           }
         }
       },
@@ -554,7 +554,7 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 205,
+            "views": 207,
             "likes": 11,
             "comments": 0,
             "shares": 0,
@@ -566,12 +566,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1554,
-      "likes": 34,
+      "views": 3270,
+      "likes": 73,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1257,
-      "updated": "2026-11-24"
+      "youtube_views": 2609,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -600,7 +600,7 @@
             "reach": 101
           },
           "youtube": {
-            "views": 1356,
+            "views": 1361,
             "likes": 24,
             "comments": 1,
             "shares": 0
@@ -610,12 +610,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1475,
+      "views": 1480,
       "likes": 27,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1356,
-      "updated": "2026-11-24"
+      "youtube_views": 1361,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -644,7 +644,7 @@
             "shares": 0
           },
           "youtube": {
-            "views": 1134,
+            "views": 1135,
             "likes": 25,
             "comments": 1,
             "shares": 0
@@ -654,12 +654,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1134,
+      "views": 1135,
       "likes": 25,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1134,
-      "updated": "2026-11-24"
+      "youtube_views": 1135,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -703,7 +703,7 @@
       "comments": 2,
       "shares": 0,
       "youtube_views": 1209,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -750,7 +750,7 @@
       "comments": 1,
       "shares": 0,
       "youtube_views": 0,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -779,7 +779,7 @@
             "reach": 99
           },
           "youtube": {
-            "views": 1032,
+            "views": 1034,
             "likes": 15,
             "comments": 1,
             "shares": 0
@@ -789,12 +789,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1159,
+      "views": 1161,
       "likes": 17,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1032,
-      "updated": "2026-11-24"
+      "youtube_views": 1034,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -814,17 +814,17 @@
         "at": "2026-11-22T06:54:20+00:00",
         "stats": {
           "instagram": {
-            "views": 1373,
-            "likes": 76,
+            "views": 1389,
+            "likes": 77,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.2,
+            "avg_watch_s": 13.1,
             "saves": 3,
-            "reach": 1093
+            "reach": 1108
           },
           "youtube": {
-            "views": 1188,
-            "likes": 35,
+            "views": 1379,
+            "likes": 37,
             "comments": 1,
             "shares": 0
           }
@@ -838,12 +838,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2561,
-      "likes": 111,
+      "views": 2768,
+      "likes": 114,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1188,
-      "updated": "2026-11-24"
+      "youtube_views": 1379,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -872,8 +872,8 @@
             "reach": 460
           },
           "youtube": {
-            "views": 935,
-            "likes": 14,
+            "views": 938,
+            "likes": 13,
             "comments": 1,
             "shares": 0
           }
@@ -882,12 +882,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1529,
-      "likes": 22,
+      "views": 1532,
+      "likes": 21,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 935,
-      "updated": "2026-11-24"
+      "youtube_views": 938,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -904,7 +904,24 @@
         "request_id": "c11a18506c6a454da71a004f7fb068bf",
         "job_id": "834f039e41364825b7458846458263d6",
         "failed": [],
-        "at": "2026-11-22T07:13:39+00:00"
+        "at": "2026-11-22T07:13:39+00:00",
+        "stats": {
+          "instagram": {
+            "views": 176,
+            "likes": 2,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 9.1,
+            "saves": 0,
+            "reach": 157
+          },
+          "youtube": {
+            "views": 1003,
+            "likes": 31,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -912,6 +929,14 @@
       "author": "Javier Cavanilles y Francisco Máñez",
       "pitch": "La investigación que destripa el caso paranormal más famoso de España, pieza a pieza.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1179,
+      "likes": 33,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1003,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -928,7 +953,24 @@
         "request_id": "d3aa4d1fcae2412fbd9e2379a9700b19",
         "job_id": "d1959190e2b44642a1e7076f8ed036c7",
         "failed": [],
-        "at": "2026-11-22T07:22:00+00:00"
+        "at": "2026-11-22T07:22:00+00:00",
+        "stats": {
+          "instagram": {
+            "views": 151,
+            "likes": 2,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 14.2,
+            "saves": 0,
+            "reach": 113
+          },
+          "youtube": {
+            "views": 1118,
+            "likes": 18,
+            "comments": 1,
+            "shares": 0
+          }
+        }
       }
     ],
     "book": {
@@ -936,6 +978,14 @@
       "author": "Agatha Christie",
       "pitch": "Su vida contada por ella misma… y los once días que decidió no contar.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1269,
+      "likes": 20,
+      "comments": 2,
+      "shares": 0,
+      "youtube_views": 1118,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1167,6 +1217,82 @@
         "job_id": "ea32e6e639964e6c83fa1f6e2f3a4302",
         "failed": [],
         "at": "2026-11-25T01:55:49+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "caso_sin_resolver",
+    "topic": "Crimen de Los Galindos (Paradas, Sevilla, 22/7/1975): cinco muertos, el tractorista señalado como culpable resultó asesinado también; prescrito en 1995 sin juicio",
+    "series_title": "Los Galindos: el culpable que también era víctima",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T12:02:00+01:00",
+        "request_id": "8db0c3312f254ac492ad0b6483831b3e",
+        "job_id": "1c2dc980b51a4c5fadb123c53ff9169e",
+        "failed": [],
+        "at": "2026-11-25T08:46:55+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "enigma",
+    "topic": "Bombardero B-24 Lady Be Good (4/4/1943): tripulación de 9 que saltó sobre el desierto de Libia creyendo estar sobre el mar; avión hallado casi intacto en 1958 y restos y diario en 1960",
+    "series_title": "Lady Be Good: el bombardero perdido en el Sáhara",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T16:07:00+01:00",
+        "request_id": "00a6f29db240474782f76f04b67df1d4",
+        "job_id": "e12cfb8b561d401aadba3590934e8c53",
+        "failed": [],
+        "at": "2026-11-25T09:01:19+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "ultimo_rastro",
+    "topic": "Último avistamiento de Mallory e Irvine en el Everest (8/6/1924), hallazgo del cuerpo de Mallory en 1999 sin la foto de su mujer que iba a dejar en la cima",
+    "series_title": "Mallory e Irvine: lo último que se vio en el Everest",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T18:11:00+01:00",
+        "request_id": "5024d494f8f64f63bd9def0d58e3d07f",
+        "job_id": "d93218afd0204b818985961975f562e7",
+        "failed": [],
+        "at": "2026-11-25T09:13:47+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "caso_con_giro",
+    "topic": "Las hermanas Fox (Hydesville, 1848): los golpes del espíritu, la confesión del fraude en 1888 y el esqueleto hallado en el sótano en 1904",
+    "series_title": "Las hermanas Fox: la confesión y el esqueleto",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T20:58:00+01:00",
+        "request_id": "61b2c7d3f8be4ff6ada30489716b0852",
+        "job_id": "ae4309ce0457402baad0dbf9f616d731",
+        "failed": [],
+        "at": "2026-11-25T09:28:50+00:00"
       }
     ],
     "book": null
