@@ -16,7 +16,7 @@
         "at": "2026-11-19T15:03:28+00:00",
         "stats": {
           "instagram": {
-            "views": 1700,
+            "views": 1701,
             "likes": 69,
             "comments": 0,
             "shares": 1,
@@ -43,7 +43,7 @@
       "pitch": "Te hará escuchar mejor… y darte cuenta de todo lo que te pierdes cuando no lo haces."
     },
     "stats": {
-      "views": 2984,
+      "views": 2985,
       "likes": 101,
       "comments": 0,
       "shares": 1,
@@ -463,11 +463,11 @@
             "avg_watch_s": 20.0
           },
           "tiktok": {
-            "views": 707,
+            "views": 711,
             "likes": 38,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 6.6,
+            "avg_watch_s": 6.5,
             "reach": 636
           }
         }
@@ -482,7 +482,7 @@
       "isbn": "9788416222278"
     },
     "stats": {
-      "views": 3214,
+      "views": 3218,
       "likes": 85,
       "comments": 3,
       "shares": 0,
@@ -507,13 +507,13 @@
         "at": "2026-11-21T09:04:46+00:00",
         "stats": {
           "instagram": {
-            "views": 1561,
+            "views": 1565,
             "likes": 37,
             "comments": 1,
             "shares": 1,
             "avg_watch_s": 18.1,
             "saves": 9,
-            "reach": 1273
+            "reach": 1275
           },
           "youtube": {
             "views": 1240,
@@ -535,12 +535,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 3109,
+      "views": 3113,
       "likes": 75,
       "comments": 3,
       "shares": 1,
       "youtube_views": 1240,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -569,7 +569,7 @@
             "reach": 1236
           },
           "youtube": {
-            "views": 1186,
+            "views": 1190,
             "likes": 22,
             "comments": 1,
             "shares": 0,
@@ -581,7 +581,7 @@
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 11.1,
-            "reach": 519
+            "reach": 521
           }
         }
       }
@@ -592,12 +592,12 @@
       "pitch": "El clásico que explica por qué recordar un nombre abre más puertas que cualquier frase ingeniosa."
     },
     "stats": {
-      "views": 3214,
+      "views": 3218,
       "likes": 105,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1186,
-      "updated": "2026-11-24"
+      "youtube_views": 1190,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -656,7 +656,7 @@
       "comments": 3,
       "shares": 0,
       "youtube_views": 1217,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -685,7 +685,7 @@
             "reach": 226
           },
           "youtube": {
-            "views": 569,
+            "views": 574,
             "likes": 2,
             "comments": 1,
             "shares": 0
@@ -696,19 +696,19 @@
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 7.1,
-            "reach": 2
+            "reach": 118
           }
         }
       }
     ],
     "book": null,
     "stats": {
-      "views": 986,
+      "views": 991,
       "likes": 12,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 569,
-      "updated": "2026-11-24"
+      "youtube_views": 574,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -737,30 +737,30 @@
             "reach": 171
           },
           "youtube": {
-            "views": 1203,
+            "views": 1208,
             "likes": 24,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 197,
+            "views": 198,
             "likes": 8,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 7.7,
-            "reach": 4
+            "reach": 163
           }
         }
       }
     ],
     "book": null,
     "stats": {
-      "views": 1604,
+      "views": 1610,
       "likes": 33,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1203,
-      "updated": "2026-11-24"
+      "youtube_views": 1208,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -789,7 +789,7 @@
             "reach": 360
           },
           "youtube": {
-            "views": 1246,
+            "views": 1250,
             "likes": 17,
             "comments": 1,
             "shares": 0
@@ -800,7 +800,7 @@
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 5.2,
-            "reach": 6
+            "reach": 76
           }
         }
       }
@@ -814,12 +814,12 @@
       "isbn": "9788466314916"
     },
     "stats": {
-      "views": 1792,
+      "views": 1796,
       "likes": 26,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1246,
-      "updated": "2026-11-24"
+      "youtube_views": 1250,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1503,5 +1503,181 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/10431371-M.jpg"
     }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "error_comun",
+    "topic": "Frases para ligar: las ingeniosas de manual funcionan peor que las directas o inocuas (Kleinke et al., 1986; Cunningham, 1989); truco: decir la verdad sin adornos o preguntar por lo que os rodea",
+    "series_title": "La frase para ligar que peor funciona",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T21:41:00+01:00",
+        "request_id": "c108582cb70e41eba6e314891c6aa5dd",
+        "job_id": "53c7fa7d8d824a8a9e2dad10c077e0ef",
+        "failed": [],
+        "at": "2026-11-25T08:42:31+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "debate",
+    "topic": "Diferencia de edad en pareja: la regla de «la mitad más siete» frente al estudio de Emory (Francis-Tan y Mialon): 5 años, +18 % de divorcio; 10 años, +39 %",
+    "series_title": "La regla de la edad que todos usan (y el dato que la complica)",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T09:38:00+01:00",
+        "request_id": "aef762f3f4fb4c15bae93a4cf64129fd",
+        "job_id": "13f1a1e610fe4bb88d75b4ca04745669",
+        "failed": [],
+        "at": "2026-11-25T08:53:46+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "antes_despues",
+    "topic": "Efecto de mera exposición (Moreland y Beach, 1992): gustas más a quien te ve a menudo; truco: repetir el mismo sitio a la misma hora en vez de cambiar de bar cada finde y saludar a la tercera coincidencia",
+    "series_title": "La chica que gustó sin decir ni una palabra",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T11:41:00+01:00",
+        "request_id": "e87c4efb0d1645b28cde227678955695",
+        "job_id": "cf68c5123053402999b559394d2f3d18",
+        "failed": [],
+        "at": "2026-11-25T09:05:48+00:00"
+      }
+    ],
+    "book": {
+      "title": "Influencia: la psicología de la persuasión",
+      "author": "Robert B. Cialdini",
+      "pitch": "El clásico que explica por qué nos gusta lo familiar y quién nos resulta cercano.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "red_flag",
+    "topic": "Red flag: la falsa disculpa «siento que te lo tomes así»; negarse a disculparse sube autoestima y poder (Okimoto et al., 2013); el perdón real empieza por «fue culpa mía» (Lewicki et al., 2016)",
+    "series_title": "El «lo siento» que es una red flag",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T14:10:00+01:00",
+        "request_id": "3e98bf94e59940c58f0466cc54d8dffd",
+        "job_id": "37f2848f4fb440bfb0465db7bbf9326d",
+        "failed": [],
+        "at": "2026-11-25T09:16:57+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "antes_despues",
+    "topic": "Silencio incómodo en una cita: bastan 4 segundos para sentir rechazo (Koudenburg et al., 2011); truco: no rellenar con preguntas de entrevista, sino retomar algo que la otra persona dijo antes",
+    "series_title": "Los cuatro segundos de silencio que te asustan en una cita",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T15:57:00+01:00",
+        "request_id": "ed585aad880c48888cf6200277cb5d41",
+        "job_id": "c5937e4d4f6140998b7917adac2de9e4",
+        "failed": [],
+        "at": "2026-11-25T09:28:35+00:00"
+      }
+    ],
+    "book": {
+      "title": "Cómo hacer amigos e influir sobre las personas",
+      "author": "Dale Carnegie",
+      "pitch": "El clásico que enseña que escuchar de verdad engancha más que cualquier frase brillante.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "debate",
+    "topic": "Debate: mirar el móvil de la pareja a escondidas (Pew 2020: 34 % lo ha hecho); veredicto: si necesitas mirar, falla la confianza, y exigir la contraseña es control (25N)",
+    "series_title": "¿Mirarías el móvil de tu pareja?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T17:54:00+01:00",
+        "request_id": "b45c3e01eb474dc58a1c9926610d8f48",
+        "job_id": "87edf7b12a2a4754ab2f7174d75fc283",
+        "failed": [],
+        "at": "2026-11-25T09:39:33+00:00"
+      }
+    ],
+    "book": {
+      "title": "Siete reglas de oro para vivir en pareja",
+      "author": "John M. Gottman",
+      "pitch": "El investigador que predice rupturas explica qué sostiene de verdad la confianza en una pareja.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/743812-M.jpg",
+      "isbn": "9788401376702"
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "senales",
+    "topic": "La voz como señal de interés: le cambia el tono al hablarte a ti frente a cómo habla con los demás (Leongómez et al., 2014; Hughes et al., 2010); qué hacer si cambia y si no",
+    "series_title": "La voz que usa solo contigo",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T20:00:00+01:00",
+        "request_id": "b1447184d11242e8b0d3775652c163b5",
+        "job_id": "fab9651d04e94e3eaba4c0ba46be9e21",
+        "failed": [],
+        "at": "2026-11-25T09:49:46+00:00"
+      }
+    ],
+    "book": {
+      "title": "El cuerpo habla",
+      "author": "Joe Navarro",
+      "pitch": "Un exagente del FBI enseña a leer lo que la gente dice sin palabras.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/7622903-M.jpg",
+      "isbn": "9788478087181"
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "antes_despues",
+    "topic": "Regalos de experiencias frente a objetos (Chan y Mogilner, 2017): un plan vivido une más que un objeto, incluso si no se disfruta juntos; truco: regalar un plan con fecha en Black Friday y Navidad",
+    "series_title": "El regalo de Black Friday que no os une",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T21:50:00+01:00",
+        "request_id": "ba6e73755e894cd6a0873e3e581b32bb",
+        "job_id": "3b301eab50ad40a9a5a2ef74848177d2",
+        "failed": [],
+        "at": "2026-11-25T09:59:40+00:00"
+      }
+    ],
+    "book": null
   }
 ]
