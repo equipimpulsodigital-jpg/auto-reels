@@ -324,7 +324,7 @@
             "shares": 0,
             "avg_watch_s": 16.2,
             "saves": 1,
-            "reach": 1099
+            "reach": 1100
           },
           "youtube": {
             "views": 5,
@@ -473,8 +473,8 @@
             "reach": 132
           },
           "youtube": {
-            "views": 1155,
-            "likes": 12,
+            "views": 1160,
+            "likes": 13,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 20.0
@@ -489,11 +489,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1312,
-      "likes": 13,
+      "views": 1317,
+      "likes": 14,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1155,
+      "youtube_views": 1160,
       "updated": "2026-11-25"
     }
   },
@@ -621,7 +621,7 @@
             "reach": 173
           },
           "youtube": {
-            "views": 1220,
+            "views": 1221,
             "likes": 23,
             "comments": 1,
             "shares": 0
@@ -631,11 +631,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1421,
+      "views": 1422,
       "likes": 23,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1220,
+      "youtube_views": 1221,
       "updated": "2026-11-25"
     }
   },
@@ -714,7 +714,7 @@
             "reach": 164
           },
           "youtube": {
-            "views": 1637,
+            "views": 1639,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -729,11 +729,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1842,
+      "views": 1844,
       "likes": 24,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1637,
+      "youtube_views": 1639,
       "updated": "2026-11-25"
     }
   },
@@ -763,8 +763,8 @@
             "reach": 112
           },
           "youtube": {
-            "views": 940,
-            "likes": 17,
+            "views": 1006,
+            "likes": 18,
             "comments": 1,
             "shares": 0
           }
@@ -780,12 +780,12 @@
       "isbn": "9788411001298"
     },
     "stats": {
-      "views": 1065,
-      "likes": 17,
+      "views": 1131,
+      "likes": 18,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 940,
-      "updated": "2026-11-24"
+      "youtube_views": 1006,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -814,8 +814,8 @@
             "reach": 116
           },
           "youtube": {
-            "views": 1150,
-            "likes": 24,
+            "views": 1169,
+            "likes": 25,
             "comments": 1,
             "shares": 0
           }
@@ -824,12 +824,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1298,
-      "likes": 25,
+      "views": 1317,
+      "likes": 26,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1150,
-      "updated": "2026-11-24"
+      "youtube_views": 1169,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -858,7 +858,7 @@
             "reach": 125
           },
           "youtube": {
-            "views": 904,
+            "views": 907,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -872,12 +872,12 @@
       "pitch": "El Nobel que destapó los atajos con los que tu cerebro decide sin preguntarte."
     },
     "stats": {
-      "views": 1058,
+      "views": 1061,
       "likes": 21,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 904,
-      "updated": "2026-11-24"
+      "youtube_views": 907,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -906,7 +906,7 @@
             "reach": 115
           },
           "youtube": {
-            "views": 1025,
+            "views": 1040,
             "likes": 18,
             "comments": 1,
             "shares": 0
@@ -916,12 +916,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1157,
+      "views": 1172,
       "likes": 19,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1025,
-      "updated": "2026-11-24"
+      "youtube_views": 1040,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -950,7 +950,7 @@
             "reach": 115
           },
           "youtube": {
-            "views": 959,
+            "views": 963,
             "likes": 23,
             "comments": 1,
             "shares": 0
@@ -960,12 +960,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1098,
+      "views": 1102,
       "likes": 23,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 959,
-      "updated": "2026-11-24"
+      "youtube_views": 963,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -994,7 +994,7 @@
             "reach": 140
           },
           "youtube": {
-            "views": 912,
+            "views": 963,
             "likes": 9,
             "comments": 1,
             "shares": 0
@@ -1009,12 +1009,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1098,
+      "views": 1149,
       "likes": 11,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 912,
-      "updated": "2026-11-24"
+      "youtube_views": 963,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1034,16 +1034,16 @@
         "at": "2026-11-22T07:51:36+00:00",
         "stats": {
           "instagram": {
-            "views": 171,
+            "views": 173,
             "likes": 1,
             "comments": 1,
             "shares": 1,
-            "avg_watch_s": 16.4,
+            "avg_watch_s": 16.3,
             "saves": 0,
-            "reach": 127
+            "reach": 129
           },
           "youtube": {
-            "views": 1005,
+            "views": 1008,
             "likes": 17,
             "comments": 1,
             "shares": 0
@@ -1058,12 +1058,12 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1176,
+      "views": 1181,
       "likes": 18,
       "comments": 2,
       "shares": 1,
-      "youtube_views": 1005,
-      "updated": "2026-11-24"
+      "youtube_views": 1008,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1080,10 +1080,43 @@
         "request_id": "38cbe6efd72a49a5b78c509aef4d314a",
         "job_id": "6b1ffe0d704b404b81d9b59c0a4bbd62",
         "failed": [],
-        "at": "2026-11-23T01:19:52+00:00"
+        "at": "2026-11-23T01:19:52+00:00",
+        "stats": {
+          "instagram": {
+            "views": 117,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 7.4,
+            "saves": 0,
+            "reach": 107
+          },
+          "youtube": {
+            "views": 881,
+            "likes": 25,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 92,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 4.6,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1090,
+      "likes": 26,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 881,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-23",
@@ -1099,7 +1132,32 @@
         "request_id": "1ae01a6398f3489daf0dd4cf5d871fa3",
         "job_id": "aa891e9781dc47999e08f5452959ed6c",
         "failed": [],
-        "at": "2026-11-23T01:28:15+00:00"
+        "at": "2026-11-23T01:28:15+00:00",
+        "stats": {
+          "instagram": {
+            "views": 130,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 14.1,
+            "saves": 0,
+            "reach": 106
+          },
+          "youtube": {
+            "views": 1219,
+            "likes": 22,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 81,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 10.8,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1107,6 +1165,14 @@
       "author": "Paul Ekman",
       "pitch": "El psicólogo que inspiró «Miénteme» explica por qué casi nadie sabe pillar una mentira.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1430,
+      "likes": 22,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 1219,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1123,10 +1189,43 @@
         "request_id": "e73327eb1eaa48c6b9ebb448c5575143",
         "job_id": "703525bbeee44ebcb0997a34531302ad",
         "failed": [],
-        "at": "2026-11-23T01:35:10+00:00"
+        "at": "2026-11-23T01:35:10+00:00",
+        "stats": {
+          "instagram": {
+            "views": 116,
+            "likes": 0,
+            "comments": 1,
+            "shares": 2,
+            "avg_watch_s": 6.0,
+            "saves": 0,
+            "reach": 103
+          },
+          "youtube": {
+            "views": 822,
+            "likes": 10,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 92,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "avg_watch_s": 5.5,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 1030,
+      "likes": 10,
+      "comments": 2,
+      "shares": 2,
+      "youtube_views": 822,
+      "updated": "2026-11-25"
+    }
   },
   {
     "date": "2026-11-23",
@@ -1142,7 +1241,32 @@
         "request_id": "e38bca5741474d289242bea40fa17946",
         "job_id": "8c85080af18a4e9ea42539b29208d6e8",
         "failed": [],
-        "at": "2026-11-23T01:42:43+00:00"
+        "at": "2026-11-23T01:42:43+00:00",
+        "stats": {
+          "instagram": {
+            "views": 133,
+            "likes": 1,
+            "comments": 1,
+            "shares": 1,
+            "avg_watch_s": 8.0,
+            "saves": 0,
+            "reach": 105
+          },
+          "youtube": {
+            "views": 794,
+            "likes": 16,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 86,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 6.3,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -1150,6 +1274,14 @@
       "author": "Amir Levine y Rachel Heller",
       "pitch": "Por qué te atrae quien te hace dudar y cómo reconocer un amor que te da calma.",
       "looked_up": true
+    },
+    "stats": {
+      "views": 1013,
+      "likes": 17,
+      "comments": 3,
+      "shares": 1,
+      "youtube_views": 794,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1317,5 +1449,79 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "si_haces_esto",
+    "topic": "Transferencia espontánea de rasgos: al describir defectos (o virtudes) de otros, los oyentes te los atribuyen a ti (Skowronski et al., 1998; Brown y Bassili, 2002)",
+    "series_title": "Si criticas a alguien, te ven a ti así",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T16:03:00+01:00",
+        "request_id": "a065a7331ac945ba9cae7d4f75764332",
+        "job_id": "23897c034bba41f886d66da2e24b30c1",
+        "failed": [],
+        "at": "2026-11-25T08:41:39+00:00"
+      }
+    ],
+    "book": {
+      "title": "Influencia: La psicología de la persuasión",
+      "author": "Robert B. Cialdini",
+      "pitch": "El clásico que explica por qué decimos que sí, y por qué lo que asocias contigo te define.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "psicologia_oscura",
+    "topic": "Técnica del pie en la puerta: un favor diminuto (pegatina en la ventana) multiplica los síes a una petición enorme (cartel en el jardín), 17 % frente a 76 % (Freedman y Fraser, 1966); antídoto: juzgar la petición como si empezara de cero.",
+    "series_title": "El favor pequeño que te obliga a decir que sí",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T18:10:00+01:00",
+        "request_id": "0a618d82cf5a427f9b0d70ea7401a370",
+        "job_id": "3935115f06fc4cefae56a3e21948f838",
+        "failed": [],
+        "at": "2026-11-25T08:53:46+00:00"
+      }
+    ],
+    "book": {
+      "title": "Influencia. La psicología de la persuasión",
+      "author": "Robert B. Cialdini",
+      "pitch": "El clásico que destapa los trucos con los que te sacan un sí sin que lo notes.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "trucos_persuasion",
+    "topic": "Efecto pratfall: un error torpe hace más simpático a quien parece competente y hunde a quien no (Aronson, Willerman y Floyd, 1966)",
+    "series_title": "Por qué meter la pata puede hacerte caer mejor",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T20:52:00+01:00",
+        "request_id": "2635ab0b5e4b40978624d2d20c6cc7b1",
+        "job_id": "f7c8a7043e1b47e2b8290eaac44c5c5d",
+        "failed": [],
+        "at": "2026-11-25T09:05:11+00:00"
+      }
+    ],
+    "book": {
+      "title": "El animal social",
+      "author": "Elliot Aronson",
+      "pitch": "El clásico del psicólogo del experimento del café para entender por qué la gente nos quiere o nos rechaza.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/5258987-M.jpg",
+      "isbn": "9788420687094"
+    }
   }
 ]
