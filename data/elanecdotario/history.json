@@ -67,7 +67,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1106,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -96,7 +96,7 @@
             "reach": 100
           },
           "youtube": {
-            "views": 1197,
+            "views": 1198,
             "likes": 22,
             "comments": 0,
             "shares": 1,
@@ -133,12 +133,12 @@
       }
     ],
     "stats": {
-      "views": 1867,
+      "views": 1868,
       "likes": 31,
       "comments": 0,
       "shares": 1,
-      "youtube_views": 1603,
-      "updated": "2026-11-24"
+      "youtube_views": 1604,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -214,7 +214,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 655,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -276,7 +276,7 @@
             "reach": 136
           },
           "youtube": {
-            "views": 562,
+            "views": 561,
             "likes": 17,
             "comments": 0,
             "shares": 0,
@@ -293,12 +293,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 1236,
+      "views": 1235,
       "likes": 31,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1026,
-      "updated": "2026-11-24"
+      "youtube_views": 1025,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -349,7 +349,7 @@
       "comments": 1,
       "shares": 0,
       "youtube_views": 1291,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -378,7 +378,7 @@
             "reach": 121
           },
           "youtube": {
-            "views": 1555,
+            "views": 1557,
             "likes": 51,
             "comments": 0,
             "shares": 0
@@ -430,12 +430,12 @@
     ],
     "book": null,
     "stats": {
-      "views": 4216,
-      "likes": 121,
+      "views": 1709,
+      "likes": 60,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2769,
-      "updated": "2026-11-24"
+      "youtube_views": 1557,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1110,6 +1110,63 @@
         "job_id": "66f78160bae44030a4141480a579e111",
         "failed": [],
         "at": "2026-11-24T22:22:36+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "ultimo_rastro",
+    "topic": "Desaparición del Vuelo 19 (5/12/1945), sus últimas transmisiones, la explosión del hidroavión de rescate y el cambio de veredicto que originó el mito del Triángulo de las Bermudas",
+    "series_title": "Vuelo 19: el último mensaje que creó el Triángulo de las Bermudas",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T18:07:00+01:00",
+        "request_id": "a970f1eb30de466fae10c3b4f7b6e109",
+        "job_id": "bfe66f30e596492cbc0a65851ed92b19",
+        "failed": [],
+        "at": "2026-11-25T01:27:51+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "caso_con_giro",
+    "topic": "Poltergeist de Enfield (1977-1979): la voz de 'Bill', los Warren que apenas estuvieron, la cámara oculta que grabó a Janet doblando cucharas y su admisión parcial de fraude",
+    "series_title": "El poltergeist de Enfield: lo que la película no contó",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T20:56:00+01:00",
+        "request_id": "9dfc49094d1244648875a35a356fefbd",
+        "job_id": "9375c049bf8a413cad08290fae2e5e0b",
+        "failed": [],
+        "at": "2026-11-25T01:42:00+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "caso_famoso",
+    "topic": "La historia real de la muñeca Annabelle (1970): una Raggedy Ann de trapo, las notas «Ayúdanos», los arañazos de Lou y la vitrina de los Warren",
+    "series_title": "Annabelle: la muñeca real era de trapo",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T10:11:00+01:00",
+        "request_id": "68a3e9e151374855abbdf30162e5eefd",
+        "job_id": "ea32e6e639964e6c83fa1f6e2f3a4302",
+        "failed": [],
+        "at": "2026-11-25T01:55:49+00:00"
       }
     ],
     "book": null
