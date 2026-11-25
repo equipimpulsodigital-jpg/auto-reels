@@ -345,7 +345,7 @@
             "reach": 1034
           },
           "youtube": {
-            "views": 1328,
+            "views": 1332,
             "likes": 24,
             "comments": 1,
             "shares": 0,
@@ -363,11 +363,11 @@
       "isbn": "9788418967832"
     },
     "stats": {
-      "views": 2591,
+      "views": 2595,
       "likes": 53,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1328,
+      "youtube_views": 1332,
       "updated": "2026-11-25"
     }
   },
@@ -1213,6 +1213,101 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/8186237-M.jpg",
       "isbn": "9788416863488"
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "y_si_tu",
+    "topic": "Qué te pasaría si mañana no pudieras olvidar nada: la euforia del primer minuto, cada canción y cada frase de tu ex con fecha, no poder apagarlo, la hipertimesia real de Jill Price (desde 1980) y el giro de que el cerebro olvida a propósito.",
+    "series_title": "¿Y si no pudieras olvidar nada?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T11:52:00+01:00",
+        "request_id": "0c8493ed9c2c401698540f9914d4ba95",
+        "job_id": "1f1ff24452e548229df41441f5534f2b",
+        "failed": [],
+        "at": "2026-11-25T08:42:12+00:00"
+      }
+    ],
+    "book": {
+      "title": "El hombre que confundió a su mujer con un sombrero",
+      "author": "Oliver Sacks",
+      "pitch": "Casos reales de cerebros que fallan de formas increíbles, contados como relatos que no se pueden soltar.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "y_si_planeta",
+    "topic": "Qué pasaría si estallara hoy el supervolcán de Yellowstone: columna de ceniza de 40 km, medio EE. UU. cubierto, velo de azufre global, heladas en julio en España y el giro de Tambora y el año sin verano de 1816, cuando Mary Shelley escribió Frankenstein.",
+    "series_title": "¿Y si estallara el supervolcán de Yellowstone?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T15:59:00+01:00",
+        "request_id": "5dd929ce0b144831b7e61f32e4c1bab3",
+        "job_id": "3c6fde1aec4f495bbc01733c8ee762fe",
+        "failed": [],
+        "at": "2026-11-25T08:53:27+00:00"
+      }
+    ],
+    "book": {
+      "title": "Frankenstein o el moderno Prometeo",
+      "author": "Mary Shelley",
+      "pitch": "La novela que nació en un verano sin sol, encerrada por las tormentas de un volcán.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/15121538-M.jpg",
+      "isbn": "9788412537116"
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "cuenta_atras",
+    "topic": "Qué te pasaría hora a hora si despertaras enterrado vivo: el aire de un ataúd, gritar que te consume, el CO2 de tu propio aliento, unas 5 horas de margen y la norma española de esperar 24 horas antes de enterrar.",
+    "series_title": "¿Y si despertaras enterrado vivo?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T17:59:00+01:00",
+        "request_id": "d90e90e7c79d498a8d6df1f4e668e19d",
+        "job_id": "5ce44303297c438d8d3edbf585187adc",
+        "failed": [],
+        "at": "2026-11-25T09:05:43+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "y_si_humanidad",
+    "topic": "Qué le pasaría al planeta si mañana desaparecieran todos los humanos: apagón en horas, perros encerrados y gatos que cazan, 400 reactores sin refrigerar, Chernóbil lleno de lobos, árboles en la Gran Vía y el giro del disco de oro de las Voyager que durará mil millones de años.",
+    "series_title": "¿Y si mañana desapareciera toda la humanidad?",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T21:08:00+01:00",
+        "request_id": "a081b01527804fde9d5ba2eb3d974b25",
+        "job_id": "34c20b9df2354e0d9b5a80e282f40064",
+        "failed": [],
+        "at": "2026-11-25T09:17:08+00:00"
+      }
+    ],
+    "book": {
+      "title": "El mundo sin nosotros",
+      "author": "Alan Weisman",
+      "pitch": "La investigación que imagina, con expertos reales, qué haría la Tierra el día después de desaparecer nosotros.",
+      "looked_up": true,
+      "cover": "https://covers.openlibrary.org/b/id/14249980-M.jpg",
+      "isbn": "9788418967832"
     }
   }
 ]
