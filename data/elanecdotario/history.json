@@ -28,8 +28,7 @@
             "views": 995,
             "likes": 29,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 22.0
+            "shares": 0
           }
         }
       },
@@ -55,8 +54,7 @@
             "views": 111,
             "likes": 4,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 18.0
+            "shares": 0
           }
         }
       }
@@ -99,8 +97,7 @@
             "views": 1198,
             "likes": 22,
             "comments": 0,
-            "shares": 1,
-            "avg_watch_s": 24.0
+            "shares": 0
           }
         }
       },
@@ -126,8 +123,7 @@
             "views": 406,
             "likes": 7,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 14.0
+            "shares": 0
           }
         }
       }
@@ -136,7 +132,7 @@
       "views": 1868,
       "likes": 31,
       "comments": 0,
-      "shares": 1,
+      "shares": 0,
       "youtube_views": 1604,
       "updated": "2026-11-25"
     }
@@ -167,8 +163,7 @@
             "views": 448,
             "likes": 24,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 24.0
+            "shares": 0
           }
         }
       },
@@ -194,8 +189,7 @@
             "views": 208,
             "likes": 15,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 17.0
+            "shares": 0
           }
         }
       }
@@ -246,8 +240,7 @@
             "views": 465,
             "likes": 9,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 14.0
+            "shares": 0
           },
           "tiktok": {
             "views": 0,
@@ -279,8 +272,7 @@
             "views": 561,
             "likes": 17,
             "comments": 0,
-            "shares": 0,
-            "avg_watch_s": 43.0
+            "shares": 0
           },
           "tiktok": {
             "views": 0,
@@ -330,8 +322,7 @@
             "views": 1291,
             "likes": 27,
             "comments": 1,
-            "shares": 0,
-            "avg_watch_s": 18.0
+            "shares": 0
           },
           "tiktok": {
             "views": 0,
@@ -823,7 +814,7 @@
             "reach": 1108
           },
           "youtube": {
-            "views": 1379,
+            "views": 1380,
             "likes": 37,
             "comments": 1,
             "shares": 0
@@ -838,11 +829,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 2768,
+      "views": 2769,
       "likes": 114,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1379,
+      "youtube_views": 1380,
       "updated": "2026-11-25"
     }
   },
