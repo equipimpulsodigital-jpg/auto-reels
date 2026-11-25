@@ -55,7 +55,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1138,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -134,7 +134,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1118,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -190,7 +190,7 @@
             "reach": 129
           },
           "youtube": {
-            "views": 1326,
+            "views": 1327,
             "likes": 24,
             "comments": 0,
             "shares": 0,
@@ -206,12 +206,12 @@
       "pitch": "Quién era de verdad Mateo Morral, el hombre detrás de la bomba de la calle Mayor."
     },
     "stats": {
-      "views": 2406,
+      "views": 2407,
       "likes": 42,
       "comments": 1,
       "shares": 0,
-      "youtube_views": 1617,
-      "updated": "2026-11-24"
+      "youtube_views": 1618,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -267,7 +267,7 @@
             "reach": 116
           },
           "youtube": {
-            "views": 1228,
+            "views": 1229,
             "likes": 19,
             "comments": 0,
             "shares": 0,
@@ -285,12 +285,12 @@
       "pitch": "Una investigación a fondo sobre uno de los grandes misterios sin resolver de nuestra historia."
     },
     "stats": {
-      "views": 2567,
+      "views": 2568,
       "likes": 41,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2277,
-      "updated": "2026-11-24"
+      "youtube_views": 2278,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -361,7 +361,7 @@
       "comments": 1,
       "shares": 0,
       "youtube_views": 2342,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -446,7 +446,7 @@
       "comments": 1,
       "shares": 0,
       "youtube_views": 2228,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -487,7 +487,7 @@
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 5.1,
-            "reach": 200
+            "reach": 201
           }
         }
       },
@@ -522,7 +522,7 @@
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 6.5,
-            "reach": 207
+            "reach": 209
           }
         }
       }
@@ -539,7 +539,7 @@
       "comments": 0,
       "shares": 0,
       "youtube_views": 1656,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -574,12 +574,12 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 229,
+            "views": 230,
             "likes": 8,
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 8.2,
-            "reach": 217
+            "reach": 218
           }
         }
       },
@@ -602,7 +602,7 @@
             "reach": 1059
           },
           "youtube": {
-            "views": 823,
+            "views": 824,
             "likes": 10,
             "comments": 0,
             "shares": 0
@@ -613,7 +613,7 @@
             "comments": 0,
             "shares": 0,
             "avg_watch_s": 6.0,
-            "reach": 200
+            "reach": 202
           }
         }
       }
@@ -627,12 +627,12 @@
       "isbn": "9788434465985"
     },
     "stats": {
-      "views": 4643,
+      "views": 4645,
       "likes": 82,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2027,
-      "updated": "2026-11-24"
+      "youtube_views": 2028,
+      "updated": "2026-11-25"
     }
   },
   {
@@ -694,7 +694,7 @@
       "comments": 1,
       "shares": 0,
       "youtube_views": 0,
-      "updated": "2026-11-24"
+      "updated": "2026-11-25"
     }
   },
   {
@@ -1376,5 +1376,73 @@
       }
     ],
     "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "error_historico",
+    "topic": "Pérdida de Gibraltar (agosto de 1704) en la Guerra de Sucesión: unos 80 soldados con el gobernador Salinas, el ataque anglo-holandés de Rooke y Hesse-Darmstadt, la ermita de Europa con mujeres y niños, la rendición ante Carlos III de Austria, Utrecht 1713 y el éxodo a San Roque.",
+    "series_title": "Gibraltar: la rendición que dura 300 años",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T18:12:00+01:00",
+        "request_id": "274a41df747c4ef69c2b9cefd77b5dd9",
+        "job_id": "c26cd3d675bc4806a9eb114a7d18c52a",
+        "failed": [],
+        "at": "2026-11-25T01:26:21+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-25",
+    "format": "punto_inflexion",
+    "topic": "Evacuación del Museo del Prado en la Guerra Civil (1936-1939): bombas sobre el museo, el balcón de Benicarló que rasgó dos Goya, Ginebra y la vuelta en tren a oscuras al estallar la Segunda Guerra Mundial.",
+    "series_title": "El viaje de Las Meninas bajo las bombas",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-25",
+        "slot": "2026-11-25T20:54:00+01:00",
+        "request_id": "161f900ec9cc445184809b8cb1a1f7d7",
+        "job_id": "749c70bf3a0f48a2a3c0dc14ede854c6",
+        "failed": [],
+        "at": "2026-11-25T01:41:45+00:00"
+      }
+    ],
+    "book": {
+      "title": "Éxodo y exilio del arte. La odisea del Museo del Prado durante la Guerra Civil",
+      "author": "Arturo Colorado Castellary",
+      "pitch": "La reconstrucción, documento a documento, del viaje más arriesgado del arte español.",
+      "looked_up": true
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "format": "crimen_historico",
+    "topic": "El oro de Moscú (1936): 7.800 cajas, unas 510 t de oro del Banco de España, sacadas en secreto de Cartagena por orden de Negrín y el agente Orlov hacia Odesa, la frase de Stalin sobre las orejas y el oro gastado en armas que nunca volvió.",
+    "series_title": "El oro de Moscú: las cajas que nunca volvieron",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-26",
+        "slot": "2026-11-26T10:02:00+01:00",
+        "request_id": "3bbc09e4be5d4061a99b3ad2e8804cee",
+        "job_id": "affc37015edf45518b85280ab8c4aecf",
+        "failed": [],
+        "at": "2026-11-25T01:57:05+00:00"
+      }
+    ],
+    "book": {
+      "title": "El oro de Moscú y el oro de Berlín",
+      "author": "Pablo Martín Aceña",
+      "pitch": "Qué pasó de verdad con el oro de España, contado con los papeles del Banco.",
+      "looked_up": true,
+      "isbn": "9788430604487"
+    }
   }
 ]
