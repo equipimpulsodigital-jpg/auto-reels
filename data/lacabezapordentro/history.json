@@ -28,7 +28,8 @@
             "views": 1,
             "likes": 0,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 5.0
           }
         }
       }
@@ -78,7 +79,8 @@
             "views": 1365,
             "likes": 32,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 18.0
           }
         }
       }
@@ -129,7 +131,8 @@
             "views": 1275,
             "likes": 20,
             "comments": 0,
-            "shares": 0
+            "shares": 1,
+            "avg_watch_s": 23.0
           }
         }
       }
@@ -144,7 +147,7 @@
       "views": 1495,
       "likes": 23,
       "comments": 0,
-      "shares": 0,
+      "shares": 1,
       "youtube_views": 1275,
       "updated": "2026-11-26"
     }
@@ -366,7 +369,7 @@
             "reach": 112
           },
           "youtube": {
-            "views": 1143,
+            "views": 1144,
             "likes": 22,
             "comments": 0,
             "shares": 0
@@ -382,11 +385,11 @@
       "cover": "https://covers.openlibrary.org/b/id/12059254-M.jpg"
     },
     "stats": {
-      "views": 1279,
+      "views": 1280,
       "likes": 23,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1143,
+      "youtube_views": 1144,
       "updated": "2026-11-26"
     }
   },
@@ -416,7 +419,7 @@
             "reach": 137
           },
           "youtube": {
-            "views": 1428,
+            "views": 1427,
             "likes": 29,
             "comments": 1,
             "shares": 0
@@ -431,11 +434,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1620,
+      "views": 1619,
       "likes": 31,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1428,
+      "youtube_views": 1427,
       "updated": "2026-11-26"
     }
   },
@@ -465,7 +468,7 @@
             "reach": 132
           },
           "youtube": {
-            "views": 1160,
+            "views": 1161,
             "likes": 13,
             "comments": 1,
             "shares": 0
@@ -480,11 +483,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1317,
+      "views": 1318,
       "likes": 14,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1160,
+      "youtube_views": 1161,
       "updated": "2026-11-26"
     }
   },
@@ -805,7 +808,7 @@
             "reach": 116
           },
           "youtube": {
-            "views": 1174,
+            "views": 1175,
             "likes": 25,
             "comments": 1,
             "shares": 0
@@ -815,11 +818,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1322,
+      "views": 1323,
       "likes": 26,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1174,
+      "youtube_views": 1175,
       "updated": "2026-11-26"
     }
   },
@@ -988,7 +991,8 @@
             "views": 974,
             "likes": 9,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 14.0
           }
         }
       }
@@ -1037,7 +1041,8 @@
             "views": 1014,
             "likes": 17,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 40.0
           }
         }
       }
@@ -1083,7 +1088,7 @@
             "reach": 107
           },
           "youtube": {
-            "views": 886,
+            "views": 891,
             "likes": 25,
             "comments": 1,
             "shares": 0
@@ -1101,11 +1106,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1095,
+      "views": 1100,
       "likes": 26,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 886,
+      "youtube_views": 891,
       "updated": "2026-11-26"
     }
   },
@@ -1135,8 +1140,8 @@
             "reach": 106
           },
           "youtube": {
-            "views": 1335,
-            "likes": 25,
+            "views": 1392,
+            "likes": 27,
             "comments": 1,
             "shares": 0
           },
@@ -1158,11 +1163,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1546,
-      "likes": 25,
+      "views": 1603,
+      "likes": 27,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1335,
+      "youtube_views": 1392,
       "updated": "2026-11-26"
     }
   },
@@ -1192,8 +1197,8 @@
             "reach": 103
           },
           "youtube": {
-            "views": 826,
-            "likes": 10,
+            "views": 827,
+            "likes": 11,
             "comments": 1,
             "shares": 0
           },
@@ -1210,11 +1215,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1034,
-      "likes": 10,
+      "views": 1035,
+      "likes": 11,
       "comments": 2,
       "shares": 2,
-      "youtube_views": 826,
+      "youtube_views": 827,
       "updated": "2026-11-26"
     }
   },
@@ -1301,7 +1306,7 @@
             "reach": 123
           },
           "youtube": {
-            "views": 139,
+            "views": 202,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -1319,11 +1324,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 357,
+      "views": 420,
       "likes": 5,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 139,
+      "youtube_views": 202,
       "updated": "2026-11-26"
     }
   },
@@ -1353,7 +1358,7 @@
             "reach": 108
           },
           "youtube": {
-            "views": 54,
+            "views": 58,
             "likes": 0,
             "comments": 1,
             "shares": 0
@@ -1371,11 +1376,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 272,
+      "views": 276,
       "likes": 6,
       "comments": 3,
       "shares": 1,
-      "youtube_views": 54,
+      "youtube_views": 58,
       "updated": "2026-11-26"
     }
   },
@@ -1405,17 +1410,17 @@
             "reach": 113
           },
           "youtube": {
-            "views": 356,
+            "views": 460,
             "likes": 9,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 81,
+            "views": 82,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 10.1,
+            "avg_watch_s": 10.0,
             "reach": 0
           }
         }
@@ -1423,11 +1428,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 579,
+      "views": 684,
       "likes": 13,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 356,
+      "youtube_views": 460,
       "updated": "2026-11-26"
     }
   },
@@ -1560,22 +1565,22 @@
         "at": "2026-11-25T14:11:48+00:00",
         "stats": {
           "instagram": {
-            "views": 176,
+            "views": 187,
             "likes": 3,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 14.3,
+            "avg_watch_s": 13.8,
             "saves": 2,
-            "reach": 132
+            "reach": 143
           },
           "youtube": {
-            "views": 297,
+            "views": 328,
             "likes": 3,
             "comments": 2,
             "shares": 0
           },
           "tiktok": {
-            "views": 85,
+            "views": 86,
             "likes": 0,
             "comments": 1,
             "shares": 0,
@@ -1587,11 +1592,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 558,
+      "views": 601,
       "likes": 6,
       "comments": 4,
       "shares": 0,
-      "youtube_views": 297,
+      "youtube_views": 328,
       "updated": "2026-11-26"
     }
   },
@@ -1612,16 +1617,16 @@
         "at": "2026-11-25T14:24:27+00:00",
         "stats": {
           "instagram": {
-            "views": 141,
+            "views": 167,
             "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.4,
+            "avg_watch_s": 12.9,
             "saves": 0,
-            "reach": 121
+            "reach": 144
           },
           "youtube": {
-            "views": 305,
+            "views": 325,
             "likes": 4,
             "comments": 1,
             "shares": 0
@@ -1639,11 +1644,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 520,
+      "views": 566,
       "likes": 7,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 305,
+      "youtube_views": 325,
       "updated": "2026-11-26"
     }
   },
@@ -1661,10 +1666,43 @@
         "request_id": "4d125253ecc04d2c992ff102be70cdcb",
         "job_id": "5c23ce1d2b6d472a9b96466f428c1310",
         "failed": [],
-        "at": "2026-11-25T14:38:21+00:00"
+        "at": "2026-11-25T14:38:21+00:00",
+        "stats": {
+          "instagram": {
+            "views": 127,
+            "likes": 2,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 10.1,
+            "saves": 0,
+            "reach": 113
+          },
+          "youtube": {
+            "views": 5,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 102,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 7.6,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 234,
+      "likes": 4,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 5,
+      "updated": "2026-11-26"
+    }
   },
   {
     "date": "2026-11-25",
@@ -1757,6 +1795,25 @@
         "job_id": "d79ff85478134d209be9c2d563d74792",
         "failed": [],
         "at": "2026-11-26T01:52:15+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-26",
+    "format": "cotilleo",
+    "topic": "Polémica por la publicación de Sergio Ramos marcando caballos de su Yeguada SR4 («Tradiciones, familia y raíces») y su defensa del marcado en frío con nitrógeno líquido",
+    "series_title": "Sergio Ramos y el marcado de sus caballos",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-27",
+        "slot": "2026-11-27T10:09:00+01:00",
+        "request_id": "a3f031876ebc48f48e03acfd162f8240",
+        "job_id": "0e2b80231dd746f58f0eadc20d1f0790",
+        "failed": [],
+        "at": "2026-11-26T08:27:09+00:00"
       }
     ],
     "book": null
