@@ -1264,11 +1264,11 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 86,
+            "views": 87,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 6.3,
+            "avg_watch_s": 6.2,
             "reach": 86
           }
         }
@@ -1281,7 +1281,7 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1013,
+      "views": 1014,
       "likes": 17,
       "comments": 3,
       "shares": 1,
@@ -1373,7 +1373,7 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 89,
+            "views": 90,
             "likes": 3,
             "comments": 1,
             "shares": 1,
@@ -1385,7 +1385,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 276,
+      "views": 277,
       "likes": 6,
       "comments": 3,
       "shares": 1,
@@ -1420,7 +1420,7 @@
           },
           "youtube": {
             "views": 467,
-            "likes": 9,
+            "likes": 10,
             "comments": 1,
             "shares": 0
           },
@@ -1438,7 +1438,7 @@
     "book": null,
     "stats": {
       "views": 691,
-      "likes": 13,
+      "likes": 14,
       "comments": 3,
       "shares": 0,
       "youtube_views": 467,
@@ -1574,16 +1574,16 @@
         "at": "2026-11-25T14:11:48+00:00",
         "stats": {
           "instagram": {
-            "views": 188,
+            "views": 189,
             "likes": 3,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 13.7,
             "saves": 2,
-            "reach": 144
+            "reach": 145
           },
           "youtube": {
-            "views": 329,
+            "views": 330,
             "likes": 3,
             "comments": 2,
             "shares": 0
@@ -1593,7 +1593,7 @@
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 3.4,
+            "avg_watch_s": 3.3,
             "reach": 0
           }
         }
@@ -1601,11 +1601,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 604,
+      "views": 606,
       "likes": 6,
       "comments": 4,
       "shares": 0,
-      "youtube_views": 329,
+      "youtube_views": 330,
       "updated": "2026-11-26"
     }
   },
@@ -1630,12 +1630,12 @@
             "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.1,
+            "avg_watch_s": 13.2,
             "saves": 0,
             "reach": 148
           },
           "youtube": {
-            "views": 327,
+            "views": 328,
             "likes": 4,
             "comments": 1,
             "shares": 0
@@ -1653,11 +1653,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 572,
+      "views": 573,
       "likes": 7,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 327,
+      "youtube_views": 328,
       "updated": "2026-11-26"
     }
   },
@@ -1678,16 +1678,16 @@
         "at": "2026-11-25T14:38:21+00:00",
         "stats": {
           "instagram": {
-            "views": 127,
-            "likes": 2,
+            "views": 129,
+            "likes": 3,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 10.1,
+            "avg_watch_s": 10.2,
             "saves": 0,
-            "reach": 113
+            "reach": 114
           },
           "youtube": {
-            "views": 5,
+            "views": 8,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -1705,11 +1705,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 234,
-      "likes": 4,
+      "views": 239,
+      "likes": 5,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 5,
+      "youtube_views": 8,
       "updated": "2026-11-26"
     }
   },
@@ -1842,6 +1842,25 @@
         "job_id": "cde446a43e924c30927f1b9c104d140c",
         "failed": [],
         "at": "2026-11-26T11:43:35+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-26",
+    "format": "polemica_redes",
+    "topic": "La JEC abre expediente a Silvia Intxaurrondo por sus preguntas sobre la ultraderecha en La hora de La 1 tras denuncia de Vox; ella lo recibe «con orgullo y con honor» y se hace viral (noviembre 2026)",
+    "series_title": "Expediente a Intxaurrondo por preguntar",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-27",
+        "slot": "2026-11-27T16:00:00+01:00",
+        "request_id": "4239b76a77044450853cdff7c9fef954",
+        "job_id": "a20edac30e5a40f5bf56ba244a517e10",
+        "failed": [],
+        "at": "2026-11-26T14:28:29+00:00"
       }
     ],
     "book": null
