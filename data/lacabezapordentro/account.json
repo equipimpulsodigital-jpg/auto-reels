@@ -36,22 +36,22 @@
   "latest": {
     "instagram": {
       "followers": 1,
-      "reach": 5754,
-      "views": 6987,
-      "impressions": 6987,
-      "profileViews": 156
+      "reach": 6358,
+      "views": 7727,
+      "impressions": 7727,
+      "profileViews": 172
     },
     "youtube": {
       "followers": 26,
       "reach": 0,
-      "impressions": 12668,
+      "impressions": 22170,
       "profileViews": 0
     },
     "tiktok": {
       "followers": 0,
-      "reach": 0,
-      "impressions": 413,
-      "profileViews": 0
+      "reach": 409,
+      "impressions": 846,
+      "profileViews": 1
     }
   }
 }
