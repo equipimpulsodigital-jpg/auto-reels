@@ -2157,17 +2157,7 @@
     "topic": "Propuestas de jornada laboral de PSOE (37,5 y luego 35), Frente Amplio (37,5 ya y luego 32), PP (no fija nueva jornada) y Vox (no concreta) para el 29-N de 2026",
     "series_title": "32, 35 o nada: tus horas de trabajo el 29-N",
     "parts": 1,
-    "published_parts": [
-      {
-        "part": 1,
-        "date": "2026-11-28",
-        "slot": "2026-11-28T12:01:00+01:00",
-        "request_id": "b614dd2d8cea4d169327173bbf4c4de0",
-        "job_id": "b15852dd2c3f4dc383e1b51f596f0d38",
-        "failed": [],
-        "at": "2026-11-27T11:42:33+00:00"
-      }
-    ],
+    "published_parts": [],
     "book": null
   },
   {
@@ -2185,6 +2175,44 @@
         "job_id": "3dfd27b768fd4904ac979819aae0d739",
         "failed": [],
         "at": "2026-11-27T14:21:30+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-27",
+    "format": "cotilleo",
+    "topic": "Bárbara Rey carga contra Loles León tras su mitin con Sánchez (24-N-2026) y revela un choque de los 90 en el programa de Raffaella Carrà; Loles no ha respondido",
+    "series_title": "Bárbara Rey contra Loles León: la cuenta pendiente de los 90",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-28",
+        "slot": "2026-11-28T12:01:00+01:00",
+        "request_id": "3b2b426e0c904e6d8a79aa0296266a6d",
+        "job_id": "722ecd8f1f954a928299c8910e3cf63c",
+        "failed": [],
+        "at": "2026-11-27T19:16:06+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-27",
+    "format": "dicho_vs_dato",
+    "topic": "Dicho vs dato: Sánchez dice en el debate a cuatro del 26-N que la economía española «es la que más crece de toda Europa»; Comisión Europea (otoño 2026): España 2,6 %, novena de 27 tras Dinamarca 4,5 %, Malta y Eslovenia 3,9 %, Polonia 3,5 %, Chipre 3,4 %, Suecia 2,8 %, Bulgaria y Lituania 2,7 %; media UE 1,4 %, por delante de Alemania, Italia y Francia.",
+    "series_title": "«La que más crece de Europa»: la frase de Sánchez contra los datos",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-28",
+        "slot": "2026-11-28T18:12:00+01:00",
+        "request_id": "bd47a1ce40424a26bce84646bc00dc58",
+        "job_id": "1825411531914b39b4f7b2e56c3ea499",
+        "failed": [],
+        "at": "2026-11-27T19:26:24+00:00"
       }
     ],
     "book": null
