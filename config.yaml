@@ -218,10 +218,9 @@ channels:
       location: plato_debate
       mood: noche
       look: {female: true, age: adulto, skin: clara, hair_color: castaño, hair_style: moño, glasses: true, outfit: traje, outfit_color: azul_marino, accent_color: crema, nose: pequeña, jaw: fina, eyes: azules}
-    format_cycle: [campana_hoy, cotilleo, que_propone_cada_uno, polemica_redes, dicho_vs_dato]
+    format_cycle: [cotilleo, dicho_vs_dato, polemica_redes, cotilleo, campana_hoy, dicho_vs_dato]   # cotilleo y dicho-vs-dato, los que mejor funcionan (27/11); «qué propone cada uno» fuera por pocas visitas
     formats:
       campana_hoy: "Campaña hoy: la noticia política del día (elecciones 29-N) en 30 segundos: qué ha pasado, por qué importa y qué viene ahora. Neutral."
-      que_propone_cada_uno: "Qué propone cada uno: un tema concreto (vivienda, impuestos, sueldos, pensiones...) y lo que proponen los principales partidos, en paralelo y con el mismo trato."
       dicho_vs_dato: "Dicho vs dato: una frase de campaña o una idea muy repetida, comparada con los datos oficiales (con fuente)."
       cotilleo: "El cotilleo del día: lo que ha pasado con un famoso que es noticia hoy, con lo que se sabe y lo que no, atribuido a sus fuentes."
       polemica_redes: "La polémica de las redes: el tema viral de hoy del que todo el mundo opina, y los dos bandos."
