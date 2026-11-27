@@ -138,6 +138,7 @@ channels:
       location: despacho
       mood: noche
       look: {age: mayor, skin: clara, hair_color: canoso, hair_style: corto, beard: bigote, beard_color: canoso, glasses: true, outfit: levita, outfit_color: negro, accent_color: granate, nose: gancho, jaw: fina, build: delgado}
+    format_cycle: [caso_famoso, caso_con_giro, caso_famoso, enigma, caso_con_giro, caso_famoso, caso_sin_resolver, ultimo_rastro]   # 27/11: casos famosos y con giro, los que más se ven
     formats:
       caso_famoso: "Caso famoso con película o serie (Annabelle, los Warren, Amityville, Enfield, El exorcista, Vallecas...): la historia real y lo que la película no contó"
       caso_sin_resolver: "Caso sin resolver célebre (desaparición, muerte extraña o crimen nunca aclarado que la gente conoce o ha oído nombrar)"
@@ -171,7 +172,7 @@ channels:
     style: volumen                   # estilo de dibujo: caricatura | volumen | plano | amable
     interest_queries: ["polémica citas pareja", "infidelidad estudio", "relaciones abiertas", "apps de citas tendencia"]   # noticias de la semana para inspirar temas
     slots: ["09:30", "11:45", "14:00", "16:00", "18:00", "20:00", "21:45"]   # la marca que mejor funciona: 7 vídeos al día
-    format_cycle: [debate, antes_despues, red_flag, antes_despues, debate, senales, antes_despues, error_comun]   # polémica y «antes y después», lo que más se comenta y ve
+    format_cycle: [error_comun, antes_despues, red_flag, senales, debate, error_comun, antes_despues, red_flag, senales, psicologia_atraccion]   # 27/11: error común, red flag y señales, los que más se ven; psicología de la atracción, la que menos
     host:                             # presentadora fija: cierra cada vídeo mirando a cámara
       name: Chispa
       location: cafeteria
@@ -256,6 +257,7 @@ channels:
       location: laboratorio
       mood: dia
       look: {age: adulto, skin: morena, hair_color: negro, hair_style: rapado, beard: perilla, glasses: true, outfit: camisa, outfit_color: blanco, accent_color: azul, nose: patata, jaw: redonda, build: normal}
+    format_cycle: [y_si_humanidad, cuenta_atras, y_si_humanidad, y_si_tu, y_si_planeta, y_si_humanidad]   # 27/11: «¿y si a la humanidad…?», el que más se ve y retiene
     formats:
       y_si_humanidad: "¿Y si... a toda la humanidad? Desaparecer, no poder tener hijos, no poder mentir, ser inmortales, desaparecer un sexo, el dinero, los móviles..."
       y_si_tu: "¿Y si te pasara a ti? Tu cuerpo o tu mente en un escenario imposible: ser el último humano, no dormir nunca, saber tu fecha de muerte, leer mentes..."
