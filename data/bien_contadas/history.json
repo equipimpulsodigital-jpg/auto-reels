@@ -235,7 +235,7 @@
             "reach": 138
           },
           "youtube": {
-            "views": 1049,
+            "views": 1050,
             "likes": 16,
             "comments": 0,
             "shares": 0
@@ -278,11 +278,11 @@
       "pitch": "Una investigación a fondo sobre uno de los grandes misterios sin resolver de nuestra historia."
     },
     "stats": {
-      "views": 2571,
+      "views": 2572,
       "likes": 41,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 2281,
+      "youtube_views": 2282,
       "updated": "2026-11-27"
     }
   },
@@ -814,7 +814,7 @@
             "reach": 120
           },
           "youtube": {
-            "views": 1191,
+            "views": 1193,
             "likes": 32,
             "comments": 2,
             "shares": 0
@@ -832,11 +832,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1474,
+      "views": 1476,
       "likes": 52,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1191,
+      "youtube_views": 1193,
       "updated": "2026-11-27"
     }
   },
@@ -866,7 +866,7 @@
             "reach": 453
           },
           "youtube": {
-            "views": 1008,
+            "views": 1009,
             "likes": 18,
             "comments": 1,
             "shares": 0
@@ -891,11 +891,11 @@
       "isbn": "9788432239007"
     },
     "stats": {
-      "views": 1646,
+      "views": 1647,
       "likes": 31,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1008,
+      "youtube_views": 1009,
       "updated": "2026-11-27"
     }
   },
@@ -931,11 +931,11 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 111,
+            "views": 112,
             "likes": 5,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 4.8,
+            "avg_watch_s": 4.9,
             "reach": 96
           }
         }
@@ -943,7 +943,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 2470,
+      "views": 2471,
       "likes": 24,
       "comments": 3,
       "shares": 0,
@@ -990,7 +990,7 @@
             "likes": 6,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 7.3,
+            "avg_watch_s": 7.2,
             "reach": 86
           }
         }
@@ -1075,13 +1075,13 @@
         "at": "2026-11-22T07:16:59+00:00",
         "stats": {
           "instagram": {
-            "views": 1848,
+            "views": 1854,
             "likes": 41,
             "comments": 2,
             "shares": 2,
             "avg_watch_s": 18.0,
             "saves": 4,
-            "reach": 1437
+            "reach": 1442
           },
           "youtube": {
             "views": 1027,
@@ -1109,7 +1109,7 @@
       "isbn": "9788492573639"
     },
     "stats": {
-      "views": 2938,
+      "views": 2944,
       "likes": 69,
       "comments": 4,
       "shares": 2,
@@ -1143,7 +1143,7 @@
             "reach": 96
           },
           "youtube": {
-            "views": 1221,
+            "views": 1226,
             "likes": 27,
             "comments": 1,
             "shares": 0
@@ -1161,11 +1161,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1401,
+      "views": 1406,
       "likes": 31,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1221,
+      "youtube_views": 1226,
       "updated": "2026-11-27"
     }
   },
@@ -1195,17 +1195,17 @@
             "reach": 1098
           },
           "youtube": {
-            "views": 1059,
+            "views": 1060,
             "likes": 11,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 80,
+            "views": 81,
             "likes": 5,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 9.8,
+            "avg_watch_s": 9.6,
             "reach": 74
           }
         }
@@ -1220,11 +1220,11 @@
       "isbn": "9788469866184"
     },
     "stats": {
-      "views": 2519,
+      "views": 2521,
       "likes": 31,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1059,
+      "youtube_views": 1060,
       "updated": "2026-11-27"
     }
   },
@@ -1254,7 +1254,7 @@
             "reach": 330
           },
           "youtube": {
-            "views": 1174,
+            "views": 1175,
             "likes": 21,
             "comments": 1,
             "shares": 0
@@ -1272,11 +1272,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1645,
+      "views": 1646,
       "likes": 32,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1174,
+      "youtube_views": 1175,
       "updated": "2026-11-27"
     }
   },
@@ -1306,7 +1306,7 @@
             "reach": 105
           },
           "youtube": {
-            "views": 1196,
+            "views": 1197,
             "likes": 28,
             "comments": 1,
             "shares": 0
@@ -1331,11 +1331,11 @@
       "isbn": "9788483831366"
     },
     "stats": {
-      "views": 1397,
+      "views": 1398,
       "likes": 29,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 1196,
+      "youtube_views": 1197,
       "updated": "2026-11-27"
     }
   },
@@ -1365,7 +1365,7 @@
             "reach": 77
           },
           "youtube": {
-            "views": 372,
+            "views": 378,
             "likes": 9,
             "comments": 1,
             "shares": 0
@@ -1383,11 +1383,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 543,
+      "views": 549,
       "likes": 16,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 372,
+      "youtube_views": 378,
       "updated": "2026-11-27"
     }
   },
@@ -1417,7 +1417,7 @@
             "reach": 1149
           },
           "youtube": {
-            "views": 502,
+            "views": 506,
             "likes": 11,
             "comments": 1,
             "shares": 0
@@ -1435,11 +1435,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 2022,
+      "views": 2026,
       "likes": 42,
       "comments": 3,
       "shares": 4,
-      "youtube_views": 502,
+      "youtube_views": 506,
       "updated": "2026-11-27"
     }
   },
@@ -1630,8 +1630,8 @@
             "reach": 288
           },
           "youtube": {
-            "views": 450,
-            "likes": 11,
+            "views": 454,
+            "likes": 12,
             "comments": 1,
             "shares": 0
           },
@@ -1648,11 +1648,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 857,
-      "likes": 17,
+      "views": 861,
+      "likes": 18,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 450,
+      "youtube_views": 454,
       "updated": "2026-11-27"
     }
   },
@@ -1734,17 +1734,17 @@
             "reach": 1026
           },
           "youtube": {
-            "views": 393,
+            "views": 394,
             "likes": 4,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 73,
+            "views": 74,
             "likes": 4,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 10.7,
+            "avg_watch_s": 10.6,
             "reach": 62
           }
         }
@@ -1752,11 +1752,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1760,
+      "views": 1762,
       "likes": 23,
       "comments": 3,
       "shares": 1,
-      "youtube_views": 393,
+      "youtube_views": 394,
       "updated": "2026-11-27"
     }
   },
@@ -1838,7 +1838,7 @@
             "reach": 161
           },
           "youtube": {
-            "views": 615,
+            "views": 621,
             "likes": 14,
             "comments": 1,
             "shares": 0
@@ -1861,11 +1861,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 844,
+      "views": 850,
       "likes": 15,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 615,
+      "youtube_views": 621,
       "updated": "2026-11-27"
     }
   },
@@ -1944,16 +1944,16 @@
         "at": "2026-11-25T08:45:15+00:00",
         "stats": {
           "instagram": {
-            "views": 731,
+            "views": 737,
             "likes": 8,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 15.1,
+            "avg_watch_s": 15.0,
             "saves": 0,
-            "reach": 599
+            "reach": 605
           },
           "youtube": {
-            "views": 175,
+            "views": 179,
             "likes": 6,
             "comments": 1,
             "shares": 0
@@ -1976,11 +1976,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 974,
+      "views": 984,
       "likes": 15,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 175,
+      "youtube_views": 179,
       "updated": "2026-11-27"
     }
   },
@@ -2001,16 +2001,16 @@
         "at": "2026-11-25T08:58:47+00:00",
         "stats": {
           "instagram": {
-            "views": 166,
+            "views": 184,
             "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 9.9,
+            "avg_watch_s": 10.4,
             "saves": 0,
-            "reach": 152
+            "reach": 166
           },
           "youtube": {
-            "views": 442,
+            "views": 448,
             "likes": 3,
             "comments": 1,
             "shares": 0
@@ -2028,11 +2028,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 661,
+      "views": 685,
       "likes": 9,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 442,
+      "youtube_views": 448,
       "updated": "2026-11-27"
     }
   },
@@ -2053,17 +2053,17 @@
         "at": "2026-11-25T09:11:59+00:00",
         "stats": {
           "instagram": {
-            "views": 230,
+            "views": 244,
             "likes": 2,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 12.5,
+            "avg_watch_s": 12.6,
             "saves": 0,
-            "reach": 191
+            "reach": 206
           },
           "youtube": {
             "views": 320,
-            "likes": 5,
+            "likes": 7,
             "comments": 1,
             "shares": 0
           },
@@ -2080,8 +2080,8 @@
     ],
     "book": null,
     "stats": {
-      "views": 583,
-      "likes": 10,
+      "views": 597,
+      "likes": 12,
       "comments": 3,
       "shares": 0,
       "youtube_views": 320,
@@ -2105,13 +2105,13 @@
         "at": "2026-11-25T09:25:40+00:00",
         "stats": {
           "instagram": {
-            "views": 123,
+            "views": 124,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 14.6,
+            "avg_watch_s": 14.5,
             "saves": 0,
-            "reach": 100
+            "reach": 101
           },
           "youtube": {
             "views": 5,
@@ -2132,7 +2132,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 192,
+      "views": 193,
       "likes": 2,
       "comments": 3,
       "shares": 0,
@@ -2154,7 +2154,32 @@
         "request_id": "04e8c3307b234dfe8edaf7ce292f4fed",
         "job_id": "f227a2e2a05146dfab4e57c57766b6dc",
         "failed": [],
-        "at": "2026-11-25T15:05:25+00:00"
+        "at": "2026-11-25T15:05:25+00:00",
+        "stats": {
+          "instagram": {
+            "views": 36,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 6.9,
+            "saves": 0,
+            "reach": 35
+          },
+          "youtube": {
+            "views": 86,
+            "likes": 4,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 65,
+            "likes": 4,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 8.9,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -2164,6 +2189,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/14650079-M.jpg",
       "isbn": "9788478808489"
+    },
+    "stats": {
+      "views": 187,
+      "likes": 8,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 86,
+      "updated": "2026-11-27"
     }
   },
   {
@@ -2180,7 +2213,32 @@
         "request_id": "4c472946b0a445cbb625a6dbd26b9da0",
         "job_id": "4fe1b425c6c8458ba1e1cdbfc941afda",
         "failed": [],
-        "at": "2026-11-26T01:29:53+00:00"
+        "at": "2026-11-26T01:29:53+00:00",
+        "stats": {
+          "instagram": {
+            "views": 49,
+            "likes": 0,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 13.1,
+            "saves": 0,
+            "reach": 40
+          },
+          "youtube": {
+            "views": 514,
+            "likes": 15,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 65,
+            "likes": 5,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 8.7,
+            "reach": 0
+          }
+        }
       }
     ],
     "book": {
@@ -2190,6 +2248,14 @@
       "looked_up": true,
       "cover": "https://covers.openlibrary.org/b/id/4902765-M.jpg",
       "isbn": "9788420696447"
+    },
+    "stats": {
+      "views": 628,
+      "likes": 20,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 514,
+      "updated": "2026-11-27"
     }
   },
   {
