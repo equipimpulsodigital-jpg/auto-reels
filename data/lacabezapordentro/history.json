@@ -912,7 +912,8 @@
             "views": 1055,
             "likes": 18,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 20.0
           }
         }
       }
@@ -956,7 +957,8 @@
             "views": 1011,
             "likes": 25,
             "comments": 1,
-            "shares": 0
+            "shares": 1,
+            "avg_watch_s": 17.0
           }
         }
       }
@@ -966,7 +968,7 @@
       "views": 1151,
       "likes": 25,
       "comments": 2,
-      "shares": 0,
+      "shares": 1,
       "youtube_views": 1011,
       "updated": "2026-11-27"
     }
@@ -1588,7 +1590,7 @@
             "reach": 145
           },
           "youtube": {
-            "views": 342,
+            "views": 343,
             "likes": 3,
             "comments": 2,
             "shares": 0
@@ -1606,11 +1608,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 621,
+      "views": 622,
       "likes": 6,
       "comments": 4,
       "shares": 0,
-      "youtube_views": 342,
+      "youtube_views": 343,
       "updated": "2026-11-27"
     }
   },
@@ -1735,13 +1737,13 @@
         "at": "2026-11-25T14:49:55+00:00",
         "stats": {
           "instagram": {
-            "views": 314,
+            "views": 321,
             "likes": 3,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 14.7,
+            "avg_watch_s": 14.4,
             "saves": 0,
-            "reach": 255
+            "reach": 263
           },
           "youtube": {
             "views": 41,
@@ -1750,11 +1752,11 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 38,
+            "views": 39,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 6.4,
+            "avg_watch_s": 6.3,
             "reach": 0
           }
         }
@@ -1762,7 +1764,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 393,
+      "views": 401,
       "likes": 3,
       "comments": 3,
       "shares": 0,
@@ -1787,13 +1789,13 @@
         "at": "2026-11-25T15:02:42+00:00",
         "stats": {
           "instagram": {
-            "views": 164,
+            "views": 165,
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 13.0,
+            "avg_watch_s": 12.9,
             "saves": 0,
-            "reach": 128
+            "reach": 129
           },
           "youtube": {
             "views": 166,
@@ -1814,7 +1816,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 406,
+      "views": 407,
       "likes": 4,
       "comments": 4,
       "shares": 0,
@@ -1839,13 +1841,13 @@
         "at": "2026-11-26T01:26:56+00:00",
         "stats": {
           "instagram": {
-            "views": 346,
+            "views": 424,
             "likes": 6,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 12.6,
-            "saves": 0,
-            "reach": 295
+            "avg_watch_s": 12.8,
+            "saves": 1,
+            "reach": 355
           },
           "youtube": {
             "views": 150,
@@ -1866,7 +1868,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 661,
+      "views": 739,
       "likes": 7,
       "comments": 3,
       "shares": 0,
@@ -1891,13 +1893,13 @@
         "at": "2026-11-26T01:39:43+00:00",
         "stats": {
           "instagram": {
-            "views": 1354,
+            "views": 1355,
             "likes": 17,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 14.5,
             "saves": 0,
-            "reach": 1119
+            "reach": 1120
           },
           "youtube": {
             "views": 79,
@@ -1918,7 +1920,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 1525,
+      "views": 1526,
       "likes": 18,
       "comments": 3,
       "shares": 0,
@@ -1943,16 +1945,16 @@
         "at": "2026-11-26T01:52:15+00:00",
         "stats": {
           "instagram": {
-            "views": 383,
+            "views": 412,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 12.8,
+            "avg_watch_s": 12.9,
             "saves": 1,
-            "reach": 303
+            "reach": 324
           },
           "youtube": {
-            "views": 46,
+            "views": 48,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -1970,11 +1972,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 517,
+      "views": 548,
       "likes": 1,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 46,
+      "youtube_views": 48,
       "updated": "2026-11-27"
     }
   },
@@ -2088,6 +2090,25 @@
         "job_id": "b21b463521b84a47a63f5db7fcddf0e0",
         "failed": [],
         "at": "2026-11-27T08:37:05+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-27",
+    "format": "que_propone_cada_uno",
+    "topic": "Propuestas de jornada laboral de PSOE (37,5 y luego 35), Frente Amplio (37,5 ya y luego 32), PP (no fija nueva jornada) y Vox (no concreta) para el 29-N de 2026",
+    "series_title": "32, 35 o nada: tus horas de trabajo el 29-N",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-28",
+        "slot": "2026-11-28T12:01:00+01:00",
+        "request_id": "b614dd2d8cea4d169327173bbf4c4de0",
+        "job_id": "b15852dd2c3f4dc383e1b51f596f0d38",
+        "failed": [],
+        "at": "2026-11-27T11:42:33+00:00"
       }
     ],
     "book": null
