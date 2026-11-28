@@ -178,7 +178,8 @@
             "views": 1204,
             "likes": 15,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 16.0
           }
         }
       }
@@ -227,7 +228,8 @@
             "views": 1384,
             "likes": 13,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 16.0
           }
         }
       }
@@ -278,7 +280,8 @@
             "views": 32,
             "likes": 2,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 20.0
           }
         }
       }
@@ -328,7 +331,8 @@
             "views": 5,
             "likes": 2,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 7.0
           }
         }
       }
@@ -372,7 +376,8 @@
             "views": 1147,
             "likes": 22,
             "comments": 0,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 29.0
           }
         }
       }
@@ -422,7 +427,8 @@
             "views": 1427,
             "likes": 29,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 28.0
           }
         }
       }
@@ -471,7 +477,8 @@
             "views": 1161,
             "likes": 13,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 21.0
           }
         }
       }
@@ -520,7 +527,8 @@
             "views": 1246,
             "likes": 24,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 22.0
           }
         }
       }
@@ -569,7 +577,8 @@
             "views": 881,
             "likes": 19,
             "comments": 1,
-            "shares": 0
+            "shares": 1,
+            "avg_watch_s": 27.0
           }
         }
       }
@@ -584,7 +593,7 @@
       "views": 1003,
       "likes": 20,
       "comments": 2,
-      "shares": 0,
+      "shares": 1,
       "youtube_views": 881,
       "updated": "2026-11-28"
     }
@@ -618,7 +627,8 @@
             "views": 1224,
             "likes": 23,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 14.0
           }
         }
       }
@@ -662,7 +672,8 @@
             "views": 1200,
             "likes": 25,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 24.0
           }
         }
       }
@@ -708,10 +719,11 @@
             "reach": 164
           },
           "youtube": {
-            "views": 1650,
+            "views": 1652,
             "likes": 21,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 21.0
           }
         }
       }
@@ -723,11 +735,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1855,
+      "views": 1857,
       "likes": 24,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1650,
+      "youtube_views": 1652,
       "updated": "2026-11-28"
     }
   },
@@ -760,7 +772,8 @@
             "views": 1008,
             "likes": 18,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 14.0
           }
         }
       }
@@ -811,7 +824,8 @@
             "views": 1184,
             "likes": 27,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 25.0
           }
         }
       }
@@ -855,7 +869,8 @@
             "views": 908,
             "likes": 21,
             "comments": 1,
-            "shares": 0
+            "shares": 1,
+            "avg_watch_s": 16.0
           }
         }
       }
@@ -869,7 +884,7 @@
       "views": 1062,
       "likes": 21,
       "comments": 2,
-      "shares": 0,
+      "shares": 1,
       "youtube_views": 908,
       "updated": "2026-11-28"
     }
@@ -1316,7 +1331,7 @@
             "likes": 1,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 19.0
+            "avg_watch_s": 16.0
           },
           "tiktok": {
             "views": 62,
@@ -1365,10 +1380,11 @@
             "reach": 109
           },
           "youtube": {
-            "views": 58,
+            "views": 59,
             "likes": 0,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 12.0
           },
           "tiktok": {
             "views": 91,
@@ -1383,11 +1399,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 278,
+      "views": 279,
       "likes": 6,
       "comments": 3,
       "shares": 1,
-      "youtube_views": 58,
+      "youtube_views": 59,
       "updated": "2026-11-28"
     }
   },
@@ -1420,7 +1436,8 @@
             "views": 486,
             "likes": 10,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 18.0
           },
           "tiktok": {
             "views": 82,
@@ -1584,7 +1601,8 @@
             "views": 347,
             "likes": 3,
             "comments": 2,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 22.0
           },
           "tiktok": {
             "views": 92,
@@ -1636,7 +1654,8 @@
             "views": 327,
             "likes": 4,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 15.0
           },
           "tiktok": {
             "views": 74,
@@ -1685,13 +1704,14 @@
             "reach": 114
           },
           "youtube": {
-            "views": 50,
+            "views": 52,
             "likes": 1,
             "comments": 1,
-            "shares": 0
+            "shares": 0,
+            "avg_watch_s": 7.0
           },
           "tiktok": {
-            "views": 112,
+            "views": 113,
             "likes": 1,
             "comments": 1,
             "shares": 0,
@@ -1703,11 +1723,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 292,
+      "views": 295,
       "likes": 5,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 50,
+      "youtube_views": 52,
       "updated": "2026-11-28"
     }
   },
@@ -1795,11 +1815,11 @@
             "shares": 0
           },
           "tiktok": {
-            "views": 76,
+            "views": 77,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 7.8,
+            "avg_watch_s": 7.7,
             "reach": 76
           }
         }
@@ -1807,7 +1827,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 408,
+      "views": 409,
       "likes": 4,
       "comments": 4,
       "shares": 0,
@@ -1884,13 +1904,13 @@
         "at": "2026-11-26T01:39:43+00:00",
         "stats": {
           "instagram": {
-            "views": 1369,
+            "views": 1371,
             "likes": 17,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 14.5,
             "saves": 0,
-            "reach": 1131
+            "reach": 1133
           },
           "youtube": {
             "views": 84,
@@ -1911,7 +1931,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 1545,
+      "views": 1547,
       "likes": 18,
       "comments": 3,
       "shares": 0,
@@ -1955,7 +1975,7 @@
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 6.7,
+            "avg_watch_s": 6.6,
             "reach": 87
           }
         }
@@ -1988,13 +2008,13 @@
         "at": "2026-11-26T08:27:09+00:00",
         "stats": {
           "instagram": {
-            "views": 1656,
+            "views": 1671,
             "likes": 43,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 17.4,
             "saves": 4,
-            "reach": 1297
+            "reach": 1311
           },
           "youtube": {
             "views": 24,
@@ -2015,7 +2035,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 1764,
+      "views": 1779,
       "likes": 43,
       "comments": 3,
       "shares": 0,
@@ -2040,16 +2060,16 @@
         "at": "2026-11-26T11:43:35+00:00",
         "stats": {
           "instagram": {
-            "views": 153,
+            "views": 165,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 11.7,
+            "avg_watch_s": 12.0,
             "saves": 0,
-            "reach": 126
+            "reach": 134
           },
           "youtube": {
-            "views": 205,
+            "views": 206,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -2067,11 +2087,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 443,
+      "views": 456,
       "likes": 1,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 205,
+      "youtube_views": 206,
       "updated": "2026-11-28"
     }
   },
@@ -2092,17 +2112,17 @@
         "at": "2026-11-26T14:28:29+00:00",
         "stats": {
           "instagram": {
-            "views": 139,
+            "views": 141,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 8.0,
+            "avg_watch_s": 7.9,
             "saves": 0,
-            "reach": 118
+            "reach": 120
           },
           "youtube": {
-            "views": 476,
-            "likes": 6,
+            "views": 496,
+            "likes": 9,
             "comments": 2,
             "shares": 0
           },
@@ -2119,11 +2139,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 702,
-      "likes": 6,
+      "views": 724,
+      "likes": 9,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 476,
+      "youtube_views": 496,
       "updated": "2026-11-28"
     }
   },
@@ -2153,8 +2173,8 @@
             "reach": 117
           },
           "youtube": {
-            "views": 285,
-            "likes": 3,
+            "views": 288,
+            "likes": 4,
             "comments": 1,
             "shares": 0
           },
@@ -2171,11 +2191,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 536,
-      "likes": 5,
+      "views": 539,
+      "likes": 6,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 285,
+      "youtube_views": 288,
       "updated": "2026-11-28"
     }
   },
@@ -2196,13 +2216,13 @@
         "at": "2026-11-27T01:40:43+00:00",
         "stats": {
           "instagram": {
-            "views": 1390,
+            "views": 1432,
             "likes": 14,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 18.4,
+            "avg_watch_s": 18.2,
             "saves": 0,
-            "reach": 1076
+            "reach": 1117
           },
           "youtube": {
             "views": 740,
@@ -2223,7 +2243,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 2233,
+      "views": 2275,
       "likes": 19,
       "comments": 3,
       "shares": 0,
@@ -2350,6 +2370,25 @@
         "job_id": "ee2bf5f9803b4d5cb798bfec14b7b7ac",
         "failed": [],
         "at": "2026-11-28T08:00:56+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-28",
+    "format": "campana_hoy",
+    "topic": "Ley de nietos y el 29-N: 163.355 nacionalizados podrán entregar su voto, pero sus sobres no entran en la urna ni se cuentan por la suspensión cautelar del Supremo (pedida por Vox e Iustitia Europa); solo votan con normalidad 901 que acreditaron exilio",
+    "series_title": "Los 163.355 votos que no entrarán en la urna",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-29",
+        "slot": "2026-11-29T12:06:00+01:00",
+        "request_id": "5b46afcfb14342acb80877027656c501",
+        "job_id": "34e1a75a12df4e179cd722625fbde4fb",
+        "failed": [],
+        "at": "2026-11-28T11:08:38+00:00"
       }
     ],
     "book": null
