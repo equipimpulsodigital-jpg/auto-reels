@@ -76,7 +76,7 @@
             "reach": 434
           },
           "youtube": {
-            "views": 1365,
+            "views": 1366,
             "likes": 32,
             "comments": 0,
             "shares": 0,
@@ -94,11 +94,11 @@
       "pitch": "Esa vocecita de tu cabeza tiene arreglo: un libro para aprender a hablarte mejor."
     },
     "stats": {
-      "views": 1873,
+      "views": 1874,
       "likes": 52,
       "comments": 0,
       "shares": 0,
-      "youtube_views": 1365,
+      "youtube_views": 1366,
       "updated": "2026-11-28"
     }
   },
@@ -808,7 +808,7 @@
             "reach": 116
           },
           "youtube": {
-            "views": 1183,
+            "views": 1184,
             "likes": 27,
             "comments": 1,
             "shares": 0
@@ -818,11 +818,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1331,
+      "views": 1332,
       "likes": 28,
       "comments": 2,
       "shares": 0,
-      "youtube_views": 1183,
+      "youtube_views": 1184,
       "updated": "2026-11-28"
     }
   },
@@ -1090,7 +1090,7 @@
             "reach": 107
           },
           "youtube": {
-            "views": 915,
+            "views": 916,
             "likes": 25,
             "comments": 1,
             "shares": 0,
@@ -1109,11 +1109,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1124,
+      "views": 1125,
       "likes": 26,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 915,
+      "youtube_views": 916,
       "updated": "2026-11-28"
     }
   },
@@ -1143,7 +1143,7 @@
             "reach": 106
           },
           "youtube": {
-            "views": 1499,
+            "views": 1515,
             "likes": 27,
             "comments": 1,
             "shares": 1,
@@ -1167,11 +1167,11 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1710,
+      "views": 1726,
       "likes": 27,
       "comments": 3,
       "shares": 1,
-      "youtube_views": 1499,
+      "youtube_views": 1515,
       "updated": "2026-11-28"
     }
   },
@@ -1201,7 +1201,7 @@
             "reach": 103
           },
           "youtube": {
-            "views": 848,
+            "views": 850,
             "likes": 11,
             "comments": 1,
             "shares": 0,
@@ -1220,11 +1220,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1056,
+      "views": 1058,
       "likes": 11,
       "comments": 2,
       "shares": 2,
-      "youtube_views": 848,
+      "youtube_views": 850,
       "updated": "2026-11-28"
     }
   },
@@ -1261,7 +1261,7 @@
             "avg_watch_s": 14.0
           },
           "tiktok": {
-            "views": 87,
+            "views": 88,
             "likes": 0,
             "comments": 1,
             "shares": 0,
@@ -1278,7 +1278,7 @@
       "looked_up": true
     },
     "stats": {
-      "views": 1014,
+      "views": 1015,
       "likes": 17,
       "comments": 3,
       "shares": 2,
@@ -1417,7 +1417,7 @@
             "reach": 114
           },
           "youtube": {
-            "views": 485,
+            "views": 486,
             "likes": 10,
             "comments": 1,
             "shares": 0
@@ -1435,11 +1435,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 711,
+      "views": 712,
       "likes": 14,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 485,
+      "youtube_views": 486,
       "updated": "2026-11-28"
     }
   },
@@ -1581,7 +1581,7 @@
             "reach": 145
           },
           "youtube": {
-            "views": 346,
+            "views": 347,
             "likes": 3,
             "comments": 2,
             "shares": 0
@@ -1599,11 +1599,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 627,
+      "views": 628,
       "likes": 6,
       "comments": 4,
       "shares": 0,
-      "youtube_views": 346,
+      "youtube_views": 347,
       "updated": "2026-11-28"
     }
   },
@@ -1685,13 +1685,13 @@
             "reach": 114
           },
           "youtube": {
-            "views": 43,
+            "views": 50,
             "likes": 1,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 111,
+            "views": 112,
             "likes": 1,
             "comments": 1,
             "shares": 0,
@@ -1703,11 +1703,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 284,
+      "views": 292,
       "likes": 5,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 43,
+      "youtube_views": 50,
       "updated": "2026-11-28"
     }
   },
@@ -1737,7 +1737,7 @@
             "reach": 263
           },
           "youtube": {
-            "views": 43,
+            "views": 45,
             "likes": 0,
             "comments": 1,
             "shares": 0
@@ -1755,11 +1755,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 407,
+      "views": 409,
       "likes": 3,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 43,
+      "youtube_views": 45,
       "updated": "2026-11-28"
     }
   },
@@ -1789,7 +1789,7 @@
             "reach": 129
           },
           "youtube": {
-            "views": 166,
+            "views": 167,
             "likes": 3,
             "comments": 2,
             "shares": 0
@@ -1807,11 +1807,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 407,
+      "views": 408,
       "likes": 4,
       "comments": 4,
       "shares": 0,
-      "youtube_views": 166,
+      "youtube_views": 167,
       "updated": "2026-11-28"
     }
   },
@@ -1884,7 +1884,7 @@
         "at": "2026-11-26T01:39:43+00:00",
         "stats": {
           "instagram": {
-            "views": 1368,
+            "views": 1369,
             "likes": 17,
             "comments": 1,
             "shares": 0,
@@ -1911,7 +1911,7 @@
     ],
     "book": null,
     "stats": {
-      "views": 1544,
+      "views": 1545,
       "likes": 18,
       "comments": 3,
       "shares": 0,
@@ -1988,26 +1988,26 @@
         "at": "2026-11-26T08:27:09+00:00",
         "stats": {
           "instagram": {
-            "views": 1639,
+            "views": 1656,
             "likes": 43,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 17.5,
+            "avg_watch_s": 17.4,
             "saves": 4,
-            "reach": 1279
+            "reach": 1297
           },
           "youtube": {
-            "views": 17,
+            "views": 24,
             "likes": 0,
             "comments": 1,
             "shares": 0
           },
           "tiktok": {
-            "views": 82,
+            "views": 84,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 8.5,
+            "avg_watch_s": 8.3,
             "reach": 0
           }
         }
@@ -2015,11 +2015,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 1738,
+      "views": 1764,
       "likes": 43,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 17,
+      "youtube_views": 24,
       "updated": "2026-11-28"
     }
   },
@@ -2040,16 +2040,16 @@
         "at": "2026-11-26T11:43:35+00:00",
         "stats": {
           "instagram": {
-            "views": 144,
+            "views": 153,
             "likes": 0,
             "comments": 1,
             "shares": 0,
-            "avg_watch_s": 12.0,
+            "avg_watch_s": 11.7,
             "saves": 0,
-            "reach": 119
+            "reach": 126
           },
           "youtube": {
-            "views": 189,
+            "views": 205,
             "likes": 1,
             "comments": 1,
             "shares": 0
@@ -2067,11 +2067,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 418,
+      "views": 443,
       "likes": 1,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 189,
+      "youtube_views": 205,
       "updated": "2026-11-28"
     }
   },
@@ -2092,16 +2092,16 @@
         "at": "2026-11-26T14:28:29+00:00",
         "stats": {
           "instagram": {
-            "views": 132,
+            "views": 139,
             "likes": 0,
             "comments": 1,
             "shares": 0,
             "avg_watch_s": 8.0,
             "saves": 0,
-            "reach": 112
+            "reach": 118
           },
           "youtube": {
-            "views": 448,
+            "views": 476,
             "likes": 6,
             "comments": 2,
             "shares": 0
@@ -2119,11 +2119,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 667,
+      "views": 702,
       "likes": 6,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 448,
+      "youtube_views": 476,
       "updated": "2026-11-28"
     }
   },
@@ -2153,7 +2153,7 @@
             "reach": 117
           },
           "youtube": {
-            "views": 272,
+            "views": 285,
             "likes": 3,
             "comments": 1,
             "shares": 0
@@ -2171,11 +2171,11 @@
     ],
     "book": null,
     "stats": {
-      "views": 523,
+      "views": 536,
       "likes": 5,
       "comments": 3,
       "shares": 0,
-      "youtube_views": 272,
+      "youtube_views": 285,
       "updated": "2026-11-28"
     }
   },
@@ -2193,10 +2193,43 @@
         "request_id": "15926f5804e74ce697f1d62cef2dfc6f",
         "job_id": "0550771e54954a3b961580bd3efe581e",
         "failed": [],
-        "at": "2026-11-27T01:40:43+00:00"
+        "at": "2026-11-27T01:40:43+00:00",
+        "stats": {
+          "instagram": {
+            "views": 1390,
+            "likes": 14,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 18.4,
+            "saves": 0,
+            "reach": 1076
+          },
+          "youtube": {
+            "views": 740,
+            "likes": 4,
+            "comments": 1,
+            "shares": 0
+          },
+          "tiktok": {
+            "views": 103,
+            "likes": 1,
+            "comments": 1,
+            "shares": 0,
+            "avg_watch_s": 8.8,
+            "reach": 0
+          }
+        }
       }
     ],
-    "book": null
+    "book": null,
+    "stats": {
+      "views": 2233,
+      "likes": 19,
+      "comments": 3,
+      "shares": 0,
+      "youtube_views": 740,
+      "updated": "2026-11-28"
+    }
   },
   {
     "date": "2026-11-27",
@@ -2298,6 +2331,25 @@
         "job_id": "aae91225a13644a98031916d341879b0",
         "failed": [],
         "at": "2026-11-28T01:28:42+00:00"
+      }
+    ],
+    "book": null
+  },
+  {
+    "date": "2026-11-28",
+    "format": "cotilleo",
+    "topic": "Marc Márquez anuncia por sorpresa con cartulinas su retirada de MotoGP en Valencia (27-N-2026), por miedo tras volver a tener visión doble; lo decidió tras Japón y solo lo sabía su hermano",
+    "series_title": "Marc Márquez se retira: el miedo que calló todo el año",
+    "parts": 1,
+    "published_parts": [
+      {
+        "part": 1,
+        "date": "2026-11-29",
+        "slot": "2026-11-29T10:05:00+01:00",
+        "request_id": "841d157563144dd59d1991288ef37034",
+        "job_id": "ee2bf5f9803b4d5cb798bfec14b7b7ac",
+        "failed": [],
+        "at": "2026-11-28T08:00:56+00:00"
       }
     ],
     "book": null
